@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /appeal/success
+
+Sitemap: https://finecheck.co.uk/sitemap.xml

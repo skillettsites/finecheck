@@ -1,0 +1,107 @@
+import { MetadataRoute } from 'next';
+import { OPERATORS } from '@/data/operators';
+import { COUNCILS } from '@/data/councils';
+import { GUIDES } from '@/data/guides';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://finecheck.co.uk';
+  const now = new Date();
+
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: baseUrl,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/appeal`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/pofa-checker`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools/deadline-calculator`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/appeals`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/councils`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+  ];
+
+  const operatorPages: MetadataRoute.Sitemap = OPERATORS.map((operator) => ({
+    url: `${baseUrl}/appeals/${operator.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  const councilPages: MetadataRoute.Sitemap = COUNCILS.map((council) => ({
+    url: `${baseUrl}/councils/${council.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  const guidePages: MetadataRoute.Sitemap = GUIDES.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages];
+}

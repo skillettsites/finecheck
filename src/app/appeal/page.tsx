@@ -1,0 +1,50 @@
+import type { Metadata } from "next";
+import AppealFlow from "@/components/appeal/AppealFlow";
+
+export const metadata: Metadata = {
+  title: "Appeal Your Parking Fine | Free Assessment",
+  description:
+    "Start your free parking fine appeal. Get an instant assessment of your PCN, identify legal grounds for appeal, and generate a professional appeal letter. Works for council PCNs, private parking charges, bus lane fines, and congestion charges.",
+  alternates: {
+    canonical: "https://finecheck.co.uk/appeal",
+  },
+  openGraph: {
+    title: "Appeal Your Parking Fine | FineCheck",
+    description:
+      "Free instant assessment of your parking fine. Identify legal grounds and generate a professional appeal letter in minutes.",
+    url: "https://finecheck.co.uk/appeal",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://finecheck.co.uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Appeal Your Fine",
+      item: "https://finecheck.co.uk/appeal",
+    },
+  ],
+};
+
+export default function AppealPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <AppealFlow />
+    </>
+  );
+}
