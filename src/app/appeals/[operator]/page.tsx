@@ -14,12 +14,13 @@ export function generateStaticParams() {
   return OPERATORS.map((op) => ({ operator: op.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { operator: string };
-}): Metadata {
-  const op = getOperatorBySlug(params.operator);
+  params: Promise<{ operator: string }>;
+}): Promise<Metadata> {
+  const { operator } = await params;
+  const op = getOperatorBySlug(operator);
   if (!op) return { title: "Operator Not Found" };
 
   return {
@@ -108,12 +109,13 @@ function getAppealSteps(op: Operator) {
   ];
 }
 
-export default function OperatorPage({
+export default async function OperatorPage({
   params,
 }: {
-  params: { operator: string };
+  params: Promise<{ operator: string }>;
 }) {
-  const op = getOperatorBySlug(params.operator);
+  const { operator } = await params;
+  const op = getOperatorBySlug(operator);
   if (!op) notFound();
 
   const faqs = getOperatorFAQs(op);

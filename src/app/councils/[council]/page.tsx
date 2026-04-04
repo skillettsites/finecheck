@@ -14,12 +14,13 @@ export function generateStaticParams() {
   return COUNCILS.map((c) => ({ council: c.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { council: string };
-}): Metadata {
-  const council = getCouncilBySlug(params.council);
+  params: Promise<{ council: string }>;
+}): Promise<Metadata> {
+  const { council: councilSlug } = await params;
+  const council = getCouncilBySlug(councilSlug);
   if (!council) return { title: "Council Not Found" };
 
   return {
@@ -88,12 +89,13 @@ function getCouncilFAQs(council: Council) {
   ];
 }
 
-export default function CouncilPage({
+export default async function CouncilPage({
   params,
 }: {
-  params: { council: string };
+  params: Promise<{ council: string }>;
 }) {
-  const council = getCouncilBySlug(params.council);
+  const { council: councilSlug } = await params;
+  const council = getCouncilBySlug(councilSlug);
   if (!council) notFound();
 
   const shortName = council.name.replace(
