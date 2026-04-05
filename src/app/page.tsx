@@ -153,7 +153,7 @@ const pricingPlans = [
       "Escalation letter if rejected",
       "Evidence collection checklist",
       "Operator-specific strategy guide",
-      "Priority email support",
+      "Second-stage appeal template",
       "Second-stage appeal template",
     ],
     popular: true,

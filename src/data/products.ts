@@ -23,7 +23,7 @@ export const PRODUCTS: Record<string, Product> = {
       'Escalation letter if rejected',
       'Evidence collection checklist',
       'Operator-specific strategy',
-      'Priority email support'
+      'Second-stage appeal template'
     ]
   },
 };

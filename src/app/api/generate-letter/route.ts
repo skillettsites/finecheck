@@ -328,7 +328,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       {
-        error: "An unexpected error occurred. Please try again or contact support@finecheck.co.uk.",
+        error: "An unexpected error occurred. Please try again.",
       },
       { status: 500 }
     );

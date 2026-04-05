@@ -237,13 +237,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p className="mt-3">
-              To exercise any of these rights, contact us at{" "}
-              <a
-                href="mailto:privacy@finecheck.co.uk"
-                className="text-teal-600 underline hover:text-teal-700"
-              >
-                privacy@finecheck.co.uk
-              </a>. We will respond within 30 days.
+              To exercise any of these rights, submit a request through our website. We will respond within 30 days.
             </p>
             <p className="mt-3">
               If you are not satisfied with our response, you have the right to
@@ -280,8 +274,8 @@ export default function PrivacyPage() {
             <p>
               Our service is not directed at individuals under the age of 18. We do
               not knowingly collect personal data from children. If you believe we
-              have collected data from a child, please contact us and we will delete
-              it promptly.
+              have collected data from a child, please submit a data deletion
+              request through our website and we will delete it promptly.
             </p>
           </section>
 
@@ -297,22 +291,15 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          {/* Contact */}
+          {/* Data Requests */}
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">
-              10. Contact Us
+              10. Data Requests
             </h2>
             <p>
-              If you have any questions about this privacy policy or your personal
-              data, please contact us at:
-            </p>
-            <p className="mt-2">
-              <a
-                href="mailto:privacy@finecheck.co.uk"
-                className="text-teal-600 underline hover:text-teal-700"
-              >
-                privacy@finecheck.co.uk
-              </a>
+              If you have any questions about this privacy policy or wish to
+              exercise your data rights, please submit a request through our
+              website. We aim to respond to all valid requests within 30 days.
             </p>
           </section>
         </div>

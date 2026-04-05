@@ -165,15 +165,9 @@ export default function TermsPage() {
               </li>
             </ul>
             <p className="mt-3">
-              To request a refund, contact us at{" "}
-              <a
-                href="mailto:support@finecheck.co.uk"
-                className="text-teal-600 underline hover:text-teal-700"
-              >
-                support@finecheck.co.uk
-              </a>{" "}
-              within 14 days of purchase. Refund requests are assessed on a case-by-case
-              basis.
+              Refund requests must be made within 14 days of purchase through
+              Stripe&apos;s payment dispute process. Refund requests are assessed on a
+              case-by-case basis.
             </p>
           </section>
 
@@ -289,15 +283,9 @@ export default function TermsPage() {
               12. Contact
             </h2>
             <p>
-              If you have questions about these Terms, contact us at:
-            </p>
-            <p className="mt-2">
-              <a
-                href="mailto:support@finecheck.co.uk"
-                className="text-teal-600 underline hover:text-teal-700"
-              >
-                support@finecheck.co.uk
-              </a>
+              These Terms are governed by and construed in accordance with the
+              laws of England and Wales. By using FineCheck, you agree to these
+              Terms in their entirety.
             </p>
           </section>
         </div>

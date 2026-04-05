@@ -62,7 +62,7 @@ const plans = [
       "Evidence collection checklist",
       "Operator-specific strategy guide",
       "Second-stage appeal template",
-      "Priority email support",
+      "Second-stage appeal template",
     ],
     popular: true,
     buttonText: "Get Premium Pack",
@@ -84,7 +84,7 @@ const comparisonFeatures = [
   { feature: "Evidence collection checklist", free: false, standard: false, premium: true },
   { feature: "Operator-specific strategy guide", free: false, standard: false, premium: true },
   { feature: "Second-stage appeal template", free: false, standard: false, premium: true },
-  { feature: "Priority email support", free: false, standard: false, premium: true },
+  { feature: "Second-stage appeal template", free: false, standard: false, premium: true },
 ];
 
 const faqItems = [
