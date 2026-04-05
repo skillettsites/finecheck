@@ -10,6 +10,7 @@ const navigation = [
     href: "#",
     children: [
       { name: "POFA Checker", href: "/tools/pofa-checker", description: "Check if the Protection of Freedoms Act applies to your fine" },
+      { name: "Ticket Scanner", href: "/tools/ticket-scanner", description: "Upload a photo of your ticket and extract the details with AI" },
       { name: "Deadline Calculator", href: "/tools/deadline-calculator", description: "Find out how long you have to appeal your PCN" },
     ],
   },

@@ -2,6 +2,10 @@ import { MetadataRoute } from 'next';
 import { OPERATORS } from '@/data/operators';
 import { COUNCILS } from '@/data/councils';
 import { GUIDES } from '@/data/guides';
+import { TEMPLATES } from '@/data/templates';
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { SITUATIONS } from '@/data/situations';
+import { OPERATOR_SITUATIONS } from '@/data/operator-situations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://finecheck.co.uk';
@@ -63,6 +67,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/templates`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/leaderboard`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -103,5 +125,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages];
+  const templatePages: MetadataRoute.Sitemap = TEMPLATES.map((template) => ({
+    url: `${baseUrl}/templates/${template.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  const situationPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/situations`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...SITUATIONS.map((situation) => ({
+      url: `${baseUrl}/situations/${situation.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  const operatorSituationPages: MetadataRoute.Sitemap = OPERATOR_SITUATIONS.map((os) => ({
+    url: `${baseUrl}/appeals/${os.operatorSlug}/${os.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages, ...templatePages, ...blogPages, ...situationPages, ...operatorSituationPages];
 }
