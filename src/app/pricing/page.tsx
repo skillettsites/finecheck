@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Pricing | FineCheck",
   description:
-    "Affordable parking fine appeal tools. Free assessment, standard appeal letters from £5.99, and premium appeal packs from £9.99.",
+    "Affordable fine appeal tools. Free assessment, standard appeal letters from £5.99, and premium appeal packs from £9.99. Works for parking fines, bus lane PCNs, congestion charges, and ULEZ penalties.",
   alternates: {
     canonical: "https://appealafine.co.uk/pricing",
   },
@@ -19,7 +19,7 @@ const plans = [
     price: "£0",
     priceNote: "always free",
     description:
-      "Check if your parking fine has grounds for appeal. No payment required.",
+      "Check if your fine has grounds for appeal. No payment required.",
     features: [
       "Instant fine validity check",
       "NtK timing analysis (private fines)",
@@ -91,12 +91,12 @@ const faqItems = [
   {
     question: "Is the free assessment really free?",
     answer:
-      "Yes, completely free with no strings attached. You can check your parking fine, see your appeal strength rating, and get a step-by-step guide without entering any payment details. You only pay if you want a professionally written appeal letter.",
+      "Yes, completely free with no strings attached. You can check your fine, see your appeal strength rating, and get a step-by-step guide without entering any payment details. You only pay if you want a professionally written appeal letter.",
   },
   {
     question: "What is included in the appeal letter?",
     answer:
-      "The appeal letter is a professionally written, personalised document tailored to your specific parking fine. It covers all relevant legal grounds, references applicable legislation and case law (such as POFA 2012, Beavis v ParkingEye, or the relevant council enforcement regulations), and is formatted for direct submission to the operator or council. If your first appeal is rejected, you also get an escalation letter for the independent appeals body.",
+      "The appeal letter is a professionally written, personalised document tailored to your specific fine. It covers all relevant legal grounds, references applicable legislation and case law (such as POFA 2012, Beavis v ParkingEye, or the relevant council enforcement regulations), and is formatted for direct submission to the operator or council. If your first appeal is rejected, you also get an escalation letter for the independent appeals body.",
   },
   {
     question: "What is the difference between Free Assessment and Appeal Letter?",
@@ -430,7 +430,7 @@ export default function PricingPage() {
               Start With a Free Assessment
             </h2>
             <p className="mt-3 text-lg text-slate-500">
-              Check your parking fine for free. No payment details required.
+              Check your fine for free. No payment details required.
               Only pay if you want a professionally written appeal letter.
             </p>
             <div className="mt-6">

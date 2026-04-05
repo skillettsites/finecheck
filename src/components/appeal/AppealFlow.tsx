@@ -283,7 +283,7 @@ function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType)
   return (
     <div>
       <div className="text-center mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Appeal Your Parking Fine</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Appeal Your Fine</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
           Take a photo of your ticket for the fastest experience, or select your fine type below to get started.
         </p>

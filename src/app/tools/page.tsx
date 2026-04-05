@@ -4,16 +4,16 @@ import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Free Parking Fine Tools | Check Your PCN for Free | FineCheck",
+  title: "Free Fine Appeal Tools | Check Your PCN for Free | FineCheck",
   description:
-    "Free tools to check if your parking fine is valid. Use our POFA compliance checker, deadline calculator, and appeal strength assessor to understand your options before you pay.",
+    "Free tools to check if your fine is valid. Use our POFA compliance checker, deadline calculator, and appeal strength assessor to understand your options before you pay.",
   alternates: {
     canonical: "https://appealafine.co.uk/tools",
   },
   openGraph: {
-    title: "Free Parking Fine Tools | FineCheck",
+    title: "Free Fine Appeal Tools | FineCheck",
     description:
-      "Free tools to check if your parking fine is valid. POFA checker, deadline calculator, and more.",
+      "Free tools to check if your fine is valid. POFA checker, deadline calculator, and more.",
     url: "https://appealafine.co.uk/tools",
   },
 };
@@ -78,10 +78,10 @@ export default function ToolsIndexPage() {
 
         <div className="mt-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Free Parking Fine Tools
+            Free Fine Appeal Tools
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Check your parking fine for free before you pay. Over 50% of appealed fines are
+            Check your fine for free before you pay. Over 50% of appealed fines are
             overturned. Use our tools to find out if you have grounds to challenge yours.
           </p>
         </div>

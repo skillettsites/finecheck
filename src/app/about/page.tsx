@@ -3,9 +3,9 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "About FineCheck | How We Help You Appeal Parking Fines",
+  title: "About FineCheck | How We Help You Appeal Fines",
   description:
-    "FineCheck is a UK parking fine appeal tool that uses AI to help drivers check their fines, understand their rights, and generate professional appeal letters.",
+    "FineCheck is a UK fine appeal tool that uses AI to help drivers challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Check your fine, understand your rights, and generate professional appeal letters.",
   alternates: {
     canonical: "https://appealafine.co.uk/about",
   },
@@ -16,13 +16,13 @@ const steps = [
     number: "1",
     title: "Tell Us About Your Fine",
     description:
-      "Enter the details of your parking fine, including the type (council or private), the operator, the date, and the circumstances.",
+      "Enter the details of your fine, including the type (council PCN, private parking charge, bus lane, congestion charge, or ULEZ), the issuer, the date, and the circumstances.",
   },
   {
     number: "2",
     title: "Get a Free Assessment",
     description:
-      "Our AI analyses your situation against UK parking law, checking for procedural errors, signage issues, and common grounds for appeal.",
+      "Our AI analyses your situation against UK law, checking for procedural errors, signage issues, and common grounds for appeal.",
   },
   {
     number: "3",
@@ -91,7 +91,7 @@ export default function AboutPage() {
             About FineCheck
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Over 25 million parking fines are issued in the UK every year. Studies show
+            Over 25 million fines are issued in the UK every year. Studies show
             that 42-64% of appeals succeed at tribunal. Yet fewer than 1 in 20 fines are
             ever formally challenged. We built FineCheck to change that.
           </p>
@@ -173,7 +173,7 @@ export default function AboutPage() {
             Check Your Fine for Free
           </h2>
           <p className="mt-3 text-slate-300 max-w-xl mx-auto">
-            Find out if your parking fine has grounds for appeal. Our free assessment
+            Find out if your fine has grounds for appeal. Our free assessment
             takes less than 2 minutes.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">

@@ -48,7 +48,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-gray-400">
-              Helping UK drivers challenge unfair parking fines. Check your PCN, understand your rights, and generate professional appeal letters.
+              Helping UK drivers challenge unfair fines. Check your PCN, understand your rights, and generate professional appeal letters for parking fines, bus lane PCNs, congestion charges, and more.
             </p>
             <p className="mt-4 text-xs text-gray-500">
               Trusted by thousands of UK drivers

@@ -6,9 +6,9 @@ import StatsCounter from "@/components/StatsCounter";
 import PricingCard from "@/components/PricingCard";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Parking Fine in Minutes | FineCheck",
+  title: "Appeal Your Fine in Minutes | FineCheck",
   description:
-    "AI-powered parking fine appeal tool for UK drivers. Check if your PCN is valid, get a free assessment, and generate a personalised appeal letter. 42-64% of appeals succeed at tribunal.",
+    "AI-powered fine appeal tool for UK drivers. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ fines, and red route penalties. Free assessment, then a personalised appeal letter. 42-64% of appeals succeed at tribunal.",
   alternates: {
     canonical: "https://appealafine.co.uk",
   },
@@ -88,12 +88,12 @@ const faqItems = [
   {
     question: "Is this legal?",
     answer:
-      "Absolutely. Every driver has the legal right to appeal a parking fine. FineCheck helps you exercise that right by preparing your appeal using established legal grounds. We reference the Traffic Management Act 2004, the Protection of Freedoms Act 2012, and relevant case law.",
+      "Absolutely. Every driver has the legal right to appeal a fine. FineCheck helps you exercise that right by preparing your appeal using established legal grounds. We reference the Traffic Management Act 2004, the Protection of Freedoms Act 2012, and relevant case law.",
   },
   {
     question: "How does the AI work?",
     answer:
-      "Our AI analyses your fine details against UK parking law, operator-specific rules, and thousands of successful appeal cases. It identifies the strongest legal grounds for your specific situation and generates a professionally worded letter tailored to your circumstances.",
+      "Our AI analyses your fine details against UK law, operator-specific rules, and thousands of successful appeal cases. It identifies the strongest legal grounds for your specific situation and generates a professionally worded letter tailored to your circumstances.",
   },
   {
     question: "What if my appeal fails?",
@@ -169,13 +169,14 @@ export default function HomePage() {
         <Container className="relative py-20 sm:py-28 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Appeal Your Parking Fine{" "}
+              Appeal Your Fine{" "}
               <span className="text-teal-600">in Minutes</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-500 sm:text-xl">
-              Our AI analyses your parking fine and generates a personalised
+              Our AI analyses your fine and generates a personalised
               appeal letter using the exact legal grounds most likely to succeed.
-              42-64% of appeals are successful.
+              Works for parking fines, bus lane PCNs, congestion charges, ULEZ
+              penalties, and more. 42-64% of appeals are successful.
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -299,7 +300,7 @@ export default function HomePage() {
                 Get Your Free Assessment
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Our AI analyses your situation against UK parking law and tells
+                Our AI analyses your situation against UK law and tells
                 you your chances of a successful appeal. Completely free.
               </p>
               <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-slate-200 md:block" />
@@ -518,8 +519,8 @@ export default function HomePage() {
               Why FineCheck
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Built specifically for UK parking law, not a generic template
-              generator.
+              Built specifically for UK parking and traffic law, not a generic
+              template generator.
             </p>
           </div>
 
@@ -649,7 +650,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Everything you need to know about using FineCheck to appeal your
-              parking fine.
+              fine.
             </p>
           </div>
 
@@ -668,7 +669,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-lg text-slate-500">
               Join thousands of UK drivers who have successfully appealed their
-              parking fines. Your free assessment takes just a few minutes.
+              fines. Your free assessment takes just a few minutes.
             </p>
             <div className="mt-10">
               <Link

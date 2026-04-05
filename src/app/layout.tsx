@@ -7,10 +7,10 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 export const metadata: Metadata = {
   title: {
     template: "FineCheck | %s",
-    default: "FineCheck | Appeal Your Parking Fine",
+    default: "FineCheck | Appeal Your Fine",
   },
   description:
-    "Appeal your UK parking fine for free. FineCheck helps you check if your PCN is valid, generate professional appeal letters, and understand your rights. Over 10 million parking fines are issued each year, and many can be successfully challenged.",
+    "Appeal your UK fine for free. FineCheck helps you challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and red route fines. Check if your PCN is valid, generate professional appeal letters, and understand your rights.",
   keywords: [
     "parking fine appeal",
     "PCN appeal",
@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     "UK parking fine",
     "private parking fine",
     "council parking fine",
+    "bus lane fine appeal",
+    "congestion charge appeal",
+    "ULEZ fine appeal",
+    "red route PCN",
   ],
   metadataBase: new URL("https://appealafine.co.uk"),
   openGraph: {
@@ -28,23 +32,23 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://appealafine.co.uk",
     siteName: "FineCheck",
-    title: "FineCheck | Appeal Your Parking Fine",
+    title: "FineCheck | Appeal Your Fine",
     description:
-      "Appeal your UK parking fine for free. Check if your PCN is valid, generate professional appeal letters, and understand your rights.",
+      "Appeal your UK fine for free. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Generate professional appeal letters.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FineCheck - Appeal Your Parking Fine",
+        alt: "FineCheck - Appeal Your Fine",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FineCheck | Appeal Your Parking Fine",
+    title: "FineCheck | Appeal Your Fine",
     description:
-      "Appeal your UK parking fine for free. Check if your PCN is valid, generate professional appeal letters, and understand your rights.",
+      "Appeal your UK fine for free. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Generate professional appeal letters.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -63,7 +67,7 @@ const organizationSchema = {
   url: "https://appealafine.co.uk",
   logo: "https://appealafine.co.uk/logo.png",
   description:
-    "UK parking fine appeal tool. Check your PCN, generate appeal letters, and understand your rights.",
+    "UK fine appeal tool. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more.",
   sameAs: [],
 };
 
