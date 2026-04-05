@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import { PRODUCTS } from "@/data/products";
 import { ALL_COUNCIL_OPTIONS, ALL_OPERATOR_OPTIONS } from "@/data/dropdown-options";
 import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
@@ -150,37 +150,174 @@ const FINE_TYPES: { id: FineType; title: string; subtitle: string; description: 
   },
 ];
 
-function StepFineType({ onSelect }: { onSelect: (type: FineType) => void }) {
+function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<string, unknown>) => void }) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [scanning, setScanning] = useState(false);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const processFile = async (file: File) => {
+    const ACCEPTED = ["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"];
+    if (!ACCEPTED.includes(file.type)) {
+      setError("Please upload a JPG, PNG, or WebP image.");
+      return;
+    }
+    if (file.size > 10 * 1024 * 1024) {
+      setError("File too large. Maximum 10MB.");
+      return;
+    }
+
+    setError(null);
+    const reader = new FileReader();
+    reader.onload = (e) => setPreview(e.target?.result as string);
+    reader.readAsDataURL(file);
+
+    setScanning(true);
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      const res = await fetch("/api/scan-ticket", { method: "POST", body: formData });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || "Could not read your ticket. Try a clearer photo or enter details manually below.");
+        setScanning(false);
+        return;
+      }
+      onScanComplete(data.data);
+    } catch {
+      setError("Connection error. Please try again.");
+    } finally {
+      setScanning(false);
+    }
+  };
+
+  return (
+    <div className="relative rounded-2xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 to-white p-6 sm:p-8 mb-6">
+      <div className="absolute -top-3 left-6">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-white shadow-sm">
+          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+          </svg>
+          Fastest way
+        </span>
+      </div>
+
+      <div className="text-center">
+        <div className="flex justify-center mb-3">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+            </svg>
+          </div>
+        </div>
+        <h3 className="text-lg font-bold text-gray-900 mb-1">Snap a Photo of Your Fine</h3>
+        <p className="text-sm text-gray-600 mb-4">
+          Our AI reads your ticket and fills in everything automatically. Just take a photo.
+        </p>
+
+        {scanning ? (
+          <div className="py-8">
+            {preview && (
+              <div className="mx-auto mb-4 w-32 h-32 rounded-lg overflow-hidden relative">
+                <img src={preview} alt="Scanning" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-blue-800/20">
+                  <div className="absolute left-0 right-0 h-0.5 bg-blue-500 animate-pulse" style={{ top: '50%' }} />
+                </div>
+              </div>
+            )}
+            <div className="flex items-center justify-center gap-2 text-blue-800">
+              <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              <span className="font-medium">Reading your ticket...</span>
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+              </svg>
+              Upload Photo
+            </button>
+            <span className="text-xs text-gray-400 hidden sm:block">or</span>
+            <label className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 cursor-pointer hover:bg-gray-50 transition-colors">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+              </svg>
+              Take Photo
+              <input
+                type="file"
+                accept="image/*"
+                capture="environment"
+                className="sr-only"
+                onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f); }}
+              />
+            </label>
+          </div>
+        )}
+
+        {error && (
+          <p className="mt-3 text-sm text-red-600">{error}</p>
+        )}
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/jpeg,image/png,image/webp,image/heic"
+          className="hidden"
+          onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f); }}
+        />
+      </div>
+    </div>
+  );
+}
+
+function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType) => void; onScanComplete: (data: Record<string, unknown>) => void }) {
   return (
     <div>
       <div className="text-center mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">What type of fine did you receive?</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Appeal Your Parking Fine</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
-          Select the type of parking fine or charge you want to appeal. Not sure? A council PCN usually has a council
-          logo, while private charges come from companies like ParkingEye or UKPC.
+          Take a photo of your ticket for the fastest experience, or select your fine type below to get started.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-        {FINE_TYPES.map((ft) => (
-          <button
-            key={ft.id}
-            onClick={() => onSelect(ft.id)}
-            className="group relative flex flex-col items-start text-left rounded-xl border-2 border-gray-200 bg-white p-5 transition-all hover:border-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
-          >
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800 mb-3 group-hover:bg-blue-800 group-hover:text-white transition-colors">
-              {ft.icon}
-            </div>
-            <h3 className="text-base font-semibold text-gray-900 mb-1">{ft.title}</h3>
-            <p className="text-sm text-gray-500 mb-2">{ft.subtitle}</p>
-            <p className="text-xs text-gray-400 leading-relaxed">{ft.description}</p>
-            <div className="absolute top-4 right-4 text-gray-300 group-hover:text-blue-800 transition-colors">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </div>
-          </button>
-        ))}
+      <div className="max-w-3xl mx-auto">
+        <ScanUploadArea onScanComplete={onScanComplete} />
+
+        <div className="relative my-6">
+          <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-gray-200" /></div>
+          <div className="relative flex justify-center"><span className="bg-gray-50 px-4 text-sm text-gray-400">or select your fine type</span></div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {FINE_TYPES.map((ft) => (
+            <button
+              key={ft.id}
+              onClick={() => onSelect(ft.id)}
+              className="group relative flex flex-col items-start text-left rounded-xl border-2 border-gray-200 bg-white p-5 transition-all hover:border-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800 mb-3 group-hover:bg-blue-800 group-hover:text-white transition-colors">
+                {ft.icon}
+              </div>
+              <h3 className="text-base font-semibold text-gray-900 mb-1">{ft.title}</h3>
+              <p className="text-sm text-gray-500 mb-2">{ft.subtitle}</p>
+              <p className="text-xs text-gray-400 leading-relaxed">{ft.description}</p>
+              <div className="absolute top-4 right-4 text-gray-300 group-hover:text-blue-800 transition-colors">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="mt-8 text-center">
@@ -272,6 +409,7 @@ function StepDetails({
   onNext,
   onBack,
   errors,
+  onEvidenceAnalysis,
 }: {
   fineType: FineType;
   form: FormData;
@@ -279,6 +417,7 @@ function StepDetails({
   onNext: () => void;
   onBack: () => void;
   errors: Partial<Record<keyof FormData, string>>;
+  onEvidenceAnalysis: (analyses: EvidenceAnalysis[]) => void;
 }) {
   const fieldClass = (field: keyof FormData) =>
     `w-full rounded-lg border ${
@@ -520,6 +659,9 @@ function StepDetails({
           />
           {errors.circumstances && <p className="mt-1 text-xs text-red-600">{errors.circumstances}</p>}
         </div>
+
+        {/* Evidence photo upload */}
+        <EvidenceUpload fineType={fineType} onAnalysisComplete={onEvidenceAnalysis} />
       </div>
 
       <div className="mt-8 flex items-center justify-between gap-4">
@@ -542,6 +684,156 @@ function StepDetails({
           </svg>
         </button>
       </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Evidence Upload (used in Step 2)                                   */
+/* ------------------------------------------------------------------ */
+
+interface EvidenceAnalysis {
+  evidence_type: string;
+  summary: string;
+  issues_found: { issue: string; strength: string; legal_basis: string }[];
+  appeal_relevance: string;
+  recommendation: string;
+}
+
+function EvidenceUpload({ fineType, onAnalysisComplete }: { fineType: FineType; onAnalysisComplete: (analyses: EvidenceAnalysis[]) => void }) {
+  const [analyses, setAnalyses] = useState<EvidenceAnalysis[]>([]);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [previews, setPreviews] = useState<string[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFile = async (file: File) => {
+    const ACCEPTED = ["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif"];
+    if (!ACCEPTED.includes(file.type)) { setError("Please upload a JPG, PNG, or WebP image."); return; }
+    if (file.size > 10 * 1024 * 1024) { setError("File too large. Maximum 10MB."); return; }
+
+    setError(null);
+    const reader = new FileReader();
+    reader.onload = (e) => setPreviews((prev) => [...prev, e.target?.result as string]);
+    reader.readAsDataURL(file);
+
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      formData.append("fineType", fineType);
+      const res = await fetch("/api/analyse-evidence", { method: "POST", body: formData });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || "Could not analyse this image.");
+        setUploading(false);
+        return;
+      }
+      const updated = [...analyses, data.data as EvidenceAnalysis];
+      setAnalyses(updated);
+      onAnalysisComplete(updated);
+    } catch {
+      setError("Connection error. Please try again.");
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const strengthColor = (s: string) => {
+    if (s === "strong") return "text-green-700 bg-green-50 border-green-200";
+    if (s === "moderate") return "text-amber-700 bg-amber-50 border-amber-200";
+    return "text-red-700 bg-red-50 border-red-200";
+  };
+
+  const relevanceColor = (r: string) => {
+    if (r === "high") return "text-green-700";
+    if (r === "medium") return "text-amber-700";
+    return "text-gray-500";
+  };
+
+  return (
+    <div className="mt-6 rounded-xl border border-blue-200 bg-blue-50/50 p-5">
+      <div className="flex items-start gap-3 mb-4">
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-800">
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+          </svg>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold text-gray-900">Upload Evidence Photos (optional)</h4>
+          <p className="text-xs text-gray-600 mt-0.5">
+            Upload ANPR images, CCTV stills, photos of signage, parking machines, or road markings. Our AI will analyse them for potential appeal grounds.
+          </p>
+        </div>
+      </div>
+
+      {/* Previews + analyses */}
+      {analyses.length > 0 && (
+        <div className="space-y-3 mb-4">
+          {analyses.map((a, i) => (
+            <div key={i} className="rounded-lg border border-gray-200 bg-white p-4">
+              <div className="flex items-start gap-3">
+                {previews[i] && (
+                  <img src={previews[i]} alt={`Evidence ${i + 1}`} className="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-medium text-blue-800 bg-blue-100 rounded px-2 py-0.5 capitalize">{a.evidence_type}</span>
+                    <span className={`text-xs font-medium ${relevanceColor(a.appeal_relevance)}`}>
+                      {a.appeal_relevance === "high" ? "Highly relevant" : a.appeal_relevance === "medium" ? "Relevant" : "Limited relevance"}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-700">{a.summary}</p>
+                  {a.issues_found.length > 0 && (
+                    <div className="mt-2 space-y-1.5">
+                      {a.issues_found.map((issue, j) => (
+                        <div key={j} className={`text-xs rounded border px-2.5 py-1.5 ${strengthColor(issue.strength)}`}>
+                          <span className="font-medium">{issue.issue}</span>
+                          {issue.legal_basis && <span className="block text-[10px] opacity-75 mt-0.5">{issue.legal_basis}</span>}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {a.recommendation && (
+                    <p className="text-xs text-gray-500 mt-2 italic">{a.recommendation}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {uploading ? (
+        <div className="flex items-center justify-center gap-2 py-4 text-blue-800">
+          <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+          </svg>
+          <span className="text-sm font-medium">Analysing your evidence...</span>
+        </div>
+      ) : (
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          className="inline-flex items-center gap-2 rounded-lg border border-blue-300 bg-white px-4 py-2 text-sm font-medium text-blue-800 hover:bg-blue-50 transition-colors"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          {analyses.length > 0 ? "Add Another Photo" : "Upload Evidence Photo"}
+        </button>
+      )}
+
+      {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
+
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/jpeg,image/png,image/webp,image/heic"
+        className="hidden"
+        onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); if (fileInputRef.current) fileInputRef.current.value = ""; }}
+      />
     </div>
   );
 }
@@ -803,6 +1095,63 @@ export default function AppealFlow() {
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [assessment, setAssessment] = useState<AssessmentResult | null>(null);
+  const [evidenceAnalyses, setEvidenceAnalyses] = useState<EvidenceAnalysis[]>([]);
+
+  // Handle scanned ticket data: auto-populate form and skip to Step 2
+  const handleScanComplete = useCallback((data: Record<string, unknown>) => {
+    const fineTypeRaw = (data as { fine_type?: { value?: string } })?.fine_type?.value;
+    const fineType: FineType = fineTypeRaw === "private" ? "private" : "council";
+    const get = (key: string) => {
+      const field = (data as Record<string, { value?: string | number | null }>)?.[key];
+      return field?.value != null ? String(field.value) : "";
+    };
+
+    setForm((prev) => ({
+      ...prev,
+      fineType,
+      councilName: fineType !== "private" ? get("issuer_name") : prev.councilName,
+      operatorName: fineType === "private" ? get("issuer_name") : prev.operatorName,
+      pcnReference: get("reference_number"),
+      fineDate: get("date_of_contravention"),
+      parkingEventDate: fineType === "private" ? get("date_of_contravention") : prev.parkingEventDate,
+      fineAmount: get("fine_amount"),
+      vehicleReg: get("vehicle_registration"),
+      location: get("location"),
+      contraventionDescription: get("contravention_description"),
+      circumstances: get("contravention_description"),
+    }));
+    setStep(2);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  // Also check sessionStorage on mount for data from the standalone scanner page
+  useEffect(() => {
+    try {
+      const stored = sessionStorage.getItem("scannedTicketData");
+      if (stored) {
+        const data = JSON.parse(stored);
+        sessionStorage.removeItem("scannedTicketData");
+        const fineType: FineType = data.fineType === "private" ? "private" : "council";
+        setForm((prev) => ({
+          ...prev,
+          fineType,
+          councilName: fineType !== "private" ? (data.issuerName || "") : prev.councilName,
+          operatorName: fineType === "private" ? (data.issuerName || "") : prev.operatorName,
+          pcnReference: data.referenceNumber || "",
+          fineDate: data.fineDate || "",
+          parkingEventDate: fineType === "private" ? (data.fineDate || "") : prev.parkingEventDate,
+          fineAmount: data.fineAmount ? String(data.fineAmount) : "",
+          vehicleReg: data.vehicleReg || "",
+          location: data.location || "",
+          contraventionDescription: data.contravention || "",
+          circumstances: data.contravention || "",
+        }));
+        setStep(2);
+      }
+    } catch {
+      // ignore parse errors
+    }
+  }, []);
 
   const handleFineTypeSelect = useCallback((type: FineType) => {
     setForm((prev) => ({ ...prev, fineType: type }));
@@ -873,10 +1222,42 @@ export default function AppealFlow() {
     };
 
     const result = assessFine(input);
+
+    // Merge evidence analysis findings into the assessment
+    if (evidenceAnalyses.length > 0) {
+      let evidenceIdx = 0;
+      for (const evidence of evidenceAnalyses) {
+        for (const issue of evidence.issues_found) {
+          evidenceIdx++;
+          // Add evidence-based grounds that aren't already in the assessment
+          const alreadyExists = result.grounds.some(
+            (g) => g.title.toLowerCase().includes(issue.issue.toLowerCase().slice(0, 30))
+          );
+          if (!alreadyExists) {
+            result.grounds.push({
+              id: `evidence-${evidenceIdx}`,
+              title: issue.issue,
+              description: `Identified from uploaded ${evidence.evidence_type} evidence. ${issue.legal_basis || ""}`,
+              strength: issue.strength as "strong" | "moderate" | "weak",
+              legalBasis: issue.legal_basis || "Photographic evidence analysis",
+            });
+          }
+        }
+        // Boost probability if strong evidence found
+        const strongIssues = evidence.issues_found.filter((i) => i.strength === "strong").length;
+        if (strongIssues > 0) {
+          result.successProbability = Math.min(90, result.successProbability + strongIssues * 5);
+        }
+      }
+      // Recalculate overall strength based on updated probability
+      if (result.successProbability >= 65) result.overallStrength = "strong";
+      else if (result.successProbability >= 40) result.overallStrength = "moderate";
+    }
+
     setAssessment(result);
     setStep(3);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [form, validateStep2]);
+  }, [form, validateStep2, evidenceAnalyses]);
 
   const handleSelectProduct = useCallback(
     (productId: string) => {
@@ -887,6 +1268,7 @@ export default function AppealFlow() {
           JSON.stringify({
             form,
             assessment,
+            evidenceAnalyses,
             productId,
             timestamp: new Date().toISOString(),
           })
@@ -915,7 +1297,7 @@ export default function AppealFlow() {
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <ProgressBar currentStep={step} />
 
-        {step === 1 && <StepFineType onSelect={handleFineTypeSelect} />}
+        {step === 1 && <StepFineType onSelect={handleFineTypeSelect} onScanComplete={handleScanComplete} />}
 
         {step === 2 && (
           <StepDetails
@@ -925,6 +1307,7 @@ export default function AppealFlow() {
             onNext={handleStep2Next}
             onBack={handleBack}
             errors={errors}
+            onEvidenceAnalysis={setEvidenceAnalyses}
           />
         )}
 
