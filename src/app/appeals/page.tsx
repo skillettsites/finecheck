@@ -66,7 +66,7 @@ export default function OperatorsIndexPage() {
         />
         <link
           rel="canonical"
-          href="https://finecheck.co.uk/appeals"
+          href="https://appealafine.co.uk/appeals"
         />
       </head>
 

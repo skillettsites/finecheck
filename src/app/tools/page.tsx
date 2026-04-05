@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Free tools to check if your parking fine is valid. Use our POFA compliance checker, deadline calculator, and appeal strength assessor to understand your options before you pay.",
   alternates: {
-    canonical: "https://finecheck.co.uk/tools",
+    canonical: "https://appealafine.co.uk/tools",
   },
   openGraph: {
     title: "Free Parking Fine Tools | FineCheck",
     description:
       "Free tools to check if your parking fine is valid. POFA checker, deadline calculator, and more.",
-    url: "https://finecheck.co.uk/tools",
+    url: "https://appealafine.co.uk/tools",
   },
 };
 

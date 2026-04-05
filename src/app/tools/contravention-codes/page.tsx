@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Look up any UK parking contravention code to find out what it means, how much the fine is, and your best options for appealing. Covers all on-street, off-street, bus lane, and moving traffic codes.",
   alternates: {
-    canonical: "https://finecheck.co.uk/tools/contravention-codes",
+    canonical: "https://appealafine.co.uk/tools/contravention-codes",
   },
   openGraph: {
     title: "Parking Contravention Code Lookup | FineCheck",
     description:
       "Find out what your parking contravention code means and how to appeal. Free lookup tool with fine amounts, defences, and tips.",
-    url: "https://finecheck.co.uk/tools/contravention-codes",
+    url: "https://appealafine.co.uk/tools/contravention-codes",
   },
 };
 

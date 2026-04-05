@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Calculate exactly when your parking fine appeal deadlines expire. See discount windows, informal challenge periods, tribunal deadlines, and more for both council and private fines.",
   alternates: {
-    canonical: "https://finecheck.co.uk/tools/deadline-calculator",
+    canonical: "https://appealafine.co.uk/tools/deadline-calculator",
   },
   openGraph: {
     title: "Parking Fine Deadline Calculator | Know Your Time Limits",
     description:
       "Calculate exactly when your parking fine appeal deadlines expire. Free instant results for council and private fines.",
-    url: "https://finecheck.co.uk/tools/deadline-calculator",
+    url: "https://appealafine.co.uk/tools/deadline-calculator",
   },
 };
 

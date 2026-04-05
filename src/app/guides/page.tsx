@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Free, expert guides to appealing UK parking fines. Covers council PCNs, private parking charges, POFA 2012, tribunal appeals, and more. Written by parking law specialists.",
   alternates: {
-    canonical: "https://finecheck.co.uk/guides",
+    canonical: "https://appealafine.co.uk/guides",
   },
 };
 

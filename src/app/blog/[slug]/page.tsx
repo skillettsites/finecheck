@@ -25,12 +25,12 @@ export async function generateMetadata({
     title: post.seoTitle,
     description: post.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/blog/${post.slug}`,
+      canonical: `https://appealafine.co.uk/blog/${post.slug}`,
     },
     openGraph: {
       title: post.seoTitle,
       description: post.seoDescription,
-      url: `https://finecheck.co.uk/blog/${post.slug}`,
+      url: `https://appealafine.co.uk/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedDate,
     },
@@ -320,20 +320,20 @@ export default async function BlogPostPage({
     author: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
       logo: {
         "@type": "ImageObject",
-        url: "https://finecheck.co.uk/logo.png",
+        url: "https://appealafine.co.uk/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://finecheck.co.uk/blog/${post.slug}`,
+      "@id": `https://appealafine.co.uk/blog/${post.slug}`,
     },
   };
 

@@ -28,12 +28,12 @@ export async function generateMetadata({
     title: template.seoTitle,
     description: template.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/templates/${template.slug}`,
+      canonical: `https://appealafine.co.uk/templates/${template.slug}`,
     },
     openGraph: {
       title: template.seoTitle,
       description: template.seoDescription,
-      url: `https://finecheck.co.uk/templates/${template.slug}`,
+      url: `https://appealafine.co.uk/templates/${template.slug}`,
       type: "article",
     },
   };
@@ -103,14 +103,14 @@ export default async function TemplateDetailPage({
     author: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
-    mainEntityOfPage: `https://finecheck.co.uk/templates/${template.slug}`,
+    mainEntityOfPage: `https://appealafine.co.uk/templates/${template.slug}`,
   };
 
   const faqSchema = {

@@ -8,7 +8,7 @@ import { SITUATIONS } from '@/data/situations';
 import { OPERATOR_SITUATIONS } from '@/data/operator-situations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://finecheck.co.uk';
+  const baseUrl = 'https://appealafine.co.uk';
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

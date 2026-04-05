@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "AI-powered parking fine appeal tool for UK drivers. Check if your PCN is valid, get a free assessment, and generate a personalised appeal letter. 42-64% of appeals succeed at tribunal.",
   alternates: {
-    canonical: "https://finecheck.co.uk",
+    canonical: "https://appealafine.co.uk",
   },
 };
 

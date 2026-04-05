@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "FineCheck is a UK parking fine appeal tool that uses AI to help drivers check their fines, understand their rights, and generate professional appeal letters.",
   alternates: {
-    canonical: "https://finecheck.co.uk/about",
+    canonical: "https://appealafine.co.uk/about",
   },
 };
 

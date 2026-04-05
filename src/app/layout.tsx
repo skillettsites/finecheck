@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     "private parking fine",
     "council parking fine",
   ],
-  metadataBase: new URL("https://finecheck.co.uk"),
+  metadataBase: new URL("https://appealafine.co.uk"),
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://finecheck.co.uk",
+    url: "https://appealafine.co.uk",
     siteName: "FineCheck",
     title: "FineCheck | Appeal Your Parking Fine",
     description:
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://finecheck.co.uk",
+    canonical: "https://appealafine.co.uk",
   },
 };
 
@@ -60,8 +60,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "FineCheck",
-  url: "https://finecheck.co.uk",
-  logo: "https://finecheck.co.uk/logo.png",
+  url: "https://appealafine.co.uk",
+  logo: "https://appealafine.co.uk/logo.png",
   description:
     "UK parking fine appeal tool. Check your PCN, generate appeal letters, and understand your rights.",
   sameAs: [],
@@ -71,12 +71,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "FineCheck",
-  url: "https://finecheck.co.uk",
+  url: "https://appealafine.co.uk",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://finecheck.co.uk/search?q={search_term_string}",
+      urlTemplate: "https://appealafine.co.uk/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

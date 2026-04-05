@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Find your council and learn how to appeal your parking fine. Covers all major UK councils including London boroughs, major cities, and regional authorities. Free appeal guides and success rates.",
   alternates: {
-    canonical: "https://finecheck.co.uk/councils",
+    canonical: "https://appealafine.co.uk/councils",
   },
 };
 

@@ -33,12 +33,12 @@ export async function generateMetadata({
     title: combo.seoTitle,
     description: combo.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      canonical: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     },
     openGraph: {
       title: combo.seoTitle,
       description: combo.seoDescription,
-      url: `https://finecheck.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      url: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
       type: "article",
     },
   };
@@ -169,15 +169,15 @@ export default async function OperatorSituationPage({
     "@type": "Article",
     headline: combo.title,
     description: combo.seoDescription,
-    url: `https://finecheck.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+    url: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://finecheck.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      "@id": `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     },
   };
 

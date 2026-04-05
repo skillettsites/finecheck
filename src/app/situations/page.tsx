@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Find your specific parking fine situation and get expert appeal advice. Covers supermarkets, hospitals, retail parks, gyms, train stations, universities, airports, residential areas, schools, and hotels.",
   alternates: {
-    canonical: "https://finecheck.co.uk/situations",
+    canonical: "https://appealafine.co.uk/situations",
   },
 };
 

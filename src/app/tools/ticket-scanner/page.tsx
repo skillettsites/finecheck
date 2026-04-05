@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Upload a photo of your parking ticket and our AI will extract all the key details automatically. Works with council PCNs and private parking charge notices. Free, fast, and secure.",
   alternates: {
-    canonical: "https://finecheck.co.uk/tools/ticket-scanner",
+    canonical: "https://appealafine.co.uk/tools/ticket-scanner",
   },
   openGraph: {
     title: "Smart Ticket Scanner | Upload Your Parking Fine Photo",
     description:
       "Upload a photo of your parking ticket and our AI will extract all the key details automatically. Free, fast, and secure.",
-    url: "https://finecheck.co.uk/tools/ticket-scanner",
+    url: "https://appealafine.co.uk/tools/ticket-scanner",
   },
 };
 

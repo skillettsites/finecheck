@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Expert guides on UK parking fines, appeals, and your rights. Covering council fines, private parking charges, the new Code of Practice, and how to win your appeal.",
   alternates: {
-    canonical: "https://finecheck.co.uk/blog",
+    canonical: "https://appealafine.co.uk/blog",
   },
   openGraph: {
     title: "Parking Fine Advice & Guides | FineCheck",
     description:
       "Expert guides on UK parking fines, appeals, and your rights.",
-    url: "https://finecheck.co.uk/blog",
+    url: "https://appealafine.co.uk/blog",
     type: "website",
   },
 };

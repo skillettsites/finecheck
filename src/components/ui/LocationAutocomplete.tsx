@@ -64,7 +64,7 @@ export function LocationAutocomplete({
         {
           headers: {
             "Accept": "application/json",
-            "Referer": "https://finecheck.co.uk",
+            "Referer": "https://appealafine.co.uk",
           },
         }
       );

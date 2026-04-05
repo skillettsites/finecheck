@@ -20,7 +20,7 @@ export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps)
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://finecheck.co.uk${item.href}`,
+      item: `https://appealafine.co.uk${item.href}`,
     })),
   };
 

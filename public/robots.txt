@@ -8,7 +8,7 @@ Disallow: /api/
 Disallow: /appeal/success
 
 # Host
-Host: https://finecheck.co.uk
+Host: https://appealafine.co.uk
 
 # Sitemaps
-Sitemap: https://finecheck.co.uk/sitemap.xml
+Sitemap: https://appealafine.co.uk/sitemap.xml

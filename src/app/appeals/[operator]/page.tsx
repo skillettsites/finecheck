@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: op.seoTitle,
     description: op.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/appeals/${op.slug}`,
+      canonical: `https://appealafine.co.uk/appeals/${op.slug}`,
     },
     openGraph: {
       title: op.seoTitle,
       description: op.seoDescription,
-      url: `https://finecheck.co.uk/appeals/${op.slug}`,
+      url: `https://appealafine.co.uk/appeals/${op.slug}`,
       type: "article",
     },
   };
@@ -133,9 +133,9 @@ export default async function OperatorPage({
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
-    mainEntityOfPage: `https://finecheck.co.uk/appeals/${op.slug}`,
+    mainEntityOfPage: `https://appealafine.co.uk/appeals/${op.slug}`,
   };
 
   return (

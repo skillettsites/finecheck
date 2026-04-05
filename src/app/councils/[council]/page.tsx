@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: council.seoTitle,
     description: council.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/councils/${council.slug}`,
+      canonical: `https://appealafine.co.uk/councils/${council.slug}`,
     },
     openGraph: {
       title: council.seoTitle,
       description: council.seoDescription,
-      url: `https://finecheck.co.uk/councils/${council.slug}`,
+      url: `https://appealafine.co.uk/councils/${council.slug}`,
       type: "article",
     },
   };
@@ -119,9 +119,9 @@ export default async function CouncilPage({
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
-    mainEntityOfPage: `https://finecheck.co.uk/councils/${council.slug}`,
+    mainEntityOfPage: `https://appealafine.co.uk/councils/${council.slug}`,
   };
 
   return (

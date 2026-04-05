@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Affordable parking fine appeal tools. Free assessment, standard appeal letters from £5.99, and premium appeal packs from £9.99.",
   alternates: {
-    canonical: "https://finecheck.co.uk/pricing",
+    canonical: "https://appealafine.co.uk/pricing",
   },
 };
 

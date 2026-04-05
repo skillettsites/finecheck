@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Free parking fine appeal letter templates for ParkingEye, UKPC, APCOA, Smart Parking, council PCNs, POPLA, and IAS. Copy, customise, and send. Legally accurate templates with real legal arguments.",
   alternates: {
-    canonical: "https://finecheck.co.uk/templates",
+    canonical: "https://appealafine.co.uk/templates",
   },
   openGraph: {
     title: "Free Parking Fine Appeal Letter Templates | FineCheck",
     description:
       "Free parking fine appeal letter templates for all major UK operators and councils. Copy, customise, and send.",
-    url: "https://finecheck.co.uk/templates",
+    url: "https://appealafine.co.uk/templates",
     type: "website",
   },
 };

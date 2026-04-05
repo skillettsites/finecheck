@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Check if the Notice to Keeper was served within the legal 14-day time limit under POFA 2012. If the operator missed the deadline, your private parking fine may be unenforceable.",
   alternates: {
-    canonical: "https://finecheck.co.uk/tools/pofa-checker",
+    canonical: "https://appealafine.co.uk/tools/pofa-checker",
   },
   openGraph: {
     title: "POFA Compliance Checker | Is Your Private Parking Fine Valid?",
     description:
       "Check if the Notice to Keeper was served within the legal 14-day time limit. Free instant results.",
-    url: "https://finecheck.co.uk/tools/pofa-checker",
+    url: "https://appealafine.co.uk/tools/pofa-checker",
   },
 };
 

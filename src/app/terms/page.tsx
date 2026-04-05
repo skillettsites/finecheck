@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "FineCheck terms of service. The legal terms governing use of our parking fine appeal letter generation service.",
   alternates: {
-    canonical: "https://finecheck.co.uk/terms",
+    canonical: "https://appealafine.co.uk/terms",
   },
   robots: {
     index: true,
@@ -30,7 +30,7 @@ export default function TermsPage() {
           <section>
             <p>
               These terms of service (&quot;Terms&quot;) govern your use of the FineCheck
-              website at finecheck.co.uk (&quot;the Service&quot;), operated by FineCheck
+              website at appealafine.co.uk (&quot;the Service&quot;), operated by FineCheck
               (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By using the Service, you agree to these Terms.
               If you do not agree, please do not use the Service.
             </p>

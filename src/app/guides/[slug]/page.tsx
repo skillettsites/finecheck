@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: guide.seoTitle,
     description: guide.seoDescription,
     alternates: {
-      canonical: `https://finecheck.co.uk/guides/${guide.slug}`,
+      canonical: `https://appealafine.co.uk/guides/${guide.slug}`,
     },
     openGraph: {
       title: guide.seoTitle,
       description: guide.seoDescription,
-      url: `https://finecheck.co.uk/guides/${guide.slug}`,
+      url: `https://appealafine.co.uk/guides/${guide.slug}`,
       type: "article",
     },
   };
@@ -303,15 +303,15 @@ export default async function GuidePage({
     "@type": "Article",
     headline: guide.title,
     description: guide.seoDescription,
-    url: `https://finecheck.co.uk/guides/${guide.slug}`,
+    url: `https://appealafine.co.uk/guides/${guide.slug}`,
     publisher: {
       "@type": "Organization",
       name: "FineCheck",
-      url: "https://finecheck.co.uk",
+      url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://finecheck.co.uk/guides/${guide.slug}`,
+      "@id": `https://appealafine.co.uk/guides/${guide.slug}`,
     },
   };
 
