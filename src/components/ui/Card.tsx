@@ -22,8 +22,8 @@ export default function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-xl border border-gray-200 bg-white ${
-        hover ? "transition-shadow hover:shadow-lg" : ""
+      className={`rounded-xl border border-gray-100 bg-white ${
+        hover ? "transition-shadow hover:shadow-sm" : ""
       } ${className}`}
     >
       {header && (

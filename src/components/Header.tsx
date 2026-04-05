@@ -43,15 +43,15 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${
-        scrolled ? "shadow-md" : "border-b border-gray-100"
+      className={`sticky top-0 z-50 transition-all duration-200 ${
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100" : "bg-white border-b border-gray-100"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-800 group-hover:bg-blue-700 transition-colors">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-600 group-hover:bg-teal-700 transition-colors">
               <svg
                 className="h-5 w-5 text-white"
                 fill="none"
@@ -66,8 +66,8 @@ export default function Header() {
                 />
               </svg>
             </div>
-            <span className="text-xl font-bold text-blue-800">
-              Fine<span className="text-gray-900">Check</span>
+            <span className="text-xl font-bold text-slate-900">
+              Fine<span className="text-teal-600">Check</span>
             </span>
           </Link>
 
@@ -78,7 +78,7 @@ export default function Header() {
                 <div key={item.name} className="relative" ref={dropdownRef}>
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-800 rounded-lg hover:bg-blue-50 transition-colors"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition-colors"
                   >
                     {item.name}
                     <svg
@@ -98,9 +98,9 @@ export default function Header() {
                           key={child.name}
                           href={child.href}
                           onClick={() => setDropdownOpen(false)}
-                          className="block rounded-lg px-3 py-2.5 hover:bg-blue-50 transition-colors"
+                          className="block rounded-lg px-3 py-2.5 hover:bg-slate-50 transition-colors"
                         >
-                          <div className="text-sm font-medium text-gray-900">{child.name}</div>
+                          <div className="text-sm font-medium text-slate-900">{child.name}</div>
                           <div className="text-xs text-gray-500 mt-0.5">{child.description}</div>
                         </Link>
                       ))}
@@ -111,7 +111,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-800 rounded-lg hover:bg-blue-50 transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -123,7 +123,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
             >
               Start Your Appeal
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -166,7 +166,7 @@ export default function Header() {
                       key={child.name}
                       href={child.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                      className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
                     >
                       {child.name}
                     </Link>
@@ -177,7 +177,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors"
+                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-slate-50 hover:text-slate-900 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -187,7 +187,7 @@ export default function Header() {
               <Link
                 href="/appeal"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full rounded-lg bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-amber-600 transition-colors"
+                className="block w-full rounded-lg bg-teal-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-teal-700 transition-colors"
               >
                 Start Your Appeal
               </Link>

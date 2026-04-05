@@ -165,26 +165,14 @@ export default function HomePage() {
   return (
     <>
       {/* ==================== HERO ==================== */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-
+      <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
         <Container className="relative py-20 sm:py-28 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               Appeal Your Parking Fine{" "}
-              <span className="text-amber-400">in Minutes</span>
+              <span className="text-teal-600">in Minutes</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-blue-100 sm:text-xl">
+            <p className="mt-6 text-lg leading-relaxed text-slate-500 sm:text-xl">
               Our AI analyses your parking fine and generates a personalised
               appeal letter using the exact legal grounds most likely to succeed.
               42-64% of appeals are successful.
@@ -193,7 +181,7 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/appeal"
-                className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-600 hover:shadow-xl hover:shadow-amber-500/30 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-blue-900"
+                className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
               >
                 Start Your Free Assessment
                 <svg
@@ -212,7 +200,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/guides"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white/30 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-blue-900"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-8 py-4 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
               >
                 Check Your Rights
               </Link>
@@ -220,9 +208,9 @@ export default function HomePage() {
 
             {/* Trust badges */}
             <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              <div className="flex items-center gap-2 text-sm text-blue-200">
+              <div className="flex items-center gap-2 text-sm text-slate-500">
                 <svg
-                  className="h-5 w-5 text-green-400"
+                  className="h-5 w-5 text-teal-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -236,9 +224,9 @@ export default function HomePage() {
                 </svg>
                 42-64% appeal success rate
               </div>
-              <div className="flex items-center gap-2 text-sm text-blue-200">
+              <div className="flex items-center gap-2 text-sm text-slate-500">
                 <svg
-                  className="h-5 w-5 text-green-400"
+                  className="h-5 w-5 text-teal-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -252,9 +240,9 @@ export default function HomePage() {
                 </svg>
                 25M+ fines issued yearly
               </div>
-              <div className="flex items-center gap-2 text-sm text-blue-200">
+              <div className="flex items-center gap-2 text-sm text-slate-500">
                 <svg
-                  className="h-5 w-5 text-green-400"
+                  className="h-5 w-5 text-teal-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -288,7 +276,7 @@ export default function HomePage() {
           <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">
             {/* Step 1 */}
             <div className="relative text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-800">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
                 <span className="text-2xl font-bold">1</span>
               </div>
               <h3 className="mt-6 text-lg font-semibold text-gray-900">
@@ -299,12 +287,12 @@ export default function HomePage() {
                 council or private fine and route you to the right process.
               </p>
               {/* Connector line (desktop only) */}
-              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-blue-200 md:block" />
+              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-slate-200 md:block" />
             </div>
 
             {/* Step 2 */}
             <div className="relative text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-800">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
                 <span className="text-2xl font-bold">2</span>
               </div>
               <h3 className="mt-6 text-lg font-semibold text-gray-900">
@@ -314,12 +302,12 @@ export default function HomePage() {
                 Our AI analyses your situation against UK parking law and tells
                 you your chances of a successful appeal. Completely free.
               </p>
-              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-blue-200 md:block" />
+              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-slate-200 md:block" />
             </div>
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
                 <span className="text-2xl font-bold">3</span>
               </div>
               <h3 className="mt-6 text-lg font-semibold text-gray-900">
@@ -335,7 +323,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link
               href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-600"
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700"
             >
               Start Now
               <svg
@@ -375,9 +363,9 @@ export default function HomePage() {
             {/* POFA Checker */}
             <Link
               href="/tools/pofa-checker"
-              className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 transition-all hover:border-blue-300 hover:shadow-lg"
+              className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 transition-all hover:border-teal-200 hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-800 group-hover:bg-blue-800 group-hover:text-white transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -399,7 +387,7 @@ export default function HomePage() {
                 Check if your private parking fine is legally valid. The 14-day
                 Notice to Keeper rule invalidates thousands of fines every year.
               </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800 group-hover:gap-2 transition-all">
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-600 group-hover:gap-2 transition-all">
                 Check now
                 <svg
                   className="h-4 w-4"
@@ -420,9 +408,9 @@ export default function HomePage() {
             {/* Deadline Calculator */}
             <Link
               href="/tools/deadline-calculator"
-              className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 transition-all hover:border-blue-300 hover:shadow-lg"
+              className="group relative rounded-2xl border-2 border-gray-200 bg-white p-8 transition-all hover:border-teal-200 hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-800 group-hover:bg-blue-800 group-hover:text-white transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -444,7 +432,7 @@ export default function HomePage() {
                 Know exactly when each deadline expires and what happens if you
                 miss it. Never lose your right to appeal by acting too late.
               </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800 group-hover:gap-2 transition-all">
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-600 group-hover:gap-2 transition-all">
                 Calculate deadlines
                 <svg
                   className="h-4 w-4"
@@ -484,7 +472,7 @@ export default function HomePage() {
                 key={type.name}
                 className="rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md"
               >
-                <div className="text-blue-800">{type.icon}</div>
+                <div className="text-teal-600">{type.icon}</div>
                 <h3 className="mt-4 text-base font-semibold text-gray-900">
                   {type.name}
                 </h3>
@@ -538,9 +526,9 @@ export default function HomePage() {
           <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
             {/* Built on UK parking law */}
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -565,9 +553,9 @@ export default function HomePage() {
 
             {/* Personalised, not generic */}
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -592,9 +580,9 @@ export default function HomePage() {
 
             {/* Know before you pay */}
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -624,9 +612,9 @@ export default function HomePage() {
 
             {/* Operator intelligence */}
             <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -672,31 +660,20 @@ export default function HomePage() {
       </section>
 
       {/* ==================== FINAL CTA ==================== */}
-      <section className="relative overflow-hidden bg-blue-800">
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-
-        <Container className="relative py-20 sm:py-24">
+      <section className="bg-slate-50 border-t border-slate-100">
+        <Container className="py-20 sm:py-24">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               Don&apos;t Pay an Unfair Fine
             </h2>
-            <p className="mt-4 text-lg text-blue-100">
+            <p className="mt-4 text-lg text-slate-500">
               Join thousands of UK drivers who have successfully appealed their
               parking fines. Your free assessment takes just a few minutes.
             </p>
             <div className="mt-10">
               <Link
                 href="/appeal"
-                className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-amber-500/25 transition-all hover:bg-amber-600 hover:shadow-xl hover:shadow-amber-500/30 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-blue-800"
+                className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
               >
                 Start Your Free Assessment
                 <svg

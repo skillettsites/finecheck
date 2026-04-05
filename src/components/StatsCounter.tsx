@@ -67,19 +67,19 @@ function AnimatedNumber({
 
 export default function StatsCounter({ stats }: { stats: StatItem[] }) {
   return (
-    <div className="bg-blue-800">
+    <div className="bg-slate-50 border-y border-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white">
+              <div className="text-3xl sm:text-4xl font-bold text-teal-600">
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}
                   prefix={stat.prefix}
                 />
               </div>
-              <div className="mt-2 text-sm sm:text-base text-blue-200">
+              <div className="mt-2 text-sm sm:text-base text-slate-500">
                 {stat.label}
               </div>
             </div>

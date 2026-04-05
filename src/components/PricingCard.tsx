@@ -19,15 +19,15 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex flex-col rounded-2xl border-2 bg-white p-8 ${
+      className={`relative flex flex-col rounded-2xl border bg-white p-8 ${
         popular
-          ? "border-amber-500 shadow-xl shadow-amber-100/50"
+          ? "border-teal-500 shadow-lg shadow-teal-50"
           : "border-gray-200"
       }`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="inline-flex items-center rounded-full bg-amber-500 px-4 py-1 text-sm font-semibold text-white shadow-sm">
+          <span className="inline-flex items-center rounded-full bg-teal-600 px-4 py-1 text-sm font-semibold text-white shadow-sm">
             Most Popular
           </span>
         </div>
@@ -68,8 +68,8 @@ export default function PricingCard({
         href={href}
         className={`block w-full rounded-lg py-3 text-center text-sm font-semibold transition-colors ${
           popular
-            ? "bg-amber-500 text-white hover:bg-amber-600 shadow-sm"
-            : "bg-blue-800 text-white hover:bg-blue-700"
+            ? "bg-teal-600 text-white hover:bg-teal-700 shadow-sm"
+            : "bg-slate-900 text-white hover:bg-slate-800"
         }`}
       >
         Start Your Appeal

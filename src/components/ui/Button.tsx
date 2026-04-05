@@ -16,11 +16,11 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-blue-800 text-white hover:bg-blue-700 focus:ring-blue-500 shadow-sm",
+    "bg-teal-600 text-white hover:bg-teal-700 focus:ring-teal-500 shadow-sm",
   secondary:
-    "border-2 border-blue-800 text-blue-800 hover:bg-blue-50 focus:ring-blue-500",
+    "border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 focus:ring-teal-500",
   accent:
-    "bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-400 shadow-sm",
+    "bg-teal-600 text-white hover:bg-teal-700 focus:ring-teal-500 shadow-sm",
   danger:
     "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm",
 };

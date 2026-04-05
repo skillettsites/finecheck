@@ -82,9 +82,9 @@ function ProgressBar({ currentStep }: { currentStep: Step }) {
               <div
                 className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold transition-colors ${
                   isComplete
-                    ? "bg-blue-800 text-white"
+                    ? "bg-teal-600 text-white"
                     : isActive
-                    ? "bg-amber-500 text-white"
+                    ? "bg-teal-600 text-white"
                     : "bg-gray-200 text-gray-500"
                 }`}
               >
@@ -92,7 +92,7 @@ function ProgressBar({ currentStep }: { currentStep: Step }) {
               </div>
               <span
                 className={`mt-1.5 text-xs font-medium hidden sm:block ${
-                  isActive ? "text-blue-800" : isComplete ? "text-blue-800" : "text-gray-400"
+                  isActive ? "text-teal-600" : isComplete ? "text-teal-600" : "text-gray-400"
                 }`}
               >
                 {label}
@@ -103,7 +103,7 @@ function ProgressBar({ currentStep }: { currentStep: Step }) {
       </div>
       <div className="relative h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="absolute h-full bg-blue-800 rounded-full transition-all duration-500"
+          className="absolute h-full bg-teal-600 rounded-full transition-all duration-500"
           style={{ width: `${((currentStep - 1) / (STEP_LABELS.length - 1)) * 100}%` }}
         />
       </div>
@@ -192,9 +192,9 @@ function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<stri
   };
 
   return (
-    <div className="relative rounded-2xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 to-white p-6 sm:p-8 mb-6">
+    <div className="relative rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50/50 to-white p-6 sm:p-8 mb-6">
       <div className="absolute -top-3 left-6">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-3 py-1 text-xs font-bold text-white shadow-sm">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
           </svg>
@@ -204,7 +204,7 @@ function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<stri
 
       <div className="text-center">
         <div className="flex justify-center mb-3">
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-amber-100 text-amber-600">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
             <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
@@ -221,12 +221,12 @@ function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<stri
             {preview && (
               <div className="mx-auto mb-4 w-32 h-32 rounded-lg overflow-hidden relative">
                 <img src={preview} alt="Scanning" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-800/20">
-                  <div className="absolute left-0 right-0 h-0.5 bg-blue-500 animate-pulse" style={{ top: '50%' }} />
+                <div className="absolute inset-0 bg-teal-600/20">
+                  <div className="absolute left-0 right-0 h-0.5 bg-teal-500 animate-pulse" style={{ top: '50%' }} />
                 </div>
               </div>
             )}
-            <div className="flex items-center justify-center gap-2 text-blue-800">
+            <div className="flex items-center justify-center gap-2 text-teal-600">
               <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
@@ -239,7 +239,7 @@ function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<stri
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -302,15 +302,15 @@ function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType)
             <button
               key={ft.id}
               onClick={() => onSelect(ft.id)}
-              className="group relative flex flex-col items-start text-left rounded-xl border-2 border-gray-200 bg-white p-5 transition-all hover:border-blue-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
+              className="group relative flex flex-col items-start text-left rounded-xl border-2 border-gray-200 bg-white p-5 transition-all hover:border-teal-500 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800 mb-3 group-hover:bg-blue-800 group-hover:text-white transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-teal-50 text-teal-600 mb-3 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                 {ft.icon}
               </div>
               <h3 className="text-base font-semibold text-gray-900 mb-1">{ft.title}</h3>
               <p className="text-sm text-gray-500 mb-2">{ft.subtitle}</p>
               <p className="text-xs text-gray-400 leading-relaxed">{ft.description}</p>
-              <div className="absolute top-4 right-4 text-gray-300 group-hover:text-blue-800 transition-colors">
+              <div className="absolute top-4 right-4 text-gray-300 group-hover:text-teal-600 transition-colors">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
@@ -321,7 +321,7 @@ function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType)
       </div>
 
       <div className="mt-8 text-center">
-        <div className="inline-flex items-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 text-sm text-blue-800">
+        <div className="inline-flex items-center gap-2 rounded-lg bg-teal-50 px-4 py-2.5 text-sm text-teal-700">
           <ShieldCheckIcon className="h-5 w-5 flex-shrink-0" />
           <span>Your information is secure and never shared with the operator or council</span>
         </div>
@@ -422,7 +422,7 @@ function StepDetails({
   const fieldClass = (field: keyof FormData) =>
     `w-full rounded-lg border ${
       errors[field] ? "border-red-400 ring-1 ring-red-400" : "border-gray-300"
-    } px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-blue-800 focus:ring-1 focus:ring-blue-800 transition-colors`;
+    } px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition-colors`;
 
   const labelClass = "block text-sm font-medium text-gray-700 mb-1.5";
 
@@ -629,7 +629,7 @@ function StepDetails({
                 onClick={() => onChange("wasDriver", opt)}
                 className={`flex-1 rounded-lg border-2 px-3 py-2.5 text-sm font-medium transition-colors ${
                   form.wasDriver === opt
-                    ? "border-blue-800 bg-blue-50 text-blue-800"
+                    ? "border-teal-600 bg-teal-50 text-teal-700"
                     : "border-gray-200 text-gray-600 hover:border-gray-300"
                 }`}
               >
@@ -645,7 +645,7 @@ function StepDetails({
           <ul className="text-xs text-gray-500 mb-3 space-y-0.5">
             {CIRCUMSTANCE_PROMPTS[fineType].map((prompt) => (
               <li key={prompt} className="flex items-start gap-1.5">
-                <span className="text-blue-800 mt-0.5">&#8250;</span>
+                <span className="text-teal-600 mt-0.5">&#8250;</span>
                 {prompt}
               </li>
             ))}
@@ -676,7 +676,7 @@ function StepDetails({
         </button>
         <button
           onClick={onNext}
-          className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+          className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
         >
           Get Free Assessment
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -752,9 +752,9 @@ function EvidenceUpload({ fineType, onAnalysisComplete }: { fineType: FineType; 
   };
 
   return (
-    <div className="mt-6 rounded-xl border border-blue-200 bg-blue-50/50 p-5">
+    <div className="mt-6 rounded-xl border border-teal-100 bg-teal-50/30 p-5">
       <div className="flex items-start gap-3 mb-4">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100 text-blue-800">
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal-600">
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
           </svg>
@@ -778,7 +778,7 @@ function EvidenceUpload({ fineType, onAnalysisComplete }: { fineType: FineType; 
                 )}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-medium text-blue-800 bg-blue-100 rounded px-2 py-0.5 capitalize">{a.evidence_type}</span>
+                    <span className="text-xs font-medium text-teal-700 bg-teal-50 rounded px-2 py-0.5 capitalize">{a.evidence_type}</span>
                     <span className={`text-xs font-medium ${relevanceColor(a.appeal_relevance)}`}>
                       {a.appeal_relevance === "high" ? "Highly relevant" : a.appeal_relevance === "medium" ? "Relevant" : "Limited relevance"}
                     </span>
@@ -816,7 +816,7 @@ function EvidenceUpload({ fineType, onAnalysisComplete }: { fineType: FineType; 
         <button
           type="button"
           onClick={() => fileInputRef.current?.click()}
-          className="inline-flex items-center gap-2 rounded-lg border border-blue-300 bg-white px-4 py-2 text-sm font-medium text-blue-800 hover:bg-blue-50 transition-colors"
+          className="inline-flex items-center gap-2 rounded-lg border border-teal-200 bg-white px-4 py-2 text-sm font-medium text-teal-700 hover:bg-teal-50 transition-colors"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -994,7 +994,7 @@ function StepAssessment({
         <ol className="space-y-2">
           {assessment.nextSteps.map((step, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-semibold text-blue-800">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-50 text-xs font-semibold text-teal-700">
                 {i + 1}
               </span>
               {step}
@@ -1004,7 +1004,7 @@ function StepAssessment({
       </div>
 
       {/* Upsell */}
-      <div className="rounded-xl border-2 border-blue-800 bg-blue-50/50 p-6 mb-6">
+      <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-6 mb-6">
         <div className="text-center mb-6">
           <h3 className="text-xl font-bold text-gray-900 mb-2">Get Your Personalised Appeal Letter</h3>
           <p className="text-sm text-gray-600 max-w-lg mx-auto">
@@ -1034,16 +1034,16 @@ function StepAssessment({
               <div
                 key={product.id}
                 className={`relative rounded-xl border-2 bg-white p-5 transition-all ${
-                  isRecommended ? "border-amber-500 shadow-lg" : "border-gray-200 hover:border-gray-300"
+                  isRecommended ? "border-teal-500 shadow-lg" : "border-gray-200 hover:border-gray-300"
                 }`}
               >
                 {isRecommended && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-amber-500 px-3 py-0.5 text-xs font-semibold text-white">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-teal-600 px-3 py-0.5 text-xs font-semibold text-white">
                     Recommended
                   </div>
                 )}
                 <h4 className="text-sm font-semibold text-gray-900 mb-1">{product.name}</h4>
-                <div className="text-2xl font-bold text-blue-800 mb-2">
+                <div className="text-2xl font-bold text-slate-900 mb-2">
                   £{(product.price / 100).toFixed(2)}
                 </div>
                 <p className="text-xs text-gray-600 mb-3">{product.description}</p>
@@ -1059,8 +1059,8 @@ function StepAssessment({
                   onClick={() => onSelectProduct(product.id)}
                   className={`w-full rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors ${
                     isRecommended
-                      ? "bg-amber-500 text-white hover:bg-amber-600"
-                      : "bg-blue-800 text-white hover:bg-blue-700"
+                      ? "bg-teal-600 text-white hover:bg-teal-700"
+                      : "bg-slate-900 text-white hover:bg-slate-800"
                   }`}
                 >
                   Select
@@ -1325,14 +1325,14 @@ export default function AppealFlow() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div>
               <div className="flex justify-center mb-2">
-                <ShieldCheckIcon className="h-8 w-8 text-blue-800" />
+                <ShieldCheckIcon className="h-8 w-8 text-teal-600" />
               </div>
               <h4 className="text-sm font-semibold text-gray-900">Secure and Confidential</h4>
               <p className="text-xs text-gray-500 mt-1">Your data is encrypted and never shared with operators or councils</p>
             </div>
             <div>
               <div className="flex justify-center mb-2">
-                <svg className="h-8 w-8 text-blue-800" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
               </div>
@@ -1341,7 +1341,7 @@ export default function AppealFlow() {
             </div>
             <div>
               <div className="flex justify-center mb-2">
-                <svg className="h-8 w-8 text-blue-800" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <svg className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
                 </svg>
               </div>

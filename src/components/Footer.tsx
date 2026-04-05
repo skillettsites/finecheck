@@ -22,14 +22,14 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-slate-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
         <div className="grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-700">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600">
                 <svg
                   className="h-4.5 w-4.5 text-white"
                   fill="none"

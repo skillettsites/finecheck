@@ -149,7 +149,7 @@ export default function PricingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16">
+      <section className="bg-gradient-to-b from-slate-50 to-white py-12 sm:py-16">
         <Container>
           <Breadcrumbs
             items={[{ label: "Pricing", href: "/pricing" }]}
@@ -176,15 +176,15 @@ export default function PricingPage() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-2xl border-2 bg-white p-8 ${
+                className={`relative flex flex-col rounded-2xl border bg-white p-8 ${
                   plan.popular
-                    ? "border-amber-500 shadow-xl shadow-amber-100/50"
+                    ? "border-teal-500 shadow-lg shadow-teal-50"
                     : "border-gray-200"
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center rounded-full bg-amber-500 px-4 py-1 text-sm font-semibold text-white shadow-sm">
+                    <span className="inline-flex items-center rounded-full bg-teal-600 px-4 py-1 text-sm font-semibold text-white shadow-sm">
                       Most Popular
                     </span>
                   </div>
@@ -249,7 +249,7 @@ export default function PricingPage() {
                   <th className="py-3 text-center text-sm font-semibold text-gray-900 px-4 w-24">
                     Free
                   </th>
-                  <th className="py-3 text-center text-sm font-semibold text-amber-600 px-4 w-24">
+                  <th className="py-3 text-center text-sm font-semibold text-teal-600 px-4 w-24">
                     Letter
                     <br />
                     <span className="font-normal text-xs text-gray-500">
@@ -288,9 +288,9 @@ export default function PricingPage() {
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -312,9 +312,9 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -336,9 +336,9 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -360,9 +360,9 @@ export default function PricingPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-teal-50">
                 <svg
-                  className="h-6 w-6 text-blue-800"
+                  className="h-6 w-6 text-teal-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
@@ -397,13 +397,13 @@ export default function PricingPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-50 border-t border-slate-100 py-12">
         <Container>
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
               Start With a Free Assessment
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-500">
               Check your parking fine for free. No payment details required.
               Only pay if you want a professionally written appeal letter.
             </p>

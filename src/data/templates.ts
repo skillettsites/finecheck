@@ -735,6 +735,321 @@ Yours faithfully,
     seoTitle: 'Mitigating Circumstances Appeal Template | Free Download | FineCheck',
     seoDescription: 'Free mitigating circumstances appeal letter template for parking fines. Covers medical emergencies, breakdowns, and personal emergencies. Works for private and council charges.',
   },
+  {
+    slug: 'debt-collector-response-letter',
+    title: 'Parking Fine Debt Collector Response Letter',
+    category: 'defence',
+    description: 'A formal template for responding to a debt collection agency that has contacted you about an unpaid parking charge. Covers your rights under the Protection of Freedoms Act 2012, the OFT Debt Collection Guidance, and the right to request full documentation before any payment is made.',
+    whenToUse: 'Use this template when a debt collection agency (such as DCBLegal, ZZPS, Debt Recovery Plus, or any similar company) contacts you about an unpaid private parking charge. Debt collectors often use aggressive or misleading language to pressure you into paying. This letter asserts your rights, requests proof of the debt, and challenges whether the operator complied with the legal requirements to pursue you in the first place.',
+    letterTemplate: `[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR CITY]
+[YOUR POSTCODE]
+
+[DATE]
+
+[DEBT COLLECTION AGENCY NAME]
+[THEIR ADDRESS]
+
+Dear Sir or Madam,
+
+Re: Alleged Debt Reference [REFERENCE NUMBER]
+Original Operator: [PARKING OPERATOR NAME]
+Vehicle Registration: [VEHICLE REG]
+Date of Alleged Contravention: [DATE OF ALLEGED CONTRAVENTION]
+
+I am writing in response to your letter dated [DATE OF THEIR LETTER] regarding the above alleged debt. I do not accept that I owe this sum. I require you to provide the following documentation before I will engage further with this matter.
+
+Request for Proof of Debt
+
+Under the OFT Debt Collection Guidance (now enforced by the FCA), a debtor has the right to request verification of an alleged debt before payment can reasonably be expected. I therefore request the following:
+
+(a) A copy of the original Notice to Driver and Notice to Keeper, including proof of postage and the dates they were sent.
+(b) Confirmation that the Notice to Keeper was served within 14 days of the alleged contravention, as required by Schedule 4 of the Protection of Freedoms Act 2012.
+(c) A copy of the contract or deed of assignment transferring this alleged debt from the original operator to your agency, if applicable.
+(d) The ANPR images and timestamps relied upon by the original operator to issue the charge.
+(e) Evidence that the original operator complied with the BPA or IPC Code of Practice, including adequate signage at the location.
+
+POFA 2012 Compliance
+
+Under the Protection of Freedoms Act 2012 Schedule 4, the parking operator must serve a compliant Notice to Keeper within 14 days in order to transfer liability from the driver to the registered keeper. If the operator failed to do this, you have no basis to pursue me as the registered keeper. I require evidence that this requirement was met before I will consider any further correspondence.
+
+Statute of Limitations
+
+I also note that parking charges on private land are subject to a six-year limitation period under the Limitation Act 1980. If the alleged contravention occurred more than six years ago, any claim is statute barred and I am under no obligation to pay. [DELETE THIS PARAGRAPH IF NOT APPLICABLE.]
+
+Notice Under the OFT Guidance
+
+The OFT Debt Collection Guidance (OFT664) states that debt collectors must not use deceptive, oppressive, or unfair methods when pursuing debts. Specifically, you must not:
+- Claim that non-payment will result in criminal proceedings (parking charges are civil matters only).
+- Imply that you have legal powers that you do not possess.
+- Add charges or fees that are not provided for in the original contract.
+
+Until you have provided the documentation requested above, I consider this matter to be in dispute. I request that you place a hold on all collection activity and cease further contact until you have provided the requested evidence.
+
+Yours faithfully,
+
+[YOUR NAME]`,
+    instructions: [
+      'Replace all placeholders in square brackets with your actual details.',
+      'Send this letter by recorded delivery so you have proof it was received.',
+      'Do not call the debt collection agency on the phone. Communicate in writing only so you have a paper trail.',
+      'If the contravention is less than six years old, delete the statute of limitations paragraph.',
+      'Keep a copy of this letter and any response you receive.',
+      'If they cannot provide the documentation, they have no basis to continue pursuing you. Write again stating this if they persist.',
+    ],
+    tips: [
+      'Debt collectors rely on intimidation to get people to pay. Most of their letters are designed to frighten, not to inform.',
+      'A debt collection letter is NOT a court document. You are not legally obliged to pay based on a letter from a debt collector alone.',
+      'If the original parking charge was issued by a BPA member, check whether POPLA already ruled in your favour. If so, the debt is invalid.',
+      'Under POFA 2012, if the NtK was not served within 14 days, the debt cannot be enforced against the registered keeper.',
+      'If the debt collector threatens court action, this does not mean they will actually file a claim. Many threats are empty.',
+      'If a claim is filed, you will receive a formal court document (not a letter from a debt collector). Do not ignore genuine court papers.',
+    ],
+    relatedTemplates: ['ccj-set-aside-letter', 'anpr-error-appeal-letter', 'popla-appeal-letter'],
+    seoTitle: 'Parking Fine Debt Collector Response Letter | Free Template | FineCheck',
+    seoDescription: 'Free template for responding to debt collectors about parking fines. Covers POFA 2012, proof of debt requests, OFT Guidance, and your rights. Professional and assertive.',
+  },
+  {
+    slug: 'ccj-set-aside-letter',
+    title: 'Parking Fine CCJ Set Aside Application Letter',
+    category: 'defence',
+    description: 'A template for applying to set aside a County Court Judgment (CCJ) that was entered in default over a parking charge. Covers the legal grounds under CPR Part 13.3, including lack of knowledge of the claim and a real prospect of successfully defending it.',
+    whenToUse: 'Use this template when you have discovered that a County Court Judgment has been registered against you for an unpaid parking charge, and you were not aware of the claim before judgment was entered. This commonly happens when court papers were sent to an old address, or when a parking operator obtained a default judgment without your knowledge. You must act quickly; apply as soon as you become aware of the CCJ.',
+    letterTemplate: `[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR CITY]
+[YOUR POSTCODE]
+
+[DATE]
+
+[COUNTY COURT NAME]
+[COURT ADDRESS]
+
+Claim Number: [CLAIM NUMBER]
+Claimant: [PARKING OPERATOR OR DEBT COLLECTOR NAME]
+Defendant: [YOUR NAME]
+
+Dear Sir or Madam,
+
+Application to Set Aside Default Judgment Under CPR Part 13.3
+
+I am applying to set aside the default judgment entered in this claim on [DATE JUDGMENT ENTERED, IF KNOWN]. I was not aware of the claim until [DATE YOU BECAME AWARE] and have not had the opportunity to file a defence. I respectfully request that the judgment be set aside under CPR Part 13.3 for the following reasons.
+
+1. I Had No Knowledge of the Claim
+
+I did not receive the Claim Form or any court documents relating to this matter. [EXPLAIN WHY: e.g. the documents were sent to a previous address; I had moved and updated my address with the DVLA but the claimant used an outdated address; the documents may have been lost in the post.] As a result, I was unable to file a defence or acknowledgment of service within the required timeframe and the judgment was entered in my absence.
+
+2. I Have a Real Prospect of Successfully Defending This Claim
+
+I have a genuine defence to this parking charge on the following grounds:
+
+(a) POFA 2012 Non-Compliance: The claimant is required to serve a compliant Notice to Keeper within 14 days of the alleged contravention under Schedule 4 of the Protection of Freedoms Act 2012. I do not believe this requirement was met. Without a valid NtK, keeper liability does not transfer and the claimant cannot pursue the registered keeper.
+
+(b) Signage and Contractual Issues: The signage at the car park was inadequate and did not meet the requirements of the [BPA / IPC] Code of Practice. [ADD SPECIFIC DETAILS IF KNOWN.]
+
+(c) ANPR Evidence: The ANPR evidence relied upon by the claimant has not been disclosed to me. I challenge the accuracy of the recorded entry and exit times and the clarity of the images.
+
+[ADD ANY ADDITIONAL GROUNDS SPECIFIC TO YOUR CASE.]
+
+3. I Acted Promptly
+
+I became aware of the judgment on [DATE] and am making this application promptly. I have not delayed unreasonably.
+
+4. Statement of Case
+
+If the judgment is set aside, I intend to file a defence raising the grounds outlined above. I am prepared to comply with any directions the court may give regarding the timetable for filing my defence and any supporting evidence.
+
+Orders Sought
+
+I respectfully request:
+(a) That the default judgment dated [DATE] be set aside under CPR Part 13.3.
+(b) That I be given 14 days from the date of the order to file and serve my defence.
+(c) That the claimant pay the costs of this application, as the judgment was entered without my knowledge.
+
+I enclose:
+- The completed N244 Application Notice with the applicable court fee.
+- A draft witness statement in support of this application.
+[LIST ANY OTHER ENCLOSED DOCUMENTS.]
+
+Yours faithfully,
+
+[YOUR NAME]`,
+    instructions: [
+      'You must file this application using Form N244 (Application Notice), available from the HMCTS website or from the court office.',
+      'There is a court fee for the application (currently around £275). Check the current fee on the HMCTS website.',
+      'You should also prepare a witness statement explaining why you did not receive the court papers and setting out your defence.',
+      'File the application at the court that entered the judgment. The claim number and court name will appear on the CCJ.',
+      'Serve a copy of your application on the claimant (the parking operator or their solicitors).',
+      'Act as quickly as possible. The longer you wait, the harder it is to persuade the court to set the judgment aside.',
+    ],
+    tips: [
+      'Check your credit report (Experian, Equifax, or TransUnion) immediately. A CCJ will appear on your credit file and affect your ability to get credit, mortgages, and loans.',
+      'If the CCJ is set aside and you subsequently win the case, the CCJ is removed from your credit record.',
+      'If you pay the full amount within one calendar month of the judgment date, the CCJ is removed from the register (but you lose the right to defend).',
+      'Many parking operators obtain default judgments in bulk, knowing that most people will not respond. Do not assume the claim is valid just because a judgment exists.',
+      'CPR Part 13.3 gives the court discretion to set aside a judgment if you have a real prospect of success and acted promptly. You do not have to prove your defence at this stage; you just need to show it has merit.',
+      'Consider seeking advice from Citizens Advice or a solicitor if you are unsure about the court process.',
+    ],
+    relatedTemplates: ['debt-collector-response-letter', 'anpr-error-appeal-letter', 'popla-appeal-letter'],
+    seoTitle: 'Parking Fine CCJ Set Aside Application | Free Template | FineCheck',
+    seoDescription: 'Free template to set aside a County Court Judgment for a parking fine. Covers CPR Part 13.3, POFA 2012 defence, and step-by-step instructions for the court application.',
+  },
+  {
+    slug: 'wrong-driver-appeal-letter',
+    title: 'Wrong Driver Appeal Letter (I Was Not Driving)',
+    category: 'defence',
+    description: 'A template for appealing a private parking charge when you were not the person driving the vehicle at the time of the alleged contravention. Covers keeper liability requirements under POFA 2012 Schedule 4 and the specific conditions that must be met before a keeper can be held liable.',
+    whenToUse: 'Use this template when you have received a parking charge as the registered keeper of the vehicle, but someone else was driving at the time. Under POFA 2012, the operator can only hold the keeper liable if specific conditions are met, including proper service of the Notice to Keeper with the correct wording. If those conditions are not met, the operator must identify and pursue the actual driver instead.',
+    letterTemplate: `[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR CITY]
+[YOUR POSTCODE]
+
+[DATE]
+
+[OPERATOR NAME]
+[OPERATOR ADDRESS]
+
+Dear Sir or Madam,
+
+Re: Parking Charge Notice [PCN REFERENCE]
+Vehicle Registration: [VEHICLE REG]
+Location: [LOCATION]
+Date of Alleged Contravention: [DATE OF ALLEGED CONTRAVENTION]
+
+I am writing to formally appeal the above parking charge notice. I was not the driver of the vehicle at the time of the alleged contravention and I do not accept liability for this charge.
+
+I Was Not the Driver
+
+I confirm that I am the registered keeper of the vehicle with registration [VEHICLE REG]. However, I was not driving or in control of the vehicle on [DATE OF ALLEGED CONTRAVENTION]. [OPTIONAL: BRIEFLY EXPLAIN, e.g. the vehicle was being used by a family member; the vehicle was lent to a friend; I was at work/away at the time.]
+
+Keeper Liability Under POFA 2012
+
+Under Schedule 4 of the Protection of Freedoms Act 2012, a parking operator may only transfer liability from the driver to the registered keeper if ALL of the following conditions are met:
+
+(a) The operator must have served a compliant Notice to Keeper within 14 days of the alleged contravention (or within 14 days of obtaining the keeper details from the DVLA).
+
+(b) The Notice to Keeper must contain the prescribed wording set out in the Act, including a statement that the driver is liable for the charge; that if the driver does not pay, the keeper becomes liable; and that the keeper can discharge liability by paying the charge, naming the driver, or making representations to the operator.
+
+(c) The operator must not have already been given the name and address of the driver by the keeper.
+
+I challenge the operator to demonstrate that each of these conditions has been fully met.
+
+Section 56 Notice
+
+If you seek to hold me liable as the registered keeper, I note that the requirements of Schedule 4 paragraph 4 of POFA 2012 are strict. The NtK must contain the exact statutory wording. Any deviation from the prescribed format, any omission of required information, or any failure to serve the notice within the 14-day window renders keeper liability invalid. In that case, your only recourse is to identify and pursue the actual driver of the vehicle.
+
+I Have Not Identified the Driver
+
+I am not in a position to identify the driver of the vehicle on the date in question. [ADAPT AS NEEDED: e.g. the vehicle is used by multiple members of my household; the vehicle was lent to someone who I am no longer in contact with.] I am not legally obliged to identify the driver to you. The burden is on the operator to establish liability, not on the keeper to prove innocence.
+
+Request
+
+I request that this charge be cancelled against me. If you cannot demonstrate full compliance with POFA 2012 Schedule 4, you have no grounds to hold me liable as the registered keeper.
+
+If this appeal is rejected, I will escalate the matter to [POPLA / IAS] as the independent appeals service.
+
+Yours faithfully,
+
+[YOUR NAME]`,
+    instructions: [
+      'Replace all placeholders in square brackets with your actual details.',
+      'You are NOT legally required to name the driver. You may choose to do so, but it is not mandatory.',
+      'If you know who was driving and are willing to provide their details, the operator should then pursue that person instead.',
+      'If the NtK was served late (more than 14 days after the event), keeper liability does not apply at all, regardless of who was driving.',
+      'Send by recorded delivery and keep a copy.',
+      'Replace [POPLA / IAS] with the correct body depending on whether the operator is a BPA or IPC member.',
+    ],
+    tips: [
+      'Many people are surprised to learn that you do not have to name the driver. Unlike council PCNs (which can require keeper identification under TMA 2004), private parking charges under POFA 2012 do not impose this obligation.',
+      'Check the NtK wording very carefully. If it does not contain the exact statutory prescribed wording, keeper liability fails entirely.',
+      'If the vehicle is a company car, the employer (as registered keeper) can use this template and is not obliged to name the employee driver.',
+      'The operator may write back asking you to identify the driver. You can decline. Their only option then is to prove who was driving through their own evidence (such as ANPR images showing the driver).',
+      'This defence works best when combined with a POFA compliance challenge. If the NtK was also late, you have two strong grounds.',
+      'Search MoneySavingExpert and PePiPoo forums for similar cases. Operators regularly fail to establish keeper liability.',
+    ],
+    relatedTemplates: ['anpr-error-appeal-letter', 'debt-collector-response-letter', 'popla-appeal-letter'],
+    seoTitle: 'Wrong Driver Appeal Letter Template | I Was Not Driving | FineCheck',
+    seoDescription: 'Free appeal letter template for when you were not the driver. Covers POFA 2012 keeper liability, Section 56, and your right not to name the driver.',
+  },
+  {
+    slug: 'loading-defence-letter',
+    title: 'Loading and Unloading Defence Appeal Letter',
+    category: 'defence',
+    description: 'A template for appealing a parking fine where you were actively loading or unloading goods at the time of the alleged contravention. Covers council PCNs under the Traffic Management Act 2004 and private charges, with references to loading exemptions and what constitutes continuous loading activity.',
+    whenToUse: 'Use this template when you received a parking fine while you were loading or unloading goods from your vehicle. Loading and unloading is a recognised exemption from many parking restrictions, both on-street (council) and off-street (private). This template is suitable for delivery drivers, tradespeople, residents moving heavy items, and anyone who was engaged in genuine loading activity when the fine was issued.',
+    letterTemplate: `[YOUR NAME]
+[YOUR ADDRESS]
+[YOUR CITY]
+[YOUR POSTCODE]
+
+[DATE]
+
+[COUNCIL NAME OR OPERATOR NAME]
+[THEIR ADDRESS]
+
+Dear Sir or Madam,
+
+Re: [Penalty Charge Notice / Parking Charge Notice] [PCN REFERENCE]
+Vehicle Registration: [VEHICLE REG]
+Location: [LOCATION]
+Date of Alleged Contravention: [DATE OF ALLEGED CONTRAVENTION]
+
+I am writing to appeal the above charge. At the time the notice was issued, I was actively engaged in loading or unloading goods from my vehicle. Loading and unloading is a lawful exemption from the parking restriction at this location and I should not have received this charge.
+
+Nature of Loading Activity
+
+On [DATE], I parked at [LOCATION] in order to [DESCRIBE WHAT YOU WERE LOADING OR UNLOADING: e.g. deliver goods to a nearby business; move heavy furniture into my property; unload building materials for a construction job; collect a large online order from a shop; deliver catering supplies]. The loading activity was continuous and I did not leave the vehicle unattended for any longer than was reasonably necessary to carry the goods to or from the delivery point.
+
+[IF APPLICABLE: I am a [delivery driver / tradesperson / business owner] and this vehicle is used regularly for [trade/commercial/delivery purposes]. The nature of my work requires me to park close to the delivery point in order to load or unload heavy or bulky items.]
+
+Legal Basis for Loading Exemption
+
+[FOR COUNCIL PCNs:]
+Under the Traffic Management Act 2004 and the relevant Traffic Regulation Order for this location, loading and unloading of goods is permitted even in areas with waiting restrictions, provided the activity is genuine and continuous. The Department for Transport Operational Guidance to Local Authorities (March 2020) states that Civil Enforcement Officers should observe the vehicle for a sufficient period to establish that loading or unloading is not taking place before issuing a PCN. I contend that the enforcement officer did not observe my vehicle for an adequate period, or failed to recognise that genuine loading activity was in progress.
+
+[FOR PRIVATE CHARGES:]
+The terms and conditions at this car park permit loading and unloading activity. Even if the signage does not explicitly mention loading, it is an implied term that vehicles may stop briefly for the purpose of loading and unloading goods, particularly where the car park serves retail or commercial premises.
+
+Evidence of Loading Activity
+
+I can provide the following evidence to support my appeal:
+[LIST YOUR EVIDENCE: e.g. delivery note or invoice showing goods were delivered to the address; photographs of the goods being loaded/unloaded; confirmation from the recipient of the delivery; vehicle logbook or tracking data showing delivery route; trade vehicle markings or livery; till receipts from nearby shops for large or heavy items.]
+
+Observation Period
+
+[FOR COUNCIL PCNs:] The Civil Enforcement Officer is expected to observe the vehicle and assess whether loading is taking place before issuing a PCN. Simply noting that the vehicle was parked in a restricted area is not sufficient. If the officer did not observe me carrying goods or check whether loading was in progress, the PCN was issued prematurely. I request the CEO's notes and any photographs taken, which should confirm whether loading activity was considered.
+
+I request that this charge be cancelled. The vehicle was being used for genuine loading and unloading activity and the parking restriction should not apply.
+
+[FOR COUNCIL PCNs:] If this informal challenge is rejected and a Notice to Owner is issued, I will make formal representations and, if necessary, appeal to the [Traffic Penalty Tribunal / London Tribunals].
+
+[FOR PRIVATE CHARGES:] If this appeal is rejected, I will escalate the matter to [POPLA / IAS] as appropriate.
+
+Yours faithfully,
+
+[YOUR NAME]`,
+    instructions: [
+      'Replace all placeholders in square brackets with your actual details.',
+      'Choose the relevant paragraphs for council PCNs or private charges and delete the others.',
+      'Be specific about what you were loading or unloading, where it was going, and how long the activity took.',
+      'Gather evidence: delivery notes, invoices, photographs, receipts, or a statement from the person you were delivering to.',
+      'If you are a tradesperson, include details of your trade and why you needed to park at that location.',
+      'Send as soon as possible. For council PCNs, the informal challenge should be made within 14 days to preserve the discounted payment option.',
+    ],
+    tips: [
+      'Loading and unloading must be continuous. If you stopped to have a coffee or went shopping after completing the delivery, the exemption no longer applies.',
+      'The vehicle does not need to be a commercial vehicle for the loading exemption to apply, though having a trade vehicle strengthens your case.',
+      'For council PCNs, request the CEO pocket notebook entries. These should record what the officer observed and how long they watched the vehicle.',
+      'If there is a specific loading bay nearby that was full or inaccessible, mention this. It supports the argument that you had no practical alternative.',
+      'Yellow line loading restrictions only apply during the hours shown on the nearby signs. Outside those hours, loading is generally permitted even on double yellow lines.',
+      'Single yellow line restrictions typically do not prohibit loading unless there are additional loading restriction signs (yellow kerb marks and signs with specific times).',
+    ],
+    relatedTemplates: ['council-pcn-appeal-letter', 'mitigating-circumstances-letter', 'popla-appeal-letter'],
+    seoTitle: 'Loading and Unloading Defence Letter | Free Appeal Template | FineCheck',
+    seoDescription: 'Free appeal letter template for parking fines issued while loading or unloading. Covers TMA 2004, council PCNs, private charges, and evidence requirements.',
+  },
 ];
 
 export function getTemplateBySlug(slug: string): AppealTemplate | undefined {

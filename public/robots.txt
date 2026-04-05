@@ -1,6 +1,14 @@
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
 Disallow: /api/
 Disallow: /appeal/success
 
+# Host
+Host: https://finecheck.co.uk
+
+# Sitemaps
 Sitemap: https://finecheck.co.uk/sitemap.xml
