@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Pricing | FineCheck",
   description:
-    "Affordable parking fine appeal tools. Free assessment, professional appeal letters from £4.99, and premium appeal packs from £9.99.",
+    "Affordable parking fine appeal tools. Free assessment, standard appeal letters from £5.99, and premium appeal packs from £9.99.",
   alternates: {
     canonical: "https://finecheck.co.uk/pricing",
   },
@@ -33,42 +33,58 @@ const plans = [
     href: "/appeal",
   },
   {
-    name: "Appeal Letter",
-    price: "£4.99",
+    name: "Standard Letter",
+    price: "£5.99",
     priceNote: "one-time payment",
     description:
-      "Get a professionally written appeal letter tailored to your specific case.",
+      "A personalised appeal letter using the correct legal grounds for your specific situation.",
     features: [
       "Everything in Free Assessment",
       "AI-generated personalised appeal letter",
-      "Covers all relevant legal grounds",
+      "Correct legal references and case law",
       "Tailored to your specific operator or council",
-      "References applicable legislation and case law",
-      "Formatted for direct submission",
-      "Includes appeal body escalation letter",
-      "Unlimited revisions for 30 days",
+      "Formatted and ready to submit",
+      "PDF download",
+    ],
+    popular: false,
+    buttonText: "Get Standard Letter",
+    href: "/appeal",
+  },
+  {
+    name: "Premium Pack",
+    price: "£9.99",
+    priceNote: "one-time payment",
+    description:
+      "Everything in Standard, plus escalation support and operator-specific strategies.",
+    features: [
+      "Everything in Standard Letter",
+      "Escalation letter if rejected",
+      "Evidence collection checklist",
+      "Operator-specific strategy guide",
+      "Second-stage appeal template",
+      "Priority email support",
     ],
     popular: true,
-    buttonText: "Get Your Appeal Letter",
+    buttonText: "Get Premium Pack",
     href: "/appeal",
   },
 ];
 
 const comparisonFeatures = [
-  { feature: "Instant fine validity check", free: true, letter: true },
-  { feature: "NtK timing analysis", free: true, letter: true },
-  { feature: "Appeal body identification", free: true, letter: true },
-  { feature: "Common grounds check", free: true, letter: true },
-  { feature: "Appeal strength rating", free: true, letter: true },
-  { feature: "Step-by-step appeal guide", free: true, letter: true },
-  { feature: "AI-personalised appeal letter", free: false, letter: true },
-  { feature: "Legal grounds and case law references", free: false, letter: true },
-  { feature: "Appeal body escalation letter", free: false, letter: true },
-  { feature: "Unlimited revisions (30 days)", free: false, letter: true },
-  { feature: "Escalation letter if rejected", free: false, letter: true },
-  { feature: "Evidence collection checklist", free: false, letter: true },
-  { feature: "Operator-specific strategy", free: false, letter: true },
-  { feature: "Priority email support", free: false, letter: true },
+  { feature: "Instant fine validity check", free: true, standard: true, premium: true },
+  { feature: "NtK timing analysis", free: true, standard: true, premium: true },
+  { feature: "Appeal body identification", free: true, standard: true, premium: true },
+  { feature: "Common grounds check", free: true, standard: true, premium: true },
+  { feature: "Appeal strength rating", free: true, standard: true, premium: true },
+  { feature: "Step-by-step appeal guide", free: true, standard: true, premium: true },
+  { feature: "AI-personalised appeal letter", free: false, standard: true, premium: true },
+  { feature: "Legal grounds and case law references", free: false, standard: true, premium: true },
+  { feature: "Formatted for submission + PDF", free: false, standard: true, premium: true },
+  { feature: "Escalation letter if rejected", free: false, standard: false, premium: true },
+  { feature: "Evidence collection checklist", free: false, standard: false, premium: true },
+  { feature: "Operator-specific strategy guide", free: false, standard: false, premium: true },
+  { feature: "Second-stage appeal template", free: false, standard: false, premium: true },
+  { feature: "Priority email support", free: false, standard: false, premium: true },
 ];
 
 const faqItems = [
@@ -172,7 +188,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="py-12">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-2 max-w-3xl mx-auto">
+          <div className="grid gap-8 lg:grid-cols-3 max-w-5xl mx-auto">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -249,11 +265,18 @@ export default function PricingPage() {
                   <th className="py-3 text-center text-sm font-semibold text-gray-900 px-4 w-24">
                     Free
                   </th>
-                  <th className="py-3 text-center text-sm font-semibold text-teal-600 px-4 w-24">
-                    Letter
+                  <th className="py-3 text-center text-sm font-semibold text-gray-900 px-4 w-24">
+                    Standard
                     <br />
                     <span className="font-normal text-xs text-gray-500">
-                      £4.99
+                      £5.99
+                    </span>
+                  </th>
+                  <th className="py-3 text-center text-sm font-semibold text-teal-600 px-4 w-24">
+                    Premium
+                    <br />
+                    <span className="font-normal text-xs text-gray-500">
+                      £9.99
                     </span>
                   </th>
                 </tr>
@@ -273,7 +296,10 @@ export default function PricingPage() {
                       {row.free ? <CheckIcon /> : <CrossIcon />}
                     </td>
                     <td className="py-3 text-center">
-                      {row.letter ? <CheckIcon /> : <CrossIcon />}
+                      {row.standard ? <CheckIcon /> : <CrossIcon />}
+                    </td>
+                    <td className="py-3 text-center">
+                      {row.premium ? <CheckIcon /> : <CrossIcon />}
                     </td>
                   </tr>
                 ))}
