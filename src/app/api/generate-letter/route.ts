@@ -29,7 +29,7 @@ interface GenerateLetterRequest {
   senderName: string;
   senderAddress: string;
   // Product type
-  product: "basic" | "premium" | "court";
+  product: "basic" | "premium";
   // Payment verification
   sessionId: string;
 }
@@ -128,24 +128,6 @@ Also generate an evidence checklist specific to this case, listing exactly what 
 
 Format the escalation letter with the same formal structure as the main letter. Format the evidence checklist as a numbered list with brief explanations of why each item is important.`;
 
-const COURT_DEFENCE_PROMPT = `Additionally, generate a witness statement suitable for use in County Court proceedings. This should:
-- Follow the standard witness statement format used in the County Court
-- Begin with "I, [name], of [address], state as follows:"
-- Number each paragraph
-- Set out the facts chronologically
-- Reference any procedural failures by the operator
-- Reference relevant legislation and case law
-- Include a statement of truth: "I believe that the facts stated in this witness statement are true. I understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth."
-- Be signed and dated
-
-Also generate a legal defence summary covering:
-- The key legal arguments for the defence
-- Relevant case law with brief summaries of each case
-- Procedural defences (POFA compliance, limitation periods, etc.)
-- Potential weaknesses the claimant may exploit
-- Recommended next steps
-
-Format the witness statement and defence summary as separate, clearly labelled documents.`;
 
 function validateRequest(body: GenerateLetterRequest): string | null {
   if (!body.fineType || !["council", "private"].includes(body.fineType)) {
@@ -178,8 +160,8 @@ function validateRequest(body: GenerateLetterRequest): string | null {
   if (!body.senderAddress || body.senderAddress.trim().length === 0) {
     return "Your address is required";
   }
-  if (!body.product || !["basic", "premium", "court"].includes(body.product)) {
-    return "Product must be 'basic', 'premium', or 'court'";
+  if (!body.product || !["basic", "premium"].includes(body.product)) {
+    return "Product must be 'basic' or 'premium'";
   }
   if (!body.sessionId || body.sessionId.trim().length === 0) {
     return "Payment session ID is required";
@@ -243,11 +225,6 @@ function buildUserPrompt(body: GenerateLetterRequest): string {
   if (body.product === "premium") {
     lines.push("");
     lines.push(PREMIUM_ESCALATION_PROMPT);
-  } else if (body.product === "court") {
-    lines.push("");
-    lines.push(PREMIUM_ESCALATION_PROMPT);
-    lines.push("");
-    lines.push(COURT_DEFENCE_PROMPT);
   }
 
   return lines.join("\n");
@@ -277,7 +254,7 @@ export async function POST(request: Request) {
     const userPrompt = buildUserPrompt(body);
 
     // Determine max tokens based on product
-    const maxTokens = body.product === "court" ? 8000 : body.product === "premium" ? 5000 : 3000;
+    const maxTokens = body.product === "premium" ? 5000 : 3000;
 
     const message = await anthropic.messages.create({
       model: "claude-sonnet-4-20250514",
@@ -302,24 +279,22 @@ export async function POST(request: Request) {
 
     const letterContent = textContent.text;
 
-    // For premium and court products, split the response into sections
+    // For premium products, split the response into sections
     const response: {
       letter: string;
       escalationLetter?: string;
       evidenceChecklist?: string;
-      witnessStatement?: string;
-      legalDefenceSummary?: string;
     } = {
       letter: letterContent,
     };
 
-    if (body.product === "premium" || body.product === "court") {
+    if (body.product === "premium") {
       // Try to extract sections from the response
       const escalationMatch = letterContent.match(
         /(?:ESCALATION LETTER|FOLLOW-UP LETTER|ESCALATION TEMPLATE)[:\s]*\n([\s\S]*?)(?=(?:EVIDENCE CHECKLIST|$))/i
       );
       const checklistMatch = letterContent.match(
-        /EVIDENCE CHECKLIST[:\s]*\n([\s\S]*?)(?=(?:WITNESS STATEMENT|LEGAL DEFENCE|$))/i
+        /EVIDENCE CHECKLIST[:\s]*\n([\s\S]*?)$/i
       );
 
       if (escalationMatch) {
@@ -327,22 +302,6 @@ export async function POST(request: Request) {
       }
       if (checklistMatch) {
         response.evidenceChecklist = checklistMatch[1].trim();
-      }
-
-      if (body.product === "court") {
-        const witnessMatch = letterContent.match(
-          /WITNESS STATEMENT[:\s]*\n([\s\S]*?)(?=(?:LEGAL DEFENCE SUMMARY|DEFENCE SUMMARY|$))/i
-        );
-        const defenceMatch = letterContent.match(
-          /(?:LEGAL DEFENCE SUMMARY|DEFENCE SUMMARY)[:\s]*\n([\s\S]*?)$/i
-        );
-
-        if (witnessMatch) {
-          response.witnessStatement = witnessMatch[1].trim();
-        }
-        if (defenceMatch) {
-          response.legalDefenceSummary = defenceMatch[1].trim();
-        }
       }
 
       // If we found sections, extract just the main letter

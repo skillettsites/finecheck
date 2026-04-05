@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Pricing | FineCheck",
   description:
-    "Affordable parking fine appeal tools. Free assessment, professional appeal letters from £4.99, and full defence packages from £14.99. 30-day money-back guarantee.",
+    "Affordable parking fine appeal tools. Free assessment, professional appeal letters from £4.99, and premium appeal packs from £9.99.",
   alternates: {
     canonical: "https://finecheck.co.uk/pricing",
   },
@@ -52,55 +52,30 @@ const plans = [
     buttonText: "Get Your Appeal Letter",
     href: "/appeal",
   },
-  {
-    name: "Full Defence Pack",
-    price: "£14.99",
-    priceNote: "one-time payment",
-    description:
-      "Complete appeal and defence package for complex cases and court threats.",
-    features: [
-      "Everything in Appeal Letter",
-      "Multi-stage appeal letters (informal, formal, tribunal)",
-      "Court defence document (if operator pursues court)",
-      "Evidence checklist and collection guide",
-      "Debt collector response templates",
-      "Subject Access Request template",
-      "Witness statement template",
-      "Priority email support",
-      "Lifetime access to your case documents",
-    ],
-    popular: false,
-    buttonText: "Get Full Defence Pack",
-    href: "/appeal",
-  },
 ];
 
 const comparisonFeatures = [
-  { feature: "Instant fine validity check", free: true, letter: true, full: true },
-  { feature: "NtK timing analysis", free: true, letter: true, full: true },
-  { feature: "Appeal body identification", free: true, letter: true, full: true },
-  { feature: "Common grounds check", free: true, letter: true, full: true },
-  { feature: "Appeal strength rating", free: true, letter: true, full: true },
-  { feature: "Step-by-step appeal guide", free: true, letter: true, full: true },
-  { feature: "AI-personalised appeal letter", free: false, letter: true, full: true },
-  { feature: "Legal grounds and case law references", free: false, letter: true, full: true },
-  { feature: "Appeal body escalation letter", free: false, letter: true, full: true },
-  { feature: "Unlimited revisions (30 days)", free: false, letter: true, full: true },
-  { feature: "Multi-stage appeal letters", free: false, letter: false, full: true },
-  { feature: "Court defence document", free: false, letter: false, full: true },
-  { feature: "Debt collector response templates", free: false, letter: false, full: true },
-  { feature: "Subject Access Request template", free: false, letter: false, full: true },
-  { feature: "Witness statement template", free: false, letter: false, full: true },
-  { feature: "Evidence checklist and guide", free: false, letter: false, full: true },
-  { feature: "Priority email support", free: false, letter: false, full: true },
-  { feature: "Lifetime document access", free: false, letter: false, full: true },
+  { feature: "Instant fine validity check", free: true, letter: true },
+  { feature: "NtK timing analysis", free: true, letter: true },
+  { feature: "Appeal body identification", free: true, letter: true },
+  { feature: "Common grounds check", free: true, letter: true },
+  { feature: "Appeal strength rating", free: true, letter: true },
+  { feature: "Step-by-step appeal guide", free: true, letter: true },
+  { feature: "AI-personalised appeal letter", free: false, letter: true },
+  { feature: "Legal grounds and case law references", free: false, letter: true },
+  { feature: "Appeal body escalation letter", free: false, letter: true },
+  { feature: "Unlimited revisions (30 days)", free: false, letter: true },
+  { feature: "Escalation letter if rejected", free: false, letter: true },
+  { feature: "Evidence collection checklist", free: false, letter: true },
+  { feature: "Operator-specific strategy", free: false, letter: true },
+  { feature: "Priority email support", free: false, letter: true },
 ];
 
 const faqItems = [
   {
     question: "Is the free assessment really free?",
     answer:
-      "Yes, completely free with no strings attached. You can check your parking fine, see your appeal strength rating, and get a step-by-step guide without entering any payment details. You only pay if you want a professionally written appeal letter or full defence pack.",
+      "Yes, completely free with no strings attached. You can check your parking fine, see your appeal strength rating, and get a step-by-step guide without entering any payment details. You only pay if you want a professionally written appeal letter.",
   },
   {
     question: "What is included in the appeal letter?",
@@ -108,14 +83,9 @@ const faqItems = [
       "The appeal letter is a professionally written, personalised document tailored to your specific parking fine. It covers all relevant legal grounds, references applicable legislation and case law (such as POFA 2012, Beavis v ParkingEye, or the relevant council enforcement regulations), and is formatted for direct submission to the operator or council. If your first appeal is rejected, you also get an escalation letter for the independent appeals body.",
   },
   {
-    question: "When would I need the Full Defence Pack?",
+    question: "What is the difference between Free Assessment and Appeal Letter?",
     answer:
-      "The Full Defence Pack is recommended if you are dealing with an operator that pursues court action (such as ParkingEye or UKPC), if you have received a Letter Before Claim, if you are getting aggressive debt collection letters, or if your case is complex and may go through multiple appeal stages. It includes court defence documents and templates for responding to debt collectors.",
-  },
-  {
-    question: "Do you offer a money-back guarantee?",
-    answer:
-      "Yes. If you are not satisfied with the quality of your appeal letter or defence pack, contact us within 30 days for a full refund. We also refund your purchase if you discover that our assessment was incorrect about the grounds available for your case.",
+      "The Free Assessment checks your fine, identifies legal grounds, and tells you your chances of success. The Appeal Letter includes everything in the Free Assessment, plus a professionally written personalised letter, escalation letter, evidence checklist, and operator-specific strategy guidance.",
   },
   {
     question: "How quickly will I receive my appeal letter?",
@@ -125,7 +95,7 @@ const faqItems = [
   {
     question: "Can I use the letter for a tribunal appeal?",
     answer:
-      "Yes. The Appeal Letter plan includes a letter suitable for the initial challenge to the operator or council, plus an escalation letter for the independent appeals body (POPLA, IAS, or the relevant tribunal). The Full Defence Pack includes separate letters optimised for each stage of the process.",
+      "Yes. The Appeal Letter plan includes a letter suitable for the initial challenge to the operator or council, plus an escalation letter for the independent appeals body (POPLA, IAS, or the relevant tribunal).",
   },
   {
     question: "Is this legal advice?",
@@ -192,7 +162,7 @@ export default function PricingPage() {
             </h1>
             <p className="mt-4 text-lg text-gray-600">
               Start with a free assessment. Only pay if you want a professionally
-              written appeal letter or full defence pack. No subscriptions, no
+              written appeal letter. No subscriptions, no
               hidden fees.
             </p>
           </div>
@@ -202,7 +172,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="py-12">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-3 max-w-5xl mx-auto">
+          <div className="grid gap-8 lg:grid-cols-2 max-w-3xl mx-auto">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -259,37 +229,6 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Money-back guarantee */}
-          <div className="mt-12 max-w-2xl mx-auto">
-            <div className="rounded-xl border border-green-200 bg-green-50 p-6 text-center">
-              <div className="flex justify-center mb-3">
-                <div className="rounded-full bg-green-200 p-2">
-                  <svg
-                    className="h-6 w-6 text-green-700"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold text-green-900">
-                30-Day Money-Back Guarantee
-              </h3>
-              <p className="mt-2 text-sm text-green-700">
-                Not satisfied with your appeal letter or defence pack? Get a full
-                refund within 30 days, no questions asked. We also refund if our
-                assessment turns out to be incorrect about the available grounds
-                for your case.
-              </p>
-            </div>
-          </div>
         </Container>
       </section>
 
@@ -317,13 +256,6 @@ export default function PricingPage() {
                       £4.99
                     </span>
                   </th>
-                  <th className="py-3 text-center text-sm font-semibold text-gray-900 px-4 w-24">
-                    Full Pack
-                    <br />
-                    <span className="font-normal text-xs text-gray-500">
-                      £14.99
-                    </span>
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -342,9 +274,6 @@ export default function PricingPage() {
                     </td>
                     <td className="py-3 text-center">
                       {row.letter ? <CheckIcon /> : <CrossIcon />}
-                    </td>
-                    <td className="py-3 text-center">
-                      {row.full ? <CheckIcon /> : <CrossIcon />}
                     </td>
                   </tr>
                 ))}
@@ -394,15 +323,15 @@ export default function PricingPage() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                   />
                 </svg>
               </div>
               <h3 className="text-sm font-semibold text-gray-900">
-                30-Day Guarantee
+                Personalised Letters
               </h3>
               <p className="mt-1 text-xs text-gray-500">
-                Full refund if not satisfied with your documents
+                Tailored to your specific case and operator
               </p>
             </div>
 

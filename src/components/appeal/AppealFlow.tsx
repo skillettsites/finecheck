@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo } from "react";
 import { PRODUCTS } from "@/data/products";
 import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
+import { LocationAutocomplete } from "@/components/ui/LocationAutocomplete";
 
 type FineType = "council" | "private" | "bus-lane" | "congestion";
 type Step = 1 | 2 | 3 | 4;
@@ -448,10 +449,9 @@ function StepDetails({
 
         <div>
           <label className={labelClass}>Location *</label>
-          <input
-            type="text"
+          <LocationAutocomplete
             value={form.location}
-            onChange={(e) => onChange("location", e.target.value)}
+            onChange={(val) => onChange("location", val)}
             placeholder={
               fineType === "private"
                 ? "e.g., Tesco Extra car park, High Street, Manchester"
@@ -730,7 +730,7 @@ function StepAssessment({
           )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {products.map((product) => {
             const isRecommended = product.id === assessment.recommendedProduct;
             return (

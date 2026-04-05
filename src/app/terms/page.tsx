@@ -122,7 +122,7 @@ export default function TermsPage() {
                 at no cost. No payment information is required for the free assessment.
               </li>
               <li>
-                Paid products (appeal letters, escalation packs, court defence packs)
+                Paid products (appeal letters and premium appeal packs)
                 are priced as displayed at the point of purchase. All prices include VAT
                 where applicable.
               </li>

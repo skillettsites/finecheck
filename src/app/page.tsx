@@ -98,7 +98,7 @@ const faqItems = [
   {
     question: "What if my appeal fails?",
     answer:
-      "If your first appeal is rejected, Premium Pack customers receive an escalation letter for the next stage. For private fines, this means appealing to POPLA or the IAS. For council fines, you can take your case to the Traffic Penalty Tribunal. Our Court Defence Pack covers the full process.",
+      "If your first appeal is rejected, Premium Pack customers receive an escalation letter for the next stage. For private fines, this means appealing to POPLA or the IAS. For council fines, you can take your case to the Traffic Penalty Tribunal.",
   },
   {
     question: "How quickly do I get my letter?",
@@ -157,22 +157,6 @@ const pricingPlans = [
       "Second-stage appeal template",
     ],
     popular: true,
-    href: "/appeal",
-  },
-  {
-    name: "Court Defence Pack",
-    price: "£29.99",
-    description:
-      "Complete County Court defence pack with witness statement and step-by-step court guide.",
-    features: [
-      "Witness statement template",
-      "Full legal defence arguments",
-      "Step-by-step court guide",
-      "Key case law references",
-      "What to say on the day",
-      "Priority email support",
-    ],
-    popular: false,
     href: "/appeal",
   },
 ];
@@ -526,7 +510,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.name} {...plan} />
             ))}

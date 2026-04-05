@@ -26,20 +26,6 @@ export const PRODUCTS: Record<string, Product> = {
       'Priority email support'
     ]
   },
-  'court-defence': {
-    id: 'court-defence',
-    name: 'Court Defence Pack',
-    price: 2999,
-    description: 'Complete County Court defence pack with witness statement, legal arguments, and step-by-step court guide.',
-    features: [
-      'Witness statement template',
-      'Legal defence arguments',
-      'Step-by-step court guide',
-      'Key case law references',
-      'What to say on the day',
-      'Priority email support'
-    ]
-  }
 };
 
 export const DISCOUNT_CODES: Record<string, { percentOff: number; maxUses?: number }> = {
