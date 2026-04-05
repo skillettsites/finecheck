@@ -277,12 +277,12 @@ export default async function CouncilPage({
 
           {/* Timeline */}
           <div className="relative">
-            <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-blue-200 hidden sm:block" />
+            <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-teal-200 hidden sm:block" />
 
             <div className="space-y-8">
               {/* Step 1 */}
               <div className="relative flex gap-4 sm:gap-6">
-                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   1
                 </div>
                 <div className="rounded-xl border border-gray-200 bg-white p-6 flex-1">
@@ -300,7 +300,7 @@ export default async function CouncilPage({
                     this stage, your 50% early payment discount is preserved.
                   </p>
                   <div className="mt-3 rounded-lg bg-blue-50 p-3">
-                    <p className="text-xs text-blue-800">
+                    <p className="text-xs text-teal-700">
                       <strong>Tip:</strong> Even if you are not sure your
                       challenge will succeed, it costs nothing to try and
                       preserves your discount if you ultimately decide to pay.
@@ -311,7 +311,7 @@ export default async function CouncilPage({
 
               {/* Step 2 */}
               <div className="relative flex gap-4 sm:gap-6">
-                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   2
                 </div>
                 <div className="rounded-xl border border-gray-200 bg-white p-6 flex-1">
@@ -329,7 +329,7 @@ export default async function CouncilPage({
                     specific about which ground applies to your case.
                   </p>
                   <div className="mt-3 rounded-lg bg-blue-50 p-3">
-                    <p className="text-xs text-blue-800">
+                    <p className="text-xs text-teal-700">
                       <strong>Key grounds include:</strong> procedural
                       impropriety, the contravention did not occur, the PCN has
                       been paid, the penalty exceeds the amount due, or the
@@ -341,7 +341,7 @@ export default async function CouncilPage({
 
               {/* Step 3 */}
               <div className="relative flex gap-4 sm:gap-6">
-                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   3
                 </div>
                 <div className="rounded-xl border border-gray-200 bg-white p-6 flex-1">
@@ -559,13 +559,13 @@ export default async function CouncilPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Appeal Your {shortName} Parking Fine Now
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your {shortName} PCN. Our tool checks
               the most common grounds for appeal and helps you build your
               strongest possible case.
@@ -579,7 +579,7 @@ export default async function CouncilPage({
                   href={council.contactUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-200 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors"
                 >
                   Visit {shortName} parking website
                   <svg
@@ -637,7 +637,7 @@ export default async function CouncilPage({
                         {formatNumber(related.annualPCNs)} PCNs/year
                       </p>
                     )}
-                    <p className="mt-2 text-sm font-medium text-blue-800">
+                    <p className="mt-2 text-sm font-medium text-teal-600">
                       View appeal guide &rarr;
                     </p>
                   </Card>

@@ -177,15 +177,15 @@ export default function TicketScanner() {
           onDragLeave={handleDragLeave}
           className={`relative rounded-xl border-2 border-dashed p-8 sm:p-12 text-center transition-colors cursor-pointer ${
             dragOver
-              ? "border-blue-800 bg-blue-50"
-              : "border-gray-300 bg-gray-50 hover:border-blue-400 hover:bg-blue-50/50"
+              ? "border-teal-600 bg-teal-50"
+              : "border-gray-300 bg-gray-50 hover:border-teal-400 hover:bg-teal-50/50"
           }`}
           onClick={() => fileInputRef.current?.click()}
         >
           <div className="flex flex-col items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-teal-100">
               <svg
-                className="h-8 w-8 text-blue-800"
+                className="h-8 w-8 text-teal-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
@@ -218,7 +218,7 @@ export default function TicketScanner() {
                   e.stopPropagation();
                   fileInputRef.current?.click();
                 }}
-                className="inline-flex items-center gap-2 rounded-lg bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-teal-700 transition-colors"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
@@ -231,7 +231,7 @@ export default function TicketScanner() {
                   e.stopPropagation();
                   cameraInputRef.current?.click();
                 }}
-                className="inline-flex items-center gap-2 rounded-lg border border-blue-800 px-5 py-2.5 text-sm font-semibold text-blue-800 hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-teal-600 px-5 py-2.5 text-sm font-semibold text-teal-600 hover:bg-teal-50 transition-colors"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
@@ -270,14 +270,14 @@ export default function TicketScanner() {
               className="w-full max-h-80 object-contain bg-gray-100"
             />
             {/* Scanning overlay */}
-            <div className="absolute inset-0 bg-blue-800/10">
+            <div className="absolute inset-0 bg-teal-600/10">
               <div className="absolute inset-x-0 h-1 bg-blue-500/60 animate-scan" />
             </div>
           </div>
           <div className="p-6 text-center">
             <div className="flex items-center justify-center gap-3">
               <svg
-                className="h-5 w-5 text-blue-800 animate-spin"
+                className="h-5 w-5 text-teal-600 animate-spin"
                 fill="none"
                 viewBox="0 0 24 24"
               >
@@ -542,7 +542,7 @@ export default function TicketScanner() {
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={handleStartAppeal}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
               >
                 Looks Correct, Start My Appeal
                 <svg

@@ -93,7 +93,7 @@ export default function DeadlineCalculatorPage() {
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <div className="rounded-xl border border-gray-200 bg-white p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="h-3 w-3 rounded-full bg-blue-800" />
+                  <div className="h-3 w-3 rounded-full bg-teal-600" />
                   <h3 className="text-lg font-semibold text-gray-900">
                     Council PCN Deadlines
                   </h3>

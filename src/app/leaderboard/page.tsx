@@ -191,13 +191,13 @@ export default function LeaderboardPage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-900 to-blue-800 py-16 sm:py-20">
+      <section className="bg-gradient-to-b from-slate-900 to-slate-800 py-16 sm:py-20">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               UK Parking Fine Leaderboard 2026
             </h1>
-            <p className="text-lg sm:text-xl text-blue-100">
+            <p className="text-lg sm:text-xl text-slate-300">
               Which councils issue the most fines, make the most money, and have the worst appeal rates?
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function LeaderboardPage() {
         <Container>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-blue-800">
+              <p className="text-3xl sm:text-4xl font-bold text-teal-600">
                 {formatNumber(totalPCNs)}
               </p>
               <p className="text-sm text-gray-600 mt-1">
@@ -217,13 +217,13 @@ export default function LeaderboardPage() {
               </p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-blue-800">
+              <p className="text-3xl sm:text-4xl font-bold text-teal-600">
                 {formatCurrency(totalSurplus)}
               </p>
               <p className="text-sm text-gray-600 mt-1">Total parking surplus</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-bold text-blue-800">{avgAppealRate}%</p>
+              <p className="text-3xl sm:text-4xl font-bold text-teal-600">{avgAppealRate}%</p>
               <p className="text-sm text-gray-600 mt-1">Average appeal success rate</p>
             </div>
           </div>
@@ -407,13 +407,13 @@ export default function LeaderboardPage() {
       </section>
 
       {/* Appeal CTA */}
-      <section className="py-12 bg-blue-800">
+      <section className="py-12 bg-slate-900">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Think Your Council Is Unfair?
             </h2>
-            <p className="text-blue-100 mb-6">
+            <p className="text-slate-300 mb-6">
               If you have received a parking fine, you have the right to appeal. Our free tool helps you
               check your PCN and generate a professional appeal letter in minutes.
             </p>

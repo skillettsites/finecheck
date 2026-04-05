@@ -162,7 +162,7 @@ function renderContent(content: string): React.ReactNode[] {
             <a
               key={`a-${partKey++}`}
               href={linkMatch[2]}
-              className="text-blue-800 hover:underline"
+              className="text-teal-600 hover:underline"
               target={linkMatch[2].startsWith("http") ? "_blank" : undefined}
               rel={linkMatch[2].startsWith("http") ? "noopener noreferrer" : undefined}
             >
@@ -413,11 +413,11 @@ export default async function BlogPostPage({
               )}
 
               {/* CTA */}
-              <div className="mt-12 rounded-xl bg-gradient-to-r from-blue-800 to-blue-700 p-6 sm:p-8">
+              <div className="mt-12 rounded-xl bg-gradient-to-r from-slate-800 to-slate-700 p-6 sm:p-8">
                 <h2 className="text-xl font-bold text-white mb-2">
                   Need Help With Your Appeal?
                 </h2>
-                <p className="text-blue-100 mb-4">
+                <p className="text-slate-300 mb-4">
                   FineCheck helps you assess your parking fine, check if it is valid, and generate a
                   professional appeal letter. It is free to use.
                 </p>
@@ -468,7 +468,7 @@ export default async function BlogPostPage({
                       <a
                         key={heading.id}
                         href={`#${heading.id}`}
-                        className={`block text-sm hover:text-blue-800 transition-colors ${
+                        className={`block text-sm hover:text-teal-600 transition-colors ${
                           heading.level === 2
                             ? "text-gray-700 font-medium"
                             : "text-gray-500 pl-3"

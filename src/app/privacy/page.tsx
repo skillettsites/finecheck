@@ -121,7 +121,7 @@ export default function PrivacyPage() {
                 certified. See{" "}
                 <a
                   href="https://stripe.com/gb/privacy"
-                  className="text-blue-800 underline hover:text-blue-600"
+                  className="text-teal-600 underline hover:text-teal-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
                 training. See{" "}
                 <a
                   href="https://www.anthropic.com/privacy"
-                  className="text-blue-800 underline hover:text-blue-600"
+                  className="text-teal-600 underline hover:text-teal-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -147,7 +147,7 @@ export default function PrivacyPage() {
                 See{" "}
                 <a
                   href="https://vercel.com/legal/privacy-policy"
-                  className="text-blue-800 underline hover:text-blue-600"
+                  className="text-teal-600 underline hover:text-teal-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -159,7 +159,7 @@ export default function PrivacyPage() {
                 anonymised browsing data. See{" "}
                 <a
                   href="https://policies.google.com/privacy"
-                  className="text-blue-800 underline hover:text-blue-600"
+                  className="text-teal-600 underline hover:text-teal-700"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -240,7 +240,7 @@ export default function PrivacyPage() {
               To exercise any of these rights, contact us at{" "}
               <a
                 href="mailto:privacy@finecheck.co.uk"
-                className="text-blue-800 underline hover:text-blue-600"
+                className="text-teal-600 underline hover:text-teal-700"
               >
                 privacy@finecheck.co.uk
               </a>. We will respond within 30 days.
@@ -250,7 +250,7 @@ export default function PrivacyPage() {
               complain to the Information Commissioner&apos;s Office (ICO) at{" "}
               <a
                 href="https://ico.org.uk"
-                className="text-blue-800 underline hover:text-blue-600"
+                className="text-teal-600 underline hover:text-teal-700"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -309,7 +309,7 @@ export default function PrivacyPage() {
             <p className="mt-2">
               <a
                 href="mailto:privacy@finecheck.co.uk"
-                className="text-blue-800 underline hover:text-blue-600"
+                className="text-teal-600 underline hover:text-teal-700"
               >
                 privacy@finecheck.co.uk
               </a>

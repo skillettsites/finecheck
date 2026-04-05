@@ -43,7 +43,7 @@ function SortArrow({ active, direction }: { active: boolean; direction: SortDir 
     );
   }
   return (
-    <svg className="ml-1 h-4 w-4 text-blue-800 inline-block" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+    <svg className="ml-1 h-4 w-4 text-teal-600 inline-block" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
       {direction === "desc" ? (
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
       ) : (
@@ -77,7 +77,7 @@ export default function LeaderboardTable({ councils }: { councils: CouncilRow[] 
   const headerButton = (label: string, key: SortKey) => (
     <button
       onClick={() => handleSort(key)}
-      className="inline-flex items-center font-semibold text-gray-700 hover:text-blue-800 transition-colors whitespace-nowrap"
+      className="inline-flex items-center font-semibold text-gray-700 hover:text-teal-700 transition-colors whitespace-nowrap"
     >
       {label}
       <SortArrow active={sortKey === key} direction={sortDir} />
@@ -112,7 +112,7 @@ export default function LeaderboardTable({ councils }: { councils: CouncilRow[] 
                 <td className="px-4 py-3">
                   <Link
                     href={`/councils/${council.slug}`}
-                    className="font-medium text-blue-800 hover:underline"
+                    className="font-medium text-teal-600 hover:underline"
                   >
                     {council.name}
                   </Link>
@@ -156,7 +156,7 @@ export default function LeaderboardTable({ councils }: { councils: CouncilRow[] 
                 onClick={() => handleSort(key)}
                 className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
                   sortKey === key
-                    ? "bg-blue-800 text-white"
+                    ? "bg-teal-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -175,7 +175,7 @@ export default function LeaderboardTable({ councils }: { councils: CouncilRow[] 
                 <span className="text-xs font-medium text-gray-400 mr-2">#{index + 1}</span>
                 <Link
                   href={`/councils/${council.slug}`}
-                  className="font-semibold text-blue-800 hover:underline"
+                  className="font-semibold text-teal-600 hover:underline"
                 >
                   {council.name}
                 </Link>

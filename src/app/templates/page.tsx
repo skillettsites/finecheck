@@ -54,13 +54,13 @@ function TemplateCard({ template }: { template: AppealTemplate }) {
           <div className="flex items-start justify-between gap-3 mb-3">
             <Badge variant={cat.variant}>{cat.label}</Badge>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-800 transition-colors mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors mb-2">
             {template.title}
           </h3>
           <p className="text-sm text-gray-600 leading-relaxed flex-1">
             {template.description}
           </p>
-          <div className="mt-4 flex items-center text-sm font-medium text-blue-800">
+          <div className="mt-4 flex items-center text-sm font-medium text-teal-600">
             View template
             <svg
               className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -212,12 +212,12 @@ export default function TemplatesPage() {
         );
       })}
 
-      <section className="py-12 sm:py-16 bg-blue-800">
+      <section className="py-12 sm:py-16 bg-slate-900">
         <Container size="md" className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Want a Letter Written Specifically for Your Case?
           </h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
             Our personalised appeal letters analyse your specific situation,
             reference the exact legal grounds that apply, and target the known
             weaknesses of your operator. Much stronger than a generic template.

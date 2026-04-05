@@ -220,7 +220,7 @@ export default async function TemplateDetailPage({
               <ol className="space-y-3">
                 {template.instructions.map((instruction, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-800 text-xs font-bold text-white">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-600 text-xs font-bold text-white">
                       {i + 1}
                     </span>
                     <p className="text-gray-600 leading-relaxed pt-0.5">
@@ -253,11 +253,11 @@ export default async function TemplateDetailPage({
             </section>
 
             {/* CTA Box */}
-            <section className="rounded-xl bg-gradient-to-br from-blue-800 to-blue-900 p-6 sm:p-8">
+            <section className="rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 p-6 sm:p-8">
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
                 This Is a Generic Template
               </h2>
-              <p className="text-blue-100 leading-relaxed mb-6">
+              <p className="text-slate-300 leading-relaxed mb-6">
                 Get a personalised letter that references your specific
                 circumstances, the exact legal grounds for your case, and
                 {template.operatorSlug
@@ -327,7 +327,7 @@ export default async function TemplateDetailPage({
                     <li key={related.slug}>
                       <Link
                         href={`/templates/${related.slug}`}
-                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-800 transition-colors py-1"
+                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-teal-600 transition-colors py-1"
                       >
                         <svg
                           className="h-3.5 w-3.5 shrink-0 text-gray-400"

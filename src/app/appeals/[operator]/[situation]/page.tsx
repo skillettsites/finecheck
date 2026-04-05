@@ -352,7 +352,7 @@ export default async function OperatorSituationPage({
                 key={s.step}
                 className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   {s.step}
                 </div>
                 <div>
@@ -418,7 +418,7 @@ export default async function OperatorSituationPage({
                   <p className="mt-1 text-sm text-gray-600">
                     Full guide to challenging {op.name} charges, including common weaknesses and court risks.
                   </p>
-                  <p className="mt-2 text-sm text-blue-800 font-medium">
+                  <p className="mt-2 text-sm text-teal-600 font-medium">
                     Read guide &rarr;
                   </p>
                 </Card>
@@ -434,7 +434,7 @@ export default async function OperatorSituationPage({
                   <p className="mt-1 text-sm text-gray-600">
                     General guide to {sit.name.toLowerCase()} charges from all operators.
                   </p>
-                  <p className="mt-2 text-sm text-blue-800 font-medium">
+                  <p className="mt-2 text-sm text-teal-600 font-medium">
                     Read guide &rarr;
                   </p>
                 </Card>
@@ -449,7 +449,7 @@ export default async function OperatorSituationPage({
                 <p className="mt-1 text-sm text-gray-600">
                   Browse all {20} private parking operators covered by FineCheck.
                 </p>
-                <p className="mt-2 text-sm text-blue-800 font-medium">
+                <p className="mt-2 text-sm text-teal-600 font-medium">
                   View operators &rarr;
                 </p>
               </Card>
@@ -459,13 +459,13 @@ export default async function OperatorSituationPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Appeal Your {op?.name || ""} {combo.locationName} Fine Now
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your parking charge. Our tool checks the
               NtK timing, signage requirements, and other grounds specific to
               {" "}{op?.name || "your operator"} at {combo.locationName} sites.

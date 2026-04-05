@@ -168,7 +168,7 @@ export default function TermsPage() {
               To request a refund, contact us at{" "}
               <a
                 href="mailto:support@finecheck.co.uk"
-                className="text-blue-800 underline hover:text-blue-600"
+                className="text-teal-600 underline hover:text-teal-700"
               >
                 support@finecheck.co.uk
               </a>{" "}
@@ -294,7 +294,7 @@ export default function TermsPage() {
             <p className="mt-2">
               <a
                 href="mailto:support@finecheck.co.uk"
-                className="text-blue-800 underline hover:text-blue-600"
+                className="text-teal-600 underline hover:text-teal-700"
               >
                 support@finecheck.co.uk
               </a>

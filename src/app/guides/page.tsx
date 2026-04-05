@@ -78,18 +78,18 @@ export default function GuidesPage() {
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
-                className="group relative rounded-xl border-2 border-blue-100 bg-blue-50/30 p-6 transition-all hover:border-blue-300 hover:shadow-lg"
+                className="group relative rounded-xl border-2 border-teal-100 bg-teal-50/30 p-6 transition-all hover:border-teal-300 hover:shadow-lg"
               >
                 <Badge variant={categoryBadgeVariant[guide.category]} className="mb-3">
                   {categoryLabels[guide.category]}
                 </Badge>
-                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-800 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                   {guide.title}
                 </h3>
                 <p className="mt-2 text-sm text-gray-600 line-clamp-2">
                   {guide.description}
                 </p>
-                <span className="mt-4 inline-flex items-center text-sm font-medium text-blue-800">
+                <span className="mt-4 inline-flex items-center text-sm font-medium text-teal-600">
                   Read guide
                   <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -118,13 +118,13 @@ export default function GuidesPage() {
                     href={`/guides/${guide.slug}`}
                     className="group rounded-xl border border-gray-200 bg-white p-5 transition-all hover:border-gray-300 hover:shadow-md"
                   >
-                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-800 transition-colors">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                       {guide.title}
                     </h3>
                     <p className="mt-2 text-sm text-gray-600 line-clamp-2">
                       {guide.description}
                     </p>
-                    <span className="mt-3 inline-flex items-center text-sm font-medium text-blue-800 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="mt-3 inline-flex items-center text-sm font-medium text-teal-600 opacity-0 group-hover:opacity-100 transition-opacity">
                       Read guide
                       <svg className="ml-1 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -138,9 +138,9 @@ export default function GuidesPage() {
         })}
 
         {/* CTA */}
-        <section className="mt-16 rounded-2xl bg-blue-800 px-8 py-12 text-center text-white">
+        <section className="mt-16 rounded-2xl bg-slate-900 px-8 py-12 text-center text-white">
           <h2 className="text-2xl font-bold sm:text-3xl">Ready to Appeal Your Fine?</h2>
-          <p className="mt-3 text-blue-100 max-w-xl mx-auto">
+          <p className="mt-3 text-slate-300 max-w-xl mx-auto">
             Get a free assessment of your parking fine in under 2 minutes.
             Our AI will check for procedural errors and generate a personalised appeal letter.
           </p>

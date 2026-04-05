@@ -83,11 +83,11 @@ export default function POFACheckerPage() {
             If they missed this deadline, keeper liability does not apply and the fine may be
             unenforceable against you.
           </p>
-          <div className="mt-4 flex items-start gap-3 rounded-lg bg-blue-50 border border-blue-200 p-4">
-            <svg className="h-5 w-5 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+          <div className="mt-4 flex items-start gap-3 rounded-lg bg-teal-50 border border-teal-200 p-4">
+            <svg className="h-5 w-5 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
             </svg>
-            <p className="text-sm text-blue-900">
+            <p className="text-sm text-teal-900">
               <strong>Important:</strong> This checker applies to private parking charges only
               (e.g., ParkingEye, APCOA, CP Plus, Excel Parking). Council-issued PCNs are
               governed by different legislation.
@@ -136,31 +136,31 @@ export default function POFACheckerPage() {
                 </h3>
                 <ul className="mt-2 text-sm text-gray-600 leading-relaxed space-y-1.5">
                   <li className="flex items-start gap-2">
-                    <svg className="h-4 w-4 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <svg className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     The amount of the parking charge
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="h-4 w-4 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <svg className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     The grounds for the charge
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="h-4 w-4 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <svg className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     How to pay or appeal the charge
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="h-4 w-4 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <svg className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     A statement that the keeper is liable unless they name the driver
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="h-4 w-4 text-blue-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <svg className="h-4 w-4 text-teal-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     That representations can be made to the operator

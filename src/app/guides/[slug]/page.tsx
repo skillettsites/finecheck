@@ -377,7 +377,7 @@ export default async function GuidePage({
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className={`block text-sm transition-colors hover:text-blue-800 ${
+                    className={`block text-sm transition-colors hover:text-teal-600 ${
                       section.level === 3
                         ? "pl-4 text-gray-500"
                         : "font-medium text-gray-700"
@@ -402,7 +402,7 @@ export default async function GuidePage({
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className={`block text-sm transition-colors hover:text-blue-800 ${
+                    className={`block text-sm transition-colors hover:text-teal-600 ${
                       section.level === 3
                         ? "pl-4 text-gray-500"
                         : "font-medium text-gray-700"
@@ -431,11 +431,11 @@ export default async function GuidePage({
             ))}
 
             {/* CTA after content */}
-            <div className="mt-12 rounded-xl bg-blue-800 p-8 text-center text-white">
+            <div className="mt-12 rounded-xl bg-slate-900 p-8 text-center text-white">
               <h2 className="text-xl font-bold sm:text-2xl">
                 Ready to Appeal? Get Your Personalised Letter
               </h2>
-              <p className="mt-2 text-blue-100">
+              <p className="mt-2 text-slate-300">
                 Our AI analyses your specific circumstances and generates a professional
                 appeal letter, referencing the correct legislation and appeal bodies.
               </p>
@@ -462,7 +462,7 @@ export default async function GuidePage({
                       <Badge variant={categoryBadgeVariant[related.category]} className="mb-2">
                         {categoryLabels[related.category]}
                       </Badge>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-800 transition-colors">
+                      <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                         {related.title}
                       </h3>
                       <p className="mt-1 text-sm text-gray-600 line-clamp-2">

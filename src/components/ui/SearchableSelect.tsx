@@ -179,7 +179,7 @@ export default function SearchableSelect({
                 onMouseEnter={() => setActiveIndex(idx)}
                 className={`cursor-pointer px-4 py-2.5 text-sm ${
                   activeIndex === idx
-                    ? 'bg-blue-50 text-blue-800'
+                    ? 'bg-teal-50 text-teal-700'
                     : value === option.label
                     ? 'bg-gray-50 font-medium'
                     : 'text-gray-700 hover:bg-gray-50'

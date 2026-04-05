@@ -212,14 +212,14 @@ export default async function SituationPage({
             </div>
 
             <div className="shrink-0">
-              <div className="rounded-xl border-2 border-blue-200 bg-blue-50 px-6 py-4 text-center">
-                <p className="text-sm font-medium text-blue-800">
+              <div className="rounded-xl border-2 border-teal-200 bg-teal-50 px-6 py-4 text-center">
+                <p className="text-sm font-medium text-teal-600">
                   Common Defences
                 </p>
-                <p className="text-4xl font-bold text-blue-700">
+                <p className="text-4xl font-bold text-teal-700">
                   {situation.commonDefences.length}
                 </p>
-                <p className="text-xs text-blue-600 mt-1">
+                <p className="text-xs text-teal-600 mt-1">
                   {situation.commonDefences.filter((d) => d.strength === "strong").length} strong grounds
                 </p>
               </div>
@@ -265,7 +265,7 @@ export default async function SituationPage({
                       </Badge>
                       <Badge variant="info">{op.tradeBody}</Badge>
                     </div>
-                    <p className="mt-2 text-sm text-blue-800 font-medium">
+                    <p className="mt-2 text-sm text-teal-600 font-medium">
                       View guide &rarr;
                     </p>
                   </Card>
@@ -332,7 +332,7 @@ export default async function SituationPage({
                 key={i}
                 className="flex items-start gap-3 rounded-lg border border-gray-200 bg-white p-4"
               >
-                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white text-xs font-bold">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white text-xs font-bold">
                   {i + 1}
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed">{tip}</p>
@@ -377,13 +377,13 @@ export default async function SituationPage({
       )}
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Appeal Your {situation.name} Now
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your parking charge in under 2 minutes.
               Our tool checks the most common grounds and generates a
               personalised appeal letter.

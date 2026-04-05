@@ -91,23 +91,23 @@ export default function ToolsIndexPage() {
             <Link
               key={tool.href}
               href={tool.href}
-              className="group relative rounded-xl border border-gray-200 bg-white p-6 transition-all hover:shadow-lg hover:border-blue-200"
+              className="group relative rounded-xl border border-gray-200 bg-white p-6 transition-all hover:shadow-lg hover:border-teal-200"
             >
               {tool.tag && (
-                <span className="absolute -top-3 right-4 inline-flex items-center rounded-full bg-blue-800 px-3 py-1 text-xs font-semibold text-white">
+                <span className="absolute -top-3 right-4 inline-flex items-center rounded-full bg-teal-600 px-3 py-1 text-xs font-semibold text-white">
                   {tool.tag}
                 </span>
               )}
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800 group-hover:bg-blue-100 transition-colors">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-teal-50 text-teal-600 group-hover:bg-teal-100 transition-colors">
                 {tool.icon}
               </div>
-              <h2 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-blue-800 transition-colors">
+              <h2 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                 {tool.name}
               </h2>
               <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                 {tool.description}
               </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-800">
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-600">
                 Use this tool
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -118,17 +118,17 @@ export default function ToolsIndexPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 rounded-2xl bg-blue-800 p-8 sm:p-10 text-center">
+        <div className="mt-16 rounded-2xl bg-slate-900 p-8 sm:p-10 text-center">
           <h2 className="text-2xl font-bold text-white">
             Ready to Appeal Your Fine?
           </h2>
-          <p className="mt-3 text-blue-100 max-w-lg mx-auto">
+          <p className="mt-3 text-slate-300 max-w-lg mx-auto">
             Our free tools can tell you if you have a case. When you are ready, our AI-powered
             appeal generator creates a professional letter in minutes.
           </p>
           <Link
             href="/appeal"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
           >
             Start Your Free Assessment
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

@@ -336,7 +336,7 @@ export default async function OperatorPage({
                 key={step.step}
                 className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   {step.step}
                 </div>
                 <div>
@@ -434,13 +434,13 @@ export default async function OperatorPage({
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Appeal Your {op.name} Fine Now
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your {op.name} charge. Our tool checks
               the NtK timing, signage requirements, and other common grounds to
               build your strongest possible appeal.
@@ -481,7 +481,7 @@ export default async function OperatorPage({
                       {related.appealBody}
                     </Badge>
                   </div>
-                  <p className="mt-2 text-sm text-blue-800 font-medium">
+                  <p className="mt-2 text-sm text-teal-600 font-medium">
                     View guide &rarr;
                   </p>
                 </Card>

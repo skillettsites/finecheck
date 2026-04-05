@@ -78,7 +78,7 @@ export default function ContraventionCodeLookup() {
               onClick={() => setCategoryFilter(cat)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 categoryFilter === cat
-                  ? 'bg-blue-800 text-white'
+                  ? 'bg-teal-600 text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -118,7 +118,7 @@ export default function ContraventionCodeLookup() {
                   className="flex w-full items-start gap-4 p-4 text-left sm:items-center"
                   aria-expanded={isExpanded}
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-800 text-sm font-bold text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-600 text-sm font-bold text-white">
                     {code.code}
                   </span>
                   <div className="min-w-0 flex-1">
@@ -207,7 +207,7 @@ export default function ContraventionCodeLookup() {
                       <div className="mt-4">
                         <Link
                           href={`/guides/${code.relatedGuide}`}
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-800 hover:text-blue-900"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 hover:text-teal-700"
                         >
                           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -221,7 +221,7 @@ export default function ContraventionCodeLookup() {
                     <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                       <Link
                         href="/appeal"
-                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-800 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-900 transition-colors"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
                       >
                         Appeal This Fine
                         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

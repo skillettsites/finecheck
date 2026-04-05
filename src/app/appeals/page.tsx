@@ -91,17 +91,17 @@ export default function OperatorsIndexPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">
+              <p className="text-2xl font-bold text-teal-600">
                 {OPERATORS.length}
               </p>
               <p className="text-sm text-gray-500">Operators Covered</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">{bpaCount}</p>
+              <p className="text-2xl font-bold text-teal-600">{bpaCount}</p>
               <p className="text-sm text-gray-500">BPA Members</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">{ipcCount}</p>
+              <p className="text-2xl font-bold text-teal-600">{ipcCount}</p>
               <p className="text-sm text-gray-500">IPC Members</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
@@ -124,7 +124,7 @@ export default function OperatorsIndexPage() {
                 onClick={() => setFilter(option)}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                   filter === option
-                    ? "bg-blue-800 text-white"
+                    ? "bg-teal-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -174,7 +174,7 @@ export default function OperatorsIndexPage() {
                     {op.description}
                   </p>
 
-                  <div className="mt-4 text-sm font-medium text-blue-800">
+                  <div className="mt-4 text-sm font-medium text-teal-600">
                     View appeal guide &rarr;
                   </div>
                 </Card>
@@ -233,13 +233,13 @@ export default function OperatorsIndexPage() {
         </Container>
       </section>
 
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Ready to Appeal Your Parking Fine?
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your fine in minutes. Our tool checks the
               most common grounds for appeal and helps you build your case.
             </p>

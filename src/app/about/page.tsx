@@ -99,8 +99,8 @@ export default function AboutPage() {
 
         {/* Mission */}
         <section className="mb-16">
-          <div className="rounded-2xl bg-blue-50 border border-blue-100 p-8 sm:p-10">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Our Mission</h2>
+          <div className="rounded-2xl bg-slate-50 border border-slate-200 p-8 sm:p-10">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Parking enforcement in the UK is big business. Councils generated over
               £1 billion in parking revenue last year. Private operators issue millions
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <div className="grid gap-6 sm:grid-cols-2">
             {steps.map((step) => (
               <div key={step.number} className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                   {step.number}
                 </div>
                 <div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 className="rounded-xl border border-gray-200 bg-white p-6"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="text-blue-800">{signal.icon}</div>
+                  <div className="text-teal-600">{signal.icon}</div>
                   <h3 className="font-semibold text-gray-900">{signal.title}</h3>
                 </div>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -168,11 +168,11 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="rounded-2xl bg-blue-800 px-8 py-12 text-center text-white">
+        <section className="rounded-2xl bg-slate-900 px-8 py-12 text-center text-white">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Check Your Fine for Free
           </h2>
-          <p className="mt-3 text-blue-100 max-w-xl mx-auto">
+          <p className="mt-3 text-slate-300 max-w-xl mx-auto">
             Find out if your parking fine has grounds for appeal. Our free assessment
             takes less than 2 minutes.
           </p>

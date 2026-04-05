@@ -154,17 +154,17 @@ export default function ContraventionCodesPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl bg-blue-800 p-8 sm:p-10 text-center">
+        <div className="mt-16 rounded-2xl bg-slate-900 p-8 sm:p-10 text-center">
           <h2 className="text-2xl font-bold text-white">
             Ready to Appeal Your Fine?
           </h2>
-          <p className="mt-3 text-blue-100 max-w-lg mx-auto">
+          <p className="mt-3 text-slate-300 max-w-lg mx-auto">
             Now you know what your contravention code means, use our AI-powered appeal generator
             to create a professional appeal letter in minutes.
           </p>
           <a
             href="/appeal"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
           >
             Start Your Free Assessment
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

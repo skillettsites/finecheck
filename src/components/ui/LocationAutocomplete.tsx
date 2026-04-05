@@ -186,7 +186,7 @@ export function LocationAutocomplete({
         />
         {isLoading && (
           <div className="absolute right-3 top-1/2 -translate-y-1/2">
-            <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-800" />
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-teal-600" />
           </div>
         )}
       </div>
@@ -217,7 +217,7 @@ export function LocationAutocomplete({
                 onMouseEnter={() => setActiveIndex(i)}
                 className={`cursor-pointer px-3.5 py-2.5 text-sm transition-colors ${
                   i === activeIndex
-                    ? "bg-blue-50 text-blue-900"
+                    ? "bg-teal-50 text-teal-900"
                     : "text-gray-700 hover:bg-gray-50"
                 }`}
               >

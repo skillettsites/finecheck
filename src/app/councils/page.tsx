@@ -117,19 +117,19 @@ export default function CouncilsIndexPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">
+              <p className="text-2xl font-bold text-teal-600">
                 {COUNCILS.length}
               </p>
               <p className="text-sm text-gray-500">Councils Covered</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">
+              <p className="text-2xl font-bold text-teal-600">
                 {formatNumber(totalPCNs)}
               </p>
               <p className="text-sm text-gray-500">Annual PCNs Issued</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">
+              <p className="text-2xl font-bold text-teal-600">
                 {formatCurrency(totalSurplus)}
               </p>
               <p className="text-sm text-gray-500">Total Parking Surplus</p>
@@ -194,7 +194,7 @@ export default function CouncilsIndexPage() {
                     </p>
                   )}
 
-                  <p className="mt-3 text-sm font-medium text-blue-800">
+                  <p className="mt-3 text-sm font-medium text-teal-600">
                     View appeal guide &rarr;
                   </p>
                 </Card>
@@ -252,7 +252,7 @@ export default function CouncilsIndexPage() {
                       </p>
                     )}
 
-                    <p className="mt-3 text-sm font-medium text-blue-800">
+                    <p className="mt-3 text-sm font-medium text-teal-600">
                       View appeal guide &rarr;
                     </p>
                   </Card>
@@ -277,7 +277,7 @@ export default function CouncilsIndexPage() {
 
           <div className="space-y-4">
             <div className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                 1
               </div>
               <div>
@@ -293,7 +293,7 @@ export default function CouncilsIndexPage() {
             </div>
 
             <div className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                 2
               </div>
               <div>
@@ -309,7 +309,7 @@ export default function CouncilsIndexPage() {
             </div>
 
             <div className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                 3
               </div>
               <div>
@@ -325,7 +325,7 @@ export default function CouncilsIndexPage() {
             </div>
 
             <div className="flex gap-4 rounded-xl border border-gray-200 bg-white p-6">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-800 text-white font-bold">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-white font-bold">
                 4
               </div>
               <div>
@@ -355,13 +355,13 @@ export default function CouncilsIndexPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Ready to Appeal Your Council Parking Fine?
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your PCN in minutes. Our tool checks the
               most common grounds for appeal, including procedural errors,
               signage issues, and mitigating circumstances.

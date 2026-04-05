@@ -119,7 +119,7 @@ export default function TicketScannerPage() {
 
         {/* Hero */}
         <div className="mt-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-800 mb-4">
+          <div className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-medium text-teal-600 mb-4">
             <svg
               className="h-4 w-4"
               fill="none"
@@ -210,9 +210,9 @@ export default function TicketScannerPage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-50">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-teal-50">
                   <svg
-                    className="h-7 w-7 text-blue-800"
+                    className="h-7 w-7 text-teal-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
@@ -221,7 +221,7 @@ export default function TicketScannerPage() {
                     {item.icon}
                   </svg>
                 </div>
-                <div className="mt-1 text-xs font-bold text-blue-800">
+                <div className="mt-1 text-xs font-bold text-teal-600">
                   Step {item.step}
                 </div>
                 <h3 className="mt-2 text-base font-semibold text-gray-900">
@@ -251,7 +251,7 @@ export default function TicketScannerPage() {
                 className="flex items-start gap-3 rounded-lg border border-gray-200 bg-white p-4"
               >
                 <svg
-                  className="h-5 w-5 text-blue-800 mt-0.5 shrink-0"
+                  className="h-5 w-5 text-teal-600 mt-0.5 shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -279,7 +279,7 @@ export default function TicketScannerPage() {
         {/* Privacy Note */}
         <div className="mt-12 rounded-xl bg-gray-50 border border-gray-200 p-6 flex gap-4">
           <svg
-            className="h-6 w-6 text-blue-800 shrink-0 mt-0.5"
+            className="h-6 w-6 text-teal-600 shrink-0 mt-0.5"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
@@ -310,17 +310,17 @@ export default function TicketScannerPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl bg-blue-800 p-8 sm:p-10 text-center">
+        <div className="mt-16 rounded-2xl bg-slate-900 p-8 sm:p-10 text-center">
           <h2 className="text-2xl font-bold text-white">
             Already Know Your Ticket Details?
           </h2>
-          <p className="mt-3 text-blue-100 max-w-lg mx-auto">
+          <p className="mt-3 text-slate-300 max-w-lg mx-auto">
             Skip the scanner and go straight to the appeal form. Enter your
             details manually and let our AI draft your appeal letter.
           </p>
           <a
             href="/appeal"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 transition-colors"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors"
           >
             Start Your Appeal
             <svg

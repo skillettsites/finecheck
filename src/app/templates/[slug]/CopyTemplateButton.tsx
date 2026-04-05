@@ -34,7 +34,7 @@ export default function CopyTemplateButton({
     return (
       <button
         onClick={handleCopy}
-        className="w-full inline-flex items-center justify-center rounded-lg border-2 border-blue-800 px-4 py-2.5 text-sm font-semibold text-blue-800 hover:bg-blue-50 transition-colors"
+        className="w-full inline-flex items-center justify-center rounded-lg border-2 border-teal-600 px-4 py-2.5 text-sm font-semibold text-teal-600 hover:bg-teal-50 transition-colors"
       >
         {copied ? "Copied!" : "Copy Template"}
       </button>

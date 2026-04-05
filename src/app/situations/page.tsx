@@ -71,13 +71,13 @@ export default function SituationsPage() {
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">
+              <p className="text-2xl font-bold text-teal-600">
                 {SITUATIONS.length}
               </p>
               <p className="text-sm text-gray-500">Situations Covered</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">Free</p>
+              <p className="text-2xl font-bold text-teal-600">Free</p>
               <p className="text-sm text-gray-500">Appeal Guides</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
@@ -85,7 +85,7 @@ export default function SituationsPage() {
               <p className="text-sm text-gray-500">Avg Success Rate</p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-4 text-center">
-              <p className="text-2xl font-bold text-blue-800">2 min</p>
+              <p className="text-2xl font-bold text-teal-600">2 min</p>
               <p className="text-sm text-gray-500">Free Assessment</p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function SituationsPage() {
                     </p>
                   </div>
 
-                  <div className="mt-4 text-sm font-medium text-blue-800">
+                  <div className="mt-4 text-sm font-medium text-teal-600">
                     View full guide &rarr;
                   </div>
                 </Card>
@@ -188,13 +188,13 @@ export default function SituationsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800 py-12">
+      <section className="bg-slate-900 py-12">
         <Container>
           <div className="text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               Ready to Appeal Your Parking Fine?
             </h2>
-            <p className="mt-3 text-lg text-blue-100">
+            <p className="mt-3 text-lg text-slate-300">
               Get a free assessment of your charge in under 2 minutes. Our tool
               checks for common defences based on your specific situation.
             </p>

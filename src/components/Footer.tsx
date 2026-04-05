@@ -7,16 +7,15 @@ const footerLinks = {
     { name: "Appeal Guides", href: "/guides" },
   ],
   resources: [
-    { name: "How Appeals Work", href: "/guides/how-appeals-work" },
-    { name: "Your Rights", href: "/guides/your-rights" },
-    { name: "Operator Guides", href: "/operators" },
-    { name: "Council Guides", href: "/guides/council-fines" },
+    { name: "How Appeals Work", href: "/guides/how-to-appeal-private-parking-fine" },
+    { name: "Your Rights", href: "/guides/pofa-2012-explained" },
+    { name: "Operator Guides", href: "/appeals" },
+    { name: "Council Guides", href: "/councils" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
-    { name: "Disclaimer", href: "/disclaimer" },
+    { name: "About", href: "/about" },
   ],
 };
 
