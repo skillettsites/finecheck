@@ -2,8 +2,23 @@
 
 import { useState, useCallback, useMemo } from "react";
 import { PRODUCTS } from "@/data/products";
+import { COUNCILS } from "@/data/councils";
+import { OPERATORS } from "@/data/operators";
 import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
 import { LocationAutocomplete } from "@/components/ui/LocationAutocomplete";
+import SearchableSelect from "@/components/ui/SearchableSelect";
+
+const COUNCIL_OPTIONS = COUNCILS.map((c) => ({
+  value: c.slug,
+  label: c.name,
+  sublabel: c.region,
+})).sort((a, b) => a.label.localeCompare(b.label));
+
+const OPERATOR_OPTIONS = OPERATORS.map((o) => ({
+  value: o.slug,
+  label: o.name,
+  sublabel: `${o.tradeBody} / ${o.appealBody}`,
+})).sort((a, b) => a.label.localeCompare(b.label));
 
 type FineType = "council" | "private" | "bus-lane" | "congestion";
 type Step = 1 | 2 | 3 | 4;
@@ -300,12 +315,13 @@ function StepDetails({
           <>
             <div>
               <label className={labelClass}>Council name *</label>
-              <input
-                type="text"
+              <SearchableSelect
+                options={COUNCIL_OPTIONS}
                 value={form.councilName}
-                onChange={(e) => onChange("councilName", e.target.value)}
-                placeholder="e.g., City of Westminster, London Borough of Camden"
+                onChange={(val) => onChange("councilName", val)}
+                placeholder="Search for your council..."
                 className={fieldClass("councilName")}
+                allowCustom
               />
               {errors.councilName && <p className="mt-1 text-xs text-red-600">{errors.councilName}</p>}
             </div>
@@ -339,12 +355,13 @@ function StepDetails({
           <>
             <div>
               <label className={labelClass}>Parking company name *</label>
-              <input
-                type="text"
+              <SearchableSelect
+                options={OPERATOR_OPTIONS}
                 value={form.operatorName}
-                onChange={(e) => onChange("operatorName", e.target.value)}
-                placeholder="e.g., ParkingEye, UKPC, APCOA"
+                onChange={(val) => onChange("operatorName", val)}
+                placeholder="Search for the parking company..."
                 className={fieldClass("operatorName")}
+                allowCustom
               />
               {errors.operatorName && <p className="mt-1 text-xs text-red-600">{errors.operatorName}</p>}
             </div>
@@ -392,12 +409,13 @@ function StepDetails({
           <>
             <div>
               <label className={labelClass}>Issuing authority *</label>
-              <input
-                type="text"
+              <SearchableSelect
+                options={COUNCIL_OPTIONS}
                 value={form.councilName}
-                onChange={(e) => onChange("councilName", e.target.value)}
-                placeholder={fineType === "congestion" ? "e.g., Transport for London (TfL)" : "e.g., Westminster City Council"}
+                onChange={(val) => onChange("councilName", val)}
+                placeholder={fineType === "congestion" ? "Search for authority (e.g., TfL)..." : "Search for council..."}
                 className={fieldClass("councilName")}
+                allowCustom
               />
               {errors.councilName && <p className="mt-1 text-xs text-red-600">{errors.councilName}</p>}
             </div>
