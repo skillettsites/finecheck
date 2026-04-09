@@ -11,6 +11,7 @@ interface SavedAppeal {
     pcnReference?: string;
     location?: string;
     vehicleReg?: string;
+    email?: string;
     fineAmount?: string;
     fineDate?: string;
     parkingEventDate?: string;
@@ -110,6 +111,8 @@ export default function SuccessContent() {
   const [data, setData] = useState<SavedAppeal | null>(null);
   const [copied, setCopied] = useState(false);
   const [letterContent, setLetterContent] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   useEffect(() => {
     try {
@@ -117,7 +120,32 @@ export default function SuccessContent() {
       if (stored) {
         const parsed = JSON.parse(stored) as SavedAppeal;
         setData(parsed);
-        setLetterContent(generateLetterContent(parsed));
+        const content = generateLetterContent(parsed);
+        setLetterContent(content);
+
+        // Send email if we have an email address and haven't sent yet
+        const alreadySent = sessionStorage.getItem("finecheck_email_sent");
+        if (parsed.form.email && !alreadySent) {
+          sessionStorage.setItem("finecheck_email_sent", "true");
+          fetch("/api/send-letter", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: parsed.form.email,
+              letterContent: content,
+              fineType: parsed.form.fineType,
+              operatorName: parsed.form.operatorName,
+              councilName: parsed.form.councilName,
+              vehicleReg: parsed.form.vehicleReg,
+              productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
+            }),
+          })
+            .then((res) => {
+              if (res.ok) setEmailSent(true);
+              else setEmailError(true);
+            })
+            .catch(() => setEmailError(true));
+        }
       }
     } catch {
       // sessionStorage might not be available
@@ -200,6 +228,23 @@ export default function SuccessContent() {
             Your personalised appeal letter has been generated using the legal grounds identified in your assessment. Copy
             or download it below, then follow the next steps to submit your appeal.
           </p>
+
+          {emailSent && data?.form.email && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-green-50 border border-green-200 px-4 py-2 text-sm text-green-800">
+              <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Letter sent to {data.form.email}
+            </div>
+          )}
+          {emailError && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm text-amber-800">
+              <svg className="h-4 w-4 text-amber-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+              </svg>
+              Could not send email. Please copy or download your letter below.
+            </div>
+          )}
         </div>
 
         {/* Letter */}

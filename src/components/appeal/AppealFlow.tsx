@@ -381,6 +381,7 @@ interface FormData {
   fineAmount: string;
   location: string;
   vehicleReg: string;
+  email: string;
   wasDriver: "yes" | "no" | "prefer-not-to-say";
   circumstances: string;
 }
@@ -398,6 +399,7 @@ const INITIAL_FORM: FormData = {
   fineAmount: "",
   location: "",
   vehicleReg: "",
+  email: "",
   wasDriver: "yes",
   circumstances: "",
 };
@@ -617,6 +619,19 @@ function StepDetails({
             className={`${fieldClass("vehicleReg")} uppercase tracking-wider`}
           />
           {errors.vehicleReg && <p className="mt-1 text-xs text-red-600">{errors.vehicleReg}</p>}
+        </div>
+
+        <div>
+          <label className={labelClass}>Email address *</label>
+          <input
+            type="email"
+            value={form.email}
+            onChange={(e) => onChange("email", e.target.value)}
+            placeholder="your@email.com"
+            className={fieldClass("email")}
+          />
+          <p className="mt-1 text-xs text-gray-500">We will send your appeal letter to this email</p>
+          {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
         </div>
 
         <div>
@@ -1197,6 +1212,8 @@ export default function AppealFlow() {
     if (!form.fineAmount.trim()) errs.fineAmount = "Please enter the fine amount";
     if (!form.location.trim()) errs.location = "Please enter the location";
     if (!form.vehicleReg.trim()) errs.vehicleReg = "Please enter your vehicle registration";
+    if (!form.email.trim()) errs.email = "Please enter your email address";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Please enter a valid email address";
     if (!form.circumstances.trim()) errs.circumstances = "Please describe the circumstances";
 
     setErrors(errs);
