@@ -9,6 +9,7 @@ import { OPERATOR_SITUATIONS } from '@/data/operator-situations';
 import { DATA_PAGES } from '@/data/data-pages';
 import { GROUNDS } from '@/data/grounds';
 import { getAllCities } from '@/data/cities';
+import { getAllBoroughFines } from '@/data/borough-fines';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://appealafine.co.uk';
@@ -215,5 +216,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages, ...templatePages, ...blogPages, ...situationPages, ...operatorSituationPages, ...dataPages, ...groundPages, ...cityPages];
+  const boroughFinePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/london`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...getAllBoroughFines().map((bf) => ({
+      url: `${baseUrl}/london/${bf.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages, ...templatePages, ...blogPages, ...situationPages, ...operatorSituationPages, ...dataPages, ...groundPages, ...cityPages, ...boroughFinePages];
 }
