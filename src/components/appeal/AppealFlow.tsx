@@ -923,13 +923,21 @@ function StepAssessment({
               <StrengthBadge strength={assessment.overallStrength} />
             </div>
             <p className="text-sm text-gray-600">
-              Based on similar cases, we estimate a{" "}
+              With a <strong>Standard Letter</strong>, we estimate a{" "}
               <strong>
                 {assessment.successProbability - 5}-{Math.min(assessment.successProbability + 10, 95)}% chance of
                 success
-              </strong>{" "}
-              with a well-crafted appeal using the legal grounds identified below.
+              </strong>.
             </p>
+            <div className="mt-2 rounded-lg bg-teal-50 border border-teal-200 px-3 py-2">
+              <p className="text-sm text-teal-800">
+                With the <strong>Premium Appeal Pack</strong>, success rates increase to{" "}
+                <strong className="text-teal-900">
+                  {Math.min(assessment.successProbability + 15, 90)}-{Math.min(assessment.successProbability + 30, 95)}%
+                </strong>{" "}
+                thanks to the escalation letter, evidence checklist, and operator-specific strategy.
+              </p>
+            </div>
             {assessment.deadlineDays !== null && assessment.deadlineDays > 0 && (
               <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-red-50 px-3 py-1.5 text-sm font-medium text-red-800">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
