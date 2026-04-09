@@ -5007,6 +5007,1176 @@ You can appeal, but the process has extra steps:
     ],
     seoTitle: 'Company Car Parking Fine: Employer vs Employee Liability (2026)',
     seoDescription: 'Got a parking fine in a company car? Learn who is liable, how fines transfer from fleet to driver, admin fees, employment law protections, and how to appeal as an employee.'
+  },
+  {
+    slug: 'how-long-does-parking-appeal-take',
+    title: 'How Long Does a Parking Appeal Take?',
+    description: 'A clear timeline for every stage of the parking appeal process, from the initial operator appeal through to POPLA, IAS, TPT, and London Tribunals.',
+    category: 'process',
+    content: `## How Long Does a Parking Appeal Take?
+
+One of the most frustrating parts of challenging a parking fine is the waiting. Whether you are dealing with a private operator or a council PCN, each stage has its own timeline, and knowing what to expect helps you plan and follow up effectively.
+
+### Stage 1: Initial Appeal to the Operator or Council
+
+For **private parking charges**, you appeal directly to the operator first. Most operators are required by their trade body (BPA or IPC) to respond within 35 days. In practice, some respond within a week, while others push it to the full 35 days or beyond. If they do not respond within 56 days of receiving your appeal, the charge is deemed cancelled under both the BPA and IPC codes of practice.
+
+For **council PCNs**, the process depends on whether you are making an informal challenge (before the Notice to Owner) or a formal representation (after receiving the NtO). Informal challenges should receive a response within 28 to 56 days, though some councils are quicker. Formal representations must be responded to within 56 days; if the council fails to respond, the PCN is cancelled by law.
+
+### Stage 2: Escalation to an Independent Appeal Body
+
+If the operator rejects your appeal, you can escalate to the relevant independent body:
+
+- **POPLA** (for BPA members): You must submit your appeal within 28 days of the operator's rejection. POPLA aims to decide cases within 27 working days, but complex cases can take 6 to 8 weeks. Some cases are resolved faster if the evidence is clear-cut.
+- **IAS** (for IPC members): The timeline is similar. You have 28 days to escalate, and IAS typically decides within 4 to 6 weeks.
+- **TPT** (Traffic Penalty Tribunal, outside London): For council PCNs outside London, the TPT handles appeals. Most cases are decided on paper within 4 to 6 weeks. If you request a personal hearing, it may take 8 to 12 weeks depending on the tribunal's schedule.
+- **London Tribunals**: For London councils, appeals go to London Tribunals. Paper decisions usually take 3 to 5 weeks. Personal hearings may take 6 to 10 weeks.
+
+### Stage 3: What Happens While You Wait
+
+During any stage of the appeal process, enforcement should be paused. For council PCNs, the legal clock stops once you make a formal representation or tribunal appeal, and the council cannot escalate to a charge certificate while an appeal is pending.
+
+For private charges, the operator should not send debt collection letters or threaten court action while an appeal is being processed at POPLA or IAS. If they do, report this to the relevant trade body.
+
+### How to Follow Up
+
+If you have not received a response within the expected timeframe:
+
+1. **Check your spam folder**: Appeal responses sometimes end up in email spam.
+2. **Contact the appeal body directly**: POPLA, IAS, TPT, and London Tribunals all have contact details on their websites.
+3. **Send a follow-up letter**: For operator appeals, send a brief letter or email referencing your original appeal and asking for a response.
+4. **Keep records**: Note the date you submitted your appeal and any correspondence. If the operator misses a deadline, this becomes a ground for cancellation.
+
+### Typical End-to-End Timelines
+
+- **Private charge, resolved at operator stage**: 1 to 5 weeks
+- **Private charge, escalated to POPLA/IAS**: 2 to 4 months total
+- **Council PCN, informal challenge accepted**: 1 to 4 weeks
+- **Council PCN, through to tribunal**: 3 to 5 months total
+
+These are averages. Some cases resolve much faster, and a few drag on longer.
+
+Feeling unsure about your appeal timeline? [Start your appeal with our free tool](/appeal) and we will guide you through each step, including when to chase up.`,
+    faqs: [
+      {
+        question: 'What happens if the parking operator does not respond to my appeal?',
+        answer: 'Under the BPA and IPC codes of practice, operators must respond to appeals within a set timeframe. If the operator fails to respond within 56 days of receiving your appeal, the charge is deemed cancelled. Keep proof of when you sent your appeal.'
+      },
+      {
+        question: 'Can the operator send debt collectors while my appeal is pending?',
+        answer: 'No. Both the BPA and IPC codes require operators to pause all enforcement activity while an appeal is being processed. If you receive debt collection letters during an active appeal, report the operator to their trade body.'
+      },
+      {
+        question: 'How long does a POPLA decision take?',
+        answer: 'POPLA aims to issue decisions within 27 working days of receiving all evidence from both parties. In practice, straightforward cases may be decided in 2 to 3 weeks, while complex cases with multiple evidence submissions can take 6 to 8 weeks.'
+      },
+      {
+        question: 'Does the 14-day discount period pause while I appeal a council PCN?',
+        answer: 'If you make an informal challenge within the 14-day discount period, most councils will hold the discount open until they respond. However, this is not guaranteed by all councils. If your informal challenge is rejected, many councils give you a further 14 days at the discounted rate.'
+      }
+    ],
+    relatedGuides: [
+      'popla-appeal-guide',
+      'traffic-penalty-tribunal-guide',
+      'parking-fine-deadlines',
+      'how-to-appeal-private-parking-fine'
+    ],
+    seoTitle: 'How Long Does a Parking Appeal Take? | Full Timeline (2026)',
+    seoDescription: 'Find out how long parking appeals take at every stage: operator, POPLA, IAS, TPT, and London Tribunals. Includes typical timelines and what to do if they miss a deadline.'
+  },
+  {
+    slug: 'how-long-can-you-be-chased-for-parking-fine',
+    title: 'How Long Can They Chase You for a Parking Fine?',
+    description: 'Understand the limitation periods for parking fines in England, Wales, and Scotland. Learn when the clock starts, what resets it, and when a charge becomes unenforceable.',
+    category: 'rights',
+    content: `## How Long Can They Chase You for a Parking Fine?
+
+Every parking charge has a legal time limit. Once that period expires, the operator or council can no longer bring a court claim against you. Understanding these limitation periods is one of the most powerful tools in your arsenal.
+
+### England and Wales: 6-Year Limitation Period
+
+Under the Limitation Act 1980, a private parking operator has **6 years** from the date of the alleged parking contravention to issue a County Court claim. After 6 years, the claim is "statute-barred," meaning a court would strike it out if you raised the limitation defence.
+
+For council PCNs, the enforcement process is different and has its own statutory deadlines (charge certificates, registration as a debt). These are generally much shorter. If a council has not progressed through the enforcement stages within about 2 years, it is unlikely they will pursue the matter further, though technically the debt can remain enforceable until paid.
+
+### Scotland: 5-Year Limitation Period
+
+In Scotland, the limitation period for private parking charges is **5 years** under the Prescription and Limitation (Scotland) Act 1973. The rules work similarly: the operator must raise a court action within 5 years of the alleged contravention.
+
+### When Does the Clock Start?
+
+The clock starts on the **date of the alleged contravention**, not the date you received the charge notice or any reminder letters. This is an important distinction. If you parked on 1 January 2024, the operator has until 1 January 2030 (England/Wales) or 1 January 2029 (Scotland) to file a court claim.
+
+### What Resets or Pauses the Clock?
+
+This is a common source of confusion:
+
+- **Sending letters or debt collection notices does NOT reset the clock.** The limitation period continues to run regardless of how many letters you receive.
+- **Acknowledging the debt in writing CAN reset the clock.** If you write to the operator admitting you owe the money (as opposed to disputing it), this could restart the 6-year period. This is why you should never admit liability in correspondence.
+- **Making a part-payment CAN reset the clock.** Paying even a small amount can be treated as an acknowledgment of the debt and restart the limitation period.
+- **Filing a court claim stops the clock.** Once the operator files a claim at court, the limitation period no longer applies to that claim.
+
+### Practical Advice
+
+1. **Never admit liability in writing.** If you correspond with the operator, dispute the charge rather than acknowledging it.
+2. **Never make a partial payment.** Either pay in full or dispute the charge. A partial payment can reset the limitation clock.
+3. **Keep records.** Note the date of the alleged contravention so you can track when the limitation period expires.
+4. **If you receive a court claim form after 6 years (or 5 in Scotland),** file a defence raising the limitation period. The claim should be struck out.
+
+### What About Debt Collectors?
+
+Debt collection agencies have no special powers that extend the limitation period. They are bound by the same 6-year (or 5-year) rule. If they contact you about a charge that is more than 6 years old, you can write to them stating that the debt is statute-barred and requesting they cease contact.
+
+Not sure how old your charge is, or whether the limitation period applies? [Use our free appeal tool](/appeal) to check your options and get tailored advice.`,
+    faqs: [
+      {
+        question: 'Does the 6-year limitation period apply to council parking fines?',
+        answer: 'Council PCNs follow a separate enforcement process with their own deadlines. The council must serve a charge certificate, then register the debt at the Traffic Enforcement Centre. In practice, if a council has not progressed through these stages within about 2 years, it is very unlikely they will pursue the matter. The 6-year limitation period under the Limitation Act 1980 applies specifically to civil claims, which is the mechanism private operators use.'
+      },
+      {
+        question: 'Can a debt collector restart the limitation period?',
+        answer: 'No. A debt collector contacting you does not restart or extend the limitation period. Only a written acknowledgment of the debt by you, a part-payment, or the filing of a court claim can affect the limitation period. Debt collection letters, phone calls, and threats have no legal effect on the clock.'
+      },
+      {
+        question: 'What if I moved and never received the original charge?',
+        answer: 'The limitation period runs from the date of the alleged contravention regardless of whether you received the charge notice. However, if you never received a Notice to Keeper (NtK) because you had moved, this is a strong defence in itself, as the operator cannot establish keeper liability under POFA 2012 without properly serving the NtK.'
+      },
+      {
+        question: 'Is the limitation period different for NHS hospital parking charges?',
+        answer: 'No. NHS hospital car parks managed by private operators follow the same 6-year limitation period as any other private parking charge. The identity of the landowner does not affect the limitation rules.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-statute-of-limitations',
+      'what-happens-if-you-dont-pay-parking-fine',
+      'what-happens-if-parking-fine-goes-to-debt-collectors',
+      'can-you-ignore-private-parking-fine'
+    ],
+    seoTitle: 'How Long Can They Chase You for a Parking Fine? | Limitation Periods (2026)',
+    seoDescription: 'Learn the legal time limits for parking fine enforcement in England, Wales, and Scotland. Covers the 6-year and 5-year limitation periods, what resets the clock, and when charges become unenforceable.'
+  },
+  {
+    slug: 'parking-fine-cap-2026',
+    title: 'Parking Fine Cap UK 2026',
+    description: 'Everything you need to know about the new parking fine caps introduced under the Parking Code of Practice. Which fines are affected, the new maximum amounts, and the implementation timeline.',
+    category: 'legal',
+    content: `## Parking Fine Cap UK 2026
+
+The UK government has been working to reform private parking enforcement, and a key part of this is capping the maximum amount that private operators can charge. Here is what you need to know about the parking fine cap as it stands in 2026.
+
+### Background: The Parking (Code of Practice) Act 2019
+
+The Parking (Code of Practice) Act 2019 gave the government power to create a single Code of Practice for the entire private parking industry. Previously, the BPA and IPC each had their own codes, leading to inconsistency and confusion. The Act aimed to bring all operators under one unified set of rules, including caps on charges.
+
+### The New Charge Caps
+
+Under the new Code of Practice, private parking charges are capped based on severity:
+
+- **Lower-level contraventions** (such as overstaying a free parking period by a small amount): charges capped at **£50**, reduced to **£25** if paid within 14 days.
+- **Higher-level contraventions** (such as parking without any valid ticket, in a disabled bay without a badge, or overstaying by a significant margin): charges capped at **£100**, reduced to **£50** if paid within 14 days.
+
+These caps are significantly lower than what many operators have been charging. Some operators had been issuing charges of £150 or even £170, which will no longer be permitted once the Code is fully enforced.
+
+### Which Fines Are Affected?
+
+The caps apply to charges issued by **private parking operators** on private land across England, Wales, and Scotland. This includes car parks at supermarkets, retail parks, hospitals, residential estates, and anywhere else managed by a private company.
+
+**Council PCNs are not affected** by these caps. Council fines are set by separate legislation: £70 (or £130 in London for higher contraventions), with a 50% discount for early payment.
+
+### Implementation Timeline
+
+The new Code of Practice has faced several delays. Originally expected to come into force in 2024, the implementation has been pushed back multiple times. As of 2026, the government has published the final version of the Code and set a commencement date. Operators are being given a transition period to update their systems, signage, and processes.
+
+Key milestones:
+1. **Code published**: The single Code of Practice has been finalised.
+2. **Single appeals service**: A new unified appeals service will replace POPLA and IAS.
+3. **Transition period**: Operators have a set period to become compliant.
+4. **Full enforcement**: After the transition, any operator charging above the caps risks losing their ability to access DVLA keeper data, which would effectively end their ability to enforce.
+
+### What This Means for You
+
+If you have received a charge that exceeds the new caps, check whether the contravention date falls within the period when the caps are in force. If it does, the excess amount is not enforceable.
+
+Even if the caps are not yet fully in force for your particular charge, you can still argue proportionality. The fact that the government has determined that £50 or £100 is an appropriate maximum charge strengthens any argument that higher amounts are disproportionate.
+
+Want to check whether your parking fine exceeds the new caps? [Use our free appeal assessment tool](/appeal) to get an instant analysis of your charge.`,
+    faqs: [
+      {
+        question: 'Do the new parking fine caps apply to council parking fines?',
+        answer: 'No. The caps under the new Code of Practice apply only to charges issued by private parking operators. Council PCN amounts are set by separate legislation and remain at their current levels (£70 outside London, up to £130 in London for higher contraventions).'
+      },
+      {
+        question: 'What happens if an operator charges more than the cap?',
+        answer: 'If the caps are in force and an operator issues a charge above the permitted maximum, the charge is not compliant with the Code of Practice. You can challenge it on this basis. Operators who persistently breach the Code risk losing access to DVLA keeper data, which would prevent them from identifying registered keepers.'
+      },
+      {
+        question: 'Do the caps apply to charges I received before the Code came into force?',
+        answer: 'The caps apply to contraventions that occur after the Code comes into force. Charges issued for earlier contraventions are governed by the rules that applied at the time. However, you can still use the new cap amounts as evidence when arguing that an older charge was disproportionate.'
+      },
+      {
+        question: 'Will the new Code affect my existing appeal?',
+        answer: 'If your contravention occurred before the Code came into force, the old rules apply. However, assessors at POPLA and IAS may take the new caps into account when considering proportionality arguments. It is worth mentioning the caps in your appeal if the charge exceeds the new maximums.'
+      }
+    ],
+    relatedGuides: [
+      'new-parking-code-of-practice-2024',
+      'new-parking-rules-2026',
+      'pofa-2012-explained',
+      'how-to-appeal-private-parking-fine'
+    ],
+    seoTitle: 'Parking Fine Cap UK 2026 | New Maximum Charges Explained',
+    seoDescription: 'The new UK parking fine caps limit private charges to £50 or £100. Learn which fines are affected, the implementation timeline, and how to use the caps in your appeal.'
+  },
+  {
+    slug: 'parking-fine-during-roadworks',
+    title: 'Parking Fine During Roadworks',
+    description: 'Got a parking fine while roadworks were in place? Learn about temporary restrictions, TRO requirements, unclear signage defences, and how to challenge these charges.',
+    category: 'situation',
+    content: `## Parking Fine During Roadworks
+
+Roadworks create confusion. Temporary traffic orders move restrictions around, signage gets buried behind barriers, and the normal rules you rely on change overnight. If you have received a parking fine while roadworks were in place, you may well have strong grounds for appeal.
+
+### Temporary Traffic Regulation Orders (TTROs)
+
+When roadworks affect parking, the highways authority or the utility company must obtain a **Temporary Traffic Regulation Order (TTRO)** or a **Temporary Traffic Notice** to change parking restrictions. Without a valid TTRO, any temporary restriction is not legally enforceable.
+
+Key requirements for a valid TTRO:
+
+1. The order must be properly made and published.
+2. Signage must be erected to reflect the temporary restrictions.
+3. The signage must be maintained throughout the works. If signs fall over, get obscured, or are removed, the restrictions become unenforceable during that period.
+4. Existing permanent signs must be covered or removed if they conflict with the temporary restrictions.
+
+### Common Defence Grounds
+
+**Signage failures** are the most common ground for successful appeals during roadworks:
+
+- Temporary signs were not erected or were not visible.
+- Permanent signs were not covered, creating conflicting information.
+- Signs were knocked over, obscured by equipment, or blocked by works vehicles.
+- There was no advance warning signage.
+
+**Invalid or missing TTRO**: If the council or contractor did not obtain a proper TTRO, or if the TTRO had expired by the time of your alleged contravention, the restriction has no legal basis.
+
+**Reasonable confusion**: Even if the signage was technically present, you can argue that the overall situation created reasonable confusion. Courts and tribunals recognise that roadworks are inherently confusing, and motorists acting in good faith should not be penalised for honest mistakes.
+
+### How to Challenge
+
+1. **Photograph the area** as soon as possible after receiving the fine. Capture the roadworks, any signage (or lack of it), and the general layout.
+2. **Request the TTRO** from the council. Submit a Freedom of Information request asking for the TTRO covering the location and dates in question.
+3. **Check the signage was compliant**: Temporary signs must conform to the Traffic Signs Regulations and General Directions 2016 (TSRGD). Non-compliant signs are not enforceable.
+4. **Appeal with evidence**: Use photographs, the TTRO (or its absence), and any witness statements to support your case.
+
+### Council vs Private Operator
+
+If the fine was issued by the council, appeal through the standard PCN process (informal challenge, then formal representation, then tribunal). If the fine was issued by a private operator, check whether the roadworks affected signage on private land, and appeal on those grounds.
+
+Received a parking fine during roadworks? [Start your free appeal](/appeal) and we will help you identify the strongest grounds based on your situation.`,
+    faqs: [
+      {
+        question: 'Can I get a parking fine for parking where roadworks removed the parking spaces?',
+        answer: 'If roadworks physically removed the available parking but alternative arrangements were not clearly signposted, you have grounds for appeal. The council must provide clear signage directing motorists to alternative parking. Without this, enforcement is unreasonable.'
+      },
+      {
+        question: 'How do I find out if there was a valid TTRO?',
+        answer: 'Submit a Freedom of Information request to the local council asking for the TTRO or Temporary Traffic Notice covering the specific location and dates. Councils must respond within 20 working days. If no TTRO exists, the temporary restriction was not enforceable.'
+      },
+      {
+        question: 'What if the roadworks were finished but the signs were still up?',
+        answer: 'If roadworks have been completed but temporary restriction signs have not been removed, the situation creates ambiguity. You can argue that the signs were misleading and that you reasonably believed the temporary restrictions still applied (or, if you parked in a "permanently" restricted area that was covered by temporary signs, that the permanent signs were still obscured).'
+      },
+      {
+        question: 'Do utility companies have to set up parking restriction signs?',
+        answer: 'Yes. When utility companies (gas, water, electric, telecoms) carry out works that affect parking, they must obtain the appropriate notices and erect compliant signage. They are held to the same standards as the council in terms of signage requirements.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-no-signs',
+      'parking-fine-signage-rules',
+      'how-to-appeal-council-parking-fine',
+      'traffic-penalty-tribunal-guide'
+    ],
+    seoTitle: 'Parking Fine During Roadworks | How to Appeal (2026)',
+    seoDescription: 'Challenge a parking fine issued during roadworks. Covers TTRO requirements, signage failures, temporary restrictions, and step-by-step appeal advice.'
+  },
+  {
+    slug: 'parking-fine-foreign-vehicle',
+    title: 'Parking Fine on a Foreign Vehicle',
+    description: 'Received a parking fine on a foreign-registered vehicle? Learn whether operators and councils can enforce, their DVLA access limitations, and your rights under POFA 2012.',
+    category: 'situation',
+    content: `## Parking Fine on a Foreign Vehicle
+
+Whether you are a tourist visiting the UK or a UK resident driving a foreign-registered vehicle, receiving a parking fine raises unique questions about enforcement. The rules differ significantly depending on whether the charge was issued by a private operator or a council.
+
+### Private Parking Operators and Foreign Vehicles
+
+Private parking operators rely on DVLA keeper data to identify the registered keeper of a vehicle. However, the DVLA only holds data for **UK-registered vehicles**. This means:
+
+- Operators **cannot obtain keeper details** for foreign-registered vehicles from the DVLA.
+- Without keeper details, they cannot serve a valid Notice to Keeper (NtK) under the Protection of Freedoms Act 2012.
+- Without a valid NtK, keeper liability cannot be established. The operator can only pursue the driver, and if they cannot identify the driver, they have no one to chase.
+
+In practice, this means that private parking charges on foreign vehicles are **extremely difficult to enforce**. If a ticket was placed on the windscreen but the operator cannot identify you as the driver, there is very little they can do.
+
+### Council PCNs and Foreign Vehicles
+
+Council enforcement is different. While councils also face difficulties tracing foreign keepers, they have more tools available:
+
+- **On-street fines**: Civil enforcement officers can issue PCNs by affixing them to the vehicle. If the driver is present, they can be served directly.
+- **ANPR enforcement**: London councils and other authorities use ANPR, but face the same issue of not being able to trace foreign keepers through the DVLA.
+- **Cross-border enforcement**: Currently, there is no routine mechanism for UK councils to enforce parking fines against keepers registered in other countries. Some European countries have mutual enforcement agreements for traffic offences, but parking fines are generally not covered.
+
+### Rental Cars
+
+If you are driving a **rental car** with foreign plates in the UK, the situation is different. The rental company may:
+- Pay the fine and charge it to your credit card (as per the rental agreement).
+- Provide your details to the operator or council.
+- Add an administration fee on top of the fine amount.
+
+Check your rental agreement carefully. Most include a clause allowing the company to pass on parking charges.
+
+### UK Residents with Foreign Plates
+
+If you are a UK resident driving a vehicle with foreign registration, be aware that you are legally required to register the vehicle in the UK if you have been resident for more than 6 months. Driving an unregistered foreign vehicle is a separate offence. While a parking operator may not be able to trace you through the DVLA, a council or police officer may take a different view.
+
+### Practical Advice
+
+1. **Private charge on a foreign vehicle**: If you did not identify yourself as the driver and the operator cannot trace you through the DVLA, enforcement is very unlikely.
+2. **Council PCN**: If the PCN was affixed to the vehicle and you were not identified, enforcement is difficult but not impossible. The council may use other methods to trace you.
+3. **Rental vehicles**: Expect the charge to follow you via the rental company.
+4. **Do not ignore a court claim**: If you do receive a County Court claim form (unlikely for foreign vehicles), you must respond regardless of your vehicle's registration.
+
+Received a parking charge on a foreign vehicle? [Check your options with our free appeal tool](/appeal) to see whether enforcement is possible in your case.`,
+    faqs: [
+      {
+        question: 'Can a private parking company fine a car with EU plates?',
+        answer: 'They can issue a charge notice on the windscreen, but they cannot obtain keeper details from the DVLA for foreign vehicles. Without keeper details, they cannot establish keeper liability under POFA 2012 or pursue the registered keeper. They would need to identify the driver directly.'
+      },
+      {
+        question: 'Will a UK parking fine follow me back to my home country?',
+        answer: 'In practice, no. There is no routine cross-border enforcement mechanism for parking fines between the UK and other countries. Private operators have no means to trace foreign keepers, and council PCNs are rarely pursued internationally.'
+      },
+      {
+        question: 'Can a rental company charge me for a parking fine on a foreign rental car?',
+        answer: 'Yes. Most rental agreements include a clause allowing the company to charge parking fines to your card. They may also add an administration fee. Check your rental agreement for the specific terms. The rental company can provide your details to the parking operator.'
+      },
+      {
+        question: 'What if I am a UK resident driving a foreign-registered car?',
+        answer: 'If you have been resident in the UK for more than 6 months, you are legally required to register the vehicle with the DVLA. While a parking operator may not be able to trace you through the DVLA, driving an unregistered foreign vehicle is a separate offence that could result in fines, seizure of the vehicle, or prosecution.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-rental-car',
+      'pofa-2012-explained',
+      'notice-to-keeper-rules',
+      'can-you-ignore-private-parking-fine'
+    ],
+    seoTitle: 'Parking Fine on a Foreign Vehicle UK | Can They Enforce? (2026)',
+    seoDescription: 'Find out if UK parking operators and councils can enforce fines on foreign-registered vehicles. Covers DVLA access, POFA 2012 limitations, rental cars, and enforcement realities.'
+  },
+  {
+    slug: 'parking-fine-pregnancy',
+    title: 'Parking Fine When Pregnant',
+    description: 'Received a parking fine while pregnant? Learn how to use medical grounds and mitigating circumstances in your appeal, what evidence you need, and your chances of success.',
+    category: 'situation',
+    content: `## Parking Fine When Pregnant
+
+Pregnancy can make parking situations genuinely difficult. Whether you overstayed because of a medical appointment running late, needed to park closer due to mobility issues, or had an emergency, pregnancy-related circumstances are recognised as valid mitigating factors in parking appeals.
+
+### When Pregnancy Is Relevant to Your Appeal
+
+Pregnancy alone is not an automatic defence against a parking charge. The key is showing a **direct connection** between your pregnancy and the reason for the alleged contravention:
+
+- **Medical appointment overrun**: If you were attending a midwife, GP, or hospital appointment that ran longer than expected, causing you to overstay.
+- **Pregnancy-related illness**: Morning sickness, sudden pain, Braxton Hicks contractions, or other pregnancy complications that made it impossible to return to the vehicle in time.
+- **Mobility difficulties**: In late pregnancy, walking distances can be significantly reduced. If you parked in a restricted area because you physically could not walk to a permitted space, this is a valid mitigating factor.
+- **Emergency**: Any pregnancy-related emergency (bleeding, contractions, fainting) that required immediate medical attention.
+
+### What Evidence You Need
+
+Strong appeals are built on evidence. For pregnancy-related appeals, gather:
+
+1. **Medical evidence**: A letter from your midwife, GP, or hospital confirming the appointment or medical event. Include the date, time, and nature of the visit.
+2. **Maternity notes**: Your hand-held maternity notes can corroborate appointment times.
+3. **Hospital records**: If the overstay was caused by an appointment overrun, request a record showing your appointment time and the time you were seen or discharged.
+4. **Photographs**: If mobility was an issue, photos showing the distance between available parking and your destination can help.
+
+### How to Frame Your Appeal
+
+When writing your appeal, be factual and specific:
+
+- State the date and time of the contravention.
+- Explain exactly why you could not comply with the parking restriction.
+- Provide a clear link between your pregnancy and the breach.
+- Attach supporting evidence.
+- Avoid being emotional or vague. Stick to the facts and the evidence.
+
+### Success Rates
+
+Pregnancy-related appeals have a good success rate when properly evidenced. Tribunal adjudicators and POPLA assessors regularly uphold appeals where:
+
+- A medical professional confirms the circumstances.
+- The motorist could not reasonably have foreseen the situation (for example, an appointment running late or a sudden illness).
+- The motorist acted responsibly and returned to the vehicle as soon as possible.
+
+Appeals are less likely to succeed if the pregnancy was not directly connected to the contravention, or if there was no attempt to address the parking situation (for example, not buying a ticket when you had time to do so).
+
+### Hospital Parking Specifically
+
+If you received a charge at a hospital car park while attending a pregnancy-related appointment, you have particularly strong grounds. Most hospitals and their parking operators have policies for patients whose appointments overrun. Check whether the hospital has a validation system and whether your appointment qualifies.
+
+Received a parking fine related to your pregnancy? [Start your free appeal](/appeal) and we will help you build a strong mitigating circumstances case.`,
+    faqs: [
+      {
+        question: 'Is pregnancy a valid reason to appeal a parking fine?',
+        answer: 'Yes, but it must be directly connected to the reason for the contravention. Simply being pregnant is not enough. You need to show that a pregnancy-related medical appointment, illness, or emergency prevented you from complying with the parking restriction.'
+      },
+      {
+        question: 'Do I need a letter from my doctor or midwife?',
+        answer: 'Medical evidence significantly strengthens your appeal. A brief letter from your midwife, GP, or hospital confirming the appointment, its scheduled and actual times, and any pregnancy-related complications is the most persuasive evidence you can provide.'
+      },
+      {
+        question: 'Can I appeal a hospital parking fine if my scan appointment ran late?',
+        answer: 'Yes, this is one of the strongest grounds for appeal. Hospital appointments frequently overrun, and patients cannot simply leave a medical examination. Request confirmation from the hospital of your appointment time and actual discharge time, and include this with your appeal.'
+      },
+      {
+        question: 'Does the 10-minute grace period help if I was only slightly over?',
+        answer: 'The Parking (Code of Practice) Act requires private operators to allow a 10-minute grace period after a paid-for period expires. If you overstayed by less than 10 minutes, you have a strong defence regardless of pregnancy. Check whether the grace period was applied before using mitigating circumstances as your primary ground.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-payment-machine-broken',
+      'how-to-appeal-private-parking-fine',
+      'how-to-appeal-council-parking-fine',
+      'popla-appeal-guide'
+    ],
+    seoTitle: 'Parking Fine When Pregnant | Medical Grounds Appeal Guide (2026)',
+    seoDescription: 'Appeal a parking fine on pregnancy grounds. Learn what evidence you need, how to frame mitigating circumstances, and your chances of success with medical evidence.'
+  },
+  {
+    slug: 'parking-fine-funeral',
+    title: 'Parking Fine While Attending a Funeral',
+    description: 'Received a parking fine while attending a funeral? Learn how compelling circumstances apply, what evidence to provide, and how to write a successful appeal.',
+    category: 'situation',
+    content: `## Parking Fine While Attending a Funeral
+
+Few situations are more distressing than receiving a parking fine while attending a funeral. Whether you overstayed, parked on a restriction you did not notice, or could not find a suitable space near the venue, funeral attendance is widely recognised as a compelling circumstance in parking appeals.
+
+### Why Funerals Are Recognised as Compelling Circumstances
+
+Both council PCN appeals and private parking charge challenges recognise that funerals involve unique pressures:
+
+- **Emotional distress** that affects your ability to notice signage or track time.
+- **Unpredictable timing**, as funeral services can run longer than scheduled.
+- **Limited parking** near churches, crematoriums, and cemeteries, which are often in residential areas with parking restrictions.
+- **Cortege requirements**, where mourners may need to park in specific locations to join the procession.
+
+The Traffic Penalty Tribunal and London Tribunals have both upheld appeals where the motorist was attending a funeral and could demonstrate they acted reasonably in the circumstances.
+
+### What Evidence You Need
+
+1. **Funeral order of service**: This confirms the date, time, and location.
+2. **Death certificate or notice**: Establishes the bereavement.
+3. **Your relationship to the deceased**: A brief explanation helps the adjudicator understand the circumstances.
+4. **Timing evidence**: If the service overran, get confirmation from the funeral director.
+5. **Photographs of parking**: If the area was clearly overwhelmed with funeral attendees' vehicles, photos showing limited availability help.
+
+### How to Write Your Appeal
+
+Be concise, dignified, and factual:
+
+- Explain that you were attending a funeral at the specific location on the date and time in question.
+- Describe why you parked where you did (limited alternatives, procession requirements, proximity to the venue).
+- If the service overran, state this and provide supporting evidence.
+- Attach the order of service, timing evidence, and any other supporting documents.
+- Request that the charge be cancelled in light of the compelling circumstances.
+
+### Success Rates
+
+Funeral-related appeals have strong success rates across all appeal bodies. Key factors that increase your chances:
+
+- Clear evidence linking you to the funeral (order of service, your name in the programme).
+- Reasonable behaviour (you parked as close to lawfully as possible given the circumstances).
+- Prompt appeal submission.
+
+Appeals may be weaker if you parked very far from the venue (suggesting the funeral was not the reason for that specific parking location) or if you remained parked for a long time after the service ended without explanation.
+
+### Practical Tips
+
+- If you are organising a funeral, ask the funeral director about parking arrangements and whether the council can temporarily relax restrictions near the venue.
+- Some councils will issue temporary parking dispensations for funerals. Contact the council's parking team in advance.
+- If you see an enforcement officer while at a funeral, explain the situation calmly. Many officers use discretion in these circumstances.
+
+Received a parking fine while at a funeral? [Start your free appeal](/appeal) and we will help you present the strongest possible case.`,
+    faqs: [
+      {
+        question: 'Is attending a funeral a valid reason to appeal a parking fine?',
+        answer: 'Yes. Funeral attendance is widely recognised as a compelling circumstance by both council tribunals and private parking appeals bodies. You will need evidence such as the order of service, timing details, and an explanation of why you had to park where you did.'
+      },
+      {
+        question: 'Can I get a parking dispensation from the council for a funeral?',
+        answer: 'Some councils offer temporary parking dispensations for funeral services. Contact the council parking team in advance and provide details of the funeral, expected number of vehicles, and the area where parking will be needed. Not all councils offer this, but it is worth asking.'
+      },
+      {
+        question: 'What if I was not a close relative of the deceased?',
+        answer: 'You do not need to be a close relative. Any genuine mourner attending the funeral has grounds to cite compelling circumstances. Provide the order of service and your attendance as evidence. The appeal body will consider whether your attendance was genuine and whether you acted reasonably.'
+      },
+      {
+        question: 'What if there was a car park nearby that I could have used?',
+        answer: 'This can weaken your appeal, but it does not automatically defeat it. If the car park was full, too far given the circumstances, or you were not aware of it due to the emotional situation, explain this. The key is demonstrating that you acted reasonably in a difficult moment.'
+      }
+    ],
+    relatedGuides: [
+      'how-to-appeal-council-parking-fine',
+      'how-to-appeal-private-parking-fine',
+      'parking-fine-signage-rules',
+      'parking-fine-deadlines'
+    ],
+    seoTitle: 'Parking Fine While at a Funeral | Compelling Circumstances Appeal (2026)',
+    seoDescription: 'Appeal a parking fine received while attending a funeral. Covers compelling circumstances, evidence needed, how to write your appeal, and success rates.'
+  },
+  {
+    slug: 'parking-fine-electric-vehicle-charging',
+    title: 'Parking Fine While Charging Electric Vehicle',
+    description: 'Got a parking fine at an EV charging bay? Learn about charging bay rules, overstay while charging, broken charger defences, and how to appeal.',
+    category: 'situation',
+    content: `## Parking Fine While Charging an Electric Vehicle
+
+Electric vehicle charging bays come with their own set of parking rules, and disputes are becoming increasingly common as EV adoption grows. Whether you overstayed while your car was still charging, got fined at a broken charger, or were ticketed for parking in a charging bay without charging, here is what you need to know.
+
+### Types of EV Charging Bay Restrictions
+
+EV charging bays vary depending on who manages them:
+
+- **Council on-street bays**: These are subject to Traffic Regulation Orders (TROs) and are enforced by council civil enforcement officers. Restrictions typically include a maximum stay and a requirement to actively charge.
+- **Private car park bays**: Managed by private operators at supermarkets, motorway services, shopping centres, and similar locations. Rules are set by signage and enforced via ANPR or patrol.
+- **Rapid charging hubs**: Standalone charging locations often have their own terms displayed on-site.
+
+### Common Reasons for Fines
+
+1. **Overstaying while charging**: Many bays have a maximum stay (often 1 to 4 hours). If your charge takes longer than the allowed period, you may receive a fine even though you were actively charging.
+2. **Remaining parked after charging completes**: This is the most common issue. Once your vehicle reaches full charge (or your session ends), you are expected to move it. Some bays have a grace period; many do not.
+3. **Parking without charging**: Using an EV bay without plugging in, or plugging in without starting a charging session, can result in a fine.
+4. **Non-EV in a charging bay**: ICE vehicles (internal combustion engine) parked in designated EV bays are almost always fined.
+
+### Defences for EV Charging Fines
+
+**Broken or faulty charger**: If the charger was out of order and you had no way of knowing before parking, this is a strong defence. Evidence should include:
+- Screenshots from the charging app showing the charger was unavailable or the session failed.
+- Photographs of the charger showing an error message or "out of service" sign.
+- Records from the charging network confirming the fault.
+
+**Charger slower than advertised**: If a "rapid" charger was delivering power at a reduced rate, causing you to exceed the maximum stay despite acting reasonably, document the actual charging speed via your car's app or the charging network records.
+
+**No clear signage about time limits**: As with any parking charge, the restrictions must be clearly signed. If the maximum stay, EV-only requirement, or "active charging" condition was not clearly displayed, challenge on signage grounds.
+
+**Overstay due to app notification failure**: Many EV drivers rely on the charging app to notify them when charging is complete. If the app failed to send a notification (and you can evidence this), it supports your case that the overstay was not deliberate.
+
+### How to Appeal
+
+The appeal process follows the same path as any other parking charge:
+
+- **Council PCN**: Informal challenge, then formal representation, then tribunal.
+- **Private charge**: Appeal to the operator, then escalate to POPLA or IAS.
+
+In your appeal, focus on the specific circumstances: was the charger broken, did the signage clearly explain the rules, was there a good reason for the overstay?
+
+Got a fine at a charging bay? [Use our free appeal tool](/appeal) to check your grounds and generate a tailored appeal letter.`,
+    faqs: [
+      {
+        question: 'Can I get fined for parking at an EV charger while my car is still charging?',
+        answer: 'Yes, if the bay has a maximum stay period and you exceed it. Even if your vehicle is still actively charging, the time limit applies. Check the signage for the maximum stay. Some locations are more lenient than others, particularly if the charger is slower than advertised.'
+      },
+      {
+        question: 'What if the EV charger was broken when I arrived?',
+        answer: 'A broken charger is a strong defence. Gather evidence: screenshots from the charging app showing the fault, photographs of error messages on the charger, and any confirmation from the charging network. If you parked intending to charge and could not due to a fault, you should not be penalised.'
+      },
+      {
+        question: 'Can a non-electric car be fined for parking in an EV charging bay?',
+        answer: 'Yes. Most EV charging bays are restricted to electric vehicles that are actively charging. An ICE vehicle parked in a charging bay can be issued a PCN (council) or parking charge (private). Some councils issue PCNs under contravention code 27 (parked in a special enforcement area).'
+      },
+      {
+        question: 'Is there a grace period after charging finishes?',
+        answer: 'This depends on the specific bay and operator. Some locations allow a short grace period (5 to 15 minutes) after a charging session ends. Others start enforcement immediately. Check the signage and the terms of the charging network. The 10-minute grace period under the new Parking Code of Practice may apply to private charging bays.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-signage-rules',
+      'grace-period-rules',
+      '10-minute-grace-period-parking',
+      'how-to-appeal-private-parking-fine'
+    ],
+    seoTitle: 'Parking Fine While Charging EV | EV Charging Bay Rules (2026)',
+    seoDescription: 'Appeal a parking fine at an EV charging bay. Covers overstay rules, broken charger defences, signage requirements, and how to challenge council and private charges.'
+  },
+  {
+    slug: 'parking-fine-school-pickup',
+    title: 'Parking Fine at School Pickup',
+    description: 'Got a parking fine at school drop-off or pickup? Learn about school zig-zag lines, council enforcement, common defences, and how to appeal.',
+    category: 'situation',
+    content: `## Parking Fine at School Pickup
+
+School run parking fines are one of the most common types of council PCN. Councils actively enforce restrictions near schools to protect children's safety, and the fines can be significant. However, enforcement is not always correct, and there are valid grounds for appeal.
+
+### School Zig-Zag Lines (School Keep Clear Markings)
+
+The yellow zig-zag markings outside schools are officially called "School Keep Clear" markings. They are enforceable under the Traffic Signs Regulations and General Directions 2016 (TSRGD).
+
+Key rules:
+- **No stopping** is permitted on school zig-zag markings during the times shown on the associated signs.
+- The restriction applies to **stopping for any purpose**, including picking up or dropping off children.
+- The times are typically displayed on nearby signs (for example, "No stopping 8:00-9:30 and 14:30-16:00, Monday to Friday").
+- Outside the restricted hours, the zig-zags are advisory only and not enforceable.
+
+### Council Enforcement Methods
+
+Councils enforce school restrictions using several methods:
+
+1. **CCTV cameras**: Many councils have deployed mobile or fixed CCTV cameras near schools. PCNs are issued based on video evidence showing your vehicle stopped on the markings during restricted hours.
+2. **Civil enforcement officers**: CEOs may patrol school areas during drop-off and pickup times.
+3. **ANPR**: Some councils use ANPR in conjunction with CCTV for school enforcement.
+
+### Common Defences
+
+**Outside restricted hours**: If you stopped on the zig-zags outside the hours shown on the signs, the restriction was not in force. Check the signs carefully and compare with the time recorded on the PCN.
+
+**Missing or obscured signs**: The zig-zag markings must be accompanied by signs specifying the restricted times. If there are no signs, or if the signs are obscured (by trees, vandalism, or other objects), the restriction is not enforceable. Photograph the area as soon as possible.
+
+**Markings not to standard**: The zig-zag markings must comply with the TSRGD specifications. If the markings are faded, incomplete, or non-standard, you may have grounds for challenge.
+
+**Genuine emergency**: If you stopped because a child was ill, injured, or in immediate danger, this constitutes a genuine emergency that overrides the parking restriction.
+
+**TRO issues**: School keep clear restrictions must be backed by a valid Traffic Regulation Order. Request the TRO from the council via a Freedom of Information request. If no TRO exists, the restriction is not enforceable.
+
+### CCTV-Specific Challenges
+
+When a PCN is issued by CCTV, additional grounds may apply:
+
+- **Were you actually stopped?** CCTV must show that your vehicle was stationary. If you were simply slow-moving in traffic, you were not "stopped" for the purposes of the restriction.
+- **Duration**: Some councils require a minimum observation period before issuing a CCTV PCN. Check the council's policy.
+- **Vehicle identification**: If the CCTV footage does not clearly identify your vehicle, challenge on this basis.
+
+### Practical Alternatives
+
+Rather than risking a fine:
+- Park on a nearby road outside the restricted area and walk the remaining distance.
+- Arrive 5 to 10 minutes early to find a legal space.
+- Use the school's designated drop-off system if one exists.
+- Walk or cycle if you live close enough.
+
+Received a school parking fine? [Start your free appeal](/appeal) and we will assess whether you have valid grounds for challenge.`,
+    faqs: [
+      {
+        question: 'Can I stop on school zig-zag lines to drop off my child?',
+        answer: 'No, not during the restricted hours shown on the nearby signs. The restriction prohibits stopping for any purpose, including dropping off or picking up children. The only exception is a genuine emergency. Outside the restricted hours, the markings are advisory only.'
+      },
+      {
+        question: 'Can the council use CCTV to issue parking fines at schools?',
+        answer: 'Yes. Councils have the legal power to use approved CCTV cameras to enforce school keep clear restrictions. The CCTV evidence must clearly show your vehicle stopped on the markings during restricted hours. You can request the CCTV footage as part of your appeal.'
+      },
+      {
+        question: 'How much is a school parking fine?',
+        answer: 'School keep clear contraventions are usually classified as higher-level offences: £70 outside London (reduced to £35 if paid within 14 days) or £130 in London (reduced to £65 if paid within 14 days). The higher classification reflects the safety concern.'
+      },
+      {
+        question: 'What if the school zig-zag markings are faded?',
+        answer: 'If the markings are significantly faded or incomplete, they may not comply with the Traffic Signs Regulations and General Directions 2016. Photograph the markings and include this evidence in your appeal. If the markings are not to the required standard, the restriction is not properly indicated and enforcement may be unlawful.'
+      }
+    ],
+    relatedGuides: [
+      'how-to-appeal-council-parking-fine',
+      'parking-fine-signage-rules',
+      'traffic-penalty-tribunal-guide',
+      'parking-fine-deadlines'
+    ],
+    seoTitle: 'Parking Fine at School Pickup | Zig-Zag Lines & CCTV (2026)',
+    seoDescription: 'Appeal a school run parking fine. Covers zig-zag line rules, CCTV enforcement, valid defences, TRO requirements, and how to challenge council PCNs near schools.'
+  },
+  {
+    slug: 'parking-fine-nhs-worker',
+    title: 'Parking Fine for NHS Workers',
+    description: 'NHS worker got a parking fine at the hospital? Learn about NHS Trust parking policies, appeal grounds for healthcare staff, and how to challenge unfair charges.',
+    category: 'situation',
+    content: `## Parking Fine for NHS Workers
+
+NHS staff parking has been a contentious issue for years. Many hospitals use private parking operators, parking spaces are limited relative to staff numbers, and shift patterns mean workers often cannot control when they arrive or leave. If you are an NHS worker who has received a parking fine at your workplace, you likely have strong grounds for appeal.
+
+### The NHS Parking Problem
+
+Most NHS hospitals outsource their car park management to private operators such as ParkingEye, APCOA, or Saba. These operators enforce maximum stay periods, permit requirements, and other restrictions. The problem is that:
+
+- **Demand far exceeds supply**: Many hospitals have thousands of staff but far fewer parking spaces.
+- **Shift overruns are routine**: Nurses, doctors, and other clinical staff frequently work beyond their scheduled hours due to patient care needs.
+- **Emergency situations**: Healthcare workers cannot simply leave a patient to move their car.
+- **Permit systems fail**: Some hospitals use electronic permit systems that malfunction or do not update correctly.
+
+### Government Guidance on NHS Staff Parking
+
+Following significant public pressure, the government issued guidance that NHS Trusts should provide **free parking for staff** working night shifts and for certain other categories. During the COVID-19 pandemic, all NHS staff parking charges were suspended, though this temporary measure has since ended at most trusts.
+
+The current position varies by trust. Some trusts have maintained free parking for all staff, while others have reintroduced charges with means-tested schemes.
+
+### Grounds for Appeal
+
+**Shift overrun**: If you overstayed because your shift overran due to patient care, this is a strong mitigating circumstance. Provide evidence: your rota, a statement from your line manager, or hospital records showing you were on duty.
+
+**Permit not displaying correctly**: If you have a valid parking permit but it was not displayed, expired while you were on shift, or the electronic system did not register it, provide proof of your valid permit.
+
+**Insufficient spaces**: If there were no available permitted spaces when you arrived and you had to park in a restricted area, document this. Many hospital car parks are full by early morning, leaving staff with no legal option.
+
+**Trust parking policy**: Check your NHS Trust's parking policy. Many trusts have agreements with their parking operators that staff should not be penalised for certain types of overstay. Your HR department or staff side representative can often help.
+
+### Steps to Take
+
+1. **Check your Trust's parking policy**: Contact HR or your staff side representative. Many trusts have a process for cancelling staff parking charges.
+2. **Gather evidence**: Rota, timesheet, manager statement, permit details.
+3. **Appeal to the operator**: Most hospital parking operators have a dedicated process for NHS staff appeals.
+4. **Escalate if needed**: If the operator rejects your appeal, escalate to POPLA or IAS.
+5. **Contact your union**: RCN, BMA, Unison, and other NHS unions have experience with parking charge disputes and can provide support.
+
+### The Wider Picture
+
+Hospital parking charges for NHS staff have been the subject of political debate, media coverage, and campaigning for years. Several parliamentary committees have called for an end to hospital parking charges for staff. While the situation continues to evolve, the current direction of policy is towards greater protection for healthcare workers.
+
+Got a parking fine at your hospital? [Use our free appeal tool](/appeal) to build a strong case based on your specific circumstances.`,
+    faqs: [
+      {
+        question: 'Do NHS staff get free parking?',
+        answer: 'This varies by NHS Trust. Government guidance recommends free parking for night shift workers and disabled staff. Some trusts offer free parking for all staff, while others charge for parking with means-tested discounts. Check your Trust parking policy or ask HR.'
+      },
+      {
+        question: 'Can I appeal a hospital parking fine if my shift overran?',
+        answer: 'Yes, shift overruns are a strong ground for appeal. Provide your rota, a statement from your line manager confirming the overrun, and any hospital records showing you were on duty. Most appeal bodies recognise that healthcare workers cannot leave patients to move their cars.'
+      },
+      {
+        question: 'Should I contact my union about a hospital parking fine?',
+        answer: 'Yes. RCN, BMA, Unison, and other NHS unions have extensive experience with hospital parking disputes. They can advise on your Trust parking policy, help draft your appeal, and in some cases intervene directly with the operator on your behalf.'
+      },
+      {
+        question: 'What if the hospital car park was full when I arrived for my shift?',
+        answer: 'Document that you arrived for a scheduled shift and there were no available spaces. If you had to park in a restricted area as a last resort, this supports your appeal. Include your rota or shift confirmation and, if possible, evidence that the car park is regularly full at that time (such as photos or statements from colleagues).'
+      }
+    ],
+    relatedGuides: [
+      'how-to-appeal-private-parking-fine',
+      'popla-appeal-guide',
+      'parking-fine-deadlines',
+      'parking-fine-signage-rules'
+    ],
+    seoTitle: 'Parking Fine for NHS Workers | Hospital Staff Appeal Guide (2026)',
+    seoDescription: 'NHS staff parking fine? Learn about Trust policies, shift overrun defences, permit issues, and how to appeal hospital parking charges as a healthcare worker.'
+  },
+  {
+    slug: 'parking-fine-delivery-driver',
+    title: 'Parking Fine for Delivery Drivers',
+    description: 'Delivery driver got a parking fine? Learn about loading exemptions, evidence of active delivery, operator vs council enforcement, and how to appeal.',
+    category: 'situation',
+    content: `## Parking Fine for Delivery Drivers
+
+Delivery drivers face a unique challenge: they need to stop frequently, often in busy areas with limited legal parking. Whether you drive for Amazon, DPD, Royal Mail, Hermes, or any other delivery service, parking fines are an occupational hazard. The good news is that loading exemptions provide genuine protection, and many fines can be successfully challenged.
+
+### The Loading and Unloading Exemption
+
+One of the most important protections for delivery drivers is the **loading and unloading exemption**. Under UK traffic law:
+
+- You are permitted to stop on **single yellow lines** to load and unload goods, provided there are no specific loading restriction signs (kerb marks with times).
+- You can stop on **double yellow lines** to load and unload, unless loading restrictions apply (indicated by yellow kerb marks and signs).
+- The loading must be **continuous and active**. You cannot park and then go elsewhere before returning to unload.
+- The goods must be too heavy, bulky, or numerous to carry from a legal parking spot.
+
+### What Counts as "Loading"?
+
+The legal definition of loading is broad enough to cover most delivery activities:
+
+- Delivering or collecting parcels, packages, or goods.
+- Loading tools or equipment for a job.
+- Delivering food orders (though the stop must be brief).
+
+It does **not** cover:
+- Stopping to check your phone or eat.
+- Leaving the vehicle unattended for an extended period after the delivery is complete.
+- Parking to collect personal items.
+
+### Council Fines vs Private Operator Charges
+
+**Council PCNs**: If a civil enforcement officer issued the fine, they should have observed your vehicle for a set period before issuing the PCN. The CEO's pocket notebook should record what they observed. Request these notes as part of your appeal. If the officer did not observe you for long enough to establish that loading was not taking place, the PCN may be invalid.
+
+**Private charges**: If you received a charge from a private operator (for example, at a retail park or industrial estate), the loading defence still applies. Private operators often monitor via ANPR and may not distinguish between delivery vehicles and regular parkers. Appeal directly to the operator with evidence of your delivery.
+
+### Evidence for Your Appeal
+
+Strong evidence wins delivery driver appeals:
+
+1. **Delivery records**: Electronic delivery logs showing the time, address, and item delivered. Most delivery apps and handheld devices record this automatically.
+2. **Photographs**: Photos of you actively loading/unloading, or of the vehicle with the cargo area open and goods visible.
+3. **Vehicle livery**: If your vehicle has delivery company branding, mention this. It establishes that the vehicle was there for commercial delivery purposes.
+4. **GPS/tracking data**: Many delivery companies track their vehicles. Request the tracking data for the relevant time period.
+5. **Customer confirmation**: A signed delivery receipt or a statement from the recipient confirming the delivery time.
+
+### Who Pays? Driver or Employer?
+
+This depends on your employment status and your contract:
+
+- **Employed drivers**: Your employer may have a policy for handling parking fines. Some companies pay fines incurred during legitimate deliveries; others expect drivers to pay and appeal.
+- **Self-employed/gig workers**: You are generally responsible for your own fines. However, if you were following the platform's delivery instructions, you may be able to argue the platform should contribute.
+- **Agency workers**: Check your agency agreement. Some agencies pass fines to drivers regardless of circumstances.
+
+Whatever your status, always appeal a fine you believe was unfair rather than simply paying it.
+
+Got a delivery parking fine? [Start your free appeal](/appeal) and we will help you build a case using the loading exemption.`,
+    faqs: [
+      {
+        question: 'Can delivery drivers park on double yellow lines?',
+        answer: 'Yes, for the purpose of active loading and unloading, provided there are no additional loading restriction signs (yellow kerb marks with times). The loading must be continuous and the goods must require use of a vehicle for transport. You cannot park and then leave the vehicle unattended.'
+      },
+      {
+        question: 'How long can a delivery driver stop for loading?',
+        answer: 'There is no fixed time limit for loading, but the activity must be continuous. For a typical parcel delivery, stopping for 5 to 10 minutes is generally reasonable. For larger items requiring multiple trips, longer stops are justified. The key is that loading must be the genuine reason for the stop and must be ongoing throughout.'
+      },
+      {
+        question: 'Does my employer have to pay my parking fine?',
+        answer: 'This depends on your employment contract and your employer parking policy. Some delivery companies pay fines incurred during legitimate deliveries. Others expect drivers to appeal and pay if the appeal fails. Check your contract and speak to your manager or union representative.'
+      },
+      {
+        question: 'What if the CEO did not see me making a delivery?',
+        answer: 'Request the civil enforcement officer pocket notebook entries. These should record what the officer observed and for how long. If the officer did not wait long enough to establish that loading was not taking place, or if you were briefly away from the vehicle during a delivery, this supports your appeal. The burden is on the council to prove you were not loading.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-loading-unloading',
+      'parking-fine-double-yellow-lines',
+      'how-to-appeal-council-parking-fine',
+      'parking-fine-company-car'
+    ],
+    seoTitle: 'Parking Fine for Delivery Drivers | Loading Exemption Guide (2026)',
+    seoDescription: 'Delivery driver parking fine? Learn about loading exemptions, evidence requirements, council vs private enforcement, and who pays. Free appeal guide for delivery workers.'
+  },
+  {
+    slug: 'parking-fine-clamped-car',
+    title: 'Parking Fine and Wheel Clamping',
+    description: 'Has your car been clamped? Learn about the ban on private clamping, what is still legal, your rights, and what to do if your vehicle is clamped unlawfully.',
+    category: 'rights',
+    content: `## Parking Fine and Wheel Clamping
+
+Wheel clamping on private land has been illegal in England and Wales since 2012. However, confusion persists, and some motorists still encounter clamping or threats of clamping. Here is everything you need to know about your rights.
+
+### The Ban on Private Clamping
+
+The **Protection of Freedoms Act 2012** (Section 54) made it a criminal offence to clamp, tow, block in, or immobilise a vehicle on private land without lawful authority. This applies across **England and Wales**.
+
+Before this law, private landowners and their agents could clamp vehicles and demand release fees, sometimes hundreds of pounds. This practice was widely abused, leading to the legislative ban.
+
+### What Is Still Legal?
+
+While private clamping is banned, some forms of vehicle immobilisation remain lawful:
+
+- **Council and police clamping**: Local authorities and the police retain the power to clamp vehicles on public roads in certain circumstances (for example, persistent evaders with three or more unpaid PCNs).
+- **DVLA clamping**: The DVLA can clamp untaxed vehicles on public roads.
+- **Bailiff/enforcement agent clamping**: Certificated enforcement agents can clamp vehicles when enforcing certain court orders or debts, but only under strict conditions.
+- **Private land with specific authority**: In very limited circumstances (such as airports with statutory powers), clamping may be permitted.
+
+### Scotland
+
+The law in Scotland is different. The common law of Scotland has long prohibited "self-help" remedies such as clamping. The Abolition of Feudal Tenure etc. (Scotland) Act 2000 and subsequent legislation reinforced this position. Private clamping on Scottish land is not lawful and never has been in the modern era.
+
+### What to Do If Your Car Is Clamped on Private Land
+
+If you find your vehicle clamped on private land in England or Wales:
+
+1. **Do not pay the release fee.** The clamping is illegal, and paying does not legitimise it.
+2. **Document everything.** Photograph the clamp, the vehicle, the location, any signage, and any notices left on the vehicle.
+3. **Call the police.** Report the matter as a criminal offence under Section 54 of the Protection of Freedoms Act 2012. The police may attend and require the clamp to be removed.
+4. **Note the details** of the clamping company: name, contact details, any company registration visible on their vehicles or uniforms.
+5. **Do not remove the clamp yourself** unless you can do so without causing damage to the vehicle or the clamp. Damaging the clamp could lead to a counter-claim.
+6. **Consider a civil claim.** If you suffered loss (missed work, taxi fares, distress), you may be able to claim compensation from the clamping company for the tort of trespass to goods.
+
+### What If You Already Paid?
+
+If you paid a release fee before realising the clamping was illegal, you can claim the money back:
+
+1. Write to the clamping company demanding a refund, citing Section 54 of POFA 2012.
+2. If they refuse, file a claim through the County Court (small claims track) for the return of the fee plus any consequential losses.
+3. Report the company to Trading Standards and the police.
+
+### Blocking In
+
+Some private operators have started "blocking in" vehicles (using their own vehicles to prevent exit) as an alternative to clamping. This is also covered by the POFA 2012 ban on immobilisation. If your vehicle is blocked in on private land, the same rules apply: it is illegal, and you should call the police.
+
+Has your car been clamped or blocked in on private land? [Use our free tool](/appeal) to understand your rights and get advice on next steps.`,
+    faqs: [
+      {
+        question: 'Is wheel clamping on private land illegal?',
+        answer: 'Yes. Since 1 October 2012, it has been a criminal offence under Section 54 of the Protection of Freedoms Act 2012 to clamp, tow, block in, or immobilise a vehicle on private land in England and Wales without lawful authority. This applies to all private land, including car parks, residential areas, and commercial property.'
+      },
+      {
+        question: 'Can the council still clamp my car?',
+        answer: 'Yes. The ban on clamping applies only to private land. Local authorities, the police, and the DVLA retain their powers to clamp vehicles on public roads in certain circumstances, such as persistent non-payment of PCNs (three or more unpaid charges) or driving an untaxed vehicle.'
+      },
+      {
+        question: 'What should I do if someone threatens to clamp my car on private land?',
+        answer: 'Inform them that clamping on private land is a criminal offence under POFA 2012. If they proceed, call the police. Document everything: photographs, witnesses, the company name, and any threats made. Do not pay any fees demanded in connection with clamping.'
+      },
+      {
+        question: 'Can I get my money back if I already paid a release fee?',
+        answer: 'Yes. If you paid a release fee for an illegal clamp on private land, you can demand a refund from the clamping company, citing POFA 2012. If they refuse, file a small claims court claim for the refund plus any consequential losses (such as taxi fares or lost earnings). Also report them to the police and Trading Standards.'
+      }
+    ],
+    relatedGuides: [
+      'pofa-2012-explained',
+      'can-you-ignore-private-parking-fine',
+      'parking-fine-court-defence',
+      'what-happens-if-you-dont-pay-parking-fine'
+    ],
+    seoTitle: 'Wheel Clamping on Private Land | Your Rights Explained (2026)',
+    seoDescription: 'Private wheel clamping is illegal in England and Wales. Learn what to do if your car is clamped, how to get your money back, and what forms of clamping remain lawful.'
+  },
+  {
+    slug: 'parking-fine-towed-car',
+    title: 'Car Towed for Parking',
+    description: 'Has your car been towed? Learn about council towing powers, release fees, how to challenge the removal, and getting your vehicle back.',
+    category: 'rights',
+    content: `## Car Towed for Parking
+
+Having your car towed is stressful and expensive. Councils have the power to remove vehicles in certain circumstances, and release fees can run to hundreds of pounds. However, the process must follow strict rules, and if those rules were not followed, you can challenge the removal and claim a refund.
+
+### When Can a Council Tow Your Car?
+
+Local authorities have the power to remove vehicles under the **Removal and Disposal of Vehicles Regulations 1986** (as amended). A vehicle may be removed if it:
+
+- Is parked in contravention of a parking restriction and is causing an obstruction or danger.
+- Is parked on a yellow line or in a restricted area and meets the removal criteria.
+- Has been issued a PCN and meets the conditions for removal (some councils require the vehicle to have been observed for a set period before removal).
+
+Not every illegally parked vehicle gets towed. Councils typically tow when:
+- The vehicle is causing a serious obstruction (blocking a bus stop, fire exit, or dropped kerb).
+- The vehicle is in a dangerous position (blocking sightlines, on a bend).
+- The vehicle is on a red route or clearway.
+- The vehicle is a persistent evader (multiple unpaid PCNs).
+
+### The Removal Process
+
+The council must follow a specific process:
+
+1. **A PCN must be issued** before or at the time of removal (not after).
+2. **The removal must be authorised** by a civil enforcement officer or senior officer.
+3. **A notice of removal** must be placed at the location where the vehicle was parked, or given to the driver if present.
+4. **The vehicle must be taken to a designated pound**.
+5. **The council must notify the registered keeper** within 24 hours of the removal.
+
+### Release Fees
+
+To get your vehicle back, you will typically need to pay:
+
+- **Release fee**: Usually £200 (set by the relevant regulations, though it can vary).
+- **Storage charges**: A daily rate (often £20 to £40 per day) for each day the vehicle remains in the pound.
+- **The PCN**: The parking fine itself, though you can contest this separately.
+
+You do not have to pay the PCN to retrieve your vehicle. The release fee and storage charges must be paid, but the PCN can be challenged through the normal appeal process after you have collected your car.
+
+### How to Challenge the Removal
+
+You can challenge the removal on the following grounds:
+
+1. **No valid PCN was issued**: If the PCN is invalid (for example, wrong contravention code, wrong vehicle details), the removal based on that PCN is also invalid.
+2. **Removal was disproportionate**: If the vehicle was not causing a genuine obstruction or danger, the removal may have been disproportionate.
+3. **Procedure not followed**: If the council did not follow the correct process (no notice left, no notification within 24 hours, no authorisation), the removal may be unlawful.
+4. **The parking restriction was invalid**: If the underlying TRO or signage was defective, both the PCN and the removal can be challenged.
+
+### Making a Claim
+
+To challenge the removal and claim a refund of fees:
+
+1. **Appeal the PCN** through the normal process (informal challenge, formal representation, tribunal).
+2. **Separately challenge the removal** by writing to the council's parking department, setting out why the removal was unlawful.
+3. **If the PCN is cancelled**, the removal loses its basis, and you are entitled to a refund of release and storage fees.
+4. **If the council refuses to refund**, you can escalate to the tribunal or file a claim in the County Court.
+
+### Private Towing
+
+On private land, towing is covered by the same ban as clamping under the Protection of Freedoms Act 2012 (Section 54). It is illegal for a private company to tow your vehicle from private land without lawful authority. If this happens, call the police and follow the same steps as for illegal clamping.
+
+Had your car towed? [Start your free appeal](/appeal) to check whether the PCN and removal were lawful, and find out if you are entitled to a refund.`,
+    faqs: [
+      {
+        question: 'How much does it cost to get a towed car back?',
+        answer: 'The release fee is typically £200, plus daily storage charges (usually £20 to £40 per day). You must also pay the PCN, though you can challenge the fine separately after retrieving your vehicle. Collect your car as soon as possible to minimise storage charges.'
+      },
+      {
+        question: 'Can the council tow my car for a simple parking ticket?',
+        answer: 'Not usually for a first offence in a non-obstructive location. Councils typically reserve towing for vehicles causing obstruction, parked dangerously, on red routes or clearways, or belonging to persistent evaders with multiple unpaid PCNs. A car parked slightly over a line that is not causing problems is unlikely to be towed.'
+      },
+      {
+        question: 'Can a private parking company tow my car?',
+        answer: 'No. Under Section 54 of the Protection of Freedoms Act 2012, it is illegal for private companies to tow vehicles from private land in England and Wales. If a private company tows your vehicle, call the police and document everything. You may be entitled to compensation.'
+      },
+      {
+        question: 'Can I get a refund if the PCN is cancelled?',
+        answer: 'Yes. If your PCN appeal is successful (either at the council stage or at tribunal), the basis for the removal is invalidated, and you are entitled to a full refund of the release fee and storage charges. Write to the council quoting the appeal decision and request the refund. If they refuse, escalate through the tribunal or County Court.'
+      }
+    ],
+    relatedGuides: [
+      'how-to-appeal-council-parking-fine',
+      'parking-fine-clamped-car',
+      'traffic-penalty-tribunal-guide',
+      'what-happens-if-you-dont-pay-parking-fine'
+    ],
+    seoTitle: 'Car Towed for Parking | Release Fees, Rights & How to Challenge (2026)',
+    seoDescription: 'Car towed by the council? Learn about release fees, storage charges, your rights, how to challenge the removal, and when you can claim a refund.'
+  },
+  {
+    slug: 'parking-fine-motorbike',
+    title: 'Parking Fine on a Motorbike',
+    description: 'Got a parking fine on a motorcycle? Learn about ANPR issues, bay requirements, motorcycle-specific rules, and how to appeal.',
+    category: 'situation',
+    content: `## Parking Fine on a Motorbike
+
+Motorbike parking fines raise specific issues that do not apply to cars. ANPR systems struggle with motorcycle plates, bay requirements differ, and many riders are unsure where they can legally park. Here is a comprehensive guide to challenging a motorcycle parking charge.
+
+### ANPR and Motorbikes
+
+Automatic Number Plate Recognition cameras are designed primarily for cars. Motorcycles present several problems:
+
+- **Rear-only plate**: Unlike cars, motorbikes only have a rear number plate. ANPR cameras positioned to capture front plates will miss motorcycles entirely, while rear-facing cameras may not get a clear image.
+- **Plate size and format**: Motorcycle plates are smaller and have a different format to car plates, increasing the risk of misreads.
+- **Angle issues**: The angle of a motorcycle plate (often tilted) can cause ANPR failures.
+
+If you received a private parking charge based on ANPR and the images are unclear or show a misread, this is a strong ground for appeal. Request the ANPR images through a Subject Access Request.
+
+### Where Can Motorbikes Park?
+
+The rules for motorcycle parking vary by area:
+
+**On-street**: Many councils allow motorcycles to park for free in certain locations:
+- Designated motorcycle bays (usually free and often without time limits).
+- On the footway (pavement) in some areas, though this varies by council. Some councils prohibit it; others permit it.
+- In pay-and-display bays, though you must pay unless the local rules exempt motorcycles.
+
+**Off-street (car parks)**: Private car park rules apply to motorcycles. If the signage states that all vehicles must display a ticket, motorcycles are included. Some car parks have dedicated motorcycle areas.
+
+### Common Defence Grounds
+
+**ANPR misread**: As described above, if the ANPR images are unclear or show the wrong plate, the charge has no evidential basis.
+
+**Motorcycle bay not available**: If dedicated motorcycle parking was full and you parked in a nearby car bay, you can argue there was no reasonable alternative. This works best when combined with evidence (photo of full motorcycle bay).
+
+**Ticket display impossible**: Some pay-and-display machines issue adhesive tickets designed for windscreens. Motorcycles do not have windscreens. If there was no practical way to display a ticket, this may be a valid defence, especially if the machine does not accept motorcycle registration for electronic payment.
+
+**Size and obstruction**: Motorcycles take up much less space than cars and are far less likely to cause an obstruction. While this alone is not a defence, it supports proportionality arguments.
+
+**Unclear signage about motorcycle applicability**: If the signage only references "vehicles" or "cars" and does not specifically address motorcycles, there may be ambiguity about whether the restrictions apply.
+
+### Motorcycle-Specific Tips
+
+1. **Photograph your parking position** whenever you park in an unfamiliar area. This provides evidence if you later receive a charge.
+2. **Check for motorcycle-specific bays** before using a standard bay. Many towns and cities have free motorcycle parking that is not always well signposted.
+3. **Use electronic payment** where available, as it creates a digital record linked to your registration.
+4. **Keep receipts**: If you paid for parking, keep the receipt as proof.
+
+Received a parking fine on your motorbike? [Use our free appeal tool](/appeal) to check your grounds and generate a tailored response.`,
+    faqs: [
+      {
+        question: 'Do motorcycles have to pay for parking?',
+        answer: 'This depends on the specific location. Many councils provide free motorcycle bays on-street. In pay-and-display areas, motorcycles are usually required to pay unless the local rules exempt them. In private car parks, the terms on the signage apply to all vehicles including motorcycles.'
+      },
+      {
+        question: 'Can ANPR cameras read motorcycle plates?',
+        answer: 'ANPR cameras can struggle with motorcycle plates due to their smaller size, rear-only position, and different angle. Misreads are more common for motorcycles than for cars. If you have received a charge based on ANPR, request the images and check whether your plate was correctly captured.'
+      },
+      {
+        question: 'Can I park my motorbike on the pavement?',
+        answer: 'This varies by council. Some councils permit motorcycle pavement parking in designated areas or under specific conditions. Others prohibit it entirely. In London, Westminster and some other boroughs have designated on-pavement motorcycle bays. Check the local rules before parking on the pavement.'
+      },
+      {
+        question: 'What if there is no way to display a parking ticket on my motorbike?',
+        answer: 'If the parking system requires a physical ticket to be displayed and there is no practical way to attach it to a motorcycle (no windscreen, no secure location), you may have a defence. Photograph the situation and use electronic payment if available as an alternative. In your appeal, explain the practical impossibility of ticket display.'
+      }
+    ],
+    relatedGuides: [
+      'anpr-parking-fine-errors',
+      'parking-fine-signage-rules',
+      'how-to-appeal-council-parking-fine',
+      'how-to-appeal-private-parking-fine'
+    ],
+    seoTitle: 'Parking Fine on a Motorbike | ANPR Issues & Motorcycle Rules (2026)',
+    seoDescription: 'Challenge a parking fine on a motorcycle. Covers ANPR misread defences, motorcycle bay rules, ticket display issues, and how to appeal as a motorbike rider.'
+  },
+  {
+    slug: 'parking-fine-campervan',
+    title: 'Parking Fine on a Campervan or Motorhome',
+    description: 'Got a parking fine on a campervan or motorhome? Learn about size restrictions, overnight parking rules, height barriers, and specific defences for larger vehicles.',
+    category: 'situation',
+    content: `## Parking Fine on a Campervan or Motorhome
+
+Campervans and motorhomes face parking challenges that standard cars do not. Height restrictions, weight limits, overnight parking bans, and unclear rules about where large vehicles can park create a minefield for owners. Here is what you need to know about parking fines on larger leisure vehicles.
+
+### Common Reasons for Fines
+
+**Size and weight restrictions**: Many car parks have height barriers (typically 2.0m to 2.1m) and some have weight limits. If you enter a car park that restricts vehicles above a certain height or weight and your campervan exceeds it, you may receive a fine for breaching the terms.
+
+**Overnight parking**: Sleeping in a vehicle overnight is treated differently depending on the location:
+- **Public roads**: There is generally no law against sleeping in a vehicle parked legally on a public road. However, some councils have specific byelaws prohibiting overnight sleeping in vehicles.
+- **Car parks**: Most car parks (council and private) prohibit overnight stays. Some close at specific times.
+- **Laybys and rest areas**: Rules vary. Some laybys have maximum stay restrictions.
+
+**Overstay**: Campervans often arrive early and stay late, especially when visiting attractions. If the car park has a maximum stay, this can catch motorhome owners out.
+
+**Bay size**: Some operators argue that a campervan taking up more than one bay is a separate contravention. This is debatable and often challengeable.
+
+### Defences for Campervan Owners
+
+**Signage did not address large vehicles**: If the car park signage does not mention height, weight, or size restrictions, you cannot be penalised for bringing a larger vehicle. The restriction must be clearly communicated before you commit to entering.
+
+**Height barrier absent or misleading**: If there is no physical height barrier and no clear signage about height limits at the entrance, you had no way of knowing the restriction applied to your vehicle.
+
+**Overnight stop for safety**: If you stopped overnight because you were too tired to drive safely, this is a compelling mitigating circumstance. Driving while fatigued is dangerous and potentially criminal. Stopping to rest is the responsible choice.
+
+**Bay size arguments**: If the operator claims you occupied two bays, check the signage. Unless the terms specifically state "one vehicle per bay" or impose a surcharge for larger vehicles, there is no contractual basis for an additional charge.
+
+**Medical or emergency stop**: If you stopped because of a medical issue, vehicle breakdown, or other emergency, these are valid mitigating circumstances regardless of vehicle type.
+
+### Overnight Parking: Know the Rules
+
+The legal position on overnight campervan parking is often misunderstood:
+
+1. **No general ban**: There is no blanket UK law prohibiting sleeping in a vehicle on a public road. As long as the vehicle is taxed, insured, has a valid MOT, and is parked legally, you can sleep in it.
+2. **Specific restrictions**: Some councils have byelaws or Traffic Regulation Orders that restrict overnight parking or sleeping in vehicles in specific areas, particularly near beaches, beauty spots, and residential areas.
+3. **Private land**: On private land, the landowner's terms apply. Most private car parks do not permit overnight stays.
+4. **Wild camping**: In Scotland, the right to roam includes some provision for wild camping with vehicles in certain areas. In England and Wales, wild camping is much more restricted.
+
+### Practical Tips
+
+1. **Measure your vehicle**: Know your exact height, length, and weight. Check these against restrictions before entering any car park.
+2. **Plan ahead**: Use apps and websites dedicated to motorhome parking to find legal overnight spots.
+3. **Photograph signage**: If you are in any doubt about the rules, photograph the signage on entry. This protects you if a dispute arises later.
+4. **Keep a log**: Record where you parked, for how long, and any relevant signage. This is invaluable if you need to appeal months later.
+
+Got a parking fine on your campervan or motorhome? [Start your free appeal](/appeal) to check your grounds and build a strong case.`,
+    faqs: [
+      {
+        question: 'Is it legal to sleep in a campervan on a public road?',
+        answer: 'There is no general UK law against sleeping in a vehicle parked legally on a public road. However, some councils have specific byelaws or TROs prohibiting overnight sleeping in vehicles in certain areas. Check local rules before settling for the night.'
+      },
+      {
+        question: 'Can I get fined for taking up two parking bays with my motorhome?',
+        answer: 'This depends on the terms displayed on the signage. Unless the signage specifically states that vehicles must fit within a single bay or imposes a surcharge for larger vehicles, there is no clear basis for fining you for the space your vehicle occupies. Challenge any such charge on the grounds that the terms did not address vehicle size.'
+      },
+      {
+        question: 'What if the height barrier was too low for my campervan?',
+        answer: 'A height barrier is a physical restriction, not a parking contravention. If you could not enter because the barrier was too low, you cannot have parked inside. If the barrier was raised or absent but signage stated a height limit, check whether the signage was adequate. If there was no signage or the signage was unclear, you have grounds for appeal.'
+      },
+      {
+        question: 'Can the council ban campervans from parking on the street?',
+        answer: 'Councils can impose restrictions on specific vehicles through Traffic Regulation Orders, but a blanket ban on campervans across an entire area is unusual. Any restriction must be properly signed and backed by a valid TRO. If you have been fined under such a restriction, request the TRO and check whether it specifically covers your vehicle type.'
+      }
+    ],
+    relatedGuides: [
+      'parking-fine-signage-rules',
+      'how-to-appeal-council-parking-fine',
+      'how-to-appeal-private-parking-fine',
+      'parking-fine-no-signs'
+    ],
+    seoTitle: 'Parking Fine on a Campervan or Motorhome | Size & Overnight Rules (2026)',
+    seoDescription: 'Challenge a parking fine on a campervan or motorhome. Covers height restrictions, overnight parking rules, bay size disputes, and defences for larger vehicles.'
   }
 ];
 

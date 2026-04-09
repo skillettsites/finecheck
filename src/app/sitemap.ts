@@ -6,6 +6,9 @@ import { TEMPLATES } from '@/data/templates';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { SITUATIONS } from '@/data/situations';
 import { OPERATOR_SITUATIONS } from '@/data/operator-situations';
+import { DATA_PAGES } from '@/data/data-pages';
+import { GROUNDS } from '@/data/grounds';
+import { getAllCities } from '@/data/cities';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://appealafine.co.uk';
@@ -167,5 +170,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages, ...templatePages, ...blogPages, ...situationPages, ...operatorSituationPages];
+  const dataPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/data`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    ...DATA_PAGES.map((page) => ({
+      url: `${baseUrl}/data/${page.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+  ];
+
+  const groundPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/grounds`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...GROUNDS.map((ground) => ({
+      url: `${baseUrl}/grounds/${ground.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  const cityPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/parking-fines`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    ...getAllCities().map((city) => ({
+      url: `${baseUrl}/parking-fines/${city.slug}`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    })),
+  ];
+
+  return [...staticPages, ...operatorPages, ...councilPages, ...guidePages, ...templatePages, ...blogPages, ...situationPages, ...operatorSituationPages, ...dataPages, ...groundPages, ...cityPages];
 }

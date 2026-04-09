@@ -12,16 +12,27 @@ const navigation = [
       { name: "POFA Checker", href: "/tools/pofa-checker", description: "Check if the Protection of Freedoms Act applies to your fine" },
       { name: "Ticket Scanner", href: "/tools/ticket-scanner", description: "Upload a photo of your ticket and extract the details with AI" },
       { name: "Deadline Calculator", href: "/tools/deadline-calculator", description: "Find out how long you have to appeal your PCN" },
+      { name: "Contravention Codes", href: "/tools/contravention-codes", description: "Look up any UK parking contravention code" },
     ],
   },
-  { name: "Guides", href: "/guides" },
+  {
+    name: "Resources",
+    href: "#",
+    children: [
+      { name: "Appeal Guides", href: "/guides", description: "Step-by-step guides for every type of parking fine" },
+      { name: "Appeal Grounds", href: "/grounds", description: "Legal defences you can use to challenge your fine" },
+      { name: "Template Letters", href: "/templates", description: "Ready-to-use appeal letter templates" },
+      { name: "Statistics & Data", href: "/data", description: "UK parking fine statistics, success rates, and rankings" },
+    ],
+  },
   { name: "Operators", href: "/appeals" },
+  { name: "By City", href: "/parking-fines" },
   { name: "Pricing", href: "/pricing" },
 ];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -34,7 +45,7 @@ export default function Header() {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false);
+        setOpenDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -77,12 +88,12 @@ export default function Header() {
               item.children ? (
                 <div key={item.name} className="relative" ref={dropdownRef}>
                   <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                     className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition-colors"
                   >
                     {item.name}
                     <svg
-                      className={`h-4 w-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                      className={`h-4 w-4 transition-transform ${openDropdown === item.name ? "rotate-180" : ""}`}
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
@@ -91,13 +102,13 @@ export default function Header() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                   </button>
-                  {dropdownOpen && (
+                  {openDropdown === item.name && (
                     <div className="absolute left-0 top-full mt-1 w-72 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-200 animate-in fade-in slide-in-from-top-1">
                       {item.children.map((child) => (
                         <Link
                           key={child.name}
                           href={child.href}
-                          onClick={() => setDropdownOpen(false)}
+                          onClick={() => setOpenDropdown(null)}
                           className="block rounded-lg px-3 py-2.5 hover:bg-slate-50 transition-colors"
                         >
                           <div className="text-sm font-medium text-slate-900">{child.name}</div>

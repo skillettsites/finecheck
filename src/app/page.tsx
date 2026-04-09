@@ -154,7 +154,6 @@ const pricingPlans = [
       "Evidence collection checklist",
       "Operator-specific strategy guide",
       "Second-stage appeal template",
-      "Second-stage appeal template",
     ],
     popular: true,
     href: "/appeal",
@@ -637,6 +636,53 @@ export default function HomePage() {
                 operator and adapt accordingly.
               </p>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ==================== POPULAR APPEALS ==================== */}
+      <section className="py-20 sm:py-24 bg-gray-50">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Popular Appeal Guides
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Find specific help for your situation, operator, or location.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "ParkingEye Appeal", href: "/appeals/parkingeye", desc: "The UK's largest private operator. ANPR cameras, supermarkets, retail parks." },
+              { title: "UKPC Appeal", href: "/appeals/ukpc", desc: "Known for hospitals and shopping centres. IPC member, appeals to IAS." },
+              { title: "Supermarket Fine", href: "/situations/supermarket-parking-fine", desc: "Aldi, Lidl, Tesco, Morrisons. Most have 90min to 2hr limits." },
+              { title: "Hospital Fine", href: "/situations/hospital-parking-fine", desc: "Patient or visitor? Strong grounds if appointment ran over." },
+              { title: "Appeal Grounds", href: "/grounds", desc: "10 proven legal defences: signage, grace period, ANPR errors, and more." },
+              { title: "Template Letters", href: "/templates", desc: "20 ready-to-use appeal letter templates for every situation." },
+              { title: "London Parking Fines", href: "/parking-fines/london", desc: "3.5 million PCNs per year. London Tribunals appeal process." },
+              { title: "Statistics & Data", href: "/data", desc: "UK parking fine statistics, success rates, worst operators ranked." },
+              { title: "Council vs Private", href: "/data/council-vs-private-parking-fine", desc: "Key differences in law, enforcement, and how to appeal each." },
+            ].map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-teal-200 hover:shadow-md"
+              >
+                <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                  {item.desc}
+                </p>
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-teal-600">
+                  Read guide
+                  <svg className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>

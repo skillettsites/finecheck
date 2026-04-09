@@ -4,13 +4,24 @@ const footerLinks = {
   freeTools: [
     { name: "POFA Checker", href: "/tools/pofa-checker" },
     { name: "Deadline Calculator", href: "/tools/deadline-calculator" },
-    { name: "Appeal Guides", href: "/guides" },
+    { name: "Ticket Scanner", href: "/tools/ticket-scanner" },
+    { name: "Contravention Codes", href: "/tools/contravention-codes" },
   ],
   resources: [
-    { name: "How Appeals Work", href: "/guides/how-to-appeal-private-parking-fine" },
-    { name: "Your Rights", href: "/guides/pofa-2012-explained" },
+    { name: "Appeal Guides", href: "/guides" },
     { name: "Operator Guides", href: "/appeals" },
     { name: "Council Guides", href: "/councils" },
+    { name: "Appeal Grounds", href: "/grounds" },
+    { name: "Template Letters", href: "/templates" },
+    { name: "Parking Fines by City", href: "/parking-fines" },
+    { name: "Statistics & Data", href: "/data" },
+  ],
+  popular: [
+    { name: "ParkingEye Appeal", href: "/appeals/parkingeye" },
+    { name: "UKPC Appeal", href: "/appeals/ukpc" },
+    { name: "Supermarket Fine", href: "/situations/supermarket-parking-fine" },
+    { name: "Hospital Fine", href: "/situations/hospital-parking-fine" },
+    { name: "London Parking Fines", href: "/parking-fines/london" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -24,9 +35,28 @@ export default function Footer() {
     <footer className="bg-slate-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
-        <div className="grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Footer CTA */}
+        <div className="py-8 border-b border-gray-800">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="text-lg font-bold text-white">Got an unfair fine?</h3>
+              <p className="text-sm text-gray-400">Free assessment in under 2 minutes. No obligation.</p>
+            </div>
+            <Link
+              href="/appeal"
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white hover:bg-teal-700 transition-colors"
+            >
+              Start Your Free Assessment
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-8 py-12 sm:grid-cols-3 lg:grid-cols-5">
           {/* Brand column */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600">
                 <svg
@@ -48,10 +78,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-gray-400">
-              Helping UK drivers challenge unfair fines. Check your PCN, understand your rights, and generate professional appeal letters for parking fines, bus lane PCNs, congestion charges, and more.
-            </p>
-            <p className="mt-4 text-xs text-gray-500">
-              Trusted by thousands of UK drivers
+              Helping UK drivers challenge unfair fines. Professional appeal letters for parking fines, bus lane PCNs, congestion charges, and more.
             </p>
           </div>
 
@@ -77,6 +104,23 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white">Resources</h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Popular */}
+          <div>
+            <h3 className="text-sm font-semibold text-white">Popular</h3>
+            <ul className="mt-4 space-y-3">
+              {footerLinks.popular.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

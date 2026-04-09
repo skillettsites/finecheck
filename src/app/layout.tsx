@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export const metadata: Metadata = {
   title: {
@@ -110,8 +111,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-gray-900">
         <GoogleAnalytics />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 sm:pb-0">{children}</main>
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   );
