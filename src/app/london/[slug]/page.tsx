@@ -98,6 +98,11 @@ function renderInline(text: string): React.ReactNode {
     const linkIdx = linkMatch?.index ?? Infinity;
     const boldIdx = boldMatch?.index ?? Infinity;
 
+    if (linkIdx === Infinity && boldIdx === Infinity) {
+      parts.push(remaining);
+      break;
+    }
+
     if (linkIdx < boldIdx && linkMatch && linkMatch.index !== undefined) {
       if (linkMatch.index > 0) {
         parts.push(remaining.slice(0, linkMatch.index));
@@ -116,11 +121,21 @@ function renderInline(text: string): React.ReactNode {
       if (boldMatch.index > 0) {
         parts.push(remaining.slice(0, boldMatch.index));
       }
-      parts.push(
-        <strong key={`b-${key++}`} className="font-semibold text-gray-900">
-          {boldMatch[1]}
-        </strong>
-      );
+      // Recursively parse the bold content for links
+      const boldInner = boldMatch[1];
+      if (boldInner.includes("[") && boldInner.includes("](/")) {
+        parts.push(
+          <strong key={`b-${key++}`} className="font-semibold text-gray-900">
+            {renderInline(boldInner)}
+          </strong>
+        );
+      } else {
+        parts.push(
+          <strong key={`b-${key++}`} className="font-semibold text-gray-900">
+            {boldInner}
+          </strong>
+        );
+      }
       remaining = remaining.slice(boldMatch.index + boldMatch[0].length);
     } else {
       parts.push(remaining);
