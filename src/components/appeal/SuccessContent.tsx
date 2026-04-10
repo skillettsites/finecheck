@@ -137,6 +137,8 @@ export default function SuccessContent() {
               operatorName: parsed.form.operatorName,
               councilName: parsed.form.councilName,
               vehicleReg: parsed.form.vehicleReg,
+              location: parsed.form.location,
+              fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
               productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
             }),
           })
