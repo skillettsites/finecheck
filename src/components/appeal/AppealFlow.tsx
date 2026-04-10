@@ -1029,11 +1029,12 @@ function StepAssessment({
       {/* Upsell */}
       <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-6 mb-6">
         <div className="text-center mb-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Get Your Personalised Appeal Letter</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Get Your AI-Generated Legal Letter</h3>
           <p className="text-sm text-gray-600 max-w-lg mx-auto">
-            Your letter will include the specific legal arguments identified in your assessment, tailored to your
-            {form.fineType === "private" && form.operatorName ? ` ${form.operatorName}` : ""} case, with correct
-            formatting and legal references.
+            Our specialist legal AI will write you a unique appeal letter from scratch, citing specific UK legislation,
+            verified case law, and the arguments most likely to succeed against
+            {form.fineType === "private" && form.operatorName ? ` ${form.operatorName}` : " this operator"}.
+            Delivered as a professional PDF to your email.
           </p>
           {assessment.letterArguments.length > 0 && (
             <div className="mt-4 text-left max-w-md mx-auto">

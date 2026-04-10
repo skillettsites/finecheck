@@ -132,13 +132,13 @@ const pricingPlans = [
     name: "Standard Letter",
     price: "£5.99",
     description:
-      "A personalised appeal letter using the correct legal grounds for your specific situation.",
+      "A unique appeal letter written by our specialist AI, citing the exact legislation and case law relevant to your fine.",
     features: [
-      "Personalised to your circumstances",
-      "Correct legal references",
-      "Formatted and ready to submit",
-      "Deadline reminder included",
-      "PDF download",
+      "AI-generated legal letter (not a template)",
+      "Cites specific Acts of Parliament",
+      "References verified case law",
+      "Tailored to your operator or council",
+      "Professional PDF delivered by email",
     ],
     popular: false,
     href: "/appeal",
@@ -147,13 +147,13 @@ const pricingPlans = [
     name: "Premium Pack",
     price: "£9.99",
     description:
-      "Everything in Standard, plus escalation support and operator-specific strategies.",
+      "Everything in Standard, plus an escalation letter, evidence checklist, and operator-specific strategy for maximum success.",
     features: [
       "Everything in Standard",
-      "Escalation letter if rejected",
-      "Evidence collection checklist",
-      "Operator-specific strategy guide",
-      "Second-stage appeal template",
+      "Escalation letter for POPLA/IAS/tribunal",
+      "Personalised evidence checklist",
+      "Operator weakness analysis",
+      "Second-stage appeal if first is rejected",
     ],
     popular: true,
     href: "/appeal",
@@ -172,10 +172,11 @@ export default function HomePage() {
               <span className="text-teal-600">in Minutes</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-500 sm:text-xl">
-              Our AI analyses your fine and generates a personalised
-              appeal letter using the exact legal grounds most likely to succeed.
-              Works for parking fines, bus lane PCNs, congestion charges, ULEZ
-              penalties, and more. 42-64% of appeals are successful.
+              Our specialist legal AI has been trained on every aspect of UK
+              parking law: the Traffic Management Act 2004, POFA 2012,
+              the Private Parking Code of Practice, and thousands of
+              tribunal decisions. It writes you a professional appeal letter
+              that cites the exact legislation and case law your fine violates.
             </p>
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -222,6 +223,22 @@ export default function HomePage() {
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
+                Cites real UK legislation
+              </div>
+              <div className="flex items-center gap-2 text-sm text-slate-500">
+                <svg
+                  className="h-5 w-5 text-teal-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
                 42-64% appeal success rate
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-500">
@@ -238,23 +255,7 @@ export default function HomePage() {
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                25M+ fines issued yearly
-              </div>
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <svg
-                  className="h-5 w-5 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Trusted by UK drivers
+                Professional PDF delivered by email
               </div>
             </div>
           </div>
@@ -311,11 +312,12 @@ export default function HomePage() {
                 <span className="text-2xl font-bold">3</span>
               </div>
               <h3 className="mt-6 text-lg font-semibold text-gray-900">
-                Download Your Appeal Letter
+                Get Your Legal Letter
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Get a personalised appeal letter with the correct legal grounds,
-                formatted and ready to submit. From just £5.99.
+                Our AI writes a professional appeal letter citing specific Acts of
+                Parliament, case law, and Codes of Practice. Delivered as a PDF
+                to your email. From just £5.99.
               </p>
             </div>
           </div>
@@ -346,6 +348,133 @@ export default function HomePage() {
 
       {/* ==================== STATISTICS BAR ==================== */}
       <StatsCounter stats={statsForCounter} />
+
+      {/* ==================== WHAT'S IN YOUR LETTER ==================== */}
+      <section className="py-20 sm:py-24 bg-white">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold text-teal-700 mb-4">
+              Specialist Legal AI
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Not a Template. A Legal Document.
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Our AI has been specifically trained on UK parking and traffic law,
+              including every relevant Act of Parliament, Code of Practice,
+              tribunal ruling, and operator-specific tactic. It does not give
+              generic advice. It writes a formal legal letter tailored to your
+              exact situation, the same way a parking law solicitor would.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-14 max-w-5xl">
+            {/* Sample letter preview */}
+            <div className="grid gap-8 lg:grid-cols-2 items-start">
+              {/* Left: What the letter contains */}
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Specific Legislation by Section",
+                    desc: "Cites the Traffic Management Act 2004, Protection of Freedoms Act 2012 (Schedule 4, Paragraph 9), the Consumer Rights Act 2015, and the Private Parking Code of Practice. Every reference is accurate and verifiable.",
+                    icon: (
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    title: "Verified Case Law",
+                    desc: "Cites ParkingEye Ltd v Beavis [2015] UKSC 67 and other Supreme Court and tribunal precedents. Our AI only uses real, verified case references that adjudicators recognise. Generic AI tools cannot guarantee this.",
+                    icon: (
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    title: "Operator-Specific Intelligence",
+                    desc: "Our AI knows the track record, weaknesses, and appeal patterns of ParkingEye, UKPC, APCOA, NCP, and 70+ other operators. It uses arguments that have worked against your specific operator at POPLA and IAS.",
+                    icon: (
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    title: "POFA Compliance Check",
+                    desc: "Automatically checks whether the Notice to Keeper was served within the 14-day statutory deadline. If it was late, your letter argues that keeper liability does not apply.",
+                    icon: (
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    title: "Professional Format",
+                    desc: "Delivered as a professionally formatted PDF, ready to print or email. Includes your case reference, vehicle details, and a formal structure that councils and operators take seriously.",
+                    icon: (
+                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                      </svg>
+                    ),
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal-600">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900">{item.title}</h3>
+                      <p className="mt-1 text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right: Sample letter snippet */}
+              <div className="rounded-xl border-2 border-gray-200 bg-white shadow-lg overflow-hidden">
+                <div className="bg-slate-900 px-5 py-3 flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="h-3 w-3 rounded-full bg-red-400" />
+                    <div className="h-3 w-3 rounded-full bg-amber-400" />
+                    <div className="h-3 w-3 rounded-full bg-green-400" />
+                  </div>
+                  <span className="text-xs text-slate-400 ml-2">appeal-letter.pdf</span>
+                </div>
+                <div className="p-6 text-sm text-gray-700 leading-relaxed font-serif space-y-3">
+                  <p className="text-xs text-gray-400 border-b pb-2 mb-3 font-sans">Sample extract from a generated letter:</p>
+                  <p>[Your Name]<br />[Your Address]</p>
+                  <p>10 April 2026</p>
+                  <p><strong>ParkingEye Limited</strong><br />Parking Appeals Department</p>
+                  <p><strong>RE: Parking Charge Notice</strong><br />Vehicle: AB12 CDE<br />Location: Aldi, High Street, Reading<br />Date: 5 April 2026</p>
+                  <p>Dear Sir/Madam,</p>
+                  <p>I am writing to formally challenge the above parking charge on the following grounds.</p>
+                  <p><strong>1. Failure to comply with the Protection of Freedoms Act 2012, Schedule 4, Paragraph 9</strong></p>
+                  <p>The Notice to Keeper was received on 8 April 2026, which is 3 days after the alleged contravention. While this falls within the 14-day statutory period, the notice fails to contain the prescribed wording required under POFA 2012...</p>
+                  <p className="text-teal-600 font-sans text-xs font-semibold mt-4 pt-3 border-t">
+                    Each letter continues for 1-2 pages with specific legal arguments tailored to your case.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/appeal"
+              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700"
+            >
+              Get Your Legal Letter
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+            <p className="mt-3 text-sm text-gray-500">Free assessment first. Only pay if you want the letter.</p>
+          </div>
+        </Container>
+      </section>
 
       {/* ==================== FREE TOOLS ==================== */}
       <section className="py-20 sm:py-24 bg-gray-50">
@@ -515,11 +644,12 @@ export default function HomePage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Why FineCheck
+              Why a Specialist Tool Matters
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Built specifically for UK parking and traffic law, not a generic
-              template generator.
+              Generic AI tools do not understand the nuances of UK parking law.
+              Our AI was built specifically for this purpose, and it shows in
+              every letter.
             </p>
           </div>
 
@@ -542,12 +672,13 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Built on UK Parking Law
+                Trained on UK Parking Law
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Every letter references the Traffic Management Act 2004, the
-                Protection of Freedoms Act 2012, and the new Parking Code of
-                Practice. Real legal grounds, not guesswork.
+                Our AI has been trained on every relevant statute, regulation,
+                and Code of Practice. It knows the difference between a council
+                PCN and a private charge notice, and it applies the right law
+                to each. A generic chatbot cannot do this reliably.
               </p>
             </div>
 
@@ -569,12 +700,13 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Personalised, Not Generic
+                Written for Your Exact Case
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Every letter uses your specific circumstances and the legal
-                grounds most relevant to your case. No copy-paste templates that
-                operators have seen a thousand times.
+                Your letter is generated from scratch using your specific
+                circumstances, dates, operator, and location. Operators and
+                councils can spot generic templates immediately. Our letters
+                are unique to each case.
               </p>
             </div>
 
@@ -628,12 +760,13 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Operator Intelligence
+                Knows Every Operator
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Letters are tailored to the specific parking company or council
-                involved. We know which arguments work best against each
-                operator and adapt accordingly.
+                Our system knows the appeal track record, enforcement patterns,
+                and known weaknesses of over 70 private parking operators and
+                every UK council. It selects arguments that have succeeded
+                against your specific operator at independent appeal.
               </p>
             </div>
           </div>
