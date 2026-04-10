@@ -136,17 +136,8 @@ function validateRequest(body: GenerateLetterRequest): string | null {
   if (!body.vehicleReg || body.vehicleReg.trim().length === 0) {
     return "Vehicle registration is required";
   }
-  if (!body.referenceNumber || body.referenceNumber.trim().length === 0) {
-    return "PCN reference number is required";
-  }
-  if (!body.fineDate) {
-    return "Fine date is required";
-  }
-  if (!body.fineAmount || body.fineAmount <= 0) {
-    return "Fine amount must be a positive number";
-  }
-  if (!body.location || body.location.trim().length === 0) {
-    return "Location is required";
+  if (!body.fineDate && !body.location) {
+    return "Fine date or location is required";
   }
   if (!body.circumstances || body.circumstances.trim().length < 10) {
     return "Please provide more detail about the circumstances (at least 10 characters)";
@@ -154,17 +145,8 @@ function validateRequest(body: GenerateLetterRequest): string | null {
   if (!body.appealGrounds || body.appealGrounds.length === 0) {
     return "At least one appeal ground is required";
   }
-  if (!body.senderName || body.senderName.trim().length === 0) {
-    return "Your name is required";
-  }
-  if (!body.senderAddress || body.senderAddress.trim().length === 0) {
-    return "Your address is required";
-  }
   if (!body.product || !["basic", "premium"].includes(body.product)) {
     return "Product must be 'basic' or 'premium'";
-  }
-  if (!body.sessionId || body.sessionId.trim().length === 0) {
-    return "Payment session ID is required";
   }
   if (body.fineType === "council" && !body.councilName) {
     return "Council name is required for council PCNs";
@@ -201,13 +183,13 @@ function buildUserPrompt(body: GenerateLetterRequest): string {
   }
 
   lines.push(`Vehicle Registration: ${body.vehicleReg}`);
-  lines.push(`Reference Number: ${body.referenceNumber}`);
-  lines.push(`Date of Alleged Contravention: ${body.fineDate}`);
-  lines.push(`Fine Amount: £${(body.fineAmount / 100).toFixed(2)}`);
+  if (body.referenceNumber) lines.push(`Reference Number: ${body.referenceNumber}`);
+  if (body.fineDate) lines.push(`Date of Alleged Contravention: ${body.fineDate}`);
+  if (body.fineAmount && body.fineAmount > 0) lines.push(`Fine Amount: £${(body.fineAmount / 100).toFixed(2)}`);
   if (body.discountedAmount) {
     lines.push(`Discounted Amount: £${(body.discountedAmount / 100).toFixed(2)}`);
   }
-  lines.push(`Location: ${body.location}`);
+  if (body.location) lines.push(`Location: ${body.location}`);
   lines.push("");
   lines.push("Circumstances:");
   lines.push(body.circumstances);
@@ -217,8 +199,8 @@ function buildUserPrompt(body: GenerateLetterRequest): string {
     lines.push(`${i + 1}. ${ground}`);
   });
   lines.push("");
-  lines.push(`Sender Name: ${body.senderName}`);
-  lines.push(`Sender Address: ${body.senderAddress}`);
+  lines.push(`Sender Name: ${body.senderName || "[YOUR NAME]"}`);
+  lines.push(`Sender Address: ${body.senderAddress || "[YOUR ADDRESS]"}`);
   lines.push("");
   lines.push(`Today's Date: ${new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`);
 

@@ -111,47 +111,118 @@ export default function SuccessContent() {
   const [data, setData] = useState<SavedAppeal | null>(null);
   const [copied, setCopied] = useState(false);
   const [letterContent, setLetterContent] = useState("");
+  const [escalationLetter, setEscalationLetter] = useState("");
+  const [evidenceChecklist, setEvidenceChecklist] = useState("");
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [generating, setGenerating] = useState(true);
 
   useEffect(() => {
-    try {
-      const stored = sessionStorage.getItem("finecheck_appeal");
-      if (stored) {
+    async function loadAndGenerate() {
+      try {
+        const stored = sessionStorage.getItem("finecheck_appeal");
+        if (!stored) { setGenerating(false); return; }
+
         const parsed = JSON.parse(stored) as SavedAppeal;
         setData(parsed);
-        const content = generateLetterContent(parsed);
-        setLetterContent(content);
 
-        // Send email if we have an email address and haven't sent yet
-        const alreadySent = sessionStorage.getItem("finecheck_email_sent");
-        if (parsed.form.email && !alreadySent) {
-          sessionStorage.setItem("finecheck_email_sent", "true");
-          fetch("/api/send-letter", {
+        // Show the basic template immediately while Claude generates
+        const fallbackContent = generateLetterContent(parsed);
+        setLetterContent(fallbackContent);
+
+        // Check if we already generated with Claude for this session
+        const cachedLetter = sessionStorage.getItem("finecheck_ai_letter");
+        if (cachedLetter) {
+          const cached = JSON.parse(cachedLetter);
+          setLetterContent(cached.letter || fallbackContent);
+          if (cached.escalationLetter) setEscalationLetter(cached.escalationLetter);
+          if (cached.evidenceChecklist) setEvidenceChecklist(cached.evidenceChecklist);
+          setGenerating(false);
+          sendEmail(parsed, cached.letter || fallbackContent, cached.escalationLetter, cached.evidenceChecklist);
+          return;
+        }
+
+        // Call Claude API to generate a professional letter
+        try {
+          const isPremium = parsed.productId === "premium-pack";
+          const res = await fetch("/api/generate-letter", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              email: parsed.form.email,
-              letterContent: content,
-              fineType: parsed.form.fineType,
-              operatorName: parsed.form.operatorName,
+              fineType: parsed.form.fineType === "private" ? "private" : "council",
               councilName: parsed.form.councilName,
-              vehicleReg: parsed.form.vehicleReg,
-              location: parsed.form.location,
-              fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
-              productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
+              operatorName: parsed.form.operatorName,
+              vehicleReg: parsed.form.vehicleReg || "UNKNOWN",
+              referenceNumber: parsed.form.pcnReference || "[REFERENCE NUMBER]",
+              fineDate: parsed.form.fineDate || parsed.form.parkingEventDate || new Date().toISOString().slice(0, 10),
+              fineAmount: parseInt(parsed.form.fineAmount || "0") * 100 || 10000,
+              location: parsed.form.location || "[LOCATION]",
+              circumstances: parsed.form.circumstances || parsed.form.whatHappened || "Circumstances not provided",
+              ntkReceivedDate: parsed.form.ntkReceivedDate,
+              appealGrounds: parsed.assessment.grounds.map((g) => `${g.title} (${g.legalBasis})`),
+              senderName: "[YOUR NAME]",
+              senderAddress: "[YOUR ADDRESS]",
+              product: isPremium ? "premium" : "basic",
+              sessionId: "paid",
             }),
-          })
-            .then((res) => {
-              if (res.ok) setEmailSent(true);
-              else setEmailError(true);
-            })
-            .catch(() => setEmailError(true));
+          });
+
+          if (res.ok) {
+            const result = await res.json();
+            const aiLetter = result.letter || fallbackContent;
+            setLetterContent(aiLetter);
+            if (result.escalationLetter) setEscalationLetter(result.escalationLetter);
+            if (result.evidenceChecklist) setEvidenceChecklist(result.evidenceChecklist);
+
+            // Cache it so we don't re-generate on refresh
+            sessionStorage.setItem("finecheck_ai_letter", JSON.stringify(result));
+
+            setGenerating(false);
+            sendEmail(parsed, aiLetter, result.escalationLetter, result.evidenceChecklist);
+            return;
+          }
+        } catch {
+          // Claude API failed, use fallback
         }
+
+        // Fallback: use the template letter
+        setGenerating(false);
+        sendEmail(parsed, fallbackContent, undefined, undefined);
+      } catch {
+        setGenerating(false);
       }
-    } catch {
-      // sessionStorage might not be available
     }
+
+    function sendEmail(parsed: SavedAppeal, letter: string, escalation?: string, checklist?: string) {
+      const alreadySent = sessionStorage.getItem("finecheck_email_sent");
+      if (parsed.form.email && !alreadySent) {
+        sessionStorage.setItem("finecheck_email_sent", "true");
+        fetch("/api/send-letter", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: parsed.form.email,
+            letterContent: letter,
+            fineType: parsed.form.fineType,
+            operatorName: parsed.form.operatorName,
+            councilName: parsed.form.councilName,
+            vehicleReg: parsed.form.vehicleReg,
+            location: parsed.form.location,
+            fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
+            productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
+            escalationLetter: escalation,
+            evidenceChecklist: checklist,
+          }),
+        })
+          .then((res) => {
+            if (res.ok) setEmailSent(true);
+            else setEmailError(true);
+          })
+          .catch(() => setEmailError(true));
+      }
+    }
+
+    loadAndGenerate();
   }, []);
 
   const handleCopy = async () => {
@@ -227,8 +298,9 @@ export default function SuccessContent() {
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Your Appeal Letter is Ready</h1>
           <p className="text-gray-600">
-            Your personalised appeal letter has been generated using the legal grounds identified in your assessment. Copy
-            or download it below, then follow the next steps to submit your appeal.
+            {generating
+              ? "Our AI is crafting your personalised appeal letter with specific legal references. This takes a few seconds..."
+              : "Your personalised appeal letter has been generated using the legal grounds identified in your assessment. Copy or download it below, then follow the next steps to submit your appeal."}
           </p>
 
           {emailSent && data?.form.email && (
@@ -249,10 +321,26 @@ export default function SuccessContent() {
           )}
         </div>
 
+        {/* Generating indicator */}
+        {generating && (
+          <div className="rounded-xl border border-teal-200 bg-teal-50 p-6 mb-6 text-center">
+            <div className="flex items-center justify-center gap-3 text-teal-700">
+              <svg className="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              <span className="font-medium">Generating your personalised appeal letter...</span>
+            </div>
+            <p className="mt-2 text-sm text-teal-600">Our AI is crafting a professional letter with specific legal references for your case.</p>
+          </div>
+        )}
+
         {/* Letter */}
         <div className="rounded-xl border border-gray-200 bg-white shadow-sm mb-6">
           <div className="flex items-center justify-between border-b border-gray-200 px-6 py-3">
-            <h3 className="text-sm font-semibold text-gray-900">Appeal Letter</h3>
+            <h3 className="text-sm font-semibold text-gray-900">
+              {generating ? "Appeal Letter (preview)" : "Appeal Letter"}
+            </h3>
             <div className="flex items-center gap-2">
               <button
                 onClick={handleCopy}
@@ -293,6 +381,32 @@ export default function SuccessContent() {
             <pre className="whitespace-pre-wrap text-sm text-gray-800 leading-relaxed font-sans">{letterContent}</pre>
           </div>
         </div>
+
+        {/* Escalation Letter (Premium) */}
+        {escalationLetter && (
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm mb-6">
+            <div className="flex items-center justify-between border-b border-gray-200 px-6 py-3">
+              <h3 className="text-sm font-semibold text-gray-900">Escalation Letter (if your appeal is rejected)</h3>
+              <span className="rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Premium</span>
+            </div>
+            <div className="p-6">
+              <pre className="whitespace-pre-wrap text-sm text-gray-800 leading-relaxed font-sans">{escalationLetter}</pre>
+            </div>
+          </div>
+        )}
+
+        {/* Evidence Checklist (Premium) */}
+        {evidenceChecklist && (
+          <div className="rounded-xl border border-amber-200 bg-amber-50 shadow-sm mb-6">
+            <div className="flex items-center justify-between border-b border-amber-200 px-6 py-3">
+              <h3 className="text-sm font-semibold text-amber-900">Evidence Checklist</h3>
+              <span className="rounded-full bg-teal-100 px-2.5 py-0.5 text-xs font-medium text-teal-800">Premium</span>
+            </div>
+            <div className="p-6">
+              <pre className="whitespace-pre-wrap text-sm text-amber-900 leading-relaxed font-sans">{evidenceChecklist}</pre>
+            </div>
+          </div>
+        )}
 
         {/* Important notice */}
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 mb-6">
