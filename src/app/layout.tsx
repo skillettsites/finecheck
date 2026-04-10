@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -114,6 +115,7 @@ export default function RootLayout({
         <main className="flex-1 pb-16 sm:pb-0">{children}</main>
         <Footer />
         <StickyMobileCTA />
+        <Analytics />
       </body>
     </html>
   );
