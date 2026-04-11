@@ -92,7 +92,7 @@ export default function AboutPage() {
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Over 25 million fines are issued in the UK every year. Studies show
-            that 42-64% of appeals succeed at tribunal. Yet fewer than 1 in 20 fines are
+            that 55-80% of appeals succeed at tribunal. Yet fewer than 1 in 20 fines are
             ever formally challenged. We built FineCheck to change that.
           </p>
         </div>

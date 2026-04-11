@@ -8,7 +8,7 @@ import PricingCard from "@/components/PricingCard";
 export const metadata: Metadata = {
   title: "Appeal Your Fine in Minutes | FineCheck",
   description:
-    "AI-powered fine appeal tool for UK drivers. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ fines, and red route penalties. Free assessment, then a personalised appeal letter. 42-64% of appeals succeed at tribunal.",
+    "AI-powered fine appeal tool for UK drivers. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ fines, and red route penalties. Free assessment, then a personalised appeal letter. 55-80% of appeals succeed at tribunal.",
   alternates: {
     canonical: "https://appealafine.co.uk",
   },
@@ -108,7 +108,7 @@ const faqItems = [
   {
     question: "Do you guarantee success?",
     answer:
-      "No service can guarantee the outcome of an appeal, and we would never make that claim. What we can tell you is that 42-64% of appeals succeed at tribunal, and our free assessment gives you an honest evaluation of your chances before you spend anything.",
+      "No service can guarantee the outcome of an appeal, and we would never make that claim. What we can tell you is that 55-80% of appeals succeed at tribunal, and our free assessment gives you an honest evaluation of your chances before you spend anything.",
   },
   {
     question: "What types of fines can you help with?",
@@ -239,7 +239,7 @@ export default function HomePage() {
                     d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                42-64% appeal success rate
+                55-80% appeal success rate
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-500">
                 <svg
