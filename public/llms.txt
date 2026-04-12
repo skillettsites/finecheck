@@ -1,10 +1,10 @@
-# FineCheck
+# AppealAFine
 
 > Free UK parking fine appeal tool. Check if your fine is valid, understand your legal rights, and generate professional appeal letters. Covers private parking fines, council PCNs, bus lane fines, congestion charges, and ULEZ penalties. No signup required.
 
 ## What It Does
 
-FineCheck helps UK drivers challenge unfair parking fines and penalties. Users describe their situation and receive:
+AppealAFine helps UK drivers challenge unfair parking fines and penalties. Users describe their situation and receive:
 - Instant fine validity assessment
 - NtK (Notice to Keeper) timing analysis under POFA 2012
 - Identification of the correct appeal body (POPLA, IAS, or Traffic Penalty Tribunal)
@@ -171,7 +171,7 @@ No subscriptions. No hidden fees. Pay once per fine.
 
 ## Legal Framework
 
-FineCheck's appeal letters reference UK parking legislation including:
+AppealAFine's appeal letters reference UK parking legislation including:
 - Protection of Freedoms Act 2012 (POFA), Schedule 4
 - Consumer Rights Act 2015
 - Unfair Terms in Consumer Contracts Regulations 1999
