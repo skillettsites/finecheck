@@ -1,0 +1,185 @@
+# FineCheck
+
+> Free UK parking fine appeal tool. Check if your fine is valid, understand your legal rights, and generate professional appeal letters. Covers private parking fines, council PCNs, bus lane fines, congestion charges, and ULEZ penalties. No signup required.
+
+## What It Does
+
+FineCheck helps UK drivers challenge unfair parking fines and penalties. Users describe their situation and receive:
+- Instant fine validity assessment
+- NtK (Notice to Keeper) timing analysis under POFA 2012
+- Identification of the correct appeal body (POPLA, IAS, or Traffic Penalty Tribunal)
+- Common grounds for appeal based on operator or council
+- Appeal strength rating (strong, moderate, weak)
+- Professional AI-generated appeal letters citing specific UK legislation and case law
+
+## Pricing
+
+| Plan | Price | What's Included |
+|------|-------|----------------|
+| Free Assessment | Free | Validity check, NtK timing analysis, appeal body ID, grounds analysis, strength rating, step-by-step guide |
+| Standard Letter | £5.99 (one-time) | Everything free + AI-generated legal letter citing Acts of Parliament, verified case law, operator-specific arguments, professional PDF |
+| Premium Pack | £9.99 (one-time) | Everything standard + escalation letter for POPLA/IAS/Tribunal, evidence checklist, operator weakness analysis, second-stage appeal |
+
+No subscriptions. No hidden fees. Pay once per fine.
+
+## Who It's For
+
+- Drivers who received a private parking fine (ParkingEye, UKPC, Excel, APCOA, Smart Parking, NCP, Euro Car Parks, Indigo)
+- Drivers who received a council PCN (Penalty Charge Notice)
+- People fined at supermarkets, hospitals, retail parks, gyms, train stations, universities, airports, hotels, or schools
+- Anyone who received a bus lane, congestion charge, ULEZ, or red route fine
+- Drivers who were not driving when the fine was issued
+- People who sold their car and received a fine for the new owner
+- Rental car or company car drivers who received a fine
+
+## Free Tools
+
+- /appeal - Start a free fine assessment and generate appeal letters
+- /tools/ticket-scanner - Scan and analyse your parking ticket with AI
+- /tools/deadline-calculator - Calculate your appeal deadlines
+- /tools/pofa-checker - Check if a private fine complies with POFA 2012
+- /tools/contravention-codes - Look up contravention codes and what they mean
+
+## Appeal Grounds
+
+- /grounds/unclear-signage - Appeal based on unclear or inadequate signage
+- /grounds/broken-meter - Appeal when the payment machine was broken
+- /grounds/anpr-error - Appeal ANPR camera errors and misreads
+- /grounds/grace-period - Appeal based on the 10-minute grace period rule
+- /grounds/double-yellow-lines - Appeal double yellow line fines
+- /grounds/medical-emergency - Appeal based on medical emergency
+- /grounds/blue-badge - Appeal fines when you have a Blue Badge
+- /grounds/loading-unloading - Appeal when loading or unloading
+- /grounds/overstay-by-minutes - Appeal when you overstayed by just a few minutes
+- /grounds/first-time-offender - Appeal as a first-time offender
+
+## Appeal Letter Templates
+
+- /templates/parkingeye-appeal-letter - ParkingEye appeal letter
+- /templates/ukpc-appeal-letter - UKPC appeal letter
+- /templates/apcoa-appeal-letter - APCOA appeal letter
+- /templates/excel-parking-appeal-letter - Excel Parking appeal letter
+- /templates/smart-parking-appeal-letter - Smart Parking appeal letter
+- /templates/ncp-appeal-letter - NCP appeal letter
+- /templates/euro-car-parks-appeal-letter - Euro Car Parks appeal letter
+- /templates/indigo-appeal-letter - Indigo appeal letter
+- /templates/council-pcn-appeal-letter - Council PCN appeal letter
+- /templates/popla-appeal-letter - POPLA escalation letter
+- /templates/ias-appeal-letter - IAS escalation letter
+- /templates/anpr-error-appeal-letter - ANPR error appeal letter
+- /templates/mitigating-circumstances-letter - Mitigating circumstances letter
+- /templates/debt-collector-response-letter - Debt collector response letter
+- /templates/ccj-set-aside-letter - CCJ set aside application letter
+- /templates/wrong-driver-appeal-letter - Wrong driver appeal letter
+- /templates/loading-defence-letter - Loading defence letter
+- /templates/hospital-parking-appeal-letter - Hospital parking appeal letter
+- /templates/supermarket-parking-appeal-letter - Supermarket parking appeal letter
+- /templates/grace-period-defence-letter - Grace period defence letter
+
+## Situation Guides
+
+- /situations/supermarket-parking-fine - Supermarket parking fine help
+- /situations/hospital-parking-fine - Hospital parking fine help
+- /situations/retail-park-parking-fine - Retail park parking fine help
+- /situations/gym-parking-fine - Gym parking fine help
+- /situations/train-station-parking-fine - Train station parking fine help
+- /situations/university-parking-fine - University parking fine help
+- /situations/airport-parking-fine - Airport parking fine help
+- /situations/residential-parking-fine - Residential parking fine help
+- /situations/school-parking-fine - School parking fine help
+- /situations/hotel-parking-fine - Hotel parking fine help
+
+## Detailed Guides
+
+- /guides/how-to-appeal-council-parking-fine - How to appeal a council parking fine
+- /guides/how-to-appeal-private-parking-fine - How to appeal a private parking fine
+- /guides/pofa-2012-explained - Protection of Freedoms Act 2012 explained
+- /guides/notice-to-keeper-rules - Notice to Keeper (NtK) rules and deadlines
+- /guides/parking-fine-signage-rules - Parking fine signage requirements
+- /guides/grace-period-rules - 10-minute grace period rules
+- /guides/popla-appeal-guide - How to appeal to POPLA
+- /guides/traffic-penalty-tribunal-guide - Traffic Penalty Tribunal guide
+- /guides/parking-fine-court-defence - How to defend a parking fine in court
+- /guides/parking-fine-deadlines - All parking fine deadlines and time limits
+- /guides/blue-badge-parking-fines - Blue Badge parking fine rights
+- /guides/new-parking-code-of-practice-2024 - New parking code of practice explained
+- /guides/anpr-parking-fine-errors - ANPR camera errors and how to challenge them
+- /guides/parking-fine-payment-machine-broken - Payment machine broken defence
+- /guides/what-happens-if-you-dont-pay-parking-fine - What happens if you don't pay
+- /guides/what-happens-if-you-ignore-private-parking-fine - What happens if you ignore it
+- /guides/what-happens-if-parking-fine-goes-to-debt-collectors - Debt collectors and parking fines
+- /guides/what-happens-if-parking-fine-goes-to-court - Parking fines going to court
+- /guides/what-happens-if-you-lose-parking-appeal - What happens if you lose your appeal
+- /guides/what-happens-if-you-pay-parking-fine-late - Paying a parking fine late
+- /guides/how-long-to-appeal-parking-fine - How long to appeal a parking fine
+- /guides/how-long-does-parking-company-have-to-send-fine - Time limits for sending fines
+- /guides/how-long-before-parking-fine-goes-to-court - Timeline to court action
+- /guides/new-parking-rules-2026 - New parking rules 2026
+- /guides/10-minute-grace-period-parking - 10-minute grace period explained
+- /guides/parking-fine-someone-else-driving - Fine when someone else was driving
+- /guides/parking-fine-sold-car - Fine after selling your car
+- /guides/parking-fine-rental-car - Rental car parking fine
+- /guides/parking-fine-moved-house - Fine sent to old address
+- /guides/parking-fine-bailiffs - Bailiffs and parking fines
+- /guides/parking-fine-ccj-county-court - CCJs and county court claims
+- /guides/parking-fine-statute-of-limitations - Statute of limitations for parking fines
+- /guides/parking-fine-broken-down-car - Fine when your car broke down
+- /guides/parking-fine-no-signs - No signs or inadequate signage
+- /guides/parking-fine-wrong-car-anpr - ANPR read the wrong car
+- /guides/yellow-box-junction-fine - Yellow box junction fines
+- /guides/parking-fine-double-yellow-lines - Double yellow line fines
+- /guides/parking-fine-loading-unloading - Loading and unloading defence
+- /guides/parking-fine-dropped-kerb - Dropped kerb parking fines
+- /guides/parking-fine-bank-holiday - Parking fines on bank holidays
+- /guides/parking-fine-taxi-rank - Parking on a taxi rank
+- /guides/parking-fine-bus-stop - Parking at a bus stop
+- /guides/parking-fine-residents-permit - Residents permit parking fines
+- /guides/parking-fine-expired-meter - Expired meter fines
+- /guides/parking-fine-company-car - Company car parking fines
+- /guides/parking-fine-during-roadworks - Fines during roadworks
+- /guides/parking-fine-foreign-vehicle - Foreign vehicle parking fines
+- /guides/parking-fine-pregnancy - Parking fines and pregnancy
+- /guides/parking-fine-funeral - Parking fines at funerals
+- /guides/parking-fine-electric-vehicle-charging - EV charging parking fines
+- /guides/parking-fine-school-pickup - School pickup parking fines
+- /guides/parking-fine-nhs-worker - NHS worker parking fines
+- /guides/parking-fine-delivery-driver - Delivery driver parking fines
+- /guides/parking-fine-clamped-car - Clamped car fines
+- /guides/parking-fine-towed-car - Towed car fines
+- /guides/parking-fine-motorbike - Motorbike parking fines
+- /guides/parking-fine-campervan - Campervan parking fines
+
+## Data and Statistics
+
+- /data/parking-fine-statistics-uk - UK parking fine statistics
+- /data/appeal-success-rates - Parking fine appeal success rates
+- /data/worst-parking-companies - Worst parking companies in the UK
+- /data/parking-fines-by-council - Parking fines by council
+- /data/council-vs-private-parking-fine - Council vs private parking fine differences
+- /data/pcn-vs-parking-charge-notice - PCN vs Parking Charge Notice explained
+
+## Blog
+
+- /blog/can-you-ignore-private-parking-fine-2026 - Can You Ignore a Private Parking Fine in 2026?
+- /blog/what-happens-if-you-dont-pay-parking-fine - What Happens If You Don't Pay a Parking Fine?
+- /blog/parking-fine-appeal-success-rates-2026 - Parking Fine Appeal Success Rates 2026
+- /blog/parkingeye-took-me-to-court - ParkingEye Took Me to Court: What Happened
+- /blog/supermarket-parking-fine-appeal-guide - Supermarket Parking Fine Appeal Guide
+- /blog/hospital-parking-fine-appeal-guide - Hospital Parking Fine Appeal Guide
+- /blog/new-parking-code-of-practice-2026 - New Parking Code of Practice 2026
+- /blog/how-long-does-parking-company-have-to-send-fine - How Long Does a Parking Company Have to Send a Fine?
+
+## Legal Framework
+
+FineCheck's appeal letters reference UK parking legislation including:
+- Protection of Freedoms Act 2012 (POFA), Schedule 4
+- Consumer Rights Act 2015
+- Unfair Terms in Consumer Contracts Regulations 1999
+- The Private Parking Code of Practice
+- ParkingEye v Beavis [2015] UKSC 67
+- Traffic Management Act 2004
+- Civil Enforcement of Road Traffic Contraventions (Approved Devices, Charging and Adjudication) (England) Regulations
+
+## Website
+
+https://www.appealafine.co.uk
