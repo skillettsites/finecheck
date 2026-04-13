@@ -3038,8 +3038,8 @@ If an enforcement agent acts improperly:
       'parking-fine-moved-house',
       'how-to-appeal-council-parking-fine'
     ],
-    seoTitle: 'Parking Fine Bailiffs: Your Rights and What They Can Do (2026)',
-    seoDescription: 'Enforcement agents at your door over a parking fine? Know your rights. Learn what bailiffs can and cannot do for council and private parking debts, including entry rules and vulnerable person protections.'
+    seoTitle: 'Parking Fine Bailiffs: Your Rights at the Door (2026)',
+    seoDescription: 'Bailiffs at your door over a parking fine? Know your rights before you open it. What they can and cannot do, entry rules, fees they can charge, and how to complain.'
   },
   {
     slug: 'parking-fine-ccj-county-court',
@@ -3416,8 +3416,8 @@ To strengthen a potential future breakdown defence:
       'parking-fine-deadlines',
       'popla-appeal-guide'
     ],
-    seoTitle: 'Parking Fine for a Broken Down Car: How to Appeal (2026)',
-    seoDescription: 'Got a parking fine because your car broke down? Learn what evidence you need, how to appeal to the council or private operator, and why breakdowns are a valid mitigating circumstance.'
+    seoTitle: 'Parking Fine for Broken Down Car: How to Appeal Free',
+    seoDescription: 'Got a parking fine because your car broke down? Breakdowns are a valid defence. Free step-by-step guide on what evidence you need and how to get the fine cancelled.'
   },
   {
     slug: 'parking-fine-no-signs',
@@ -5927,8 +5927,8 @@ Has your car been clamped or blocked in on private land? [Use our free tool](/ap
       'parking-fine-court-defence',
       'what-happens-if-you-dont-pay-parking-fine'
     ],
-    seoTitle: 'Wheel Clamping on Private Land | Your Rights Explained (2026)',
-    seoDescription: 'Private wheel clamping is illegal in England and Wales. Learn what to do if your car is clamped, how to get your money back, and what forms of clamping remain lawful.'
+    seoTitle: 'Car Clamped? Private Clamping Is Illegal: Your Rights',
+    seoDescription: 'Private wheel clamping is illegal in England and Wales since 2012. If your car was clamped on private land, you can get your money back. Free guide to your rights and next steps.'
   },
   {
     slug: 'parking-fine-towed-car',

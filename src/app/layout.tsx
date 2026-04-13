@@ -8,11 +8,11 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
-    template: "FineCheck | %s",
-    default: "FineCheck | Appeal Your Fine",
+    template: "%s | AppealAFine",
+    default: "Appeal Your Parking Fine for Free | AppealAFine",
   },
   description:
-    "Appeal your UK fine for free. FineCheck helps you challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and red route fines. Check if your PCN is valid, generate professional appeal letters, and understand your rights.",
+    "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates, step-by-step guides, and 64% tribunal success rates.",
   keywords: [
     "parking fine appeal",
     "PCN appeal",
@@ -33,24 +33,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://appealafine.co.uk",
-    siteName: "FineCheck",
-    title: "FineCheck | Appeal Your Fine",
+    siteName: "AppealAFine",
+    title: "Appeal Your Parking Fine for Free | AppealAFine",
     description:
-      "Appeal your UK fine for free. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Generate professional appeal letters.",
+      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and 64% tribunal success rates.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "FineCheck - Appeal Your Fine",
+        alt: "AppealAFine: Appeal Your Parking Fine for Free",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FineCheck | Appeal Your Fine",
+    title: "Appeal Your Parking Fine for Free | AppealAFine",
     description:
-      "Appeal your UK fine for free. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Generate professional appeal letters.",
+      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and 64% tribunal success rates.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -65,18 +65,18 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "FineCheck",
+  name: "AppealAFine",
   url: "https://appealafine.co.uk",
   logo: "https://appealafine.co.uk/logo.png",
   description:
-    "UK fine appeal tool. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more.",
+    "UK parking fine appeal tool. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free templates and guides.",
   sameAs: [],
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "FineCheck",
+  name: "AppealAFine",
   url: "https://appealafine.co.uk",
   potentialAction: {
     "@type": "SearchAction",

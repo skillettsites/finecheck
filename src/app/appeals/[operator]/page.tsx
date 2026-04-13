@@ -132,7 +132,7 @@ export default async function OperatorPage({
     description: op.seoDescription,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: `https://appealafine.co.uk/appeals/${op.slug}`,

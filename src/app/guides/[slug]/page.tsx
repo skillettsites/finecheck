@@ -306,7 +306,7 @@ export default async function GuidePage({
     url: `https://appealafine.co.uk/guides/${guide.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {

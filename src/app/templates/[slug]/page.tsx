@@ -102,12 +102,12 @@ export default async function TemplateDetailPage({
     description: template.seoDescription,
     author: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: `https://appealafine.co.uk/templates/${template.slug}`,

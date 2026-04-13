@@ -118,7 +118,7 @@ export default async function CouncilPage({
     description: council.seoDescription,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: `https://appealafine.co.uk/councils/${council.slug}`,

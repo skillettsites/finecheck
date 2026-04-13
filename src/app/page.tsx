@@ -6,9 +6,9 @@ import StatsCounter from "@/components/StatsCounter";
 import PricingCard from "@/components/PricingCard";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Fine in Minutes | FineCheck",
+  title: "Appeal Your Parking Fine for Free | 64% Success Rate",
   description:
-    "AI-powered fine appeal tool for UK drivers. Challenge parking fines, bus lane PCNs, congestion charges, ULEZ fines, and red route penalties. Free assessment, then a personalised appeal letter. 55-80% of appeals succeed at tribunal.",
+    "Free parking fine appeal tool for UK drivers. Check if your PCN is valid, get a personalised appeal letter in minutes, and boost your chances of winning. 33M fines issued yearly, only 0.5% appealed.",
   alternates: {
     canonical: "https://appealafine.co.uk",
   },

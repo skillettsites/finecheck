@@ -538,8 +538,8 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 51,
-    seoTitle: 'Appeal a Britannia Parking Fine | Challenge Britannia Charges',
-    seoDescription: 'How to appeal a Britannia Parking charge. Covers permit errors, breakdown situations, and your POPLA appeal options.'
+    seoTitle: 'Appeal Britannia Parking Fine: Free Guide (51% Win Rate)',
+    seoDescription: 'Challenge a Britannia Parking charge for free. Covers permit errors, breakdowns, POPLA appeals, and why Britannia rarely takes cases to court. Step-by-step guide.'
   },
   {
     slug: 'parking-control-management',

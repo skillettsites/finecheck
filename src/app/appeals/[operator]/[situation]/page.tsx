@@ -172,7 +172,7 @@ export default async function OperatorSituationPage({
     url: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {
