@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Appeal Letter Pricing: £5.99 Standard, £9.99 Premium | AppealAFine",
+  title: "Appeal Letter Pricing: £5.99 Standard, £9.99 Premium",
   description:
     "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. Refund if delivery fails. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
   alternates: {
