@@ -179,6 +179,37 @@ export default function PricingPage() {
               written appeal letter. No subscriptions, no
               hidden fees.
             </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 font-medium text-green-700 ring-1 ring-green-200">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Refund if delivery fails
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1 font-medium text-slate-700 ring-1 ring-slate-200">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-3.75 11.25h16.5a1.5 1.5 0 001.5-1.5V12a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 12v8.25a1.5 1.5 0 001.5 1.5z" /></svg>
+                Stripe-secured payments
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1 font-medium text-slate-700 ring-1 ring-slate-200">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6z" /></svg>
+                One-off payment, no subscription
+              </span>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Guarantee strip */}
+      <section className="bg-green-50 border-y border-green-100 py-6">
+        <Container>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 text-center sm:text-left">
+            <svg className="h-10 w-10 shrink-0 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            <div className="max-w-2xl">
+              <p className="text-base font-semibold text-green-900">Delivery guarantee</p>
+              <p className="text-sm text-green-800 mt-0.5">
+                If your appeal letter is not delivered to your inbox within 30 minutes of payment, we refund your purchase in full. No questions, no forms. We do not guarantee the outcome of your appeal because no service can.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
