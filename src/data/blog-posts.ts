@@ -18,7 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The truth about ignoring private parking fines in 2026, including the new Code of Practice, debt collectors, court action, and your real options.",
     publishedDate: "2026-03-15",
     category: "Private Parking",
-    seoTitle: "Can You Ignore a Private Parking Fine in 2026? | FineCheck",
+    seoTitle: "Can You Ignore a Private Parking Fine in 2026? | AppealAFine",
     seoDescription:
       "Should you ignore a private parking fine? We cover the new 2026 Code of Practice, when operators pursue court action, CCJs, and what actually happens if you don't pay.",
     content: `## The Short Answer
@@ -132,7 +132,7 @@ Ignoring a private parking fine in 2026 is a gamble, and the odds are worse than
       "A step-by-step timeline of what happens when you don't pay a parking fine, from the initial notice through to debt collectors and court action.",
     publishedDate: "2026-03-10",
     category: "Guides",
-    seoTitle: "What Happens If You Don't Pay a Parking Fine? Full Timeline | FineCheck",
+    seoTitle: "What Happens If You Don't Pay a Parking Fine? Full Timeline | AppealAFine",
     seoDescription:
       "Step-by-step guide to what happens when you don't pay a UK parking fine. Covers council and private fines, deadlines, debt collectors, court action, and CCJs.",
     content: `## It Depends on Who Issued the Fine
@@ -298,7 +298,7 @@ A County Court Judgment is serious:
       "Actual appeal success rate data from TPT, London Tribunals, and POPLA. Find out your real chances of winning a parking fine appeal.",
     publishedDate: "2026-03-08",
     category: "Data & Research",
-    seoTitle: "Parking Fine Appeal Success Rates 2026: Real Data | FineCheck",
+    seoTitle: "Parking Fine Appeal Success Rates 2026: Real Data | AppealAFine",
     seoDescription:
       "Real parking fine appeal success rates for 2026. TPT: 64%, London Tribunals: 49%, POPLA: 42%. See which defences work best and why most people never appeal.",
     content: `## The Numbers Most People Never See
@@ -440,7 +440,7 @@ The key takeaway: **do not assume your appeal will fail.** The evidence suggests
       "A practical guide to what happens when ParkingEye files a County Court claim against you, from the initial paperwork to the hearing and how to defend yourself.",
     publishedDate: "2026-03-05",
     category: "Legal",
-    seoTitle: "ParkingEye Took Me to Court: What Really Happens | FineCheck",
+    seoTitle: "ParkingEye Took Me to Court: What Really Happens | AppealAFine",
     seoDescription:
       "What to expect if ParkingEye takes you to court for an unpaid parking charge. Covers the N1 claim form, defences, mediation, small claims hearings, and when they drop cases.",
     content: `## ParkingEye Is Different
@@ -594,7 +594,7 @@ The total is usually £150-£250. You will not be ordered to pay ParkingEye's le
       "Complete guide to appealing parking fines from Aldi, Lidl, Tesco, Morrisons, and Asda car parks. Which operators manage which stores and how to win your appeal.",
     publishedDate: "2026-02-28",
     category: "Guides",
-    seoTitle: "Supermarket Parking Fine Appeal Guide 2026 | FineCheck",
+    seoTitle: "Supermarket Parking Fine Appeal Guide 2026 | AppealAFine",
     seoDescription:
       "How to appeal a supermarket parking fine from Aldi, Lidl, Tesco, Morrisons, or Asda. See which operators enforce which stores and the best defences to use.",
     content: `## Why Supermarket Parking Fines Are So Common
@@ -783,7 +783,7 @@ Keep it factual and concise. Emotional appeals about loyalty to the supermarket 
       "How to appeal a hospital parking fine, including NHS parking rules, compassionate grounds, free parking eligibility, and ANPR overstay defences.",
     publishedDate: "2026-02-20",
     category: "Guides",
-    seoTitle: "Hospital Parking Fine Appeal Guide 2026 | FineCheck",
+    seoTitle: "Hospital Parking Fine Appeal Guide 2026 | AppealAFine",
     seoDescription:
       "Appeal a hospital parking fine with our complete guide. Covers NHS free parking rules, compassionate grounds, ANPR overstay from long appointments, and who qualifies for exemptions.",
     content: `## Hospital Parking Fines: A Sensitive Issue
@@ -983,7 +983,7 @@ If you have been unfairly charged, do not simply accept it. Hospital parking fin
       "Everything you need to know about the new Private Parking Code of Practice, including the £50 cap, grace periods, and what has changed for drivers.",
     publishedDate: "2026-02-15",
     category: "Legal",
-    seoTitle: "New Private Parking Code of Practice 2026 Explained | FineCheck",
+    seoTitle: "New Private Parking Code of Practice 2026 Explained | AppealAFine",
     seoDescription:
       "The new Private Parking Code of Practice explained: £50 standard charges, 10-minute grace period, single appeals service, and what it means for drivers in 2026.",
     content: `## What Is the New Code of Practice?
@@ -1159,7 +1159,7 @@ The best advice remains the same: check the signage, know your time limit, and i
       "Time limits for sending parking fines: the POFA 14-day rule, council timescales, NtD vs NtK differences, and what counts as 'received'.",
     publishedDate: "2026-02-10",
     category: "Legal",
-    seoTitle: "How Long Does a Parking Company Have to Send a Fine? | FineCheck",
+    seoTitle: "How Long Does a Parking Company Have to Send a Fine? | AppealAFine",
     seoDescription:
       "The rules on how long parking companies and councils have to send you a fine. Covers the POFA 14-day rule, NtD vs NtK, postal timing, and when late fines are invalid.",
     content: `## The Short Answer

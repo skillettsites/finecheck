@@ -447,7 +447,7 @@ export default async function OperatorSituationPage({
                   View All Operators
                 </h3>
                 <p className="mt-1 text-sm text-gray-600">
-                  Browse all {20} private parking operators covered by FineCheck.
+                  Browse all {20} private parking operators covered by AppealAFine.
                 </p>
                 <p className="mt-2 text-sm text-teal-600 font-medium">
                   View operators &rarr;

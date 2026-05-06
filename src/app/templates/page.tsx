@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: "https://appealafine.co.uk/templates",
   },
   openGraph: {
-    title: "Free Parking Fine Appeal Letter Templates | FineCheck",
+    title: "Free Parking Fine Appeal Letter Templates | AppealAFine",
     description:
       "Free parking fine appeal letter templates for all major UK operators and councils. Copy, customise, and send.",
     url: "https://appealafine.co.uk/templates",
@@ -91,7 +91,7 @@ const faqItems = [
   {
     question: "Will a generic template be enough to win my appeal?",
     answer:
-      "Generic templates cover the most common legal arguments and can be effective, especially for procedural failures like late NtK service or poor signage. However, a personalised letter that addresses your specific circumstances, the exact operator, and the particular weaknesses of your case will always be stronger. FineCheck offers personalised appeal letters from just \u00a35.99.",
+      "Generic templates cover the most common legal arguments and can be effective, especially for procedural failures like late NtK service or poor signage. However, a personalised letter that addresses your specific circumstances, the exact operator, and the particular weaknesses of your case will always be stronger. AppealAFine offers personalised appeal letters from just \u00a35.99.",
   },
   {
     question:

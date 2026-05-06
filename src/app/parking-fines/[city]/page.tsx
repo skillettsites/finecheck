@@ -262,7 +262,7 @@ export default async function CityPage({
     url: `https://appealafine.co.uk/parking-fines/${city.slug}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     about: {

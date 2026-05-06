@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import DeadlineCalculatorForm from "./DeadlineCalculatorForm";
 
 export const metadata: Metadata = {
-  title: "Parking Fine Deadline Calculator | Know Your Time Limits | FineCheck",
+  title: "Parking Fine Deadline Calculator | Know Your Time Limits | AppealAFine",
   description:
     "Calculate exactly when your parking fine appeal deadlines expire. See discount windows, informal challenge periods, tribunal deadlines, and more for both council and private fines.",
   alternates: {

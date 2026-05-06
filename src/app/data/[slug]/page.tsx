@@ -265,7 +265,7 @@ export default async function DataPageDetail({
     url: `https://appealafine.co.uk/data/${page.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {

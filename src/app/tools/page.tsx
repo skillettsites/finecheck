@@ -4,14 +4,14 @@ import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Free Fine Appeal Tools | Check Your PCN for Free | FineCheck",
+  title: "Free Fine Appeal Tools | Check Your PCN for Free | AppealAFine",
   description:
     "Free tools to check if your fine is valid. Use our POFA compliance checker, deadline calculator, and appeal strength assessor to understand your options before you pay.",
   alternates: {
     canonical: "https://appealafine.co.uk/tools",
   },
   openGraph: {
-    title: "Free Fine Appeal Tools | FineCheck",
+    title: "Free Fine Appeal Tools | AppealAFine",
     description:
       "Free tools to check if your fine is valid. POFA checker, deadline calculator, and more.",
     url: "https://appealafine.co.uk/tools",

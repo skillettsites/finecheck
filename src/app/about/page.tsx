@@ -3,9 +3,9 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
-  title: "About FineCheck | How We Help You Appeal Fines",
+  title: "About AppealAFine | How We Help You Appeal Fines",
   description:
-    "FineCheck is a UK fine appeal tool that uses AI to help drivers challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Check your fine, understand your rights, and generate professional appeal letters.",
+    "AppealAFine is a UK fine appeal tool that uses AI to help drivers challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Check your fine, understand your rights, and generate professional appeal letters.",
   alternates: {
     canonical: "https://appealafine.co.uk/about",
   },
@@ -42,7 +42,7 @@ const trustSignals = [
   {
     title: "We Are Not a Law Firm",
     description:
-      "FineCheck provides document preparation and legal information, not legal advice. Our guides and letters are based on publicly available UK parking law. For complex disputes or court proceedings, we recommend consulting a solicitor.",
+      "AppealAFine provides document preparation and legal information, not legal advice. Our guides and letters are based on publicly available UK parking law. For complex disputes or court proceedings, we recommend consulting a solicitor.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
@@ -88,12 +88,12 @@ export default function AboutPage() {
         {/* Hero */}
         <div className="text-center mb-16">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            About FineCheck
+            About AppealAFine
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Over 25 million fines are issued in the UK every year. Studies show
             that 55-80% of appeals succeed at tribunal. Yet fewer than 1 in 20 fines are
-            ever formally challenged. We built FineCheck to change that.
+            ever formally challenged. We built AppealAFine to change that.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
               procedures. The system relies on most people paying without question.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              FineCheck exists to level the playing field. We make it simple for
+              AppealAFine exists to level the playing field. We make it simple for
               anyone to understand their rights, check whether a fine is valid, and
               submit a well-crafted appeal. No legal jargon, no expensive solicitors,
               no guessing what to write.
@@ -125,7 +125,7 @@ export default function AboutPage() {
         {/* How It Works */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            How FineCheck Works
+            How AppealAFine Works
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
             {steps.map((step) => (

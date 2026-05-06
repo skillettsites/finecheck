@@ -5,14 +5,14 @@ import FAQ from "@/components/ui/FAQ";
 import ContraventionCodeLookup from "@/components/tools/ContraventionCodeLookup";
 
 export const metadata: Metadata = {
-  title: "Parking Contravention Code Lookup | Find Your Code | FineCheck",
+  title: "Parking Contravention Code Lookup | Find Your Code | AppealAFine",
   description:
     "Look up any UK parking contravention code to find out what it means, how much the fine is, and your best options for appealing. Covers all on-street, off-street, bus lane, and moving traffic codes.",
   alternates: {
     canonical: "https://appealafine.co.uk/tools/contravention-codes",
   },
   openGraph: {
-    title: "Parking Contravention Code Lookup | FineCheck",
+    title: "Parking Contravention Code Lookup | AppealAFine",
     description:
       "Find out what your parking contravention code means and how to appeal. Free lookup tool with fine amounts, defences, and tips.",
     url: "https://appealafine.co.uk/tools/contravention-codes",

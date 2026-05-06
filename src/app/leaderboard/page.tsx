@@ -124,7 +124,7 @@ export default function LeaderboardPage() {
     {
       question: "Can I appeal my parking fine?",
       answer:
-        "Yes. Every driver has the right to appeal a parking fine, whether issued by a council or a private operator. Our data shows that appeal success rates range from 37% to 53% depending on the council. FineCheck can help you assess your chances and generate an appeal letter.",
+        "Yes. Every driver has the right to appeal a parking fine, whether issued by a council or a private operator. Our data shows that appeal success rates range from 37% to 53% depending on the council. AppealAFine can help you assess your chances and generate an appeal letter.",
     },
     {
       question: "Why do London councils issue so many more fines?",
@@ -147,7 +147,7 @@ export default function LeaderboardPage() {
     url: "https://appealafine.co.uk/leaderboard",
     creator: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     datePublished: "2026-01-15",

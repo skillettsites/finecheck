@@ -6,9 +6,9 @@ import StatsCounter from "@/components/StatsCounter";
 import PricingCard from "@/components/PricingCard";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Parking Fine for Free | 64% Success Rate",
+  title: "Get a Personalised PCN Appeal Letter, From £5.99 | AppealAFine",
   description:
-    "Free parking fine appeal tool for UK drivers. Check if your PCN is valid, get a personalised appeal letter in minutes, and boost your chances of winning. 33M fines issued yearly, only 0.5% appealed.",
+    "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £5.99. Free validity check first. No subscription. 64% success rate at tribunal.",
   alternates: {
     canonical: "https://appealafine.co.uk",
   },
@@ -88,7 +88,7 @@ const faqItems = [
   {
     question: "Is this legal?",
     answer:
-      "Absolutely. Every driver has the legal right to appeal a fine. FineCheck helps you exercise that right by preparing your appeal using established legal grounds. We reference the Traffic Management Act 2004, the Protection of Freedoms Act 2012, and relevant case law.",
+      "Absolutely. Every driver has the legal right to appeal a fine. AppealAFine helps you exercise that right by preparing your appeal using established legal grounds. We reference the Traffic Management Act 2004, the Protection of Freedoms Act 2012, and relevant case law.",
   },
   {
     question: "How does the AI work?",
@@ -828,7 +828,7 @@ export default function HomePage() {
               Frequently Asked Questions
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Everything you need to know about using FineCheck to appeal your
+              Everything you need to know about using AppealAFine to appeal your
               fine.
             </p>
           </div>

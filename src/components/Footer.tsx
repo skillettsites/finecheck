@@ -74,7 +74,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-lg font-bold text-white">
-                Fine<span className="text-gray-300">Check</span>
+                Appeal<span className="text-gray-300">AFine</span>
               </span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-gray-400">
@@ -154,14 +154,14 @@ export default function Footer() {
         {/* Legal disclaimer */}
         <div className="border-t border-gray-800 py-6">
           <p className="text-xs leading-relaxed text-gray-500">
-            FineCheck provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are templates personalised to your circumstances. If you need legal advice, please consult a qualified solicitor. Success rates vary depending on the specifics of each case.
+            AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are templates personalised to your circumstances. If you need legal advice, please consult a qualified solicitor. Success rates vary depending on the specifics of each case.
           </p>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-800 py-4">
           <p className="text-xs text-gray-500">
-            &copy; {new Date().getFullYear()} FineCheck. All rights reserved.
+            &copy; {new Date().getFullYear()} AppealAFine. All rights reserved.
           </p>
         </div>
       </div>

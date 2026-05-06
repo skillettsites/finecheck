@@ -5,9 +5,9 @@ import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Pricing | FineCheck",
+  title: "Appeal Letter Pricing: £5.99 Standard, £9.99 Premium | AppealAFine",
   description:
-    "Affordable fine appeal tools. Free assessment, standard appeal letters from £5.99, and premium appeal packs from £9.99. Works for parking fines, bus lane PCNs, congestion charges, and ULEZ penalties.",
+    "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. Refund if delivery fails. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
   alternates: {
     canonical: "https://appealafine.co.uk/pricing",
   },
@@ -114,7 +114,7 @@ const faqItems = [
   {
     question: "Is this legal advice?",
     answer:
-      "FineCheck provides legal information and document drafting tools, not regulated legal advice. Our tools are built on established UK parking law, tribunal decisions, and successful appeal strategies. For complex legal situations, particularly county court claims, we recommend consulting a solicitor alongside using our documents.",
+      "AppealAFine provides legal information and document drafting tools, not regulated legal advice. Our tools are built on established UK parking law, tribunal decisions, and successful appeal strategies. For complex legal situations, particularly county court claims, we recommend consulting a solicitor alongside using our documents.",
   },
   {
     question: "What payment methods do you accept?",

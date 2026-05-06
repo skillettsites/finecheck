@@ -9,7 +9,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { COUNCILS, getLondonCouncils } from "@/data/councils";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Council Parking Fine | FineCheck",
+  title: "Appeal Your Council Parking Fine | AppealAFine",
   description:
     "Find your council and learn how to appeal your parking fine. Covers all major UK councils including London boroughs, major cities, and regional authorities. Free appeal guides and success rates.",
   alternates: {

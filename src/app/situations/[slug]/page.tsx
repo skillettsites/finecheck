@@ -171,7 +171,7 @@ export default async function SituationPage({
     url: `https://appealafine.co.uk/situations/${situation.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     mainEntityOfPage: {

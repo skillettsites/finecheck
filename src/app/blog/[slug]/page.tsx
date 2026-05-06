@@ -319,12 +319,12 @@ export default async function BlogPostPage({
     dateModified: post.publishedDate,
     author: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
       logo: {
         "@type": "ImageObject",
@@ -418,7 +418,7 @@ export default async function BlogPostPage({
                   Need Help With Your Appeal?
                 </h2>
                 <p className="text-slate-300 mb-4">
-                  FineCheck helps you assess your parking fine, check if it is valid, and generate a
+                  AppealAFine helps you assess your parking fine, check if it is valid, and generate a
                   professional appeal letter. It is free to use.
                 </p>
                 <Button href="/appeal" variant="accent" size="lg">

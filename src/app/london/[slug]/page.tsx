@@ -249,7 +249,7 @@ export default async function BoroughFinePage({
     url: `https://appealafine.co.uk/london/${bf.slug}`,
     publisher: {
       "@type": "Organization",
-      name: "FineCheck",
+      name: "AppealAFine",
       url: "https://appealafine.co.uk",
     },
     about: {

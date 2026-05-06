@@ -59,7 +59,7 @@ export default function OperatorsIndexPage() {
   return (
     <>
       <head>
-        <title>Appeal Your Parking Fine by Operator | FineCheck</title>
+        <title>Appeal Your Parking Fine by Operator | AppealAFine</title>
         <meta
           name="description"
           content="Find your private parking operator and learn how to appeal your charge. Covers all major UK operators including ParkingEye, UKPC, APCOA, NCP, and more. Free appeal guides and success rates."

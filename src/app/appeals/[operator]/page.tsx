@@ -411,7 +411,7 @@ export default async function OperatorPage({
                         limited because these are small claims.
                       </li>
                       <li>
-                        Consider using FineCheck to generate a comprehensive
+                        Consider using AppealAFine to generate a comprehensive
                         defence document if you are facing a court claim.
                       </li>
                     </ul>

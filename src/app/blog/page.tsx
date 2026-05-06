@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "https://appealafine.co.uk/blog",
   },
   openGraph: {
-    title: "Parking Fine Advice & Guides | FineCheck",
+    title: "Parking Fine Advice & Guides | AppealAFine",
     description:
       "Expert guides on UK parking fines, appeals, and your rights.",
     url: "https://appealafine.co.uk/blog",

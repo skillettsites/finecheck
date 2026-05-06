@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "https://appealafine.co.uk/appeal",
   },
   openGraph: {
-    title: "Appeal Your Fine | FineCheck",
+    title: "Appeal Your Fine | AppealAFine",
     description:
       "Free instant assessment of your fine. Identify legal grounds and generate a professional appeal letter in minutes.",
     url: "https://appealafine.co.uk/appeal",

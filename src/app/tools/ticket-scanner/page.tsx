@@ -6,7 +6,7 @@ import TicketScanner from "@/components/tools/TicketScanner";
 
 export const metadata: Metadata = {
   title:
-    "Smart Ticket Scanner | Upload Your Parking Fine Photo | FineCheck",
+    "Smart Ticket Scanner | Upload Your Parking Fine Photo | AppealAFine",
   description:
     "Upload a photo of your parking ticket and our AI will extract all the key details automatically. Works with council PCNs and private parking charge notices. Free, fast, and secure.",
   alternates: {

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | FineCheck",
+  title: "Privacy Policy | AppealAFine",
   description:
-    "FineCheck privacy policy. How we collect, use, and protect your personal data when you use our parking fine appeal service.",
+    "AppealAFine privacy policy. How we collect, use, and protect your personal data when you use our parking fine appeal service.",
   alternates: {
     canonical: "https://appealafine.co.uk/privacy",
   },
@@ -29,13 +29,13 @@ export default function PrivacyPage() {
           {/* Intro */}
           <section>
             <p>
-              FineCheck (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your
+              AppealAFine (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your
               privacy. This policy explains what personal data we collect, how we use it,
               and your rights under the UK General Data Protection Regulation (UK GDPR)
               and the Data Protection Act 2018.
             </p>
             <p className="mt-3">
-              By using FineCheck at appealafine.co.uk, you agree to the collection and use
+              By using AppealAFine at appealafine.co.uk, you agree to the collection and use
               of data as described in this policy. If you do not agree, please do not use
               our service.
             </p>

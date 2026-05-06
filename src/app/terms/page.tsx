@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | FineCheck",
+  title: "Terms of Service | AppealAFine",
   description:
-    "FineCheck terms of service. The legal terms governing use of our parking fine appeal letter generation service.",
+    "AppealAFine terms of service. The legal terms governing use of our parking fine appeal letter generation service.",
   alternates: {
     canonical: "https://appealafine.co.uk/terms",
   },
@@ -29,8 +29,8 @@ export default function TermsPage() {
           {/* Intro */}
           <section>
             <p>
-              These terms of service (&quot;Terms&quot;) govern your use of the FineCheck
-              website at appealafine.co.uk (&quot;the Service&quot;), operated by FineCheck
+              These terms of service (&quot;Terms&quot;) govern your use of the AppealAFine
+              website at appealafine.co.uk (&quot;the Service&quot;), operated by AppealAFine
               (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By using the Service, you agree to these Terms.
               If you do not agree, please do not use the Service.
             </p>
@@ -42,7 +42,7 @@ export default function TermsPage() {
               1. Nature of Service
             </h2>
             <p className="mb-3">
-              FineCheck is a document preparation service. We provide:
+              AppealAFine is a document preparation service. We provide:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
@@ -59,7 +59,7 @@ export default function TermsPage() {
               </li>
             </ul>
             <p className="mt-3 font-semibold text-gray-900">
-              Important: FineCheck does not provide legal advice. We are not a law
+              Important: AppealAFine does not provide legal advice. We are not a law
               firm, and no solicitor-client relationship is created by using our
               service. The information and documents we provide are based on publicly
               available UK parking legislation and case law. For complex legal
@@ -177,8 +177,8 @@ export default function TermsPage() {
               6. Intellectual Property
             </h2>
             <p className="mb-3">
-              All content on the FineCheck website, including text, guides, designs,
-              logos, and code, is owned by FineCheck or licensed to us. You may not
+              All content on the AppealAFine website, including text, guides, designs,
+              logos, and code, is owned by AppealAFine or licensed to us. You may not
               copy, reproduce, or distribute our content without our written permission.
             </p>
             <p>
@@ -200,7 +200,7 @@ export default function TermsPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                FineCheck is provided &quot;as is&quot; without warranties of any kind, whether
+                AppealAFine is provided &quot;as is&quot; without warranties of any kind, whether
                 express or implied, including warranties of merchantability, fitness
                 for a particular purpose, or non-infringement.
               </li>
@@ -284,7 +284,7 @@ export default function TermsPage() {
             </h2>
             <p>
               These Terms are governed by and construed in accordance with the
-              laws of England and Wales. By using FineCheck, you agree to these
+              laws of England and Wales. By using AppealAFine, you agree to these
               Terms in their entirety.
             </p>
           </section>

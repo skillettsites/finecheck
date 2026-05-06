@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import POFACheckerForm from "./POFACheckerForm";
 
 export const metadata: Metadata = {
-  title: "POFA Compliance Checker | Is Your Private Parking Fine Valid? | FineCheck",
+  title: "POFA Compliance Checker | Is Your Private Parking Fine Valid? | AppealAFine",
   description:
     "Check if the Notice to Keeper was served within the legal 14-day time limit under POFA 2012. If the operator missed the deadline, your private parking fine may be unenforceable.",
   alternates: {
