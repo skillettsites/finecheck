@@ -6,6 +6,7 @@ import Badge from "@/components/ui/Badge";
 import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import MidContentCTA from "@/components/ui/MidContentCTA";
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedPosts } from "@/data/blog-posts";
 
 export function generateStaticParams() {
@@ -281,6 +282,29 @@ function renderContent(content: string): React.ReactNode[] {
 
     // Empty line
     if (line.trim() === "") continue;
+
+    // Inline CTA token: [[CTA]] or [[CTA:variant|headline|description|button|href]]
+    const ctaMatch = line.match(/^\[\[CTA(?::([^\]]*))?\]\]$/);
+    if (ctaMatch) {
+      flushList();
+      const config = ctaMatch[1]?.split("|") ?? [];
+      const variant = (config[0] || "teal") as "teal" | "amber" | "slate";
+      const headline = config[1];
+      const description = config[2];
+      const buttonText = config[3];
+      const href = config[4];
+      elements.push(
+        <MidContentCTA
+          key={`cta-${key++}`}
+          variant={variant}
+          {...(headline ? { headline } : {})}
+          {...(description ? { description } : {})}
+          {...(buttonText ? { buttonText } : {})}
+          {...(href ? { href } : {})}
+        />
+      );
+      continue;
+    }
 
     // Paragraph
     elements.push(
