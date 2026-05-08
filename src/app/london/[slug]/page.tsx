@@ -262,19 +262,6 @@ export default async function BoroughFinePage({
     },
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: bf.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
   return (
     <div className="py-8 sm:py-12">
       <Container size="md">
@@ -456,12 +443,7 @@ export default async function BoroughFinePage({
         {/* FAQs */}
         {bf.faqs.length > 0 && (
           <section className="mt-12">
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(faqSchema),
-              }}
-            />
+            {/* FAQPage schema is emitted by <FAQ /> below — do not duplicate here. */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>

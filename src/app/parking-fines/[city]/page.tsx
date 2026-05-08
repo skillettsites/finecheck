@@ -241,19 +241,6 @@ export default async function CityPage({
 
   const sections = parseContent(city.content);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: city.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -508,10 +495,7 @@ export default async function CityPage({
         {/* FAQs */}
         {city.faqs.length > 0 && (
           <section className="mt-12">
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
+            {/* FAQPage schema is emitted by <FAQ /> below — do not duplicate here. */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>

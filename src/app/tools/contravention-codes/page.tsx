@@ -63,26 +63,10 @@ const faqItems = [
 ];
 
 export default function ContraventionCodesPage() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <div className="py-8 sm:py-12">
       <Container size="md">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
+        {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
 
         <Breadcrumbs
           items={[

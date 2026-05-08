@@ -113,29 +113,13 @@ export default async function TemplateDetailPage({
     mainEntityOfPage: `https://appealafine.co.uk/templates/${template.slug}`,
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-blue-50 to-white border-b border-gray-100">

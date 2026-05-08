@@ -124,29 +124,13 @@ export default async function CouncilPage({
     mainEntityOfPage: `https://appealafine.co.uk/councils/${council.slug}`,
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16">
