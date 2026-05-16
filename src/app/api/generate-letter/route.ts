@@ -121,18 +121,20 @@ IMPORTANT RULES:
 - Be specific to the circumstances described. Generic template language weakens appeals.
 - Use British English spelling and conventions throughout.`;
 
-const PREMIUM_ESCALATION_PROMPT = `Additionally, generate an escalation letter template. This is a follow-up letter to be sent if the initial appeal is rejected. It should:
-- Reference the original appeal and its reference number
-- Note that the appeal was rejected and the date of rejection
-- State that the motorist is now escalating to [POPLA/IAS/tribunal as appropriate]
-- Reiterate the strongest grounds from the original appeal
-- Include any new evidence or arguments
-- Reference the right to escalate under the relevant Code of Practice or legislation
-- Maintain the same formal tone
+const PREMIUM_ESCALATION_PROMPT = `Additionally, generate an escalation letter template AND an evidence checklist.
 
-Also generate an evidence checklist specific to this case, listing exactly what photos, documents, and records the appellant should gather and submit.
+Use these EXACT section markers on their own line so the response can be parsed:
 
-Format the escalation letter with the same formal structure as the main letter. Format the evidence checklist as a numbered list with brief explanations of why each item is important.`;
+=== APPEAL LETTER ===
+(the main appeal letter goes here, no other heading)
+
+=== ESCALATION LETTER ===
+(a follow-up letter to be sent if the initial appeal is rejected: reference the original appeal number, note the rejection date, state the motorist is now escalating to POPLA/IAS/tribunal as appropriate, reiterate the strongest grounds, reference the right to escalate under the Code of Practice or legislation, maintain a formal tone, same format as the main letter)
+
+=== EVIDENCE CHECKLIST ===
+(a numbered list specific to this case of every photo, document, and record the appellant should gather and submit, with a one-line explanation of why each matters)
+
+Do not add any other top-level headings or markdown headers. Do not number the sections. The three markers above are the only headings allowed.`;
 
 
 function validateRequest(body: GenerateLetterRequest): string | null {
@@ -249,7 +251,10 @@ export async function POST(request: Request) {
 
     try {
       const session = await stripe.checkout.sessions.retrieve(body.sessionId);
-      if (session.payment_status !== "paid") {
+      // Accept paid sessions and free sessions (no_payment_required) so 100%
+      // discount coupons work as intended.
+      const accepted = ["paid", "no_payment_required"];
+      if (!accepted.includes(session.payment_status)) {
         return NextResponse.json(
           { error: "Payment not confirmed yet. If you have just paid, please refresh in a moment." },
           { status: 402 }
@@ -310,28 +315,34 @@ export async function POST(request: Request) {
     };
 
     if (body.product === "premium") {
-      // Try to extract sections from the response
-      const escalationMatch = letterContent.match(
-        /(?:ESCALATION LETTER|FOLLOW-UP LETTER|ESCALATION TEMPLATE)[:\s]*\n([\s\S]*?)(?=(?:EVIDENCE CHECKLIST|$))/i
-      );
-      const checklistMatch = letterContent.match(
-        /EVIDENCE CHECKLIST[:\s]*\n([\s\S]*?)$/i
-      );
+      // Split on the explicit === SECTION === markers from PREMIUM_ESCALATION_PROMPT.
+      // The leading marker is optional in case the model omits the main heading.
+      // We also tolerate markdown variants like ## ESCALATION LETTER TEMPLATE.
+      const headingRe = /^[#*\s]*=*\s*(APPEAL LETTER|ESCALATION LETTER(?: TEMPLATE)?|FOLLOW-UP LETTER|EVIDENCE CHECKLIST)\s*=*\s*$/gim;
 
-      if (escalationMatch) {
-        response.escalationLetter = escalationMatch[1].trim();
+      const sections: { name: string; start: number; end: number }[] = [];
+      let m: RegExpExecArray | null;
+      while ((m = headingRe.exec(letterContent)) !== null) {
+        sections.push({ name: m[1].toUpperCase(), start: m.index + m[0].length, end: letterContent.length });
       }
-      if (checklistMatch) {
-        response.evidenceChecklist = checklistMatch[1].trim();
+      for (let i = 0; i < sections.length - 1; i++) {
+        sections[i].end = sections[i + 1].start - sections[i + 1].name.length;
       }
 
-      // If we found sections, extract just the main letter
-      if (escalationMatch) {
-        const mainLetterEnd = letterContent.indexOf(escalationMatch[0]);
-        if (mainLetterEnd > 0) {
-          response.letter = letterContent.substring(0, mainLetterEnd).trim();
-        }
-      }
+      const grab = (label: string) => {
+        const s = sections.find((x) => x.name.startsWith(label));
+        if (!s) return undefined;
+        // Trim trailing heading text from the previous section's match boundary.
+        return letterContent.substring(s.start, s.end).replace(/^[#*\s=]+/, "").replace(/[#*\s=]+$/, "").trim();
+      };
+
+      const main = grab("APPEAL LETTER");
+      const escalation = grab("ESCALATION LETTER") || grab("FOLLOW-UP LETTER");
+      const checklist = grab("EVIDENCE CHECKLIST");
+
+      if (main) response.letter = main;
+      if (escalation) response.escalationLetter = escalation;
+      if (checklist) response.evidenceChecklist = checklist;
     }
 
     return NextResponse.json(response);
