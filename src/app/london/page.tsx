@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description:
     "Appeal parking fines, bus lane fines, congestion charges, and ULEZ penalties across all 33 London boroughs. Free assessment and personalised appeal letters.",
   alternates: {
-    canonical: "https://appealafine.co.uk/london",
+    canonical: "https://www.appealafine.co.uk/london",
   },
   openGraph: {
     title: "London Fine Appeals by Borough | Appeal a Fine",
     description:
       "Appeal parking fines, bus lane fines, congestion charges, and ULEZ penalties across all 33 London boroughs.",
-    url: "https://appealafine.co.uk/london",
+    url: "https://www.appealafine.co.uk/london",
     type: "website",
   },
 };
@@ -44,13 +44,13 @@ export default function LondonPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://appealafine.co.uk",
+        item: "https://www.appealafine.co.uk",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "London",
-        item: "https://appealafine.co.uk/london",
+        item: "https://www.appealafine.co.uk/london",
       },
     ],
   };

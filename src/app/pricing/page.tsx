@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. Refund if delivery fails. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
   alternates: {
-    canonical: "https://appealafine.co.uk/pricing",
+    canonical: "https://www.appealafine.co.uk/pricing",
   },
 };
 

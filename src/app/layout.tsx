@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     "ULEZ fine appeal",
     "red route PCN",
   ],
-  metadataBase: new URL("https://appealafine.co.uk"),
+  metadataBase: new URL("https://www.appealafine.co.uk"),
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://appealafine.co.uk",
+    url: "https://www.appealafine.co.uk",
     siteName: "AppealAFine",
     title: "Appeal Your Parking Fine for Free | AppealAFine",
     description:
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://appealafine.co.uk",
+    canonical: "https://www.appealafine.co.uk",
   },
 };
 
@@ -66,8 +66,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "AppealAFine",
-  url: "https://appealafine.co.uk",
-  logo: "https://appealafine.co.uk/logo.png",
+  url: "https://www.appealafine.co.uk",
+  logo: "https://www.appealafine.co.uk/logo.png",
   description:
     "UK parking fine appeal tool. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free templates and guides.",
   sameAs: [],
@@ -77,12 +77,12 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "AppealAFine",
-  url: "https://appealafine.co.uk",
+  url: "https://www.appealafine.co.uk",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://appealafine.co.uk/search?q={search_term_string}",
+      urlTemplate: "https://www.appealafine.co.uk/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

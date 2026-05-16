@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | AppealAFine",
+  title: "Terms of Service",
   description:
     "AppealAFine terms of service. The legal terms governing use of our parking fine appeal letter generation service.",
   alternates: {
-    canonical: "https://appealafine.co.uk/terms",
+    canonical: "https://www.appealafine.co.uk/terms",
   },
   robots: {
     index: true,

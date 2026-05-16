@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Expert guides on UK parking fines, appeals, and your rights. Covering council fines, private parking charges, the new Code of Practice, and how to win your appeal.",
   alternates: {
-    canonical: "https://appealafine.co.uk/blog",
+    canonical: "https://www.appealafine.co.uk/blog",
   },
   openGraph: {
     title: "Parking Fine Advice & Guides | AppealAFine",
     description:
       "Expert guides on UK parking fines, appeals, and your rights.",
-    url: "https://appealafine.co.uk/blog",
+    url: "https://www.appealafine.co.uk/blog",
     type: "website",
   },
 };

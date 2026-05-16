@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AppealAFine",
+  title: "Privacy Policy",
   description:
     "AppealAFine privacy policy. How we collect, use, and protect your personal data when you use our parking fine appeal service.",
   alternates: {
-    canonical: "https://appealafine.co.uk/privacy",
+    canonical: "https://www.appealafine.co.uk/privacy",
   },
   robots: {
     index: true,

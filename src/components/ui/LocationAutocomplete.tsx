@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
 
@@ -64,7 +64,7 @@ export function LocationAutocomplete({
         {
           headers: {
             "Accept": "application/json",
-            "Referer": "https://appealafine.co.uk",
+            "Referer": "https://www.appealafine.co.uk",
           },
         }
       );

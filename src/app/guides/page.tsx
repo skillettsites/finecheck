@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Free, expert guides to appealing UK parking fines. Covers council PCNs, private parking charges, POFA 2012, tribunal appeals, and more. Written by parking law specialists.",
   alternates: {
-    canonical: "https://appealafine.co.uk/guides",
+    canonical: "https://www.appealafine.co.uk/guides",
   },
 };
 

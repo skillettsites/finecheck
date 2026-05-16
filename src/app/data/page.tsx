@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Comprehensive UK parking fine statistics, appeal success rates, operator rankings, and comparison data. Free, regularly updated, and based on real enforcement data.",
   alternates: {
-    canonical: "https://appealafine.co.uk/data",
+    canonical: "https://www.appealafine.co.uk/data",
   },
 };
 
@@ -38,13 +38,13 @@ export default function DataIndexPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://appealafine.co.uk",
+        item: "https://www.appealafine.co.uk",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Data & Statistics",
-        item: "https://appealafine.co.uk/data",
+        item: "https://www.appealafine.co.uk/data",
       },
     ],
   };

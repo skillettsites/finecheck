@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "AppealAFine is a UK fine appeal tool that uses AI to help drivers challenge parking fines, bus lane PCNs, congestion charges, ULEZ penalties, and more. Check your fine, understand your rights, and generate professional appeal letters.",
   alternates: {
-    canonical: "https://appealafine.co.uk/about",
+    canonical: "https://www.appealafine.co.uk/about",
   },
 };
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Explore the most effective legal grounds for appealing a UK parking fine. Covers signage issues, broken meters, ANPR errors, grace periods, and more.",
   alternates: {
-    canonical: "https://appealafine.co.uk/grounds",
+    canonical: "https://www.appealafine.co.uk/grounds",
   },
 };
 
@@ -36,13 +36,13 @@ export default function GroundsPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://appealafine.co.uk",
+        item: "https://www.appealafine.co.uk",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Appeal Grounds",
-        item: "https://appealafine.co.uk/grounds",
+        item: "https://www.appealafine.co.uk/grounds",
       },
     ],
   };

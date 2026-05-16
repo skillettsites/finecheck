@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Find parking fine information for your city. Check appeal success rates, common hotspots, and local tips for 50 UK cities. Free PCN assessment and appeal letter generation.",
   alternates: {
-    canonical: "https://appealafine.co.uk/parking-fines",
+    canonical: "https://www.appealafine.co.uk/parking-fines",
   },
   openGraph: {
     title: "Parking Fines by City | Appeal a Fine",
     description:
       "Find parking fine information for your city. Check appeal success rates, common hotspots, and local tips for 50 UK cities.",
-    url: "https://appealafine.co.uk/parking-fines",
+    url: "https://www.appealafine.co.uk/parking-fines",
     type: "website",
   },
 };
@@ -64,13 +64,13 @@ export default function ParkingFinesPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://appealafine.co.uk",
+        item: "https://www.appealafine.co.uk",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Parking Fines by City",
-        item: "https://appealafine.co.uk/parking-fines",
+        item: "https://www.appealafine.co.uk/parking-fines",
       },
     ],
   };

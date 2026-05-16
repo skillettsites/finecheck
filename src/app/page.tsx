@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £5.99. Free validity check first. No subscription. 64% success rate at tribunal.",
   alternates: {
-    canonical: "https://appealafine.co.uk",
+    canonical: "https://www.appealafine.co.uk",
   },
 };
 

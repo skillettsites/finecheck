@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "See which UK councils issue the most parking fines, earn the most revenue, and have the best or worst appeal success rates. Data-driven rankings updated for 2026.",
   alternates: {
-    canonical: "https://appealafine.co.uk/leaderboard",
+    canonical: "https://www.appealafine.co.uk/leaderboard",
   },
   openGraph: {
     title: "UK Parking Fine Leaderboard 2026 | Which Councils Issue the Most Fines?",
     description:
       "See which UK councils issue the most parking fines, earn the most revenue, and have the best or worst appeal success rates.",
-    url: "https://appealafine.co.uk/leaderboard",
+    url: "https://www.appealafine.co.uk/leaderboard",
     type: "article",
   },
 };
@@ -144,11 +144,11 @@ export default function LeaderboardPage() {
     name: "UK Parking Fine Leaderboard 2026",
     description:
       "Council-by-council data on parking fines issued, appeal success rates, and parking surplus across the UK.",
-    url: "https://appealafine.co.uk/leaderboard",
+    url: "https://www.appealafine.co.uk/leaderboard",
     creator: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     datePublished: "2026-01-15",
     dateModified: "2026-04-01",

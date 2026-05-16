@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -9,11 +9,11 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { COUNCILS, getLondonCouncils } from "@/data/councils";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Council Parking Fine | AppealAFine",
+  title: "Appeal Your Council Parking Fine",
   description:
     "Find your council and learn how to appeal your parking fine. Covers all major UK councils including London boroughs, major cities, and regional authorities. Free appeal guides and success rates.",
   alternates: {
-    canonical: "https://appealafine.co.uk/councils",
+    canonical: "https://www.appealafine.co.uk/councils",
   },
 };
 

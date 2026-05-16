@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 interface BreadcrumbItem {
   label: string;
@@ -20,7 +20,7 @@ export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps)
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `https://appealafine.co.uk${item.href}`,
+      item: `https://www.appealafine.co.uk${item.href}`,
     })),
   };
 

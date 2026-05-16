@@ -130,6 +130,17 @@ export default function SuccessContent() {
         const fallbackContent = generateLetterContent(parsed);
         setLetterContent(fallbackContent);
 
+        // Read Stripe session id from the success URL (?session_id=cs_...).
+        // The success_url in /api/checkout is configured with {CHECKOUT_SESSION_ID}.
+        const stripeSessionId = new URLSearchParams(window.location.search).get("session_id") || "";
+
+        // No paid session means we cannot call the paid API. Show the free
+        // fallback template only and stop here (no email, no AI call).
+        if (!stripeSessionId.startsWith("cs_")) {
+          setGenerating(false);
+          return;
+        }
+
         // Check if we already generated with Claude for this session
         const cachedLetter = sessionStorage.getItem("finecheck_ai_letter");
         if (cachedLetter) {
@@ -163,7 +174,7 @@ export default function SuccessContent() {
               senderName: "[YOUR NAME]",
               senderAddress: "[YOUR ADDRESS]",
               product: isPremium ? "premium" : "basic",
-              sessionId: "paid",
+              sessionId: stripeSessionId,
             }),
           });
 
@@ -181,11 +192,19 @@ export default function SuccessContent() {
             sendEmail(parsed, aiLetter, result.escalationLetter, result.evidenceChecklist);
             return;
           }
+
+          // 402 = payment verification failed. Do not email; show free template only.
+          if (res.status === 402) {
+            setGenerating(false);
+            return;
+          }
         } catch {
-          // Claude API failed, use fallback
+          // Network error reaching the API. Fall through to template fallback below.
         }
 
-        // Fallback: use the template letter
+        // Fallback: Claude API was unreachable but Stripe session looked valid
+        // (we only reach here with a cs_* session id). Send the template so the
+        // paying customer is not left empty handed.
         setGenerating(false);
         sendEmail(parsed, fallbackContent, undefined, undefined);
       } catch {

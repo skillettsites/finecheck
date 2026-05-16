@@ -78,7 +78,7 @@ export default function Header() {
               </svg>
             </div>
             <span className="text-xl font-bold text-slate-900">
-              Fine<span className="text-teal-600">Check</span>
+              Appeal<span className="text-teal-600">AFine</span>
             </span>
           </Link>
 

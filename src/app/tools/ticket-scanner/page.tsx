@@ -1,22 +1,21 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import FAQ from "@/components/ui/FAQ";
 import TicketScanner from "@/components/tools/TicketScanner";
 
 export const metadata: Metadata = {
-  title:
-    "Smart Ticket Scanner | Upload Your Parking Fine Photo | AppealAFine",
+  title: "Smart Ticket Scanner | Upload Your Parking Fine Photo",
   description:
     "Upload a photo of your parking ticket and our AI will extract all the key details automatically. Works with council PCNs and private parking charge notices. Free, fast, and secure.",
   alternates: {
-    canonical: "https://appealafine.co.uk/tools/ticket-scanner",
+    canonical: "https://www.appealafine.co.uk/tools/ticket-scanner",
   },
   openGraph: {
     title: "Smart Ticket Scanner | Upload Your Parking Fine Photo",
     description:
       "Upload a photo of your parking ticket and our AI will extract all the key details automatically. Free, fast, and secure.",
-    url: "https://appealafine.co.uk/tools/ticket-scanner",
+    url: "https://www.appealafine.co.uk/tools/ticket-scanner",
   },
 };
 

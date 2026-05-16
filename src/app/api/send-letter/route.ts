@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import PDFDocument from "pdfkit";
 
@@ -232,14 +232,14 @@ export async function POST(request: Request) {
           </div>
 
           <div style="text-align: center; margin: 28px 0 16px;">
-            <a href="https://appealafine.co.uk/guides" style="display: inline-block; background: #0d9488; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;">Read Our Appeal Guides</a>
+            <a href="https://www.appealafine.co.uk/guides" style="display: inline-block; background: #0d9488; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;">Read Our Appeal Guides</a>
           </div>
         </div>
 
         <div style="background: #1e293b; padding: 20px 24px; text-align: center; border-radius: 0 0 12px 12px;">
           <p style="color: #e2e8f0; font-size: 13px; margin: 0 0 6px; font-weight: 600;">AppealAFine</p>
           <p style="color: #94a3b8; font-size: 11px; margin: 0;">
-            <a href="https://appealafine.co.uk" style="color: #5eead4; text-decoration: none;">appealafine.co.uk</a>
+            <a href="https://www.appealafine.co.uk" style="color: #5eead4; text-decoration: none;">appealafine.co.uk</a>
           </p>
           <p style="color: #64748b; font-size: 10px; margin: 10px 0 0; line-height: 1.5;">
             AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice.

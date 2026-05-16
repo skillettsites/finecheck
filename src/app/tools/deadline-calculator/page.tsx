@@ -1,20 +1,20 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import DeadlineCalculatorForm from "./DeadlineCalculatorForm";
 
 export const metadata: Metadata = {
-  title: "Parking Fine Deadline Calculator | Know Your Time Limits | AppealAFine",
+  title: "Parking Fine Deadline Calculator | Know Your Time Limits",
   description:
     "Calculate exactly when your parking fine appeal deadlines expire. See discount windows, informal challenge periods, tribunal deadlines, and more for both council and private fines.",
   alternates: {
-    canonical: "https://appealafine.co.uk/tools/deadline-calculator",
+    canonical: "https://www.appealafine.co.uk/tools/deadline-calculator",
   },
   openGraph: {
     title: "Parking Fine Deadline Calculator | Know Your Time Limits",
     description:
       "Calculate exactly when your parking fine appeal deadlines expire. Free instant results for council and private fines.",
-    url: "https://appealafine.co.uk/tools/deadline-calculator",
+    url: "https://www.appealafine.co.uk/tools/deadline-calculator",
   },
 };
 

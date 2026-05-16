@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+﻿import { MetadataRoute } from 'next';
 import { OPERATORS } from '@/data/operators';
 import { COUNCILS } from '@/data/councils';
 import { GUIDES } from '@/data/guides';
@@ -12,7 +12,7 @@ import { getAllCities } from '@/data/cities';
 import { getAllBoroughFines } from '@/data/borough-fines';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://appealafine.co.uk';
+  const baseUrl = 'https://www.appealafine.co.uk';
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

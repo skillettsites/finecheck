@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import Stripe from "stripe";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
+
+function getStripe(): Stripe | null {
+  if (!process.env.STRIPE_SECRET_KEY) return null;
+  return new Stripe(process.env.STRIPE_SECRET_KEY);
+}
 
 interface GenerateLetterRequest {
   fineType: "council" | "private";
@@ -225,13 +231,46 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Verify payment session with Stripe
-    // In production, verify body.sessionId against Stripe to confirm payment
-    // const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-    // const session = await stripe.checkout.sessions.retrieve(body.sessionId);
-    // if (session.payment_status !== 'paid') {
-    //   return NextResponse.json({ error: 'Payment not confirmed' }, { status: 402 });
-    // }
+    // Verify Stripe payment before generating the paid letter.
+    const stripe = getStripe();
+    if (!stripe) {
+      return NextResponse.json(
+        { error: "Letter generation is temporarily unavailable. Please try again shortly." },
+        { status: 503 }
+      );
+    }
+
+    if (!body.sessionId || typeof body.sessionId !== "string" || !body.sessionId.startsWith("cs_")) {
+      return NextResponse.json(
+        { error: "Payment required. Please complete checkout before requesting your letter." },
+        { status: 402 }
+      );
+    }
+
+    try {
+      const session = await stripe.checkout.sessions.retrieve(body.sessionId);
+      if (session.payment_status !== "paid") {
+        return NextResponse.json(
+          { error: "Payment not confirmed yet. If you have just paid, please refresh in a moment." },
+          { status: 402 }
+        );
+      }
+
+      // Premium product requires premium-pack session to prevent upgrading after paying for basic.
+      const paidProductId = session.metadata?.productId;
+      if (body.product === "premium" && paidProductId !== "premium-pack") {
+        return NextResponse.json(
+          { error: "Premium content requires the Premium Appeal Pack purchase." },
+          { status: 402 }
+        );
+      }
+    } catch (err) {
+      console.error("Stripe verification failed:", err);
+      return NextResponse.json(
+        { error: "Could not verify your payment. Please contact support if you have been charged." },
+        { status: 402 }
+      );
+    }
 
     const userPrompt = buildUserPrompt(body);
 
