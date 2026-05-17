@@ -433,127 +433,119 @@ export default function HomePage() {
       {/* ==================== WHAT'S IN YOUR LETTER ==================== */}
       <section className="py-20 sm:py-24 bg-white">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold text-teal-700 mb-4">
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full border border-teal-200/70 bg-teal-50/60 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-700">
               Specialist Legal AI
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Not a Template. A Legal Document.
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Not a template. A legal document.
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Our AI has been specifically trained on UK parking and traffic law,
-              including every relevant Act of Parliament, Code of Practice,
-              tribunal ruling, and operator-specific tactic. It does not give
-              generic advice. It writes a formal legal letter tailored to your
-              exact situation, the same way a parking law solicitor would.
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Trained on UK parking and traffic law — every relevant Act, Code of Practice, tribunal ruling and operator tactic. Your letter is written from scratch for your exact situation, the way a parking-law solicitor would draft it.
             </p>
-          </div>
+          </ScrollReveal>
 
           <div className="mx-auto mt-14 max-w-5xl">
-            {/* Sample letter preview */}
-            <div className="grid gap-8 lg:grid-cols-2 items-start">
-              {/* Left: What the letter contains */}
-              <div className="space-y-6">
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+              <div className="space-y-5 aaf-stagger">
                 {[
                   {
-                    title: "Specific Legislation by Section",
-                    desc: "Cites the Traffic Management Act 2004, Protection of Freedoms Act 2012 (Schedule 4, Paragraph 9), the Consumer Rights Act 2015, and the Private Parking Code of Practice. Every reference is accurate and verifiable.",
-                    icon: (
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                      </svg>
-                    ),
+                    title: "Specific legislation by section",
+                    desc: "Cites the Traffic Management Act 2004, POFA 2012 (Sch 4, para 9), the Consumer Rights Act 2015 and the Private Parking Code of Practice. Every reference accurate and verifiable.",
                   },
                   {
-                    title: "Verified Case Law",
-                    desc: "Cites ParkingEye Ltd v Beavis [2015] UKSC 67 and other Supreme Court and tribunal precedents. Our AI only uses real, verified case references that adjudicators recognise. Generic AI tools cannot guarantee this.",
-                    icon: (
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
-                      </svg>
-                    ),
+                    title: "Verified case law",
+                    desc: "Cites ParkingEye v Beavis [2015] UKSC 67 and other binding precedents. Only real, verified references adjudicators recognise — never fabricated.",
                   },
                   {
-                    title: "Operator-Specific Intelligence",
-                    desc: "Our AI knows the track record, weaknesses, and appeal patterns of ParkingEye, UKPC, APCOA, NCP, and 70+ other operators. It uses arguments that have worked against your specific operator at POPLA and IAS.",
-                    icon: (
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    ),
+                    title: "Operator-specific intelligence",
+                    desc: "Knows the track record, weaknesses and appeal patterns of ParkingEye, UKPC, APCOA, NCP and 70+ others. Picks arguments that have actually won at POPLA and IAS.",
                   },
                   {
-                    title: "POFA Compliance Check",
-                    desc: "Automatically checks whether the Notice to Keeper was served within the 14-day statutory deadline. If it was late, your letter argues that keeper liability does not apply.",
-                    icon: (
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                      </svg>
-                    ),
+                    title: "POFA compliance check",
+                    desc: "Automatically tests whether the Notice to Keeper was served within the 14-day statutory window. If it was late, your letter argues keeper liability does not apply.",
                   },
                   {
-                    title: "Professional Format",
-                    desc: "Delivered as a professionally formatted PDF, ready to print or email. Includes your case reference, vehicle details, and a formal structure that councils and operators take seriously.",
-                    icon: (
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                      </svg>
-                    ),
+                    title: "Professional format",
+                    desc: "Delivered as a polished PDF with your case reference, vehicle details and a formal structure that councils and operators take seriously.",
                   },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal-600">
-                      {item.icon}
+                ].map((item, i) => (
+                  <ScrollReveal
+                    key={item.title}
+                    index={i}
+                    className="group flex gap-4 rounded-xl border border-transparent p-2 transition-colors hover:border-slate-100"
+                  >
+                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 text-white shadow-[0_6px_16px_-6px_rgba(13,148,136,0.55)] transition-transform group-hover:scale-110">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-900">{item.title}</h3>
-                      <p className="mt-1 text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                      <h3 className="text-sm font-semibold text-slate-900">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-600">{item.desc}</p>
                     </div>
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
 
-              {/* Right: Sample letter snippet */}
-              <div className="rounded-xl border-2 border-gray-200 bg-white shadow-lg overflow-hidden">
-                <div className="bg-slate-900 px-5 py-3 flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="h-3 w-3 rounded-full bg-red-400" />
-                    <div className="h-3 w-3 rounded-full bg-amber-400" />
-                    <div className="h-3 w-3 rounded-full bg-green-400" />
+              <ScrollReveal className="relative">
+                <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-teal-200/50 via-emerald-200/30 to-sky-200/50 opacity-60 blur-2xl" aria-hidden="true" />
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_80px_-20px_rgba(15,23,42,0.3)]">
+                  <div className="flex items-center gap-2 border-b border-slate-100 bg-slate-50 px-5 py-3">
+                    <div className="flex gap-1.5">
+                      <div className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+                      <div className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+                      <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                    </div>
+                    <span className="ml-2 text-xs font-medium text-slate-500">appeal-letter.pdf</span>
+                    <a
+                      href="/sample-appeal-letter.pdf"
+                      target="_blank"
+                      rel="noopener"
+                      className="ml-auto inline-flex items-center gap-1 text-xs font-semibold text-teal-700 hover:text-teal-800"
+                    >
+                      View full PDF
+                      <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={2.4} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
                   </div>
-                  <span className="text-xs text-slate-400 ml-2">appeal-letter.pdf</span>
+                  <div className="space-y-3 p-6 font-serif text-[13px] leading-relaxed text-slate-700">
+                    <p className="-mt-1 border-b border-slate-100 pb-2 font-sans text-xs text-slate-400">Sample extract from a generated letter</p>
+                    <p>[Your Name]<br />[Your Address]</p>
+                    <p>17 May 2026</p>
+                    <p><strong className="text-slate-900">ParkingEye Limited</strong><br />Parking Appeals Department</p>
+                    <p className="rounded-md bg-slate-50 p-2.5 font-sans text-xs">
+                      <strong className="text-slate-900">RE:</strong> Parking Charge Notice<br />
+                      <span className="text-slate-500">Vehicle</span> AB12 CDE  ·  <span className="text-slate-500">Location</span> Asda, Hulme  ·  <span className="text-slate-500">Date</span> 1 May 2026
+                    </p>
+                    <p>Dear Sir or Madam,</p>
+                    <p>I am writing to formally challenge the above Parking Charge Notice in full on four substantive grounds.</p>
+                    <p><strong className="text-slate-900">1. Notice to Keeper served outside POFA 2012 Sch 4 para 9(4)</strong></p>
+                    <p className="text-slate-600">The alleged event was on 1 May 2026; the Notice was received on 24 May 2026 — outside the 14-day statutory window. Keeper liability is therefore extinguished&hellip;</p>
+                    <div className="mt-2 flex items-center justify-between border-t border-slate-100 pt-3 font-sans text-xs">
+                      <span className="font-semibold text-teal-700">Continues over 1–2 pages of legal argument.</span>
+                      <span className="text-slate-400">Page 1 of 3</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6 text-sm text-gray-700 leading-relaxed font-serif space-y-3">
-                  <p className="text-xs text-gray-400 border-b pb-2 mb-3 font-sans">Sample extract from a generated letter:</p>
-                  <p>[Your Name]<br />[Your Address]</p>
-                  <p>10 April 2026</p>
-                  <p><strong>ParkingEye Limited</strong><br />Parking Appeals Department</p>
-                  <p><strong>RE: Parking Charge Notice</strong><br />Vehicle: AB12 CDE<br />Location: Aldi, High Street, Reading<br />Date: 5 April 2026</p>
-                  <p>Dear Sir/Madam,</p>
-                  <p>I am writing to formally challenge the above parking charge on the following grounds.</p>
-                  <p><strong>1. Failure to comply with the Protection of Freedoms Act 2012, Schedule 4, Paragraph 9</strong></p>
-                  <p>The Notice to Keeper was received on 8 April 2026, which is 3 days after the alleged contravention. While this falls within the 14-day statutory period, the notice fails to contain the prescribed wording required under POFA 2012...</p>
-                  <p className="text-teal-600 font-sans text-xs font-semibold mt-4 pt-3 border-t">
-                    Each letter continues for 1-2 pages with specific legal arguments tailored to your case.
-                  </p>
-                </div>
-              </div>
+              </ScrollReveal>
             </div>
           </div>
 
-          <div className="mt-12 text-center">
+          <ScrollReveal className="mt-14 text-center">
             <Link
               href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700"
+              className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_-10px_rgba(13,148,136,0.55)] transition-all hover:shadow-[0_14px_40px_-10px_rgba(13,148,136,0.7)] hover:-translate-y-0.5"
             >
-              Get Your Legal Letter
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+              <span className="relative">Get your legal letter</span>
+              <svg className="relative h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </Link>
-            <p className="mt-3 text-sm text-gray-500">Free assessment first. Only pay if you want the letter.</p>
-          </div>
+            <p className="mt-3 text-sm text-slate-500">Free assessment first. Only pay if you want the letter.</p>
+          </ScrollReveal>
         </Container>
       </section>
 
@@ -696,26 +688,33 @@ export default function HomePage() {
       </section>
 
       {/* ==================== PRICING ==================== */}
-      <section className="py-20 sm:py-24 bg-gray-50" id="pricing">
+      <section className="relative overflow-hidden py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white" id="pricing">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="aaf-mesh-b absolute left-1/2 top-0 h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-teal-200/40 to-emerald-200/30 blur-3xl" />
+        </div>
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Simple, Transparent Pricing
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+              Pricing
+            </span>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Simple, transparent, refunded if delivery fails
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Your free assessment tells you your chances first. Only pay if you
-              want to proceed with an appeal letter.
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Free assessment first. Pay only if you want the letter.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-            {pricingPlans.map((plan) => (
-              <PricingCard key={plan.name} {...plan} />
+          <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 aaf-stagger">
+            {pricingPlans.map((plan, i) => (
+              <ScrollReveal key={plan.name} index={i}>
+                <PricingCard {...plan} />
+              </ScrollReveal>
             ))}
           </div>
 
-          <p className="mt-8 text-center text-sm text-gray-500">
-            All prices include VAT. Secure payment via Stripe.
+          <p className="mt-10 text-center text-sm text-slate-500">
+            All prices include VAT  ·  Secure payment via Stripe  ·  No subscription
           </p>
         </Container>
       </section>
@@ -723,150 +722,90 @@ export default function HomePage() {
       {/* ==================== WHY APPEALAFINE ==================== */}
       <section className="py-20 sm:py-24 bg-white">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Why a Specialist Tool Matters
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+              Why specialist beats generic
+            </span>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Why a specialist tool matters
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Generic AI tools do not understand the nuances of UK parking law.
-              Our AI was built specifically for this purpose, and it shows in
-              every letter.
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Generic chatbots do not understand the nuances of UK parking law. Ours is built for nothing else — and it shows in every letter.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
-            {/* Built on UK parking law */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
-                <svg
-                  className="h-6 w-6 text-teal-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Trained on UK Parking Law
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Our AI has been trained on every relevant statute, regulation,
-                and Code of Practice. It knows the difference between a council
-                PCN and a private charge notice, and it applies the right law
-                to each. A generic chatbot cannot do this reliably.
-              </p>
-            </div>
-
-            {/* Personalised, not generic */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
-                <svg
-                  className="h-6 w-6 text-teal-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Written for Your Exact Case
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Your letter is generated from scratch using your specific
-                circumstances, dates, operator, and location. Operators and
-                councils can spot generic templates immediately. Our letters
-                are unique to each case.
-              </p>
-            </div>
-
-            {/* Know before you pay */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
-                <svg
-                  className="h-6 w-6 text-teal-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Know Before You Pay
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Your free assessment tells you your chances of success before
-                you spend anything. We believe you deserve honest information,
-                not a sales pitch.
-              </p>
-            </div>
-
-            {/* Operator intelligence */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50">
-                <svg
-                  className="h-6 w-6 text-teal-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">
-                Knows Every Operator
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                Our system knows the appeal track record, enforcement patterns,
-                and known weaknesses of over 70 private parking operators and
-                every UK council. It selects arguments that have succeeded
-                against your specific operator at independent appeal.
-              </p>
-            </div>
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 aaf-stagger">
+            {[
+              {
+                title: "Trained on UK parking law",
+                desc: "Every relevant statute, regulation and Code of Practice. Knows the difference between a council PCN and a private charge — and applies the right law to each.",
+                gradient: "from-teal-500 to-teal-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                ),
+              },
+              {
+                title: "Written for your exact case",
+                desc: "Generated from scratch using your circumstances, dates, operator and location. Operators spot mail-merge templates immediately. Every letter we send is unique.",
+                gradient: "from-emerald-500 to-emerald-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                ),
+              },
+              {
+                title: "Know before you pay",
+                desc: "Your free assessment tells you your chances of success before you spend anything. Honest information, not a sales pitch.",
+                gradient: "from-sky-500 to-cyan-600",
+                icon: (
+                  <>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </>
+                ),
+              },
+              {
+                title: "Knows every operator",
+                desc: "Track record, enforcement patterns and known weaknesses of 70+ private operators and every UK council — and the arguments that have actually won at POPLA and IAS.",
+                gradient: "from-violet-500 to-fuchsia-600",
+                icon: (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                ),
+              },
+            ].map((item, i) => (
+              <ScrollReveal
+                key={item.title}
+                index={i}
+                className="group relative rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_24px_50px_-24px_rgba(15,23,42,0.25)]"
+              >
+                <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${item.gradient} text-white shadow-[0_8px_20px_-8px_rgba(15,23,42,0.4)] transition-transform group-hover:scale-110`}>
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+                    {item.icon}
+                  </svg>
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-slate-900">{item.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-slate-600">{item.desc}</p>
+              </ScrollReveal>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* ==================== POPULAR APPEALS ==================== */}
-      <section className="py-20 sm:py-24 bg-gray-50">
+      <section className="py-20 sm:py-24 bg-slate-50/60">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Popular Appeal Guides
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-white border border-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600 shadow-sm">
+              Popular pathways
+            </span>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Find the right help, faster
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Find specific help for your situation, operator, or location.
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Specific guides for your operator, situation or location — written by the same engine that drafts your letter.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 aaf-stagger">
             {[
               { title: "ParkingEye Appeal", href: "/appeals/parkingeye", desc: "The UK's largest private operator. ANPR cameras, supermarkets, retail parks." },
               { title: "UKPC Appeal", href: "/appeals/ukpc", desc: "Known for hospitals and shopping centres. IPC member, appeals to IAS." },
@@ -877,82 +816,113 @@ export default function HomePage() {
               { title: "London Parking Fines", href: "/parking-fines/london", desc: "3.5 million PCNs per year. London Tribunals appeal process." },
               { title: "Statistics & Data", href: "/data", desc: "UK parking fine statistics, success rates, worst operators ranked." },
               { title: "Council vs Private", href: "/data/council-vs-private-parking-fine", desc: "Key differences in law, enforcement, and how to appeal each." },
-            ].map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-teal-200 hover:shadow-md"
-              >
-                <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-teal-600">
-                  Read guide
-                  <svg className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </Link>
+            ].map((item, i) => (
+              <ScrollReveal key={item.title} index={i} step={50}>
+                <Link
+                  href={item.href}
+                  className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-teal-300 hover:shadow-[0_20px_40px_-20px_rgba(13,148,136,0.4)]"
+                >
+                  <span aria-hidden="true" className="absolute left-0 top-6 h-8 w-1 origin-left scale-y-0 rounded-r-full bg-gradient-to-b from-teal-500 to-emerald-500 transition-transform duration-300 group-hover:scale-y-100" />
+                  <h3 className="text-base font-semibold text-slate-900 transition-colors group-hover:text-teal-700">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+                    {item.desc}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-teal-700">
+                    Read guide
+                    <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.4} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </Container>
       </section>
 
       {/* ==================== FAQ ==================== */}
-      <section className="py-20 sm:py-24 bg-gray-50">
+      <section className="py-20 sm:py-24 bg-white">
         <Container size="md">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Frequently Asked Questions
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+              FAQ
+            </span>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Common questions
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Everything you need to know about using AppealAFine to appeal your
-              fine.
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              Everything you need to know before you start.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="mt-12">
+          <ScrollReveal className="mt-12">
             <FAQ items={faqItems} />
-          </div>
+          </ScrollReveal>
         </Container>
       </section>
 
       {/* ==================== FINAL CTA ==================== */}
-      <section className="bg-slate-50 border-t border-slate-100">
-        <Container className="py-20 sm:py-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Don&apos;t Pay an Unfair Fine
+      <section className="relative overflow-hidden bg-slate-950 py-20 sm:py-24">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse 60% 80% at 50% 50%, #000 0%, transparent 75%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 60% 80% at 50% 50%, #000 0%, transparent 75%)",
+            }}
+          />
+          <div className="aaf-mesh-a absolute -top-20 left-1/4 h-[24rem] w-[24rem] rounded-full bg-teal-500/25 blur-3xl" />
+          <div className="aaf-mesh-b absolute -bottom-20 right-1/4 h-[22rem] w-[22rem] rounded-full bg-emerald-400/20 blur-3xl" />
+        </div>
+
+        <Container>
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-300 backdrop-blur-sm">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-teal-400" />
+              </span>
+              Free assessment in under 2 minutes
+            </span>
+            <h2 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+              Don&apos;t pay an{" "}
+              <span className="bg-gradient-to-r from-teal-300 via-emerald-300 to-teal-200 bg-clip-text text-transparent">unfair</span>{" "}
+              fine.
             </h2>
-            <p className="mt-4 text-lg text-slate-500">
-              Join thousands of UK drivers who have successfully appealed their
-              fines. Your free assessment takes just a few minutes.
+            <p className="mt-5 text-lg leading-relaxed text-slate-300">
+              Check your fine, see your appeal strength, and only pay if you want the letter. We&apos;ll refund you if it doesn&apos;t reach your inbox.
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
                 href="/appeal"
-                className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-white px-7 py-3.5 text-base font-semibold text-slate-900 shadow-[0_18px_40px_-12px_rgba(255,255,255,0.4)] transition-all hover:-translate-y-0.5 hover:shadow-[0_22px_50px_-12px_rgba(255,255,255,0.5)]"
               >
-                Start Your Free Assessment
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
+                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-teal-100/40 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+                <span className="relative">Start free assessment</span>
+                <svg className="relative h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </Link>
+              <Link
+                href="/sample-appeal-letter.pdf"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5"
+              >
+                Download sample
+              </Link>
             </div>
-          </div>
+            <p className="mt-6 text-xs text-slate-500">
+              No subscription  ·  Stripe-secured  ·  Refund if delivery fails
+            </p>
+          </ScrollReveal>
         </Container>
       </section>
     </>

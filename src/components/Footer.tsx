@@ -27,40 +27,85 @@ const footerLinks = {
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "About", href: "/about" },
+    { name: "Pricing", href: "/pricing" },
   ],
 };
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-gray-300">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Main footer */}
-        {/* Footer CTA */}
-        <div className="py-8 border-b border-gray-800">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h3 className="text-lg font-bold text-white">Got an unfair fine?</h3>
-              <p className="text-sm text-gray-400">Free assessment in under 2 minutes. No obligation.</p>
+    <footer className="relative overflow-hidden bg-slate-950 text-slate-300">
+      {/* Soft ambient lighting */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-40 left-1/4 h-[26rem] w-[26rem] rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-[22rem] w-[22rem] rounded-full bg-emerald-400/8 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Trust signal strip */}
+        <div className="grid grid-cols-1 gap-4 border-b border-white/5 py-6 sm:grid-cols-3">
+          {[
+            {
+              label: "Refund if delivery fails",
+              sub: "Letter not in your inbox? Full refund, no questions.",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              ),
+            },
+            {
+              label: "Stripe-secured payments",
+              sub: "Your card details never touch our servers.",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-3.75 11.25h16.5a1.5 1.5 0 001.5-1.5V12a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 12v8.25a1.5 1.5 0 001.5 1.5z" />
+              ),
+            },
+            {
+              label: "Real legal grounds",
+              sub: "POFA 2012, CRA 2015, Beavis. No fabricated citations.",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              ),
+            },
+          ].map((t) => (
+            <div key={t.label} className="flex items-start gap-3 rounded-xl bg-white/[0.025] px-4 py-3 ring-1 ring-white/5">
+              <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-teal-500/30 to-emerald-500/20 text-teal-300">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
+                  {t.icon}
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">{t.label}</p>
+                <p className="mt-0.5 text-xs leading-relaxed text-slate-400">{t.sub}</p>
+              </div>
             </div>
-            <Link
-              href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white hover:bg-teal-700 transition-colors"
-            >
-              Start Your Free Assessment
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </Link>
-          </div>
+          ))}
         </div>
 
+        {/* CTA */}
+        <div className="flex flex-col items-center justify-between gap-4 border-b border-white/5 py-8 sm:flex-row sm:items-center">
+          <div className="text-center sm:text-left">
+            <h3 className="text-lg font-semibold text-white">Got an unfair fine?</h3>
+            <p className="mt-1 text-sm text-slate-400">Free assessment in under 2 minutes. No obligation.</p>
+          </div>
+          <Link
+            href="/appeal"
+            className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_-10px_rgba(13,148,136,0.7)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-10px_rgba(13,148,136,0.85)]"
+          >
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+            <span className="relative">Start your free assessment</span>
+            <svg className="relative h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Links */}
         <div className="grid grid-cols-2 gap-8 py-12 sm:grid-cols-3 lg:grid-cols-5">
-          {/* Brand column */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600">
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-[0_4px_12px_-2px_rgba(13,148,136,0.45)]">
+                <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/30 via-white/0 to-transparent" aria-hidden="true" />
                 <svg
-                  className="h-4.5 w-4.5 text-white"
+                  className="relative h-5 w-5 text-white"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -73,24 +118,23 @@ export default function Footer() {
                   />
                 </svg>
               </div>
-              <span className="text-lg font-bold text-white">
-                Appeal<span className="text-gray-300">AFine</span>
+              <span className="text-lg font-semibold tracking-tight text-white">
+                Appeal<span className="bg-gradient-to-r from-teal-300 to-emerald-300 bg-clip-text text-transparent">AFine</span>
               </span>
             </Link>
-            <p className="mt-3 text-sm leading-relaxed text-gray-400">
-              Helping UK drivers challenge unfair fines. Professional appeal letters for parking fines, bus lane PCNs, congestion charges, and more.
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              Helping UK drivers challenge unfair parking, bus lane, congestion charge and ULEZ fines with letters that cite the law correctly.
             </p>
           </div>
 
-          {/* Free Tools */}
           <div>
-            <h3 className="text-sm font-semibold text-white">Free Tools</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Free Tools</h3>
+            <ul className="mt-4 space-y-2.5">
               {footerLinks.freeTools.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </Link>
@@ -99,15 +143,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold text-white">Resources</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Resources</h3>
+            <ul className="mt-4 space-y-2.5">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </Link>
@@ -116,15 +159,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Popular */}
           <div>
-            <h3 className="text-sm font-semibold text-white">Popular</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Popular</h3>
+            <ul className="mt-4 space-y-2.5">
               {footerLinks.popular.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </Link>
@@ -133,15 +175,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h3 className="text-sm font-semibold text-white">Legal</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-white">Legal</h3>
+            <ul className="mt-4 space-y-2.5">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {link.name}
                   </Link>
@@ -151,33 +192,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Trust + contact */}
-        <div className="border-t border-gray-800 py-6">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-gray-400">
-            <span className="inline-flex items-center gap-1.5">
-              <svg className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              Refund if letter delivery fails
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <svg className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-3.75 11.25h16.5a1.5 1.5 0 001.5-1.5V12a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 12v8.25a1.5 1.5 0 001.5 1.5z" /></svg>
-              Stripe-secured payments
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <svg className="h-4 w-4 text-green-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
-              <a href="mailto:support@appealafine.co.uk" className="hover:text-white transition-colors">support@appealafine.co.uk</a>
-            </span>
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-gray-500">
-            AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are templates personalised to your circumstances. If you need legal advice, please consult a qualified solicitor. Success rates vary depending on the specifics of each case.
-          </p>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-gray-800 py-4">
-          <p className="text-xs text-gray-500">
+        {/* Bottom strip */}
+        <div className="flex flex-col items-start gap-4 border-t border-white/5 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-slate-500">
             &copy; {new Date().getFullYear()} AppealAFine. All rights reserved.
           </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
+            <a href="mailto:support@appealafine.co.uk" className="inline-flex items-center gap-1.5 transition-colors hover:text-white">
+              <svg className="h-3.5 w-3.5 text-teal-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              support@appealafine.co.uk
+            </a>
+          </div>
         </div>
+
+        {/* Compliance */}
+        <p className="border-t border-white/5 py-6 text-[11px] leading-relaxed text-slate-500">
+          AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are drafted using established UK parking law and tribunal patterns, then personalised to your circumstances. If you need legal advice — particularly if your case has reached a county court claim — please consult a qualified solicitor. Appeal outcomes are never guaranteed.
+        </p>
       </div>
     </footer>
   );
