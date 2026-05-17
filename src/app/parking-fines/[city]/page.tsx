@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -26,12 +26,12 @@ export async function generateMetadata({
     title: city.seoTitle,
     description: city.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/parking-fines/${city.slug}`,
+      canonical: `https://www.appealafine.co.uk/parking-fines/${city.slug}`,
     },
     openGraph: {
       title: city.seoTitle,
       description: city.seoDescription,
-      url: `https://appealafine.co.uk/parking-fines/${city.slug}`,
+      url: `https://www.appealafine.co.uk/parking-fines/${city.slug}`,
       type: "article",
     },
   };
@@ -246,11 +246,11 @@ export default async function CityPage({
     "@type": "WebPage",
     name: `Parking Fines in ${city.name}`,
     description: city.seoDescription,
-    url: `https://appealafine.co.uk/parking-fines/${city.slug}`,
+    url: `https://www.appealafine.co.uk/parking-fines/${city.slug}`,
     isPartOf: {
       "@type": "WebSite",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     about: {
       "@type": "City",
@@ -270,19 +270,19 @@ export default async function CityPage({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://appealafine.co.uk",
+        item: "https://www.appealafine.co.uk",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Parking Fines",
-        item: "https://appealafine.co.uk/parking-fines",
+        item: "https://www.appealafine.co.uk/parking-fines",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: city.name,
-        item: `https://appealafine.co.uk/parking-fines/${city.slug}`,
+        item: `https://www.appealafine.co.uk/parking-fines/${city.slug}`,
       },
     ],
   };
@@ -407,7 +407,7 @@ export default async function CityPage({
         {/* Known Hotspots */}
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            <span className="mr-2">📍</span>
+            <span className="mr-2">ðŸ“</span>
             Known Hotspots in {city.name}
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -495,7 +495,7 @@ export default async function CityPage({
         {/* FAQs */}
         {city.faqs.length > 0 && (
           <section className="mt-12">
-            {/* FAQPage schema is emitted by <FAQ /> below — do not duplicate here. */}
+            {/* FAQPage schema is emitted by <FAQ /> below â€” do not duplicate here. */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -526,7 +526,7 @@ export default async function CityPage({
             href="/parking-fines"
             className="text-sm text-teal-600 hover:text-teal-700 transition-colors"
           >
-            ← View all cities
+            â† View all cities
           </Link>
         </div>
       </Container>

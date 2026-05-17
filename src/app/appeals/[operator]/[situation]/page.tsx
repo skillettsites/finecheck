@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -33,12 +33,12 @@ export async function generateMetadata({
     title: combo.seoTitle,
     description: combo.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      canonical: `https://www.appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     },
     openGraph: {
       title: combo.seoTitle,
       description: combo.seoDescription,
-      url: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      url: `https://www.appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
       type: "article",
     },
   };
@@ -169,15 +169,15 @@ export default async function OperatorSituationPage({
     "@type": "Article",
     headline: combo.title,
     description: combo.seoDescription,
-    url: `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+    url: `https://www.appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
+      "@id": `https://www.appealafine.co.uk/appeals/${combo.operatorSlug}/${combo.slug}`,
     },
   };
 

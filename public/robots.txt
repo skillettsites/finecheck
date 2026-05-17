@@ -62,7 +62,7 @@ User-agent: Amazonbot
 Disallow: /
 
 # Host
-Host: https://appealafine.co.uk
+Host: https://www.appealafine.co.uk
 
 # Sitemaps
-Sitemap: https://appealafine.co.uk/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/sitemap.xml

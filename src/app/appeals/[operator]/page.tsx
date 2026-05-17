@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: op.seoTitle,
     description: op.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/appeals/${op.slug}`,
+      canonical: `https://www.appealafine.co.uk/appeals/${op.slug}`,
     },
     openGraph: {
       title: op.seoTitle,
       description: op.seoDescription,
-      url: `https://appealafine.co.uk/appeals/${op.slug}`,
+      url: `https://www.appealafine.co.uk/appeals/${op.slug}`,
       type: "article",
     },
   };
@@ -133,9 +133,9 @@ export default async function OperatorPage({
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
-    mainEntityOfPage: `https://appealafine.co.uk/appeals/${op.slug}`,
+    mainEntityOfPage: `https://www.appealafine.co.uk/appeals/${op.slug}`,
   };
 
   return (

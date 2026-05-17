@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -33,12 +33,12 @@ export async function generateMetadata({
     title: bf.seoTitle,
     description: bf.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/london/${bf.slug}`,
+      canonical: `https://www.appealafine.co.uk/london/${bf.slug}`,
     },
     openGraph: {
       title: bf.seoTitle,
       description: bf.seoDescription,
-      url: `https://appealafine.co.uk/london/${bf.slug}`,
+      url: `https://www.appealafine.co.uk/london/${bf.slug}`,
       type: "article",
     },
   };
@@ -246,11 +246,11 @@ export default async function BoroughFinePage({
     "@type": "Article",
     headline: bf.title,
     description: bf.seoDescription,
-    url: `https://appealafine.co.uk/london/${bf.slug}`,
+    url: `https://www.appealafine.co.uk/london/${bf.slug}`,
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     about: {
       "@type": "AdministrativeArea",
@@ -443,7 +443,7 @@ export default async function BoroughFinePage({
         {/* FAQs */}
         {bf.faqs.length > 0 && (
           <section className="mt-12">
-            {/* FAQPage schema is emitted by <FAQ /> below — do not duplicate here. */}
+            {/* FAQPage schema is emitted by <FAQ /> below â€” do not duplicate here. */}
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>

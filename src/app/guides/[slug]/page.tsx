@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: guide.seoTitle,
     description: guide.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/guides/${guide.slug}`,
+      canonical: `https://www.appealafine.co.uk/guides/${guide.slug}`,
     },
     openGraph: {
       title: guide.seoTitle,
       description: guide.seoDescription,
-      url: `https://appealafine.co.uk/guides/${guide.slug}`,
+      url: `https://www.appealafine.co.uk/guides/${guide.slug}`,
       type: "article",
     },
   };
@@ -303,15 +303,15 @@ export default async function GuidePage({
     "@type": "Article",
     headline: guide.title,
     description: guide.seoDescription,
-    url: `https://appealafine.co.uk/guides/${guide.slug}`,
+    url: `https://www.appealafine.co.uk/guides/${guide.slug}`,
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://appealafine.co.uk/guides/${guide.slug}`,
+      "@id": `https://www.appealafine.co.uk/guides/${guide.slug}`,
     },
   };
 

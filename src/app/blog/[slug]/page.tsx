@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -26,12 +26,12 @@ export async function generateMetadata({
     title: post.seoTitle,
     description: post.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/blog/${post.slug}`,
+      canonical: `https://www.appealafine.co.uk/blog/${post.slug}`,
     },
     openGraph: {
       title: post.seoTitle,
       description: post.seoDescription,
-      url: `https://appealafine.co.uk/blog/${post.slug}`,
+      url: `https://www.appealafine.co.uk/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedDate,
     },
@@ -344,20 +344,20 @@ export default async function BlogPostPage({
     author: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
       logo: {
         "@type": "ImageObject",
-        url: "https://appealafine.co.uk/logo.png",
+        url: "https://www.appealafine.co.uk/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://appealafine.co.uk/blog/${post.slug}`,
+      "@id": `https://www.appealafine.co.uk/blog/${post.slug}`,
     },
   };
 
@@ -367,7 +367,7 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
+      {/* FAQPage schema is emitted by the <FAQ /> component below â€” do not duplicate here. */}
 
       <section className="bg-white border-b border-gray-200 py-6">
         <Container>
@@ -403,7 +403,7 @@ export default async function BlogPostPage({
                       year: "numeric",
                     })}
                   </time>
-                  <span>·</span>
+                  <span>Â·</span>
                   <span>{readTime} min read</span>
                 </div>
               </header>

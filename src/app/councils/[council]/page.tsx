@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -27,12 +27,12 @@ export async function generateMetadata({
     title: council.seoTitle,
     description: council.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/councils/${council.slug}`,
+      canonical: `https://www.appealafine.co.uk/councils/${council.slug}`,
     },
     openGraph: {
       title: council.seoTitle,
       description: council.seoDescription,
-      url: `https://appealafine.co.uk/councils/${council.slug}`,
+      url: `https://www.appealafine.co.uk/councils/${council.slug}`,
       type: "article",
     },
   };
@@ -45,9 +45,9 @@ function formatNumber(n: number): string {
 }
 
 function formatCurrency(n: number): string {
-  if (n >= 1000000) return `£${(n / 1000000).toFixed(0)}M`;
-  if (n >= 1000) return `£${Math.round(n / 1000)}k`;
-  return `£${n}`;
+  if (n >= 1000000) return `Â£${(n / 1000000).toFixed(0)}M`;
+  if (n >= 1000) return `Â£${Math.round(n / 1000)}k`;
+  return `Â£${n}`;
 }
 
 function getCouncilFAQs(council: Council) {
@@ -119,9 +119,9 @@ export default async function CouncilPage({
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
-    mainEntityOfPage: `https://appealafine.co.uk/councils/${council.slug}`,
+    mainEntityOfPage: `https://www.appealafine.co.uk/councils/${council.slug}`,
   };
 
   return (
@@ -130,7 +130,7 @@ export default async function CouncilPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
+      {/* FAQPage schema is emitted by the <FAQ /> component below â€” do not duplicate here. */}
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16">
@@ -148,7 +148,7 @@ export default async function CouncilPage({
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-sm font-semibold text-teal-700 ring-1 ring-teal-200">
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                  Letter from £5.99
+                  Letter from Â£5.99
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
                   <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -177,7 +177,7 @@ export default async function CouncilPage({
                 </Button>
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                Free assessment, then £5.99 letter or £9.99 premium pack. Refund if delivery fails.
+                Free assessment, then Â£5.99 letter or Â£9.99 premium pack. Refund if delivery fails.
               </p>
             </div>
 

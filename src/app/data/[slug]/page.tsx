@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -26,12 +26,12 @@ export async function generateMetadata({
     title: page.seoTitle,
     description: page.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/data/${page.slug}`,
+      canonical: `https://www.appealafine.co.uk/data/${page.slug}`,
     },
     openGraph: {
       title: page.seoTitle,
       description: page.seoDescription,
-      url: `https://appealafine.co.uk/data/${page.slug}`,
+      url: `https://www.appealafine.co.uk/data/${page.slug}`,
       type: "article",
     },
   };
@@ -262,15 +262,15 @@ export default async function DataPageDetail({
     "@type": "Article",
     headline: page.title,
     description: page.seoDescription,
-    url: `https://appealafine.co.uk/data/${page.slug}`,
+    url: `https://www.appealafine.co.uk/data/${page.slug}`,
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://appealafine.co.uk/data/${page.slug}`,
+      "@id": `https://www.appealafine.co.uk/data/${page.slug}`,
     },
   };
 

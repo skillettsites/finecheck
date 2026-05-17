@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -28,12 +28,12 @@ export async function generateMetadata({
     title: template.seoTitle,
     description: template.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/templates/${template.slug}`,
+      canonical: `https://www.appealafine.co.uk/templates/${template.slug}`,
     },
     openGraph: {
       title: template.seoTitle,
       description: template.seoDescription,
-      url: `https://appealafine.co.uk/templates/${template.slug}`,
+      url: `https://www.appealafine.co.uk/templates/${template.slug}`,
       type: "article",
     },
   };
@@ -103,14 +103,14 @@ export default async function TemplateDetailPage({
     author: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     publisher: {
       "@type": "Organization",
       name: "AppealAFine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
-    mainEntityOfPage: `https://appealafine.co.uk/templates/${template.slug}`,
+    mainEntityOfPage: `https://www.appealafine.co.uk/templates/${template.slug}`,
   };
 
   return (
@@ -119,7 +119,7 @@ export default async function TemplateDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      {/* FAQPage schema is emitted by the <FAQ /> component below — do not duplicate here. */}
+      {/* FAQPage schema is emitted by the <FAQ /> component below â€” do not duplicate here. */}
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-blue-50 to-white border-b border-gray-100">

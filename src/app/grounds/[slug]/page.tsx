@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
@@ -26,12 +26,12 @@ export async function generateMetadata({
     title: ground.seoTitle,
     description: ground.seoDescription,
     alternates: {
-      canonical: `https://appealafine.co.uk/grounds/${ground.slug}`,
+      canonical: `https://www.appealafine.co.uk/grounds/${ground.slug}`,
     },
     openGraph: {
       title: ground.seoTitle,
       description: ground.seoDescription,
-      url: `https://appealafine.co.uk/grounds/${ground.slug}`,
+      url: `https://www.appealafine.co.uk/grounds/${ground.slug}`,
       type: "article",
     },
   };
@@ -293,15 +293,15 @@ export default async function GroundPage({
     "@type": "Article",
     headline: ground.title,
     description: ground.seoDescription,
-    url: `https://appealafine.co.uk/grounds/${ground.slug}`,
+    url: `https://www.appealafine.co.uk/grounds/${ground.slug}`,
     publisher: {
       "@type": "Organization",
       name: "Appeal a Fine",
-      url: "https://appealafine.co.uk",
+      url: "https://www.appealafine.co.uk",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://appealafine.co.uk/grounds/${ground.slug}`,
+      "@id": `https://www.appealafine.co.uk/grounds/${ground.slug}`,
     },
   };
 

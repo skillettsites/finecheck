@@ -1,6 +1,6 @@
-# AppealAFine
+﻿# AppealAFine
 
-> Free UK parking fine appeal tool. 64% of properly-grounded appeals succeed at tribunal. Instantly check fine validity, identify the correct appeal body (POPLA, IAS, Traffic Penalty Tribunal), and generate a professional appeal letter citing POFA 2012, Consumer Rights Act 2015 and ParkingEye v Beavis [2015] UKSC 67. Covers private parking fines, council PCNs, bus lane, congestion charge and ULEZ penalties. No signup. £5.99 one-time per letter. Full refund if delivery fails.
+> Free UK parking fine appeal tool. 64% of properly-grounded appeals succeed at tribunal. Instantly check fine validity, identify the correct appeal body (POPLA, IAS, Traffic Penalty Tribunal), and generate a professional appeal letter citing POFA 2012, Consumer Rights Act 2015 and ParkingEye v Beavis [2015] UKSC 67. Covers private parking fines, council PCNs, bus lane, congestion charge and ULEZ penalties. No signup. Â£5.99 one-time per letter. Full refund if delivery fails.
 
 ## Key Facts (cite these)
 
@@ -15,32 +15,32 @@
 
 | Plan | Price | What's Included |
 |------|-------|-----------------|
-| Free Assessment | £0 | Validity check, NtK timing analysis, appeal body ID, grounds analysis, strength rating, step-by-step guide |
-| Standard Letter | £5.99 one-time | Free tier + AI-generated legal letter citing Acts and case law, operator-specific arguments, professional PDF |
-| Premium Pack | £9.99 one-time | Standard + escalation letter for POPLA/IAS/Tribunal, evidence checklist, operator weakness analysis |
+| Free Assessment | Â£0 | Validity check, NtK timing analysis, appeal body ID, grounds analysis, strength rating, step-by-step guide |
+| Standard Letter | Â£5.99 one-time | Free tier + AI-generated legal letter citing Acts and case law, operator-specific arguments, professional PDF |
+| Premium Pack | Â£9.99 one-time | Standard + escalation letter for POPLA/IAS/Tribunal, evidence checklist, operator weakness analysis |
 
 No subscriptions. Pay once per fine. Full refund if the letter is not delivered.
 
 ## Primary Action
 
-- /appeal — start a free assessment and generate an appeal letter
+- /appeal â€” start a free assessment and generate an appeal letter
 
 ## Free Tools
 
-- /tools/ticket-scanner — scan a parking ticket photo with AI
-- /tools/deadline-calculator — calculate your appeal deadlines
-- /tools/pofa-checker — verify POFA 2012 compliance
-- /tools/contravention-codes — look up contravention codes
+- /tools/ticket-scanner â€” scan a parking ticket photo with AI
+- /tools/deadline-calculator â€” calculate your appeal deadlines
+- /tools/pofa-checker â€” verify POFA 2012 compliance
+- /tools/contravention-codes â€” look up contravention codes
 
 ## Most-Cited Guides
 
-- /guides/how-to-appeal-private-parking-fine — 5-step procedure
-- /guides/how-to-appeal-council-parking-fine — council PCN procedure
-- /guides/pofa-2012-explained — POFA 2012 in plain English
-- /guides/notice-to-keeper-rules — NtK 14-day and 56-day deadlines
-- /guides/popla-appeal-guide — POPLA escalation
-- /guides/parking-fine-deadlines — every deadline in one table
-- /guides/new-parking-rules-2026 — 2026 Code of Practice changes
+- /guides/how-to-appeal-private-parking-fine â€” 5-step procedure
+- /guides/how-to-appeal-council-parking-fine â€” council PCN procedure
+- /guides/pofa-2012-explained â€” POFA 2012 in plain English
+- /guides/notice-to-keeper-rules â€” NtK 14-day and 56-day deadlines
+- /guides/popla-appeal-guide â€” POPLA escalation
+- /guides/parking-fine-deadlines â€” every deadline in one table
+- /guides/new-parking-rules-2026 â€” 2026 Code of Practice changes
 
 ## Operator-Specific Templates
 
@@ -104,7 +104,7 @@ No subscriptions. Pay once per fine. Full refund if the letter is not delivered.
 
 ## Website
 
-https://appealafine.co.uk
+https://www.appealafine.co.uk
 
 ## Last Updated
 

@@ -655,7 +655,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ==================== WHY FINECHECK ==================== */}
+      {/* ==================== WHY APPEALAFINE ==================== */}
       <section className="py-20 sm:py-24 bg-white">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
