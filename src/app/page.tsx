@@ -189,7 +189,7 @@ export default function HomePage() {
         <Container className="relative py-16 sm:py-20 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
             {/* Left: copy + CTA */}
-            <div className="text-center lg:text-left">
+            <div className="min-w-0 text-center lg:text-left">
               <ScrollReveal immediate>
                 <span className="inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-teal-50/60 px-3 py-1 text-xs font-semibold text-teal-700 backdrop-blur-sm">
                   <span className="relative flex h-2 w-2">

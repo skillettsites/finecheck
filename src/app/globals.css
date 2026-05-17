@@ -19,6 +19,15 @@ html {
   font-feature-settings: "cv11", "ss01", "ss03";
 }
 
+html,
+body {
+  /* Prevent any rogue child element (gradient mesh, absolute float chips, an
+     accidentally too-wide grid track) from triggering a document-level
+     horizontal scroll. Sections that need internal overflow already use
+     `overflow-hidden`; this is just the final safety net. */
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-sans, system-ui), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-feature-settings: "cv11", "ss01", "ss03";
