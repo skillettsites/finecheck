@@ -200,7 +200,7 @@ export default function HomePage() {
                 </span>
               </ScrollReveal>
 
-              <ScrollReveal immediate index={1} as="h1" className="aaf-stagger mt-6 text-[2rem] font-semibold tracking-[-0.025em] text-slate-900 leading-[1.08] sm:text-5xl sm:tracking-[-0.03em] sm:leading-[1.05] lg:text-[3.75rem] [text-wrap:balance]">
+              <ScrollReveal immediate index={1} as="h1" className="aaf-stagger mt-6 text-[1.75rem] font-semibold tracking-[-0.02em] text-slate-900 leading-[1.1] sm:text-5xl sm:tracking-[-0.03em] sm:leading-[1.05] lg:text-[3.75rem] [text-wrap:balance] [overflow-wrap:break-word]">
                 Cancel your parking fine{" "}
                 <span className="relative inline-block">
                   <span className="relative bg-gradient-to-r from-teal-600 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
