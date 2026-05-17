@@ -28,6 +28,9 @@ const nextConfig: NextConfig = {
     '/api/send-letter': [
       './node_modules/pdfkit/js/data/**/*',
     ],
+    '/api/webhooks/stripe': [
+      './node_modules/pdfkit/js/data/**/*',
+    ],
   },
   serverExternalPackages: ['pdfkit'],
   async headers() {

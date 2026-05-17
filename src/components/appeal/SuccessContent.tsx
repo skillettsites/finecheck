@@ -212,33 +212,54 @@ export default function SuccessContent() {
       }
     }
 
-    function sendEmail(parsed: SavedAppeal, letter: string, escalation?: string, checklist?: string) {
+    async function sendEmail(parsed: SavedAppeal, letter: string, escalation?: string, checklist?: string) {
       const alreadySent = sessionStorage.getItem("finecheck_email_sent");
-      if (parsed.form.email && !alreadySent) {
-        sessionStorage.setItem("finecheck_email_sent", "true");
-        fetch("/api/send-letter", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: parsed.form.email,
-            letterContent: letter,
-            fineType: parsed.form.fineType,
-            operatorName: parsed.form.operatorName,
-            councilName: parsed.form.councilName,
-            vehicleReg: parsed.form.vehicleReg,
-            location: parsed.form.location,
-            fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
-            productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
-            escalationLetter: escalation,
-            evidenceChecklist: checklist,
-          }),
-        })
-          .then((res) => {
-            if (res.ok) setEmailSent(true);
-            else setEmailError(true);
-          })
-          .catch(() => setEmailError(true));
+      if (!parsed.form.email || alreadySent) return;
+
+      // The Stripe webhook usually sends the email server-side within a few
+      // seconds of payment. Check before sending from the client to avoid
+      // sending two PDFs to the same customer.
+      const stripeSessionId = new URLSearchParams(window.location.search).get("session_id") || "";
+      if (stripeSessionId.startsWith("cs_")) {
+        try {
+          const probe = await fetch(`/api/session-status?session_id=${encodeURIComponent(stripeSessionId)}`);
+          if (probe.ok) {
+            const status = await probe.json();
+            if (status?.letterSent) {
+              // Webhook already delivered. Show the success state without re-sending.
+              sessionStorage.setItem("finecheck_email_sent", "true");
+              setEmailSent(true);
+              return;
+            }
+          }
+        } catch {
+          // Lookup failed (offline, rate limit, etc). Proceed with client send as fallback.
+        }
       }
+
+      sessionStorage.setItem("finecheck_email_sent", "true");
+      fetch("/api/send-letter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: parsed.form.email,
+          letterContent: letter,
+          fineType: parsed.form.fineType,
+          operatorName: parsed.form.operatorName,
+          councilName: parsed.form.councilName,
+          vehicleReg: parsed.form.vehicleReg,
+          location: parsed.form.location,
+          fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
+          productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
+          escalationLetter: escalation,
+          evidenceChecklist: checklist,
+        }),
+      })
+        .then((res) => {
+          if (res.ok) setEmailSent(true);
+          else setEmailError(true);
+        })
+        .catch(() => setEmailError(true));
     }
 
     loadAndGenerate();

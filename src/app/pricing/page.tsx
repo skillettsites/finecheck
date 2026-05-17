@@ -1,4 +1,5 @@
 ﻿import { Metadata } from "next";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
@@ -274,6 +275,123 @@ export default function PricingPage() {
             ))}
           </div>
 
+        </Container>
+      </section>
+
+      {/* Sample Letter Preview */}
+      <section className="bg-white py-12 sm:py-16 border-t border-gray-100">
+        <Container>
+          <div className="mx-auto max-w-5xl">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-teal-700 ring-1 ring-teal-200">
+                See exactly what you get
+              </span>
+              <h2 className="mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Sample appeal letter
+              </h2>
+              <p className="mt-3 text-base text-gray-600 max-w-2xl mx-auto">
+                A real example of the letter we generate. Four substantive grounds, the
+                exact statutes and case law that apply, formatted to print straight
+                from your inbox.
+              </p>
+            </div>
+
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div className="order-2 lg:order-1">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">Tailored to your case, not a template</p>
+                      <p className="mt-0.5 text-sm text-gray-600">Operator, council, location, NtK timing, signage and your account of what happened are all woven into the letter.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">Cites real statutes and case law correctly</p>
+                      <p className="mt-0.5 text-sm text-gray-600">POFA 2012 Schedule 4, Consumer Rights Act 2015 s.62, the Private Parking Code of Practice 2024, ParkingEye v Beavis, Cavendish v Makdessi.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">Professional PDF, ready to send</p>
+                      <p className="mt-0.5 text-sm text-gray-600">Clean typography, signature block, footer reference. Print it or email it straight to the operator.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">Plain text copy alongside</p>
+                      <p className="mt-0.5 text-sm text-gray-600">Paste straight into the operator&apos;s appeal form or your own email if you prefer.</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="/sample-appeal-letter.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    Download sample letter (PDF)
+                  </a>
+                  <Button href="/appeal" variant="secondary" size="lg">
+                    Start your own appeal
+                  </Button>
+                </div>
+                <p className="mt-3 text-xs text-gray-500">
+                  3 pages, 12 KB · names and reference numbers fictional
+                </p>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <a
+                  href="/sample-appeal-letter.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm transition-shadow hover:shadow-lg"
+                  aria-label="Open sample appeal letter PDF in a new tab"
+                >
+                  <Image
+                    src="/sample-letter-preview.png"
+                    alt="First page of a sample AppealAFine appeal letter showing the addressee, reference, vehicle, date and location, with four numbered legal grounds."
+                    width={1262}
+                    height={1786}
+                    priority={false}
+                    className="block h-auto w-full"
+                  />
+                  <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-center gap-2 bg-gradient-to-t from-slate-900/85 via-slate-900/60 to-transparent py-4 text-sm font-semibold text-white opacity-0 transition-opacity group-hover:opacity-100">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                    Open full PDF
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 

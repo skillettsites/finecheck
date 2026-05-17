@@ -1286,31 +1286,50 @@ export default function AppealFlow() {
   }, [form, validateStep2, evidenceAnalyses]);
 
   const handleSelectProduct = useCallback(
-    (productId: string) => {
-      // Save form data to sessionStorage for the success page
+    async (productId: string) => {
+      const appeal = {
+        form,
+        assessment,
+        evidenceAnalyses,
+        productId,
+        timestamp: new Date().toISOString(),
+      };
+
+      // Keep a copy on the client so /appeal/success can display the letter
+      // immediately while the webhook is still preparing the emailed PDF.
       try {
-        sessionStorage.setItem(
-          "finecheck_appeal",
-          JSON.stringify({
-            form,
-            assessment,
-            evidenceAnalyses,
-            productId,
-            timestamp: new Date().toISOString(),
-          })
-        );
+        sessionStorage.setItem("finecheck_appeal", JSON.stringify(appeal));
       } catch {
         // sessionStorage might not be available
       }
 
-      // Redirect to Stripe Checkout
-      const params = new URLSearchParams({
-        product: productId,
-        fineType: form.fineType,
-      });
-      window.location.href = `/api/checkout?${params.toString()}`;
+      // POST appeal data so the server can encode it into Stripe metadata.
+      // The webhook reads it and generates+sends the letter server-side,
+      // which survives the user closing their tab after redirect to Stripe.
+      try {
+        const res = await fetch("/api/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            productId,
+            fineType: form.fineType,
+            appeal,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data?.url) {
+          // Fall back to GET if POST is rejected for any reason.
+          const params = new URLSearchParams({ product: productId, fineType: form.fineType });
+          window.location.href = `/api/checkout?${params.toString()}`;
+          return;
+        }
+        window.location.href = data.url;
+      } catch {
+        const params = new URLSearchParams({ product: productId, fineType: form.fineType });
+        window.location.href = `/api/checkout?${params.toString()}`;
+      }
     },
-    [form, assessment]
+    [form, assessment, evidenceAnalyses]
   );
 
   const handleBack = useCallback(() => {
