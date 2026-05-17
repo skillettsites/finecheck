@@ -54,17 +54,20 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-200 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100" : "bg-white border-b border-gray-100"
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/75 backdrop-blur-xl shadow-[0_1px_0_0_rgba(15,23,42,0.06),0_8px_24px_-12px_rgba(15,23,42,0.12)] border-b border-white/40"
+          : "bg-white/90 backdrop-blur-md border-b border-slate-100/80"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-600 group-hover:bg-teal-700 transition-colors">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 shadow-[0_4px_12px_-2px_rgba(13,148,136,0.45)] transition-transform group-hover:scale-105 group-active:scale-95">
+              <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/30 via-white/0 to-transparent" aria-hidden="true" />
               <svg
-                className="h-5 w-5 text-white"
+                className="relative h-5 w-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
@@ -77,8 +80,8 @@ export default function Header() {
                 />
               </svg>
             </div>
-            <span className="text-xl font-bold text-slate-900">
-              Appeal<span className="text-teal-600">AFine</span>
+            <span className="text-xl font-semibold tracking-tight text-slate-900">
+              Appeal<span className="bg-gradient-to-r from-teal-600 to-teal-500 bg-clip-text text-transparent">AFine</span>
             </span>
           </Link>
 
@@ -134,10 +137,11 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+              className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-gradient-to-br from-teal-600 to-teal-700 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_4px_14px_-4px_rgba(13,148,136,0.55)] transition-all hover:shadow-[0_6px_20px_-4px_rgba(13,148,136,0.7)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
             >
-              Start Your Appeal
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+              <span className="relative">Start Your Appeal</span>
+              <svg className="relative h-4 w-4 transition-transform group-hover/cta:translate-x-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </Link>

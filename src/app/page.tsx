@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
 import StatsCounter from "@/components/StatsCounter";
 import PricingCard from "@/components/PricingCard";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Get a Personalised PCN Appeal Letter, From £5.99 | AppealAFine",
@@ -164,201 +165,265 @@ export default function HomePage() {
   return (
     <>
       {/* ==================== HERO ==================== */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
-        <Container className="relative py-20 sm:py-28 lg:py-32">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Appeal Your Fine{" "}
-              <span className="text-teal-600">in Minutes</span>
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-slate-500 sm:text-xl">
-              Our specialist legal AI has been trained on every aspect of UK
-              parking law: the Traffic Management Act 2004, POFA 2012,
-              the Private Parking Code of Practice, and thousands of
-              tribunal decisions. It writes you a professional appeal letter
-              that cites the exact legislation and case law your fine violates.
-            </p>
+      <section className="relative overflow-hidden bg-white isolate">
+        {/* Animated gradient mesh */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="aaf-mesh-a absolute -top-32 -left-32 h-[28rem] w-[28rem] rounded-full bg-gradient-to-br from-teal-300/40 via-teal-200/20 to-transparent blur-3xl" />
+          <div className="aaf-mesh-b absolute top-20 -right-24 h-[26rem] w-[26rem] rounded-full bg-gradient-to-br from-sky-300/30 via-cyan-200/20 to-transparent blur-3xl" />
+          <div className="aaf-mesh-a absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-gradient-to-br from-emerald-200/30 via-teal-100/20 to-transparent blur-3xl" />
+          {/* faint grid */}
+          <div
+            className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, #0f172a 1px, transparent 1px), linear-gradient(to bottom, #0f172a 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+              maskImage:
+                "radial-gradient(ellipse 75% 60% at 50% 35%, #000 0%, transparent 70%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 75% 60% at 50% 35%, #000 0%, transparent 70%)",
+            }}
+          />
+        </div>
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="/appeal"
-                className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition-all hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-              >
-                Start Your Free Assessment
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
+        <Container className="relative py-16 sm:py-20 lg:py-28">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+            {/* Left: copy + CTA */}
+            <div className="text-center lg:text-left">
+              <ScrollReveal immediate>
+                <span className="inline-flex items-center gap-2 rounded-full border border-teal-200/70 bg-teal-50/60 px-3 py-1 text-xs font-semibold text-teal-700 backdrop-blur-sm">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-500" />
+                  </span>
+                  AI built specifically for UK parking law
+                </span>
+              </ScrollReveal>
+
+              <ScrollReveal immediate index={1} as="h1" className="aaf-stagger mt-6 text-[2.5rem] font-semibold tracking-[-0.03em] text-slate-900 leading-[1.05] sm:text-5xl lg:text-[3.75rem]">
+                Cancel your parking fine{" "}
+                <span className="relative inline-block">
+                  <span className="relative bg-gradient-to-r from-teal-600 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
+                    in minutes
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    className="absolute -bottom-2 left-0 h-3 w-full text-teal-400/70"
+                    viewBox="0 0 200 12"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M2 9 Q 50 2 100 6 T 198 5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                .
+              </ScrollReveal>
+
+              <ScrollReveal immediate index={2} className="aaf-stagger mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 mx-auto">
+                A specialist legal AI trained on the Traffic Management Act, POFA 2012, the Private Parking Code of Practice and thousands of tribunal decisions. It writes a personalised appeal letter citing the exact statutes and case law that beat your fine.
+              </ScrollReveal>
+
+              <ScrollReveal immediate index={3} className="aaf-stagger mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start justify-center">
+                <Link
+                  href="/appeal"
+                  className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_30px_-10px_rgba(13,148,136,0.55)] transition-all hover:shadow-[0_14px_40px_-10px_rgba(13,148,136,0.7)] hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </Link>
-              <Link
-                href="/guides"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 px-8 py-4 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
-              >
-                Check Your Rights
-              </Link>
+                  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+                  <span className="relative">Start free assessment</span>
+                  <svg className="relative h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/sample-appeal-letter.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/70 backdrop-blur-sm px-6 py-3.5 text-base font-medium text-slate-700 transition-all hover:bg-white hover:border-slate-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                >
+                  <svg className="h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                  </svg>
+                  See sample letter
+                </Link>
+              </ScrollReveal>
+
+              <ScrollReveal immediate index={4} className="aaf-stagger mt-8 grid max-w-xl grid-cols-2 gap-x-6 gap-y-3 text-sm text-slate-600 lg:mx-0 mx-auto sm:grid-cols-2">
+                {[
+                  "Cites real UK legislation",
+                  "55-80% appeal success rate",
+                  "Letter emailed in minutes",
+                  "Refund if delivery fails",
+                ].map((label) => (
+                  <div key={label} className="flex items-center gap-2">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                      <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </ScrollReveal>
             </div>
 
-            {/* Trust badges */}
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <svg
-                  className="h-5 w-5 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Cites real UK legislation
+            {/* Right: floating letter preview card */}
+            <ScrollReveal immediate index={2} className="aaf-stagger relative mx-auto w-full max-w-md lg:max-w-none">
+              {/* Floating chip 1 */}
+              <div className="aaf-float absolute -top-3 -left-3 z-10 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200/70 bg-white/95 px-3 py-2 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.25)] backdrop-blur-sm">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.4} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <div className="text-left">
+                  <div className="text-xs font-semibold text-slate-900">POFA 14-day rule</div>
+                  <div className="text-[10px] text-slate-500">Strong ground detected</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <svg
-                  className="h-5 w-5 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                55-80% appeal success rate
+
+              {/* Floating chip 2 */}
+              <div className="aaf-float-delayed absolute -bottom-2 -right-2 z-10 hidden sm:flex items-center gap-2 rounded-xl border border-slate-200/70 bg-white/95 px-3 py-2 shadow-[0_8px_30px_-12px_rgba(15,23,42,0.25)] backdrop-blur-sm">
+                <span className="relative flex h-7 w-7 items-center justify-center">
+                  <span className="absolute inset-0 rounded-lg bg-teal-100" />
+                  <span className="relative text-[11px] font-bold text-teal-700">PDF</span>
+                </span>
+                <div className="text-left">
+                  <div className="text-xs font-semibold text-slate-900">Ready to send</div>
+                  <div className="text-[10px] text-slate-500">Delivered in &lt; 2 minutes</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <svg
-                  className="h-5 w-5 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Professional PDF delivered by email
+
+              <div className="relative rounded-2xl border border-slate-200/80 bg-gradient-to-b from-white to-slate-50 p-5 shadow-[0_30px_80px_-20px_rgba(15,23,42,0.25)] backdrop-blur-sm">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+                  </div>
+                  <span className="text-[10px] font-medium uppercase tracking-wider text-slate-400">Appeal Letter Preview</span>
+                </div>
+
+                <div className="mt-4 space-y-3 text-left">
+                  <div className="text-[10px] font-semibold uppercase tracking-wider text-teal-700">FORMAL APPEAL · PARKING CHARGE NOTICE</div>
+                  <div className="text-[15px] font-semibold leading-snug text-slate-900">Notice of Appeal — PCN PE‑26050017XXXXX</div>
+                  <div className="grid grid-cols-2 gap-2 rounded-lg bg-slate-100/70 p-3 text-[11px]">
+                    <div>
+                      <div className="text-[9px] uppercase tracking-wider text-slate-500">Vehicle</div>
+                      <div className="font-semibold text-slate-900">AB12 CDE</div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] uppercase tracking-wider text-slate-500">Operator</div>
+                      <div className="font-semibold text-slate-900">ParkingEye Ltd</div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] uppercase tracking-wider text-slate-500">Location</div>
+                      <div className="font-semibold text-slate-900">Asda, Hulme</div>
+                    </div>
+                    <div>
+                      <div className="text-[9px] uppercase tracking-wider text-slate-500">Date</div>
+                      <div className="font-semibold text-slate-900">1 May 2026</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    {[
+                      { n: 1, t: "Notice to Keeper served outside 14-day POFA window" },
+                      { n: 2, t: "Signage non-compliant with Code of Practice" },
+                      { n: 3, t: "Charge disproportionate under Beavis [2015] UKSC 67" },
+                      { n: 4, t: "Mandatory grace period not observed" },
+                    ].map((g) => (
+                      <div key={g.n} className="flex items-start gap-2">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-600 text-[10px] font-bold text-white">
+                          {g.n}
+                        </span>
+                        <span className="text-[12px] leading-relaxed text-slate-700">{g.t}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-3 rounded-lg border-l-2 border-teal-500 bg-teal-50/70 px-3 py-2">
+                    <div className="text-[9px] font-bold uppercase tracking-wider text-teal-700">Statutory basis</div>
+                    <div className="mt-0.5 text-[10px] leading-snug text-slate-600">POFA 2012 Sch 4 · CRA 2015 s.62 · Code of Practice 2024 · Beavis</div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <svg
-                  className="h-5 w-5 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Refund if delivery fails
-              </div>
-            </div>
+            </ScrollReveal>
           </div>
         </Container>
       </section>
 
       {/* ==================== HOW IT WORKS ==================== */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50/40 to-white">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              How It Works
+          <ScrollReveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-slate-600">
+              How it works
+            </span>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Three steps. No legal jargon.
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Three simple steps from fine to appeal. No legal knowledge needed.
+            <p className="mt-4 text-lg text-slate-600">
+              From fine to letter in under five minutes. We do the law, you sign and send.
             </p>
+          </ScrollReveal>
+
+          <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3 aaf-stagger">
+            {[
+              {
+                n: "1",
+                title: "Tell us about your fine",
+                body: "Scan the ticket or fill in the details. We detect whether it is a council PCN or private charge and route you to the right process.",
+              },
+              {
+                n: "2",
+                title: "Get a free assessment",
+                body: "Our AI checks validity against POFA 2012, the Code of Practice, and operator rules, then scores your appeal strength. No payment yet.",
+              },
+              {
+                n: "3",
+                title: "Receive your letter",
+                body: "A personalised PDF citing the exact statutes and case law that beat your fine, emailed within minutes. From £5.99.",
+              },
+            ].map((step, i) => (
+              <ScrollReveal
+                key={step.n}
+                index={i}
+                className="group relative rounded-2xl border border-slate-200/70 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-[0_20px_50px_-20px_rgba(13,148,136,0.35)]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-lg font-bold text-white shadow-[0_6px_16px_-6px_rgba(13,148,136,0.6)] transition-transform group-hover:scale-110">
+                  {step.n}
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-slate-900">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-slate-600">
+                  {step.body}
+                </p>
+                <span className="absolute right-6 top-6 text-slate-200 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-teal-500">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </ScrollReveal>
+            ))}
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">
-            {/* Step 1 */}
-            <div className="relative text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
-                <span className="text-2xl font-bold">1</span>
-              </div>
-              <h3 className="mt-6 text-lg font-semibold text-gray-900">
-                Tell Us About Your Fine
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Enter your fine details. We will identify whether it is a
-                council or private fine and route you to the right process.
-              </p>
-              {/* Connector line (desktop only) */}
-              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-slate-200 md:block" />
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
-                <span className="text-2xl font-bold">2</span>
-              </div>
-              <h3 className="mt-6 text-lg font-semibold text-gray-900">
-                Get Your Free Assessment
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Our AI analyses your situation against UK law and tells
-                you your chances of a successful appeal. Completely free.
-              </p>
-              <div className="absolute top-8 left-[calc(50%+48px)] hidden h-0.5 w-[calc(100%-96px)] bg-slate-200 md:block" />
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
-                <span className="text-2xl font-bold">3</span>
-              </div>
-              <h3 className="mt-6 text-lg font-semibold text-gray-900">
-                Get Your Legal Letter
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Our AI writes a professional appeal letter citing specific Acts of
-                Parliament, case law, and Codes of Practice. Delivered as a PDF
-                to your email. From just £5.99.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
+          <ScrollReveal className="mt-12 text-center">
             <Link
               href="/appeal"
-              className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700"
+              className="group/cta relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(15,23,42,0.5)] transition-all hover:bg-slate-800 hover:-translate-y-0.5"
             >
-              Start Now
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
+              Start now, free
+              <svg className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </Link>
-          </div>
+          </ScrollReveal>
         </Container>
       </section>
 
