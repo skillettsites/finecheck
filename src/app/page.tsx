@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
 
         <Container className="relative py-16 sm:py-20 lg:py-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-16">
             {/* Left: copy + CTA */}
             <div className="min-w-0 text-center lg:text-left">
               <ScrollReveal immediate>
