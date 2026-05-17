@@ -259,26 +259,36 @@ ground(
   ]
 );
 
-// Statutory basis callout — let it flow naturally; pdfkit will page-break if needed.
+// Statutory basis callout — size to text so copy edits never overflow.
 y += 4;
-const calloutH = 70;
+const calloutY = y;
+const calloutBody =
+  "Protection of Freedoms Act 2012, Schedule 4, paragraph 9(4)  ·  Consumer Rights Act 2015, s.62  ·  Private Parking Code of Practice 2024, sections 10 and 13  ·  ParkingEye Ltd v Beavis [2015] UKSC 67";
+const calloutTopOffset = 30;
+const calloutBottomPadding = 16;
+doc.font("Helvetica").fontSize(10);
+const calloutBodyHeight = doc.heightOfString(calloutBody, {
+  width: CONTENT_W - 32,
+  lineGap: 3,
+});
+const calloutH = calloutTopOffset + calloutBodyHeight + calloutBottomPadding;
 doc.save();
-doc.roundedRect(MARGIN_X, y, CONTENT_W, calloutH, 6).fill(TEAL_LIGHT_BG);
-doc.rect(MARGIN_X, y, 3, calloutH).fill(TEAL);
+doc.roundedRect(MARGIN_X, calloutY, CONTENT_W, calloutH, 6).fill(TEAL_LIGHT_BG);
+doc.rect(MARGIN_X, calloutY, 3, calloutH).fill(TEAL);
 doc.restore();
-line("STATUTORY BASIS", MARGIN_X + 18, y + 14, {
+line("STATUTORY BASIS", MARGIN_X + 18, calloutY + 14, {
   size: 9,
   color: TEAL_DARK,
   font: "Helvetica-Bold",
   characterSpacing: 1.2,
 });
-paragraph(
-  "Protection of Freedoms Act 2012, Schedule 4, paragraph 9(4)  ·  Consumer Rights Act 2015, s.62  ·  Private Parking Code of Practice 2024, sections 10 and 13  ·  ParkingEye Ltd v Beavis [2015] UKSC 67",
-  MARGIN_X + 18,
-  y + 30,
-  { size: 10, color: SLATE_700, width: CONTENT_W - 32, lineGap: 3 }
-);
-y += calloutH + 22;
+paragraph(calloutBody, MARGIN_X + 18, calloutY + calloutTopOffset, {
+  size: 10,
+  color: SLATE_700,
+  width: CONTENT_W - 32,
+  lineGap: 3,
+});
+y = calloutY + calloutH + 22;
 
 // Closing
 y = paragraph(
@@ -337,9 +347,8 @@ y = paragraph(
 );
 y += 14;
 
-// 3-column features
+// 3-column features — measure tallest card, then draw them all at that height
 const featureColW = (CONTENT_W - 24) / 3;
-const featureH = 120;
 const features = [
   {
     title: "Tailored to your case",
@@ -354,34 +363,41 @@ const features = [
     body: "PDF and plain text emailed instantly. Standard letter £5.99. Premium pack £9.99 adds an escalation letter and an evidence checklist.",
   },
 ];
+const featureBodyTop = 44;
+const featureBodyBottomPad = 16;
+const featureH = Math.max(
+  ...features.map((f) => {
+    doc.font("Helvetica").fontSize(9.5);
+    const h = doc.heightOfString(f.body, { width: featureColW - 30, lineGap: 3 });
+    return featureBodyTop + h + featureBodyBottomPad;
+  })
+);
+const featureRowY = y;
 features.forEach((f, i) => {
   const fx = MARGIN_X + (featureColW + 12) * i;
-  // soft slate-100 background card
   doc.save();
-  doc.roundedRect(fx, y, featureColW, featureH, 8).fill(SLATE_100);
+  doc.roundedRect(fx, featureRowY, featureColW, featureH, 8).fill(SLATE_100);
   doc.restore();
-  // teal accent strip down left edge
   doc.save();
-  doc.rect(fx, y, 3, featureH).fill(TEAL);
+  doc.rect(fx, featureRowY, 3, featureH).fill(TEAL);
   doc.restore();
-  // accent dot
   doc.save();
-  doc.circle(fx + 18, y + 22, 4).fill(TEAL);
+  doc.circle(fx + 18, featureRowY + 22, 4).fill(TEAL);
   doc.restore();
-  line(f.title, fx + 30, y + 17, {
+  line(f.title, fx + 30, featureRowY + 17, {
     size: 11,
     color: SLATE_900,
     font: "Helvetica-Bold",
     width: featureColW - 40,
   });
-  paragraph(f.body, fx + 18, y + 44, {
+  paragraph(f.body, fx + 18, featureRowY + featureBodyTop, {
     size: 9.5,
     color: SLATE_700,
     width: featureColW - 30,
     lineGap: 3,
   });
 });
-y += featureH + 22;
+y = featureRowY + featureH + 22;
 
 // What we covered
 y = line("WHAT THIS LETTER COVERS", MARGIN_X, y, {
@@ -417,24 +433,37 @@ bullets.forEach((b) => {
 });
 y += 6;
 
-// Disclaimer
-const discH = 88;
+// Disclaimer — measure the body text so the rect always wraps it
+const disclaimerY = y;
+const disclaimerBody =
+  "This is a sample document. Names, vehicle registrations and reference numbers are fictional. AppealAFine provides document preparation services and is not a firm of solicitors. Nothing in this document is legal advice. If your case involves a court claim, county court judgment, bailiffs or a hearing, please instruct a qualified solicitor. Appeal outcomes are not guaranteed; success depends on the strength of the facts and the evidence available.";
+const bodyTopOffset = 30;
+const bodyBottomPadding = 16;
+doc.font("Helvetica").fontSize(9.5);
+const bodyHeight = doc.heightOfString(disclaimerBody, {
+  width: CONTENT_W - 32,
+  lineGap: 3,
+  align: "justify",
+});
+const discH = bodyTopOffset + bodyHeight + bodyBottomPadding;
+
 doc.save();
-doc.roundedRect(MARGIN_X, y, CONTENT_W, discH, 6).fill(AMBER_100);
+doc.roundedRect(MARGIN_X, disclaimerY, CONTENT_W, discH, 6).fill(AMBER_100);
 doc.restore();
-line("IMPORTANT", MARGIN_X + 18, y + 14, {
+line("IMPORTANT", MARGIN_X + 18, disclaimerY + 14, {
   size: 9,
   color: AMBER_700,
   font: "Helvetica-Bold",
   characterSpacing: 1.2,
 });
-paragraph(
-  "This is a sample document. Names, vehicle registrations and reference numbers are fictional. AppealAFine provides document preparation services and is not a firm of solicitors. Nothing in this document is legal advice. If your case involves a court claim, county court judgment, bailiffs or a hearing, please instruct a qualified solicitor. Appeal outcomes are not guaranteed; success depends on the strength of the facts and the evidence available.",
-  MARGIN_X + 18,
-  y + 30,
-  { size: 9.5, color: AMBER_900, width: CONTENT_W - 32, lineGap: 3, align: "justify" }
-);
-y += discH + 18;
+paragraph(disclaimerBody, MARGIN_X + 18, disclaimerY + bodyTopOffset, {
+  size: 9.5,
+  color: AMBER_900,
+  width: CONTENT_W - 32,
+  lineGap: 3,
+  align: "justify",
+});
+y = disclaimerY + discH + 18;
 
 // CTA
 y = paragraph("Start your appeal at appealafine.co.uk/appeal", MARGIN_X, y, {

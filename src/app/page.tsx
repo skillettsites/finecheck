@@ -200,7 +200,7 @@ export default function HomePage() {
                 </span>
               </ScrollReveal>
 
-              <ScrollReveal immediate index={1} as="h1" className="aaf-stagger mt-6 text-[2.5rem] font-semibold tracking-[-0.03em] text-slate-900 leading-[1.05] sm:text-5xl lg:text-[3.75rem]">
+              <ScrollReveal immediate index={1} as="h1" className="aaf-stagger mt-6 text-[2rem] font-semibold tracking-[-0.025em] text-slate-900 leading-[1.08] sm:text-5xl sm:tracking-[-0.03em] sm:leading-[1.05] lg:text-[3.75rem] [text-wrap:balance]">
                 Cancel your parking fine{" "}
                 <span className="relative inline-block">
                   <span className="relative bg-gradient-to-r from-teal-600 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
@@ -224,7 +224,7 @@ export default function HomePage() {
                 .
               </ScrollReveal>
 
-              <ScrollReveal immediate index={2} className="aaf-stagger mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 mx-auto">
+              <ScrollReveal immediate index={2} className="aaf-stagger mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 mx-auto [text-wrap:pretty]">
                 A specialist legal AI trained on the Traffic Management Act, POFA 2012, the Private Parking Code of Practice and thousands of tribunal decisions. It writes a personalised appeal letter citing the exact statutes and case law that beat your fine.
               </ScrollReveal>
 
