@@ -2,6 +2,13 @@
 import { Resend } from "resend";
 import PDFDocument from "pdfkit";
 
+// pdfkit reads binary AFM font files from disk at runtime. Force the Node
+// runtime (Edge cannot load these) and pin the Vercel region so the bundle
+// behaviour is predictable. Combined with outputFileTracingIncludes in
+// next.config.ts this ensures Helvetica.afm ships with the function.
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 function getResend() {
   if (!process.env.RESEND_API_KEY) {
     throw new Error("RESEND_API_KEY is not set");

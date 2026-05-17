@@ -20,6 +20,16 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // pdfkit reads Helvetica.afm at runtime; the Next.js tracer does not pick
+  // up these binary asset files automatically, so the serverless bundle was
+  // throwing ENOENT on /api/send-letter. Force the trace to include all .afm
+  // metric files and the sRGB profile that pdfkit may also reach for.
+  outputFileTracingIncludes: {
+    '/api/send-letter': [
+      './node_modules/pdfkit/js/data/**/*',
+    ],
+  },
+  serverExternalPackages: ['pdfkit'],
   async headers() {
     return [
       {
