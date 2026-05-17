@@ -224,7 +224,7 @@ export default function HomePage() {
                 .
               </ScrollReveal>
 
-              <ScrollReveal immediate index={2} className="aaf-stagger mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 mx-auto [text-wrap:pretty]">
+              <ScrollReveal immediate index={2} className="aaf-stagger mt-5 w-full max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0 mx-auto">
                 A specialist legal AI trained on the Traffic Management Act, POFA 2012, the Private Parking Code of Practice and thousands of tribunal decisions. It writes a personalised appeal letter citing the exact statutes and case law that beat your fine.
               </ScrollReveal>
 
@@ -252,7 +252,7 @@ export default function HomePage() {
                 </Link>
               </ScrollReveal>
 
-              <ScrollReveal immediate index={4} className="aaf-stagger mt-8 grid max-w-xl grid-cols-2 gap-x-6 gap-y-3 text-sm text-slate-600 lg:mx-0 mx-auto sm:grid-cols-2">
+              <ScrollReveal immediate index={4} className="aaf-stagger mt-8 grid w-full max-w-xl grid-cols-2 gap-x-6 gap-y-3 text-sm text-slate-600 lg:mx-0 mx-auto">
                 {[
                   "Cites real UK legislation",
                   "55-80% appeal success rate",
