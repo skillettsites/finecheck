@@ -138,7 +138,9 @@ Total exposure on a typical claim is usually Â£230 to Â£270. If you win, you
 
 ## Final Word
 
-An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The Â£9.99 premium pack handles the drafting; your job is to log in on time and click the right buttons.`,
+An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The Â£9.99 premium pack handles the drafting; your job is to log in on time and click the right buttons.
+
+If your claim arrived on a **paper N1 form from CCBC** rather than through MCOL, the same 14-day / 28-day rules apply but the filing path differs — see the [County Court Claim Form N1 parking defence guide](/blog/county-court-claim-form-n1-parking-defence) for the postal route equivalent.`,
     faqs: [
       {
         question: "What is MCOL and why has a parking company used it against me?",

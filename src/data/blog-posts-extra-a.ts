@@ -104,6 +104,8 @@ If a court claim is eventually issued, you have 14 days to acknowledge service a
 
 You are not powerless. You are not about to be raided. But you do need to reply, and reply properly.
 
+If the DCBL chain has already escalated to a **doorstep visit notice** with an "enforcement agent will attend" warning, that is a different document and a different stage. The pre-Notice-of-Enforcement stop letter is in our [DCBL doorstep visit guide](/blog/dcbl-doorstep-visit-stop-letter), with the door-refusal script and the bailiff-fee timing rules.
+
 [[CTA:slate|Send the right reply tonight|Our £5.99 debt-collector response letter is drafted to your operator and your situation, cites the right statute, and arrives in your inbox in under 5 minutes.|Get the £5.99 letter|/templates/debt-collector-response-letter]]`,
     faqs: [
       {
@@ -753,6 +755,8 @@ The economics of BW Legal small claims are not as one-sided as their letters sug
 - A loss costs them more than the original charge through internal handling and write-off
 
 Many BW Legal claims are **discontinued** between defence and hearing once the operator weighs the disclosure burden against the £100-£170 sum at stake.
+
+If the [County Court Claim Form N1](/blog/county-court-claim-form-n1-parking-defence) has actually arrived (rather than just the BW Legal Letter Before Claim) the same defence grounds apply, but the 14-day clock is already running. The step-by-step N9 acknowledgement and N9B defence procedure is in that guide.
 
 ## If You've Already Missed the 14-Day Deadline
 

@@ -739,7 +739,9 @@ CCJs themselves are valid for **6 years** for enforcement without permission of 
 
 ## The Bottom Line
 
-A ParkingEye CCJ on your credit file is not always permanent. Three routes exist: paying within 30 days for full removal via Certificate of Cancellation, applying to set aside under CPR 13.3 if you were not served, or correcting inaccurate entries via the credit reference agencies under Data Protection Act 2018 and GDPR Article 16. Each fits a different fact pattern. Pick the right one, evidence it, and act promptly.`,
+A ParkingEye CCJ on your credit file is not always permanent. Three routes exist: paying within 30 days for full removal via Certificate of Cancellation, applying to set aside under CPR 13.3 if you were not served, or correcting inaccurate entries via the credit reference agencies under Data Protection Act 2018 and GDPR Article 16. Each fits a different fact pattern. Pick the right one, evidence it, and act promptly.
+
+If a **DCBL doorstep visit notice** has already arrived because the CCJ has been passed for enforcement, the immediate priority is the pre-NOE stop letter and the door-refusal script — see the [DCBL doorstep visit guide](/blog/dcbl-doorstep-visit-stop-letter). Bailiff action is stayed once the N244 set-aside application is filed.`,
     faqs: [
       {
         question: "How long does a ParkingEye CCJ stay on my credit file?",
