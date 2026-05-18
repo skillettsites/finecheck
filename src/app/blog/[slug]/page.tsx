@@ -359,6 +359,12 @@ export default async function BlogPostPage({
       "@type": "WebPage",
       "@id": `https://www.appealafine.co.uk/blog/${post.slug}`,
     },
+    // speakable signals the intro + key answers for AI assistant + voice
+    // search extraction. AI Overviews preferentially pull these blocks.
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".aaf-speakable", "h1"],
+    },
   };
 
   return (
@@ -407,6 +413,20 @@ export default async function BlogPostPage({
                   <span>{readTime} min read</span>
                 </div>
               </header>
+
+              {/* Key takeaway / speakable summary — AI assistants and SGE
+                  preferentially extract this 40-60 word block. */}
+              <aside
+                className="aaf-speakable not-prose mb-8 rounded-xl border-l-4 border-teal-500 bg-teal-50/60 p-5"
+                aria-label="Key takeaway"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-teal-700 mb-1.5">
+                  Key takeaway
+                </p>
+                <p className="text-base leading-relaxed text-slate-700">
+                  {post.description}
+                </p>
+              </aside>
 
               <div className="space-y-4">{contentElements}</div>
 

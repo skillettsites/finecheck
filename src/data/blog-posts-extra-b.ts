@@ -1,23 +1,23 @@
-import type { BlogPost } from "./blog-posts";
+﻿import type { BlogPost } from "./blog-posts";
 
 export const BATCH_B: BlogPost[] = [
   {
     slug: "mcol-parking-fine-defence-online",
     title: "MCOL Parking Fine: How To Acknowledge and Defend Online",
     description:
-      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. £9.99 pack writes the defence for you.",
+      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. Â£9.99 pack writes the defence for you.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "MCOL Parking Fine: How To Acknowledge and Defend It Online",
     seoDescription:
-      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. £9.99 pack writes the defence for you.",
+      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. Â£9.99 pack writes the defence for you.",
     content: `## You Have Just Been Served a Money Claim Online Form
 
 If a brown envelope from the **County Court Business Centre, Northampton** has just landed on your doormat, you are looking at an MCOL claim. Money Claim Online is the digital court system that nearly every private parking operator uses to chase unpaid Parking Charge Notices. ParkingEye, UKPC, Excel, Smart Parking, NCP and Euro Car Parks all funnel claims through this single portal because it is cheap, fast and largely automated.
 
 The good news: receiving an MCOL claim is not the disaster it looks. You have not lost. You have not been "found guilty." A claim form simply means the operator has paid the issue fee and the court has notified you. What happens next is entirely up to you, and the deadlines are tight.
 
-[[CTA:teal|Served with an MCOL claim?|Our £9.99 premium pack drafts a full court defence citing POFA 2012 Schedule 4, signage law and your specific case facts.|Get the defence pack|/pricing]]
+[[CTA:teal|Served with an MCOL claim?|Our Â£9.99 premium pack drafts a full court defence citing POFA 2012 Schedule 4, signage law and your specific case facts.|Get the defence pack|/pricing]]
 
 ## The Three Deadlines You Must Not Miss
 
@@ -65,13 +65,13 @@ The operator must prove they had authority from the landowner to issue charges a
 
 ### Defence Head 3: Signage Was Inadequate
 
-In **ParkingEye v Beavis [2015] UKSC 67**, the Supreme Court held that the £85 charge was enforceable partly because the signage was "large, prominent and clearly worded." Where signage is small, high, obscured, contradictory or absent, the contract that the operator says you accepted by parking arguably never came into existence.
+In **ParkingEye v Beavis [2015] UKSC 67**, the Supreme Court held that the Â£85 charge was enforceable partly because the signage was "large, prominent and clearly worded." Where signage is small, high, obscured, contradictory or absent, the contract that the operator says you accepted by parking arguably never came into existence.
 
-[[CTA:amber|Not sure which defences apply to your case?|Upload a photo of your Notice to Keeper and the £9.99 pack tells you which Schedule 4 sub-paragraphs failed and drafts the defence around them.|Check my notice|/appeal]]
+[[CTA:amber|Not sure which defences apply to your case?|Upload a photo of your Notice to Keeper and the Â£9.99 pack tells you which Schedule 4 sub-paragraphs failed and drafts the defence around them.|Check my notice|/appeal]]
 
 ### Defence Head 4: Unfair Term Under the Consumer Rights Act 2015
 
-**Section 62 of the Consumer Rights Act 2015** renders unfair contractual terms unenforceable. The Beavis decision approved an £85 charge in specific circumstances; charges that go beyond a genuine pre-estimate of loss in cases without those Beavis factors can still be challenged.
+**Section 62 of the Consumer Rights Act 2015** renders unfair contractual terms unenforceable. The Beavis decision approved an Â£85 charge in specific circumstances; charges that go beyond a genuine pre-estimate of loss in cases without those Beavis factors can still be challenged.
 
 ## Step Four: Plead the Facts
 
@@ -98,29 +98,29 @@ The N180 has a free **Small Claims Mediation Service** tick-box. Operators frequ
 
 ## What If You Have Already Missed the 14-Day Acknowledgment?
 
-If a default judgment has already been entered, you can apply to **set it aside** under CPR 13. Use form N244, pay the £275 fee (or apply for fee remission), and demonstrate you have a real prospect of successfully defending. Our [CCJ set aside template](/templates/ccj-set-aside-letter) walks through the application step by step.
+If a default judgment has already been entered, you can apply to **set it aside** under CPR 13. Use form N244, pay the Â£275 fee (or apply for fee remission), and demonstrate you have a real prospect of successfully defending. Our [CCJ set aside template](/templates/ccj-set-aside-letter) walks through the application step by step.
 
 ## Common MCOL Claimants and Their Quirks
 
 | Operator | Solicitor | Typical claim value | Notes |
 |---|---|---|---|
-| ParkingEye | DCB Legal | £160 to £200 | Highest-volume claimant, see [ParkingEye took me to court](/blog/parkingeye-took-me-to-court) |
-| Excel Parking | BW Legal | £170 to £210 | Often pursues post-IAS rejections, see [Excel Parking operator page](/operators/excel-parking) |
-| UKPC | Gladstones | £160 to £190 | Frequently fails POFA paragraph 9 checks |
-| Smart Parking | DCB Legal | £170 to £200 | High discontinuance rate when defended |
-| NCP | Gladstones | £150 to £180 | Often retail park overstays |
+| ParkingEye | DCB Legal | Â£160 to Â£200 | Highest-volume claimant, see [ParkingEye took me to court](/blog/parkingeye-took-me-to-court) |
+| Excel Parking | BW Legal | Â£170 to Â£210 | Often pursues post-IAS rejections, see [Excel Parking operator page](/operators/excel-parking) |
+| UKPC | Gladstones | Â£160 to Â£190 | Frequently fails POFA paragraph 9 checks |
+| Smart Parking | DCB Legal | Â£170 to Â£200 | High discontinuance rate when defended |
+| NCP | Gladstones | Â£150 to Â£180 | Often retail park overstays |
 
 ## Costs and What You Could Lose
 
 If you lose at hearing, the court can order you to pay:
 
-- The original parking charge (commonly £100)
-- The court issue fee (£25 to £35)
-- Solicitor pre-action costs (commonly £50 fixed)
+- The original parking charge (commonly Â£100)
+- The court issue fee (Â£25 to Â£35)
+- Solicitor pre-action costs (commonly Â£50 fixed)
 - A hearing fee contribution
 - Statutory interest at 8% per annum
 
-Total exposure on a typical claim is usually £230 to £270. If you win, you can claim limited litigant in person costs (£19 per hour for time spent, capped). Small claims do not normally award legal costs to either side, which is why operators often back down when defendants engage seriously.
+Total exposure on a typical claim is usually Â£230 to Â£270. If you win, you can claim limited litigant in person costs (Â£19 per hour for time spent, capped). Small claims do not normally award legal costs to either side, which is why operators often back down when defendants engage seriously.
 
 ## A Realistic Timeline
 
@@ -134,11 +134,11 @@ Total exposure on a typical claim is usually £230 to £270. If you win, you can
 | 120 to 180 | If not settled, hearing date listed |
 | Hearing day | Final decision |
 
-[[CTA:slate|Stop guessing. Defend properly.|The £9.99 premium pack gives you the acknowledgment guidance, the full defence draft tailored to your facts, the N180 wording and the mediation script. Delivered as a Word document you can paste straight into MCOL.|Get the £9.99 defence pack|/pricing]]
+[[CTA:slate|Stop guessing. Defend properly.|The Â£9.99 premium pack gives you the acknowledgment guidance, the full defence draft tailored to your facts, the N180 wording and the mediation script. Delivered as a Word document you can paste straight into MCOL.|Get the Â£9.99 defence pack|/pricing]]
 
 ## Final Word
 
-An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The £9.99 premium pack handles the drafting; your job is to log in on time and click the right buttons.`,
+An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The Â£9.99 premium pack handles the drafting; your job is to log in on time and click the right buttons.`,
     faqs: [
       {
         question: "What is MCOL and why has a parking company used it against me?",
@@ -168,7 +168,7 @@ An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, f
       {
         question: "Do I need a solicitor for an MCOL parking defence?",
         answer:
-          "No. Small claims track cases (under £10,000) are designed for litigants in person. The court does not normally award legal costs in small claims, which is why solicitor representation is rarely cost-effective for a £170 parking claim.",
+          "No. Small claims track cases (under Â£10,000) are designed for litigants in person. The court does not normally award legal costs in small claims, which is why solicitor representation is rarely cost-effective for a Â£170 parking claim.",
       },
       {
         question: "What is the N180 questionnaire and when do I get it?",
@@ -178,7 +178,7 @@ An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, f
       {
         question: "What if the parking company discontinues the claim after I defend?",
         answer:
-          "Discontinuance ends the claim and you owe nothing. You can ask the court for your reasonable costs as a litigant in person at the statutory rate of £19 per hour for time spent on the defence. Many operators discontinue once a properly drafted POFA defence is filed.",
+          "Discontinuance ends the claim and you owe nothing. You can ask the court for your reasonable costs as a litigant in person at the statutory rate of Â£19 per hour for time spent on the defence. Many operators discontinue once a properly drafted POFA defence is filed.",
       },
     ],
   },
@@ -186,19 +186,19 @@ An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, f
     slug: "parkingeye-signage-popla-wins-2025",
     title: "ParkingEye Signage Loophole: 5 Real POPLA Wins From 2025",
     description:
-      "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, £5.99 personalised letter cites them all.",
+      "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, Â£5.99 personalised letter cites them all.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
     seoTitle: "ParkingEye Signage Loophole: 5 Real POPLA Wins From 2025",
     seoDescription:
-      "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, £5.99 personalised letter cites them all.",
+      "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, Â£5.99 personalised letter cites them all.",
     content: `## Why Signage Is Still ParkingEye's Weak Spot
 
 Ten years on from **ParkingEye v Beavis [2015] UKSC 67**, the same operator that won the Supreme Court case keeps losing at POPLA on the very issue Beavis turned on: whether a reasonable motorist would have seen, read and accepted the parking terms before parking. The Supreme Court ruled the Beavis charge enforceable largely because the signs at Chelmsford retail park were "large, prominent and clearly worded." Where ParkingEye's signs do not meet that standard, POPLA assessors strike the charge down.
 
 This post walks through five real-style 2025 POPLA decisions, each anonymised but drawn from patterns reported in the **POPLA Annual Report** and BPA member case data. Use them as templates for your own appeal: if any of these scenarios match your car park, you have a strong case.
 
-[[CTA:teal|Got a ParkingEye charge?|Our £5.99 personalised letter cites POPLA precedent on signage, identifies the BPA Code paragraph that was breached, and arrives in Word format ready to paste.|Start my £5.99 appeal|/appeal]]
+[[CTA:teal|Got a ParkingEye charge?|Our Â£5.99 personalised letter cites POPLA precedent on signage, identifies the BPA Code paragraph that was breached, and arrives in Word format ready to paste.|Start my Â£5.99 appeal|/appeal]]
 
 ## Quick Reminder: How POPLA Works
 
@@ -227,11 +227,11 @@ The assessor found that **BPA Code of Practice paragraph 18.3** (signs must be "
 
 **POPLA reference style: 6212xxxxxx**, decided May 2025.
 
-The terms sign at a hospital car park used **8 millimetre font for the £100 charge clause**, against a busy background image. The motorist measured the lettering and submitted ruler-against-sign photographs.
+The terms sign at a hospital car park used **8 millimetre font for the Â£100 charge clause**, against a busy background image. The motorist measured the lettering and submitted ruler-against-sign photographs.
 
 The Beavis judgment specifically referred to font that was readable from a distance. The assessor noted that the most onerous term, the financial penalty, was less prominent than the marketing copy at the top of the sign. Appeal allowed on the basis that the contractual offer was not adequately communicated.
 
-**Use this if:** The £100 charge wording is smaller than the rest of the sign, or smaller than 15 millimetres for body text.
+**Use this if:** The Â£100 charge wording is smaller than the rest of the sign, or smaller than 15 millimetres for body text.
 
 ## Case 3: Entrance Sign Blocked by Foliage
 
@@ -253,7 +253,7 @@ The assessor accepted that **a sign that is conspicuous by day but illegible by 
 
 **Use this if:** You parked between dusk and dawn at a site without illuminated signs.
 
-[[CTA:amber|Take a photo of your sign tonight|If you can read your phone screen but not the parking sign from the driver's seat, that is appeal-worthy evidence. Upload it with our £5.99 letter and we cite the exact POPLA paragraph in your favour.|Upload my photo|/appeal]]
+[[CTA:amber|Take a photo of your sign tonight|If you can read your phone screen but not the parking sign from the driver's seat, that is appeal-worthy evidence. Upload it with our Â£5.99 letter and we cite the exact POPLA paragraph in your favour.|Upload my photo|/appeal]]
 
 ## Case 5: Contradictory Signs Within the Same Car Park
 
@@ -302,11 +302,11 @@ POPLA cannot:
 
 POPLA can only allow or refuse the appeal against the operator's right to enforce the charge.
 
-[[CTA:slate|Don't write the appeal yourself|Our £5.99 letter cites Beavis, the BPA Code and the closest POPLA precedent to your scenario. Delivered in 24 hours as a Word document. Refund if delivery fails.|Get my £5.99 letter|/pricing]]
+[[CTA:slate|Don't write the appeal yourself|Our Â£5.99 letter cites Beavis, the BPA Code and the closest POPLA precedent to your scenario. Delivered in 24 hours as a Word document. Refund if we can't generate a valid letter.|Get my Â£5.99 letter|/pricing]]
 
 ## Final Word
 
-ParkingEye signage appeals work because the law set the bar high in Beavis and most car parks do not clear it. Photograph your signs, measure the font, capture the night view, and lean on the precedents above. The £5.99 letter does the citation work for you.`,
+ParkingEye signage appeals work because the law set the bar high in Beavis and most car parks do not clear it. Photograph your signs, measure the font, capture the night view, and lean on the precedents above. The Â£5.99 letter does the citation work for you.`,
     faqs: [
       {
         question: "Are POPLA decisions binding on ParkingEye?",
@@ -354,19 +354,19 @@ ParkingEye signage appeals work because the law set the bar high in Beavis and m
     slug: "ukpc-anpr-pofa-schedule-4-defence",
     title: "UKPC ANPR Fine? Beat It With POFA 2012 Schedule 4",
     description:
-      "UKPC's ANPR PCN often fails the POFA 2012 §9 keeper-liability test. Find out what to look for plus a £5.99 letter that cites every breach.",
+      "UKPC's ANPR PCN often fails the POFA 2012 Â§9 keeper-liability test. Find out what to look for plus a Â£5.99 letter that cites every breach.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
     seoTitle: "UKPC ANPR Fine? Beat It With POFA 2012 Schedule 4",
     seoDescription:
-      "UKPC's ANPR PCN often fails the POFA 2012 §9 keeper-liability test. Find out what to look for plus a £5.99 letter that cites every breach.",
+      "UKPC's ANPR PCN often fails the POFA 2012 Â§9 keeper-liability test. Find out what to look for plus a Â£5.99 letter that cites every breach.",
     content: `## Why UKPC's ANPR Notices Fail So Often
 
 UK Parking Control (UKPC) is one of the largest BPA-member operators relying almost entirely on **Automatic Number Plate Recognition** rather than warden-issued tickets. ANPR sites have no warden interaction, which means UKPC almost never knows who was actually driving. Their only legal route to recover a charge from the registered keeper is **Schedule 4 of the Protection of Freedoms Act 2012**, and Schedule 4 is unforgiving.
 
 The Act sets out, in **paragraph 9**, eleven specific things a Notice to Keeper must contain. Miss one and the right to keeper liability falls away. UKPC's templates routinely miss one to three of them.
 
-[[CTA:teal|Got a UKPC ANPR notice?|Our £5.99 letter audits your specific Notice to Keeper against all 11 paragraph 9 requirements and cites every sub-paragraph that failed.|Audit my notice for £5.99|/appeal]]
+[[CTA:teal|Got a UKPC ANPR notice?|Our Â£5.99 letter audits your specific Notice to Keeper against all 11 paragraph 9 requirements and cites every sub-paragraph that failed.|Audit my notice for Â£5.99|/appeal]]
 
 ## What POFA 2012 Schedule 4 Actually Says
 
@@ -430,7 +430,7 @@ Many UKPC templates print only the date of contravention and a "by" date. The **
 
 Paragraph 9(2)(b) requires the **period** of parking, meaning a start and end. UKPC sometimes states only the entry time or only the exit time. A single timestamp is not a period.
 
-[[CTA:amber|Found a breach?|Our £5.99 letter writes the appeal in plain English with the exact paragraph 9 sub-section UKPC failed, plus the BPA Code paragraph and a request for the cancellation code.|Get the appeal letter|/templates/ukpc-appeal-letter]]
+[[CTA:amber|Found a breach?|Our Â£5.99 letter writes the appeal in plain English with the exact paragraph 9 sub-section UKPC failed, plus the BPA Code paragraph and a request for the cancellation code.|Get the appeal letter|/templates/ukpc-appeal-letter]]
 
 ## What To Write in the Appeal
 
@@ -463,11 +463,11 @@ POFA only protects the keeper. If you admit driving, paragraph 9 is irrelevant: 
 - **Do not miss the 28-day appeal window** to UKPC. After that the discount is lost and the formal appeal route narrows.
 - **Do not pay then appeal.** Payment is treated as acceptance of liability.
 
-[[CTA:slate|UKPC notices fail more often than they succeed|Stop fighting UKPC alone. Our £5.99 letter cites the exact POFA paragraph 9 sub-section your notice breached, plus the BPA Code requirement, ready to send. Refund if delivery fails.|Get the £5.99 letter|/pricing]]
+[[CTA:slate|UKPC notices fail more often than they succeed|Stop fighting UKPC alone. Our Â£5.99 letter cites the exact POFA paragraph 9 sub-section your notice breached, plus the BPA Code requirement, ready to send. Refund if we can't generate a valid letter.|Get the Â£5.99 letter|/pricing]]
 
 ## Final Word
 
-UKPC's reliance on ANPR makes paragraph 9 of POFA 2012 Schedule 4 their structural weakness. Audit your notice carefully, identify the breach, and write the appeal with statutory precision. The £5.99 letter does both for you.`,
+UKPC's reliance on ANPR makes paragraph 9 of POFA 2012 Schedule 4 their structural weakness. Audit your notice carefully, identify the breach, and write the appeal with statutory precision. The Â£5.99 letter does both for you.`,
     faqs: [
       {
         question: "What is POFA 2012 Schedule 4?",
@@ -515,19 +515,19 @@ UKPC's reliance on ANPR makes paragraph 9 of POFA 2012 Schedule 4 their structur
     slug: "ias-appeal-rejected-next-steps",
     title: "IAS Rejected My Parking Appeal: Your 3 Options in 2026",
     description:
-      "IAS decisions are binding on the operator, not on you. Here are your 3 escalation routes plus the £9.99 pack that prepares the next stage.",
+      "IAS decisions are binding on the operator, not on you. Here are your 3 escalation routes plus the Â£9.99 pack that prepares the next stage.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "IAS Rejected My Parking Appeal: Your 3 Options in 2026",
     seoDescription:
-      "IAS decisions are binding on the operator, not on you. Here are your 3 escalation routes plus the £9.99 pack that prepares the next stage.",
+      "IAS decisions are binding on the operator, not on you. Here are your 3 escalation routes plus the Â£9.99 pack that prepares the next stage.",
     content: `## An IAS Rejection Is Not the End
 
 The Independent Appeals Service (IAS) is the appeals body run by the **International Parking Community (IPC)**. It hears appeals against charges issued by IPC-member operators including **Excel Parking, Smart Parking, UKPC (in some cases), Premier Park, Highview Parking and Britannia Parking**. If you have just received an IAS rejection, you may feel cornered. You are not.
 
 The most important fact about an IAS decision is this: **it binds the operator, not the appellant**. If the IAS allows your appeal, the operator must cancel. If the IAS rejects your appeal, the operator regains the right to chase you, but you have not lost any legal rights and you have given up nothing.
 
-[[CTA:teal|IAS just rejected your appeal?|Our £9.99 premium pack covers all three escalation routes: LBC reply, court defence draft, and operator-direct cancellation request.|Get the £9.99 pack|/pricing]]
+[[CTA:teal|IAS just rejected your appeal?|Our Â£9.99 premium pack covers all three escalation routes: LBC reply, court defence draft, and operator-direct cancellation request.|Get the Â£9.99 pack|/pricing]]
 
 ## A Quick Word on IAS Independence
 
@@ -561,7 +561,7 @@ For the full document set see our [debt collector response letter template](/tem
 
 This is underused but often effective. IAS decisions are short and frequently address only one ground while ignoring others. You can write directly to the operator's customer service team and say:
 
-"The IAS decision dated [X] addressed only [ground A]. It did not engage with my arguments on [ground B] and [ground C]. I am giving you a final opportunity to cancel before I incur litigation costs that will be claimed back at the statutory rate of £19 per hour."
+"The IAS decision dated [X] addressed only [ground A]. It did not engage with my arguments on [ground B] and [ground C]. I am giving you a final opportunity to cancel before I incur litigation costs that will be claimed back at the statutory rate of Â£19 per hour."
 
 Reference:
 
@@ -572,7 +572,7 @@ Reference:
 
 Operators run on margin. A targeted cancellation request that signals genuine litigation readiness sometimes succeeds where IAS appeals fail.
 
-[[CTA:amber|Need a cancellation request that lands?|Our £9.99 pack drafts the operator-direct letter referencing the IAS decision's weak points and the statutes you can rely on at court.|Get the cancellation pack|/appeal]]
+[[CTA:amber|Need a cancellation request that lands?|Our Â£9.99 pack drafts the operator-direct letter referencing the IAS decision's weak points and the statutes you can rely on at court.|Get the cancellation pack|/appeal]]
 
 ## Option 3: Defend If a Court Claim Arrives
 
@@ -594,7 +594,7 @@ A County Court defence can plead exactly the same grounds the IAS rejected, and 
 |---|---|---|---|---|
 | LBC reply | Postage | 30 days | Yes if cancelled | Moderate |
 | Direct to operator | Postage | Indefinite | Yes if cancelled | Low to moderate |
-| Court defence | £0 if you win, £230+ if you lose | 3 to 9 months | Yes if you win | Higher |
+| Court defence | Â£0 if you win, Â£230+ if you lose | 3 to 9 months | Yes if you win | Higher |
 
 ## What You Should Not Do
 
@@ -621,11 +621,11 @@ You do not need to be a lawyer to cite these. Quote the section number and the s
 
 ## Cost-Benefit of Each Route
 
-If the charge is £100, a settled claim might cost the operator £200 to £400 in legal fees. Many operators run a portfolio model: if the cancellation cost is below their break-even, they cancel. The LBC reply forces them to make that calculation. Court forces it again.
+If the charge is Â£100, a settled claim might cost the operator Â£200 to Â£400 in legal fees. Many operators run a portfolio model: if the cancellation cost is below their break-even, they cancel. The LBC reply forces them to make that calculation. Court forces it again.
 
 This is why a properly drafted reply, citing the law, often achieves what the IAS would not.
 
-[[CTA:slate|One pack covers all three routes|The £9.99 premium pack includes the LBC reply, the operator-direct cancellation letter, and the court defence draft. Pick the one you need, or use them in sequence as the operator escalates.|Get the £9.99 pack|/pricing]]
+[[CTA:slate|One pack covers all three routes|The Â£9.99 premium pack includes the LBC reply, the operator-direct cancellation letter, and the court defence draft. Pick the one you need, or use them in sequence as the operator escalates.|Get the Â£9.99 pack|/pricing]]
 
 ## Final Word
 
@@ -669,7 +669,7 @@ The IAS rejection is the start of the next stage, not the end of the appeal. You
       {
         question: "Do I need a solicitor for an LBC reply or court defence?",
         answer:
-          "No. Small claims track is designed for litigants in person and the court does not normally award legal costs. The £9.99 premium pack provides drafted documents you can adapt and file yourself.",
+          "No. Small claims track is designed for litigants in person and the court does not normally award legal costs. The Â£9.99 premium pack provides drafted documents you can adapt and file yourself.",
       },
     ],
   },
@@ -677,25 +677,25 @@ The IAS rejection is the start of the next stage, not the end of the appeal. You
     slug: "ulez-pcn-appeal-grounds-2026",
     title: "ULEZ PCN Appeal: 7 Grounds That Win Against TfL in 2026",
     description:
-      "TfL ULEZ PCN can be challenged on 7 specific grounds, including emissions data and signage. £5.99 letter writes a winning representation.",
+      "TfL ULEZ PCN can be challenged on 7 specific grounds, including emissions data and signage. Â£5.99 letter writes a winning representation.",
     publishedDate: "2026-05-06",
     category: "Guides",
     seoTitle: "ULEZ PCN Appeal: 7 Grounds That Win Against TfL in 2026",
     seoDescription:
-      "TfL ULEZ PCN can be challenged on 7 specific grounds, including emissions data and signage. £5.99 letter writes a winning representation.",
+      "TfL ULEZ PCN can be challenged on 7 specific grounds, including emissions data and signage. Â£5.99 letter writes a winning representation.",
     content: `## ULEZ PCNs Are Council-Style, Not Private
 
 A ULEZ Penalty Charge Notice from **Transport for London** is a statutory PCN issued under the **Greater London Low Emission Zone Charging Order**, which derives its power from the **Greater London (Low Emission Zone) (Charging) Order 2006** and the **Road Traffic Regulation Act 1984**. Unlike a private parking charge, it is a true penalty enforceable by TfL through statutory procedures, with appeals routed through **London Tribunals**.
 
 The headline numbers in 2026:
 
-- **Daily ULEZ charge**: £12.50 (covers all of Greater London since 29 August 2023)
-- **Penalty for non-payment**: £180, reduced to £90 if paid within 14 days
-- **Charge increases by 50%** to £270 if a Charge Certificate is issued
+- **Daily ULEZ charge**: Â£12.50 (covers all of Greater London since 29 August 2023)
+- **Penalty for non-payment**: Â£180, reduced to Â£90 if paid within 14 days
+- **Charge increases by 50%** to Â£270 if a Charge Certificate is issued
 
 The good news: ULEZ PCNs are appealable on tightly defined statutory grounds. Get the ground right and TfL must cancel.
 
-[[CTA:teal|Got a ULEZ PCN?|Our £5.99 letter identifies which of the 7 grounds applies to your case and writes a representation citing the exact regulation TfL must respond to.|Start my £5.99 ULEZ appeal|/appeal]]
+[[CTA:teal|Got a ULEZ PCN?|Our Â£5.99 letter identifies which of the 7 grounds applies to your case and writes a representation citing the exact regulation TfL must respond to.|Start my Â£5.99 ULEZ appeal|/appeal]]
 
 ## The Two-Stage Process
 
@@ -759,7 +759,7 @@ The ULEZ boundary is marked by signs at every entry point. Signage failures form
 
 Photograph the entry point as it was on the day, ideally with timestamped images. The **Traffic Signs Regulations and General Directions 2016** governs sign placement; non-compliant signs cannot establish notice of the charge.
 
-[[CTA:amber|Photograph the boundary now|Drive past the entry point and take dated photos of the ULEZ sign as it stood that day. Upload with our £5.99 letter and we cite the relevant signage regulation in your representation.|Upload my photo|/appeal]]
+[[CTA:amber|Photograph the boundary now|Drive past the entry point and take dated photos of the ULEZ sign as it stood that day. Upload with our Â£5.99 letter and we cite the relevant signage regulation in your representation.|Upload my photo|/appeal]]
 
 ## Ground 5: Auto-Pay Failed Despite Valid Card
 
@@ -842,20 +842,20 @@ The **London Tribunals** appeal is free and online. Adjudicators are typically b
 
 ## Cost If You Lose
 
-If you lose at London Tribunals, you owe the original PCN at the **full rate** (£180 if you appealed past the 14-day discount window). If you do not pay within 28 days, TfL issues a **Charge Certificate** raising the amount to £270. Beyond that, the matter is registered as a debt at the **Traffic Enforcement Centre** and bailiffs may be instructed.
+If you lose at London Tribunals, you owe the original PCN at the **full rate** (Â£180 if you appealed past the 14-day discount window). If you do not pay within 28 days, TfL issues a **Charge Certificate** raising the amount to Â£270. Beyond that, the matter is registered as a debt at the **Traffic Enforcement Centre** and bailiffs may be instructed.
 
 That escalation is real, which is why getting the representation right at stage 1 matters. See [parking fine bailiffs](/guides/parking-fine-bailiffs).
 
-[[CTA:slate|Don't write the ULEZ appeal yourself|Our £5.99 letter identifies the correct ground from your PCN evidence, cites the regulation, and arrives in 24 hours ready to paste into the TfL portal. Refund if delivery fails.|Get my £5.99 ULEZ letter|/pricing]]
+[[CTA:slate|Don't write the ULEZ appeal yourself|Our Â£5.99 letter identifies the correct ground from your PCN evidence, cites the regulation, and arrives in 24 hours ready to paste into the TfL portal. Refund if we can't generate a valid letter.|Get my Â£5.99 ULEZ letter|/pricing]]
 
 ## Final Word
 
-ULEZ PCNs are statutory penalties with seven defined appeal grounds. Most successful appeals turn on data accuracy, ANPR misreads or auto-pay failures rather than principled objections to the charge itself. Identify the right ground, attach the right evidence, and submit within 28 days. The £5.99 letter handles the wording; you supply the facts.`,
+ULEZ PCNs are statutory penalties with seven defined appeal grounds. Most successful appeals turn on data accuracy, ANPR misreads or auto-pay failures rather than principled objections to the charge itself. Identify the right ground, attach the right evidence, and submit within 28 days. The Â£5.99 letter handles the wording; you supply the facts.`,
     faqs: [
       {
         question: "How much is a ULEZ PCN in 2026?",
         answer:
-          "£180, reduced to £90 if paid within 14 days of issue. If unpaid for 28 days, TfL issues a Charge Certificate increasing the amount to £270. The underlying daily ULEZ charge that triggered the PCN is £12.50.",
+          "Â£180, reduced to Â£90 if paid within 14 days of issue. If unpaid for 28 days, TfL issues a Charge Certificate increasing the amount to Â£270. The underlying daily ULEZ charge that triggered the PCN is Â£12.50.",
       },
       {
         question: "Can I appeal a ULEZ PCN online?",
@@ -890,7 +890,7 @@ ULEZ PCNs are statutory penalties with seven defined appeal grounds. Most succes
       {
         question: "Can I ignore a ULEZ PCN and hope it goes away?",
         answer:
-          "No. ULEZ PCNs are statutory and enforceable through County Court registration and bailiffs. After the 14-day discount, the price rises to £180, then £270 with a Charge Certificate, and beyond that bailiff fees are added.",
+          "No. ULEZ PCNs are statutory and enforceable through County Court registration and bailiffs. After the 14-day discount, the price rises to Â£180, then Â£270 with a Charge Certificate, and beyond that bailiff fees are added.",
       },
     ],
   },

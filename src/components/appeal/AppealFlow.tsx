@@ -906,6 +906,165 @@ function ProbabilityRing({ value }: { value: number }) {
   );
 }
 
+function PaywallCard({
+  assessment,
+  form,
+  onSelectProduct,
+}: {
+  assessment: AssessmentResult;
+  form: FormData;
+  onSelectProduct: (productId: string) => void;
+}) {
+  const standard = PRODUCTS["standard-letter"];
+  const premium = PRODUCTS["premium-pack"];
+  // Default to whatever the AI recommended; if it didn't recommend, premium is the
+  // best-attach choice because it covers the rejection-rebound stage too.
+  const initialPremium = assessment.recommendedProduct === "premium-pack" || !assessment.recommendedProduct;
+  const [withPremium, setWithPremium] = useState(initialPremium);
+
+  const activeProduct = withPremium ? premium : standard;
+  const upliftPence = premium.price - standard.price;
+
+  const operatorOrCouncil =
+    form.fineType === "private" && form.operatorName
+      ? form.operatorName
+      : form.councilName || "this operator";
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white shadow-[0_24px_60px_-24px_rgba(15,23,42,0.18)] mb-6 overflow-hidden">
+      <div className="bg-gradient-to-br from-teal-50 via-white to-emerald-50 px-6 py-5 border-b border-slate-100">
+        <div className="flex items-start gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white shadow-[0_6px_16px_-6px_rgba(13,148,136,0.55)]">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-lg font-semibold text-slate-900">Get your personalised appeal letter</h3>
+            <p className="mt-1 text-sm leading-relaxed text-slate-600">
+              Written by our specialist UK-parking-law AI, citing the exact statute, case law and operator-specific failings most likely to beat your fine against{" "}
+              <span className="font-medium text-slate-900">{operatorOrCouncil}</span>. Delivered as a PDF in minutes.
+            </p>
+          </div>
+        </div>
+
+        {assessment.letterArguments.length > 0 && (
+          <div className="mt-4 rounded-lg bg-white/70 backdrop-blur-sm border border-slate-200 p-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Your letter will include</p>
+            <ul className="space-y-1.5">
+              {assessment.letterArguments.slice(0, 5).map((arg, i) => (
+                <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
+                  <CheckIcon className="h-3.5 w-3.5 text-teal-600 mt-0.5 shrink-0" />
+                  <span>{arg}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      {/* Premium toggle */}
+      <label
+        htmlFor="premium-toggle"
+        className={`flex cursor-pointer items-start gap-3 border-b border-slate-100 px-6 py-4 transition-colors ${
+          withPremium ? "bg-teal-50/60" : "hover:bg-slate-50"
+        }`}
+      >
+        <input
+          id="premium-toggle"
+          type="checkbox"
+          checked={withPremium}
+          onChange={(e) => setWithPremium(e.target.checked)}
+          className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+        />
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-sm font-semibold text-slate-900">
+              Add escalation letter + evidence checklist{" "}
+              <span className="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-800 align-middle">
+                Recommended
+              </span>
+            </p>
+            <span className="shrink-0 text-sm font-semibold text-slate-700">
+              +£{(upliftPence / 100).toFixed(2)}
+            </span>
+          </div>
+          <p className="mt-1 text-xs leading-relaxed text-slate-600">
+            Ready-to-send POPLA / IAS / Tribunal letter if the first appeal is rejected, plus a case-specific evidence checklist. ~55% of first-stage rejections win at the second stage.
+          </p>
+        </div>
+      </label>
+
+      {/* Price + primary CTA */}
+      <div className="px-6 py-5">
+        <div className="flex items-baseline justify-between mb-4">
+          <div>
+            <div className="text-3xl font-semibold tracking-tight text-slate-900">
+              £{(activeProduct.price / 100).toFixed(2)}
+            </div>
+            <div className="text-xs text-slate-500 mt-0.5">
+              One-time payment · No subscription · Stripe-secured
+            </div>
+          </div>
+          {assessment.deadlineDays !== null && assessment.deadlineDays > 0 && (
+            <div className="hidden sm:flex flex-col items-end text-right">
+              <div className="text-xs font-semibold uppercase tracking-wider text-amber-700">Deadline</div>
+              <div className="text-sm text-slate-700">
+                <span className="font-semibold tabular-nums">{assessment.deadlineDays} days</span> remaining
+              </div>
+            </div>
+          )}
+        </div>
+
+        <button
+          onClick={() => onSelectProduct(withPremium ? "premium-pack" : "standard-letter")}
+          className="group/cta relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 px-5 py-3.5 text-base font-semibold text-white shadow-[0_12px_30px_-10px_rgba(13,148,136,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-10px_rgba(13,148,136,0.7)] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+        >
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+          <span className="relative inline-flex items-center justify-center gap-2">
+            Get my letter — £{(activeProduct.price / 100).toFixed(2)}
+            <svg className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
+        </button>
+
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500">
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            100% refund if not winnable
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            Cites real UK legislation only
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            Email delivery in minutes
+          </span>
+        </div>
+
+        <div className="mt-4 text-center">
+          <a
+            href={`mailto:?subject=My%20AppealAFine%20assessment&body=${encodeURIComponent(
+              `Appeal strength: ${assessment.overallStrength} (${assessment.successProbability}% probability)\nGrounds: ${assessment.grounds.map((g) => g.title).join(", ")}\nDeadline: approx ${assessment.deadlineDays ?? "unknown"} days remaining\n\nFull assessment: https://www.appealafine.co.uk/appeal`
+            )}`}
+            className="text-xs font-medium text-slate-500 underline decoration-dotted underline-offset-4 hover:text-slate-700"
+          >
+            Or email me my free assessment instead
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function StepAssessment({
   assessment,
   form,
@@ -917,7 +1076,6 @@ function StepAssessment({
   onBack: () => void;
   onSelectProduct: (productId: string) => void;
 }) {
-  const products = Object.values(PRODUCTS);
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -1026,74 +1184,12 @@ function StepAssessment({
         </ol>
       </div>
 
-      {/* Upsell */}
-      <div className="rounded-xl border border-slate-200 bg-slate-50/50 p-6 mb-6">
-        <div className="text-center mb-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Get Your AI-Generated Legal Letter</h3>
-          <p className="text-sm text-gray-600 max-w-lg mx-auto">
-            Our specialist legal AI will write you a unique appeal letter from scratch, citing specific UK legislation,
-            verified case law, and the arguments most likely to succeed against
-            {form.fineType === "private" && form.operatorName ? ` ${form.operatorName}` : " this operator"}.
-            Delivered as a professional PDF to your email.
-          </p>
-          {assessment.letterArguments.length > 0 && (
-            <div className="mt-4 text-left max-w-md mx-auto">
-              <p className="text-xs font-semibold text-gray-700 mb-2">Your letter will address:</p>
-              <ul className="space-y-1">
-                {assessment.letterArguments.map((arg, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
-                    <CheckIcon className="h-3.5 w-3.5 text-green-600 mt-0.5 shrink-0" />
-                    {arg}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {products.map((product) => {
-            const isRecommended = product.id === assessment.recommendedProduct;
-            return (
-              <div
-                key={product.id}
-                className={`relative rounded-xl border-2 bg-white p-5 transition-all ${
-                  isRecommended ? "border-teal-500 shadow-lg" : "border-gray-200 hover:border-gray-300"
-                }`}
-              >
-                {isRecommended && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-teal-600 px-3 py-0.5 text-xs font-semibold text-white">
-                    Recommended
-                  </div>
-                )}
-                <h4 className="text-sm font-semibold text-gray-900 mb-1">{product.name}</h4>
-                <div className="text-2xl font-bold text-slate-900 mb-2">
-                  £{(product.price / 100).toFixed(2)}
-                </div>
-                <p className="text-xs text-gray-600 mb-3">{product.description}</p>
-                <ul className="space-y-1.5 mb-4">
-                  {product.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-xs text-gray-700">
-                      <CheckIcon className="h-3.5 w-3.5 text-green-600 mt-0.5 shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  onClick={() => onSelectProduct(product.id)}
-                  className={`w-full rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors ${
-                    isRecommended
-                      ? "bg-teal-600 text-white hover:bg-teal-700"
-                      : "bg-slate-900 text-white hover:bg-slate-800"
-                  }`}
-                >
-                  Select
-                </button>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      {/* Inline paywall: single card with Premium-pack toggle */}
+      <PaywallCard
+        assessment={assessment}
+        form={form}
+        onSelectProduct={onSelectProduct}
+      />
 
       <div className="flex items-center justify-between">
         <button

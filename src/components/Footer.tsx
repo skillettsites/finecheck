@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const footerLinks = {
   freeTools: [
@@ -45,8 +45,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-4 border-b border-white/5 py-6 sm:grid-cols-3">
           {[
             {
-              label: "Refund if delivery fails",
-              sub: "Letter not in your inbox? Full refund, no questions.",
+              label: "Refund if we can't write you a valid letter",
+              sub: "Honest free check first. If your fine has no defensible ground, you pay nothing.",
               icon: (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               ),
@@ -209,7 +209,7 @@ export default function Footer() {
 
         {/* Compliance */}
         <p className="border-t border-white/5 py-6 text-[11px] leading-relaxed text-slate-500">
-          AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are drafted using established UK parking law and tribunal patterns, then personalised to your circumstances. If you need legal advice — particularly if your case has reached a county court claim — please consult a qualified solicitor. Appeal outcomes are never guaranteed.
+          AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are drafted using established UK parking law and tribunal patterns, then personalised to your circumstances. If you need legal advice â€” particularly if your case has reached a county court claim â€” please consult a qualified solicitor. Appeal outcomes are never guaranteed.
         </p>
       </div>
     </footer>
