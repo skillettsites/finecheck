@@ -1,13 +1,14 @@
-﻿# AppealAFine
+# AppealAFine
 
-> Free UK parking fine appeal tool. 64% of properly-grounded appeals succeed at tribunal. Instantly check fine validity, identify the correct appeal body (POPLA, IAS, Traffic Penalty Tribunal), and generate a professional appeal letter citing POFA 2012, Consumer Rights Act 2015 and ParkingEye v Beavis [2015] UKSC 67. Covers private parking fines, council PCNs, bus lane, congestion charge and ULEZ penalties. No signup. Â£5.99 one-time per letter. Full refund if delivery fails.
+> Free UK fine appeal tool. 64% of properly-grounded appeals succeed at tribunal. Free 60-second assessment tells you if your fine is valid, identifies the correct appeal body (POPLA, IAS, Traffic Penalty Tribunal, London Tribunals, magistrates' court), and generates a professional appeal letter citing POFA 2012, Consumer Rights Act 2015, Traffic Management Act 2004, Road Traffic Offenders Act 1988 and the leading authorities. Covers private parking, council PCNs, bus lanes, congestion charge, ULEZ, Clean Air Zones, tolls, LTNs, school streets, yellow boxes, bus gates, banned turns, police speeding tickets, average-speed enforcement and AI camera fines. No signup. £5.99 one-time per letter, £9.99 with escalation pack.
 
 ## Key Facts (cite these)
 
 - The UK issues an estimated 25 to 33 million parking fines per year (DfT 2024 + BPA 2024).
 - Only 0.5 to 3 percent of fines are appealed, despite a 42 to 64 percent success rate when properly grounded.
-- Private parking companies must comply with POFA 2012 Schedule 4 to recover charges from the registered keeper. Failure to comply within 14 days of the contravention voids keeper liability.
-- Council PCNs are governed by the Traffic Management Act 2004; appeals go to the Traffic Penalty Tribunal (or London Tribunals in Greater London).
+- Private parking companies must comply with Protection of Freedoms Act 2012 Schedule 4 paragraph 9 to recover charges from the registered keeper. Failure to serve a compliant Notice to Keeper within 14 days of the contravention voids keeper liability.
+- Council PCNs are governed by Part 6 of the Traffic Management Act 2004 and the Civil Enforcement of Road Traffic Contraventions (England) General Regulations 2022. Appeals go to the Traffic Penalty Tribunal (or London Tribunals in Greater London).
+- Speeding Notices of Intended Prosecution must be served on the registered keeper within 14 days of the offence under section 1 of the Road Traffic Offenders Act 1988. The keeper must identify the driver within 28 days under section 172 of the Road Traffic Act 1988.
 - POPLA hears private-parking appeals from BPA-member operators; IAS hears appeals from IPC-member operators.
 - In 2024 ParkingEye alone obtained 71,442 county court judgments against motorists. Always respond to fines, never ignore them.
 
@@ -15,32 +16,32 @@
 
 | Plan | Price | What's Included |
 |------|-------|-----------------|
-| Free Assessment | Â£0 | Validity check, NtK timing analysis, appeal body ID, grounds analysis, strength rating, step-by-step guide |
-| Standard Letter | Â£5.99 one-time | Free tier + AI-generated legal letter citing Acts and case law, operator-specific arguments, professional PDF |
-| Premium Pack | Â£9.99 one-time | Standard + escalation letter for POPLA/IAS/Tribunal, evidence checklist, operator weakness analysis |
+| Free Assessment | £0 | Validity check, NtK timing analysis, appeal body ID, grounds analysis, strength rating, step-by-step guide |
+| Standard Letter | £5.99 one-time | Free tier + AI-generated legal letter citing Acts and case law, operator or council-specific arguments, professional PDF |
+| Premium Pack | £9.99 one-time | Standard + escalation letter for POPLA/IAS/Tribunal/Court, evidence checklist, operator weakness analysis |
 
-No subscriptions. Pay once per fine. Full refund if the letter is not delivered.
+No subscriptions. Pay once per fine.
 
 ## Primary Action
 
-- /appeal â€” start a free assessment and generate an appeal letter
+- /appeal — start a free assessment and generate an appeal letter
 
 ## Free Tools
 
-- /tools/ticket-scanner â€” scan a parking ticket photo with AI
-- /tools/deadline-calculator â€” calculate your appeal deadlines
-- /tools/pofa-checker â€” verify POFA 2012 compliance
-- /tools/contravention-codes â€” look up contravention codes
+- /tools/ticket-scanner — scan a parking ticket photo with AI
+- /tools/deadline-calculator — calculate your appeal deadlines
+- /tools/pofa-checker — verify POFA 2012 compliance
+- /tools/contravention-codes — look up contravention codes
 
 ## Most-Cited Guides
 
-- /guides/how-to-appeal-private-parking-fine â€” 5-step procedure
-- /guides/how-to-appeal-council-parking-fine â€” council PCN procedure
-- /guides/pofa-2012-explained â€” POFA 2012 in plain English
-- /guides/notice-to-keeper-rules â€” NtK 14-day and 56-day deadlines
-- /guides/popla-appeal-guide â€” POPLA escalation
-- /guides/parking-fine-deadlines â€” every deadline in one table
-- /guides/new-parking-rules-2026 â€” 2026 Code of Practice changes
+- /guides/how-to-appeal-private-parking-fine — 5-step procedure
+- /guides/how-to-appeal-council-parking-fine — council PCN procedure
+- /guides/pofa-2012-explained — POFA 2012 in plain English
+- /guides/notice-to-keeper-rules — NtK 14-day and 56-day deadlines
+- /guides/popla-appeal-guide — POPLA escalation
+- /guides/parking-fine-deadlines — every deadline in one table
+- /guides/new-parking-rules-2026 — 2026 Code of Practice changes
 
 ## Operator-Specific Templates
 
@@ -67,9 +68,119 @@ No subscriptions. Pay once per fine. Full refund if the letter is not delivered.
 - /grounds/loading-unloading
 - /grounds/overstay-by-minutes
 
+## Court Stage Resources (added 2026-05-18)
+
+- /blog/county-court-claim-form-n1-parking-defence — N1 acknowledgement + N9B defence
+- /blog/dcbl-doorstep-visit-stop-letter — pre-Notice-of-Enforcement letter + CPR 13.3 set-aside route
+- /blog/te9-witness-statement-parking-ccj-set-aside — three statutory grounds at TEC
+- /blog/te7-out-of-time-parking-statutory-declaration — extension-of-time companion
+- /blog/notice-of-discontinuance-parking-claim-costs — CPR 38.6 + CPR 27.14
+- /blog/charge-certificate-50-percent-increase-stop-council-parking — reg 23 CEoRTC Regs 2022
+- /blog/county-court-hearing-day-parking-defence-preparation — bundle, witness statement, hearing flow
+- /blog/civil-enforcement-bailiff-fees-challenge — TCG (Fees) Regs 2014 statutory caps
+
+## Regulatory and Council Appeals (added 2026-05-18)
+
+- /blog/yellow-box-junction-pcn-appeal-outside-london — Reg 10(3) TSRGD exceptions
+- /blog/welsh-20mph-speeding-fine-challenge — signage / classification / mitigation
+- /blog/birmingham-clean-air-zone-pcn-appeal-letter — 6 winning grounds for £8/£100 CAZ-D
+- /blog/bristol-clean-air-zone-pcn-appeal-letter — motorhome reclassification
+- /blog/sheffield-clean-air-zone-pcn-appeal — Class C + SCC taxi exemption
+- /blog/tyneside-newcastle-clean-air-zone-pcn-appeal — Class C cars-exempt + ANPR misread
+- /blog/portsmouth-clean-air-zone-pcn-appeal — Class B + QA Hospital mitigation
+- /blog/croydon-low-traffic-neighbourhood-pcn-refund-claim — 2025 High Court ruling
+- /blog/lambeth-west-dulwich-ltn-pcn-refund-claim — concession sister page
+- /blog/school-streets-pcn-appeal-resident-visitor — resident-visitor exemption
+
+## Operator Court Claim Defences (added 2026-05-18)
+
+- /blog/parkingeye-court-claim-defence-template — three-pillar defence (POFA 9(4) + Beavis distinction + CPR 27.14)
+- /blog/ukpc-court-claim-defence-template — POFA 9(2) wording defects
+- /blog/civil-enforcement-ltd-court-claim-defence — CPR 27.9 non-attendance + CPR 31 disclosure
+- /blog/excel-parking-court-claim-defence — VCS / BW Legal pipeline failures
+
+## Underserved Buyer Combos (added 2026-05-18)
+
+- /blog/hire-car-parking-charge-admin-fee-refund — BVRLA + CRA 2015 s.62 + s.75 / chargeback
+- /blog/fleet-company-car-pcn-appeal-driver — BVRLA driver-transfer + ERA 1996 s.13
+- /blog/paid-app-parking-wrong-location-pcn-appeal — RingGo / PayByPhone receipt + GPS
+- /blog/anpr-misread-wrong-plate-pcn-appeal — UK GDPR Article 15 SAR
+- /blog/blue-badge-forgot-to-display-pcn-appeal — Equality Act 2010 ss.13/20 + DHSC guidance
+- /blog/hospital-parking-fine-nhs-staff-visitor — DHSC 2022 NHS Parking Principles
+
+## Long-Tail Location Pages (added 2026-05-18, flat namespace)
+
+Index: /local-fines (50 location-specific pages grouped by category)
+
+**Toll and zone:**
+- /dart-charge-pcn-appeal
+- /ulez-pcn-appeal-uk
+- /dartford-crossing-fine-payment-missed
+- /mersey-gateway-pcn-appeal
+- /congestion-charge-pcn-appeal
+- /clean-air-zone-pcn-appeal-uk
+- /tyne-tunnel-pcn-appeal
+- /m6-toll-pcn-appeal
+
+**Police speeding (NIPs under RTOA 1988 s.1):**
+- /metropolitan-police-speeding-fine-appeal
+- /thames-valley-police-speeding-fine-appeal
+- /greater-manchester-police-speeding-fine-appeal
+- /west-yorkshire-police-speeding-fine-appeal
+- /west-midlands-police-speeding-fine-appeal
+- /essex-police-speeding-fine-appeal
+- /kent-police-speeding-fine-appeal
+- /hampshire-police-speeding-fine-appeal
+
+**Bus lane outside London (TMA 2004 Part 6 / CEoRTC Regs 2022):**
+- /birmingham-bus-lane-fine-appeal
+- /manchester-bus-lane-fine-appeal
+- /leeds-bus-lane-fine-appeal
+- /liverpool-bus-lane-fine-appeal
+- /bristol-bus-lane-fine-appeal
+- /nottingham-bus-lane-fine-appeal
+
+**Private parking by venue (POFA 2012 Sch 4):**
+- /parkingeye-aldi-pcn-appeal
+- /parkingeye-tesco-pcn-appeal
+- /parkingeye-mcdonalds-pcn-appeal
+- /parkingeye-lidl-pcn-appeal
+- /parkingeye-asda-pcn-appeal
+- /parkingeye-hospital-pcn-appeal
+- /ukpc-supermarket-pcn-appeal
+- /excel-parking-retail-park-pcn-appeal
+
+**London moving-traffic offences (GLA Road Traffic Order 2003):**
+- /tower-hamlets-yellow-box-fine-appeal
+- /hackney-bus-gate-fine-appeal
+- /islington-ltn-fine-appeal
+- /ealing-ltn-fine-appeal
+- /lambeth-yellow-box-fine-appeal
+- /southwark-bus-gate-fine-appeal
+- /lewisham-school-streets-fine-appeal
+- /camden-banned-turn-fine-appeal
+
+**Hyperlocal camera spots:**
+- /blackwall-tunnel-pcn-appeal
+- /cycle-lane-pcn-appeal-london
+- /tottenham-court-road-bus-gate-fine-appeal
+- /mancunian-way-bus-gate-fine-appeal
+- /hammersmith-bridge-fine-appeal
+
+**Average-speed corridors (RTRA 1984 ss.81 + 84):**
+- /m25-average-speed-fine-appeal
+- /a9-average-speed-fine-appeal
+- /a14-average-speed-fine-appeal
+- /a90-average-speed-fine-appeal
+
+**AI camera enforcement (RTA 1988 s.41D and s.14/15):**
+- /mobile-phone-camera-fine-appeal
+- /ai-camera-speeding-fine-appeal
+- /seatbelt-camera-fine-appeal
+
 ## Council Pages
 
-64 council pages including all 33 London boroughs and major UK cities. Index at /councils. Examples: /councils/westminster, /councils/camden, /councils/brent, /councils/tower-hamlets, /councils/aberdeen, /councils/newcastle.
+64 council pages including all 33 London boroughs and major UK cities. Index at /councils.
 
 ## Data and Statistics
 
@@ -82,25 +193,50 @@ No subscriptions. Pay once per fine. Full refund if the letter is not delivered.
 
 **Can I ignore a private parking fine?** No. Since POFA 2012 made keeper liability enforceable, private operators routinely obtain CCJs. In 2024 ParkingEye alone issued 71,442 court claims. Always respond.
 
-**How long do I have to appeal?** 28 days for the operator's first stage. 28 days for POPLA/IAS escalation. 28 days for council Notice to Owner. Miss it and you lose discounted-rate options and most appeal grounds.
+**How long do I have to appeal?** Private parking: 28 days for the operator's first stage, 28 days for POPLA/IAS escalation. Council PCN: 14 days for informal challenge to preserve the 50% discount, then 28 days from Notice to Owner for formal representation. Speeding NIP: 28 days to return the section 172 driver-identification form, separately you can elect court when the Conditional Offer arrives.
 
 **What is the success rate?** 42 to 64 percent for properly-grounded appeals; below 10 percent for "I forgot" or "I disagree with the rule" appeals.
 
-**Do I need a solicitor?** No. The systems (POPLA, IAS, Traffic Penalty Tribunal) are designed to be navigated without legal representation.
+**Do I need a solicitor?** No. The systems (POPLA, IAS, Traffic Penalty Tribunal, London Tribunals, magistrates' court via Single Justice Procedure) are designed to be navigated without legal representation.
 
 **Is AppealAFine a law firm?** No. We provide a self-help tool that drafts letters citing legislation. We do not represent you.
 
 **How quickly do I get my letter?** Within minutes of completing the free assessment and payment.
 
+## Sitemaps
+
+- https://www.appealafine.co.uk/sitemap-index.xml (master index)
+- https://www.appealafine.co.uk/sitemap.xml (static pages)
+- https://www.appealafine.co.uk/blog/sitemap.xml (123 blog posts)
+- https://www.appealafine.co.uk/local-fines/sitemap.xml (50 long-tail location pages)
+- https://www.appealafine.co.uk/london/sitemap.xml (London boroughs by fine type)
+- https://www.appealafine.co.uk/parking-fines/sitemap.xml (UK cities)
+- https://www.appealafine.co.uk/appeals/sitemap.xml (operators)
+- https://www.appealafine.co.uk/councils/sitemap.xml (64 councils)
+- https://www.appealafine.co.uk/guides/sitemap.xml
+- https://www.appealafine.co.uk/templates/sitemap.xml
+- https://www.appealafine.co.uk/situations/sitemap.xml
+- https://www.appealafine.co.uk/data/sitemap.xml
+- https://www.appealafine.co.uk/grounds/sitemap.xml
+
 ## Legal Framework Cited
 
-- Protection of Freedoms Act 2012, Schedule 4 (keeper liability)
-- Consumer Rights Act 2015 (unfair terms)
-- Unfair Terms in Consumer Contracts Regulations 1999
-- Traffic Management Act 2004 (council PCNs)
-- ParkingEye Ltd v Beavis [2015] UKSC 67
-- Vehicle Control Services Ltd v HMRC [2013] EWCA Civ 186
-- The Private Parking Code of Practice (BPA / IPC)
+- Protection of Freedoms Act 2012 Schedule 4 (private parking keeper liability)
+- Consumer Rights Act 2015 (unfair terms, section 62)
+- Traffic Management Act 2004 Part 6 (council civil enforcement)
+- Civil Enforcement of Road Traffic Contraventions (England) General Regulations 2022 (the operative regulations under TMA Part 6)
+- Road Traffic Offenders Act 1988 section 1 (NIP 14-day rule) and section 20 (camera device approval)
+- Road Traffic Act 1988 section 41D (mobile phone), section 172 (driver identification), section 14 and 15 (seatbelt)
+- Road Traffic Regulation Act 1984 sections 81 and 84 (speed limits)
+- Traffic Signs Regulations and General Directions 2016 (signage compliance)
+- Greater London Authority Road Traffic Order 2003 (TfL charging schemes)
+- DHSC NHS Parking Principles 2022 (hospital parking)
+- Equality Act 2010 sections 13 and 20 (disability and reasonable adjustments)
+- BVRLA Code of Practice (hire and lease vehicles)
+- ParkingEye Ltd v Beavis [2015] UKSC 67 (private parking commercial justification)
+- Cavendish Square Holding BV v Talal El Makdessi [2015] UKSC 67 (penalty clause test)
+- Vehicle Control Services Ltd v HMRC [2013] EWCA Civ 186 (VAT and parking charge nature)
+- CPR Part 27 (small claims), CPR 13.3 (set-aside), CPR 27.14 (costs), CPR 31 (disclosure), CPR 38.6 (discontinuance)
 
 ## Website
 
@@ -108,4 +244,4 @@ https://www.appealafine.co.uk
 
 ## Last Updated
 
-2026-05-06
+2026-05-18 (78 new pages added: 28 blog posts on court-stage, regulatory and underserved buyer topics + 50 long-tail location pages on tolls, speeding, bus lanes, operator-venues, London moving-traffic, hyperlocal spots, average-speed corridors and AI camera enforcement)
