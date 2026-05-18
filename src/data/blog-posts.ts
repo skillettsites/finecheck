@@ -5,6 +5,8 @@ import { BATCH_D } from "./blog-posts-extra-d";
 import { BATCH_E } from "./blog-posts-extra-e";
 import { BATCH_F } from "./blog-posts-extra-f";
 import { BATCH_G } from "./blog-posts-extra-g";
+import { BATCH_H } from "./blog-posts-extra-h";
+import { BATCH_I } from "./blog-posts-extra-i";
 
 export interface BlogPost {
   slug: string;
@@ -1349,7 +1351,7 @@ Working days exclude weekends and bank holidays for the purposes of deemed servi
   },
 ];
 
-BLOG_POSTS.push(...BATCH_A, ...BATCH_B, ...BATCH_C, ...BATCH_D, ...BATCH_E, ...BATCH_F, ...BATCH_G);
+BLOG_POSTS.push(...BATCH_A, ...BATCH_B, ...BATCH_C, ...BATCH_D, ...BATCH_E, ...BATCH_F, ...BATCH_G, ...BATCH_H, ...BATCH_I);
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
