@@ -65,4 +65,16 @@ Disallow: /
 Host: https://www.appealafine.co.uk
 
 # Sitemaps
+Sitemap: https://www.appealafine.co.uk/sitemap-index.xml
 Sitemap: https://www.appealafine.co.uk/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/blog/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/london/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/parking-fines/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/appeals/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/councils/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/guides/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/templates/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/situations/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/data/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/grounds/sitemap.xml
+Sitemap: https://www.appealafine.co.uk/local-fines/sitemap.xml
