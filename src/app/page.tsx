@@ -122,9 +122,9 @@ const faqItems = [
       "Yes. We use industry-standard encryption for all data. Your personal details and fine information are stored securely and never shared with third parties. We comply fully with UK GDPR requirements.",
   },
   {
-    question: "Can I get a refund?",
+    question: "How much does a letter cost?",
     answer:
-      "If you purchase a letter and we are unable to generate one for your situation, you will receive a full refund. Please see our Terms of Service for complete details on our refund policy.",
+      "The Standard Appeal Letter is £5.99. The Premium Appeal Pack is £9.99 and includes everything in the Standard letter plus a follow-up escalation letter for POPLA, IAS or the Traffic Penalty Tribunal, and a case-specific evidence checklist. Both are one-time payments with no subscription. The free assessment is genuinely free.",
   },
 ];
 
@@ -257,7 +257,7 @@ export default function HomePage() {
                   "Cites real UK legislation",
                   "55-80% appeal success rate",
                   "Letter emailed in minutes",
-                  "100% refund if not winnable",
+                  "Free check before you pay",
                 ].map((label) => (
                   <div key={label} className="flex items-center gap-2">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
@@ -736,7 +736,7 @@ export default function HomePage() {
               Pricing
             </span>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Simple, transparent, refunded if delivery fails
+              Simple, transparent, no subscriptions
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
               Free assessment first. Pay only if you want the letter.
@@ -935,7 +935,7 @@ export default function HomePage() {
               fine.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-slate-300">
-              Check your fine, see your appeal strength, and only pay if you want the letter. We&apos;ll refund you if it doesn&apos;t reach your inbox.
+              Check your fine, see your appeal strength, and only pay if you want the letter. Free assessment in 60 seconds.
             </p>
             <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
@@ -958,7 +958,7 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-slate-500">
-              No subscription  ·  Stripe-secured  ·  Refund if we can't generate a valid letter
+              No subscription  ·  Stripe-secured  ·  One-time payment
             </p>
           </ScrollReveal>
         </Container>

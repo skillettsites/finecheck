@@ -1,19 +1,19 @@
-import type { BlogPost } from "./blog-posts";
+﻿import type { BlogPost } from "./blog-posts";
 
 export const BATCH_C: BlogPost[] = [
   {
     slug: "bus-lane-fine-emergency-vehicle",
     title: "Bus Lane Fine for Letting an Ambulance Past? You Can Appeal",
     description:
-      "Pulled into a bus lane to let an emergency vehicle through and got slapped with a £130 PCN? The Highway Code is on your side. Here is the winning appeal.",
+      "Pulled into a bus lane to let an emergency vehicle through and got slapped with a Â£130 PCN? The Highway Code is on your side. Here is the winning appeal.",
     publishedDate: "2026-05-06",
     category: "Guides",
     seoTitle: "Bus Lane Fine for Letting an Ambulance Past? You Can Appeal",
     seoDescription:
-      "Pulled into a bus lane for an emergency vehicle and got a £130 fine? You can win this. Step-by-step appeal plus a £5.99 personalised letter.",
+      "Pulled into a bus lane for an emergency vehicle and got a Â£130 fine? You can win this. Step-by-step appeal plus a Â£5.99 personalised letter.",
     content: `## You Almost Certainly Have a Defence
 
-Your rear-view mirror lights up blue. Sirens. There is nowhere to go except the bus lane on your left, so you pull in, let the ambulance pass, and rejoin the traffic six seconds later. Two weeks later a £130 Penalty Charge Notice lands on your doormat with a still from a CCTV camera that did not see the ambulance.
+Your rear-view mirror lights up blue. Sirens. There is nowhere to go except the bus lane on your left, so you pull in, let the ambulance pass, and rejoin the traffic six seconds later. Two weeks later a Â£130 Penalty Charge Notice lands on your doormat with a still from a CCTV camera that did not see the ambulance.
 
 This is one of the most winnable bus lane appeals in the UK. The Highway Code does not just permit you to move out of the way of an emergency vehicle, it requires you to. Councils know this. Adjudicators know this. The trick is presenting it correctly the first time, before the discount window closes.
 
@@ -39,10 +39,10 @@ Bus lane PCNs in England and Wales are issued under TMA 2004 Section 144 and the
 
 | Stage | Amount | Window |
 |---|---|---|
-| Discounted | £65 | 14 days from issue |
-| Full | £130 | Days 15-28 |
-| Charge Certificate | £195 | After day 56 if unpaid and not appealed |
-| Court registration | £195 + £9 | TEC registration |
+| Discounted | Â£65 | 14 days from issue |
+| Full | Â£130 | Days 15-28 |
+| Charge Certificate | Â£195 | After day 56 if unpaid and not appealed |
+| Court registration | Â£195 + Â£9 | TEC registration |
 
 The discount disappears the moment you submit a formal challenge in some councils, although most London boroughs and TfL freeze the 14-day window while they consider an informal challenge. Check the back of your PCN.
 
@@ -70,7 +70,7 @@ The letter needs three things:
 2. A reference to your statutory ground of appeal under TMA 2004 (the contravention did not occur, or alternatively that there are compelling reasons to cancel the PCN).
 3. Evidence: the council's own CCTV reference, your dashcam clip if you have one, the time and date.
 
-[[CTA:amber|Do not freestyle this letter|One in three drivers loses a winnable bus lane appeal because they wrote a complaint rather than a legal challenge. Our £5.99 letter cites the exact statute and rule numbers councils respond to.|Get my £5.99 letter|/pricing]]
+[[CTA:amber|Do not freestyle this letter|One in three drivers loses a winnable bus lane appeal because they wrote a complaint rather than a legal challenge. Our Â£5.99 letter cites the exact statute and rule numbers councils respond to.|Get my Â£5.99 letter|/pricing]]
 
 ### Step 4: Submit Within 14 Days
 
@@ -93,7 +93,7 @@ It does not cover unmarked vehicles, breakdown trucks, or police vehicles that a
 ## Common Mistakes That Sink This Appeal
 
 - **Apologising in the letter**. Do not say "sorry, I know I shouldn't have". You did the right thing. Frame it as compliance, not contrition.
-- **Paying the discount "just in case"**. Once you pay, the case is closed. You cannot recover the £65 even if you would have won.
+- **Paying the discount "just in case"**. Once you pay, the case is closed. You cannot recover the Â£65 even if you would have won.
 - **Missing the 14 day window**. Councils tighten up after this point.
 - **Not getting the CCTV**. Without the footage you have no evidence of the emergency vehicle.
 - **Waffling**. Three short paragraphs beat three pages.
@@ -108,7 +108,7 @@ Sometimes the council camera is angled in a way that misses the emergency vehicl
 
 then the burden shifts. Adjudicators apply the civil standard, balance of probabilities. A driver giving a clear, consistent account with one piece of corroborating evidence usually wins.
 
-[[CTA:slate|Stop second-guessing the wording|Answer six questions about your incident. We send back a letter that cites Highway Code Rule 219, 219A and TMA 2004, formatted exactly how the adjudicator wants to see it. £5.99 standard, £9.99 if you want the tribunal-ready bundle.|Start my appeal|/appeal]]
+[[CTA:slate|Stop second-guessing the wording|Answer six questions about your incident. We send back a letter that cites Highway Code Rule 219, 219A and TMA 2004, formatted exactly how the adjudicator wants to see it. Â£5.99 standard, Â£9.99 if you want the tribunal-ready bundle.|Start my appeal|/appeal]]
 
 ## Related Reading
 
@@ -147,14 +147,14 @@ then the burden shifts. Adjudicators apply the civil standard, balance of probab
           "Yes. Rule 219 covers police, fire, ambulance, doctors on call, blood transfusion vehicles, coastguard, mountain rescue and bomb disposal, provided they are responding to an emergency with lights or sirens.",
       },
       {
-        question: "What does the £5.99 AppealAFine letter actually do?",
+        question: "What does the Â£5.99 AppealAFine letter actually do?",
         answer:
-          "It produces a personalised appeal letter citing Highway Code Rule 219 and 219A, TMA 2004, your PCN reference and the CCTV time stamp, formatted to the council's preferred structure. Refunded if delivery fails.",
+          "It produces a personalised appeal letter citing Highway Code Rule 219 and 219A, TMA 2004, your PCN reference and the CCTV time stamp, formatted to the council's preferred structure.",
       },
       {
         question: "What happens if I lose at the council and the tribunal?",
         answer:
-          "You pay the original £130. You do not pay tribunal fees. There is no further appeal route, but a refusal does not affect your credit file unless the debt later becomes a CCJ for non-payment.",
+          "You pay the original Â£130. You do not pay tribunal fees. There is no further appeal route, but a refusal does not affect your credit file unless the debt later becomes a CCJ for non-payment.",
       },
     ],
   },
@@ -167,14 +167,14 @@ then the burden shifts. Adjudicators apply the civil standard, balance of probab
     category: "Legal",
     seoTitle: "Parking Fine CCJ? How To Set It Aside With Form N244",
     seoDescription:
-      "Default CCJ for a parking ticket you never knew about? File N244 with £313 fee. Our £9.99 pack drafts the witness statement and draft order.",
+      "Default CCJ for a parking ticket you never knew about? File N244 with Â£313 fee. Our Â£9.99 pack drafts the witness statement and draft order.",
     content: `## When the First You Hear About It Is the CCJ
 
-You check your credit file for a mortgage application. There is a £427 County Court Judgment from eight months ago in the name of an operator you have never heard of. You moved house two years ago. You never saw a parking ticket, never saw a Letter Before Claim, never saw a court claim form. The first you knew about any of it was a six-year scar on your credit file.
+You check your credit file for a mortgage application. There is a Â£427 County Court Judgment from eight months ago in the name of an operator you have never heard of. You moved house two years ago. You never saw a parking ticket, never saw a Letter Before Claim, never saw a court claim form. The first you knew about any of it was a six-year scar on your credit file.
 
-This is the default CCJ trap, and it happens to thousands of UK drivers a year. The good news: there is a formal route to remove it. The route is **Form N244**, an application to set the judgment aside under **Civil Procedure Rule 13.3**. It costs £313 to file and, done properly, succeeds in the majority of well-evidenced cases.
+This is the default CCJ trap, and it happens to thousands of UK drivers a year. The good news: there is a formal route to remove it. The route is **Form N244**, an application to set the judgment aside under **Civil Procedure Rule 13.3**. It costs Â£313 to file and, done properly, succeeds in the majority of well-evidenced cases.
 
-[[CTA:teal|We draft the full N244 bundle|Witness statement, draft order, evidence index. £9.99 premium pack. You file it at court the same day.|Build my N244 pack|/pricing]]
+[[CTA:teal|We draft the full N244 bundle|Witness statement, draft order, evidence index. Â£9.99 premium pack. You file it at court the same day.|Build my N244 pack|/pricing]]
 
 ## What a Default CCJ Actually Is
 
@@ -205,12 +205,12 @@ The bundle has four parts:
 
 | Document | Purpose | Cost |
 |---|---|---|
-| Form N244 | The application notice | £313 |
+| Form N244 | The application notice | Â£313 |
 | Witness statement | Your evidence on oath | Included |
 | Draft order | What you ask the court to do | Included |
 | Exhibits | Evidence (proof of address, NtK issues, etc.) | Included |
 
-The £313 fee is the standard application fee for a hearing. **Help with Fees (EX160)** can reduce or eliminate this if your income is below the threshold (broadly, under £1,420 a month gross with no savings over £4,250).
+The Â£313 fee is the standard application fee for a hearing. **Help with Fees (EX160)** can reduce or eliminate this if your income is below the threshold (broadly, under Â£1,420 a month gross with no savings over Â£4,250).
 
 ### Form N244 Itself
 
@@ -243,7 +243,7 @@ A short document the judge can sign. It should ask the court to:
 3. Reserve costs to the substantive hearing (or order costs in the case).
 4. Order the claimant to remove the CCJ from the Register of Judgments, Orders and Fines.
 
-[[CTA:amber|Witness statements that fail get binned at the door|The most common reason set-asides are refused is a witness statement that asserts grounds without exhibiting evidence. Our £9.99 pack builds the full evidence bundle, indexed and paginated, ready to file.|Get the full bundle|/appeal]]
+[[CTA:amber|Witness statements that fail get binned at the door|The most common reason set-asides are refused is a witness statement that asserts grounds without exhibiting evidence. Our Â£9.99 pack builds the full evidence bundle, indexed and paginated, ready to file.|Get the full bundle|/appeal]]
 
 ## The Three Tests You Must Pass
 
@@ -278,7 +278,7 @@ If the judge refuses:
 
 - You can appeal under CPR Part 52, but the bar is high.
 - The CCJ stays on your file.
-- The £313 fee is gone.
+- The Â£313 fee is gone.
 
 If the operator does not oppose (which is more common than people expect), the application is granted on the papers.
 
@@ -290,9 +290,9 @@ If you cannot or will not pay, N244 set aside is your route.
 
 ## Watch Out For Reclaim Operators
 
-A growing industry of "CCJ removal" companies charges £500 to £2,000 for what is essentially a copy-paste N244. Some are legitimate; many add little value over a self-prepared bundle. The court does not care who drafted the witness statement, it cares whether the contents satisfy CPR 13.3.
+A growing industry of "CCJ removal" companies charges Â£500 to Â£2,000 for what is essentially a copy-paste N244. Some are legitimate; many add little value over a self-prepared bundle. The court does not care who drafted the witness statement, it cares whether the contents satisfy CPR 13.3.
 
-[[CTA:slate|Self-prepare with our £9.99 pack|We draft your N244, witness statement, draft order and evidence index based on your specific facts. You add exhibits and file at court. Refunded if delivery fails.|Get my N244 pack|/templates/ccj-set-aside-letter]]
+[[CTA:slate|Self-prepare with our Â£9.99 pack|We draft your N244, witness statement, draft order and evidence index based on your specific facts. You add exhibits and file at court.|Get my N244 pack|/templates/ccj-set-aside-letter]]
 
 ## Related Reading
 
@@ -309,7 +309,7 @@ A growing industry of "CCJ removal" companies charges £500 to £2,000 for what 
       {
         question: "How much does it cost to file N244?",
         answer:
-          "The court fee is £313. You may qualify for Help with Fees on Form EX160 if your income and savings are below the relevant thresholds, which can reduce or remove the fee entirely.",
+          "The court fee is Â£313. You may qualify for Help with Fees on Form EX160 if your income and savings are below the relevant thresholds, which can reduce or remove the fee entirely.",
       },
       {
         question: "How long do I have to apply for a set aside?",
@@ -337,9 +337,9 @@ A growing industry of "CCJ removal" companies charges £500 to £2,000 for what 
           "No. The court only sets aside a default judgment by formal application under CPR 13.3, which means N244 plus witness statement plus fee. A letter to the claimant has no legal effect on the judgment.",
       },
       {
-        question: "What does the £9.99 AppealAFine pack include?",
+        question: "What does the Â£9.99 AppealAFine pack include?",
         answer:
-          "A drafted N244 application, a witness statement on your facts, a draft order, and an evidence index pointing to the exhibits you supply. Refunded if delivery fails.",
+          "A drafted N244 application, a witness statement on your facts, a draft order, and an evidence index pointing to the exhibits you supply.",
       },
     ],
   },
@@ -359,7 +359,7 @@ A parking fine, on its own, does not touch your credit file. A County Court Judg
 
 This post is the map. It shows exactly what each stage does to your credit, where the line is, and how to stop the slide.
 
-[[CTA:teal|Stuck at stage one?|If you have an unpaid Parking Charge Notice, our £5.99 letter challenges it before it gets anywhere near a debt collector or court. Refunded if delivery fails.|Build my appeal|/appeal]]
+[[CTA:teal|Stuck at stage one?|If you have an unpaid Parking Charge Notice, our Â£5.99 letter challenges it before it gets anywhere near a debt collector or court.|Build my appeal|/appeal]]
 
 ## The Three Stages
 
@@ -436,7 +436,7 @@ A Letter Before Claim (sometimes Letter Before Action) is the operator's last wa
 
 Replying disputes the debt formally and forces the operator to either drop the claim or proceed properly. Many drop at this stage because the operator has weighed the cost of court against the chance of winning.
 
-[[CTA:amber|If you have a Letter Before Claim sitting on the kitchen table|Do not ignore it. Our [debt collector response template](/templates/debt-collector-response-letter) and £5.99 personalised letter dispute the debt and request the strict-proof bundle. Buys you time and often ends the chase.|Get my response letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|If you have a Letter Before Claim sitting on the kitchen table|Do not ignore it. Our [debt collector response template](/templates/debt-collector-response-letter) and Â£5.99 personalised letter dispute the debt and request the strict-proof bundle. Buys you time and often ends the chase.|Get my response letter|/templates/debt-collector-response-letter]]
 
 ### 3. Acknowledge the Claim Form Immediately
 
@@ -483,9 +483,9 @@ Some figures from the data I have seen across UK private parking, council parkin
 | Default judgments as proportion of court claims | ~70-80% | Court service data |
 | Mortgage applications declined for active CCJ | Most prime lenders | Mortgage broker reporting |
 
-Read the third row again. Most parking fines never get to court. The court route is expensive for operators (£35-£185 in court fees, plus solicitor cost). They pursue selectively.
+Read the third row again. Most parking fines never get to court. The court route is expensive for operators (Â£35-Â£185 in court fees, plus solicitor cost). They pursue selectively.
 
-[[CTA:slate|Settle the dispute properly|A £5.99 personalised appeal letter that quotes POFA 2012 Sch 4, the parking Code of Practice, and the operator's own evidence requirements. Sent before the dispute escalates. Refunded if delivery fails.|Start my appeal|/pricing]]
+[[CTA:slate|Settle the dispute properly|A Â£5.99 personalised appeal letter that quotes POFA 2012 Sch 4, the parking Code of Practice, and the operator's own evidence requirements. Sent before the dispute escalates.|Start my appeal|/pricing]]
 
 ## Related Reading
 
@@ -554,17 +554,17 @@ The new single Code, mandatory from **31 December 2026**, finally lands. It appl
 
 This guide gives you the 10 rules every driver should know, with a "quote this" snippet under each rule for use in your appeal letter.
 
-[[CTA:teal|Cite all 10 rules in one letter|Our £5.99 appeal letter quotes the specific Code clauses your operator broke, against your specific PCN. 60 seconds, refunded if delivery fails.|Build my appeal|/appeal]]
+[[CTA:teal|Cite all 10 rules in one letter|Our Â£5.99 appeal letter quotes the specific Code clauses your operator broke, against your specific PCN. 60 seconds,|Build my appeal|/appeal]]
 
 ## The 10 Rules
 
-### Rule 1: Charge Caps £50 / £100
+### Rule 1: Charge Caps Â£50 / Â£100
 
-Standard charge: **£50** (reduced to £25 if paid within 14 days). Higher charge: **£100** (reduced to £50 within 14 days), reserved for serious breaches like blue badge bay misuse or parking on hatched markings.
+Standard charge: **Â£50** (reduced to Â£25 if paid within 14 days). Higher charge: **Â£100** (reduced to Â£50 within 14 days), reserved for serious breaches like blue badge bay misuse or parking on hatched markings.
 
-Operators charging more than £100 (excluding limited motorway service area exceptions) are in breach of the Code.
+Operators charging more than Â£100 (excluding limited motorway service area exceptions) are in breach of the Code.
 
-**Quote this**: "The charge of £[X] exceeds the maximum permitted under the single Code of Practice 2026, which caps standard charges at £50 and higher charges at £100. The operator has not provided any justification under the Code's narrow exceptions."
+**Quote this**: "The charge of Â£[X] exceeds the maximum permitted under the single Code of Practice 2026, which caps standard charges at Â£50 and higher charges at Â£100. The operator has not provided any justification under the Code's narrow exceptions."
 
 ### Rule 2: 10-Minute Grace Period (Mandatory)
 
@@ -662,7 +662,7 @@ PCNs must be written in **plain English**. They cannot use threatening, misleadi
 
 | Rule | What It Limits | Strongest Use |
 |---|---|---|
-| 1. Charge cap | Amount | Operator charging over £100 |
+| 1. Charge cap | Amount | Operator charging over Â£100 |
 | 2. 10-min grace | Time | Overstays under 10 minutes |
 | 3. 5-min consideration | Time | Brief entry-and-leave |
 | 4. Signage standards | Process | Faded, hidden, illegible signs |
@@ -675,7 +675,7 @@ PCNs must be written in **plain English**. They cannot use threatening, misleadi
 
 Most successful appeals stack two or three of these. A late Notice to Keeper combined with defective signage is hard for any operator to defend.
 
-[[CTA:amber|Stack the rules in one letter|Our £5.99 appeal letter automatically identifies which Code rules apply to your specific PCN, then quotes them with the operator's own correspondence as evidence.|Get my £5.99 letter|/pricing]]
+[[CTA:amber|Stack the rules in one letter|Our Â£5.99 appeal letter automatically identifies which Code rules apply to your specific PCN, then quotes them with the operator's own correspondence as evidence.|Get my Â£5.99 letter|/pricing]]
 
 ## What Happens If The Operator Ignores The Code
 
@@ -691,11 +691,11 @@ Three patterns worth watching:
 
 - **"Inactive" 14-day discount windows** that count weekends or postage time against you. The discount must be a real 14 calendar days from receipt.
 - **Compliance certificates that lapsed** between issue and enforcement. Always ask for the current certificate.
-- **Splitting one event into two charges** (entering, then exiting) to dodge the £100 cap. This is explicitly prohibited.
+- **Splitting one event into two charges** (entering, then exiting) to dodge the Â£100 cap. This is explicitly prohibited.
 
 If any of these apply to your PCN, raise it specifically.
 
-[[CTA:slate|Cite the Code, win the appeal|We track the Code clauses every operator most often breaches and build them into your letter automatically. £5.99 standard, £9.99 if you want a tribunal-ready bundle. Refunded if delivery fails.|Start my appeal|/appeal]]
+[[CTA:slate|Cite the Code, win the appeal|We track the Code clauses every operator most often breaches and build them into your letter automatically. Â£5.99 standard, Â£9.99 if you want a tribunal-ready bundle.|Start my appeal|/appeal]]
 
 ## Related Reading
 
@@ -713,7 +713,7 @@ If any of these apply to your PCN, raise it specifically.
       {
         question: "What is the maximum a private operator can charge?",
         answer:
-          "£50 for standard breaches (£25 if paid within 14 days) and £100 for serious breaches like disabled bay misuse (£50 within 14 days). Charges above this require specific Code-recognised justification.",
+          "Â£50 for standard breaches (Â£25 if paid within 14 days) and Â£100 for serious breaches like disabled bay misuse (Â£50 within 14 days). Charges above this require specific Code-recognised justification.",
       },
       {
         question: "Is the 10-minute grace period mandatory?",
@@ -743,7 +743,7 @@ If any of these apply to your PCN, raise it specifically.
       {
         question: "Does an AppealAFine letter quote the Code automatically?",
         answer:
-          "Yes. The £5.99 letter identifies which Code rules your operator has breached based on your specific PCN, signage photos and timeline, and quotes them with the correct clause references. Refunded if delivery fails.",
+          "Yes. The Â£5.99 letter identifies which Code rules your operator has breached based on your specific PCN, signage photos and timeline, and quotes them with the correct clause references.",
       },
     ],
   },
@@ -756,14 +756,14 @@ If any of these apply to your PCN, raise it specifically.
     category: "Private Parking",
     seoTitle: "Parking Fine While Your Car Was at the Garage for Repair?",
     seoDescription:
-      "The garage parked your car on the street, got a fine and now it is chasing you. Here is how to push it back to them plus a £5.99 letter that names them.",
+      "The garage parked your car on the street, got a fine and now it is chasing you. Here is how to push it back to them plus a Â£5.99 letter that names them.",
     content: `## When Someone Else Was Driving Your Car
 
-You drop your car at the garage on Tuesday morning for a service. You collect it Friday. The following week a Notice to Keeper turns up: a £100 Parking Charge Notice for parking on a yellow line, two streets from the garage, on Wednesday lunchtime. You were at work. The car was at the garage.
+You drop your car at the garage on Tuesday morning for a service. You collect it Friday. The following week a Notice to Keeper turns up: a Â£100 Parking Charge Notice for parking on a yellow line, two streets from the garage, on Wednesday lunchtime. You were at work. The car was at the garage.
 
 This is one of the cleanest POFA defences a keeper has. Under **Protection of Freedoms Act 2012 Schedule 4 Paragraph 5(2)**, a registered keeper who identifies the driver to the operator within the response window cannot be held liable for the charge. The operator must pursue the driver, which here is the garage.
 
-[[CTA:teal|We name the garage formally|Our £5.99 letter writes to the operator citing POFA Sch 4, Para 5(2), exhibits your booking confirmation, and transfers liability to the garage's registered address. 60 seconds, refunded if delivery fails.|Build my letter|/appeal]]
+[[CTA:teal|We name the garage formally|Our Â£5.99 letter writes to the operator citing POFA Sch 4, Para 5(2), exhibits your booking confirmation, and transfers liability to the garage's registered address. 60 seconds,|Build my letter|/appeal]]
 
 ## Why The Operator Came After You First
 
@@ -816,7 +816,7 @@ Most Notices to Keeper give you 28 days to respond. Within that window:
 
 Send by tracked post or email with read receipt. Keep a copy.
 
-[[CTA:amber|Most "garage parked it badly" appeals fail because the wording is wrong|Drivers often write a complaint email instead of formally identifying the driver under POFA. The operator then keeps pursuing the keeper. Our £5.99 letter uses the exact statutory wording.|Get my £5.99 letter|/pricing]]
+[[CTA:amber|Most "garage parked it badly" appeals fail because the wording is wrong|Drivers often write a complaint email instead of formally identifying the driver under POFA. The operator then keeps pursuing the keeper. Our Â£5.99 letter uses the exact statutory wording.|Get my Â£5.99 letter|/pricing]]
 
 ### Step 4: Notify The Garage
 
@@ -870,7 +870,7 @@ The same POFA transfer mechanism works for:
 - **Stolen vehicles**: report to police, get a crime reference number, send to operator. Usually cancelled immediately.
 - **Wrong driver entirely (cloned plates)**: see our [wrong driver appeal letter](/templates/wrong-driver-appeal-letter).
 
-[[CTA:slate|We do the formal transfer|Six questions about your garage visit. We deliver a POFA-compliant letter naming the garage, with your booking confirmation cited as evidence, ready to send. £5.99 standard or £9.99 with a follow-up bundle if the operator pushes back.|Start my letter|/appeal]]
+[[CTA:slate|We do the formal transfer|Six questions about your garage visit. We deliver a POFA-compliant letter naming the garage, with your booking confirmation cited as evidence, ready to send. Â£5.99 standard or Â£9.99 with a follow-up bundle if the operator pushes back.|Start my letter|/appeal]]
 
 ## Related Reading
 
@@ -915,9 +915,9 @@ The same POFA transfer mechanism works for:
           "Your remedy is small claims against the garage on the basis of the bailment relationship. The garage was in possession, incurred the charge, and is liable to you for costs reasonably incurred in dealing with it.",
       },
       {
-        question: "What does the £5.99 letter do specifically?",
+        question: "What does the Â£5.99 letter do specifically?",
         answer:
-          "It writes formally to the operator under POFA Schedule 4 Paragraph 5(2), identifies the garage with its registered address as the driver, exhibits your booking confirmation, and demands cancellation of the charge against you as keeper. Refunded if delivery fails.",
+          "It writes formally to the operator under POFA Schedule 4 Paragraph 5(2), identifies the garage with its registered address as the driver, exhibits your booking confirmation, and demands cancellation of the charge against you as keeper.",
       },
     ],
   },

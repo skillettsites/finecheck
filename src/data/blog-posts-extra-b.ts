@@ -302,7 +302,7 @@ POPLA cannot:
 
 POPLA can only allow or refuse the appeal against the operator's right to enforce the charge.
 
-[[CTA:slate|Don't write the appeal yourself|Our Â£5.99 letter cites Beavis, the BPA Code and the closest POPLA precedent to your scenario. Delivered in 24 hours as a Word document. Refund if we can't generate a valid letter.|Get my Â£5.99 letter|/pricing]]
+[[CTA:slate|Don't write the appeal yourself|Our Â£5.99 letter cites Beavis, the BPA Code and the closest POPLA precedent to your scenario. Delivered in 24 hours as a Word document.|Get my Â£5.99 letter|/pricing]]
 
 ## Final Word
 
@@ -463,7 +463,7 @@ POFA only protects the keeper. If you admit driving, paragraph 9 is irrelevant: 
 - **Do not miss the 28-day appeal window** to UKPC. After that the discount is lost and the formal appeal route narrows.
 - **Do not pay then appeal.** Payment is treated as acceptance of liability.
 
-[[CTA:slate|UKPC notices fail more often than they succeed|Stop fighting UKPC alone. Our Â£5.99 letter cites the exact POFA paragraph 9 sub-section your notice breached, plus the BPA Code requirement, ready to send. Refund if we can't generate a valid letter.|Get the Â£5.99 letter|/pricing]]
+[[CTA:slate|UKPC notices fail more often than they succeed|Stop fighting UKPC alone. Our Â£5.99 letter cites the exact POFA paragraph 9 sub-section your notice breached, plus the BPA Code requirement, ready to send.|Get the Â£5.99 letter|/pricing]]
 
 ## Final Word
 
@@ -846,7 +846,7 @@ If you lose at London Tribunals, you owe the original PCN at the **full rate** (
 
 That escalation is real, which is why getting the representation right at stage 1 matters. See [parking fine bailiffs](/guides/parking-fine-bailiffs).
 
-[[CTA:slate|Don't write the ULEZ appeal yourself|Our Â£5.99 letter identifies the correct ground from your PCN evidence, cites the regulation, and arrives in 24 hours ready to paste into the TfL portal. Refund if we can't generate a valid letter.|Get my Â£5.99 ULEZ letter|/pricing]]
+[[CTA:slate|Don't write the ULEZ appeal yourself|Our Â£5.99 letter identifies the correct ground from your PCN evidence, cites the regulation, and arrives in 24 hours ready to paste into the TfL portal.|Get my Â£5.99 ULEZ letter|/pricing]]
 
 ## Final Word
 

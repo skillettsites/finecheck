@@ -8,7 +8,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Appeal Letter Pricing: £5.99 Standard, £9.99 Premium",
   description:
-    "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. Refund if we can't generate a valid letter. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
+    "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. No subscription. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
   alternates: {
     canonical: "https://www.appealafine.co.uk/pricing",
   },
@@ -183,7 +183,7 @@ export default function PricingPage() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1 font-medium text-green-700 ring-1 ring-green-200">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                Refund if we can't generate a valid letter
+                Free 60-second check first
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1 font-medium text-slate-700 ring-1 ring-slate-200">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-3.75 11.25h16.5a1.5 1.5 0 001.5-1.5V12a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 12v8.25a1.5 1.5 0 001.5 1.5z" /></svg>
@@ -206,9 +206,9 @@ export default function PricingPage() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
             </svg>
             <div className="max-w-2xl">
-              <p className="text-base font-semibold text-green-900">Honest-check guarantee</p>
+              <p className="text-base font-semibold text-green-900">Honest free check</p>
               <p className="text-sm text-green-800 mt-0.5">
-                Free check first. If your fine has no defensible legal ground, we tell you and you pay nothing. If you pay and we can't write you a valid letter, you get a full refund. We do not guarantee the outcome of your appeal because no service can.
+                Free assessment first. If your fine has no defensible legal ground, we tell you and you pay nothing. We do not guarantee the outcome of your appeal because no service can — but you'll know your case strength before you spend a penny.
               </p>
             </div>
           </div>

@@ -45,8 +45,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-4 border-b border-white/5 py-6 sm:grid-cols-3">
           {[
             {
-              label: "Refund if we can't write you a valid letter",
-              sub: "Honest free check first. If your fine has no defensible ground, you pay nothing.",
+              label: "Honest free check first",
+              sub: "Free 60-second assessment tells you your appeal strength before you pay a penny.",
               icon: (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               ),

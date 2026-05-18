@@ -111,7 +111,7 @@ export default function StickyDesktopBar() {
             <p className="text-sm text-slate-700 truncate">
               Free 60-second check.{" "}
               <span className="font-semibold text-slate-900">Letter from £5.99.</span>{" "}
-              <span className="text-slate-500">Refund if not winnable.</span>
+              <span className="text-slate-500">No subscription.</span>
             </p>
           )}
         </div>

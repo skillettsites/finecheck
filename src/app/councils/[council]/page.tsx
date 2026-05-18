@@ -177,7 +177,7 @@ export default async function CouncilPage({
                 </Button>
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                Free assessment, then Â£5.99 letter or Â£9.99 premium pack. Refund if we can't generate a valid letter.
+                Free assessment, then £5.99 letter or £9.99 premium pack. No subscription.
               </p>
             </div>
 

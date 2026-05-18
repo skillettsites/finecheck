@@ -146,7 +146,7 @@ Excel Parking PCNs are not invincible. Six recurring weaknesses, POFA wording, u
       {
         question: "Can the Â£5.99 letter be used at IAS as well as the initial appeal?",
         answer:
-          "The Â£5.99 letter is tailored for the stage you are at. If you are escalating to IAS, the letter uses the IAS template and references your initial appeal. If delivery fails we refund.",
+          "The Â£5.99 letter is tailored for the stage you are at. If you are escalating to IAS, the letter uses the IAS template and references your initial appeal.",
       },
     ],
   },
@@ -217,7 +217,7 @@ Under the IPC Code of Practice (Part E) and **Consumer Rights Act 2015 Â§62** 
 
 This combines well with Error 1 or 2 as a secondary ground.
 
-[[CTA:amber|Don't know which error type applies to your photos?|Upload your NTK and we identify the strongest ANPR ground for Â£5.99. Refund if we can't generate a valid letter.|See my best ground|/pricing]]
+[[CTA:amber|Don't know which error type applies to your photos?|Upload your NTK and we identify the strongest ANPR ground for Â£5.99.|See my best ground|/pricing]]
 
 ## Error 6: Clock Drift Between Cameras
 
@@ -262,7 +262,7 @@ The Â£5.99 letter at our [Smart Parking template page](/templates/smart-parkin
 
 If IAS finds against you, the charge stands and Smart Parking can pursue. Realistically, Smart Parking is **less litigious** than ParkingEye, and many unpaid charges end with debt collection letters from DRP or ZZPS rather than court. If a Letter Before Claim does arrive, our [debt collector response letter](/templates/debt-collector-response-letter) and [court defence guide](/guides/parking-fine-court-defence) cover the next steps.
 
-[[CTA:slate|Smart Parking PCN, ANPR error suspected|Â£5.99 letter or Â£9.99 premium pack with full evidence index. Refund if we can't generate a valid letter.|See pricing|/pricing]]
+[[CTA:slate|Smart Parking PCN, ANPR error suspected|Â£5.99 letter or Â£9.99 premium pack with full evidence index.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -406,7 +406,7 @@ If you owe **multiple debts totalling Â£5,000+**, are in active default, and t
 
 It is tempting to fire off an angry reply. Don't. A measured, statute-citing letter is more effective and protects you if the matter ever does end up in court. Keep your reply short, factual, and focused on the legal points. The Â£5.99 template at [our debt collector response page](/templates/debt-collector-response-letter) is written exactly that way.
 
-[[CTA:slate|Stop the threats with one letter|Â£5.99 cease-and-desist citing the Insolvency Act, CPUTR and FCA rules. Refund if we can't generate a valid letter.|See pricing|/pricing]]
+[[CTA:slate|Stop the threats with one letter|Â£5.99 cease-and-desist citing the Insolvency Act, CPUTR and FCA rules.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -450,7 +450,7 @@ A statutory demand for a Â£170 parking fine is a bluff. The Insolvency Act 198
       {
         question: "Does the Â£5.99 letter work for any debt collector?",
         answer:
-          "The template is designed for the major parking debt collectors (DRP, ZZPS, BW Legal, DCB Legal) and is tailored to your specific letter. If delivery fails we refund.",
+          "The template is designed for the major parking debt collectors (DRP, ZZPS, BW Legal, DCB Legal) and is tailored to your specific letter.",
       },
     ],
   },
@@ -577,7 +577,7 @@ If you lose and the debt is eventually registered with the **Traffic Enforcement
 
 **Traffic Penalty Tribunal** covers England and Wales outside Greater London, plus moving traffic, bus lane and Mersey Tunnel cases. **London Tribunals** covers Greater London PCNs. Procedure is broadly similar: free, statutory grounds, paper or oral hearings. The Â£9.99 pack is configured for either based on the council that issued the PCN.
 
-[[CTA:slate|Stage 3 is where independent adjudication kicks in|Â£9.99 covers the case statement, statutory ground, and evidence index. Â£5.99 covers Stages 1-2 if you're earlier in the process. Refund if we can't generate a valid letter.|See pricing|/pricing]]
+[[CTA:slate|Stage 3 is where independent adjudication kicks in|Â£9.99 covers the case statement, statutory ground, and evidence index. Â£5.99 covers Stages 1-2 if you're earlier in the process.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -621,7 +621,7 @@ Council PCN appeals at TPT or London Tribunals are won by structure, statute and
       {
         question: "Does the Â£9.99 pack cover London Tribunals as well?",
         answer:
-          "Yes. The pack identifies which tribunal applies based on the issuing authority and is structured to either body's filing requirements. Refund if we can't generate a valid letter.",
+          "Yes. The pack identifies which tribunal applies based on the issuing authority and is structured to either body's filing requirements.",
       },
     ],
   },
@@ -735,7 +735,7 @@ Different problem, different solution. If you have received a **Letter Before Cl
 
 CCJs themselves are valid for **6 years** for enforcement without permission of the court (Limitation Act 1980, s.24). After 6 years, ParkingEye would need court permission to enforce. They rarely do for parking-charge sums. The CCJ also drops off your credit file at year 6. See [statute of limitations guide](/guides/parking-fine-statute-of-limitations) for the full timeline of underlying parking debt limitation.
 
-[[CTA:slate|3 routes, one Â£9.99 pack|Certificate of Cancellation template, N244 application, CRA dispute letter. We identify which applies. Refund if we can't generate a valid letter.|See pricing|/pricing]]
+[[CTA:slate|3 routes, one Â£9.99 pack|Certificate of Cancellation template, N244 application, CRA dispute letter. We identify which applies.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -779,7 +779,7 @@ A ParkingEye CCJ on your credit file is not always permanent. Three routes exist
       {
         question: "What does the Â£9.99 pack include?",
         answer:
-          "All three removal templates: Certificate of Cancellation application (Route 1), N244 set-aside with witness statement and draft defence (Route 2), and credit reference agency dispute letter (Route 3). We identify which applies to your facts. Refund if we can't generate a valid letter.",
+          "All three removal templates: Certificate of Cancellation application (Route 1), N244 set-aside with witness statement and draft defence (Route 2), and credit reference agency dispute letter (Route 3). We identify which applies to your facts.",
       },
     ],
   },

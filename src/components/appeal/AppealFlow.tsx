@@ -1034,7 +1034,7 @@ function PaywallCard({
             <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
             </svg>
-            100% refund if not winnable
+            One-time payment
           </span>
           <span className="inline-flex items-center gap-1">
             <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
