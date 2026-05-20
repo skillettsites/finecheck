@@ -6,6 +6,7 @@ import StatsCounter from "@/components/StatsCounter";
 import PricingCard from "@/components/PricingCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import RotatingWord from "@/components/RotatingWord";
+import OperatorMarquee from "@/components/OperatorMarquee";
 
 export const metadata: Metadata = {
   title: "Get a Personalised PCN Appeal Letter, From £5.99 | AppealAFine",
@@ -367,30 +368,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 lg:shrink-0">
               Fines we help cancel
             </p>
-            <div className="flex w-full snap-x snap-mandatory items-center gap-2 overflow-x-auto pb-1 lg:flex-wrap lg:overflow-visible lg:pb-0">
-              {[
-                { name: "ParkingEye", colour: "from-rose-500/15 to-rose-500/5 text-rose-700 ring-rose-200" },
-                { name: "UKPC", colour: "from-amber-500/15 to-amber-500/5 text-amber-700 ring-amber-200" },
-                { name: "APCOA", colour: "from-sky-500/15 to-sky-500/5 text-sky-700 ring-sky-200" },
-                { name: "Excel Parking", colour: "from-fuchsia-500/15 to-fuchsia-500/5 text-fuchsia-700 ring-fuchsia-200" },
-                { name: "Smart Parking", colour: "from-violet-500/15 to-violet-500/5 text-violet-700 ring-violet-200" },
-                { name: "NCP", colour: "from-emerald-500/15 to-emerald-500/5 text-emerald-700 ring-emerald-200" },
-                { name: "Council PCN", colour: "from-blue-500/15 to-blue-500/5 text-blue-700 ring-blue-200" },
-                { name: "ULEZ / TfL", colour: "from-teal-500/15 to-teal-500/5 text-teal-700 ring-teal-200" },
-                { name: "POPLA / IAS", colour: "from-indigo-500/15 to-indigo-500/5 text-indigo-700 ring-indigo-200" },
-                { name: "Tribunal", colour: "from-slate-500/15 to-slate-500/5 text-slate-700 ring-slate-300" },
-              ].map((op) => (
-                <span
-                  key={op.name}
-                  className={`shrink-0 snap-start inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${op.colour} px-3 py-1 text-xs font-semibold ring-1 lg:shrink`}
-                >
-                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  {op.name}
-                </span>
-              ))}
-            </div>
+            <OperatorMarquee />
           </div>
           <p className="mt-4 text-center text-xs text-slate-500 lg:text-left lg:pl-[8.5rem]">
             Categories of fine we generate letters for. Our AI cites operator-specific failings (e.g. POFA 2012 Sch 4 timing, Code of Practice 2024 signage, ParkingEye v Beavis proportionality) drawn from real tribunal precedent.

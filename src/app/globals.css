@@ -101,6 +101,31 @@ body {
   animation: aaf-float 4s ease-in-out infinite 1.4s;
 }
 
+/* Auto-scrolling marquee track (JS-driven scrollLeft, stays manually scrollable) */
+.aaf-marquee-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.aaf-marquee-scroll::-webkit-scrollbar {
+  display: none;
+}
+.aaf-marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+}
+
 /* Honour reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .aaf-mesh-a,
