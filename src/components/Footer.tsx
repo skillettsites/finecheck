@@ -14,6 +14,7 @@ const footerLinks = {
     { name: "Appeal Grounds", href: "/grounds" },
     { name: "Template Letters", href: "/templates" },
     { name: "Parking Fines by City", href: "/parking-fines" },
+    { name: "Local Fines & Cameras", href: "/local-fines" },
     { name: "Statistics & Data", href: "/data" },
   ],
   popular: [

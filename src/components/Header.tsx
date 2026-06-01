@@ -22,6 +22,7 @@ const navigation = [
       { name: "Appeal Guides", href: "/guides", description: "Step-by-step guides for every type of parking fine" },
       { name: "Appeal Grounds", href: "/grounds", description: "Legal defences you can use to challenge your fine" },
       { name: "Template Letters", href: "/templates", description: "Ready-to-use appeal letter templates" },
+      { name: "Local Fines & Cameras", href: "/local-fines", description: "Speed cameras, bus gates, toll and average-speed fines by location" },
       { name: "Statistics & Data", href: "/data", description: "UK parking fine statistics, success rates, and rankings" },
     ],
   },

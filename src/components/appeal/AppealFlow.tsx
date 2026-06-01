@@ -917,9 +917,10 @@ function PaywallCard({
 }) {
   const standard = PRODUCTS["standard-letter"];
   const premium = PRODUCTS["premium-pack"];
-  // Default to whatever the AI recommended; if it didn't recommend, premium is the
-  // best-attach choice because it covers the rejection-rebound stage too.
-  const initialPremium = assessment.recommendedProduct === "premium-pack" || !assessment.recommendedProduct;
+  // Default to the £5.99 standard letter so the headline price at the decision
+  // moment is the lowest entry point; only pre-tick premium when the AI
+  // explicitly recommended it. The upsell toggle stays one tap away.
+  const initialPremium = assessment.recommendedProduct === "premium-pack";
   const [withPremium, setWithPremium] = useState(initialPremium);
 
   const activeProduct = withPremium ? premium : standard;
@@ -1048,6 +1049,13 @@ function PaywallCard({
             </svg>
             Email delivery in minutes
           </span>
+        </div>
+
+        <div className="mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-teal-50/70 px-3 py-2 text-center text-[11px] font-medium text-teal-800">
+          <svg className="h-3.5 w-3.5 shrink-0 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          Not happy with your letter? Reply to the email and we&apos;ll revise it, free.
         </div>
 
         <div className="mt-4 text-center">

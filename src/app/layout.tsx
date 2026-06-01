@@ -86,14 +86,8 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "AppealAFine",
   url: "https://www.appealafine.co.uk",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.appealafine.co.uk/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
+  description:
+    "Appeal UK parking fines, bus lane PCNs, congestion charges and ULEZ penalties with personalised letters that cite the correct law.",
 };
 
 export default function RootLayout({

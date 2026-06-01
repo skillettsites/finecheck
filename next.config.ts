@@ -33,6 +33,13 @@ const nextConfig: NextConfig = {
     ],
   },
   serverExternalPackages: ['pdfkit'],
+  async redirects() {
+    return [
+      // Historical 404s in GSC pointed at /operators; the live hub is /appeals.
+      { source: '/operators', destination: '/appeals', permanent: true },
+      { source: '/operators/:slug', destination: '/appeals/:slug', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

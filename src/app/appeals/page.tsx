@@ -1,14 +1,27 @@
-﻿"use client";
-
-import { useState } from "react";
-import Link from "next/link";
+import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
-import Badge from "@/components/ui/Badge";
 import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { OPERATORS } from "@/data/operators";
+import OperatorsFilter from "./OperatorsFilter";
+
+export const metadata: Metadata = {
+  title: "Appeal Your Parking Fine by Operator | AppealAFine",
+  description:
+    "Find your private parking operator and learn how to appeal your charge. Covers all major UK operators including ParkingEye, UKPC, APCOA and NCP, with success rates and free appeal guides.",
+  alternates: {
+    canonical: "https://www.appealafine.co.uk/appeals",
+  },
+  openGraph: {
+    title: "Appeal Your Parking Fine by Operator | AppealAFine",
+    description:
+      "Find your private parking operator and learn how to appeal. Covers ParkingEye, UKPC, APCOA, NCP and more, with success rates and free guides.",
+    url: "https://www.appealafine.co.uk/appeals",
+    type: "website",
+  },
+};
 
 const faqItems = [
   {
@@ -43,32 +56,26 @@ const faqItems = [
   },
 ];
 
-type TradeFilter = "all" | "BPA" | "IPC";
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function OperatorsIndexPage() {
-  const [filter, setFilter] = useState<TradeFilter>("all");
-
-  const filteredOperators =
-    filter === "all"
-      ? OPERATORS
-      : OPERATORS.filter((op) => op.tradeBody === filter);
-
   const bpaCount = OPERATORS.filter((op) => op.tradeBody === "BPA").length;
   const ipcCount = OPERATORS.filter((op) => op.tradeBody === "IPC").length;
 
   return (
     <>
-      <head>
-        <title>Appeal Your Parking Fine by Operator | AppealAFine</title>
-        <meta
-          name="description"
-          content="Find your private parking operator and learn how to appeal your charge. Covers all major UK operators including ParkingEye, UKPC, APCOA, NCP, and more. Free appeal guides and success rates."
-        />
-        <link
-          rel="canonical"
-          href="https://www.appealafine.co.uk/appeals"
-        />
-      </head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <section className="bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16">
         <Container>
@@ -114,73 +121,7 @@ export default function OperatorsIndexPage() {
 
       <section className="py-12">
         <Container>
-          <div className="mb-8 flex flex-wrap items-center gap-3">
-            <span className="text-sm font-medium text-gray-700">
-              Filter by trade body:
-            </span>
-            {(["all", "BPA", "IPC"] as TradeFilter[]).map((option) => (
-              <button
-                key={option}
-                onClick={() => setFilter(option)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-                  filter === option
-                    ? "bg-teal-600 text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {option === "all"
-                  ? `All Operators (${OPERATORS.length})`
-                  : `${option} (${option === "BPA" ? bpaCount : ipcCount})`}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredOperators.map((op) => (
-              <Link key={op.slug} href={`/appeals/${op.slug}`}>
-                <Card hover className="h-full">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h2 className="text-lg font-semibold text-gray-900">
-                        {op.name}
-                      </h2>
-                      <p className="mt-1 text-sm text-gray-500">
-                        {op.fullName}
-                      </p>
-                    </div>
-                    <Badge
-                      variant={
-                        op.averageSuccessRate >= 50 ? "success" : "warning"
-                      }
-                    >
-                      {op.averageSuccessRate}% success
-                    </Badge>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <Badge variant="info">{op.tradeBody}</Badge>
-                    <Badge variant="default">
-                      Appeal to {op.appealBody}
-                    </Badge>
-                    {op.usesANPR && (
-                      <Badge variant="accent">Uses ANPR</Badge>
-                    )}
-                    {op.pursuesToCourt && (
-                      <Badge variant="danger">Pursues Court</Badge>
-                    )}
-                  </div>
-
-                  <p className="mt-4 text-sm text-gray-600 line-clamp-2">
-                    {op.description}
-                  </p>
-
-                  <div className="mt-4 text-sm font-medium text-teal-600">
-                    View appeal guide &rarr;
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
+          <OperatorsFilter />
         </Container>
       </section>
 

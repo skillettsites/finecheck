@@ -160,9 +160,50 @@ function CrossIcon() {
   );
 }
 
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "Product",
+      name: "Standard Appeal Letter",
+      description:
+        "Specialist AI-generated parking fine appeal letter citing the correct UK legislation and case law for your specific council PCN or private parking charge.",
+      brand: { "@type": "Brand", name: "AppealAFine" },
+      category: "Legal document preparation",
+      offers: {
+        "@type": "Offer",
+        price: "5.99",
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+        url: "https://www.appealafine.co.uk/appeal",
+      },
+    },
+    {
+      "@type": "Product",
+      name: "Premium Appeal Pack",
+      description:
+        "Everything in the Standard letter plus an escalation letter for POPLA, IAS or the tribunal, a personalised evidence checklist, and operator weakness analysis.",
+      brand: { "@type": "Brand", name: "AppealAFine" },
+      category: "Legal document preparation",
+      offers: {
+        "@type": "Offer",
+        price: "9.99",
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+        url: "https://www.appealafine.co.uk/appeal",
+      },
+    },
+  ],
+};
+
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-slate-50 to-white py-12 sm:py-16">
         <Container>
