@@ -8,7 +8,7 @@ import { OPERATORS } from "@/data/operators";
 import OperatorsFilter from "./OperatorsFilter";
 
 export const metadata: Metadata = {
-  title: "Appeal Your Parking Fine by Operator | AppealAFine",
+  title: "Appeal Your Parking Fine by Operator",
   description:
     "Find your private parking operator and learn how to appeal your charge. Covers all major UK operators including ParkingEye, UKPC, APCOA and NCP, with success rates and free appeal guides.",
   alternates: {
