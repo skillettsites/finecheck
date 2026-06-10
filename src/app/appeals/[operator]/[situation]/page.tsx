@@ -315,6 +315,25 @@ export default async function OperatorSituationPage({
               </div>
             ))}
           </div>
+
+          <div className="mt-8 rounded-xl border border-teal-200 bg-gradient-to-br from-teal-50 to-emerald-50 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+            <div>
+              <p className="text-lg font-semibold text-gray-900">
+                Turn these defences into a ready-to-send letter
+              </p>
+              <p className="mt-1 text-sm text-gray-600">
+                Free 2-minute assessment first. If you have grounds, a personalised
+                appeal letter citing the exact legislation for {op?.name || "your operator"} costs{" "}
+                <span className="font-semibold text-gray-900">£2.99</span>{" "}
+                <span className="text-gray-400 line-through">£5.99</span>, delivered by email in minutes.
+              </p>
+            </div>
+            <div className="mt-4 sm:mt-0 shrink-0">
+              <Button href="/appeal" variant="accent" size="lg">
+                Check my fine free
+              </Button>
+            </div>
+          </div>
         </Container>
       </section>
 

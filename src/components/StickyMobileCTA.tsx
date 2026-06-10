@@ -107,7 +107,7 @@ export default function StickyMobileCTA() {
           href="/appeal"
           className="group flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-teal-600 to-teal-700 px-4 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_-8px_rgba(13,148,136,0.5)] transition-all active:scale-[0.99]"
         >
-          {hasDeadline ? "Get my letter — £5.99" : "Check my fine — free"}
+          {hasDeadline ? "Get my letter — £2.99" : "Check my fine — free"}
           <svg
             className="h-4 w-4 transition-transform group-active:translate-x-0.5"
             fill="none"

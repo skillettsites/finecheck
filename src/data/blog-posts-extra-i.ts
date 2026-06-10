@@ -3,19 +3,19 @@ import type { BlogPost } from "./blog-posts";
 // BATCH_I (2026-05-18) — underserved buyer-combo pack. Hire-car admin fees,
 // fleet drivers, paid-app wrong location, ANPR misread, blue-badge forgot,
 // NHS hospital staff/visitor. Specific scenarios that the SERP serves with
-// forum threads only, where a focused £5.99 letter is the natural conversion.
+// forum threads only, where a focused £2.99 letter is the natural conversion.
 
 export const BATCH_I: BlogPost[] = [
   {
     slug: "hire-car-parking-charge-admin-fee-refund",
     title: "Hire Car Parking Charge + £30-£60 Admin Fee: How to Challenge Both Operator and Hire Company",
     description:
-      "Europcar, Enterprise, Hertz, Avis routinely pass parking charges to hirers and add a £30-£60 admin fee. The BVRLA non-payment guidance, the CRA 2015 challenge to the admin fee, and the £5.99 letter that targets both.",
+      "Europcar, Enterprise, Hertz, Avis routinely pass parking charges to hirers and add a £30-£60 admin fee. The BVRLA non-payment guidance, the CRA 2015 challenge to the admin fee, and the £2.99 letter that targets both.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "Hire Car Parking Charge Admin Fee Refund (BVRLA + CRA, 2026)",
     seoDescription:
-      "Hire car parking charge with £30-£60 admin fee from Europcar / Enterprise / Hertz? BVRLA instructed members not to pay private charges. CRA 2015 challenge to admin fee. £5.99 letter.",
+      "Hire car parking charge with £30-£60 admin fee from Europcar / Enterprise / Hertz? BVRLA instructed members not to pay private charges. CRA 2015 challenge to admin fee. £2.99 letter.",
     content: `## The Hire Company Admin Fee Is Almost Always Challengeable
 
 If you hired a vehicle and a private parking charge from ParkingEye, UKPC or another operator was issued during your hire period, the hire company will typically:
@@ -30,7 +30,7 @@ The most common providers — Europcar, Enterprise Rent-a-Car, Hertz, Avis, SIXT
 
 2. The **admin fee itself** is challengeable under the **Consumer Rights Act 2015 s.62** as an unfair contract term, particularly where the fee is disproportionate to the actual administrative cost (£30+ to process a £100 charge).
 
-[[CTA:teal|Got a hire car parking charge + admin fee?|Our £5.99 personalised letter challenges both the underlying parking charge AND the hire company's admin fee under the BVRLA guidance and CRA 2015 s.62. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Got a hire car parking charge + admin fee?|Our £2.99 personalised letter challenges both the underlying parking charge AND the hire company's admin fee under the BVRLA guidance and CRA 2015 s.62. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## Step 1: Identify the Two Targets
 
@@ -101,7 +101,7 @@ Yours faithfully,
 [Signature]
 \`\`\`
 
-[[CTA:amber|Want both letters drafted in one go?|Upload the hire agreement and the parking-charge notice. Our £5.99 letter packages the operator appeal AND the admin-fee dispute, with the chargeback / s.75 escalation referenced.|Get my letters|/pricing]]
+[[CTA:amber|Want both letters drafted in one go?|Upload the hire agreement and the parking-charge notice. Our £2.99 letter packages the operator appeal AND the admin-fee dispute, with the chargeback / s.75 escalation referenced.|Get my letters|/pricing]]
 
 ## Step 4: Chargeback / Section 75 If Hire Company Refuses
 
@@ -121,7 +121,7 @@ Each route has its own dispute window — typically 120 days from the transactio
 - **Section 75 dispute window**: typically 120 days
 - **UK Direct Debit Guarantee**: refund right immediate
 
-[[CTA:slate|Operator + hire company in one letter|Our £5.99 letter targets both the parking charge under POFA AND the admin fee under CRA 2015 s.62, with chargeback escalation referenced.|Build my letter|/appeal]]
+[[CTA:slate|Operator + hire company in one letter|Our £2.99 letter targets both the parking charge under POFA AND the admin fee under CRA 2015 s.62, with chargeback escalation referenced.|Build my letter|/appeal]]
 
 ## Related Reading
 
@@ -176,12 +176,12 @@ Each route has its own dispute window — typically 120 days from the transactio
     slug: "fleet-company-car-pcn-appeal-driver",
     title: "Company Car PCN: The Fleet-Driver Liability Transfer and the Right to Appeal",
     description:
-      "Got a parking fine on a company car or pool car? Fleet operators routinely transfer liability to the driver via the BVRLA driver transfer mechanism, but the driver retains full appeal rights. The procedure, the typical fleet admin fee, and the £5.99 letter.",
+      "Got a parking fine on a company car or pool car? Fleet operators routinely transfer liability to the driver via the BVRLA driver transfer mechanism, but the driver retains full appeal rights. The procedure, the typical fleet admin fee, and the £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "Company Car PCN Appeal Driver Liability (2026 Guide)",
     seoDescription:
-      "Company car parking fine? Fleet operator transfers liability to driver via BVRLA mechanism. Driver retains full appeal rights under POFA. £5.99 personalised letter.",
+      "Company car parking fine? Fleet operator transfers liability to driver via BVRLA mechanism. Driver retains full appeal rights under POFA. £2.99 personalised letter.",
     content: `## You Got a PCN on a Company Car — Now What
 
 If you drove a **company car**, **pool car** or **fleet vehicle** and a parking PCN was issued, the procedural chain is:
@@ -193,7 +193,7 @@ If you drove a **company car**, **pool car** or **fleet vehicle** and a parking 
 
 The **57-61% of fleet drivers** who do not appeal do so because they think they cannot — that the fleet operator's decision is final. That's wrong. As the named driver, you retain **full statutory appeal rights** under POFA 2012 and the Civil Enforcement Regulations 2022, regardless of what your fleet operator has done with the PCN.
 
-[[CTA:teal|Got a company-car PCN?|Our £5.99 personalised letter is structured for the BVRLA driver-transfer scenario, asserts your full appeal rights, and provides a separate template for your fleet manager.|Generate my letter|/pricing]]
+[[CTA:teal|Got a company-car PCN?|Our £2.99 personalised letter is structured for the BVRLA driver-transfer scenario, asserts your full appeal rights, and provides a separate template for your fleet manager.|Generate my letter|/pricing]]
 
 ## Step 1: Confirm Your Status
 
@@ -221,7 +221,7 @@ The appeal is structurally the same as any other PCN appeal — POFA 2012 §9, s
 
 The only fleet-specific element is the opening paragraph, where you reference the BVRLA transfer and confirm your identity as the driver.
 
-[[CTA:amber|Want the fleet-specific letter drafted?|Upload the PCN and the fleet's transfer notification. Our £5.99 letter is structured for the BVRLA scenario with the right opening and the substantive grounds in the appropriate order.|Get my letter|/pricing]]
+[[CTA:amber|Want the fleet-specific letter drafted?|Upload the PCN and the fleet's transfer notification. Our £2.99 letter is structured for the BVRLA scenario with the right opening and the substantive grounds in the appropriate order.|Get my letter|/pricing]]
 
 ## Step 4: Manage the Fleet Operator Relationship
 
@@ -272,7 +272,7 @@ If the fleet operator refuses to reverse the deduction after a successful appeal
 - **PCN appeal window** (council): 28 days from NtO
 - **PCN appeal window** (private): 28 days from NtK
 
-[[CTA:slate|You retain full appeal rights as the driver|Our £5.99 letter is structured for the BVRLA driver-transfer scenario and asserts your statutory grounds clearly to the operator.|Build my appeal|/appeal]]
+[[CTA:slate|You retain full appeal rights as the driver|Our £2.99 letter is structured for the BVRLA driver-transfer scenario and asserts your statutory grounds clearly to the operator.|Build my appeal|/appeal]]
 
 ## Related Reading
 
@@ -327,12 +327,12 @@ If the fleet operator refuses to reverse the deduction after a successful appeal
     slug: "paid-app-parking-wrong-location-pcn-appeal",
     title: "Paid for Parking on RingGo / PayByPhone but Got a PCN? The Wrong-Location Defence",
     description:
-      "Paid the parking fee on RingGo or PayByPhone but a PCN arrived anyway? The wrong-location error is common and the defence is straightforward with the right evidence. £5.99 letter.",
+      "Paid the parking fee on RingGo or PayByPhone but a PCN arrived anyway? The wrong-location error is common and the defence is straightforward with the right evidence. £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "RingGo PayByPhone Wrong Location PCN Appeal (2026)",
     seoDescription:
-      "Paid for parking via RingGo or PayByPhone but got a council PCN? The wrong-location defence wins these. £5.99 personalised letter with receipt + GPS evidence.",
+      "Paid for parking via RingGo or PayByPhone but got a council PCN? The wrong-location defence wins these. £2.99 personalised letter with receipt + GPS evidence.",
     content: `## You Paid. You Got a Ticket Anyway. Here's How.
 
 If you paid the parking fee via **RingGo**, **PayByPhone** or another council-approved app but a Penalty Charge Notice arrived a few days later, the most likely cause is one of:
@@ -345,7 +345,7 @@ If you paid the parking fee via **RingGo**, **PayByPhone** or another council-ap
 
 All five are challengeable, and the defence has a high success rate because the evidence is clear: you paid for parking, somewhere, around the same time. The challenge is to show that the payment was made in **good faith** and that the issuance of the PCN was procedurally unreasonable in the circumstances.
 
-[[CTA:teal|Paid via app, got a PCN anyway?|Our £5.99 personalised letter pairs your RingGo / PayByPhone receipt with GPS evidence and structures the council representations to maximise cancellation probability.|Generate my letter|/pricing]]
+[[CTA:teal|Paid via app, got a PCN anyway?|Our £2.99 personalised letter pairs your RingGo / PayByPhone receipt with GPS evidence and structures the council representations to maximise cancellation probability.|Generate my letter|/pricing]]
 
 ## Step 1: Collect the Evidence Chain
 
@@ -399,7 +399,7 @@ Yours faithfully,
 [Signature]
 \`\`\`
 
-[[CTA:amber|Want this drafted with your specific evidence?|Upload the PCN, the app receipt and the GPS screenshot. Our £5.99 letter selects the right wording for the specific app and council.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted with your specific evidence?|Upload the PCN, the app receipt and the GPS screenshot. Our £2.99 letter selects the right wording for the specific app and council.|Get my letter|/pricing]]
 
 ## Step 3: If Council Rejects — Tribunal Escalation
 
@@ -412,7 +412,7 @@ Escalate to **London Tribunals** (M25 boroughs) or **Traffic Penalty Tribunal** 
 - **Tribunal escalation window**: 28 days from rejection
 - **Estimated wrong-location defence success rate**: 70-80% with full evidence chain
 
-[[CTA:slate|Paid app, got PCN, want it cancelled|Our £5.99 letter pairs your receipt with GPS evidence and structures the representations to maximise cancellation probability.|Build my letter|/appeal]]
+[[CTA:slate|Paid app, got PCN, want it cancelled|Our £2.99 letter pairs your receipt with GPS evidence and structures the representations to maximise cancellation probability.|Build my letter|/appeal]]
 
 ## Related Reading
 
@@ -467,12 +467,12 @@ Escalate to **London Tribunals** (M25 boroughs) or **Traffic Penalty Tribunal** 
     slug: "anpr-misread-wrong-plate-pcn-appeal",
     title: "ANPR Misread Wrong Plate PCN: The Subject Access Request That Cancels Most of These",
     description:
-      "ANPR cameras misread plates routinely — O for 0, I for 1, B for 8. The Subject Access Request that produces the camera image, the comparison technique, and the £5.99 letter.",
+      "ANPR cameras misread plates routinely — O for 0, I for 1, B for 8. The Subject Access Request that produces the camera image, the comparison technique, and the £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "ANPR Misread Wrong Plate PCN Appeal (2026)",
     seoDescription:
-      "ANPR camera misread your plate? Subject Access Request gets the actual image. Compare against your VRM, submit the misread defence. £5.99 letter.",
+      "ANPR camera misread your plate? Subject Access Request gets the actual image. Compare against your VRM, submit the misread defence. £2.99 letter.",
     content: `## ANPR Cameras Confuse Characters in Predictable Patterns
 
 **Automatic Number Plate Recognition (ANPR)** cameras misread plates in well-documented patterns:
@@ -490,7 +490,7 @@ If you received a PCN for a vehicle and location you cannot have been at, the mo
 
 The defence is straightforward: **prove you were elsewhere**, request the **actual ANPR image** under a Subject Access Request, and demonstrate the misread.
 
-[[CTA:teal|Got a PCN for somewhere you weren't?|Our £5.99 personalised letter pairs a Subject Access Request for the ANPR image with the misread-character comparison and your location evidence. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Got a PCN for somewhere you weren't?|Our £2.99 personalised letter pairs a Subject Access Request for the ANPR image with the misread-character comparison and your location evidence. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## Step 1: Confirm You Weren't There
 
@@ -544,7 +544,7 @@ When you receive the ANPR image, look at the actual plate visible in the photogr
 
 If the actual plate in the image is **clearly different** from your VRM, the PCN should be cancelled. Submit the comparison with the representations.
 
-[[CTA:amber|Want the SAR drafted + the comparison structured?|Upload the PCN and any GPS / receipt evidence. Our £5.99 letter packages the SAR, the misread defence and the location evidence in one go.|Get my letter|/pricing]]
+[[CTA:amber|Want the SAR drafted + the comparison structured?|Upload the PCN and any GPS / receipt evidence. Our £2.99 letter packages the SAR, the misread defence and the location evidence in one go.|Get my letter|/pricing]]
 
 ## Step 4: Submit Formal Representations
 
@@ -600,7 +600,7 @@ If the council refuses despite clear misread evidence, escalate to tribunal. The
 - **ANPR misread defence success rate at tribunal**: ~80-90% with clear image evidence
 - **Common misread characters**: O↔0, I↔1, B↔8, S↔5
 
-[[CTA:slate|You weren't there — prove it|Our £5.99 letter packages the SAR, the misread comparison and your GPS / receipt evidence. Filed by you, ready in minutes.|Build my appeal|/appeal]]
+[[CTA:slate|You weren't there — prove it|Our £2.99 letter packages the SAR, the misread comparison and your GPS / receipt evidence. Filed by you, ready in minutes.|Build my appeal|/appeal]]
 
 ## Related Reading
 
@@ -655,12 +655,12 @@ If the council refuses despite clear misread evidence, escalate to tribunal. The
     slug: "blue-badge-forgot-to-display-pcn-appeal",
     title: "Blue Badge Forgot to Display PCN: The Equality Act + Mitigation Defence That Wins",
     description:
-      "Got a parking PCN because you forgot to display your blue badge — but you have a valid one? The Equality Act 2010 + mitigation route routinely succeeds at tribunal. £5.99 letter.",
+      "Got a parking PCN because you forgot to display your blue badge — but you have a valid one? The Equality Act 2010 + mitigation route routinely succeeds at tribunal. £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "Blue Badge Forgot to Display Parking Fine Appeal (2026)",
     seoDescription:
-      "Forgot to display a valid blue badge and got a PCN? The Equality Act 2010 reasonable-adjustment argument + mitigation route. £5.99 personalised letter.",
+      "Forgot to display a valid blue badge and got a PCN? The Equality Act 2010 reasonable-adjustment argument + mitigation route. £2.99 personalised letter.",
     content: `## You Have the Badge. You Just Didn't Display It. Here's the Defence.
 
 If you are a **valid blue badge holder** but a parking PCN was issued because the badge was not displayed (it slid down, flipped over, was in your bag, was left at home for one trip), the appeal route depends on whether the parking was on **council land** or **private land**:
@@ -670,7 +670,7 @@ If you are a **valid blue badge holder** but a parking PCN was issued because th
 
 Both routes succeed at high rates when the badge documentation is current.
 
-[[CTA:teal|Forgot to display your blue badge and got a PCN?|Our £5.99 personalised letter cites the Equality Act 2010 + mitigation ground with your badge documentation attached. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Forgot to display your blue badge and got a PCN?|Our £2.99 personalised letter cites the Equality Act 2010 + mitigation ground with your badge documentation attached. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## What You Need
 
@@ -764,7 +764,7 @@ Yours faithfully,
 [Signature]
 \`\`\`
 
-[[CTA:amber|Want this drafted with your specific badge documentation?|Upload the PCN and a photo of your blue badge. Our £5.99 letter selects the right framework (Equality Act for private, mitigation for council) and structures the appeal.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted with your specific badge documentation?|Upload the PCN and a photo of your blue badge. Our £2.99 letter selects the right framework (Equality Act for private, mitigation for council) and structures the appeal.|Get my letter|/pricing]]
 
 ## Step 4: If Refused
 
@@ -780,7 +780,7 @@ For private PCNs, escalate to POPLA (BPA-affiliated operators) or IAS (IPC-affil
 - **Equality Act 2010 s.20**: reasonable-adjustments duty
 - **Council mitigation success rate**: ~70-80% with current badge
 
-[[CTA:slate|You're a valid badge holder|Our £5.99 letter cites the Equality Act 2010 + mitigation ground with your badge documentation attached.|Build my appeal|/appeal]]
+[[CTA:slate|You're a valid badge holder|Our £2.99 letter cites the Equality Act 2010 + mitigation ground with your badge documentation attached.|Build my appeal|/appeal]]
 
 ## Related Reading
 
@@ -835,12 +835,12 @@ For private PCNs, escalate to POPLA (BPA-affiliated operators) or IAS (IPC-affil
     slug: "hospital-parking-fine-nhs-staff-visitor",
     title: "NHS Hospital Parking Fine: The DHSC 2022 Guidance Defence + Staff and Visitor Routes",
     description:
-      "DHSC 2022 guidance gives mitigation grounds for hospital parking fines — staff, visitors, overrunning appointments, blue badge. The £5.99 letter that cites the guidance and the operator-specific weaknesses.",
+      "DHSC 2022 guidance gives mitigation grounds for hospital parking fines — staff, visitors, overrunning appointments, blue badge. The £2.99 letter that cites the guidance and the operator-specific weaknesses.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
     seoTitle: "NHS Hospital Parking Fine Appeal (DHSC 2022, 2026)",
     seoDescription:
-      "Hospital parking fine for NHS staff, patient or visitor? DHSC 2022 guidance gives mitigation grounds for overrunning appointments. £5.99 personalised letter.",
+      "Hospital parking fine for NHS staff, patient or visitor? DHSC 2022 guidance gives mitigation grounds for overrunning appointments. £2.99 personalised letter.",
     content: `## DHSC's 2022 Guidance Made Hospital Parking Appeals Much Easier
 
 In **March 2022**, the Department of Health and Social Care issued [updated guidance on NHS patient, visitor and staff car parking principles](https://www.gov.uk/government/publications/nhs-patient-visitor-and-staff-car-parking-principles/nhs-patient-visitor-and-staff-car-parking-principles). The guidance specifically requires NHS trusts and their parking operators to:
@@ -851,7 +851,7 @@ In **March 2022**, the Department of Health and Social Care issued [updated guid
 
 The guidance is not legally binding on private operators in the strict sense, but it has been adopted into the appeal-considerations of POPLA, IAS and Traffic Penalty Tribunal. Citing it explicitly in an appeal is one of the most successful routes for hospital-site PCNs.
 
-[[CTA:teal|Got a hospital car park PCN?|Our £5.99 personalised letter cites the DHSC 2022 guidance, the operator-specific weakness for hospital sites, and the right mitigation ground for your role (staff, patient, visitor).|Generate my letter|/pricing]]
+[[CTA:teal|Got a hospital car park PCN?|Our £2.99 personalised letter cites the DHSC 2022 guidance, the operator-specific weakness for hospital sites, and the right mitigation ground for your role (staff, patient, visitor).|Generate my letter|/pricing]]
 
 ## Identify Your Role
 
@@ -889,7 +889,7 @@ If you have a blue badge:
 - See the dedicated [blue badge forgot to display guide](/blog/blue-badge-forgot-to-display-pcn-appeal) for the Equality Act argument
 - Cite both the DHSC guidance AND the Equality Act 2010 ss.13-20
 
-[[CTA:amber|Want this drafted for your specific role?|Upload the PCN and any role-specific evidence (NHS ID, appointment letter, blue badge). Our £5.99 letter selects the right framework and structures the representations.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your specific role?|Upload the PCN and any role-specific evidence (NHS ID, appointment letter, blue badge). Our £2.99 letter selects the right framework and structures the representations.|Get my letter|/pricing]]
 
 ## The Operator-Specific Hospital Weakness
 
@@ -953,7 +953,7 @@ Escalate within 28 days. The DHSC guidance carries significant weight at POPLA. 
 - **POPLA / IAS escalation window**: 28 days from operator rejection
 - **Estimated hospital-defence success rate**: ~60-75% on first representation when DHSC guidance is properly cited
 
-[[CTA:slate|Hospital PCN with role evidence?|Our £5.99 letter cites the DHSC 2022 guidance and the operator-specific weakness for your hospital site.|Build my appeal|/appeal]]
+[[CTA:slate|Hospital PCN with role evidence?|Our £2.99 letter cites the DHSC 2022 guidance and the operator-specific weakness for your hospital site.|Build my appeal|/appeal]]
 
 ## Related Reading
 

@@ -16,14 +16,14 @@ export const BATCH_G: BlogPost[] = [
     category: "Clean Air Zone",
     seoTitle: "Bristol Clean Air Zone PCN Appeal (2026 Guide)",
     seoDescription:
-      "Bristol CAZ-D charges £9/day for cars, £100/day for HGVs. The motorhome reclassification defence and the 6 winning grounds. £5.99 personalised appeal letter.",
+      "Bristol CAZ-D charges £9/day for cars, £100/day for HGVs. The motorhome reclassification defence and the 6 winning grounds. £2.99 personalised appeal letter.",
     content: `## The Bristol CAZ Has a Specific Motorhome Problem
 
 Bristol's **Clean Air Zone (Class D)** has been operational since November 2022 with a **£9/day** charge for cars, vans and taxis and a **£100/day** charge for HGVs, buses and coaches. The £100 figure for the HGV class is much higher than other UK CAZ schemes, which makes Bristol a particularly aggressive enforcement environment for one specific group: **motorhome owners**.
 
 Bristol's automated ANPR uses DVLA tax-class records. Many motorhomes registered before 2010 were classified by DVLA as "HGV" or "Heavy Goods Vehicle" rather than "Motor Caravan" because of weight thresholds. The CAZ system sees these as HGVs and charges £100/day. The motorhome owner is liable for ten times what they should be paying — unless they reclassify.
 
-[[CTA:teal|Got a Bristol CAZ PCN at the HGV rate?|Our £5.99 personalised letter cites the DVLA Motor Caravan reclassification process and challenges the PCN as wrongly issued at the HGV rate. Includes the V5C amendment template.|Generate my letter|/pricing]]
+[[CTA:teal|Got a Bristol CAZ PCN at the HGV rate?|Our £2.99 personalised letter cites the DVLA Motor Caravan reclassification process and challenges the PCN as wrongly issued at the HGV rate. Includes the V5C amendment template.|Generate my letter|/pricing]]
 
 ## The Motorhome Reclassification Defence
 
@@ -46,7 +46,7 @@ Beyond the motorhome reclassification, all 6 standard CAZ grounds apply to Brist
 5. **ANPR misread** — wrong VRM on the PCN
 6. **Special circumstances** — medical emergency, theft, blue-light
 
-[[CTA:amber|Want a Bristol-specific representation drafted?|Upload the PCN. Our £5.99 letter selects between the motorhome, compliance, exemption, signage and special-circumstances routes based on your V5C and the PCN details.|Get my letter|/pricing]]
+[[CTA:amber|Want a Bristol-specific representation drafted?|Upload the PCN. Our £2.99 letter selects between the motorhome, compliance, exemption, signage and special-circumstances routes based on your V5C and the PCN details.|Get my letter|/pricing]]
 
 ## Step 1: Read the PCN Carefully
 
@@ -163,12 +163,12 @@ If Bristol rejects, escalate to the **Traffic Penalty Tribunal** within 28 days.
     slug: "sheffield-clean-air-zone-pcn-appeal",
     title: "Sheffield Clean Air Zone PCN: Taxi Exemption Grounds + Sole-Trader Hardship",
     description:
-      "Sheffield CAZ-C charges taxis and HGVs only — but issues PCNs at the wrong tier or to exempt taxi operators routinely. The Sheffield-specific defences, the hardship route, and the £5.99 letter.",
+      "Sheffield CAZ-C charges taxis and HGVs only — but issues PCNs at the wrong tier or to exempt taxi operators routinely. The Sheffield-specific defences, the hardship route, and the £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Clean Air Zone",
     seoTitle: "Sheffield Clean Air Zone PCN Appeal (Taxi + Hardship, 2026)",
     seoDescription:
-      "Sheffield CAZ-C only charges taxis and HGVs. The licensed-by-SCC taxi exemption, the sole-trader hardship route, and the standard 6 CAZ grounds. £5.99 letter.",
+      "Sheffield CAZ-C only charges taxis and HGVs. The licensed-by-SCC taxi exemption, the sole-trader hardship route, and the standard 6 CAZ grounds. £2.99 letter.",
     content: `## Sheffield CAZ Is Class C — Cars Are Exempt
 
 Sheffield's **Clean Air Zone Class C** has been operational since February 2023, charging:
@@ -183,7 +183,7 @@ This narrower scope means most car owners receiving Sheffield CAZ PCNs are recei
 
 The second most common Sheffield-specific defence is **"my taxi is licensed by Sheffield City Council and falls within the SCC exemption"**.
 
-[[CTA:teal|Got a Sheffield CAZ PCN?|Our £5.99 personalised letter checks whether your vehicle should even be in scope (Class C is taxis/HGVs only), and if so cites the SCC taxi exemption or the sole-trader hardship route.|Generate my letter|/pricing]]
+[[CTA:teal|Got a Sheffield CAZ PCN?|Our £2.99 personalised letter checks whether your vehicle should even be in scope (Class C is taxis/HGVs only), and if so cites the SCC taxi exemption or the sole-trader hardship route.|Generate my letter|/pricing]]
 
 ## Sheffield-Specific Grounds
 
@@ -222,7 +222,7 @@ Check your V5C body type. If it says:
 
 Many Sheffield PCNs issued in 2023-2024 went to private cars that were incorrectly flagged by the ANPR. Submit a copy of the V5C and the PCN should be cancelled on Ground 1 (wrong vehicle class).
 
-[[CTA:amber|Want this checked and drafted for your case?|Upload the PCN and a photo of your V5C. Our £5.99 letter selects the right Sheffield-specific ground and structures the representations.|Get my letter|/pricing]]
+[[CTA:amber|Want this checked and drafted for your case?|Upload the PCN and a photo of your V5C. Our £2.99 letter selects the right Sheffield-specific ground and structures the representations.|Get my letter|/pricing]]
 
 ## Step 2: Submit Within 28 Days
 
@@ -300,12 +300,12 @@ If Sheffield rejects, escalate to the **Traffic Penalty Tribunal** within 28 day
     slug: "tyneside-newcastle-clean-air-zone-pcn-appeal",
     title: "Tyneside (Newcastle / Gateshead) Clean Air Zone PCN: The Class C Cars-Exempt Defence",
     description:
-      "Tyneside CAZ-C charges taxis, HGVs and buses but exempts private cars. Many PCNs are issued to compliant or out-of-scope vehicles. The Newcastle/Gateshead-specific grounds and £5.99 letter.",
+      "Tyneside CAZ-C charges taxis, HGVs and buses but exempts private cars. Many PCNs are issued to compliant or out-of-scope vehicles. The Newcastle/Gateshead-specific grounds and £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Clean Air Zone",
     seoTitle: "Tyneside Newcastle Clean Air Zone PCN Appeal (2026 Guide)",
     seoDescription:
-      "Tyneside CAZ-C: cars exempt, only taxis/HGVs/buses chargeable. ANPR misread is a common cause of misissued PCNs. £5.99 personalised letter for the standard 6 CAZ grounds.",
+      "Tyneside CAZ-C: cars exempt, only taxis/HGVs/buses chargeable. ANPR misread is a common cause of misissued PCNs. £2.99 personalised letter for the standard 6 CAZ grounds.",
     content: `## Tyneside CAZ-C: Cars Are Out, ANPR Misreads Cars In
 
 The **Tyneside Clean Air Zone Class C** has been operational across Newcastle and Gateshead since January 2023, charging:
@@ -316,7 +316,7 @@ The **Tyneside Clean Air Zone Class C** has been operational across Newcastle an
 
 Because cars are out of scope, a recurring pattern in Tyneside PCNs is the **ANPR misread** — the camera reads a car's plate as a goods vehicle's plate, or attributes an HGV detection to a passenger car keeper. If your car received a Tyneside CAZ PCN, you almost certainly have a strong **Ground 5 (ANPR misread)** or **Ground 1 (wrong vehicle class)** defence.
 
-[[CTA:teal|Got a Tyneside CAZ PCN on a private car?|Our £5.99 personalised letter cites the wrong-vehicle-class ground (Tyneside CAZ does not charge cars) and the standard 6 grounds. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Got a Tyneside CAZ PCN on a private car?|Our £2.99 personalised letter cites the wrong-vehicle-class ground (Tyneside CAZ does not charge cars) and the standard 6 grounds. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## The Two Tyneside-Specific Grounds
 
@@ -336,7 +336,7 @@ ANPR systems can misread characters (O→0, I→1, B→8, S→5, etc) and occasi
 
 Beyond the Tyneside-specific defences, all 6 standard CAZ grounds apply — see [Birmingham CAZ Appeal](/blog/birmingham-clean-air-zone-pcn-appeal-letter) for the full framework. The legal basis is the same Civil Enforcement Regulations 2022 across all English CAZ schemes.
 
-[[CTA:amber|Want this drafted for your Tyneside PCN?|Upload the PCN. Our £5.99 letter selects the right ground based on your V5C and the PCN details — typically wrong-vehicle-class for cars, ANPR misread for plate confusion.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your Tyneside PCN?|Upload the PCN. Our £2.99 letter selects the right ground based on your V5C and the PCN details — typically wrong-vehicle-class for cars, ANPR misread for plate confusion.|Get my letter|/pricing]]
 
 ## Step 1: Submit Representations Within 28 Days
 
@@ -414,12 +414,12 @@ If rejected, escalate to the **Traffic Penalty Tribunal** within 28 days. Tynesi
     slug: "portsmouth-clean-air-zone-pcn-appeal",
     title: "Portsmouth Clean Air Zone PCN: Class B Cars Exempt + Hospital / Funeral Mitigation",
     description:
-      "Portsmouth CAZ Class B charges only HGVs, buses, coaches and non-compliant taxis. Cars and motorcycles are exempt — many PCNs are misissued. The Portsmouth-specific defences and £5.99 letter.",
+      "Portsmouth CAZ Class B charges only HGVs, buses, coaches and non-compliant taxis. Cars and motorcycles are exempt — many PCNs are misissued. The Portsmouth-specific defences and £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Clean Air Zone",
     seoTitle: "Portsmouth Clean Air Zone PCN Appeal (Class B, 2026)",
     seoDescription:
-      "Portsmouth CAZ-B: cars and motorcycles exempt. Common ANPR misreads issue PCNs to private vehicles wrongly. £5.99 personalised appeal letter.",
+      "Portsmouth CAZ-B: cars and motorcycles exempt. Common ANPR misreads issue PCNs to private vehicles wrongly. £2.99 personalised appeal letter.",
     content: `## Portsmouth CAZ Is Class B — The Narrowest Scope
 
 The **Portsmouth Clean Air Zone Class B** has been operational since November 2021, charging:
@@ -430,7 +430,7 @@ The **Portsmouth Clean Air Zone Class B** has been operational since November 20
 
 Portsmouth's CAZ is one of the narrowest in scope of all UK CAZ schemes. Cars, vans and motorcycles are entirely exempt. The most common Portsmouth PCN error is therefore the same as Sheffield's and Tyneside's: **the ANPR has issued a PCN to a vehicle that falls outside CAZ-B scope**.
 
-[[CTA:teal|Portsmouth CAZ PCN on a private car?|Our £5.99 personalised letter cites the wrong-vehicle-class ground (Portsmouth CAZ does not charge private cars), the standard 6 CAZ grounds, and the hospital/funeral mitigation route. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Portsmouth CAZ PCN on a private car?|Our £2.99 personalised letter cites the wrong-vehicle-class ground (Portsmouth CAZ does not charge private cars), the standard 6 CAZ grounds, and the hospital/funeral mitigation route. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## The Portsmouth-Specific Defence
 
@@ -454,7 +454,7 @@ These are not formal exemptions — Portsmouth applies them on a discretionary b
 
 Beyond the Portsmouth-specific defences, the 6 standard CAZ grounds from [Birmingham CAZ Appeal](/blog/birmingham-clean-air-zone-pcn-appeal-letter) all apply.
 
-[[CTA:amber|Want this drafted for your Portsmouth case?|Upload the PCN. Our £5.99 letter selects the right ground based on your V5C and the PCN details.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your Portsmouth case?|Upload the PCN. Our £2.99 letter selects the right ground based on your V5C and the PCN details.|Get my letter|/pricing]]
 
 ## Step 1: Submit Representations
 
@@ -529,14 +529,14 @@ If rejected, escalate to the **Traffic Penalty Tribunal** within 28 days. Portsm
     category: "LTN & Council",
     seoTitle: "Croydon LTN PCN Refund Claim (2025 High Court Win, 2026)",
     seoDescription:
-      "Croydon LTN PCNs are being refunded after the 2025 High Court found the scheme unlawful. The claim form, evidence and escalation route. £5.99 personalised letter.",
+      "Croydon LTN PCNs are being refunded after the 2025 High Court found the scheme unlawful. The claim form, evidence and escalation route. £2.99 personalised letter.",
     content: `## The Croydon LTN Ruling Opens the Refund Window
 
 In 2025 the **High Court ruled** that the Croydon Council Low Traffic Neighbourhood scheme had been implemented without proper statutory authority for portions of its operation. Following the ruling, Croydon opened a **PCN refund window** allowing drivers who had paid Croydon LTN fines during the unlawful period to claim repayment.
 
 The refund portal at [croydon.gov.uk/parking/croydon-low-traffic-neighbourhoods-ltns-penalty-refund-request](https://www.croydon.gov.uk/parking/croydon-low-traffic-neighbourhoods-ltns-penalty-refund-request) is live, but the process has limits and procedural traps. Many initial claims are being refused for documentation reasons that are not always clear in the published guidance.
 
-[[CTA:teal|Paid a Croydon LTN PCN that should now be refunded?|Our £5.99 personalised letter is structured to Croydon's refund-request format with the exact documentation chain and escalation language. Filed by you in minutes.|Generate my refund claim|/pricing]]
+[[CTA:teal|Paid a Croydon LTN PCN that should now be refunded?|Our £2.99 personalised letter is structured to Croydon's refund-request format with the exact documentation chain and escalation language. Filed by you in minutes.|Generate my refund claim|/pricing]]
 
 ## What the Court Actually Decided
 
@@ -576,7 +576,7 @@ Required documentation:
 - **Your current contact details and bank details** for the refund payment
 - **Date of payment** — important because interest may be claimable from that date
 
-[[CTA:amber|Want this drafted to Croydon's preferred format?|Upload the PCN and proof of payment. Our £5.99 letter is structured to Croydon's refund-request portal with the right documentation references and escalation language.|Get my claim|/pricing]]
+[[CTA:amber|Want this drafted to Croydon's preferred format?|Upload the PCN and proof of payment. Our £2.99 letter is structured to Croydon's refund-request portal with the right documentation references and escalation language.|Get my claim|/pricing]]
 
 ## Step 3: File the Refund Request
 
@@ -621,7 +621,7 @@ For a £130 PCN paid 3 years ago, the interest entitlement is roughly £130 × 8
 - **Council response time**: typically 8-12 weeks
 - **LGSCO complaint time**: 8-12 weeks if escalated
 
-[[CTA:slate|Don't leave a paid PCN unrefunded|Our £5.99 letter is structured to Croydon's refund-request format with the right documentation and escalation language.|Build my claim|/appeal]]
+[[CTA:slate|Don't leave a paid PCN unrefunded|Our £2.99 letter is structured to Croydon's refund-request format with the right documentation and escalation language.|Build my claim|/appeal]]
 
 ## Related Reading
 
@@ -676,19 +676,19 @@ For a £130 PCN paid 3 years ago, the interest entitlement is roughly £130 × 8
     slug: "lambeth-west-dulwich-ltn-pcn-refund-claim",
     title: "Lambeth West Dulwich LTN PCN Refund: How to Claim After the 2025 Council Concession",
     description:
-      "Lambeth admitted the West Dulwich LTN was unlawful after the 2025 High Court ruling and opened a refund process. The claim, the evidence, and the £5.99 letter.",
+      "Lambeth admitted the West Dulwich LTN was unlawful after the 2025 High Court ruling and opened a refund process. The claim, the evidence, and the £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "LTN & Council",
     seoTitle: "Lambeth West Dulwich LTN PCN Refund (2026 Guide)",
     seoDescription:
-      "Lambeth conceded the West Dulwich LTN was unlawful in 2025 and opened PCN refunds. Submit the claim with the right documentation. £5.99 personalised letter.",
+      "Lambeth conceded the West Dulwich LTN was unlawful in 2025 and opened PCN refunds. Submit the claim with the right documentation. £2.99 personalised letter.",
     content: `## Lambeth Conceded — The Refund Window Is Open
 
 Following the 2025 High Court ruling in the Croydon case, **Lambeth Council conceded that the West Dulwich Low Traffic Neighbourhood scheme had been implemented unlawfully**. Lambeth has opened a refund process for PCNs issued under the affected Orders.
 
 The mechanics are similar to Croydon's: submit a refund claim with the PCN reference, proof of payment and current contact details. Documentation traps are common — many initial claims are returned for incomplete evidence.
 
-[[CTA:teal|Paid a Lambeth West Dulwich LTN PCN?|Our £5.99 personalised letter is structured to Lambeth's refund-request format with the right documentation chain and the escalation language if they refuse.|Generate my claim|/pricing]]
+[[CTA:teal|Paid a Lambeth West Dulwich LTN PCN?|Our £2.99 personalised letter is structured to Lambeth's refund-request format with the right documentation chain and the escalation language if they refuse.|Generate my claim|/pricing]]
 
 ## What's Refundable
 
@@ -725,7 +725,7 @@ Required documentation:
 - Date of payment
 - Current address and bank details for refund
 
-[[CTA:amber|Want this drafted to Lambeth's preferred format?|Upload the PCN and proof of payment. Our £5.99 letter structures the claim with the right documentation references and escalation language.|Get my claim|/pricing]]
+[[CTA:amber|Want this drafted to Lambeth's preferred format?|Upload the PCN and proof of payment. Our £2.99 letter structures the claim with the right documentation references and escalation language.|Get my claim|/pricing]]
 
 ## Step 3: If Refused — LGSCO + Small Claims
 
@@ -744,7 +744,7 @@ Interest at 8% under CCA 1984 s.69 is claimable from the date of payment.
 - **Council processing time**: typically 8-12 weeks
 - **Interest rate**: 8% from date of payment
 
-[[CTA:slate|Don't leave a paid PCN unrefunded|Our £5.99 letter is structured to Lambeth's refund-request format.|Build my claim|/appeal]]
+[[CTA:slate|Don't leave a paid PCN unrefunded|Our £2.99 letter is structured to Lambeth's refund-request format.|Build my claim|/appeal]]
 
 ## Related Reading
 
@@ -799,12 +799,12 @@ Interest at 8% under CCA 1984 s.69 is claimable from the date of payment.
     slug: "school-streets-pcn-appeal-resident-visitor",
     title: "School Streets PCN: The Resident-Visitor Exemption That Wins Most Appeals",
     description:
-      "School Streets PCNs are issued for entering a closed zone during the restricted hours. The 'visiting a resident' exemption is the most successful ground in 2026, with the right evidence. £5.99 letter.",
+      "School Streets PCNs are issued for entering a closed zone during the restricted hours. The 'visiting a resident' exemption is the most successful ground in 2026, with the right evidence. £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Council & Moving Traffic",
     seoTitle: "School Streets PCN Appeal (Resident-Visitor Defence, 2026)",
     seoDescription:
-      "School Streets PCN £70/£35 from Brighton, Leeds, Hackney, Ealing or other councils? The resident-visitor exemption wins most appeals with the right evidence. £5.99 letter.",
+      "School Streets PCN £70/£35 from Brighton, Leeds, Hackney, Ealing or other councils? The resident-visitor exemption wins most appeals with the right evidence. £2.99 letter.",
     content: `## School Streets Cameras Are Multiplying — And So Are the Appeals
 
 **School Streets** are restricted-access zones outside schools during arrival and pick-up hours, typically 08:00-09:00 and 14:30-16:00 on school days. Vehicles entering the zone during restricted hours without an exemption receive a PCN, usually **£70** (reduced to £35 within 21 days).
@@ -818,7 +818,7 @@ As of 2026, school-streets enforcement has rolled out across:
 
 The most successful appeal ground in 2026 is the **resident-visitor exemption** — a pre-booked visit to a resident inside the closed zone — which most councils accept on documented evidence. Other grounds (signage, emergency, blue badge) also succeed in specific circumstances.
 
-[[CTA:teal|Got a School Streets PCN?|Our £5.99 personalised letter selects the right ground (resident visitor, emergency, blue badge, signage) and structures the representations to your council's preferred format.|Generate my letter|/pricing]]
+[[CTA:teal|Got a School Streets PCN?|Our £2.99 personalised letter selects the right ground (resident visitor, emergency, blue badge, signage) and structures the representations to your council's preferred format.|Generate my letter|/pricing]]
 
 ## The Resident-Visitor Exemption
 
@@ -841,7 +841,7 @@ Some councils have a formal pre-booking system (you register the visit in advanc
 | **4. Resident** | You live inside the zone | Council tax bill, tenancy agreement |
 | **5. Signage / camera defect** | TSRGD non-compliance, camera not certified | Photos, FOIA request |
 
-[[CTA:amber|Want this drafted with your specific evidence?|Upload the PCN, the visit confirmation or resident statement, and any blue-badge / hospital documentation. Our £5.99 letter selects the strongest ground.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted with your specific evidence?|Upload the PCN, the visit confirmation or resident statement, and any blue-badge / hospital documentation. Our £2.99 letter selects the strongest ground.|Get my letter|/pricing]]
 
 ## Step 1: Identify Your Ground
 
@@ -892,7 +892,7 @@ If the council rejects, escalate to **London Tribunals** (if inside the M25 boro
 - **Representations window**: 28 days
 - **Tribunal escalation window**: 28 days from rejection
 
-[[CTA:slate|Got pre-arranged visit evidence?|The resident-visitor ground wins most documented School Streets appeals. Our £5.99 letter structures it to your council's preferred format.|Build my appeal|/appeal]]
+[[CTA:slate|Got pre-arranged visit evidence?|The resident-visitor ground wins most documented School Streets appeals. Our £2.99 letter structures it to your council's preferred format.|Build my appeal|/appeal]]
 
 ## Related Reading
 

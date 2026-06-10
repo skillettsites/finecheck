@@ -248,7 +248,7 @@ export default async function TemplateDetailPage({
                   ? ` ${template.title.split(" ")[0]}-specific weaknesses`
                   : " operator-specific weaknesses"}
                 . Personalised letters have a significantly higher success rate
-                than generic templates. From just &pound;5.99.
+                than generic templates. From just &pound;2.99.
               </p>
               <Button href="/appeal" variant="accent" size="lg">
                 Get a Personalised Appeal Letter

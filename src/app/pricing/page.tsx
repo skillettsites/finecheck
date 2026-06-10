@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Appeal Letter Pricing: £5.99 Standard, £9.99 Premium",
+  title: "Appeal Letter Pricing: £2.99 Standard, £4.99 Premium",
   description:
-    "Pay once per fine. Free assessment first. Standard letter £5.99, Premium pack £9.99. No subscription. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
+    "Pay once per fine. Free assessment first. Standard letter £2.99, Premium pack £4.99. No subscription. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
   alternates: {
     canonical: "https://www.appealafine.co.uk/pricing",
   },
@@ -35,7 +35,8 @@ const plans = [
   },
   {
     name: "Standard Letter",
-    price: "£5.99",
+    price: "£2.99",
+    wasPrice: "£5.99",
     priceNote: "one-time payment",
     description:
       "A unique legal letter written by our specialist AI, citing specific UK legislation and verified case law for your exact case.",
@@ -53,7 +54,8 @@ const plans = [
   },
   {
     name: "Premium Pack",
-    price: "£9.99",
+    price: "£4.99",
+    wasPrice: "£9.99",
     priceNote: "one-time payment",
     description:
       "Maximum chance of success. Two AI-generated legal letters, evidence checklist, and operator weakness analysis.",
@@ -173,7 +175,7 @@ const productSchema = {
       category: "Legal document preparation",
       offers: {
         "@type": "Offer",
-        price: "5.99",
+        price: "2.99",
         priceCurrency: "GBP",
         availability: "https://schema.org/InStock",
         url: "https://www.appealafine.co.uk/appeal",
@@ -188,7 +190,7 @@ const productSchema = {
       category: "Legal document preparation",
       offers: {
         "@type": "Offer",
-        price: "9.99",
+        price: "4.99",
         priceCurrency: "GBP",
         availability: "https://schema.org/InStock",
         url: "https://www.appealafine.co.uk/appeal",
@@ -290,6 +292,11 @@ export default function PricingPage() {
                   <span className="text-4xl font-bold text-gray-900">
                     {plan.price}
                   </span>
+                  {"wasPrice" in plan && plan.wasPrice && (
+                    <span className="text-lg text-gray-400 line-through ml-2">
+                      {plan.wasPrice}
+                    </span>
+                  )}
                   <span className="text-sm text-gray-500 ml-1">
                     {plan.priceNote}
                   </span>
@@ -457,14 +464,14 @@ export default function PricingPage() {
                     Standard
                     <br />
                     <span className="font-normal text-xs text-gray-500">
-                      £5.99
+                      £2.99
                     </span>
                   </th>
                   <th className="py-3 text-center text-sm font-semibold text-teal-600 px-4 w-24">
                     Premium
                     <br />
                     <span className="font-normal text-xs text-gray-500">
-                      £9.99
+                      £4.99
                     </span>
                   </th>
                 </tr>

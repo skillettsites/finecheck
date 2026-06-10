@@ -365,6 +365,18 @@ export default async function GuidePage({
           </div>
         )}
 
+        <div className="mb-8 flex flex-col gap-3 rounded-xl border border-teal-200 bg-teal-50 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-teal-900">
+            <span className="font-semibold">Dealing with this right now?</span>{" "}
+            Check your fine free in 2 minutes. If you have grounds, a personalised appeal letter is{" "}
+            <span className="font-semibold">£2.99</span>{" "}
+            <span className="text-teal-700/60 line-through">£5.99</span>.
+          </p>
+          <Button href="/appeal" variant="accent" className="shrink-0">
+            Check my fine free
+          </Button>
+        </div>
+
         <div className="flex gap-8">
           {/* Table of Contents (sidebar on desktop) */}
           <aside className="hidden lg:block w-56 shrink-0">

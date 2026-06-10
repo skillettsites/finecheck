@@ -9,8 +9,8 @@ export const LOCATION_PAGES_HYPERLOCAL: LocationFinePage[] = [
     title: "Blackwall Tunnel PCN Appeal",
     h1: "How to Appeal a Blackwall Tunnel PCN",
     description: "Step-by-step guide to challenging a Blackwall Tunnel or Silvertown Tunnel Penalty Charge Notice issued by Transport for London under the river crossings charging scheme.",
-    seoTitle: "Blackwall Tunnel PCN Appeal: Beat TfL 2026",
-    seoDescription: "Got a Blackwall Tunnel PCN from TfL? £180 fine, £90 if paid in 14 days. Use Auto Pay, sign visibility, signage defects. Free template.",
+    seoTitle: "Blackwall Tunnel PCN: Pay £90 or Cancel It? (2026 Appeal)",
+    seoDescription: "TfL Blackwall and Silvertown tunnel PCNs get cancelled for Auto Pay failures, bad signage and exemptions. Check your grounds free in 2 minutes and appeal before the 14-day £90 window closes.",
     searchVolume: 1600,
     factBox: {
       issuer: "Transport for London",

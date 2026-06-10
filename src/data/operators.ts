@@ -28,7 +28,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: true,
     usesANPR: true,
     averageSuccessRate: 42,
-    seoTitle: 'Appeal ParkingEye Fine: Letter From £5.99',
+    seoTitle: 'Appeal ParkingEye Fine: Letter From £2.99',
     seoDescription: 'Free guide to appealing ParkingEye parking charges. Learn about ANPR errors, POPLA appeals, court defence, and the legal weaknesses in ParkingEye tickets.'
   },
   {
@@ -58,7 +58,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: true,
     usesANPR: true,
     averageSuccessRate: 48,
-    seoTitle: 'Appeal UKPC Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal UKPC Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a UKPC parking charge. Covers signage issues, NtK rules, POPLA appeals, and known weaknesses in UKPC enforcement.'
   },
   {
@@ -88,7 +88,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 50,
-    seoTitle: 'Appeal APCOA Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal APCOA Parking Fine: Letter From £2.99',
     seoDescription: 'Guide to appealing APCOA parking charges. Covers pay-by-phone errors, barrier faults, ANPR issues, and how to win at POPLA.'
   },
   {
@@ -118,7 +118,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 52,
-    seoTitle: 'Appeal Euro Car Parks Fine: Letter From £5.99',
+    seoTitle: 'Appeal Euro Car Parks Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Euro Car Parks parking charge. Covers overstay issues, ANPR errors, signage problems, and the POPLA appeal process.'
   },
   {
@@ -148,7 +148,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 55,
-    seoTitle: 'Appeal NCP Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal NCP Parking Fine: Letter From £2.99',
     seoDescription: 'Guide to appealing NCP parking charges. Covers machine faults, barrier errors, lost tickets, and your chances of success at POPLA.'
   },
   {
@@ -178,7 +178,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 50,
-    seoTitle: 'Appeal Indigo Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Indigo Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Indigo parking charge. Formerly Vinci Park. Covers hospital parking, permit errors, and the POPLA appeal process.'
   },
   {
@@ -208,7 +208,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 55,
-    seoTitle: 'Appeal Smart Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Smart Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Smart Parking charge. Covers ANPR errors, IAS appeals, and the legal weaknesses in Smart Parking enforcement.'
   },
   {
@@ -238,7 +238,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 52,
-    seoTitle: 'Appeal Excel Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Excel Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Excel Parking charge. Covers signage issues, overstay disputes, and your rights under the BPA Code of Practice.'
   },
   {
@@ -268,7 +268,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 50,
-    seoTitle: 'Appeal Horizon Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Horizon Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Horizon Parking charge. Covers residential permits, signage issues, and the POPLA appeal process.'
   },
   {
@@ -298,7 +298,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 53,
-    seoTitle: 'Appeal G24 Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal G24 Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a G24 parking charge. Covers signage problems, overstay issues, and how to win your POPLA appeal against G24.'
   },
   {
@@ -328,7 +328,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 50,
-    seoTitle: 'Appeal Civil Enforcement Fine: Letter From £5.99',
+    seoTitle: 'Appeal Civil Enforcement Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Civil Enforcement parking charge. Covers permit errors, residential parking, and the POPLA appeal process.'
   },
   {
@@ -358,7 +358,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 54,
-    seoTitle: 'Appeal Premier Park Fine: Letter From £5.99',
+    seoTitle: 'Appeal Premier Park Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Premier Park parking charge. Covers IAS appeals, ANPR errors, and your rights under the IPC Code of Practice.'
   },
   {
@@ -388,7 +388,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 55,
-    seoTitle: 'Appeal Athena ANPR Fine: Letter From £5.99',
+    seoTitle: 'Appeal Athena ANPR Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Athena ANPR parking charge. Covers camera errors, IAS appeals, and ANPR evidence weaknesses.'
   },
   {
@@ -418,7 +418,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 54,
-    seoTitle: 'Appeal One Parking Solution Fine: Letter From £5.99',
+    seoTitle: 'Appeal One Parking Solution Fine: Letter From £2.99',
     seoDescription: 'How to appeal a One Parking Solution parking charge. Covers residential permits, warden errors, and the IAS appeal process.'
   },
   {
@@ -448,7 +448,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 55,
-    seoTitle: 'Appeal Gemini Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Gemini Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Gemini Parking Solutions charge. Covers signage issues, IAS appeals, and common enforcement weaknesses.'
   },
   {
@@ -478,7 +478,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 56,
-    seoTitle: 'Appeal VCS Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal VCS Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a VCS parking charge. Covers debt collection threats, signage issues, and why VCS rarely takes cases to court.'
   },
   {
@@ -508,7 +508,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 52,
-    seoTitle: 'Appeal CP Plus Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal CP Plus Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a CP Plus parking charge. Covers machine faults, hospital parking, and the POPLA appeal process.'
   },
   {
@@ -538,7 +538,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 51,
-    seoTitle: 'Cancel Your Britannia Parking Fine: Appeal Letter From £5.99',
+    seoTitle: 'Cancel Your Britannia Parking Fine: Appeal Letter From £2.99',
     seoDescription: 'Challenge a Britannia Parking charge for free. Covers permit errors, breakdowns, POPLA appeals, and why Britannia rarely takes cases to court. Step-by-step guide.'
   },
   {
@@ -568,7 +568,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 56,
-    seoTitle: 'Appeal PCM Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal PCM Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Parking Control Management charge. Covers IAS appeals, signage issues, and common enforcement weaknesses.'
   },
   {
@@ -598,7 +598,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: false,
     usesANPR: true,
     averageSuccessRate: 57,
-    seoTitle: 'Appeal Creative Car Park Fine: Letter From £5.99',
+    seoTitle: 'Appeal Creative Car Park Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Creative Car Park charge. Covers IAS appeals, signage problems, and common grounds for successful appeals.'
   }
 ];

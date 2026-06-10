@@ -10,12 +10,12 @@ export const BATCH_E: BlogPost[] = [
     slug: "county-court-claim-form-n1-parking-defence",
     title: "County Court Claim Form N1 for a Parking Charge? Here is the 14-Day Defence",
     description:
-      "A County Court claim for a parking charge has a 14-day acknowledgement deadline and a 28-day defence deadline. Miss either and you get a default CCJ. The exact filing steps, the defence template that gets 30% of these claims discontinued, and the £9.99 pack that drafts your defence + witness statement.",
+      "A County Court claim for a parking charge has a 14-day acknowledgement deadline and a 28-day defence deadline. Miss either and you get a default CCJ. The exact filing steps, the defence template that gets 30% of these claims discontinued, and the £4.99 pack that drafts your defence + witness statement.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "County Court Claim Form N1 Parking Defence (14-Day Rule, 2026)",
     seoDescription:
-      "Got a County Court N1 claim form from ParkingEye, UKPC, CEL or Excel? You have 14 days to acknowledge and 28 days to file the defence. The exact procedure, the wording that wins, and the £9.99 defence pack.",
+      "Got a County Court N1 claim form from ParkingEye, UKPC, CEL or Excel? You have 14 days to acknowledge and 28 days to file the defence. The exact procedure, the wording that wins, and the £4.99 defence pack.",
     content: `## You Have 14 Days. Then Default Judgment.
 
 A County Court claim form (the **N1**, sent from the County Court Business Centre in Salford, often with reference numbers starting **CC** or **MCOL**) is the most serious step in a private parking enforcement chain. It is not the same as a Letter Before Claim from BW Legal or DCB Legal. It is not a debt-collector demand. It is a real court case, with two deadlines that the court does not extend:
@@ -27,7 +27,7 @@ Miss either deadline and the claimant can apply for a **default judgment**. That
 
 Most people miss it because the form looks intimidating, the wording is unfamiliar, or they assume "I'll just ignore it like the rest". Roughly **87% of all private-parking CCJs are default judgments** because the driver never responded ([Justice statistics, MOJ County Court tables](https://www.gov.uk/government/statistics/civil-justice-statistics-quarterly-january-to-march-2024)). Of the people who actually file a defence, the dynamics flip: a sizeable share of these claims get **discontinued** by the operator (Notice of Discontinuance, form N279) before a hearing, because the operator's bulk-claim business model only works against non-responders.
 
-[[CTA:teal|Got an N1 claim form? Don't miss the 14-day deadline|Our £9.99 court pack drafts your N9 acknowledgement, N9B defence and supporting witness statement using the strongest POFA, CRA and Beavis grounds for your facts. Filed by you, ready in minutes.|Get my defence pack|/pricing]]
+[[CTA:teal|Got an N1 claim form? Don't miss the 14-day deadline|Our £4.99 court pack drafts your N9 acknowledgement, N9B defence and supporting witness statement using the strongest POFA, CRA and Beavis grounds for your facts. Filed by you, ready in minutes.|Get my defence pack|/pricing]]
 
 ## Step 1: Acknowledge Within 14 Days
 
@@ -59,7 +59,7 @@ The strongest grounds, in the order an adjudicator will weigh them:
 4. **Grace periods** — did the operator observe the consideration period (≥5 minutes on arrival) and grace period (≥10 minutes on departure) required by the Code of Practice?
 5. **Quantum and Beavis distinction** — even if the charge is enforceable in principle, the **£170 / £200 / £255 figures** on the claim form usually include "added legal costs" and "debt recovery fees" that have repeatedly been struck out at first instance for falling outside CPR small-claims fixed costs (CPR 27.14).
 
-[[CTA:amber|Not sure which grounds apply to your N1?|Upload your Notice to Keeper photo and reference number. The £9.99 pack picks the 2-3 strongest grounds and drafts the N9B defence and witness statement for your specific operator (ParkingEye, UKPC, CEL, Excel and the rest).|Generate my defence|/pricing]]
+[[CTA:amber|Not sure which grounds apply to your N1?|Upload your Notice to Keeper photo and reference number. The £4.99 pack picks the 2-3 strongest grounds and drafts the N9B defence and witness statement for your specific operator (ParkingEye, UKPC, CEL, Excel and the rest).|Generate my defence|/pricing]]
 
 ## Step 3: File the Defence (Form N9B) Within 28 Days
 
@@ -103,7 +103,7 @@ After you file, the court will usually issue a **Directions Questionnaire (form 
 
 If mediation fails, the case is **allocated to the small claims track** and a hearing date is listed. Between filing your defence and the hearing, the operator may file a **Notice of Discontinuance (form N279)**. This is a frequent outcome where the defence is solid, especially against operators with high-volume / low-engagement strategies. If they discontinue, they typically also waive costs — but you can still apply under CPR 38.6 for any **wasted costs** you incurred.
 
-[[CTA:slate|If they discontinue, claim your costs|CPR 38.6 lets you claim wasted costs after a discontinuance. Our £9.99 pack now includes a Part 38 costs schedule template ready for upload.|Get the pack|/pricing]]
+[[CTA:slate|If they discontinue, claim your costs|CPR 38.6 lets you claim wasted costs after a discontinuance. Our £4.99 pack now includes a Part 38 costs schedule template ready for upload.|Get the pack|/pricing]]
 
 ## Step 5: Hearing Day Preparation (If Not Discontinued)
 
@@ -137,13 +137,13 @@ For default judgments (where you never engaged at the N1 stage), set-aside is ha
 - Number of CCJs filed by ParkingEye in 2024: **71,442** ([RAC Foundation 2024 data](https://www.racfoundation.org/research/mobility/parking-2024-update))
 - Hearing length, average: **30-40 minutes**
 
-[[CTA:teal|14 days from the N1 date. Don't burn the deadline|The £9.99 court pack drafts your N9 acknowledgement, N9B defence and supporting witness statement. Match every paragraph to your specific operator's known weaknesses. Generated in minutes.|Build my defence pack|/appeal]]
+[[CTA:teal|14 days from the N1 date. Don't burn the deadline|The £4.99 court pack drafts your N9 acknowledgement, N9B defence and supporting witness statement. Match every paragraph to your specific operator's known weaknesses. Generated in minutes.|Build my defence pack|/appeal]]
 
-## How the £9.99 Pack Differs from the Standard £5.99 Letter
+## How the £4.99 Pack Differs from the Standard £2.99 Letter
 
-The £5.99 Standard letter is designed for the **first appeal** stage (informal challenge to the operator, then escalation to POPLA / IAS). It is not a court-stage document.
+The £2.99 Standard letter is designed for the **first appeal** stage (informal challenge to the operator, then escalation to POPLA / IAS). It is not a court-stage document.
 
-The £9.99 Premium pack is the right product if a court claim has actually arrived:
+The £4.99 Premium pack is the right product if a court claim has actually arrived:
 
 - A drafted **N9B Defence** keyed to your specific Notice to Keeper, with the operator's known procedural failings woven in as numbered paragraphs
 - A drafted **witness statement** ready to sign with a statement of truth
@@ -175,7 +175,7 @@ Filing remains yours — we are a document-prep service, not a regulated litigat
       {
         question: "Can I claim my costs if the operator discontinues the claim?",
         answer:
-          "Yes, in principle. Under CPR 38.6, when a claimant discontinues, the defendant is presumed entitled to costs to the date of discontinuance. In practice, small-claims-track costs are limited to the fixed-costs regime in CPR 27.14, which typically means court fees you paid (often none on the defendant side), loss-of-earnings up to a cap, and travel. The amounts are modest but the principle matters: you do not have to accept a 'walk away with no costs' offer. Our £9.99 pack now includes a Part 38 costs-schedule template.",
+          "Yes, in principle. Under CPR 38.6, when a claimant discontinues, the defendant is presumed entitled to costs to the date of discontinuance. In practice, small-claims-track costs are limited to the fixed-costs regime in CPR 27.14, which typically means court fees you paid (often none on the defendant side), loss-of-earnings up to a cap, and travel. The amounts are modest but the principle matters: you do not have to accept a 'walk away with no costs' offer. Our £4.99 pack now includes a Part 38 costs-schedule template.",
       },
       {
         question: "What if the claim was issued through MCOL but I want to defend by post?",
@@ -199,7 +199,7 @@ Filing remains yours — we are a document-prep service, not a regulated litigat
     slug: "dcbl-doorstep-visit-stop-letter",
     title: "DCBL Doorstep Visit Notice? Stop It Before Bailiffs Knock (Letter Template)",
     description:
-      "A DCBL doorstep visit notice means an enforcement agent is days away. The exact letter that demands proof of debt and CPR 31 disclosure, the script for refusing entry at the door, and the £5.99 pack that targets your specific case (parking, council, traffic).",
+      "A DCBL doorstep visit notice means an enforcement agent is days away. The exact letter that demands proof of debt and CPR 31 disclosure, the script for refusing entry at the door, and the £2.99 pack that targets your specific case (parking, council, traffic).",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "DCBL Doorstep Visit? Stop Letter + Door Script (2026)",
@@ -221,7 +221,7 @@ What it **does** create is a real risk that, if you do nothing, DCBL escalates t
 
 The letter on this page is what you send **before** the statutory NOE clock starts, to challenge the debt itself, demand the documentation, and reset the operator-side process.
 
-[[CTA:teal|Stop the doorstep before it happens|Our £5.99 letter demands proof of debt under CPR 31, challenges the underlying parking liability under POFA 2012, and cites the TCG Regs reasonable-time-of-day rules. Operator-specific (ParkingEye, council, TfL) wording included.|Generate my DCBL letter|/pricing]]
+[[CTA:teal|Stop the doorstep before it happens|Our £2.99 letter demands proof of debt under CPR 31, challenges the underlying parking liability under POFA 2012, and cites the TCG Regs reasonable-time-of-day rules. Operator-specific (ParkingEye, council, TfL) wording included.|Generate my DCBL letter|/pricing]]
 
 ## Step 1: Confirm Which Debt They Are Enforcing
 
@@ -280,7 +280,7 @@ Yours faithfully,
 
 Send by recorded delivery. Keep the Royal Mail receipt and a photograph of the envelope. **Do not** sign for any documents delivered by hand. **Do not** allow entry to the property by anyone presenting themselves as an enforcement agent until the documentation above has been provided.
 
-[[CTA:amber|Want this letter personalised to your case?|Upload the DCBL letter and original PCN. The £5.99 letter names your specific operator or council, cites the right statute (POFA / TMA / civil enforcement regs), and adds a CPR 13.3 set-aside reservation if there is a CCJ in play.|Get my personalised letter|/pricing]]
+[[CTA:amber|Want this letter personalised to your case?|Upload the DCBL letter and original PCN. The £2.99 letter names your specific operator or council, cites the right statute (POFA / TMA / civil enforcement regs), and adds a CPR 13.3 set-aside reservation if there is a CCJ in play.|Get my personalised letter|/pricing]]
 
 ## Step 3: Refuse Peaceful Entry at the Door
 
@@ -306,7 +306,7 @@ Grounds for set-aside are realistic for most parking CCJs:
 
 The fee for an N244 application is **£275**, but with a witness statement of means you can apply for **fee remission**. If the set-aside is granted, the original claim is reinstated and you can defend it as if you had filed an N9B in the first place.
 
-[[CTA:slate|If a CCJ is behind your DCBL letter|The £9.99 court pack drafts your N244 set-aside application, witness statement and draft defence in one upload. Filed by you. Stays bailiff action pending the court's decision.|See the £9.99 pack|/pricing]]
+[[CTA:slate|If a CCJ is behind your DCBL letter|The £4.99 court pack drafts your N244 set-aside application, witness statement and draft defence in one upload. Filed by you. Stays bailiff action pending the court's decision.|See the £4.99 pack|/pricing]]
 
 ## Step 5: After You Send the Letter
 
@@ -340,7 +340,7 @@ Any breach of the above is a complaint route to the **Civil Enforcement Associat
 - Permitted hours of attendance: **06:00 to 21:00**, not Sundays or bank holidays
 - Time to set aside a default CCJ under CPR 13.3: **no fixed limit, but "promptly"** once you are aware
 
-[[CTA:teal|Day-of-letter action plan in your inbox|£5.99 personalised pre-NOE letter + the door-script PDF + the CIVEA complaint template. Delivered to your inbox in minutes.|Build my DCBL pack|/appeal]]`,
+[[CTA:teal|Day-of-letter action plan in your inbox|£2.99 personalised pre-NOE letter + the door-script PDF + the CIVEA complaint template. Delivered to your inbox in minutes.|Build my DCBL pack|/appeal]]`,
     faqs: [
       {
         question: "What is the difference between a DCBL doorstep letter and a Notice of Enforcement?",
@@ -375,7 +375,7 @@ Any breach of the above is a complaint route to the **Civil Enforcement Associat
       {
         question: "What if DCBL letter relates to a council PCN, not a private parking charge?",
         answer:
-          "The challenge route is different. Council PCNs that reach the bailiff stage went via the Traffic Enforcement Centre at Northampton and an Order for Recovery. If you did not receive earlier notices (for example because they were sent to an old address), file a TE9 witness statement or TE7 out-of-time statutory declaration. Bailiff action is stayed pending the TEC's decision. Our £9.99 pack drafts the TE7 / TE9 with a narrative on why earlier notices were not received — the success rate is high when the council used an old DVLA address.",
+          "The challenge route is different. Council PCNs that reach the bailiff stage went via the Traffic Enforcement Centre at Northampton and an Order for Recovery. If you did not receive earlier notices (for example because they were sent to an old address), file a TE9 witness statement or TE7 out-of-time statutory declaration. Bailiff action is stayed pending the TEC's decision. Our £4.99 pack drafts the TE7 / TE9 with a narrative on why earlier notices were not received — the success rate is high when the council used an old DVLA address.",
       },
       {
         question: "Does this stop other DCBL actions in the future?",
@@ -389,19 +389,19 @@ Any breach of the above is a complaint route to the **Civil Enforcement Associat
     slug: "te9-witness-statement-parking-ccj-set-aside",
     title: "TE9 Witness Statement: Set Aside a Council Parking CCJ When You Never Got the Notices",
     description:
-      "If a council PCN escalated to a CCJ without you ever seeing the earlier notices, form TE9 is the route to set it aside. The three statutory grounds, the witness-statement narrative that wins, and the £9.99 pack that drafts it for your facts.",
+      "If a council PCN escalated to a CCJ without you ever seeing the earlier notices, form TE9 is the route to set it aside. The three statutory grounds, the witness-statement narrative that wins, and the £4.99 pack that drafts it for your facts.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "TE9 Witness Statement Parking: Set Aside CCJ (2026 Guide)",
     seoDescription:
-      "Council parking CCJ from a PCN you never received? Form TE9 to the Traffic Enforcement Centre, sworn under one of 3 statutory grounds, sets aside the order. Step-by-step guide + £9.99 pack.",
+      "Council parking CCJ from a PCN you never received? Form TE9 to the Traffic Enforcement Centre, sworn under one of 3 statutory grounds, sets aside the order. Step-by-step guide + £4.99 pack.",
     content: `## TE9 Is Not the Same as N244
 
 If a council parking PCN has escalated to a registered judgment debt and a bailiff is about to call, you have a specific route to undo it — and it is **not** the same as a private-parking CCJ set-aside. Council PCNs go through the **Traffic Enforcement Centre (TEC)** at Northampton, not the County Court Business Centre. The form is **TE9**, not N244. The fee position, the grounds, and the procedure are all different.
 
 The TE9 is a **witness statement** sworn under penalty of perjury, filed with the TEC, declaring one of three specific grounds. If accepted, the **Order for Recovery** is revoked and bailiff action is **automatically stayed** while the case is referred back to the council for re-processing.
 
-[[CTA:teal|Have a council PCN that's gone to bailiffs without notices?|Our £9.99 court pack drafts your TE9 witness statement, picks the right statutory ground, and packages the supporting evidence (proof of address, missed-post records). Filed by you, ready in minutes.|Get my TE9 pack|/pricing]]
+[[CTA:teal|Have a council PCN that's gone to bailiffs without notices?|Our £4.99 court pack drafts your TE9 witness statement, picks the right statutory ground, and packages the supporting evidence (proof of address, missed-post records). Filed by you, ready in minutes.|Get my TE9 pack|/pricing]]
 
 ## The Three TE9 Grounds (Pick Exactly One)
 
@@ -468,7 +468,7 @@ File by post to:
 
 Or by email to **mcoltec@justice.gov.uk** with TE9 as the subject prefix. Keep proof of filing — a recorded-delivery slip or the email-sent timestamp.
 
-[[CTA:amber|Need help with the witness-statement narrative?|Upload your bailiff letter, the council PCN reference, and your proof of address. Our £9.99 pack drafts the TE9 witness statement specifically for your ground, with the evidence index ready to attach.|Generate my TE9|/pricing]]
+[[CTA:amber|Need help with the witness-statement narrative?|Upload your bailiff letter, the council PCN reference, and your proof of address. Our £4.99 pack drafts the TE9 witness statement specifically for your ground, with the evidence index ready to attach.|Generate my TE9|/pricing]]
 
 ## Step 4: What Happens After Filing
 
@@ -509,7 +509,7 @@ If refused, you can re-file with a different ground (if genuinely applicable), a
 - **Re-service window for council**: typically 56 days from referral back
 - **Penalty for false statement of truth**: up to **2 years imprisonment** under the Perjury Act 1911
 
-[[CTA:slate|TE9 + TE7 together where deadlines have run out|If you need both the TE9 (witness statement) and a TE7 (extension of time because the bailiff letter is the first you knew), our £9.99 pack drafts both forms with a single narrative. See the [TE7 out-of-time guide](/blog/te7-out-of-time-parking-statutory-declaration).|See the pack|/pricing]]
+[[CTA:slate|TE9 + TE7 together where deadlines have run out|If you need both the TE9 (witness statement) and a TE7 (extension of time because the bailiff letter is the first you knew), our £4.99 pack drafts both forms with a single narrative. See the [TE7 out-of-time guide](/blog/te7-out-of-time-parking-statutory-declaration).|See the pack|/pricing]]
 
 ## Related Reading
 
@@ -551,33 +551,33 @@ If refused, you can re-file with a different ground (if genuinely applicable), a
       {
         question: "Do I need a solicitor to file a TE9?",
         answer:
-          "No. The TE9 is designed for litigants in person. The form is two pages, the statement is in your own words, and the TEC officers are familiar with self-represented filings. Our £9.99 pack drafts the witness statement and the evidence index but you sign, swear and file it yourself. A solicitor's fee for the same work would typically be £200-£500 and is not necessary for a £130 PCN.",
+          "No. The TE9 is designed for litigants in person. The form is two pages, the statement is in your own words, and the TEC officers are familiar with self-represented filings. Our £4.99 pack drafts the witness statement and the evidence index but you sign, swear and file it yourself. A solicitor's fee for the same work would typically be £200-£500 and is not necessary for a £130 PCN.",
       },
       {
         question: "Can I claim back bailiff fees I already paid?",
         answer:
-          "Generally no, not through the TE9 process. The TE9 stays future enforcement but does not unwind past payments. If you paid bailiff fees that were unlawfully demanded (eg fees added before a valid Notice of Enforcement was served), you can pursue the bailiff company in the small claims court. The £9.99 pack does not currently include the small-claims template for fee recovery — let us know if that is your situation and we will signpost the route.",
+          "Generally no, not through the TE9 process. The TE9 stays future enforcement but does not unwind past payments. If you paid bailiff fees that were unlawfully demanded (eg fees added before a valid Notice of Enforcement was served), you can pursue the bailiff company in the small claims court. The £4.99 pack does not currently include the small-claims template for fee recovery — let us know if that is your situation and we will signpost the route.",
       },
     ],
   },
 
   {
     slug: "te7-out-of-time-parking-statutory-declaration",
-    title: "TE7 Out-of-Time Parking Statutory Declaration: When the Bailiff Letter Is the First You Knew",
+    title: "TE7 Form: Bailiff Letter the First You Knew of a PCN?",
     description:
-      "If you received a bailiff letter for a council PCN but every earlier notice missed you, the TE7 form is the application for extra time to file a TE9 witness statement. The reasonable-cause grounds, the evidence the TEC accepts, and the paired £9.99 pack.",
+      "If the bailiff letter is the first you heard of a council PCN, the TE7 and TE9 forms can reset the whole case. The reasonable-cause grounds the TEC accepts, the evidence to attach, and a £4.99 pack that drafts both today.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "TE7 Out-of-Time Parking Statutory Declaration (2026 Guide)",
     seoDescription:
-      "Bailiff letter for a council parking debt and the formal 21-day TE9 window has passed? TE7 buys you that extra time, filed alongside TE9. The grounds, the narrative, and the £9.99 pack.",
+      "Bailiff letter for a council parking debt and the formal 21-day TE9 window has passed? TE7 buys you that extra time, filed alongside TE9. The grounds, the narrative, and the £4.99 pack.",
     content: `## The TE7 Buys You Back the Window You Missed
 
 The **TE9 witness statement** for revoking a council parking Order for Recovery must be filed within **21 days** of the order being made. In real life, almost nobody filing a TE9 is still inside that window — they only found out about the matter when a bailiff letter landed, weeks or months after the order. The form that bridges that gap is **TE7: Application for an Extension of Time**.
 
 You file the TE7 **at the same time as the TE9**, asking the Traffic Enforcement Centre (TEC) to accept the TE9 even though it is out of time. The TEC will only grant the extension if you can show **reasonable cause** for missing the original window — and "I didn't know" is, on its own, not enough.
 
-[[CTA:teal|Bailiff letter today, want extra time to challenge?|Our £9.99 pack drafts both your TE7 (extension of time) and the paired TE9 (witness statement) with a single coherent narrative for your facts. Filed by you, ready in minutes.|Get my TE7 + TE9 pack|/pricing]]
+[[CTA:teal|Bailiff letter today, want extra time to challenge?|Our £4.99 pack drafts both your TE7 (extension of time) and the paired TE9 (witness statement) with a single coherent narrative for your facts. Filed by you, ready in minutes.|Get my TE7 + TE9 pack|/pricing]]
 
 ## What Counts as "Reasonable Cause"
 
@@ -639,7 +639,7 @@ The narrative section is where most TE7s succeed or fail. Keep it factual, dated
    limit be extended to today's date.
 \`\`\`
 
-[[CTA:amber|Need the narrative drafted for your facts?|Upload your bailiff letter, the council PCN reference, proof of address and any other evidence. Our £9.99 pack drafts both the TE7 narrative and the paired TE9 witness statement.|Generate my TE7|/pricing]]
+[[CTA:amber|Need the narrative drafted for your facts?|Upload your bailiff letter, the council PCN reference, proof of address and any other evidence. Our £4.99 pack drafts both the TE7 narrative and the paired TE9 witness statement.|Generate my TE7|/pricing]]
 
 ## Step 3: File TE7 + TE9 Together
 
@@ -688,7 +688,7 @@ If they have weight on their side, the TEC may revoke the extension and the TE7 
 - **Effect on bailiffs**: stayed on receipt of TE7 + TE9 by TEC
 - **Cost of N244 equivalent in private parking**: £275 (TE7 + TE9 is **£0**)
 
-[[CTA:slate|Both forms drafted in one pack|TE7 (extension of time) + TE9 (witness statement) drafted around one coherent narrative for your facts. £9.99 one-time payment.|See pricing|/pricing]]
+[[CTA:slate|Both forms drafted in one pack|TE7 (extension of time) + TE9 (witness statement) drafted around one coherent narrative for your facts. £4.99 one-time payment.|See pricing|/pricing]]
 
 ## Related Reading
 
@@ -735,7 +735,7 @@ If they have weight on their side, the TEC may revoke the extension and the TE7 
       {
         question: "Can I file TE7 without TE9?",
         answer:
-          "No. The TE7 is meaningless without the underlying TE9 — it is an extension of time to file the witness statement, not a standalone challenge. Always file the two together. Our £9.99 pack drafts both forms with a single coherent narrative so the extension request and the substantive declaration reinforce each other.",
+          "No. The TE7 is meaningless without the underlying TE9 — it is an extension of time to file the witness statement, not a standalone challenge. Always file the two together. Our £4.99 pack drafts both forms with a single coherent narrative so the extension request and the substantive declaration reinforce each other.",
       },
     ],
   },
@@ -749,14 +749,14 @@ If they have weight on their side, the TEC may revoke the extension and the TE7 
     category: "Court & Debt",
     seoTitle: "Parking Claim Discontinuance Costs (CPR 38.6, 2026 Guide)",
     seoDescription:
-      "ParkingEye, UKPC, CEL or Excel filed N279 to discontinue? You can claim your costs under CPR 38.6. The schedule, the limits in small claims, and the £9.99 template.",
+      "ParkingEye, UKPC, CEL or Excel filed N279 to discontinue? You can claim your costs under CPR 38.6. The schedule, the limits in small claims, and the £4.99 template.",
     content: `## The Operator Just Quit. Now You Can Claim Costs.
 
 If you defended a private-parking claim and the claimant filed a **Notice of Discontinuance (form N279)** before the hearing, the operator has effectively conceded the case. Most defendants treat this as a "win and walk away" — they file the defence away, the bailiff threat evaporates, and they move on. But there is one more step worth taking, and the law is on your side.
 
 Under **Civil Procedure Rule 38.6(1)**, a claimant who discontinues is **presumed liable for the defendant's costs** to the date of the notice of discontinuance, unless the court orders otherwise. In the small-claims track the costs are limited by **CPR 27.14**, so the amounts are modest, but the principle stands. Claim what you can. It is your time and inconvenience.
 
-[[CTA:teal|Discontinued claim — claim your costs|Our £9.99 pack now includes a Part 38 costs schedule template. Drop in your fixed costs and loss of earnings; we structure the submission to CPR 27.14 (1) (b)-(e).|Get the costs template|/pricing]]
+[[CTA:teal|Discontinued claim — claim your costs|Our £4.99 pack now includes a Part 38 costs schedule template. Drop in your fixed costs and loss of earnings; we structure the submission to CPR 27.14 (1) (b)-(e).|Get the costs template|/pricing]]
 
 ## What Is Actually Recoverable in Small Claims
 
@@ -770,7 +770,7 @@ The small-claims fixed-costs regime in CPR 27.14 limits what an unsuccessful par
 | 27.14 (2) (d) | Loss of earnings for attending the hearing | Up to **£95 per person per day** |
 | 27.14 (2) (e) | Expert fees (rare in parking) | Up to £750 per expert |
 
-For a typical litigant-in-person parking defence that was discontinued **before** any hearing happened, the recoverable items are limited to loss of earnings for time spent preparing (capped at £95/day) and any document or postage costs. Don't expect to recover the £9.99 pack fee — it is not within CPR 27.14.
+For a typical litigant-in-person parking defence that was discontinued **before** any hearing happened, the recoverable items are limited to loss of earnings for time spent preparing (capped at £95/day) and any document or postage costs. Don't expect to recover the £4.99 pack fee — it is not within CPR 27.14.
 
 ## Step 1: Get the Discontinuance in Writing
 
@@ -801,7 +801,7 @@ Example:
 
 That £82.28 is recoverable in principle. It is not a fortune but it is yours.
 
-[[CTA:amber|Want the schedule pre-formatted?|Our £9.99 pack now includes the costs-schedule template populated with the CPR 27.14 limits and the loss-of-earnings cap. Drop in your dates and submit.|Get the template|/pricing]]
+[[CTA:amber|Want the schedule pre-formatted?|Our £4.99 pack now includes the costs-schedule template populated with the CPR 27.14 limits and the loss-of-earnings cap. Drop in your dates and submit.|Get the template|/pricing]]
 
 ## Step 3: Apply for the Costs Order
 
@@ -862,7 +862,7 @@ If the operator doesn't pay the order, you can enforce as a regular judgment deb
 - **Time limit to apply**: no hard rule; aim for **within 1-2 months**
 - **Solicitor's fixed costs**: £80-£105 (only if you had a solicitor)
 
-[[CTA:slate|Don't leave costs on the table|If you defended and the claimant discontinued, the law is on your side. Our £9.99 court pack now includes the Part 38 costs schedule + N244 application template.|See the pack|/pricing]]
+[[CTA:slate|Don't leave costs on the table|If you defended and the claimant discontinued, the law is on your side. Our £4.99 court pack now includes the Part 38 costs schedule + N244 application template.|See the pack|/pricing]]
 
 ## Related Reading
 
@@ -878,7 +878,7 @@ If the operator doesn't pay the order, you can enforce as a regular judgment deb
       {
         question: "How much can I realistically claim if I defended myself?",
         answer:
-          "Realistic awards on discontinued small-claims parking cases sit in the £40-£150 range for a litigant in person. The CPR 27.14 limits cap loss of earnings at £95 per day, plus postage and document costs. Don't expect to recover the £9.99 pack fee, your time at solicitor's rates, or 'stress and inconvenience' — none of those are within the small-claims fixed-costs regime.",
+          "Realistic awards on discontinued small-claims parking cases sit in the £40-£150 range for a litigant in person. The CPR 27.14 limits cap loss of earnings at £95 per day, plus postage and document costs. Don't expect to recover the £4.99 pack fee, your time at solicitor's rates, or 'stress and inconvenience' — none of those are within the small-claims fixed-costs regime.",
       },
       {
         question: "Do I need to file form N244 to claim costs?",
@@ -917,12 +917,12 @@ If the operator doesn't pay the order, you can enforce as a regular judgment deb
     slug: "charge-certificate-50-percent-increase-stop-council-parking",
     title: "Council Charge Certificate (50% Increase): How to Stop It Inside the 14-Day Window",
     description:
-      "The Charge Certificate adds 50% to your council PCN and starts the clock to a Warrant of Control. Inside 14 days you can still file out-of-time representations. The grounds, the wording, and the £5.99 letter.",
+      "The Charge Certificate adds 50% to your council PCN and starts the clock to a Warrant of Control. Inside 14 days you can still file out-of-time representations. The grounds, the wording, and the £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "Charge Certificate Parking 50% Increase: Stop Inside 14 Days (2026)",
     seoDescription:
-      "Council Charge Certificate adds 50% to your PCN and lets them apply for a Warrant of Control. Inside 14 days you can still file out-of-time representations. £5.99 personalised letter.",
+      "Council Charge Certificate adds 50% to your PCN and lets them apply for a Warrant of Control. Inside 14 days you can still file out-of-time representations. £2.99 personalised letter.",
     content: `## The Charge Certificate Is Not the End of the Road
 
 A **Charge Certificate** is what a local council issues when a Penalty Charge Notice has gone unpaid past the formal-representations stage and no successful appeal is in flight. It does two things at once that make it the moment most people panic:
@@ -932,7 +932,7 @@ A **Charge Certificate** is what a local council issues when a Penalty Charge No
 
 What most people don't realise is that the Charge Certificate is **not** a final order. The 14-day window between issue of the Charge Certificate and TEC registration is the last opportunity to file **out-of-time representations** to the council, citing one of several statutory grounds, before bailiff escalation becomes likely.
 
-[[CTA:teal|Charge Certificate in hand — 14 days to act|Our £5.99 personalised letter cites the right statutory ground for your case (procedural impropriety, NtO never received, mitigating circumstances), drafted to the council's preferred format. Filed by you, ready in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Charge Certificate in hand — 14 days to act|Our £2.99 personalised letter cites the right statutory ground for your case (procedural impropriety, NtO never received, mitigating circumstances), drafted to the council's preferred format. Filed by you, ready in minutes.|Generate my letter|/pricing]]
 
 ## What the Charge Certificate Actually Says
 
@@ -1011,7 +1011,7 @@ Yours faithfully,
 [Signature]
 \`\`\`
 
-[[CTA:amber|Want this drafted for your council and your ground?|Upload the Charge Certificate, your original PCN reference and the supporting evidence (proof of address, medical record, V5C slip). Our £5.99 letter picks the right statutory ground and structures it for your council's preferred format.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your council and your ground?|Upload the Charge Certificate, your original PCN reference and the supporting evidence (proof of address, medical record, V5C slip). Our £2.99 letter picks the right statutory ground and structures it for your council's preferred format.|Get my letter|/pricing]]
 
 ## Step 3: File Inside the 14-Day Window
 
@@ -1030,7 +1030,7 @@ There are four likely outcomes:
 
 ## Step 5: If the 14 Days Have Passed
 
-You are not out of options. Once the Charge Certificate matures and the debt is registered at the TEC, the **TE9 + TE7 route** applies. The £9.99 court pack drafts both forms. See:
+You are not out of options. Once the Charge Certificate matures and the debt is registered at the TEC, the **TE9 + TE7 route** applies. The £4.99 court pack drafts both forms. See:
 
 - [TE9 Witness Statement Set Aside Council CCJ](/blog/te9-witness-statement-parking-ccj-set-aside)
 - [TE7 Out-of-Time Parking Statutory Declaration](/blog/te7-out-of-time-parking-statutory-declaration)
@@ -1056,7 +1056,7 @@ If your ground is weak and you do not contest, paying the **Charge Certificate a
 - **TEC application earliest date**: 14 days after Charge Certificate
 - **Bailiff fees added on enforcement**: £75 (compliance) + £235 (enforcement) + £110 (sale)
 
-[[CTA:slate|14 days to act on a Charge Certificate|Our £5.99 personalised letter is drafted to your council's preferred format with the right statutory ground for your case. Filed by you, ready in minutes.|Build my letter|/appeal]]
+[[CTA:slate|14 days to act on a Charge Certificate|Our £2.99 personalised letter is drafted to your council's preferred format with the right statutory ground for your case. Filed by you, ready in minutes.|Build my letter|/appeal]]
 
 ## Related Reading
 
@@ -1088,7 +1088,7 @@ If your ground is weak and you do not contest, paying the **Charge Certificate a
       {
         question: "Should I just pay the £195 to make it go away?",
         answer:
-          "Depends on whether you have a real ground. If you have a documented mitigating circumstance, a vehicle-sold disposal slip, a strong wrong-address defence, or a statutory exemption, the out-of-time representations cost you a £5.99 letter and potentially save the £195. If you have no real ground and the 14-day window is short, paying may be cheaper than letting it escalate to TEC + bailiffs (which adds £75-£420 in enforcement fees).",
+          "Depends on whether you have a real ground. If you have a documented mitigating circumstance, a vehicle-sold disposal slip, a strong wrong-address defence, or a statutory exemption, the out-of-time representations cost you a £2.99 letter and potentially save the £195. If you have no real ground and the 14-day window is short, paying may be cheaper than letting it escalate to TEC + bailiffs (which adds £75-£420 in enforcement fees).",
       },
       {
         question: "Does the Charge Certificate go on my credit file?",
@@ -1117,14 +1117,14 @@ If your ground is weak and you do not contest, paying the **Charge Certificate a
     category: "Court & Debt",
     seoTitle: "Parking Claim Hearing Day Preparation (District Judge, 2026)",
     seoDescription:
-      "Defended a private parking claim and got a hearing date? The court bundle, the witness statement, the structure of a 30-minute small-claims hearing, and the £9.99 prep pack.",
+      "Defended a private parking claim and got a hearing date? The court bundle, the witness statement, the structure of a 30-minute small-claims hearing, and the £4.99 prep pack.",
     content: `## Most Hearings Are Decided in the First 5 Minutes
 
 If you have defended a private parking claim and a hearing date has been listed, you have crossed the worst of the procedural ground — the operator chose not to discontinue and is committed to going forward. That fact alone is meaningful: it means they think they have a defensible case, or they have miscalculated. Your job on hearing day is to put the District Judge in a position to see, in the first five minutes, that the law is on your side.
 
 Small-claims hearings for parking matters typically run **30-40 minutes**. The judge has read the papers (or skimmed them on the day if listed back-to-back). The hearing is not a re-trial of every fact — it is a focused conversation about the procedural points (POFA), the contract points (signage and CRA 2015), and the proportionality points (Beavis distinction). The defendant who has organised those three buckets cleanly wins the hearing in the first five minutes. The defendant who hasn't loses it in the same window.
 
-[[CTA:teal|Hearing date listed? Don't go in blind|Our £9.99 court pack drafts your witness statement, organises your exhibit bundle and gives you the talking points for each of the three buckets (POFA, signage, Beavis distinction).|Get the hearing prep pack|/pricing]]
+[[CTA:teal|Hearing date listed? Don't go in blind|Our £4.99 court pack drafts your witness statement, organises your exhibit bundle and gives you the talking points for each of the three buckets (POFA, signage, Beavis distinction).|Get the hearing prep pack|/pricing]]
 
 ## Step 1: Understand What the Court Will Have Seen
 
@@ -1161,7 +1161,7 @@ Standard small-claims parking bundle:
 
 Use coloured tab dividers — small-claims judges process dozens of these and a well-tabbed bundle is appreciated. Page numbers are required by some courts; if your hearing notice mentions paginated bundles, do it.
 
-[[CTA:amber|Need help building the bundle?|Our £9.99 pack drafts your witness statement with a Statement of Truth, lists the exhibits to attach, and gives you the bundle-index template ready for tab dividers.|Build my bundle|/pricing]]
+[[CTA:amber|Need help building the bundle?|Our £4.99 pack drafts your witness statement with a Statement of Truth, lists the exhibits to attach, and gives you the bundle-index template ready for tab dividers.|Build my bundle|/pricing]]
 
 ## Step 3: Write the Witness Statement
 
@@ -1276,7 +1276,7 @@ If you lose:
 - **Bringing irrelevant evidence** — letters from your MP, complaints to the BPA, character references. None help. Stick to POFA, signage and quantum
 - **Forgetting the witness statement Statement of Truth** — unsigned statements are inadmissible. Triple-check before you arrive
 
-[[CTA:slate|Don't go in blind — get the prep pack|Witness statement drafted to your facts, bundle index, talking points for each ground, costs schedule. £9.99 one-time payment.|Get the pack|/pricing]]
+[[CTA:slate|Don't go in blind — get the prep pack|Witness statement drafted to your facts, bundle index, talking points for each ground, costs schedule. £4.99 one-time payment.|Get the pack|/pricing]]
 
 ## Numbers That Matter
 
@@ -1360,7 +1360,7 @@ The three permitted stages and amounts:
 
 If a bailiff company has added fees that breach these caps, charged a stage that did not occur, or charged fees before the underlying statutory trigger was met, you can challenge them under regulation 13 of the 2014 Regulations or via a CPR Part 85 detailed assessment in the court.
 
-[[CTA:teal|Bailiff added fees that don't add up?|Our £5.99 letter challenges the specific overcharge under the TCG (Fees) Regulations 2014, demands a fee breakdown, and references the right enforcement-conduct authority for escalation. Filed by you, ready in minutes.|Generate my challenge letter|/pricing]]
+[[CTA:teal|Bailiff added fees that don't add up?|Our £2.99 letter challenges the specific overcharge under the TCG (Fees) Regulations 2014, demands a fee breakdown, and references the right enforcement-conduct authority for escalation. Filed by you, ready in minutes.|Generate my challenge letter|/pricing]]
 
 ## Common Overcharges to Look For
 
@@ -1447,7 +1447,7 @@ Yours faithfully,
 [Your name]
 \`\`\`
 
-[[CTA:amber|Want this drafted for your specific fee breakdown?|Upload the bailiff letter and the fee breakdown. Our £5.99 letter identifies the specific overcharge, cites the regulation, and references the right ombudsman / authority.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your specific fee breakdown?|Upload the bailiff letter and the fee breakdown. Our £2.99 letter identifies the specific overcharge, cites the regulation, and references the right ombudsman / authority.|Get my letter|/pricing]]
 
 ## Step 4: Escalation Routes if the Bailiff Refuses
 
@@ -1492,7 +1492,7 @@ See our [DCBL doorstep visit stop letter guide](/blog/dcbl-doorstep-visit-stop-l
 - **CPR Part 85 detailed-assessment fee**: £108
 - **Statutory interest** on refunds via small claims: 8% under County Courts Act 1984 s.69
 
-[[CTA:slate|Don't pay fees that aren't lawful|Our £5.99 letter identifies overcharges, cites the regulations and references the right escalation authority. £9.99 pack includes the small-claims N1 if you need to pursue refund.|See pricing|/pricing]]
+[[CTA:slate|Don't pay fees that aren't lawful|Our £2.99 letter identifies overcharges, cites the regulations and references the right escalation authority. £4.99 pack includes the small-claims N1 if you need to pursue refund.|See pricing|/pricing]]
 
 ## Related Reading
 

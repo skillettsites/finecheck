@@ -85,6 +85,7 @@ export interface Product {
   id: string;
   name: string;
   price: number; // in pence
+  wasPrice?: number; // in pence, previous price shown struck through
   description: string;
   features: string[];
 }

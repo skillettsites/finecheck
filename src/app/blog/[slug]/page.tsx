@@ -409,7 +409,7 @@ export default async function BlogPostPage({
                       year: "numeric",
                     })}
                   </time>
-                  <span>Â·</span>
+                  <span>·</span>
                   <span>{readTime} min read</span>
                 </div>
               </header>

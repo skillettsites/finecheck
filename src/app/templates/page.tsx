@@ -91,7 +91,7 @@ const faqItems = [
   {
     question: "Will a generic template be enough to win my appeal?",
     answer:
-      "Generic templates cover the most common legal arguments and can be effective, especially for procedural failures like late NtK service or poor signage. However, a personalised letter that addresses your specific circumstances, the exact operator, and the particular weaknesses of your case will always be stronger. AppealAFine offers personalised appeal letters from just \u00a35.99.",
+      "Generic templates cover the most common legal arguments and can be effective, especially for procedural failures like late NtK service or poor signage. However, a personalised letter that addresses your specific circumstances, the exact operator, and the particular weaknesses of your case will always be stronger. AppealAFine offers personalised appeal letters from just \u00a32.99.",
   },
   {
     question:
@@ -171,7 +171,7 @@ export default function TemplatesPage() {
                       href="/appeal"
                       className="font-semibold underline hover:text-amber-900"
                     >
-                      Get a personalised appeal letter from &pound;5.99
+                      Get a personalised appeal letter from &pound;2.99
                     </Link>
                   </p>
                 </div>
@@ -223,7 +223,7 @@ export default function TemplatesPage() {
             weaknesses of your operator. Much stronger than a generic template.
           </p>
           <Button href="/appeal" variant="accent" size="lg">
-            Get a Personalised Appeal Letter from &pound;5.99
+            Get a Personalised Appeal Letter from &pound;2.99
           </Button>
         </Container>
       </section>

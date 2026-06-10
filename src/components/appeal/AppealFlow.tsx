@@ -917,11 +917,9 @@ function PaywallCard({
 }) {
   const standard = PRODUCTS["standard-letter"];
   const premium = PRODUCTS["premium-pack"];
-  // Default to the £5.99 standard letter so the headline price at the decision
-  // moment is the lowest entry point; only pre-tick premium when the AI
-  // explicitly recommended it. The upsell toggle stays one tap away.
-  const initialPremium = assessment.recommendedProduct === "premium-pack";
-  const [withPremium, setWithPremium] = useState(initialPremium);
+  // Premium pre-ticked: it outsells standard even at higher prices and the
+  // uplift is now only £2. Unticking is one tap and drops to the £2.99 letter.
+  const [withPremium, setWithPremium] = useState(true);
 
   const activeProduct = withPremium ? premium : standard;
   const upliftPence = premium.price - standard.price;
@@ -1000,8 +998,18 @@ function PaywallCard({
       <div className="px-6 py-5">
         <div className="flex items-baseline justify-between mb-4">
           <div>
-            <div className="text-3xl font-semibold tracking-tight text-slate-900">
-              £{(activeProduct.price / 100).toFixed(2)}
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-semibold tracking-tight text-slate-900">
+                £{(activeProduct.price / 100).toFixed(2)}
+              </span>
+              {activeProduct.wasPrice && (
+                <span className="text-base text-slate-400 line-through">
+                  £{(activeProduct.wasPrice / 100).toFixed(2)}
+                </span>
+              )}
+              <span className="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-800">
+                50% off
+              </span>
             </div>
             <div className="text-xs text-slate-500 mt-0.5">
               One-time payment · No subscription · Stripe-secured

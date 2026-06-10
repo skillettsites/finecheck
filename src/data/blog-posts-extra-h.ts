@@ -9,19 +9,19 @@ export const BATCH_H: BlogPost[] = [
     slug: "parkingeye-court-claim-defence-template",
     title: "ParkingEye Court Claim N1: The Defence That Filters Out 30% of Bulk Claims",
     description:
-      "ParkingEye files thousands of bulk County Court claims every year — and ~30% are quietly discontinued once a properly-grounded defence lands. The POFA 9(4) timing defence, the signage / Beavis distinction, and the £9.99 defence pack.",
+      "ParkingEye files thousands of bulk County Court claims every year — and ~30% are quietly discontinued once a properly-grounded defence lands. The POFA 9(4) timing defence, the signage / Beavis distinction, and the £4.99 defence pack.",
     publishedDate: "2026-05-18",
     category: "Operator Court Claims",
     seoTitle: "ParkingEye Court Claim Defence N1 (2026 Guide)",
     seoDescription:
-      "ParkingEye N1 claim form? Filed 71,442 CCJs in 2024. The defence that gets 30% discontinued — POFA 9(4), Beavis distinction, signage. £9.99 court pack.",
+      "ParkingEye N1 claim form? Filed 71,442 CCJs in 2024. The defence that gets 30% discontinued — POFA 9(4), Beavis distinction, signage. £4.99 court pack.",
     content: `## ParkingEye Are Volume Litigators — That Is Their Weakness
 
 In 2024, ParkingEye Ltd filed **71,442 County Court Judgments** against motorists ([RAC Foundation 2024](https://www.racfoundation.org/research/mobility/parking-2024-update)) — the largest of any single private parking operator in the UK. The business model is volume: bulk-issue claims via the County Court Business Centre, hope most defendants ignore them, and convert default judgments at scale.
 
 The corollary is that ParkingEye's claims are **lightly evidenced**. When a defendant files a properly-grounded N9B defence raising POFA 2012 §9, signage and Beavis-distinction grounds, the cost-benefit equation flips. ParkingEye **discontinues** an estimated **25-35% of defended claims** at the N180 / pre-hearing stage rather than incur the disclosure burden for a £170 sum. The defence that gets you into that 25-35% is built on three pillars.
 
-[[CTA:teal|Got a ParkingEye N1?|Our £9.99 court pack drafts your N9 acknowledgement, N9B defence and witness statement targeting ParkingEye's known weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
+[[CTA:teal|Got a ParkingEye N1?|Our £4.99 court pack drafts your N9 acknowledgement, N9B defence and witness statement targeting ParkingEye's known weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
 
 ## Three Pillars of the Defence
 
@@ -53,7 +53,7 @@ ParkingEye claims commonly seek **£170-£255**, broken down as £100 parking ch
 
 Plead the £100 maximum as paragraph 3 of the defence and challenge the costs head-on.
 
-[[CTA:amber|Want the 3-pillar defence drafted for your ParkingEye claim?|Upload the N1 and the original Notice to Keeper. Our £9.99 pack drafts the N9B with POFA timing, Beavis distinction and CPR 27.14 quantum all numbered.|Generate my defence|/pricing]]
+[[CTA:amber|Want the 3-pillar defence drafted for your ParkingEye claim?|Upload the N1 and the original Notice to Keeper. Our £4.99 pack drafts the N9B with POFA timing, Beavis distinction and CPR 27.14 quantum all numbered.|Generate my defence|/pricing]]
 
 ## ParkingEye-Specific Weaknesses to Cite
 
@@ -130,7 +130,7 @@ If they refuse mediation and proceed to hearing, see our [hearing day prep guide
 - **Defence window** (N9B): 28 days from service (with N9 filed)
 - **CPR 27.14 small-claims cost cap on loss of earnings**: £95/day
 
-[[CTA:slate|Don't let a default ParkingEye CCJ land on your file|14 days to acknowledge, 28 days to defend. Our £9.99 court pack drafts both forms with the three-pillar defence.|See the pack|/pricing]]
+[[CTA:slate|Don't let a default ParkingEye CCJ land on your file|14 days to acknowledge, 28 days to defend. Our £4.99 court pack drafts both forms with the three-pillar defence.|See the pack|/pricing]]
 
 ## Related Reading
 
@@ -187,12 +187,12 @@ If they refuse mediation and proceed to hearing, see our [hearing day prep guide
     slug: "ukpc-court-claim-defence-template",
     title: "UKPC Court Claim N1: The IPC / IAS Procedural Defence That Wins Most Cases",
     description:
-      "UK Parking Control Ltd is IPC-affiliated and routinely fails on POFA wording. The signage / CRA 2015 defence and the £9.99 court pack for the 14-day acknowledgement window.",
+      "UK Parking Control Ltd is IPC-affiliated and routinely fails on POFA wording. The signage / CRA 2015 defence and the £4.99 court pack for the 14-day acknowledgement window.",
     publishedDate: "2026-05-18",
     category: "Operator Court Claims",
     seoTitle: "UKPC Court Claim Defence N1 (2026 Guide)",
     seoDescription:
-      "UKPC court claim? IPC-affiliated, often fails on POFA wording and signage compliance. The defence that gets most discontinued. £9.99 court pack.",
+      "UKPC court claim? IPC-affiliated, often fails on POFA wording and signage compliance. The defence that gets most discontinued. £4.99 court pack.",
     content: `## UKPC Court Claims Have a Different Profile Than ParkingEye
 
 **UK Parking Control Limited (UKPC)** is the second-largest UK private parking operator by claim volume. UKPC is **IPC-affiliated** (not BPA), which means appeals go to IAS, not POPLA, and UKPC's procedural environment differs in subtle but important ways from ParkingEye.
@@ -203,7 +203,7 @@ UKPC's known weaknesses at hearing:
 2. **Signage compliance variability** — UKPC sites range from compliant retail parks to non-compliant residential blocks
 3. **Failure to engage with the substantive defence** at IAS / court — UKPC sometimes files template responses that do not address numbered grounds
 
-[[CTA:teal|Got a UKPC N1?|Our £9.99 court pack drafts your N9 + N9B targeting UKPC's POFA §9(2) wording and signage weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
+[[CTA:teal|Got a UKPC N1?|Our £4.99 court pack drafts your N9 + N9B targeting UKPC's POFA §9(2) wording and signage weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
 
 ## The POFA §9(2) Wording Defence
 
@@ -226,7 +226,7 @@ UKPC appeals at the first stage go to the **Independent Appeals Service (IAS)**,
 
 The defence template assumes UKPC has already rejected your IAS appeal (or you never filed one) and a court claim has now arrived. The court will not give weight to whether IAS was procedurally fair — it tries the case on the merits.
 
-[[CTA:amber|Want this drafted for your UKPC claim?|Upload the N1 and the original NtK. Our £9.99 pack identifies the specific §9(2) wording failure on your NtK and drafts the defence accordingly.|Generate my defence|/pricing]]
+[[CTA:amber|Want this drafted for your UKPC claim?|Upload the N1 and the original NtK. Our £4.99 pack identifies the specific §9(2) wording failure on your NtK and drafts the defence accordingly.|Generate my defence|/pricing]]
 
 ## The Defence Skeleton
 
@@ -277,7 +277,7 @@ The procedural steps (N9 acknowledgement → N9B defence → N180 directions →
 - **Acknowledgement window**: 14 days
 - **Defence window**: 28 days
 
-[[CTA:slate|14 days to acknowledge a UKPC N1|Our £9.99 court pack drafts the N9 + N9B targeting UKPC's POFA §9(2) and signage weaknesses.|Build my defence|/pricing]]
+[[CTA:slate|14 days to acknowledge a UKPC N1|Our £4.99 court pack drafts the N9 + N9B targeting UKPC's POFA §9(2) and signage weaknesses.|Build my defence|/pricing]]
 
 ## Related Reading
 
@@ -333,12 +333,12 @@ The procedural steps (N9 acknowledgement → N9B defence → N180 directions →
     slug: "civil-enforcement-ltd-court-claim-defence",
     title: "Civil Enforcement Ltd (CEL) Court Claim: The 'They Won't Show Up' Defence That Routinely Wins",
     description:
-      "Civil Enforcement Ltd is famously inconsistent at attending hearings, which routinely results in claim dismissal. The defence that pressures them to discontinue, and the £9.99 court pack.",
+      "Civil Enforcement Ltd is famously inconsistent at attending hearings, which routinely results in claim dismissal. The defence that pressures them to discontinue, and the £4.99 court pack.",
     publishedDate: "2026-05-18",
     category: "Operator Court Claims",
     seoTitle: "Civil Enforcement Ltd (CEL) Court Claim Defence (2026)",
     seoDescription:
-      "Civil Enforcement Ltd court claim? CEL has a known pattern of not attending hearings, which results in claim dismissal. The defence + £9.99 court pack.",
+      "Civil Enforcement Ltd court claim? CEL has a known pattern of not attending hearings, which results in claim dismissal. The defence + £4.99 court pack.",
     content: `## Civil Enforcement Ltd Have a Reputation for Not Turning Up
 
 **Civil Enforcement Limited (CEL)** is a smaller private parking operator than ParkingEye or UKPC, but it files a steady volume of County Court claims. CEL has acquired a specific reputation in small-claims circles: **they routinely fail to attend or send a representative to hearings**. When that happens, the claim is dismissed.
@@ -353,7 +353,7 @@ The 2026 pattern (well-documented on [MoneySavingExpert forums](https://forums.m
 
 The defence template below maximises the chance that CEL will either (a) discontinue before the hearing, or (b) fail to attend at the hearing. Either way, you walk away.
 
-[[CTA:teal|Got a CEL N1?|Our £9.99 court pack drafts your defence with CEL's known non-attendance pattern and procedural weaknesses noted. Maximises the chance of discontinuance or dismissal.|Get my defence pack|/pricing]]
+[[CTA:teal|Got a CEL N1?|Our £4.99 court pack drafts your defence with CEL's known non-attendance pattern and procedural weaknesses noted. Maximises the chance of discontinuance or dismissal.|Get my defence pack|/pricing]]
 
 ## CEL-Specific Weaknesses
 
@@ -403,7 +403,7 @@ Statement of Truth.
 Signed: [signature]
 \`\`\`
 
-[[CTA:amber|Want this CEL-specific defence drafted?|Upload the N1 and the original NtK. Our £9.99 pack includes the landowner-authority demand under CPR 31 — a route CEL routinely fails to satisfy.|Generate my defence|/pricing]]
+[[CTA:amber|Want this CEL-specific defence drafted?|Upload the N1 and the original NtK. Our £4.99 pack includes the landowner-authority demand under CPR 31 — a route CEL routinely fails to satisfy.|Generate my defence|/pricing]]
 
 ## Step 1: File the N9 and N9B as Normal
 
@@ -431,7 +431,7 @@ Under CPR 27.9, if a party fails to attend a hearing without good reason, the co
 - **Acknowledgement window**: 14 days
 - **Defence window**: 28 days
 
-[[CTA:slate|Don't let CEL pressure you into paying|14 days to acknowledge a CEL N1, 28 days to defend. Our £9.99 pack drafts both with CEL-specific weaknesses highlighted.|See the pack|/pricing]]
+[[CTA:slate|Don't let CEL pressure you into paying|14 days to acknowledge a CEL N1, 28 days to defend. Our £4.99 pack drafts both with CEL-specific weaknesses highlighted.|See the pack|/pricing]]
 
 ## Related Reading
 
@@ -487,12 +487,12 @@ Under CPR 27.9, if a party fails to attend a hearing without good reason, the co
     slug: "excel-parking-court-claim-defence",
     title: "Excel Parking Court Claim N1: The VCS / BW Legal Pipeline Defence That Works",
     description:
-      "Excel Parking uses VCS and BW Legal for collection escalation, with known procedural defects at each handoff. The court defence that targets the chain failures, plus the £9.99 pack.",
+      "Excel Parking uses VCS and BW Legal for collection escalation, with known procedural defects at each handoff. The court defence that targets the chain failures, plus the £4.99 pack.",
     publishedDate: "2026-05-18",
     category: "Operator Court Claims",
     seoTitle: "Excel Parking Court Claim Defence N1 (2026)",
     seoDescription:
-      "Excel Parking N1 claim? Uses VCS / BW Legal pipeline with known procedural defects. The defence + £9.99 court pack for the 14-day window.",
+      "Excel Parking N1 claim? Uses VCS / BW Legal pipeline with known procedural defects. The defence + £4.99 court pack for the 14-day window.",
     content: `## Excel Parking Claims Go Through a Specific Chain
 
 **Excel Parking Services Limited** is IPC-affiliated and uses a recognisable enforcement chain:
@@ -503,7 +503,7 @@ Under CPR 27.9, if a party fails to attend a hearing without good reason, the co
 
 Each handoff is a potential point of procedural failure. The court defence is most powerful when it identifies a break in the chain — a wrong-name on the NtK, an inconsistent reference number between stages, or a Letter Before Claim that pre-dates the Notice to Keeper.
 
-[[CTA:teal|Got an Excel Parking N1?|Our £9.99 court pack drafts your N9 + N9B targeting the VCS / BW Legal pipeline and Excel's POFA wording weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
+[[CTA:teal|Got an Excel Parking N1?|Our £4.99 court pack drafts your N9 + N9B targeting the VCS / BW Legal pipeline and Excel's POFA wording weaknesses. Filed by you within the 14-day window.|Get my defence pack|/pricing]]
 
 ## Excel-Specific Weaknesses
 
@@ -557,7 +557,7 @@ Statement of Truth.
 Signed: [signature]
 \`\`\`
 
-[[CTA:amber|Want this drafted for your Excel claim?|Upload the N1, the BW Legal LBC and the original NtK. Our £9.99 pack identifies any chain inconsistencies and the strongest grounds for your case.|Generate my defence|/pricing]]
+[[CTA:amber|Want this drafted for your Excel claim?|Upload the N1, the BW Legal LBC and the original NtK. Our £4.99 pack identifies any chain inconsistencies and the strongest grounds for your case.|Generate my defence|/pricing]]
 
 ## Step 1: Identify the Chain Components
 
@@ -587,7 +587,7 @@ Excel claims sometimes settle at mediation for the original £100 charge. Tick "
 - **Defence window**: 28 days
 - **Code grace period**: 10 minutes
 
-[[CTA:slate|14 days to acknowledge an Excel N1|Our £9.99 pack drafts the N9 + N9B with Excel-specific weaknesses and chain inconsistencies pleaded.|Build my defence|/pricing]]
+[[CTA:slate|14 days to acknowledge an Excel N1|Our £4.99 pack drafts the N9 + N9B with Excel-specific weaknesses and chain inconsistencies pleaded.|Build my defence|/pricing]]
 
 ## Related Reading
 

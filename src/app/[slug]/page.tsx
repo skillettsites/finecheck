@@ -287,7 +287,7 @@ export default async function LocationFinePageRoute({
             Ready to appeal your {p.location} {p.fineTypeLabel.toLowerCase()}?
           </h2>
           <p className="mt-2 text-slate-300">
-            Free 60-second assessment first. Pay £5.99 only if you want us to
+            Free 60-second assessment first. Pay £2.99 only if you want us to
             write the letter for you.
           </p>
           <div className="mt-5">

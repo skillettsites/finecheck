@@ -4,7 +4,8 @@ export const PRODUCTS: Record<string, Product> = {
   'standard-letter': {
     id: 'standard-letter',
     name: 'Standard Appeal Letter',
-    price: 599,
+    price: 299,
+    wasPrice: 599,
     description: 'AI-generated personalised appeal letter using the correct legal grounds for your specific situation.',
     features: [
       'Personalised to your circumstances',
@@ -16,7 +17,8 @@ export const PRODUCTS: Record<string, Product> = {
   'premium-pack': {
     id: 'premium-pack',
     name: 'Premium Appeal Pack',
-    price: 999,
+    price: 499,
+    wasPrice: 999,
     description: 'Everything in Standard plus escalation template, evidence checklist, and operator-specific strategy guide.',
     features: [
       'Everything in Standard',

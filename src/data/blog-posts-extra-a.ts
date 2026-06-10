@@ -3,14 +3,14 @@ import type { BlogPost } from "./blog-posts";
 export const BATCH_A: BlogPost[] = [
   {
     slug: "dcbl-letter-parking-fine-legal",
-    title: "DCBL Letter for a Parking Fine: Is It Legal and What To Do (2026)",
+    title: "DCBL Letter About a Parking Fine? Don't Pay It Yet",
     description:
-      "What a DCBL or DCB Legal letter actually means, what they can and cannot legally do, and how to fire back the right reply for £5.99.",
+      "DCBL cannot send bailiffs for a private parking fine; there is no court order behind that letter. What it actually is, the three mistakes that make it worse, and the £2.99 reply that usually ends it.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
     seoTitle: "DCBL Letter for a Parking Fine? Is It Legal in 2026 (Read This)",
     seoDescription:
-      "Got a DCBL or DCB Legal letter? Find out if it is enforceable, what to ignore, and how to fire back the right reply in 10 minutes for £5.99.",
+      "Got a DCBL or DCB Legal letter? Find out if it is enforceable, what to ignore, and how to fire back the right reply in 10 minutes for £2.99.",
     content: `## Two Different Companies, One Big Misunderstanding
 
 If a brown or red-bordered envelope has just landed on your doormat with **DCBL** or **DCB Legal** at the top, you are not alone. These two are the most common "scary letter" senders behind unpaid private parking charges in the UK, and almost every reader who arrives on this page has the same first question: is this actually legal, or is it a bluff?
@@ -59,7 +59,7 @@ Common ways the original charge falls apart:
 
 If any of those apply, the chain breaks. The DCBL letter becomes a piece of paper.
 
-[[CTA:amber|Don't pay the £170 yet|For £5.99 our debt-collector response letter cites POFA, the SRA Code, and CPUTR 2008 reg 5 in your name. Most readers do not hear back after sending it.|Get the £5.99 letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|Don't pay the £170 yet|For £2.99 our debt-collector response letter cites POFA, the SRA Code, and CPUTR 2008 reg 5 in your name. Most readers do not hear back after sending it.|Get the £2.99 letter|/templates/debt-collector-response-letter]]
 
 ## The DCB Legal Angle: SRA Obligations
 
@@ -106,7 +106,7 @@ You are not powerless. You are not about to be raided. But you do need to reply,
 
 If the DCBL chain has already escalated to a **doorstep visit notice** with an "enforcement agent will attend" warning, that is a different document and a different stage. The pre-Notice-of-Enforcement stop letter is in our [DCBL doorstep visit guide](/blog/dcbl-doorstep-visit-stop-letter), with the door-refusal script and the bailiff-fee timing rules.
 
-[[CTA:slate|Send the right reply tonight|Our £5.99 debt-collector response letter is drafted to your operator and your situation, cites the right statute, and arrives in your inbox in under 5 minutes.|Get the £5.99 letter|/templates/debt-collector-response-letter]]`,
+[[CTA:slate|Send the right reply tonight|Our £2.99 debt-collector response letter is drafted to your operator and your situation, cites the right statute, and arrives in your inbox in under 5 minutes.|Get the £2.99 letter|/templates/debt-collector-response-letter]]`,
     faqs: [
       {
         question: "Is DCBL allowed to send bailiffs to my house for a parking fine?",
@@ -154,19 +154,19 @@ If the DCBL chain has already escalated to a **doorstep visit notice** with an "
     slug: "debt-recovery-plus-drp-parking-fine",
     title: "Debt Recovery Plus (DRP) Parking Fine: Pay, Fight or Ignore?",
     description:
-      "How to handle a Debt Recovery Plus letter for a £170 private parking charge, including what their letters mean and the £5.99 reply that often ends it.",
+      "How to handle a Debt Recovery Plus letter for a £170 private parking charge, including what their letters mean and the £2.99 reply that often ends it.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
     seoTitle: "Debt Recovery Plus (DRP) Parking Fine: Pay, Fight or Ignore?",
     seoDescription:
-      "DRP letter for a £170 parking charge? Here is what is actually enforceable, what is bluff, and a £5.99 reply letter that often kills the chase.",
+      "DRP letter for a £170 parking charge? Here is what is actually enforceable, what is bluff, and a £2.99 reply letter that often kills the chase.",
     content: `## Why DRP Are Writing To You
 
 If a letter from **Debt Recovery Plus Ltd** (usually written as **DRP**) has arrived demanding around £160 to £170 for a parking charge, here is the first thing to understand: DRP have not bought your debt. They are working on commission for the original parking operator. Most likely **ParkingEye, UKPC, Smart Parking, Excel Parking, or Euro Car Parks**, who hand over their unpaid PCNs in bulk.
 
 That commission model shapes everything they do. They get paid only if you pay. They have no independent legal authority. They have no power beyond a printer and a postage stamp. The threats in their letters are designed to feel urgent because urgency is the only tool they have.
 
-[[CTA:teal|DRP letter just arrived?|Free 60-second assessment shows whether your underlying parking charge is enforceable and which £5.99 reply letter to send.|Start free assessment|/appeal]]
+[[CTA:teal|DRP letter just arrived?|Free 60-second assessment shows whether your underlying parking charge is enforceable and which £2.99 reply letter to send.|Start free assessment|/appeal]]
 
 ## The DRP Letter Cycle: What Each Stage Actually Means
 
@@ -212,7 +212,7 @@ In any of these cases, replying properly to DRP often ends the chase entirely.
 
 Ignoring DRP letters is less catastrophic than ignoring a Letter Before Claim from a solicitor, but it is still risky. Silence is treated as non-dispute, and the file is more likely to be escalated to actual solicitors. A 5-minute written reply costs you almost nothing and protects your position.
 
-[[CTA:amber|Don't pay £170 if you don't have to|Our £5.99 debt-collector response letter cites POFA 2012, CPUTR 2008 reg 5, and Excel v Wilkinson on costs, and it goes back to DRP in your name.|Get the £5.99 letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|Don't pay £170 if you don't have to|Our £2.99 debt-collector response letter cites POFA 2012, CPUTR 2008 reg 5, and Excel v Wilkinson on costs, and it goes back to DRP in your name.|Get the £2.99 letter|/templates/debt-collector-response-letter]]
 
 ## The Reply That Works
 
@@ -256,7 +256,7 @@ That last group is small but real. It is why we recommend keeping the paper trai
 - Do not write an emotional letter explaining your circumstances. It is not relevant to liability and gives them nothing to work with except evidence you were the driver.
 - Do not admit who was driving if you are the registered keeper. Keeper liability under POFA is the operator's only route to you if they cannot identify the driver.
 
-[[CTA:slate|End the chase tonight|Our £5.99 debt collector response letter is drafted to DRP and the operator behind them, cites the right statute, and is in your inbox in under 5 minutes.|Get the £5.99 letter|/templates/debt-collector-response-letter]]`,
+[[CTA:slate|End the chase tonight|Our £2.99 debt collector response letter is drafted to DRP and the operator behind them, cites the right statute, and is in your inbox in under 5 minutes.|Get the £2.99 letter|/templates/debt-collector-response-letter]]`,
     faqs: [
       {
         question: "Can DRP take me to court for a parking fine?",
@@ -304,12 +304,12 @@ That last group is small but real. It is why we recommend keeping the paper trai
     slug: "popla-appeal-rejected-what-next",
     title: "POPLA Rejected My Appeal: What To Do Next in 2026",
     description:
-      "POPLA decisions are not legally binding on you. Here are the four real escalation routes after a rejection, and the £9.99 pack that handles them.",
+      "POPLA decisions are not legally binding on you. Here are the four real escalation routes after a rejection, and the £4.99 pack that handles them.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "POPLA Rejected My Appeal: What Happens Next in 2026",
     seoDescription:
-      "POPLA said no? You are not legally bound by it and you have 4 escalation routes. Here is the £9.99 pack that escalates you correctly.",
+      "POPLA said no? You are not legally bound by it and you have 4 escalation routes. Here is the £4.99 pack that escalates you correctly.",
     content: `## A Rejection Is Not the End. Read This Before You Pay.
 
 If you have just opened a POPLA decision letter that rejects your appeal, the first thing to know is the single most misunderstood point about POPLA in the entire UK parking system: **a POPLA decision binds the parking operator, not you.**
@@ -318,7 +318,7 @@ That is not an opinion. It is in the POPLA terms themselves and it is how the Br
 
 The letter you have just received is therefore not a verdict. It is the start of stage two.
 
-[[CTA:teal|POPLA decision against you?|Free 60-second assessment shows your strongest escalation route and which £5.99 or £9.99 pack fits.|Start free assessment|/appeal]]
+[[CTA:teal|POPLA decision against you?|Free 60-second assessment shows your strongest escalation route and which £2.99 or £4.99 pack fits.|Start free assessment|/appeal]]
 
 ## Why POPLA Decisions Are Not Binding On You
 
@@ -345,7 +345,7 @@ After a POPLA rejection you have four practical routes, in increasing order of e
 
 ### Route 1: Hold the Line
 
-The most common and most rational route. You do nothing financial. You keep all the POPLA correspondence on file. You wait. Many operators do not pursue further. If a debt collector (DRP, DCBL) writes, you reply with a [debt collector response letter](/templates/debt-collector-response-letter) for £5.99 referencing the POPLA case number and the underlying defence points. This often ends it.
+The most common and most rational route. You do nothing financial. You keep all the POPLA correspondence on file. You wait. Many operators do not pursue further. If a debt collector (DRP, DCBL) writes, you reply with a [debt collector response letter](/templates/debt-collector-response-letter) for £2.99 referencing the POPLA case number and the underlying defence points. This often ends it.
 
 The risk: a Letter Before Claim from a solicitor (BW Legal, DCB Legal, Gladstones) may eventually arrive. You then move to Route 2.
 
@@ -382,7 +382,7 @@ POPLA assessors are not judges. They work to a narrower set of grounds and a low
 - **Lack of contract / lack of landowner authority**
 - **Missing or wrong evidence** (no signage photos at the date in question)
 
-[[CTA:amber|POPLA loss does not equal liability|Our £9.99 premium pack covers all four escalation routes: debt collector reply, Letter Before Claim response, Companies House / IPC complaint template, and a full court defence with witness statement.|Get the £9.99 pack|/pricing]]
+[[CTA:amber|POPLA loss does not equal liability|Our £4.99 premium pack covers all four escalation routes: debt collector reply, Letter Before Claim response, Companies House / IPC complaint template, and a full court defence with witness statement.|Get the £4.99 pack|/pricing]]
 
 ## Common Mistakes After a POPLA Rejection
 
@@ -409,7 +409,7 @@ A POPLA rejection is genuinely a turning point, but not the way the operator's l
 
 Most readers who get to step 1 never reach step 4 because the operator drops the file long before then.
 
-[[CTA:slate|Get all four escalation routes covered|Our £9.99 premium pack includes: debt collector reply, Letter Before Claim response, IPC / Companies House complaint, and a full court defence with witness statement template - all drafted to your case.|Get the £9.99 pack|/pricing]]`,
+[[CTA:slate|Get all four escalation routes covered|Our £4.99 premium pack includes: debt collector reply, Letter Before Claim response, IPC / Companies House complaint, and a full court defence with witness statement template - all drafted to your case.|Get the £4.99 pack|/pricing]]`,
     faqs: [
       {
         question: "Is a POPLA decision legally binding on me?",
@@ -457,12 +457,12 @@ Most readers who get to step 1 never reach step 4 because the operator drops the
     slug: "letter-before-claim-parking-fine-reply",
     title: "Letter Before Claim for a Parking Fine: How To Reply in 30 Days",
     description:
-      "What a Letter Before Claim must contain, how to reply within 30 days, and the £5.99 reply that demands disclosure and stalls court action.",
+      "What a Letter Before Claim must contain, how to reply within 30 days, and the £2.99 reply that demands disclosure and stalls court action.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "Letter Before Claim Parking Fine? How To Reply in 30 Days",
     seoDescription:
-      "Got a Letter Before Claim from BW Legal, DCB Legal or Gladstones? You have 30 days. This £5.99 reply demands their proof and stalls court.",
+      "Got a Letter Before Claim from BW Legal, DCB Legal or Gladstones? You have 30 days. This £2.99 reply demands their proof and stalls court.",
     content: `## What a Letter Before Claim Actually Is
 
 A **Letter Before Claim** (LBC), sometimes labelled "Letter Before Action" or "Pre-Action Letter", is a formal step required by the **Pre-Action Protocol for Debt Claims**, which has been mandatory in England and Wales since October 2017. It is the operator's last legal hoop before they are allowed to file a County Court claim against you.
@@ -474,7 +474,7 @@ The LBC matters for two reasons:
 
 The good news: a properly drafted reply within those 30 days is the single most effective document you can send in the entire parking-charge dispute process. It often ends the chase entirely.
 
-[[CTA:teal|LBC just landed?|Free 60-second assessment confirms the LBC's deficiencies and tells you which £5.99 reply letter fits.|Start free assessment|/appeal]]
+[[CTA:teal|LBC just landed?|Free 60-second assessment confirms the LBC's deficiencies and tells you which £2.99 reply letter fits.|Start free assessment|/appeal]]
 
 ## What the LBC MUST Contain by Law
 
@@ -538,7 +538,7 @@ LBCs often include an inflated total: original charge + £60-£70 "debt recovery
 
 State that any County Court claim issued will be defended in full, and that you reserve the right to seek costs against the operator under **CPR 27.14(2)(g)** (unreasonable behaviour in small claims).
 
-[[CTA:amber|30-day clock is ticking|Our £5.99 Letter Before Claim reply is drafted to BW Legal, DCB Legal, or Gladstones with the right disclosure requests, statute citations, and grounds for your case.|Get the £5.99 LBC reply|/templates/debt-collector-response-letter]]
+[[CTA:amber|30-day clock is ticking|Our £2.99 Letter Before Claim reply is drafted to BW Legal, DCB Legal, or Gladstones with the right disclosure requests, statute citations, and grounds for your case.|Get the £2.99 LBC reply|/templates/debt-collector-response-letter]]
 
 ## Common Operator Failures to Look For
 
@@ -561,7 +561,7 @@ Once your reply is sent (recorded delivery, keep proof), one of three things hap
 2. **The operator's solicitor responds with documents.** You then have time to consider before they can issue. If the documents reveal further weaknesses (and they often do), reply again citing the new defects.
 3. **The operator issues a Claim Form** via Northampton County Court Business Centre. At this point you have 14 days to acknowledge service and 28 days to file a defence. Our [parking fine court defence guide](/guides/parking-fine-court-defence) covers what comes next.
 
-If a Claim Form does arrive, the £9.99 premium pack includes a full defence, N180 directional questionnaire, and witness statement template tailored to your case.
+If a Claim Form does arrive, the £4.99 premium pack includes a full defence, N180 directional questionnaire, and witness statement template tailored to your case.
 
 ## What NOT To Include in Your Reply
 
@@ -575,7 +575,7 @@ If a Claim Form does arrive, the £9.99 premium pack includes a full defence, N1
 
 Send by Royal Mail Signed For 1st Class. Keep the receipt. The Protocol allows the operator to argue your reply was not received if you do not have proof. A £2.50 stamp upgrade has stopped more parking claims than any other single line in this guide.
 
-[[CTA:slate|Send the right LBC reply this week|Our £5.99 Letter Before Claim reply is in your inbox in under 5 minutes, drafted to your solicitor and case. If a Claim Form follows, the £9.99 pack adds a full court defence and witness statement.|Get the £5.99 LBC reply|/templates/debt-collector-response-letter]]`,
+[[CTA:slate|Send the right LBC reply this week|Our £2.99 Letter Before Claim reply is in your inbox in under 5 minutes, drafted to your solicitor and case. If a Claim Form follows, the £4.99 pack adds a full court defence and witness statement.|Get the £2.99 LBC reply|/templates/debt-collector-response-letter]]`,
     faqs: [
       {
         question: "What happens if I ignore a Letter Before Claim?",
@@ -623,12 +623,12 @@ Send by Royal Mail Signed For 1st Class. Keep the receipt. The Protocol allows t
     slug: "bw-legal-court-claim-defence",
     title: "BW Legal Sent Me a Court Claim Form: How To Defend It",
     description:
-      "What to do when BW Legal issue a Northampton CCBC claim form, the 14-day acknowledgement deadline, and the £9.99 pack that handles the full defence.",
+      "What to do when BW Legal issue a Northampton CCBC claim form, the 14-day acknowledgement deadline, and the £4.99 pack that handles the full defence.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "BW Legal Sent Me a Court Claim Form: How To Defend It",
     seoDescription:
-      "BW Legal claim form via Northampton CCBC? You have 14 days to acknowledge, 28 to defend. £9.99 pack: full defence + N180 + witness statement.",
+      "BW Legal claim form via Northampton CCBC? You have 14 days to acknowledge, 28 to defend. £4.99 pack: full defence + N180 + witness statement.",
     content: `## Stop. Do This First. The 14-Day Clock Has Already Started.
 
 If a brown envelope from **HM Courts and Tribunals Service** has arrived with **"Claim Form N1"** at the top and **BW Legal** as the claimant's solicitor, you must act this week. Not next week. This week.
@@ -637,7 +637,7 @@ The single biggest mistake people make at this stage is reading the claim form, 
 
 The good news: if you acknowledge service in time (it is a single page, online, free), you then get **28 days from the date of service** to file your defence. That is enough time to put together a proper response. And many BW Legal parking claims have specific weaknesses that, when raised correctly, lead to claims being discontinued before any hearing.
 
-[[CTA:teal|14-day acknowledgement deadline?|Free 60-second assessment confirms the claim's weak points and shows whether the £9.99 pack covers your case.|Start free assessment|/appeal]]
+[[CTA:teal|14-day acknowledgement deadline?|Free 60-second assessment confirms the claim's weak points and shows whether the £4.99 pack covers your case.|Start free assessment|/appeal]]
 
 ## Understanding What You've Received
 
@@ -693,7 +693,7 @@ The term creating the parking charge can be challenged as unfair if it causes a 
 
 BW Legal claim forms typically include the original charge + £60-£70 "debt recovery costs" + interest + court fees. The £60-£70 added cost is **regularly struck out** by District Judges as unrecoverable, citing rulings like **Excel Parking v Wilkinson (2020)**. Plead this specifically in your defence.
 
-[[CTA:amber|14 days. That is all you have.|The £9.99 Premium Pack writes the full Defence (N9B), the Allocation Questionnaire (N180), and a Witness Statement, all drafted to BW Legal and your case. Delivered in your inbox in 5 minutes.|Get the £9.99 pack|/pricing]]
+[[CTA:amber|14 days. That is all you have.|The £4.99 Premium Pack writes the full Defence (N9B), the Allocation Questionnaire (N180), and a Witness Statement, all drafted to BW Legal and your case. Delivered in your inbox in 5 minutes.|Get the £4.99 pack|/pricing]]
 
 ## Step-by-Step: What To Do This Week
 
@@ -762,7 +762,7 @@ If the [County Court Claim Form N1](/blog/county-court-claim-form-n1-parking-def
 
 Do not give up. You can apply to **set aside a default judgment** under **CPR 13.3** if you have a real prospect of successfully defending and you act promptly. Our [CCJ set-aside template](/templates/ccj-set-aside-letter) covers the application. There is a £275 court fee but a successful set-aside removes the CCJ from your credit file.
 
-[[CTA:slate|14 days. Defence. N180. Witness statement. All in one pack.|The £9.99 Premium Pack is drafted to BW Legal, your operator, and your case. Includes the full defence, allocation questionnaire, and witness statement template. Delivered in 5 minutes.|Get the £9.99 pack|/pricing]]`,
+[[CTA:slate|14 days. Defence. N180. Witness statement. All in one pack.|The £4.99 Premium Pack is drafted to BW Legal, your operator, and your case. Includes the full defence, allocation questionnaire, and witness statement template. Delivered in 5 minutes.|Get the £4.99 pack|/pricing]]`,
     faqs: [
       {
         question: "What happens if I ignore a BW Legal court claim form?",

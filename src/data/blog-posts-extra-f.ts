@@ -10,12 +10,12 @@ export const BATCH_F: BlogPost[] = [
     slug: "yellow-box-junction-pcn-appeal-outside-london",
     title: "Yellow Box Junction PCN Outside London: The 'Forced to Stop' Defence That Wins",
     description:
-      "36 yellow box junctions outside London are now enforced under Part 6 of the TMA 2004. The single defence that wins most box-junction appeals, the dashcam evidence the tribunal expects, and the £5.99 letter that pairs them.",
+      "36 yellow box junctions outside London are now enforced under Part 6 of the TMA 2004. The single defence that wins most box-junction appeals, the dashcam evidence the tribunal expects, and the £2.99 letter that pairs them.",
     publishedDate: "2026-05-18",
     category: "Council & Moving Traffic",
     seoTitle: "Yellow Box Junction PCN Appeal Outside London (2026 Guide)",
     seoDescription:
-      "Yellow box junction fine outside London? The 'forced to stop by vehicles in front' defence wins most of these at tribunal. Dashcam evidence, exact wording, £5.99 personalised letter.",
+      "Yellow box junction fine outside London? The 'forced to stop by vehicles in front' defence wins most of these at tribunal. Dashcam evidence, exact wording, £2.99 personalised letter.",
     content: `## The One Defence That Beats Most Box-Junction PCNs
 
 A **yellow box junction PCN** is issued when a vehicle is photographed stopped within the painted yellow cross-hatching at a junction. Under **regulation 10 of the Traffic Signs Regulations and General Directions 2016** (TSRGD) and **regulation 29 of the Zebra, Pelican and Puffin Pedestrian Crossings Regulations**, the rule is:
@@ -26,7 +26,7 @@ The crucial word is "enter". You may enter only if your exit is already clear. I
 
 But there is a single, narrow, **statutory exception** that wins the majority of box-junction appeals at the Traffic Penalty Tribunal: you may stop in a box junction when **forced to stop by oncoming traffic when turning right** (and only when turning right). Outside that exception, the defence shifts to procedural and signage challenges.
 
-[[CTA:teal|Got a yellow box junction PCN?|Our £5.99 personalised letter cites Reg 10 of the TSRGD, the right-turn exception, and the procedural grounds that beat box PCNs at tribunal. With your dashcam stills, it is structured to the council's preferred format.|Generate my letter|/pricing]]
+[[CTA:teal|Got a yellow box junction PCN?|Our £2.99 personalised letter cites Reg 10 of the TSRGD, the right-turn exception, and the procedural grounds that beat box PCNs at tribunal. With your dashcam stills, it is structured to the council's preferred format.|Generate my letter|/pricing]]
 
 ## Where Box-Junction Cameras Are Now Enforced
 
@@ -110,7 +110,7 @@ Yours faithfully,
 [Signature]
 \`\`\`
 
-[[CTA:amber|Want this drafted for your specific junction and dashcam?|Upload the PCN and 2-4 dashcam stills. Our £5.99 letter pairs the right defence with your evidence and structures the representations to your council's preferred format.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your specific junction and dashcam?|Upload the PCN and 2-4 dashcam stills. Our £2.99 letter pairs the right defence with your evidence and structures the representations to your council's preferred format.|Get my letter|/pricing]]
 
 ## Step 4: If the Council Rejects
 
@@ -138,7 +138,7 @@ The TPT's published case summaries support the broader reading. If your dashcam 
 - **Tribunal escalation window**: **28 days** from council rejection
 - **TPT decision time**: typically **14-28 days**
 
-[[CTA:slate|Got a dashcam? Use the statutory exception|Right indicator on + oncoming traffic blocking + waiting within the box = exception applies. Our £5.99 letter packages your dashcam evidence into a Reg 10(3) representation.|Build my appeal|/appeal]]
+[[CTA:slate|Got a dashcam? Use the statutory exception|Right indicator on + oncoming traffic blocking + waiting within the box = exception applies. Our £2.99 letter packages your dashcam evidence into a Reg 10(3) representation.|Build my appeal|/appeal]]
 
 ## Related Reading
 
@@ -193,12 +193,12 @@ The TPT's published case summaries support the broader reading. If your dashcam 
     slug: "welsh-20mph-speeding-fine-challenge",
     title: "Welsh 20mph Speeding Fine: The Three Defences That Actually Work",
     description:
-      "62,500 detections in 10 months at the new Welsh 20mph default. The signage challenge, the wrong-classification defence, and the mitigation route. £5.99 personalised letter.",
+      "62,500 detections in 10 months at the new Welsh 20mph default. The signage challenge, the wrong-classification defence, and the mitigation route. £2.99 personalised letter.",
     publishedDate: "2026-05-18",
     category: "Council & Moving Traffic",
     seoTitle: "Welsh 20mph Speeding Fine Challenge (2026 Guide)",
     seoDescription:
-      "Welsh 20mph fine? Three defences work: signage non-compliance under TSRGD, road wrongly classified as restricted, and mitigation route. £5.99 personalised challenge letter.",
+      "Welsh 20mph fine? Three defences work: signage non-compliance under TSRGD, road wrongly classified as restricted, and mitigation route. £2.99 personalised challenge letter.",
     content: `## The Welsh 20mph Default Has Generated £1.3m in Fines
 
 Since the **Restricted Roads (20 mph Speed Limit) (Wales) Order 2022** came into force in September 2023, the default speed limit on most restricted roads in Wales dropped from 30mph to 20mph. By April 2025, GoSafe (the Welsh police road-safety partnership) had recorded **62,500 detections** generating an estimated **£1.3 million** in Fixed Penalty Notices, with the political fallout leading to the **Ken Skates review** in 2024 and a partial roll-back of some 20mph designations from 2025.
@@ -209,7 +209,7 @@ The legal challenge environment is now richer than it has been at any point sinc
 2. **Road wrongly classified as restricted** — some routes were defaulted to 20mph that arguably should have stayed 30mph, and the Skates review identified specific corridors for reversal
 3. **Mitigation grounds** — minor exceedances (21-24mph) attract a discretionary speed-awareness course offer that avoids the £100 fine and 3 points
 
-[[CTA:teal|Got a Welsh 20mph fine?|Our £5.99 personalised letter cites the right defence (signage, classification or mitigation) for your road, with the GoSafe detection record and the Restricted Roads Order specifically referenced. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Got a Welsh 20mph fine?|Our £2.99 personalised letter cites the right defence (signage, classification or mitigation) for your road, with the GoSafe detection record and the Restricted Roads Order specifically referenced. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## Understanding the Letter You Received
 
@@ -265,7 +265,7 @@ If your speed was 25mph or more, the course offer is usually withdrawn. At 30mph
 
 Some drivers initially miss the course offer because they reply by post with a defence letter rather than engaging with the COFP form correctly. If the offer is in the original letter, accept it within 28 days — it cannot be re-offered after that.
 
-[[CTA:amber|Want the right defence for your specific Welsh 20mph fine?|Upload the COFP letter and any signage photos. Our £5.99 letter selects between signage, classification and mitigation routes based on your facts.|Get my letter|/pricing]]
+[[CTA:amber|Want the right defence for your specific Welsh 20mph fine?|Upload the COFP letter and any signage photos. Our £2.99 letter selects between signage, classification and mitigation routes based on your facts.|Get my letter|/pricing]]
 
 ## Step 1: Choose Your Route
 
@@ -333,7 +333,7 @@ For most Welsh 20mph cases at 21-24mph, the speed-awareness course is by far the
 - **Magistrate's court maximum fine**: £1,000 under s.17 RTRA 1984
 - **Penalty points retention**: 4 years for speeding
 
-[[CTA:slate|Course or court? Get the right read on your case|Our £5.99 letter assesses your COFP, your detected speed, and the signage at the location. Recommends course-acceptance vs. defence-with-evidence vs. court hearing.|See my best route|/appeal]]
+[[CTA:slate|Course or court? Get the right read on your case|Our £2.99 letter assesses your COFP, your detected speed, and the signage at the location. Recommends course-acceptance vs. defence-with-evidence vs. court hearing.|See my best route|/appeal]]
 
 ## Related Reading
 
@@ -388,19 +388,19 @@ For most Welsh 20mph cases at 21-24mph, the speed-awareness course is by far the
     slug: "birmingham-clean-air-zone-pcn-appeal-letter",
     title: "Birmingham Clean Air Zone PCN: 6 Grounds That Win at the Tribunal",
     description:
-      "Birmingham CAZ has issued more than 2 million PCNs since 2021. The 6 grounds Traffic Penalty Tribunal adjudicators routinely accept, the evidence you need, and the £5.99 personalised appeal letter.",
+      "Birmingham CAZ has issued more than 2 million PCNs since 2021. The 6 grounds Traffic Penalty Tribunal adjudicators routinely accept, the evidence you need, and the £2.99 personalised appeal letter.",
     publishedDate: "2026-05-18",
     category: "Clean Air Zone",
     seoTitle: "Birmingham CAZ PCN Appeal Letter (6 Winning Grounds, 2026)",
     seoDescription:
-      "Birmingham Clean Air Zone fine? £8 / £100 charge, 6 statutory grounds for appeal at the Traffic Penalty Tribunal. Personalised £5.99 letter targeting your specific ground.",
+      "Birmingham Clean Air Zone fine? £8 / £100 charge, 6 statutory grounds for appeal at the Traffic Penalty Tribunal. Personalised £2.99 letter targeting your specific ground.",
     content: `## The Birmingham CAZ Is the Most Aggressive in the UK
 
 Birmingham's **Clean Air Zone Class D** has been operational since 1 June 2021 and is among the most aggressive in the UK in scale and revenue. Non-compliant vehicles pay **£8 per day** for cars, taxis, vans and LGVs, and **£50 per day** for buses, coaches and HGVs. Miss the payment window and the **£100 PCN** (or £180 for HGVs) follows, reducing to £50 if paid within 14 days.
 
 The volume is large enough that Birmingham City Council has a dedicated PCN appeals process and the Traffic Penalty Tribunal hears a steady volume of CAZ cases each year. The good news for drivers is that **six grounds** consistently succeed at tribunal — and most CAZ PCNs are issued on facts that engage at least one of them.
 
-[[CTA:teal|Got a Birmingham CAZ PCN?|Our £5.99 personalised letter selects the right ground (vehicle compliant, exemption, payment glitch, signage, ANPR error, special circumstances) and drafts the representations to Birmingham's preferred format. Filed by you in minutes.|Generate my letter|/pricing]]
+[[CTA:teal|Got a Birmingham CAZ PCN?|Our £2.99 personalised letter selects the right ground (vehicle compliant, exemption, payment glitch, signage, ANPR error, special circumstances) and drafts the representations to Birmingham's preferred format. Filed by you in minutes.|Generate my letter|/pricing]]
 
 ## The Six Grounds That Win
 
@@ -489,7 +489,7 @@ Discretionary grounds (Birmingham can refuse but tribunal often allows):
 
 Each requires documentary evidence (hospital records, police crime number, funeral service record, refuge letter).
 
-[[CTA:amber|Not sure which Birmingham CAZ ground applies?|Upload the PCN and any documentation. Our £5.99 letter selects the right ground and structures the representations to Birmingham's preferred format.|Get my letter|/pricing]]
+[[CTA:amber|Not sure which Birmingham CAZ ground applies?|Upload the PCN and any documentation. Our £2.99 letter selects the right ground and structures the representations to Birmingham's preferred format.|Get my letter|/pricing]]
 
 ## Step 1: Establish Your Ground
 
@@ -549,7 +549,7 @@ The TPT's published case summaries for Birmingham CAZ show consistent acceptance
 - **TPT escalation window**: 28 days from rejection
 - **Total PCNs issued by Birmingham CAZ to date**: ~2 million
 
-[[CTA:slate|Don't pay until you've checked the 6 grounds|Our £5.99 letter assesses your case against all 6 winning grounds for Birmingham CAZ and drafts the representations for the strongest one.|Build my appeal|/appeal]]
+[[CTA:slate|Don't pay until you've checked the 6 grounds|Our £2.99 letter assesses your case against all 6 winning grounds for Birmingham CAZ and drafts the representations for the strongest one.|Build my appeal|/appeal]]
 
 ## Related Reading
 

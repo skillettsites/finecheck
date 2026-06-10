@@ -14,7 +14,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.westminster.gov.uk/parking',
     appealUrl: 'https://www.westminster.gov.uk/parking/parking-fines-penalties/challenge-parking-fine',
-    seoTitle: 'Appeal Westminster Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Westminster Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Westminster Council parking fine. Westminster issues more PCNs than any other London borough. Free guide to challenging your ticket.'
   },
   {
@@ -29,7 +29,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.camden.gov.uk/parking',
     appealUrl: 'https://www.camden.gov.uk/challenge-a-penalty-charge-notice',
-    seoTitle: 'Appeal Camden Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Camden Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Camden Council parking fine. Covers informal challenges, formal representations, and London Tribunals appeals.'
   },
   {
@@ -44,7 +44,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.lambeth.gov.uk/parking',
     appealUrl: 'https://www.lambeth.gov.uk/parking-transport-and-streets/parking/challenge-a-parking-ticket',
-    seoTitle: 'Appeal Lambeth Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Lambeth Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Lambeth Council parking fine. Covers common Lambeth contraventions, deadlines, and the appeals process.'
   },
   {
@@ -59,7 +59,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.islington.gov.uk/parking',
     appealUrl: 'https://www.islington.gov.uk/parking/parking-tickets/challenge-parking-ticket',
-    seoTitle: 'Appeal Islington Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Islington Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Islington Council parking fine. Covers CPZ rules, resident permit issues, and the London Tribunals process.'
   },
   {
@@ -74,7 +74,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://hackney.gov.uk/parking',
     appealUrl: 'https://hackney.gov.uk/parking-tickets',
-    seoTitle: 'Appeal Hackney Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Hackney Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Hackney Council parking fine. Covers common Hackney parking issues and your appeal rights at London Tribunals.'
   },
   {
@@ -89,7 +89,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.towerhamlets.gov.uk/parking',
     appealUrl: 'https://www.towerhamlets.gov.uk/lgnl/transport_and_streets/parking/Penalty_charge_notices.aspx',
-    seoTitle: 'Cancel Your Tower Hamlets PCN: Appeal Letter From £5.99',
+    seoTitle: 'Cancel Your Tower Hamlets PCN: Appeal Letter From £2.99',
     seoDescription: 'Challenge a Tower Hamlets parking fine for free. Covers Canary Wharf restrictions, CPZ zones, 145,000 PCNs issued yearly, and how to win at London Tribunals.'
   },
   {
@@ -104,7 +104,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.southwark.gov.uk/parking',
     appealUrl: 'https://www.southwark.gov.uk/parking/parking-tickets/challenge-a-parking-ticket',
-    seoTitle: 'Appeal Southwark Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Southwark Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Southwark Council parking fine. Free guide covering informal challenges and London Tribunals appeals.'
   },
   {
@@ -119,7 +119,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.wandsworth.gov.uk/parking',
     appealUrl: 'https://www.wandsworth.gov.uk/parking-and-streets/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Wandsworth Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Wandsworth Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Wandsworth Council parking fine. Covers common contraventions, CPZ rules, and your appeal options.'
   },
   {
@@ -134,7 +134,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.rbkc.gov.uk/parking',
     appealUrl: 'https://www.rbkc.gov.uk/parking-transport-and-streets/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Kensington & Chelsea Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Kensington & Chelsea Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Kensington and Chelsea parking fine. One of London\'s highest-earning parking authorities. Free appeal guide.'
   },
   {
@@ -149,7 +149,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.lbhf.gov.uk/parking',
     appealUrl: 'https://www.lbhf.gov.uk/parking/parking-penalties',
-    seoTitle: 'Appeal Hammersmith & Fulham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Hammersmith & Fulham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Hammersmith and Fulham parking fine. Covers matchday restrictions, CPZ zones, and the London Tribunals process.'
   },
   {
@@ -164,7 +164,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.newham.gov.uk/parking',
     appealUrl: 'https://www.newham.gov.uk/parking-permits/challenge-parking-penalty',
-    seoTitle: 'Appeal Newham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Newham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Newham Council parking fine. Covers Stratford and Olympic Park area restrictions and your appeal rights.'
   },
   {
@@ -179,7 +179,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.barnet.gov.uk/parking',
     appealUrl: 'https://www.barnet.gov.uk/parking-and-travel/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Barnet Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Barnet Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Barnet Council parking fine. Covers CPZ zones, school restrictions, and the London Tribunals process.'
   },
   {
@@ -194,7 +194,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.ealing.gov.uk/parking',
     appealUrl: 'https://www.ealing.gov.uk/info/201148/parking_penalties',
-    seoTitle: 'Appeal Ealing Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Ealing Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Ealing Council parking fine. Covers controlled parking zones, bus lane fines, and your appeal options.'
   },
   {
@@ -209,7 +209,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.brent.gov.uk/parking',
     appealUrl: 'https://www.brent.gov.uk/parking-and-roads/parking/pcn',
-    seoTitle: 'Cancel Your Brent PCN: Appeal Letter From £5.99',
+    seoTitle: 'Cancel Your Brent PCN: Appeal Letter From £2.99',
     seoDescription: 'Challenge a Brent Council parking fine for free. Step-by-step guide covering Wembley event day restrictions, 150,000 PCNs issued yearly, and how to win at London Tribunals.'
   },
   {
@@ -224,7 +224,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.haringey.gov.uk/parking',
     appealUrl: 'https://www.haringey.gov.uk/parking-roads-and-travel/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Haringey Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Haringey Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Haringey Council parking fine. Covers matchday restrictions, CPZ zones, and the appeals process.'
   },
   {
@@ -239,7 +239,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.croydon.gov.uk/parking',
     appealUrl: 'https://www.croydon.gov.uk/parking-and-travel/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Croydon Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Croydon Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Croydon Council parking fine. Covers town centre restrictions, CPZ zones, and the London Tribunals process.'
   },
   {
@@ -254,7 +254,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.royalgreenwich.gov.uk/parking',
     appealUrl: 'https://www.royalgreenwich.gov.uk/info/200186/parking_penalties',
-    seoTitle: 'Appeal Greenwich Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Greenwich Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Greenwich Council parking fine. Covers common Greenwich contraventions and your appeal rights.'
   },
   {
@@ -269,7 +269,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.lewisham.gov.uk/parking',
     appealUrl: 'https://www.lewisham.gov.uk/myservices/parking/pcn',
-    seoTitle: 'Appeal Lewisham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Lewisham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Lewisham Council parking fine. Free guide covering challenges, deadlines, and London Tribunals appeals.'
   },
   {
@@ -284,7 +284,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.walthamforest.gov.uk/parking',
     appealUrl: 'https://www.walthamforest.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Waltham Forest Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Waltham Forest Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Waltham Forest parking fine. Covers LTN restrictions, CCTV enforcement, and your London Tribunals rights.'
   },
   {
@@ -299,7 +299,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.enfield.gov.uk/parking',
     appealUrl: 'https://www.enfield.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Enfield Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Enfield Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Enfield Council parking fine. Covers school street restrictions, CPZ zones, and the London Tribunals process.'
   },
 
@@ -315,7 +315,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.hounslow.gov.uk/parking',
     appealUrl: 'https://www.hounslow.gov.uk/info/20037/parking_penalties',
-    seoTitle: 'Appeal Hounslow Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Hounslow Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Hounslow Council parking fine. Covers Heathrow area restrictions, CPZ zones, and the London Tribunals process.'
   },
   {
@@ -330,7 +330,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.kingston.gov.uk/parking',
     appealUrl: 'https://www.kingston.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Kingston Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Kingston Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Kingston upon Thames parking fine. Covers town centre restrictions, resident permits, and London Tribunals appeals.'
   },
   {
@@ -345,7 +345,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.merton.gov.uk/parking',
     appealUrl: 'https://www.merton.gov.uk/streets-parking-transport/parking/pcn',
-    seoTitle: 'Appeal Merton Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Merton Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Merton Council parking fine. Covers Wimbledon event parking restrictions, CPZ zones, and London Tribunals appeals.'
   },
   {
@@ -360,7 +360,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.redbridge.gov.uk/parking',
     appealUrl: 'https://www.redbridge.gov.uk/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Redbridge Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Redbridge Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Redbridge Council parking fine. Covers school street restrictions, CCTV enforcement, and London Tribunals appeals.'
   },
   {
@@ -375,7 +375,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.richmond.gov.uk/parking',
     appealUrl: 'https://www.richmond.gov.uk/services/parking/penalty_charge_notices',
-    seoTitle: 'Appeal Richmond Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Richmond Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Richmond upon Thames parking fine. Covers riverside restrictions, CPZ zones, and the London Tribunals process.'
   },
   {
@@ -390,7 +390,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.sutton.gov.uk/parking',
     appealUrl: 'https://www.sutton.gov.uk/info/200216/parking_penalties',
-    seoTitle: 'Appeal Sutton Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Sutton Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Sutton Council parking fine. Covers town centre restrictions, resident permits, and London Tribunals appeals.'
   },
   {
@@ -405,8 +405,8 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.harrow.gov.uk/parking',
     appealUrl: 'https://www.harrow.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Harrow Parking Fine: Letter From £5.99',
-    seoDescription: 'How to appeal a Harrow Council parking fine. Covers CPZ zones, school street restrictions, and London Tribunals appeals.'
+    seoTitle: 'Harrow PCN Appeal: 43% Win at Tribunal. Check Yours Free',
+    seoDescription: 'Harrow issues ~98,000 PCNs a year and 43% of tribunal appeals against it win. Check your fine free in 2 minutes, the deadlines that protect your 50% discount, and a personalised appeal letter for £2.99.'
   },
   {
     slug: 'hillingdon',
@@ -420,7 +420,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.hillingdon.gov.uk/parking',
     appealUrl: 'https://www.hillingdon.gov.uk/article/609/Penalty-Charge-Notices',
-    seoTitle: 'Appeal Hillingdon Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Hillingdon Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Hillingdon Council parking fine. Covers Heathrow area restrictions, Uxbridge town centre, and London Tribunals appeals.'
   },
   {
@@ -435,7 +435,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.havering.gov.uk/parking',
     appealUrl: 'https://www.havering.gov.uk/info/20016/parking_penalties',
-    seoTitle: 'Appeal Havering Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Havering Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Havering Council parking fine. Covers Romford town centre restrictions, CPZ zones, and London Tribunals appeals.'
   },
   {
@@ -450,7 +450,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.bexley.gov.uk/parking',
     appealUrl: 'https://www.bexley.gov.uk/services/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Bexley Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Bexley Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Bexley Council parking fine. Covers controlled parking zones, CCTV enforcement, and London Tribunals appeals.'
   },
   {
@@ -465,7 +465,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.bromley.gov.uk/parking',
     appealUrl: 'https://www.bromley.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Bromley Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Bromley Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Bromley Council parking fine. Covers town centre restrictions, resident permits, and London Tribunals appeals.'
   },
   {
@@ -480,7 +480,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.cityoflondon.gov.uk/services/parking',
     appealUrl: 'https://www.cityoflondon.gov.uk/services/parking/penalty-charge-notices',
-    seoTitle: 'Appeal City of London Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal City of London Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a City of London parking fine. Covers Square Mile restrictions, congestion charge zone, and London Tribunals appeals.'
   },
   {
@@ -495,7 +495,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'London Tribunals',
     contactUrl: 'https://www.lbbd.gov.uk/parking',
     appealUrl: 'https://www.lbbd.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Barking & Dagenham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Barking & Dagenham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Barking and Dagenham parking fine. Covers controlled parking zones, school street restrictions, and London Tribunals appeals.'
   },
 
@@ -512,7 +512,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.manchester.gov.uk/parking',
     appealUrl: 'https://www.manchester.gov.uk/info/200024/parking/5692/penalty_charge_notices',
-    seoTitle: 'Appeal Manchester Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Manchester Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Manchester City Council parking fine. Covers city centre restrictions, bus lanes, and TPT tribunal appeals.'
   },
   {
@@ -527,7 +527,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.birmingham.gov.uk/parking',
     appealUrl: 'https://www.birmingham.gov.uk/info/20084/parking/1097/penalty_charge_notices',
-    seoTitle: 'Appeal Birmingham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Birmingham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Birmingham City Council parking fine. Covers Clean Air Zone charges, bus gates, and TPT tribunal appeals.'
   },
   {
@@ -542,7 +542,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.leeds.gov.uk/parking',
     appealUrl: 'https://www.leeds.gov.uk/parking-roads-and-travel/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Leeds Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Leeds Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Leeds City Council parking fine. Covers city centre restrictions, resident permits, and TPT tribunal appeals.'
   },
   {
@@ -557,7 +557,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.liverpool.gov.uk/parking',
     appealUrl: 'https://www.liverpool.gov.uk/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Liverpool Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Liverpool Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Liverpool City Council parking fine. Covers matchday restrictions, bus lanes, and TPT tribunal appeals.'
   },
   {
@@ -572,7 +572,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.bristol.gov.uk/parking',
     appealUrl: 'https://www.bristol.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Bristol Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Bristol Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Bristol City Council parking fine. Covers RPZ zones, Clean Air Zone, and TPT tribunal appeals.'
   },
   {
@@ -587,7 +587,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.sheffield.gov.uk/parking',
     appealUrl: 'https://www.sheffield.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Sheffield Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Sheffield Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Sheffield City Council parking fine. Covers city centre restrictions and TPT tribunal appeals.'
   },
   {
@@ -602,7 +602,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.newcastle.gov.uk/parking',
     appealUrl: 'https://www.newcastle.gov.uk/services/parking-roads-and-transport/parking-fines',
-    seoTitle: 'Cancel Your Newcastle Parking Fine: Appeal Letter From £5.99',
+    seoTitle: 'Cancel Your Newcastle Parking Fine: Appeal Letter From £2.99',
     seoDescription: 'Challenge a Newcastle City Council PCN for free. Covers city centre restrictions, bus lane fines, 75,000 PCNs issued yearly, and how to win at the TPT tribunal.'
   },
   {
@@ -617,7 +617,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.nottinghamcity.gov.uk/parking',
     appealUrl: 'https://www.nottinghamcity.gov.uk/parking-and-transport/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Nottingham Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Nottingham Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Nottingham City Council parking fine. Covers workplace parking levy, city restrictions, and TPT tribunal appeals.'
   },
   {
@@ -632,7 +632,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.leicester.gov.uk/parking',
     appealUrl: 'https://www.leicester.gov.uk/transport-and-streets/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Leicester Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Leicester Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Leicester City Council parking fine. Covers city centre restrictions and TPT tribunal appeals.'
   },
   {
@@ -647,7 +647,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.edinburgh.gov.uk/parking',
     appealUrl: 'https://www.edinburgh.gov.uk/parking-tickets/challenge-parking-ticket',
-    seoTitle: 'Appeal Edinburgh Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Edinburgh Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Edinburgh Council parking fine. Covers festival parking, Old Town restrictions, and Scottish appeal procedures.'
   },
   {
@@ -662,7 +662,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.glasgow.gov.uk/parking',
     appealUrl: 'https://www.glasgow.gov.uk/index.aspx?articleid=17498',
-    seoTitle: 'Appeal Glasgow Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Glasgow Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Glasgow City Council parking fine. Covers city centre restrictions, bus gates, and Scottish appeal procedures.'
   },
   {
@@ -677,7 +677,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.cardiff.gov.uk/parking',
     appealUrl: 'https://www.cardiff.gov.uk/ENG/resident/Parking-roads-and-travel/Parking/Penalty-Charge-Notices/Pages/default.aspx',
-    seoTitle: 'Appeal Cardiff Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Cardiff Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Cardiff Council parking fine. Covers matchday restrictions, city centre rules, and TPT tribunal appeals.'
   },
   {
@@ -692,7 +692,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.nidirect.gov.uk/articles/parking-enforcement',
     appealUrl: 'https://www.nidirect.gov.uk/articles/appealing-parking-penalty',
-    seoTitle: 'Appeal Belfast Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Belfast Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Belfast parking fine. Covers Northern Ireland parking enforcement, DfI rules, and the appeals process.'
   },
   {
@@ -707,7 +707,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.brighton-hove.gov.uk/parking',
     appealUrl: 'https://www.brighton-hove.gov.uk/parking-and-travel/parking/parking-fines',
-    seoTitle: 'Appeal Brighton Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Brighton Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Brighton and Hove parking fine. Covers seafront restrictions, resident zones, and TPT tribunal appeals.'
   },
   {
@@ -722,7 +722,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.oxford.gov.uk/parking',
     appealUrl: 'https://www.oxfordshire.gov.uk/residents/roads-and-transport/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Oxford Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Oxford Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Oxford parking fine. Covers city centre bus gates, zero-emission zone, and TPT tribunal appeals.'
   },
   {
@@ -737,7 +737,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.cambridge.gov.uk/parking',
     appealUrl: 'https://www.cambridgeshire.gov.uk/residents/travel-roads-and-parking/parking-penalties',
-    seoTitle: 'Appeal Cambridge Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Cambridge Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Cambridge parking fine. Covers city centre restrictions, park and ride rules, and TPT tribunal appeals.'
   },
   {
@@ -752,7 +752,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.york.gov.uk/parking',
     appealUrl: 'https://www.york.gov.uk/PenaltyChargeNotices',
-    seoTitle: 'Appeal York Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal York Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a York Council parking fine. Covers historic centre restrictions, foot streets, and TPT tribunal appeals.'
   },
   {
@@ -767,7 +767,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.bathnes.gov.uk/parking',
     appealUrl: 'https://www.bathnes.gov.uk/services/parking-and-travel/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Bath Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Bath Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Bath Council parking fine. Covers Clean Air Zone charges, city centre restrictions, and TPT tribunal appeals.'
   },
   {
@@ -782,7 +782,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.reading.gov.uk/parking',
     appealUrl: 'https://www.reading.gov.uk/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Reading Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Reading Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Reading Borough Council parking fine. Covers town centre restrictions, bus lanes, and TPT tribunal appeals.'
   },
   {
@@ -797,7 +797,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.southampton.gov.uk/parking',
     appealUrl: 'https://www.southampton.gov.uk/roads-parking/parking/pcn/',
-    seoTitle: 'Appeal Southampton Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Southampton Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Southampton City Council parking fine. Covers port area restrictions and TPT tribunal appeals.'
   },
   {
@@ -812,7 +812,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.portsmouth.gov.uk/parking',
     appealUrl: 'https://www.portsmouth.gov.uk/services/parking-roads-and-travel/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Portsmouth Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Portsmouth Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Portsmouth City Council parking fine. Covers seafront restrictions, resident zones, and TPT tribunal appeals.'
   },
   {
@@ -827,7 +827,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.exeter.gov.uk/parking',
     appealUrl: 'https://www.devon.gov.uk/roadsandtransport/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Exeter Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Exeter Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal an Exeter parking fine. Covers city centre restrictions, park and ride rules, and TPT tribunal appeals.'
   },
   {
@@ -842,7 +842,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.norwich.gov.uk/parking',
     appealUrl: 'https://www.norfolk.gov.uk/roads-and-transport/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Norwich Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Norwich Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Norwich parking fine. Covers city centre restrictions, pedestrian zones, and TPT tribunal appeals.'
   },
   {
@@ -857,7 +857,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.plymouth.gov.uk/parking',
     appealUrl: 'https://www.plymouth.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Plymouth Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Plymouth Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Plymouth City Council parking fine. Covers city centre restrictions and TPT tribunal appeals.'
   },
   {
@@ -872,7 +872,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.coventry.gov.uk/parking',
     appealUrl: 'https://www.coventry.gov.uk/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Coventry Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Coventry Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Coventry City Council parking fine. Covers city centre restrictions, bus gates, and TPT tribunal appeals.'
   },
   {
@@ -887,7 +887,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.bradford.gov.uk/parking',
     appealUrl: 'https://www.bradford.gov.uk/parking/penalty-charge-notices/',
-    seoTitle: 'Appeal Bradford Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Bradford Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Bradford Council parking fine. Covers city centre restrictions and TPT tribunal appeals.'
   },
   {
@@ -902,7 +902,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.wolverhampton.gov.uk/parking',
     appealUrl: 'https://www.wolverhampton.gov.uk/parking-and-roads/parking/penalty-charge-notices',
-    seoTitle: 'Appeal Wolverhampton Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Wolverhampton Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Wolverhampton Council parking fine. Covers city centre restrictions and TPT tribunal appeals.'
   },
   {
@@ -917,7 +917,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.swansea.gov.uk/parking',
     appealUrl: 'https://www.swansea.gov.uk/article/3786/Penalty-charge-notices',
-    seoTitle: 'Appeal Swansea Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Swansea Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Swansea Council parking fine. Covers city centre restrictions and TPT tribunal appeals in Wales.'
   },
   {
@@ -932,7 +932,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.aberdeencity.gov.uk/parking',
     appealUrl: 'https://www.aberdeencity.gov.uk/services/roads-transport-and-parking/parking/penalty-charge-notices',
-    seoTitle: 'Cancel Your Aberdeen Parking Fine: Appeal Letter From £5.99',
+    seoTitle: 'Cancel Your Aberdeen Parking Fine: Appeal Letter From £2.99',
     seoDescription: 'Challenge an Aberdeen City Council PCN for free. Covers city centre restrictions, 35,000 fines issued yearly, and the Scottish appeal process step by step.'
   },
   {
@@ -947,7 +947,7 @@ export const COUNCILS: Council[] = [
     tribunalBody: 'TPT',
     contactUrl: 'https://www.dundeecity.gov.uk/parking',
     appealUrl: 'https://www.dundeecity.gov.uk/service-area/city-development/roads-and-transportation/parking-penalty-notices',
-    seoTitle: 'Appeal Dundee Parking Fine: Letter From £5.99',
+    seoTitle: 'Appeal Dundee Parking Fine: Letter From £2.99',
     seoDescription: 'How to appeal a Dundee City Council parking fine. Covers city centre restrictions and Scottish appeal procedures.'
   }
 ];

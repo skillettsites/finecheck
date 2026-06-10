@@ -9,9 +9,9 @@ import RotatingWord from "@/components/RotatingWord";
 import OperatorMarquee from "@/components/OperatorMarquee";
 
 export const metadata: Metadata = {
-  title: "Get a Personalised PCN Appeal Letter, From £5.99 | AppealAFine",
+  title: "Get a Personalised PCN Appeal Letter, From £2.99 | AppealAFine",
   description:
-    "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £5.99. Free validity check first. No subscription. 64% success rate at tribunal.",
+    "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £2.99. Free validity check first. No subscription. 64% success rate at tribunal.",
   alternates: {
     canonical: "https://www.appealafine.co.uk",
   },
@@ -126,14 +126,14 @@ const faqItems = [
   {
     question: "How much does a letter cost?",
     answer:
-      "The Standard Appeal Letter is £5.99. The Premium Appeal Pack is £9.99 and includes everything in the Standard letter plus a follow-up escalation letter for POPLA, IAS or the Traffic Penalty Tribunal, and a case-specific evidence checklist. Both are one-time payments with no subscription. The free assessment is genuinely free.",
+      "The Standard Appeal Letter is £2.99. The Premium Appeal Pack is £4.99 and includes everything in the Standard letter plus a follow-up escalation letter for POPLA, IAS or the Traffic Penalty Tribunal, and a case-specific evidence checklist. Both are one-time payments with no subscription. The free assessment is genuinely free.",
   },
 ];
 
 const pricingPlans = [
   {
     name: "Standard Letter",
-    price: "£5.99",
+    price: "£2.99",
     description:
       "A unique appeal letter written by our specialist AI, citing the exact legislation and case law relevant to your fine.",
     features: [
@@ -148,7 +148,7 @@ const pricingPlans = [
   },
   {
     name: "Premium Pack",
-    price: "£9.99",
+    price: "£4.99",
     description:
       "Everything in Standard, plus an escalation letter, evidence checklist, and operator-specific strategy for maximum success.",
     features: [
@@ -406,7 +406,7 @@ export default function HomePage() {
               {
                 n: "3",
                 title: "Receive your letter",
-                body: "A personalised PDF citing the exact statutes and case law that beat your fine, emailed within minutes. From £5.99.",
+                body: "A personalised PDF citing the exact statutes and case law that beat your fine, emailed within minutes. From £2.99.",
               },
             ].map((step, i) => (
               <ScrollReveal
