@@ -8,9 +8,9 @@ export const BATCH_A: BlogPost[] = [
       "DCBL cannot send bailiffs for a private parking fine; there is no court order behind that letter. What it actually is, the three mistakes that make it worse, and the £2.99 reply that usually ends it.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
-    seoTitle: "DCBL Letter for a Parking Fine? Is It Legal in 2026 (Read This)",
+    seoTitle: "DCBL Letter About a Parking Fine? Don't Pay It Yet",
     seoDescription:
-      "Got a DCBL or DCB Legal letter? Find out if it is enforceable, what to ignore, and how to fire back the right reply in 10 minutes for £2.99.",
+      "DCBL cannot send bailiffs for a private parking fine; there is no court order behind that letter. What it really is, the three mistakes that make it worse, and the £2.99 reply that usually ends it.",
     content: `## Two Different Companies, One Big Misunderstanding
 
 If a brown or red-bordered envelope has just landed on your doormat with **DCBL** or **DCB Legal** at the top, you are not alone. These two are the most common "scary letter" senders behind unpaid private parking charges in the UK, and almost every reader who arrives on this page has the same first question: is this actually legal, or is it a bluff?

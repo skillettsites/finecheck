@@ -568,9 +568,9 @@ If refused, you can re-file with a different ground (if genuinely applicable), a
       "If the bailiff letter is the first you heard of a council PCN, the TE7 and TE9 forms can reset the whole case. The reasonable-cause grounds the TEC accepts, the evidence to attach, and a £4.99 pack that drafts both today.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
-    seoTitle: "TE7 Out-of-Time Parking Statutory Declaration (2026 Guide)",
+    seoTitle: "TE7 Form: Bailiff Letter the First You Knew of a PCN?",
     seoDescription:
-      "Bailiff letter for a council parking debt and the formal 21-day TE9 window has passed? TE7 buys you that extra time, filed alongside TE9. The grounds, the narrative, and the £4.99 pack.",
+      "If the bailiff letter is the first you heard of a council PCN, TE7 plus TE9 can reset the whole case. The reasonable-cause grounds the TEC accepts, the evidence to attach, and a £4.99 pack that drafts both today.",
     content: `## The TE7 Buys You Back the Window You Missed
 
 The **TE9 witness statement** for revoking a council parking Order for Recovery must be filed within **21 days** of the order being made. In real life, almost nobody filing a TE9 is still inside that window — they only found out about the matter when a bailiff letter landed, weeks or months after the order. The form that bridges that gap is **TE7: Application for an Extension of Time**.

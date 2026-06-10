@@ -359,7 +359,7 @@ ParkingEye signage appeals work because the law set the bar high in Beavis and m
       "Many UKPC ANPR notices break POFA 2012 Schedule 4: wrong dates, missing keeper-liability wording or late delivery, which means the keeper does not have to pay. Run the 2-minute check, then send the £2.99 letter that cites every breach.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
-    seoTitle: "UKPC ANPR Fine? Beat It With POFA 2012 Schedule 4",
+    seoTitle: "UKPC ANPR Fine? Most Fail This POFA 2012 Check",
     seoDescription:
       "UKPC's ANPR PCN often fails the POFA 2012 §9 keeper-liability test. Find out what to look for plus a £2.99 letter that cites every breach.",
     content: `## Why UKPC's ANPR Notices Fail So Often
