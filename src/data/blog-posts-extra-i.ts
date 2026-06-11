@@ -653,12 +653,12 @@ If the council refuses despite clear misread evidence, escalate to tribunal. The
 
   {
     slug: "blue-badge-forgot-to-display-pcn-appeal",
-    title: "Blue Badge Forgot to Display PCN: The Equality Act + Mitigation Defence That Wins",
+    title: "Blue Badge Holder, Forgot to Display? The Defence That Wins Most PCN Appeals",
     description:
       "Got a parking PCN because you forgot to display your blue badge — but you have a valid one? The Equality Act 2010 + mitigation route routinely succeeds at tribunal. £2.99 letter.",
     publishedDate: "2026-05-18",
     category: "Underserved Combos",
-    seoTitle: "Blue Badge Forgot to Display Parking Fine Appeal (2026)",
+    seoTitle: "Forgot to Display Blue Badge? Cancel the PCN: Appeal Guide 2026",
     seoDescription:
       "Forgot to display a valid blue badge and got a PCN? The Equality Act 2010 reasonable-adjustment argument + mitigation route. £2.99 personalised letter.",
     content: `## You Have the Badge. You Just Didn't Display It. Here's the Defence.

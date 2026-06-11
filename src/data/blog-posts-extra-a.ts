@@ -104,6 +104,8 @@ If a court claim is eventually issued, you have 14 days to acknowledge service a
 
 You are not powerless. You are not about to be raided. But you do need to reply, and reply properly.
 
+Worried by the word "bailiffs" in their name? For a private parking charge that has not been to court, DCBL has no enforcement powers at all. We explain exactly why in [are DCBL real bailiffs?](/blog/dcbl-bailiffs-parking-letter-real). And nothing they send can touch your credit file: see [do parking fines affect your credit score?](/blog/do-parking-fines-affect-credit-score-truth).
+
 If the DCBL chain has already escalated to a **doorstep visit notice** with an "enforcement agent will attend" warning, that is a different document and a different stage. The pre-Notice-of-Enforcement stop letter is in our [DCBL doorstep visit guide](/blog/dcbl-doorstep-visit-stop-letter), with the door-refusal script and the bailiff-fee timing rules.
 
 [[CTA:slate|Send the right reply tonight|Our £2.99 debt-collector response letter is drafted to your operator and your situation, cites the right statute, and arrives in your inbox in under 5 minutes.|Get the £2.99 letter|/templates/debt-collector-response-letter]]`,
@@ -210,7 +212,7 @@ In any of these cases, replying properly to DRP often ends the chase entirely.
 
 ### Option 3: Ignore
 
-Ignoring DRP letters is less catastrophic than ignoring a Letter Before Claim from a solicitor, but it is still risky. Silence is treated as non-dispute, and the file is more likely to be escalated to actual solicitors. A 5-minute written reply costs you almost nothing and protects your position.
+Ignoring DRP letters is less catastrophic than ignoring a Letter Before Claim from a solicitor, but it is still risky. Silence is treated as non-dispute, and the file is more likely to be escalated to actual solicitors. A 5-minute written reply costs you almost nothing and protects your position. We weigh this up in full in [should I ignore a Debt Recovery Plus letter?](/blog/should-i-ignore-debt-recovery-plus-letter).
 
 [[CTA:amber|Don't pay £170 if you don't have to|Our £2.99 debt-collector response letter cites POFA 2012, CPUTR 2008 reg 5, and Excel v Wilkinson on costs, and it goes back to DRP in your name.|Get the £2.99 letter|/templates/debt-collector-response-letter]]
 
@@ -330,7 +332,7 @@ Compare that to:
 - **Traffic Penalty Tribunal** (council fines) - binding on the council, but the driver can pay or be enforced against
 - **POPLA decision against you** - non-binding on you. You walk away from it if you choose.
 
-This is why operators rarely actually pursue POPLA-lost cases through court. Once they have spent the POPLA fee and lost their internal appeal step, the cost-benefit of court action drops sharply, especially if the underlying case has any of the weaknesses we cover below.
+This is why operators rarely actually pursue POPLA-lost cases through court. Once they have spent the POPLA fee and lost their internal appeal step, the cost-benefit of court action drops sharply, especially if the underlying case has any of the weaknesses we cover below. For the full picture on what a POPLA loss does and does not mean for court risk, see [POPLA appeal rejected: can they still take me to court?](/blog/popla-appeal-rejected-can-i-go-to-court).
 
 ## The Four Real Escalation Routes
 

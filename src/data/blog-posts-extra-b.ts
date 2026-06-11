@@ -186,12 +186,12 @@ If your claim arrived on a **paper N1 form from CCBC** rather than through MCOL,
   },
   {
     slug: "parkingeye-signage-popla-wins-2025",
-    title: "ParkingEye Signage Loophole: 5 Real POPLA Wins From 2025",
+    title: "ParkingEye Signage Loophole: 5 Real POPLA Wins You Can Copy",
     description:
-      "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, £2.99 personalised letter cites them all.",
+      "Real POPLA decisions where ParkingEye lost on signage. Use the same winning arguments in your appeal, £2.99 personalised letter cites them all.",
     publishedDate: "2026-05-06",
     category: "Private Parking",
-    seoTitle: "ParkingEye Signage Loophole: 5 Real POPLA Wins From 2025",
+    seoTitle: "ParkingEye Signage Loophole: 5 POPLA Wins to Beat Your PCN (2026)",
     seoDescription:
       "Real 2025 POPLA decisions where ParkingEye lost on signage. Use the same arguments in your appeal, £2.99 personalised letter cites them all.",
     content: `## Why Signage Is Still ParkingEye's Weak Spot

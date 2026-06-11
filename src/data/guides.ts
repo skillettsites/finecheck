@@ -2842,7 +2842,7 @@ When you do not respond to a parking charge (because you never received it), thi
 
 ### The CCJ Risk
 
-The most serious consequence of missing a private parking charge is a County Court Judgment. If an operator files a claim and you do not respond (because you never received it at your old address), the court can enter a default judgment. This CCJ will appear on your credit file for 6 years and can affect your ability to get mortgages, loans, credit cards, and even some jobs.
+The most serious consequence of missing a private parking charge is a County Court Judgment. If an operator files a claim and you do not respond (because you never received it at your old address), the court can enter a default judgment. This CCJ will appear on your credit file for 6 years and can affect your ability to get mortgages, loans, credit cards, and even some jobs. For the full step-by-step on notices and judgments that landed at an address you moved out of, see [PCN or court claim sent to your old address](/blog/moved-house-old-address-pcn-court-claim), and to understand exactly how (and when) a parking charge can reach this stage, read [can a parking ticket give you a CCJ?](/blog/can-a-parking-ticket-give-you-a-ccj).
 
 ### How to Respond Late
 
@@ -5927,8 +5927,8 @@ Has your car been clamped or blocked in on private land? [Use our free tool](/ap
       'parking-fine-court-defence',
       'what-happens-if-you-dont-pay-parking-fine'
     ],
-    seoTitle: 'Car Clamped? Private Clamping Is Illegal: Your Rights',
-    seoDescription: 'Private wheel clamping is illegal in England and Wales since 2012. If your car was clamped on private land, you can get your money back. Free guide to your rights and next steps.'
+    seoTitle: 'Car Clamped on Private Land? It Is Illegal: Claim Your Money Back',
+    seoDescription: 'Private wheel clamping has been a criminal offence since 2012 (POFA s.54). If your car was clamped or towed on private land, demand the release fee back. Free guide to your rights and how to reclaim it.'
   },
   {
     slug: 'parking-fine-towed-car',

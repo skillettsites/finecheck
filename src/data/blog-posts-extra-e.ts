@@ -392,7 +392,7 @@ Any breach of the above is a complaint route to the **Civil Enforcement Associat
       "If a council PCN escalated to a CCJ without you ever seeing the earlier notices, form TE9 is the route to set it aside. The three statutory grounds, the witness-statement narrative that wins, and the £4.99 pack that drafts it for your facts.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
-    seoTitle: "TE9 Witness Statement Parking: Set Aside CCJ (2026 Guide)",
+    seoTitle: "TE9 Form to Cancel a Council Parking CCJ: 3 Grounds That Win (2026)",
     seoDescription:
       "Council parking CCJ from a PCN you never received? Form TE9 to the Traffic Enforcement Centre, sworn under one of 3 statutory grounds, sets aside the order. Step-by-step guide + £4.99 pack.",
     content: `## TE9 Is Not the Same as N244
