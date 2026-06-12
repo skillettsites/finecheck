@@ -7,6 +7,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import FAQ from "@/components/ui/FAQ";
 import { CITIES, getCityBySlug } from "@/data/cities";
+import { getOperatorBySlug } from "@/data/operators";
 
 export async function generateStaticParams() {
   return CITIES.map((city) => ({
@@ -439,12 +440,12 @@ export default async function CityPage({
             Major Parking Operators in {city.name}
           </h2>
           <div className="flex flex-wrap gap-3">
-            {city.majorOperators.map((op) => (
-              <Link
-                key={op}
-                href={`/appeals/${operatorSlug(op)}`}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition-all hover:border-teal-300 hover:text-teal-600 hover:shadow-sm"
-              >
+            {city.majorOperators.map((op) => {
+              // Only link to /appeals/<slug> when that operator page actually exists,
+              // otherwise the link 404s (Google flagged these as "Not found").
+              const slug = operatorSlug(op);
+              const hasPage = Boolean(getOperatorBySlug(slug));
+              const icon = (
                 <svg
                   className="h-4 w-4 text-gray-400"
                   fill="none"
@@ -458,9 +459,26 @@ export default async function CityPage({
                     d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z"
                   />
                 </svg>
-                {op}
-              </Link>
-            ))}
+              );
+              return hasPage ? (
+                <Link
+                  key={op}
+                  href={`/appeals/${slug}`}
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 transition-all hover:border-teal-300 hover:text-teal-600 hover:shadow-sm"
+                >
+                  {icon}
+                  {op}
+                </Link>
+              ) : (
+                <span
+                  key={op}
+                  className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700"
+                >
+                  {icon}
+                  {op}
+                </span>
+              );
+            })}
           </div>
         </section>
 
