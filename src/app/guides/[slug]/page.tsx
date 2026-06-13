@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import FAQ from "@/components/ui/FAQ";
+import MidContentCTA from "@/components/ui/MidContentCTA";
 import { GUIDES, getGuideBySlug, getRelatedGuides } from "@/data/guides";
 import type { Guide } from "@/lib/types";
 
@@ -427,7 +428,7 @@ export default async function GuidePage({
             </details>
 
             {/* Guide Content */}
-            {sections.map((section) => (
+            {sections.map((section, idx) => (
               <section key={section.id} id={section.id} className="scroll-mt-24">
                 {section.level === 2 ? (
                   <h2 className="mt-10 mb-4 text-2xl font-bold text-gray-900">
@@ -439,6 +440,17 @@ export default async function GuidePage({
                   </h3>
                 )}
                 {renderBodyLines(section.body)}
+                {/* One mid-guide CTA so long guides keep funnelling readers
+                    into the free check rather than relying only on the
+                    top/bottom CTAs. */}
+                {idx === Math.min(2, sections.length - 2) && sections.length > 3 && (
+                  <MidContentCTA
+                    variant="teal"
+                    headline="Not sure if your fine is worth appealing?"
+                    description="Run it through our free 2-minute check to see the grounds in your favour and your estimated chance of winning. No payment to see your result."
+                    buttonText="Check my fine — free"
+                  />
+                )}
               </section>
             ))}
 

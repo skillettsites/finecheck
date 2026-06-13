@@ -923,6 +923,7 @@ function PaywallCard({
 
   const activeProduct = withPremium ? premium : standard;
   const upliftPence = premium.price - standard.price;
+  const fineAmountNum = Math.round(parseFloat(form.fineAmount || "0")) || 0;
 
   const operatorOrCouncil =
     form.fineType === "private" && form.operatorName
@@ -939,10 +940,14 @@ function PaywallCard({
             </svg>
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-semibold text-slate-900">Get your personalised appeal letter</h3>
+            <h3 className="text-lg font-semibold text-slate-900">
+              {fineAmountNum > 0
+                ? `Fight your £${fineAmountNum} fine for £${(activeProduct.price / 100).toFixed(2)}`
+                : "Get your personalised appeal letter"}
+            </h3>
             <p className="mt-1 text-sm leading-relaxed text-slate-600">
-              Written by our specialist UK-parking-law AI, citing the exact statute, case law and operator-specific failings most likely to beat your fine against{" "}
-              <span className="font-medium text-slate-900">{operatorOrCouncil}</span>. Delivered as a PDF in minutes.
+              A ready-to-send appeal letter that cites the exact statute, case law and operator-specific failings most likely to beat your fine against{" "}
+              <span className="font-medium text-slate-900">{operatorOrCouncil}</span>. Delivered to your inbox in minutes, ready to copy, paste and send.
             </p>
           </div>
         </div>
@@ -1066,16 +1071,12 @@ function PaywallCard({
           Not happy with your letter? Reply to the email and we&apos;ll revise it, free.
         </div>
 
-        <div className="mt-4 text-center">
-          <a
-            href={`mailto:?subject=My%20AppealAFine%20assessment&body=${encodeURIComponent(
-              `Appeal strength: ${assessment.overallStrength} (${assessment.successProbability}% probability)\nGrounds: ${assessment.grounds.map((g) => g.title).join(", ")}\nDeadline: approx ${assessment.deadlineDays ?? "unknown"} days remaining\n\nFull assessment: https://www.appealafine.co.uk/appeal`
-            )}`}
-            className="text-xs font-medium text-slate-500 underline decoration-dotted underline-offset-4 hover:text-slate-700"
-          >
-            Or email me my free assessment instead
-          </a>
-        </div>
+        {fineAmountNum > 0 && (
+          <p className="mt-3 text-center text-xs text-slate-500">
+            Your fine is £{fineAmountNum}. The letter costs £{(activeProduct.price / 100).toFixed(2)}
+            {" "}— about {Math.max(1, Math.round(fineAmountNum / (activeProduct.price / 100)))}x less than paying it.
+          </p>
+        )}
       </div>
     </div>
   );
@@ -1147,12 +1148,28 @@ function StepAssessment({
         </div>
       </div>
 
-      {/* Defence grounds */}
+      {/* Defence grounds: show the strength of each ground to build
+          confidence, but hold back the full legal argument + statute. The
+          ready-to-send letter (the paid product) is what spells each one out
+          and cites the exact law for the operator/council to act on. */}
       <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Legal Grounds Identified ({assessment.grounds.length})
-        </h3>
-        <div className="space-y-4">
+        <div className="flex items-start justify-between gap-3 mb-1">
+          <h3 className="text-lg font-semibold text-gray-900">
+            Grounds We Found in Your Favour ({assessment.grounds.length})
+          </h3>
+          <span className="hidden sm:inline-flex items-center gap-1 rounded-full bg-teal-50 px-2.5 py-1 text-xs font-semibold text-teal-700">
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+            Full argument in your letter
+          </span>
+        </div>
+        <p className="text-sm text-gray-600 mb-4">
+          Each of these is a recognised reason your fine could be cancelled. Your appeal letter
+          sets out each one in full and cites the exact legislation, case law and code of practice
+          for {form.fineType === "private" && form.operatorName ? form.operatorName : form.councilName || "the issuer"} to act on.
+        </p>
+        <div className="space-y-3">
           {assessment.grounds.map((ground) => (
             <div
               key={ground.id}
@@ -1164,7 +1181,7 @@ function StepAssessment({
                   : "border-l-gray-400 bg-gray-50"
               }`}
             >
-              <div className="flex items-start justify-between gap-3 mb-1.5">
+              <div className="flex items-start justify-between gap-3">
                 <h4 className="text-sm font-semibold text-gray-900">{ground.title}</h4>
                 <span
                   className={`shrink-0 rounded px-2 py-0.5 text-xs font-medium uppercase tracking-wide ${
@@ -1178,16 +1195,28 @@ function StepAssessment({
                   {ground.strength}
                 </span>
               </div>
-              <p className="text-sm text-gray-700 mb-1.5">{ground.description}</p>
-              <p className="text-xs text-gray-500">Legal basis: {ground.legalBasis}</p>
+              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-gray-500">
+                <svg className="h-3.5 w-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+                Full argument and legal basis included in your letter
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Next steps */}
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">What to do next</h3>
+      {/* Inline paywall: single card with Premium-pack toggle */}
+      <PaywallCard
+        assessment={assessment}
+        form={form}
+        onSelectProduct={onSelectProduct}
+      />
+
+      {/* General next steps stay free: this is guidance on the process, not
+          the personalised letter, so it never feels like a bait-and-switch. */}
+      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-8 mt-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">How the appeal process works</h3>
         <ol className="space-y-2">
           {assessment.nextSteps.map((step, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
@@ -1199,13 +1228,6 @@ function StepAssessment({
           ))}
         </ol>
       </div>
-
-      {/* Inline paywall: single card with Premium-pack toggle */}
-      <PaywallCard
-        assessment={assessment}
-        form={form}
-        onSelectProduct={onSelectProduct}
-      />
 
       <div className="flex items-center justify-between">
         <button

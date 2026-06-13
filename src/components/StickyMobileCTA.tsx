@@ -51,7 +51,7 @@ function nextDeadline(appeal: SavedAppeal | null): DeadlineInfo | null {
       formalEnds.setDate(formalEnds.getDate() + 28);
       const discountDaysLeft = daysBetween(discountEnds, today);
       const formalDaysLeft = daysBetween(formalEnds, today);
-      if (discountDaysLeft > 0) return { days: discountDaysLeft, label: "for the 40% discount" };
+      if (discountDaysLeft > 0) return { days: discountDaysLeft, label: "to appeal at the reduced rate" };
       if (formalDaysLeft > 0) return { days: formalDaysLeft, label: "to send your formal challenge" };
     }
   }

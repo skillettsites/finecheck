@@ -79,7 +79,11 @@ export async function POST(request: NextRequest) {
   try {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      // Omit payment_method_types so Stripe surfaces every eligible method
+      // (card + Apple Pay + Google Pay + Link) from the account's payment
+      // method configuration. Wallets are a one-tap checkout on mobile, where
+      // most of our traffic is, so the old hardcoded card-only list added
+      // needless friction at the final step.
       line_items: [
         {
           price_data: {
@@ -142,7 +146,7 @@ export async function GET(request: NextRequest) {
   try {
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      // Omit payment_method_types: lets Stripe show wallets too (see POST above).
       line_items: [
         {
           price_data: {

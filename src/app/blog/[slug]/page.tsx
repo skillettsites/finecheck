@@ -77,6 +77,12 @@ function renderContent(content: string): React.ReactNode[] {
   let tableRows: string[][] = [];
   let tableHeaders: string[] = [];
   let key = 0;
+  // Auto-inject one mid-content CTA so every post funnels readers into the
+  // free assessment without needing a hand-placed [[CTA]] token in each one.
+  // Fires once, just before the 3rd H2, so it lands mid-read rather than at
+  // the very bottom where most readers never reach.
+  let h2Count = 0;
+  let midCtaInjected = false;
 
   function flushList() {
     if (listItems.length > 0) {
@@ -230,6 +236,19 @@ function renderContent(content: string): React.ReactNode[] {
         .replace(/(^-|-$)/g, "");
 
       if (level === 2) {
+        h2Count++;
+        if (h2Count === 3 && !midCtaInjected) {
+          midCtaInjected = true;
+          elements.push(
+            <MidContentCTA
+              key={`auto-cta-${key++}`}
+              variant="teal"
+              headline="Is your fine actually beatable?"
+              description="Run your fine through our free 2-minute check. We show you the grounds in your favour, your estimated chance of winning, and your appeal deadline — no payment to see your result."
+              buttonText="Check my fine — free"
+            />
+          );
+        }
         elements.push(
           <h2
             key={`h2-${key++}`}
@@ -443,15 +462,19 @@ export default async function BlogPostPage({
               {/* CTA */}
               <div className="mt-12 rounded-xl bg-gradient-to-r from-slate-800 to-slate-700 p-6 sm:p-8">
                 <h2 className="text-xl font-bold text-white mb-2">
-                  Need Help With Your Appeal?
+                  Don&apos;t just pay it. Check if you can beat it.
                 </h2>
                 <p className="text-slate-300 mb-4">
-                  AppealAFine helps you assess your parking fine, check if it is valid, and generate a
-                  professional appeal letter. It is free to use.
+                  Get a free 2-minute assessment of your fine: the legal grounds in your favour, your
+                  estimated chance of success, and your deadline. If it&apos;s worth appealing, we write
+                  you a ready-to-send letter that cites the exact law, from £2.99.
                 </p>
                 <Button href="/appeal" variant="accent" size="lg">
-                  Start Your Free Appeal
+                  Check my fine — free
                 </Button>
+                <p className="mt-2 text-xs text-slate-400">
+                  Free assessment. No account needed. No subscription.
+                </p>
               </div>
 
               {/* Related Posts */}
