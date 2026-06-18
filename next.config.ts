@@ -38,6 +38,9 @@ const nextConfig: NextConfig = {
       // Historical 404s in GSC pointed at /operators; the live hub is /appeals.
       { source: '/operators', destination: '/appeals', permanent: true },
       { source: '/operators/:slug', destination: '/appeals/:slug', permanent: true },
+      // Q-Park has no operator profile (not in OPERATORS), so /appeals/q-park
+      // 404s. 301 to the operators hub instead of a dead page. Added 2026-06-18.
+      { source: '/appeals/q-park', destination: '/appeals', permanent: true },
     ];
   },
   async headers() {
