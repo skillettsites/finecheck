@@ -59,7 +59,7 @@ Common ways the original charge falls apart:
 
 If any of those apply, the chain breaks. The DCBL letter becomes a piece of paper.
 
-[[CTA:amber|Don't pay the £170 yet|For £2.99 our debt-collector response letter cites POFA, the SRA Code, and CPUTR 2008 reg 5 in your name. Most readers do not hear back after sending it.|Get the £2.99 letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|DCBL chasing you for £170?|The £19.99 Escalation Pack includes the full debt collector response letter for DCBL, plus every later stage: the POPLA rejection letter, the Letter Before Claim reply, and a complete court defence pack. All 5 PDFs in your inbox in minutes.|Get the Escalation Pack|/escalation-pack]]
 
 ## The DCB Legal Angle: SRA Obligations
 
@@ -108,7 +108,7 @@ Worried by the word "bailiffs" in their name? For a private parking charge that 
 
 If the DCBL chain has already escalated to a **doorstep visit notice** with an "enforcement agent will attend" warning, that is a different document and a different stage. The pre-Notice-of-Enforcement stop letter is in our [DCBL doorstep visit guide](/blog/dcbl-doorstep-visit-stop-letter), with the door-refusal script and the bailiff-fee timing rules.
 
-[[CTA:slate|Send the right reply tonight|Our £2.99 debt-collector response letter is drafted to your operator and your situation, cites the right statute, and arrives in your inbox in under 5 minutes.|Get the £2.99 letter|/templates/debt-collector-response-letter]]`,
+[[CTA:slate|Answer DCBL properly tonight|The £19.99 Escalation Pack covers this letter and everything that could follow it: the debt collector reply, the Letter Before Claim response, and a full court defence with witness statement skeleton. One payment, emailed instantly.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "Is DCBL allowed to send bailiffs to my house for a parking fine?",
@@ -214,7 +214,7 @@ In any of these cases, replying properly to DRP often ends the chase entirely.
 
 Ignoring DRP letters is less catastrophic than ignoring a Letter Before Claim from a solicitor, but it is still risky. Silence is treated as non-dispute, and the file is more likely to be escalated to actual solicitors. A 5-minute written reply costs you almost nothing and protects your position. We weigh this up in full in [should I ignore a Debt Recovery Plus letter?](/blog/should-i-ignore-debt-recovery-plus-letter).
 
-[[CTA:amber|Don't pay £170 if you don't have to|Our £2.99 debt-collector response letter cites POFA 2012, CPUTR 2008 reg 5, and Excel v Wilkinson on costs, and it goes back to DRP in your name.|Get the £2.99 letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|Don't pay DRP's inflated £160|The £19.99 Escalation Pack includes the debt collector response letter built for firms like DRP, rejecting the added costs and demanding the evidence, plus the Letter Before Claim reply and court defence pack in case they escalate.|Get the Escalation Pack|/escalation-pack]]
 
 ## The Reply That Works
 
@@ -258,7 +258,7 @@ That last group is small but real. It is why we recommend keeping the paper trai
 - Do not write an emotional letter explaining your circumstances. It is not relevant to liability and gives them nothing to work with except evidence you were the driver.
 - Do not admit who was driving if you are the registered keeper. Keeper liability under POFA is the operator's only route to you if they cannot identify the driver.
 
-[[CTA:slate|End the chase tonight|Our £2.99 debt collector response letter is drafted to DRP and the operator behind them, cites the right statute, and is in your inbox in under 5 minutes.|Get the £2.99 letter|/templates/debt-collector-response-letter]]`,
+[[CTA:slate|End the DRP chase the right way|One £19.99 pack covers every stage from this letter onwards: the DRP response, the POPLA and IAS rejection letter, the Letter Before Claim reply, and a full court defence pack. Emailed in minutes.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "Can DRP take me to court for a parking fine?",

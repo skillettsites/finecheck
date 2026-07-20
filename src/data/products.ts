@@ -28,6 +28,19 @@ export const PRODUCTS: Record<string, Product> = {
       'Second-stage appeal template'
     ]
   },
+  'escalation-pack': {
+    id: 'escalation-pack',
+    name: 'Escalation Pack',
+    price: 1999,
+    description: 'For fines past the appeal stage: debt collector response letters, POPLA/IAS rejection next steps, Letter Before Claim reply, and a full court defence preparation pack.',
+    features: [
+      'Debt recovery response letter (DCBL, DRP, Trace, ZZPS)',
+      'POPLA/IAS rejected: next steps letter and guide',
+      'Letter Before Claim response + protocol checklist',
+      'Court defence checklist + witness statement skeleton',
+      'Stage-by-stage escalation decision guide',
+    ]
+  },
 };
 
 export const DISCOUNT_CODES: Record<string, { percentOff: number; maxUses?: number }> = {

@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import Anthropic from "@anthropic-ai/sdk";
 import { Resend } from "resend";
 import PDFDocument from "pdfkit";
+import { ESCALATION_DOCUMENTS, ESCALATION_PACK_ID } from "@/data/escalation-pack";
 
 // pdfkit reads .afm font files from disk and the Edge runtime cannot load
 // these. outputFileTracingIncludes in next.config.ts ships them with the
@@ -359,6 +360,73 @@ async function sendLetterEmail(appeal: SavedAppeal, result: LetterResult): Promi
   if (error) throw new Error(`Resend error: ${JSON.stringify(error)}`);
 }
 
+// ============== Escalation Pack fulfilment ==============
+
+// The Escalation Pack is a fixed document bundle (no AI generation): render
+// each document to PDF and email the lot. Email comes from Stripe Checkout's
+// customer_details since no appeal form precedes this purchase.
+async function sendEscalationPackEmail(email: string): Promise<void> {
+  if (!process.env.RESEND_API_KEY) throw new Error("RESEND_API_KEY missing");
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
+  const attachments: { filename: string; content: Buffer }[] = [];
+  for (const doc of ESCALATION_DOCUMENTS) {
+    const pdf = await generatePDF(doc.content, doc.title);
+    attachments.push({ filename: doc.filename, content: pdf });
+  }
+
+  const docListHtml = ESCALATION_DOCUMENTS.map(
+    (d) => `<tr>
+      <td style="padding: 8px 0; vertical-align: top;">
+        <p style="margin: 0; font-size: 14px; font-weight: 600; color: #1e293b;">${escapeHtml(d.title)}</p>
+        <p style="margin: 2px 0 0; font-size: 12px; color: #64748b;">${escapeHtml(d.summary)}</p>
+      </td>
+    </tr>`
+  ).join("");
+
+  const htmlBody = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; color: #1e293b;">
+      <div style="background: #0d9488; padding: 28px 24px; text-align: center; border-radius: 12px 12px 0 0;">
+        <h1 style="color: white; margin: 0; font-size: 22px; font-weight: 700;">Your Escalation Pack is Ready</h1>
+        <p style="color: #ccfbf1; margin: 8px 0 0; font-size: 14px;">All 5 documents are attached as PDFs</p>
+      </div>
+      <div style="padding: 28px 24px; background: #ffffff; border-left: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0;">
+        <p style="margin-top: 0; font-size: 15px;">Hi,</p>
+        <p style="font-size: 15px; line-height: 1.6;">Thank you for your purchase. Your <strong>Escalation Pack</strong> is attached. Start with the <strong>Escalation Decision Guide</strong>: it tells you exactly which stage you are at and which document to use.</p>
+        <div style="background: #f0fdfa; border: 2px solid #99f6e4; border-radius: 10px; padding: 18px; margin: 24px 0;">
+          <table style="width: 100%; border-collapse: collapse;">${docListHtml}</table>
+        </div>
+        <div style="background: #f0fdfa; border-left: 4px solid #0d9488; padding: 16px 18px; margin: 24px 0; border-radius: 0 8px 8px 0;">
+          <h4 style="margin: 0 0 10px; color: #0f766e; font-size: 14px; font-weight: 700;">How to use the letters</h4>
+          <ol style="font-size: 13px; color: #115e59; padding-left: 18px; margin: 0; line-height: 1.8;">
+            <li>Open the decision guide and find your current stage</li>
+            <li>Open the matching letter and replace every [BRACKETED] placeholder with your details</li>
+            <li>Delete the guidance notes section before sending</li>
+            <li>Send in writing (email or post) and keep a copy of everything</li>
+            <li>Diarise any deadline the guide flags for your stage</li>
+          </ol>
+        </div>
+        <div style="text-align: center; margin: 28px 0 16px;">
+          <a href="https://www.appealafine.co.uk/guides" style="display: inline-block; background: #0d9488; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;">Read Our Appeal Guides</a>
+        </div>
+      </div>
+      <div style="background: #1e293b; padding: 20px 24px; text-align: center; border-radius: 0 0 12px 12px;">
+        <p style="color: #e2e8f0; font-size: 13px; margin: 0 0 6px; font-weight: 600;">AppealAFine</p>
+        <p style="color: #94a3b8; font-size: 11px; margin: 0;"><a href="https://www.appealafine.co.uk" style="color: #5eead4; text-decoration: none;">appealafine.co.uk</a></p>
+        <p style="color: #64748b; font-size: 10px; margin: 10px 0 0; line-height: 1.5;">Document preparation service, not a law firm. For legal advice consult a qualified solicitor.</p>
+      </div>
+    </div>`;
+
+  const { error } = await resend.emails.send({
+    from: "Appeal a Fine <appeals@appealafine.co.uk>",
+    to: email,
+    subject: "Your Escalation Pack: 5 documents attached",
+    html: htmlBody,
+    attachments,
+  });
+  if (error) throw new Error(`Resend error: ${JSON.stringify(error)}`);
+}
+
 // ============== Webhook handler ==============
 
 export async function POST(request: NextRequest) {
@@ -405,6 +473,23 @@ export async function POST(request: NextRequest) {
       await stripe.paymentIntents.update(piId, {
         metadata: { ...pi.metadata, fulfilled: "true", fulfilled_at: new Date().toISOString() },
       });
+    }
+
+    // Escalation Pack: fixed document bundle, fulfilled from static content.
+    if (session.metadata?.productId === ESCALATION_PACK_ID) {
+      const packEmail = session.customer_details?.email || session.customer_email || session.metadata?.email;
+      if (!packEmail) {
+        console.warn(`Webhook: escalation pack session ${session.id} has no email`);
+        return NextResponse.json({ ok: true, skipped: "no_email" });
+      }
+      await sendEscalationPackEmail(packEmail);
+      if (piId) {
+        const pi = await stripe.paymentIntents.retrieve(piId);
+        await stripe.paymentIntents.update(piId, {
+          metadata: { ...pi.metadata, letter_sent_at: new Date().toISOString() },
+        });
+      }
+      return NextResponse.json({ ok: true, sent_to: packEmail });
     }
 
     const appeal = decodeAppealFromMetadata(session.metadata || null);

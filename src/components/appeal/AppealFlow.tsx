@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import { PRODUCTS } from "@/data/products";
+import { trackBeginCheckout } from "@/lib/gtag";
 import { ALL_COUNCIL_OPTIONS, ALL_OPERATOR_OPTIONS } from "@/data/dropdown-options";
 import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
 import { LocationAutocomplete } from "@/components/ui/LocationAutocomplete";
@@ -1421,6 +1422,10 @@ export default function AppealFlow() {
 
   const handleSelectProduct = useCallback(
     async (productId: string) => {
+      const selected = PRODUCTS[productId];
+      if (selected) {
+        trackBeginCheckout(selected.id, selected.name, selected.price);
+      }
       const appeal = {
         form,
         assessment,

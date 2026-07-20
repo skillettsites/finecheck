@@ -59,8 +59,10 @@ If a default CCJ has already been entered, you are not out of options:
 
 An unpaid CCJ stays on your credit file for **six years** and is visible to lenders, landlords and some employers. It can make mortgages, loans and credit agreements harder and more expensive to obtain. This is exactly why ignoring a parking claim form is so costly, and why challenging the charge early is the cheapest insurance you can buy.
 
-[[CTA:amber|Don't let a £100 charge become a 6-year CCJ|Challenge it now with a personalised £2.99 appeal letter, or our £4.99 pack with an escalation template for if the operator pushes back. The correct legal grounds, ready to send.|Start my appeal|/pricing]]
-`,
+[[CTA:amber|Stop a £100 charge becoming a 6-year CCJ|The £19.99 Escalation Pack has the documents for every stage between here and court: the debt collector reply, the Letter Before Claim response, and a defence checklist with witness statement skeleton so a claim never becomes a default judgment.|Get the Escalation Pack|/escalation-pack]]
+
+
+[[CTA:slate|One pack for the whole escalation chain|Debt collector response, POPLA and IAS rejection letter, Letter Before Claim reply, court defence checklist and witness statement skeleton, plus a stage-by-stage decision guide. £19.99 one-off, emailed instantly.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "Can a private parking company register a CCJ without going to court?",
@@ -144,8 +146,10 @@ Rather than silence, a short, firm, evidenced dispute is stronger. It puts a cle
 
 Do not pay the inflated DRP figure out of fear. Disregard the threatening tone, but stay alert for a Letter Before Claim or claim form. The strongest position is a documented dispute of the original charge on POFA and signage grounds, which a personalised appeal letter delivers.
 
-[[CTA:amber|Turn a DRP scare letter into a proper dispute|Our £2.99 letter challenges the charge on POFA 2012 and signage grounds. The £4.99 pack adds an escalation template if it goes to a Letter Before Claim.|Dispute it now|/pricing]]
-`,
+[[CTA:amber|Reply to DRP once, properly|The £19.99 Escalation Pack includes the firm dispute letter for Debt Recovery Plus, demanding the POFA evidence and rejecting the added fees, plus the Letter Before Claim reply and full court defence pack for the later stages.|Get the Escalation Pack|/escalation-pack]]
+
+
+[[CTA:slate|Don't ignore it, answer it once and properly|The £19.99 Escalation Pack has the DRP response letter plus everything for the stages that could follow: the Letter Before Claim reply and a full court defence pack. All 5 PDFs, emailed in minutes.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "Are Debt Recovery Plus bailiffs?",
@@ -500,7 +504,7 @@ If POPLA (the appeals service for British Parking Association operators) has rej
 
 POPLA is a free, optional appeal stage. Losing it simply means the independent assessor did not accept your grounds *on the evidence as presented*. The operator still has to decide whether to chase the charge further, and if they do, they must go through the full legal process, where you get a fresh chance to defend.
 
-[[CTA:teal|POPLA rejected your appeal?|It's not over. Our £4.99 pack builds your second-stage strategy and a court-claim defence template so you're ready if the operator escalates.|See the next steps|/pricing]]
+[[CTA:teal|POPLA rejected your appeal?|It is not over. The £19.99 Escalation Pack explains your four options after a POPLA loss and includes the next-steps letter that puts the operator on notice, plus a full court defence pack if they escalate.|See what's in the pack|/escalation-pack]]
 
 ## What Actually Happens After a POPLA Rejection
 
@@ -526,8 +530,10 @@ A POPLA loss is best understood as the operator winning a free, low-stakes round
 
 See our companion guides: [POPLA appeal rejected, what next](/blog/popla-appeal-rejected-what-next), [how to reply to a Letter Before Claim](/blog/letter-before-claim-parking-fine-reply), and [defending a County Court claim](/blog/county-court-claim-form-n1-parking-defence).
 
-[[CTA:amber|Be ready if they escalate after POPLA|Our £4.99 pack includes a second-stage strategy and a County Court defence template, so a POPLA loss doesn't become a CCJ.|Get the escalation pack|/pricing]]
-`,
+[[CTA:amber|Be ready if they escalate after POPLA|The £19.99 Escalation Pack covers everything after a POPLA loss: the next-steps letter, the debt collector reply, the Letter Before Claim response, and a County Court defence with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]
+
+
+[[CTA:slate|Ready for whatever they do next|The £19.99 Escalation Pack covers every stage after a POPLA loss: next-steps letter, debt collector reply, Letter Before Claim response, and a full court defence with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "If POPLA rejects my appeal, do I have to pay?",

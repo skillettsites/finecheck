@@ -1320,13 +1320,17 @@ Some operators issue separate charges for each contravention on the same day (e.
 
 Working days exclude weekends and bank holidays for the purposes of deemed service. The 14-day sending requirement is calendar days, not working days.
 
+[[CTA:amber|Notice arrived late, and the letters are escalating?|A late Notice to Keeper can break keeper liability entirely. If the charge has already gone to debt collectors or a solicitor's Letter Before Claim, the £19.99 Escalation Pack has the response letters for every stage.|Get the Escalation Pack|/escalation-pack]]
+
 ## Practical Advice
 
 1. **Always check the dates.** Compare the NtK date to the contravention date. Even one day matters.
 2. **Keep the envelope.** The postmark can be evidence of when the notice was actually posted.
 3. **Request proof of postage.** If you think the NtK was late, ask the operator to prove when they sent it.
 4. **Do not assume the dates on the letter are correct.** Some operators backdate letters. The postmark is more reliable.
-5. **Raise POFA non-compliance as your primary ground.** It is a technical defence that tribunals and appeals services take seriously, regardless of whether you were actually in contravention.`,
+5. **Raise POFA non-compliance as your primary ground.** It is a technical defence that tribunals and appeals services take seriously, regardless of whether you were actually in contravention.
+
+[[CTA:slate|Past the appeal stage already?|If a debt collector or solicitor is now chasing an old charge, the £19.99 Escalation Pack covers the dispute reply, the Pre-Action Protocol response, and a full court defence pack with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "What is the 14-day rule for parking fines?",

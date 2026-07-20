@@ -39,6 +39,11 @@ export async function generateMetadata({
   };
 }
 
+// Guides whose readers are typically PAST the first-appeal stage (charges
+// found after moving house, debt collector chases, default CCJs). These get
+// Escalation Pack CTAs in addition to the generic free-check funnel.
+const ESCALATION_PACK_GUIDE_SLUGS = new Set(["parking-fine-moved-house"]);
+
 const categoryLabels: Record<Guide["category"], string> = {
   rights: "Your Rights",
   process: "Appeal Process",
@@ -298,6 +303,7 @@ export default async function GuidePage({
   const tocItems = sections.filter((s) => s.level === 2 || s.level === 3);
   const keyTakeaways = extractKeyTakeaways(guide.content);
   const relatedGuides = getRelatedGuides(guide.slug);
+  const showEscalationCta = ESCALATION_PACK_GUIDE_SLUGS.has(guide.slug);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -451,8 +457,27 @@ export default async function GuidePage({
                     buttonText="Check my fine — free"
                   />
                 )}
+                {showEscalationCta && idx === Math.min(5, sections.length - 2) && (
+                  <MidContentCTA
+                    variant="amber"
+                    headline="Has the charge already gone to debt collectors or court?"
+                    description="If letters at your old address turned into a debt collector chase, a Letter Before Claim, or even a default CCJ you never knew about, the £19.99 Escalation Pack has the response letter for every stage, plus set-aside guidance and a full court defence pack."
+                    buttonText="Get the Escalation Pack"
+                    href="/escalation-pack"
+                  />
+                )}
               </section>
             ))}
+
+            {showEscalationCta && (
+              <MidContentCTA
+                variant="slate"
+                headline="Moved house and the letters found you late?"
+                description="The £19.99 Escalation Pack covers everything past the appeal stage: the debt collector response, the Letter Before Claim reply, the court defence checklist with witness statement skeleton, and a stage-by-stage decision guide. All 5 PDFs emailed in minutes."
+                buttonText="Get the Escalation Pack"
+                href="/escalation-pack"
+              />
+            )}
 
             {/* CTA after content */}
             <div className="mt-12 rounded-xl bg-slate-900 p-8 text-center text-white">

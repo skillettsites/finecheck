@@ -26,7 +26,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/appeal/success", "/admin"],
+        disallow: ["/api/", "/appeal/success", "/escalation-pack/success", "/admin"],
       },
       // Explicitly welcome the major AI answer engines (high-intent referrals).
       { userAgent: "GPTBot", allow: "/" },

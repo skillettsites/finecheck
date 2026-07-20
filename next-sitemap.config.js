@@ -24,5 +24,5 @@ module.exports = {
     ],
     additionalSitemaps: [],
   },
-  exclude: ['/api/*', '/appeal/success'],
+  exclude: ['/api/*', '/appeal/success', '/escalation-pack/success'],
 };

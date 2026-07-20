@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { PRODUCTS } from "@/data/products";
+import { trackPurchase } from "@/lib/gtag";
 
 interface SavedAppeal {
   form: {
@@ -140,6 +142,10 @@ export default function SuccessContent() {
           setGenerating(false);
           return;
         }
+
+        // GA4 purchase key event (deduped per Stripe session in trackPurchase).
+        const product = PRODUCTS[parsed.productId] || PRODUCTS["standard-letter"];
+        trackPurchase(stripeSessionId, product.id, product.name, product.price);
 
         // Check if we already generated with Claude for this session
         const cachedLetter = sessionStorage.getItem("finecheck_ai_letter");

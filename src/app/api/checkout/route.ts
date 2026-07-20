@@ -60,6 +60,46 @@ export async function POST(request: NextRequest) {
   if (!productId || !PRODUCTS[productId]) {
     return NextResponse.json({ error: "Invalid or missing productId" }, { status: 400 });
   }
+
+  // The Escalation Pack is a fixed document bundle: no appeal form precedes
+  // it, so there is no appeal data to encode. Stripe Checkout collects the
+  // buyer's email and the webhook fulfils from the static pack content.
+  if (productId === "escalation-pack") {
+    const product = PRODUCTS[productId];
+    try {
+      const stripe = getStripe();
+      const session = await stripe.checkout.sessions.create({
+        line_items: [
+          {
+            price_data: {
+              currency: "gbp",
+              product_data: {
+                name: product.name,
+                description: product.description,
+              },
+              unit_amount: product.price,
+            },
+            quantity: 1,
+          },
+        ],
+        mode: "payment",
+        success_url: `${request.nextUrl.origin}/escalation-pack/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${request.nextUrl.origin}/escalation-pack`,
+        metadata: { productId },
+        payment_intent_data: {
+          metadata: { productId, source: "appealafine-web" },
+        },
+      });
+      if (!session.url) {
+        return NextResponse.json({ error: "Stripe did not return a checkout URL" }, { status: 502 });
+      }
+      return NextResponse.json({ url: session.url, sessionId: session.id });
+    } catch (error) {
+      console.error("Stripe checkout error:", error);
+      return NextResponse.json({ error: "Could not start checkout. Please try again." }, { status: 500 });
+    }
+  }
+
   if (!body.appeal || typeof body.appeal !== "object") {
     return NextResponse.json({ error: "Missing appeal data" }, { status: 400 });
   }
