@@ -37,12 +37,25 @@ function encodeAppeal(appeal: unknown): Record<string, string> | { error: string
   return meta;
 }
 
+interface EscalationDetails {
+  name?: string;
+  address?: string;
+  vehicleReg?: string;
+  pcnReference?: string;
+  operatorName?: string;
+  email?: string;
+}
+
 interface CheckoutPostBody {
   productId?: string;
   fineType?: string;
   appeal?: {
     form?: { email?: string; fineType?: string };
   };
+  // Optional buyer details for the Escalation Pack so the static documents
+  // can be pre-filled before they are rendered to PDF. All fields optional:
+  // anything the buyer leaves blank stays as a [BRACKETED] placeholder.
+  details?: EscalationDetails;
 }
 
 // POST: primary path used by the appeal flow. Encodes the full appeal in
@@ -66,6 +79,31 @@ export async function POST(request: NextRequest) {
   // buyer's email and the webhook fulfils from the static pack content.
   if (productId === "escalation-pack") {
     const product = PRODUCTS[productId];
+
+    // Optional personalisation: encode any details the buyer provided so the
+    // webhook can pre-fill the pack documents. Blank fields stay as
+    // placeholders. Never block the sale if details are missing or oversized.
+    const rawDetails = body.details && typeof body.details === "object" ? body.details : null;
+    const details: EscalationDetails | null = rawDetails
+      ? {
+          name: rawDetails.name?.toString().trim() || undefined,
+          address: rawDetails.address?.toString().trim() || undefined,
+          vehicleReg: rawDetails.vehicleReg?.toString().trim() || undefined,
+          pcnReference: rawDetails.pcnReference?.toString().trim() || undefined,
+          operatorName: rawDetails.operatorName?.toString().trim() || undefined,
+          email: rawDetails.email?.toString().trim() || undefined,
+        }
+      : null;
+    const hasAnyDetail = details && Object.values(details).some(Boolean);
+    let detailsMeta: Record<string, string> = {};
+    if (hasAnyDetail) {
+      const encoded = encodeAppeal({ details });
+      if (!("error" in encoded)) detailsMeta = encoded;
+    }
+    const buyerEmail = details?.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details.email)
+      ? details.email
+      : undefined;
+
     try {
       const stripe = getStripe();
       const session = await stripe.checkout.sessions.create({
@@ -83,9 +121,10 @@ export async function POST(request: NextRequest) {
           },
         ],
         mode: "payment",
+        ...(buyerEmail ? { customer_email: buyerEmail } : {}),
         success_url: `${request.nextUrl.origin}/escalation-pack/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${request.nextUrl.origin}/escalation-pack`,
-        metadata: { productId },
+        metadata: { productId, ...(buyerEmail ? { email: buyerEmail } : {}), ...detailsMeta },
         payment_intent_data: {
           metadata: { productId, source: "appealafine-web" },
         },

@@ -366,18 +366,73 @@ async function sendLetterEmail(appeal: SavedAppeal, result: LetterResult): Promi
 
 // ============== Escalation Pack fulfilment ==============
 
+interface EscalationDetails {
+  name?: string;
+  address?: string;
+  vehicleReg?: string;
+  pcnReference?: string;
+  operatorName?: string;
+  email?: string;
+}
+
+// Decode optional buyer details the checkout encoded as { details: {...} }
+// into the same chunked appeal_N metadata keys.
+function decodeEscalationDetails(meta: Record<string, string> | null): EscalationDetails | null {
+  if (!meta) return null;
+  const chunks = parseInt(meta.appeal_chunks || "0", 10);
+  if (!chunks || chunks < 1) return null;
+  let json = "";
+  for (let i = 0; i < chunks; i++) {
+    const part = meta[`appeal_${i}`];
+    if (!part) return null;
+    json += part;
+  }
+  try {
+    const parsed = JSON.parse(json) as { details?: EscalationDetails };
+    return parsed?.details ?? null;
+  } catch {
+    return null;
+  }
+}
+
+// Pre-fill the buyer's own constant details into a document. Only the fields
+// that are the same across the whole pack are filled; genuinely letter-
+// specific placeholders (their letter's date, court name, claim number, etc.)
+// are intentionally left as [BRACKETS] for the buyer to complete.
+function personaliseEscalationContent(content: string, d: EscalationDetails | null): string {
+  if (!d) return content;
+  const initials = d.name
+    ? d.name.split(/\s+/).map((p) => p.charAt(0).toUpperCase()).join("")
+    : "";
+  const map: Record<string, string | undefined> = {
+    "[YOUR NAME]": d.name,
+    "[YOUR ADDRESS]": d.address,
+    "[REGISTRATION]": d.vehicleReg,
+    "[PCN REFERENCE]": d.pcnReference,
+    "[OPERATOR NAME]": d.operatorName,
+    "[YOUR INITIALS]": initials,
+  };
+  let out = content;
+  for (const [token, value] of Object.entries(map)) {
+    if (value && value.trim()) out = out.split(token).join(value.trim());
+  }
+  return out;
+}
+
 // The Escalation Pack is a fixed document bundle (no AI generation): render
 // each document to PDF and email the lot. Email comes from Stripe Checkout's
 // customer_details since no appeal form precedes this purchase.
-async function sendEscalationPackEmail(email: string): Promise<void> {
+async function sendEscalationPackEmail(email: string, details: EscalationDetails | null = null): Promise<void> {
   if (!process.env.RESEND_API_KEY) throw new Error("RESEND_API_KEY missing");
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const attachments: { filename: string; content: Buffer }[] = [];
   for (const doc of ESCALATION_DOCUMENTS) {
-    const pdf = await generatePDF(doc.content, doc.title);
+    const pdf = await generatePDF(personaliseEscalationContent(doc.content, details), doc.title);
     attachments.push({ filename: doc.filename, content: pdf });
   }
+
+  const prefilled = Boolean(details && (details.name || details.address));
 
   const docListHtml = ESCALATION_DOCUMENTS.map(
     (d) => `<tr>
@@ -404,7 +459,9 @@ async function sendEscalationPackEmail(email: string): Promise<void> {
           <h4 style="margin: 0 0 10px; color: #0f766e; font-size: 14px; font-weight: 700;">How to use the letters</h4>
           <ol style="font-size: 13px; color: #115e59; padding-left: 18px; margin: 0; line-height: 1.8;">
             <li>Open the decision guide and find your current stage</li>
-            <li>Open the matching letter and replace every [BRACKETED] placeholder with your details</li>
+            ${prefilled
+              ? `<li>Your name, address, registration and reference are already filled in. Complete the few remaining [BRACKETED] placeholders that depend on the specific letter you received (for example their date, reference, or the court and claim number)</li>`
+              : `<li>Open the matching letter and replace every [BRACKETED] placeholder with your details. If you cannot type into the PDF, copy the text into a document first</li>`}
             <li>Delete the guidance notes section before sending</li>
             <li>Send in writing (email or post) and keep a copy of everything</li>
             <li>Diarise any deadline the guide flags for your stage</li>
@@ -486,7 +543,8 @@ export async function POST(request: NextRequest) {
         console.warn(`Webhook: escalation pack session ${session.id} has no email`);
         return NextResponse.json({ ok: true, skipped: "no_email" });
       }
-      await sendEscalationPackEmail(packEmail);
+      const packDetails = decodeEscalationDetails(session.metadata || null);
+      await sendEscalationPackEmail(packEmail, packDetails);
       if (piId) {
         const pi = await stripe.paymentIntents.retrieve(piId);
         await stripe.paymentIntents.update(piId, {

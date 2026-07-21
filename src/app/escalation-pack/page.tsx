@@ -5,7 +5,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import FAQ from "@/components/ui/FAQ";
 import { ESCALATION_DOCUMENTS } from "@/data/escalation-pack";
-import BuyButton from "./BuyButton";
+import PurchaseSection from "./PurchaseSection";
 
 export const metadata: Metadata = {
   title: "Escalation Pack: Debt Collector, Court Claim and CCJ Letters, £19.99",
@@ -171,7 +171,7 @@ export default function EscalationPackPage() {
               response, and a full court defence pack. One payment, emailed instantly.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3">
-              <BuyButton />
+              <PurchaseSection />
               <p className="text-sm text-slate-400">
                 £19.99 one-off. No subscription. All 5 PDFs in your inbox within minutes.
               </p>
@@ -229,7 +229,9 @@ export default function EscalationPackPage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <BuyButton />
+            <Button href="#get-pack" variant="accent" size="lg">
+              Add your details and get the pack, £19.99
+            </Button>
           </div>
         </Container>
       </section>
@@ -288,7 +290,9 @@ export default function EscalationPackPage() {
               £19.99, one-off, in your inbox in minutes.
             </p>
             <div className="mt-6">
-              <BuyButton />
+              <Button href="#get-pack" variant="accent" size="lg">
+                Add your details and get the pack, £19.99
+              </Button>
             </div>
             <p className="mt-4 text-xs text-slate-500">
               AppealAFine is a document preparation service, not a law firm. These documents are
