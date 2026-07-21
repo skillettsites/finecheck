@@ -25,6 +25,8 @@ interface SendLetterRequest {
   vehicleReg?: string;
   location?: string;
   fineDate?: string;
+  senderName?: string;
+  senderAddress?: string;
   productName: string;
   escalationLetter?: string;
   evidenceChecklist?: string;
@@ -229,7 +231,9 @@ export async function POST(request: Request) {
           <div style="background: #f0fdfa; border-left: 4px solid #0d9488; padding: 16px 18px; margin: 24px 0; border-radius: 0 8px 8px 0;">
             <h4 style="margin: 0 0 10px; color: #0f766e; font-size: 14px; font-weight: 700;">Before You Send Your Letter</h4>
             <ol style="font-size: 13px; color: #115e59; padding-left: 18px; margin: 0; line-height: 1.8;">
-              <li>Open the attached PDF and replace <strong>[YOUR NAME]</strong> and <strong>[YOUR ADDRESS]</strong> with your real details</li>
+              ${body.senderName?.trim() && body.senderAddress?.trim()
+                ? `<li>Check your name and address are correct at the top of the letter</li>`
+                : `<li>Open the attached PDF and replace <strong>[YOUR NAME]</strong> and <strong>[YOUR ADDRESS]</strong> with your real details. If you cannot type into the PDF, copy the letter text into a document, fill in your details, then print or email it.</li>`}
               <li>Review the letter carefully and adjust any specifics</li>
               <li>Print or email it to ${escapeHtml(recipient)}'s appeals department</li>
               <li>Attach supporting evidence (photos, receipts, bank statements)</li>

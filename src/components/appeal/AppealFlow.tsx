@@ -382,6 +382,8 @@ interface FormData {
   fineAmount: string;
   location: string;
   vehicleReg: string;
+  senderName: string;
+  senderAddress: string;
   email: string;
   wasDriver: "yes" | "no" | "prefer-not-to-say";
   circumstances: string;
@@ -400,6 +402,8 @@ const INITIAL_FORM: FormData = {
   fineAmount: "",
   location: "",
   vehicleReg: "",
+  senderName: "",
+  senderAddress: "",
   email: "",
   wasDriver: "yes",
   circumstances: "",
@@ -620,6 +624,34 @@ function StepDetails({
             className={`${fieldClass("vehicleReg")} uppercase tracking-wider`}
           />
           {errors.vehicleReg && <p className="mt-1 text-xs text-red-600">{errors.vehicleReg}</p>}
+        </div>
+
+        <div>
+          <label className={labelClass}>Your full name *</label>
+          <input
+            type="text"
+            value={form.senderName}
+            onChange={(e) => onChange("senderName", e.target.value)}
+            placeholder="e.g., Carl Lewis"
+            autoComplete="name"
+            className={fieldClass("senderName")}
+          />
+          <p className="mt-1 text-xs text-gray-500">This goes on your appeal letter so it is ready to send</p>
+          {errors.senderName && <p className="mt-1 text-xs text-red-600">{errors.senderName}</p>}
+        </div>
+
+        <div>
+          <label className={labelClass}>Your address *</label>
+          <textarea
+            value={form.senderAddress}
+            onChange={(e) => onChange("senderAddress", e.target.value)}
+            placeholder={"e.g., 12 High Street\nSwansea\nSA1 1AB"}
+            rows={3}
+            autoComplete="street-address"
+            className={fieldClass("senderAddress")}
+          />
+          <p className="mt-1 text-xs text-gray-500">Your return address, printed at the top of the letter. The council or operator needs this to reply.</p>
+          {errors.senderAddress && <p className="mt-1 text-xs text-red-600">{errors.senderAddress}</p>}
         </div>
 
         <div>
@@ -1348,6 +1380,8 @@ export default function AppealFlow() {
     if (!form.fineAmount.trim()) errs.fineAmount = "Please enter the fine amount";
     if (!form.location.trim()) errs.location = "Please enter the location";
     if (!form.vehicleReg.trim()) errs.vehicleReg = "Please enter your vehicle registration";
+    if (!form.senderName.trim()) errs.senderName = "Please enter your full name";
+    if (!form.senderAddress.trim()) errs.senderAddress = "Please enter your address";
     if (!form.email.trim()) errs.email = "Please enter your email address";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Please enter a valid email address";
     if (!form.circumstances.trim()) errs.circumstances = "Please describe the circumstances";

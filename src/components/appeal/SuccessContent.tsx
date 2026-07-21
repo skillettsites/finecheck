@@ -13,6 +13,8 @@ interface SavedAppeal {
     pcnReference?: string;
     location?: string;
     vehicleReg?: string;
+    senderName?: string;
+    senderAddress?: string;
     email?: string;
     fineAmount?: string;
     fineDate?: string;
@@ -45,8 +47,13 @@ function generateLetterContent(data: SavedAppeal): string {
   const recipient = isPrivate ? form.operatorName || "Private Parking Operator" : form.councilName || "Council Parking Services";
   const ref = form.pcnReference ? `\nReference: ${form.pcnReference}` : "";
   const reg = form.vehicleReg || "[YOUR REGISTRATION]";
+  const senderName = form.senderName?.trim() || "[YOUR NAME]";
+  const senderAddress = form.senderAddress?.trim() || "[YOUR ADDRESS]";
 
-  let letterBody = `${today}
+  let letterBody = `${senderName}
+${senderAddress}
+
+${today}
 
 ${recipient}
 Parking Appeals Department
@@ -104,7 +111,7 @@ I am writing to formally challenge the above ${isPrivate ? "parking charge" : "P
     letterBody += `If this informal challenge is rejected, I intend to make formal representations upon receipt of the Notice to Owner, and if necessary, appeal to the independent Traffic Penalty Tribunal.\n\n`;
   }
 
-  letterBody += `I look forward to your response within 28 days.\n\nYours faithfully,\n\n[YOUR NAME]\n[YOUR ADDRESS]`;
+  letterBody += `I look forward to your response within 28 days.\n\nYours faithfully,\n\n${senderName}`;
 
   return letterBody;
 }
@@ -177,8 +184,8 @@ export default function SuccessContent() {
               circumstances: parsed.form.circumstances || parsed.form.whatHappened || "Circumstances not provided",
               ntkReceivedDate: parsed.form.ntkReceivedDate,
               appealGrounds: parsed.assessment.grounds.map((g) => `${g.title} (${g.legalBasis})`),
-              senderName: "[YOUR NAME]",
-              senderAddress: "[YOUR ADDRESS]",
+              senderName: parsed.form.senderName?.trim() || "[YOUR NAME]",
+              senderAddress: parsed.form.senderAddress?.trim() || "[YOUR ADDRESS]",
               product: isPremium ? "premium" : "basic",
               sessionId: stripeSessionId,
             }),
@@ -256,6 +263,8 @@ export default function SuccessContent() {
           vehicleReg: parsed.form.vehicleReg,
           location: parsed.form.location,
           fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
+          senderName: parsed.form.senderName,
+          senderAddress: parsed.form.senderAddress,
           productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
           escalationLetter: escalation,
           evidenceChecklist: checklist,
@@ -463,7 +472,11 @@ export default function SuccessContent() {
             <div>
               <h4 className="text-sm font-semibold text-amber-900 mb-1">Before you send</h4>
               <ul className="text-sm text-amber-800 space-y-1">
-                <li>Replace [YOUR NAME] and [YOUR ADDRESS] with your real details</li>
+                {data.form.senderName?.trim() && data.form.senderAddress?.trim() ? (
+                  <li>Check your name and address are correct at the top of the letter</li>
+                ) : (
+                  <li>Replace [YOUR NAME] and [YOUR ADDRESS] with your real details</li>
+                )}
                 <li>Review the letter and adjust any details as needed</li>
                 <li>Attach any supporting evidence (photos, receipts, screenshots)</li>
                 <li>Keep a copy of everything you send</li>
