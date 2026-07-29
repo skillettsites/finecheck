@@ -283,7 +283,7 @@ export async function POST(request: Request) {
     const maxTokens = body.product === "premium" ? 5000 : 3000;
 
     const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-5",
       max_tokens: maxTokens,
       system: SYSTEM_PROMPT,
       messages: [

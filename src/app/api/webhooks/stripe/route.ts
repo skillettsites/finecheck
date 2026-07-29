@@ -191,7 +191,7 @@ async function generateLetter(appeal: SavedAppeal): Promise<LetterResult> {
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const isPremium = appeal.productId === "premium-pack";
   const message = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-5",
     max_tokens: isPremium ? 5000 : 3000,
     system: SYSTEM_PROMPT,
     messages: [{ role: "user", content: buildUserPrompt(appeal) }],
