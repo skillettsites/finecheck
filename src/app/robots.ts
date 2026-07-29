@@ -1,24 +1,7 @@
 import { MetadataRoute } from "next";
+import { SITEMAP_SECTIONS, SITE_BASE_URL } from "@/lib/sitemap-sections";
 
-const base = "https://www.appealafine.co.uk";
-
-// The site's URLs are split across native App Router sitemaps: the root
-// sitemap holds static pages, and each content silo has its own
-// <section>/sitemap.xml. Google/Bing only discover a sitemap if it is
-// referenced, so every silo sitemap is listed here explicitly.
-const sitemapSections = [
-  "appeals",
-  "councils",
-  "grounds",
-  "guides",
-  "situations",
-  "templates",
-  "blog",
-  "parking-fines",
-  "london",
-  "data",
-  "local-fines",
-];
+const base = SITE_BASE_URL;
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -45,9 +28,13 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "CCBot", disallow: "/" },
       { userAgent: "Amazonbot", disallow: "/" },
     ],
+    // /sitemap.xml is a real <sitemapindex> that references every silo
+    // sitemap, so one submission covers the whole site. The children stay
+    // listed as a belt-and-braces discovery path for crawlers that read
+    // robots.txt but do not expand indexes.
     sitemap: [
       `${base}/sitemap.xml`,
-      ...sitemapSections.map((s) => `${base}/${s}/sitemap.xml`),
+      ...SITEMAP_SECTIONS.map((s) => `${base}/${s}/sitemap.xml`),
     ],
     host: base,
   };
