@@ -140,8 +140,8 @@ ParkingEye does pursue some cases through the County Court. However, they are mo
         answer: 'You can request your ANPR images through a Subject Access Request (SAR) to ParkingEye under GDPR. They must respond within one month. The images should show your number plate clearly, and the timestamps should match your actual visit.'
       }
     ],
-    seoTitle: 'ParkingEye Fine at Lidl | How to Appeal Lidl Parking Charges (2026)',
-    seoDescription: 'Got a ParkingEye fine at Lidl? Free guide to appealing. Covers time limits, ANPR evidence, grace periods, and step-by-step appeal instructions.'
+    seoTitle: 'Lidl Parking Fine £70? Free ParkingEye Appeal Guide',
+    seoDescription: 'Charged £70-£100 after shopping at Lidl? Most ParkingEye fines can be appealed free. Grace period, late NtK, ANPR errors — step-by-step template included.'
   },
   {
     operatorSlug: 'parkingeye',
