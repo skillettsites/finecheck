@@ -22,6 +22,9 @@ const navigation = [
       { name: "Appeal Guides", href: "/guides", description: "Step-by-step guides for every type of parking fine" },
       { name: "Appeal Grounds", href: "/grounds", description: "Legal defences you can use to challenge your fine" },
       { name: "Template Letters", href: "/templates", description: "Ready-to-use appeal letter templates" },
+      // Past-the-appeal-stage traffic is ~31% of the site, but this page had 10
+      // pageviews in 90 days because nothing linked to it from the nav.
+      { name: "Debt Collector & Court Pack", href: "/escalation-pack", description: "Already had a DCBL letter, a rejection or a court claim? Five ready-to-send documents" },
       { name: "Local Fines & Cameras", href: "/local-fines", description: "Speed cameras, bus gates, toll and average-speed fines by location" },
       { name: "Statistics & Data", href: "/data", description: "UK parking fine statistics, success rates, and rankings" },
     ],

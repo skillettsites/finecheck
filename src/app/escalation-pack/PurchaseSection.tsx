@@ -4,6 +4,7 @@ import { useState } from "react";
 import Button from "@/components/ui/Button";
 import { PRODUCTS } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/gtag";
+import { getAttribution } from "@/lib/tracking";
 
 // The Escalation Pack has no appeal form in front of it, so this optional
 // details form is the buyer's chance to add their own information. Anything
@@ -42,6 +43,7 @@ export default function PurchaseSection() {
         body: JSON.stringify({
           productId: product.id,
           ...(Object.keys(cleaned).length ? { details: cleaned } : {}),
+          attribution: getAttribution(),
         }),
       });
       const data = await res.json();

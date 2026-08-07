@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import AttributionCapture from "@/components/AttributionCapture";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import StickyDesktopBar from "@/components/StickyDesktopBar";
 import { Analytics } from "@vercel/analytics/next";
@@ -113,6 +114,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-white text-gray-900">
         <GoogleAnalytics />
+        <AttributionCapture />
         <Header />
         <main className="flex-1 pb-16 sm:pb-0">{children}</main>
         <Footer />

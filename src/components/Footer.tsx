@@ -13,6 +13,7 @@ const footerLinks = {
     { name: "Council Guides", href: "/councils" },
     { name: "Appeal Grounds", href: "/grounds" },
     { name: "Template Letters", href: "/templates" },
+    { name: "Debt Collector & Court Pack", href: "/escalation-pack" },
     { name: "Parking Fines by City", href: "/parking-fines" },
     { name: "Local Fines & Cameras", href: "/local-fines" },
     { name: "Statistics & Data", href: "/data" },
@@ -210,7 +211,7 @@ export default function Footer() {
 
         {/* Compliance */}
         <p className="border-t border-white/5 py-6 text-[11px] leading-relaxed text-slate-500">
-          AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are drafted using established UK parking law and tribunal patterns, then personalised to your circumstances. If you need legal advice â€” particularly if your case has reached a county court claim â€” please consult a qualified solicitor. Appeal outcomes are never guaranteed.
+          AppealAFine provides document preparation services. We are not a law firm and do not provide legal advice. Our letters are drafted using established UK parking law and tribunal patterns, then personalised to your circumstances. If you need legal advice, particularly if your case has reached a county court claim, please consult a qualified solicitor. Appeal outcomes are never guaranteed.
         </p>
       </div>
     </footer>

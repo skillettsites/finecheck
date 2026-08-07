@@ -3,6 +3,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import { PRODUCTS } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/gtag";
+import { getAttribution } from "@/lib/tracking";
 import { ALL_COUNCIL_OPTIONS, ALL_OPERATOR_OPTIONS } from "@/data/dropdown-options";
 import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
 import { LocationAutocomplete } from "@/components/ui/LocationAutocomplete";
@@ -288,6 +289,13 @@ function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType)
         <p className="text-gray-600 max-w-xl mx-auto">
           Take a photo of your ticket for the fastest experience, or select your fine type below to get started.
         </p>
+        {/* The price was previously invisible until after 10 required fields, so
+            readers arriving on a "from £2.99" promise met £4.99 with no warning.
+            State it up front, on both tiers, before anyone fills anything in. */}
+        <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full bg-teal-50 px-4 py-2 text-sm text-teal-900">
+          <span className="font-semibold">Assessment is free.</span>
+          <span>Appeal letter {formatPrice(PRODUCTS["standard-letter"].price)}, premium pack {formatPrice(PRODUCTS["premium-pack"].price)}.</span>
+        </p>
       </div>
 
       <div className="max-w-3xl mx-auto">
@@ -409,6 +417,21 @@ const INITIAL_FORM: FormData = {
   circumstances: "",
 };
 
+// Product prices are stored in pence.
+const formatPrice = (pence: number) => `£${(pence / 100).toFixed(2)}`;
+
+// Shared by StepDetails (step 2) and StepAssessment (step 3), which now both
+// render form fields since the letter-delivery inputs moved behind the paywall.
+const labelClass = "block text-sm font-medium text-gray-700 mb-1.5";
+
+const fieldClass = (
+  field: keyof FormData,
+  errors: Partial<Record<keyof FormData, string>>
+) =>
+  `w-full rounded-lg border ${
+    errors[field] ? "border-red-400 ring-1 ring-red-400" : "border-gray-300"
+  } px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition-colors`;
+
 function StepDetails({
   fineType,
   form,
@@ -426,19 +449,16 @@ function StepDetails({
   errors: Partial<Record<keyof FormData, string>>;
   onEvidenceAnalysis: (analyses: EvidenceAnalysis[]) => void;
 }) {
-  const fieldClass = (field: keyof FormData) =>
-    `w-full rounded-lg border ${
-      errors[field] ? "border-red-400 ring-1 ring-red-400" : "border-gray-300"
-    } px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition-colors`;
-
-  const labelClass = "block text-sm font-medium text-gray-700 mb-1.5";
-
   return (
     <div className="max-w-2xl mx-auto">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Tell us about your fine</h2>
         <p className="text-gray-600">
           The more detail you provide, the more accurate your assessment will be. All fields marked with * are required.
+        </p>
+        <p className="mt-3 text-sm text-gray-500">
+          Next step is your free assessment. Nothing to pay unless you want the letter
+          ({formatPrice(PRODUCTS["standard-letter"].price)} or {formatPrice(PRODUCTS["premium-pack"].price)}).
         </p>
       </div>
 
@@ -453,7 +473,7 @@ function StepDetails({
                 value={form.councilName}
                 onChange={(val) => onChange("councilName", val)}
                 placeholder="Search for your council..."
-                className={fieldClass("councilName")}
+                className={fieldClass("councilName", errors)}
                 allowCustom
               />
               {errors.councilName && <p className="mt-1 text-xs text-red-600">{errors.councilName}</p>}
@@ -465,7 +485,7 @@ function StepDetails({
                 value={form.pcnReference}
                 onChange={(e) => onChange("pcnReference", e.target.value)}
                 placeholder="Found on your penalty charge notice"
-                className={fieldClass("pcnReference")}
+                className={fieldClass("pcnReference", errors)}
               />
             </div>
             <div>
@@ -475,7 +495,7 @@ function StepDetails({
                 value={form.contraventionDescription}
                 onChange={(e) => onChange("contraventionDescription", e.target.value)}
                 placeholder="e.g., Parked in a residents bay without a permit"
-                className={fieldClass("contraventionDescription")}
+                className={fieldClass("contraventionDescription", errors)}
               />
               {errors.contraventionDescription && (
                 <p className="mt-1 text-xs text-red-600">{errors.contraventionDescription}</p>
@@ -493,7 +513,7 @@ function StepDetails({
                 value={form.operatorName}
                 onChange={(val) => onChange("operatorName", val)}
                 placeholder="Search for the parking company..."
-                className={fieldClass("operatorName")}
+                className={fieldClass("operatorName", errors)}
                 allowCustom
               />
               {errors.operatorName && <p className="mt-1 text-xs text-red-600">{errors.operatorName}</p>}
@@ -505,7 +525,7 @@ function StepDetails({
                   type="date"
                   value={form.parkingEventDate}
                   onChange={(e) => onChange("parkingEventDate", e.target.value)}
-                  className={fieldClass("parkingEventDate")}
+                  className={fieldClass("parkingEventDate", errors)}
                 />
                 {errors.parkingEventDate && <p className="mt-1 text-xs text-red-600">{errors.parkingEventDate}</p>}
               </div>
@@ -517,7 +537,7 @@ function StepDetails({
                   type="date"
                   value={form.ntkReceivedDate}
                   onChange={(e) => onChange("ntkReceivedDate", e.target.value)}
-                  className={fieldClass("ntkReceivedDate")}
+                  className={fieldClass("ntkReceivedDate", errors)}
                 />
                 <p className="mt-1 text-xs text-gray-500">
                   This is the date the letter arrived, not the date on the letter. Critical for checking the 14-day POFA rule.
@@ -532,7 +552,7 @@ function StepDetails({
                 onChange={(e) => onChange("whatHappened", e.target.value)}
                 placeholder="Briefly describe the parking event. Were you a customer? How long were you parked?"
                 rows={3}
-                className={fieldClass("whatHappened")}
+                className={fieldClass("whatHappened", errors)}
               />
             </div>
           </>
@@ -547,7 +567,7 @@ function StepDetails({
                 value={form.councilName}
                 onChange={(val) => onChange("councilName", val)}
                 placeholder={fineType === "congestion" ? "Search for authority (e.g., TfL)..." : "Search for council..."}
-                className={fieldClass("councilName")}
+                className={fieldClass("councilName", errors)}
                 allowCustom
               />
               {errors.councilName && <p className="mt-1 text-xs text-red-600">{errors.councilName}</p>}
@@ -559,7 +579,7 @@ function StepDetails({
                 value={form.pcnReference}
                 onChange={(e) => onChange("pcnReference", e.target.value)}
                 placeholder="Found on your penalty charge notice"
-                className={fieldClass("pcnReference")}
+                className={fieldClass("pcnReference", errors)}
               />
             </div>
           </>
@@ -576,7 +596,7 @@ function StepDetails({
                   type="date"
                   value={form.fineDate}
                   onChange={(e) => onChange("fineDate", e.target.value)}
-                  className={fieldClass("fineDate")}
+                  className={fieldClass("fineDate", errors)}
                 />
                 {errors.fineDate && <p className="mt-1 text-xs text-red-600">{errors.fineDate}</p>}
               </div>
@@ -590,7 +610,7 @@ function StepDetails({
                   value={form.fineAmount}
                   onChange={(e) => onChange("fineAmount", e.target.value)}
                   placeholder="e.g., 100"
-                  className={`${fieldClass("fineAmount")} pl-7`}
+                  className={`${fieldClass("fineAmount", errors)} pl-7`}
                 />
               </div>
               {errors.fineAmount && <p className="mt-1 text-xs text-red-600">{errors.fineAmount}</p>}
@@ -608,64 +628,17 @@ function StepDetails({
                 ? "e.g., Tesco Extra car park, High Street, Manchester"
                 : "e.g., High Street, near the junction with Park Road"
             }
-            className={fieldClass("location")}
+            className={fieldClass("location", errors)}
           />
           {errors.location && <p className="mt-1 text-xs text-red-600">{errors.location}</p>}
         </div>
 
-        <div>
-          <label className={labelClass}>Vehicle registration *</label>
-          <input
-            type="text"
-            value={form.vehicleReg}
-            onChange={(e) => onChange("vehicleReg", e.target.value.toUpperCase())}
-            placeholder="e.g., AB12 CDE"
-            maxLength={8}
-            className={`${fieldClass("vehicleReg")} uppercase tracking-wider`}
-          />
-          {errors.vehicleReg && <p className="mt-1 text-xs text-red-600">{errors.vehicleReg}</p>}
-        </div>
-
-        <div>
-          <label className={labelClass}>Your full name *</label>
-          <input
-            type="text"
-            value={form.senderName}
-            onChange={(e) => onChange("senderName", e.target.value)}
-            placeholder="e.g., Carl Lewis"
-            autoComplete="name"
-            className={fieldClass("senderName")}
-          />
-          <p className="mt-1 text-xs text-gray-500">This goes on your appeal letter so it is ready to send</p>
-          {errors.senderName && <p className="mt-1 text-xs text-red-600">{errors.senderName}</p>}
-        </div>
-
-        <div>
-          <label className={labelClass}>Your address *</label>
-          <textarea
-            value={form.senderAddress}
-            onChange={(e) => onChange("senderAddress", e.target.value)}
-            placeholder={"e.g., 12 High Street\nSwansea\nSA1 1AB"}
-            rows={3}
-            autoComplete="street-address"
-            className={fieldClass("senderAddress")}
-          />
-          <p className="mt-1 text-xs text-gray-500">Your return address, printed at the top of the letter. The council or operator needs this to reply.</p>
-          {errors.senderAddress && <p className="mt-1 text-xs text-red-600">{errors.senderAddress}</p>}
-        </div>
-
-        <div>
-          <label className={labelClass}>Email address *</label>
-          <input
-            type="email"
-            value={form.email}
-            onChange={(e) => onChange("email", e.target.value)}
-            placeholder="your@email.com"
-            className={fieldClass("email")}
-          />
-          <p className="mt-1 text-xs text-gray-500">We will send your appeal letter to this email</p>
-          {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
-        </div>
+        {/* Vehicle registration, name, address and email are NOT collected here.
+            They are letter-delivery fields, not assessment inputs (assessFine
+            never reads them), so demanding them before the free assessment was
+            pure friction: 2% of people who reached this step ever got to a
+            price. They are collected on step 3, after the reader has seen what
+            their case is worth. */}
 
         <div>
           <label className={labelClass}>Were you the driver?</label>
@@ -688,8 +661,10 @@ function StepDetails({
         </div>
 
         <div>
-          <label className={labelClass}>What were the circumstances? *</label>
-          <p className="text-xs text-gray-500 mb-2">Consider the following:</p>
+          <label className={labelClass}>What were the circumstances?</label>
+          <p className="text-xs text-gray-500 mb-2">
+            Optional, but the more you tell us the stronger your assessment and letter. Consider the following:
+          </p>
           <ul className="text-xs text-gray-500 mb-3 space-y-0.5">
             {CIRCUMSTANCE_PROMPTS[fineType].map((prompt) => (
               <li key={prompt} className="flex items-start gap-1.5">
@@ -703,7 +678,7 @@ function StepDetails({
             onChange={(e) => onChange("circumstances", e.target.value)}
             placeholder="Describe what happened in your own words. Include any relevant details about signs, machines, timing, or circumstances."
             rows={4}
-            className={fieldClass("circumstances")}
+            className={fieldClass("circumstances", errors)}
           />
           {errors.circumstances && <p className="mt-1 text-xs text-red-600">{errors.circumstances}</p>}
         </div>
@@ -1120,11 +1095,21 @@ function StepAssessment({
   form,
   onBack,
   onSelectProduct,
+  onChange,
+  errors,
+  emailWarning,
+  onRefineAssessment,
+  assessedWithCircumstances,
 }: {
   assessment: AssessmentResult;
   form: FormData;
   onBack: () => void;
   onSelectProduct: (productId: string) => void;
+  onChange: (field: keyof FormData, value: string) => void;
+  errors: Partial<Record<keyof FormData, string>>;
+  emailWarning: string | null;
+  onRefineAssessment: () => void;
+  assessedWithCircumstances: boolean;
 }) {
 
   return (
@@ -1239,12 +1224,116 @@ function StepAssessment({
         </div>
       </div>
 
+      {/* If the reader skipped the circumstances box on step 2, the assessment
+          above is running on procedural grounds alone. For bus-lane and
+          congestion that is the ONLY input assessFine reads, so the score shown
+          is a floor, not a verdict. Say so and let them improve it in place
+          rather than presenting a weak number as a finding. */}
+      {!assessedWithCircumstances && (
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-6 shadow-sm mb-6">
+          <h3 className="text-lg font-semibold text-amber-900">This is your baseline, not your ceiling</h3>
+          <p className="mt-1 text-sm text-amber-800">
+            You skipped the circumstances box, so the score above is based on procedural grounds alone. Most successful
+            appeals turn on what actually happened. Add a couple of lines and we will re-check your case straight away.
+          </p>
+          <textarea
+            value={form.circumstances}
+            onChange={(e) => onChange("circumstances", e.target.value)}
+            placeholder="e.g., the machine was out of order and there was no sign giving a phone payment number, so I could not pay."
+            rows={3}
+            className="mt-3 w-full rounded-lg border border-amber-300 bg-white px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+          />
+          <button
+            type="button"
+            onClick={onRefineAssessment}
+            disabled={!form.circumstances.trim()}
+            className="mt-3 inline-flex items-center gap-2 rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-700 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            Update my assessment
+          </button>
+        </div>
+      )}
+
       {/* Inline paywall: single card with Premium-pack toggle */}
       <PaywallCard
         assessment={assessment}
         form={form}
         onSelectProduct={onSelectProduct}
       />
+
+      {/* Letter-delivery details. These used to sit on step 2, in front of the
+          free assessment, where they were the single biggest drop-off in the
+          funnel. They sit BELOW the paywall deliberately: the reader sees the
+          grounds, then the price, then decides. handleSelectProduct scrolls
+          here if anything is missing, so nothing is lost by putting the price
+          first. */}
+      <div id="delivery-details" className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-6">
+        <h3 className="text-lg font-semibold text-gray-900">Where should we send your letter?</h3>
+        <p className="mt-1 text-sm text-gray-600">
+          These four go on the letter itself, so it arrives ready to send. Nothing is shared with the council or operator.
+        </p>
+        <div className="mt-4 space-y-4">
+          <div>
+            <label className={labelClass}>Vehicle registration *</label>
+            <input
+              type="text"
+              value={form.vehicleReg}
+              onChange={(e) => onChange("vehicleReg", e.target.value.toUpperCase())}
+              placeholder="e.g., AB12 CDE"
+              maxLength={8}
+              className={`${fieldClass("vehicleReg", errors)} uppercase tracking-wider`}
+            />
+            {errors.vehicleReg && <p className="mt-1 text-xs text-red-600">{errors.vehicleReg}</p>}
+          </div>
+
+          <div>
+            <label className={labelClass}>Your full name *</label>
+            <input
+              type="text"
+              value={form.senderName}
+              onChange={(e) => onChange("senderName", e.target.value)}
+              placeholder="e.g., Carl Lewis"
+              autoComplete="name"
+              className={fieldClass("senderName", errors)}
+            />
+            <p className="mt-1 text-xs text-gray-500">This goes on your appeal letter so it is ready to send</p>
+            {errors.senderName && <p className="mt-1 text-xs text-red-600">{errors.senderName}</p>}
+          </div>
+
+          <div>
+            <label className={labelClass}>Your address *</label>
+            <textarea
+              value={form.senderAddress}
+              onChange={(e) => onChange("senderAddress", e.target.value)}
+              placeholder={"e.g., 12 High Street\nSwansea\nSA1 1AB"}
+              rows={3}
+              autoComplete="street-address"
+              className={fieldClass("senderAddress", errors)}
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              Your return address, printed at the top of the letter. The council or operator needs this to reply.
+            </p>
+            {errors.senderAddress && <p className="mt-1 text-xs text-red-600">{errors.senderAddress}</p>}
+          </div>
+
+          <div>
+            <label className={labelClass}>Email address *</label>
+            <input
+              type="email"
+              value={form.email}
+              onChange={(e) => onChange("email", e.target.value)}
+              placeholder="your@email.com"
+              autoComplete="email"
+              className={fieldClass("email", errors)}
+            />
+            <p className="mt-1 text-xs text-gray-500">We will send your appeal letter to this email</p>
+            {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
+            {!errors.email && emailWarning && (
+              <p className="mt-1 text-xs font-medium text-amber-700">{emailWarning}</p>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* General next steps stay free: this is guidance on the process, not
           the personalised letter, so it never feels like a bait-and-switch. */}
@@ -1286,6 +1375,11 @@ export default function AppealFlow() {
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [assessment, setAssessment] = useState<AssessmentResult | null>(null);
+  // Whether the assessment currently on screen was computed with circumstances
+  // text. Tracked separately from form.circumstances so the "add detail" prompt
+  // stays visible while the reader types, rather than vanishing on first
+  // keystroke and leaving a stale score above it.
+  const [assessedWithCircumstances, setAssessedWithCircumstances] = useState(true);
   const [evidenceAnalyses, setEvidenceAnalyses] = useState<EvidenceAnalysis[]>([]);
 
   // Handle scanned ticket data: auto-populate form and skip to Step 2
@@ -1379,26 +1473,57 @@ export default function AppealFlow() {
 
     if (!form.fineAmount.trim()) errs.fineAmount = "Please enter the fine amount";
     if (!form.location.trim()) errs.location = "Please enter the location";
-    if (!form.vehicleReg.trim()) errs.vehicleReg = "Please enter your vehicle registration";
-    if (!form.senderName.trim()) errs.senderName = "Please enter your full name";
-    if (!form.senderAddress.trim()) errs.senderAddress = "Please enter your address";
-    if (!form.email.trim()) errs.email = "Please enter your email address";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Please enter a valid email address";
-    if (!form.circumstances.trim()) errs.circumstances = "Please describe the circumstances";
+
+    // Deliberately NOT required here: vehicleReg, senderName, senderAddress,
+    // email and circumstances. The first four are letter-delivery fields that
+    // assessFine never reads, and circumstances is optional input that only
+    // strengthens the result. All are validated by validateDetails() on step 3,
+    // before payment, so the letter still ships complete.
 
     setErrors(errs);
     return Object.keys(errs).length === 0;
   }, [form]);
 
-  const handleStep2Next = useCallback(() => {
-    if (!validateStep2()) {
-      // Scroll to first error
-      const firstError = document.querySelector("[class*='text-red-600']");
-      firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
-      return;
-    }
+  // Common typo domains. A single mistyped character here costs the customer
+  // their entire purchase silently: a real buyer was lost on 4 Aug 2026 to
+  // "oive.com", a domain with no MX record, and nothing in the flow told them.
+  const emailDomainWarning = useCallback((email: string): string | null => {
+    const domain = email.split("@")[1]?.toLowerCase();
+    if (!domain) return null;
+    const TYPOS: Record<string, string> = {
+      "oive.com": "live.com",
+      "gmial.com": "gmail.com",
+      "gmai.com": "gmail.com",
+      "gmail.co": "gmail.com",
+      "hotmial.com": "hotmail.com",
+      "hotmail.co": "hotmail.co.uk",
+      "outlok.com": "outlook.com",
+      "yahoo.co": "yahoo.co.uk",
+      "icloud.co": "icloud.com",
+      "btinternet.co": "btinternet.com",
+    };
+    return TYPOS[domain] ? `Did you mean ${email.split("@")[0]}@${TYPOS[domain]}?` : null;
+  }, []);
 
-    // Run assessment
+  // Validated on step 3, immediately before checkout. These four fields are
+  // what turns the generated letter into something the buyer can actually send.
+  const validateDetails = useCallback((): boolean => {
+    const errs: Partial<Record<keyof FormData, string>> = {};
+    if (!form.vehicleReg.trim()) errs.vehicleReg = "Please enter your vehicle registration";
+    if (!form.senderName.trim()) errs.senderName = "Please enter your full name";
+    if (!form.senderAddress.trim()) errs.senderAddress = "Please enter your address";
+    if (!form.email.trim()) errs.email = "Please enter your email address";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errs.email = "Please enter a valid email address";
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  }, [form]);
+
+  // Extracted so step 3 can re-run the assessment when the reader adds their
+  // circumstances there. Bus-lane and congestion assessments read ONLY the
+  // circumstances field, so a blank one produces a "25%, weaker case" verdict
+  // that would otherwise sit unchallenged on the page where people decide
+  // whether to pay.
+  const runAssessment = useCallback((): AssessmentResult => {
     const input: AssessmentInput = {
       fineType: form.fineType,
       councilName: form.councilName,
@@ -1449,13 +1574,41 @@ export default function AppealFlow() {
       else if (result.successProbability >= 40) result.overallStrength = "moderate";
     }
 
-    setAssessment(result);
+    return result;
+  }, [form, evidenceAnalyses]);
+
+  const handleStep2Next = useCallback(() => {
+    if (!validateStep2()) {
+      // Scroll to first error
+      const firstError = document.querySelector("[class*='text-red-600']");
+      firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+
+    setAssessment(runAssessment());
+    setAssessedWithCircumstances(Boolean(form.circumstances.trim()));
     setStep(3);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [form, validateStep2, evidenceAnalyses]);
+  }, [validateStep2, runAssessment, form.circumstances]);
+
+  // Re-run the assessment in place on step 3 after the reader adds detail.
+  const handleRefineAssessment = useCallback(() => {
+    setAssessment(runAssessment());
+    setAssessedWithCircumstances(Boolean(form.circumstances.trim()));
+  }, [runAssessment, form.circumstances]);
 
   const handleSelectProduct = useCallback(
     async (productId: string) => {
+      // Collect the letter-delivery details before taking money. If anything is
+      // missing, surface it and scroll to it rather than proceeding: a paid
+      // letter without a name and address is not sendable.
+      if (!validateDetails()) {
+        document
+          .getElementById("delivery-details")
+          ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
       const selected = PRODUCTS[productId];
       if (selected) {
         trackBeginCheckout(selected.id, selected.name, selected.price);
@@ -1487,6 +1640,7 @@ export default function AppealFlow() {
             productId,
             fineType: form.fineType,
             appeal,
+            attribution: getAttribution(),
           }),
         });
         const data = await res.json();
@@ -1535,6 +1689,11 @@ export default function AppealFlow() {
             form={form}
             onBack={handleBack}
             onSelectProduct={handleSelectProduct}
+            onChange={handleFieldChange}
+            errors={errors}
+            emailWarning={emailDomainWarning(form.email)}
+            onRefineAssessment={handleRefineAssessment}
+            assessedWithCircumstances={assessedWithCircumstances}
           />
         )}
 

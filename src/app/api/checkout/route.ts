@@ -1,13 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { PRODUCTS } from "@/data/products";
+import { attributionToMetadata, type Attribution } from "@/lib/tracking";
 
 // Stripe metadata limits: 50 keys total, 500 chars per value, 40 chars per key.
-// We reserve a few keys for productId/fineType/email/chunks and chunk the
-// stringified appeal across appeal_0 ... appeal_N. 450 chars/chunk leaves
-// headroom and allows up to ~20KB total which is plenty for any appeal.
+// The appeal branch spends: productId + fineType + email (3), plus the
+// appeal_chunks counter emitted by encodeAppeal (1), plus 0 to 7 attribution
+// keys, plus appeal_0 ... appeal_N.
+//
+// Rather than hardcode a worst case and waste slots on the common visitor who
+// arrives with no UTMs, compute the chunk budget per request. A typical
+// submission measures around 1.6KB (4 chunks), so even the tightest budget
+// leaves roughly 10x headroom.
 const CHUNK_SIZE = 450;
-const MAX_CHUNKS = 45;
+const STRIPE_METADATA_KEY_LIMIT = 50;
+const FIXED_APPEAL_KEYS = 3; // productId, fineType, email
+const CHUNK_COUNTER_KEYS = 1; // appeal_chunks
+
+function chunkBudget(attributionKeyCount: number): number {
+  return STRIPE_METADATA_KEY_LIMIT - FIXED_APPEAL_KEYS - CHUNK_COUNTER_KEYS - attributionKeyCount;
+}
 
 function getStripe() {
   if (!process.env.STRIPE_SECRET_KEY) {
@@ -16,7 +28,10 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY);
 }
 
-function encodeAppeal(appeal: unknown): Record<string, string> | { error: string } {
+function encodeAppeal(
+  appeal: unknown,
+  maxChunks: number
+): Record<string, string> | { error: string } {
   let json: string;
   try {
     json = JSON.stringify(appeal);
@@ -27,7 +42,7 @@ function encodeAppeal(appeal: unknown): Record<string, string> | { error: string
   for (let i = 0; i < json.length; i += CHUNK_SIZE) {
     chunks.push(json.slice(i, i + CHUNK_SIZE));
   }
-  if (chunks.length > MAX_CHUNKS) {
+  if (chunks.length > maxChunks) {
     return { error: "Appeal data too large to encode in payment metadata" };
   }
   const meta: Record<string, string> = { appeal_chunks: String(chunks.length) };
@@ -56,6 +71,9 @@ interface CheckoutPostBody {
   // can be pre-filled before they are rendered to PDF. All fields optional:
   // anything the buyer leaves blank stays as a [BRACKETED] placeholder.
   details?: EscalationDetails;
+  // First-touch attribution captured in the browser on the session's landing
+  // page. Best-effort: absent for users with storage disabled, never required.
+  attribution?: Attribution;
 }
 
 // POST: primary path used by the appeal flow. Encodes the full appeal in
@@ -73,6 +91,10 @@ export async function POST(request: NextRequest) {
   if (!productId || !PRODUCTS[productId]) {
     return NextResponse.json({ error: "Invalid or missing productId" }, { status: 400 });
   }
+
+  // Attribution is best-effort and must never block a sale. Flatten once here
+  // and spread into whichever branch runs.
+  const attributionMeta = attributionToMetadata(body.attribution);
 
   // The Escalation Pack is a fixed document bundle: no appeal form precedes
   // it, so there is no appeal data to encode. Stripe Checkout collects the
@@ -97,7 +119,9 @@ export async function POST(request: NextRequest) {
     const hasAnyDetail = details && Object.values(details).some(Boolean);
     let detailsMeta: Record<string, string> = {};
     if (hasAnyDetail) {
-      const encoded = encodeAppeal({ details });
+      // Escalation branch spends productId + email (2) rather than 3, so it has
+      // one slot more than the appeal branch. Use the same conservative budget.
+      const encoded = encodeAppeal({ details }, chunkBudget(Object.keys(attributionMeta).length));
       if (!("error" in encoded)) detailsMeta = encoded;
     }
     const buyerEmail = details?.email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details.email)
@@ -125,9 +149,18 @@ export async function POST(request: NextRequest) {
         ...(buyerEmail ? { customer_email: buyerEmail } : {}),
         success_url: `${request.nextUrl.origin}/escalation-pack/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${request.nextUrl.origin}/escalation-pack`,
-        metadata: { productId, ...(buyerEmail ? { email: buyerEmail } : {}), ...detailsMeta },
+        metadata: {
+          productId,
+          ...(buyerEmail ? { email: buyerEmail } : {}),
+          ...detailsMeta,
+          ...attributionMeta,
+        },
         payment_intent_data: {
-          metadata: { productId, source: "appealafine-web" },
+          metadata: {
+            productId,
+            source: "appealafine-web",
+            ...(attributionMeta.landing_page ? { landing_page: attributionMeta.landing_page } : {}),
+          },
         },
       });
       if (!session.url) {
@@ -149,7 +182,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Valid email is required" }, { status: 400 });
   }
 
-  const encoded = encodeAppeal(body.appeal);
+  const encoded = encodeAppeal(body.appeal, chunkBudget(Object.keys(attributionMeta).length));
   if ("error" in encoded) {
     return NextResponse.json({ error: encoded.error }, { status: 400 });
   }
@@ -186,6 +219,7 @@ export async function POST(request: NextRequest) {
         productId,
         fineType,
         email,
+        ...attributionMeta,
         ...encoded,
       },
       payment_intent_data: {
@@ -196,6 +230,7 @@ export async function POST(request: NextRequest) {
           productId,
           email,
           source: "appealafine-web",
+          ...(attributionMeta.landing_page ? { landing_page: attributionMeta.landing_page } : {}),
         },
       },
     });
