@@ -336,7 +336,7 @@ ANPR systems can misread characters (O→0, I→1, B→8, S→5, etc) and occasi
 
 Beyond the Tyneside-specific defences, all 6 standard CAZ grounds apply — see [Birmingham CAZ Appeal](/blog/birmingham-clean-air-zone-pcn-appeal-letter) for the full framework. The legal basis is the same Civil Enforcement Regulations 2022 across all English CAZ schemes.
 
-[[CTA:amber|Want this drafted for your Tyneside PCN?|Upload the PCN. Our £2.99 letter selects the right ground based on your V5C and the PCN details — typically wrong-vehicle-class for cars, ANPR misread for plate confusion.|Get my letter|/pricing]]
+[[CTA:amber|Want this drafted for your Tyneside PCN?|Upload the PCN. Our £2.99 letter selects the right ground based on your V5C and the PCN details, typically wrong-vehicle-class for cars, ANPR misread for plate confusion.|Get my letter|/pricing]]
 
 ## Step 1: Submit Representations Within 28 Days
 

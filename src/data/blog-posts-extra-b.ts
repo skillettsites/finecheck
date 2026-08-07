@@ -5,19 +5,19 @@ export const BATCH_B: BlogPost[] = [
     slug: "mcol-parking-fine-defence-online",
     title: "MCOL Parking Fine: How To Acknowledge and Defend Online",
     description:
-      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. £4.99 pack writes the defence for you.",
+      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28, and what the £19.99 Escalation Pack checklist covers.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "MCOL Parking Fine: How To Acknowledge and Defend It Online",
     seoDescription:
-      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28. £4.99 pack writes the defence for you.",
+      "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28, and what the £19.99 Escalation Pack checklist covers.",
     content: `## You Have Just Been Served a Money Claim Online Form
 
 If a brown envelope from the **County Court Business Centre, Northampton** has just landed on your doormat, you are looking at an MCOL claim. Money Claim Online is the digital court system that nearly every private parking operator uses to chase unpaid Parking Charge Notices. ParkingEye, UKPC, Excel, Smart Parking, NCP and Euro Car Parks all funnel claims through this single portal because it is cheap, fast and largely automated.
 
 The good news: receiving an MCOL claim is not the disaster it looks. You have not lost. You have not been "found guilty." A claim form simply means the operator has paid the issue fee and the court has notified you. What happens next is entirely up to you, and the deadlines are tight.
 
-[[CTA:teal|Served with an MCOL claim?|Our £4.99 premium pack drafts a full court defence citing POFA 2012 Schedule 4, signage law and your specific case facts.|Get the defence pack|/pricing]]
+[[CTA:teal|Served with a court claim online?|The £19.99 Escalation Pack includes a court defence preparation pack: the defence checklist covering POFA 2012 Schedule 4, signage and the inflated add on costs, plus a witness statement skeleton. You write your own defence into the online service.|Get the Escalation Pack|/escalation-pack]]
 
 ## The Three Deadlines You Must Not Miss
 
@@ -67,7 +67,7 @@ The operator must prove they had authority from the landowner to issue charges a
 
 In **ParkingEye v Beavis [2015] UKSC 67**, the Supreme Court held that the £85 charge was enforceable partly because the signage was "large, prominent and clearly worded." Where signage is small, high, obscured, contradictory or absent, the contract that the operator says you accepted by parking arguably never came into existence.
 
-[[CTA:amber|Not sure which defences apply to your case?|Upload a photo of your Notice to Keeper and the £4.99 pack tells you which Schedule 4 sub-paragraphs failed and drafts the defence around them.|Check my notice|/appeal]]
+[[CTA:amber|Not sure which defences apply to your case?|The £19.99 Escalation Pack sets out the Schedule 4, signage and standing points one by one, so you can check your own Notice to Keeper against them and plead only the failures you can evidence.|See what is in the pack|/escalation-pack]]
 
 ### Defence Head 4: Unfair Term Under the Consumer Rights Act 2015
 
@@ -134,11 +134,11 @@ Total exposure on a typical claim is usually £230 to £270. If you win, you can
 | 120 to 180 | If not settled, hearing date listed |
 | Hearing day | Final decision |
 
-[[CTA:slate|Stop guessing. Defend properly.|The £4.99 premium pack gives you the acknowledgment guidance, the full defence draft tailored to your facts, the N180 wording and the mediation script. Delivered as a Word document you can paste straight into MCOL.|Get the £4.99 defence pack|/pricing]]
+[[CTA:slate|Stop guessing. Defend properly.|The £19.99 Escalation Pack gives you the acknowledgment and deadline steps, the defence checklist, a witness statement skeleton and a plain guide to the hearing. We do not complete court forms; you paste your own wording into the online service.|Get the Escalation Pack|/escalation-pack]]
 
 ## Final Word
 
-An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The £4.99 premium pack handles the drafting; your job is to log in on time and click the right buttons.
+An MCOL claim is a procedural step, not a verdict. Acknowledge within 14 days, file your defence within 28 days, plead POFA 2012 Schedule 4 properly, and you give yourself a realistic chance of either a discontinuance, a mediated settlement or a win at hearing. The £19.99 Escalation Pack gives you a defence checklist and a witness statement skeleton to build from; you write the defence and file it yourself, on time.
 
 If your claim arrived on a **paper N1 form from CCBC** rather than through MCOL, the same 14-day / 28-day rules apply but the filing path differs — see the [County Court Claim Form N1 parking defence guide](/blog/county-court-claim-form-n1-parking-defence) for the postal route equivalent.`,
     faqs: [
@@ -529,7 +529,7 @@ The Independent Appeals Service (IAS) is the appeals body run by the **Internati
 
 The most important fact about an IAS decision is this: **it binds the operator, not the appellant**. If the IAS allows your appeal, the operator must cancel. If the IAS rejects your appeal, the operator regains the right to chase you, but you have not lost any legal rights and you have given up nothing.
 
-[[CTA:teal|IAS just rejected your appeal?|Our £4.99 premium pack covers all three escalation routes: LBC reply, court defence draft, and operator-direct cancellation request.|Get the £4.99 pack|/pricing]]
+[[CTA:teal|IAS just rejected your appeal?|The £19.99 Escalation Pack explains what a rejection does and does not mean, and includes the next steps letter to the operator, the debt recovery response letter, and a court defence checklist for the later stages.|Get the Escalation Pack|/escalation-pack]]
 
 ## A Quick Word on IAS Independence
 
@@ -574,7 +574,7 @@ Reference:
 
 Operators run on margin. A targeted cancellation request that signals genuine litigation readiness sometimes succeeds where IAS appeals fail.
 
-[[CTA:amber|Need a cancellation request that lands?|Our £4.99 pack drafts the operator-direct letter referencing the IAS decision's weak points and the statutes you can rely on at court.|Get the cancellation pack|/appeal]]
+[[CTA:amber|Need a letter that puts the operator on notice?|The £19.99 Escalation Pack includes the POPLA and IAS rejected next steps letter: it maintains the dispute, demands their evidence, and tells them any claim will be defended.|Get the Escalation Pack|/escalation-pack]]
 
 ## Option 3: Defend If a Court Claim Arrives
 
@@ -627,7 +627,7 @@ If the charge is £100, a settled claim might cost the operator £200 to £400 i
 
 This is why a properly drafted reply, citing the law, often achieves what the IAS would not.
 
-[[CTA:slate|One pack covers all three routes|The £4.99 premium pack includes the LBC reply, the operator-direct cancellation letter, and the court defence draft. Pick the one you need, or use them in sequence as the operator escalates.|Get the £4.99 pack|/pricing]]
+[[CTA:slate|One pack covers every route after the IAS|The £19.99 Escalation Pack has the next steps letter to the operator, the debt recovery response letter, the Letter Before Claim reply and a court defence checklist with a witness statement skeleton. Use them in sequence as the operator escalates.|Get the Escalation Pack|/escalation-pack]]
 
 ## Final Word
 
@@ -671,7 +671,7 @@ The IAS rejection is the start of the next stage, not the end of the appeal. You
       {
         question: "Do I need a solicitor for an LBC reply or court defence?",
         answer:
-          "No. Small claims track is designed for litigants in person and the court does not normally award legal costs. The £4.99 premium pack provides drafted documents you can adapt and file yourself.",
+          "No. Small claims track is designed for litigants in person and the court does not normally award legal costs. We do not produce court documents; the £19.99 Escalation Pack gives you a defence checklist and a witness statement skeleton to work from.",
       },
     ],
   },

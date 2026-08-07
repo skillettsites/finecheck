@@ -108,7 +108,7 @@ Sometimes the council camera is angled in a way that misses the emergency vehicl
 
 then the burden shifts. Adjudicators apply the civil standard, balance of probabilities. A driver giving a clear, consistent account with one piece of corroborating evidence usually wins.
 
-[[CTA:slate|Stop second-guessing the wording|Answer six questions about your incident. We send back a letter that cites Highway Code Rule 219, 219A and TMA 2004, formatted exactly how the adjudicator wants to see it. £2.99 standard, £4.99 if you want the tribunal-ready bundle.|Start my appeal|/appeal]]
+[[CTA:slate|Stop second-guessing the wording|Answer six questions about your incident. We send back a letter that cites Highway Code Rule 219, 219A and TMA 2004, formatted exactly how the adjudicator wants to see it. £2.99 standard, £4.99 adds a second-stage letter and an evidence checklist.|Start my appeal|/appeal]]
 
 ## Related Reading
 
@@ -167,14 +167,14 @@ then the burden shifts. Adjudicators apply the civil standard, balance of probab
     category: "Legal",
     seoTitle: "Parking Fine CCJ? How To Set It Aside With Form N244",
     seoDescription:
-      "Default CCJ for a parking ticket you never knew about? File N244 with £313 fee. Our £4.99 pack drafts the witness statement and draft order.",
+      "Default CCJ for a parking ticket you never knew about? File N244 with the £313 fee. The £19.99 Escalation Pack gives you a witness statement skeleton and a defence checklist to work from.",
     content: `## When the First You Hear About It Is the CCJ
 
 You check your credit file for a mortgage application. There is a £427 County Court Judgment from eight months ago in the name of an operator you have never heard of. You moved house two years ago. You never saw a parking ticket, never saw a Letter Before Claim, never saw a court claim form. The first you knew about any of it was a six-year scar on your credit file.
 
 This is the default CCJ trap, and it happens to thousands of UK drivers a year. The good news: there is a formal route to remove it. The route is **Form N244**, an application to set the judgment aside under **Civil Procedure Rule 13.3**. It costs £313 to file and, done properly, succeeds in the majority of well-evidenced cases.
 
-[[CTA:teal|We draft the full N244 bundle|Witness statement, draft order, evidence index. £4.99 premium pack. You file it at court the same day.|Build my N244 pack|/pricing]]
+[[CTA:teal|We do not fill in court forms for you|The set aside application form is free from GOV.UK and you file it yourself. The £19.99 Escalation Pack gives you the decision guide for the judgment stage, a defence checklist and a witness statement skeleton to build your evidence around.|See what is in the pack|/escalation-pack]]
 
 ## What a Default CCJ Actually Is
 
@@ -243,7 +243,7 @@ A short document the judge can sign. It should ask the court to:
 3. Reserve costs to the substantive hearing (or order costs in the case).
 4. Order the claimant to remove the CCJ from the Register of Judgments, Orders and Fines.
 
-[[CTA:amber|Witness statements that fail get binned at the door|The most common reason set-asides are refused is a witness statement that asserts grounds without exhibiting evidence. Our £4.99 pack builds the full evidence bundle, indexed and paginated, ready to file.|Get the full bundle|/appeal]]
+[[CTA:amber|Witness statements that fail get binned at the door|Set asides are usually refused because the statement asserts grounds without exhibiting evidence. The £19.99 Escalation Pack gives you a witness statement skeleton with the correct statement of truth, and a checklist of the evidence to gather and exhibit.|Get the Escalation Pack|/escalation-pack]]
 
 ## The Three Tests You Must Pass
 
@@ -292,7 +292,7 @@ If you cannot or will not pay, N244 set aside is your route.
 
 A growing industry of "CCJ removal" companies charges £500 to £2,000 for what is essentially a copy-paste N244. Some are legitimate; many add little value over a self-prepared bundle. The court does not care who drafted the witness statement, it cares whether the contents satisfy CPR 13.3.
 
-[[CTA:slate|Self-prepare with our £4.99 pack|We draft your N244, witness statement, draft order and evidence index based on your specific facts. You add exhibits and file at court.|Get my N244 pack|/templates/ccj-set-aside-letter]]
+[[CTA:slate|Self prepare with the £19.99 Escalation Pack|You complete and file the court paperwork yourself. The pack gives you the stage by stage decision guide, a defence checklist, a witness statement skeleton, and the response letters for every stage that led here.|Get the Escalation Pack|/escalation-pack]]
 
 ## Related Reading
 
@@ -338,9 +338,9 @@ A growing industry of "CCJ removal" companies charges £500 to £2,000 for what 
           "No. The court only sets aside a default judgment by formal application under CPR 13.3, which means N244 plus witness statement plus fee. A letter to the claimant has no legal effect on the judgment.",
       },
       {
-        question: "What does the £4.99 AppealAFine pack include?",
+        question: "Does AppealAFine fill in the N244 for me?",
         answer:
-          "A drafted N244 application, a witness statement on your facts, a draft order, and an evidence index pointing to the exhibits you supply.",
+          "No. We do not complete or file court forms. The N244 is free to download from GOV.UK and you complete it yourself. The £19.99 Escalation Pack gives you a witness statement skeleton with the correct statement of truth, a defence checklist to build your evidence around, and the response letters for the earlier stages that led to the judgment.",
       },
     ],
   },
@@ -437,7 +437,7 @@ A Letter Before Claim (sometimes Letter Before Action) is the operator's last wa
 
 Replying disputes the debt formally and forces the operator to either drop the claim or proceed properly. Many drop at this stage because the operator has weighed the cost of court against the chance of winning.
 
-[[CTA:amber|If you have a Letter Before Claim sitting on the kitchen table|Do not ignore it. Our [debt collector response template](/templates/debt-collector-response-letter) and £2.99 personalised letter dispute the debt and request the strict-proof bundle. Buys you time and often ends the chase.|Get my response letter|/templates/debt-collector-response-letter]]
+[[CTA:amber|If you have a Letter Before Claim sitting on the kitchen table|Do not ignore it. The £19.99 Escalation Pack has the Pre-Action Protocol response that disputes the debt and requests their evidence, plus a checklist of what their letter should have contained.|Get the Escalation Pack|/escalation-pack]]
 
 ### 3. Acknowledge the Claim Form Immediately
 
@@ -696,7 +696,7 @@ Three patterns worth watching:
 
 If any of these apply to your PCN, raise it specifically.
 
-[[CTA:slate|Cite the Code, win the appeal|We track the Code clauses every operator most often breaches and build them into your letter automatically. £2.99 standard, £4.99 if you want a tribunal-ready bundle.|Start my appeal|/appeal]]
+[[CTA:slate|Cite the Code, win the appeal|We track the Code clauses every operator most often breaches and build them into your letter automatically. £2.99 standard, £4.99 adds a second-stage letter and an evidence checklist.|Start my appeal|/appeal]]
 
 ## Related Reading
 

@@ -600,7 +600,7 @@ If the council refuses despite clear misread evidence, escalate to tribunal. The
 - **ANPR misread defence success rate at tribunal**: ~80-90% with clear image evidence
 - **Common misread characters**: O↔0, I↔1, B↔8, S↔5
 
-[[CTA:slate|You weren't there — prove it|Our £2.99 letter packages the SAR, the misread comparison and your GPS / receipt evidence. Filed by you, ready in minutes.|Build my appeal|/appeal]]
+[[CTA:slate|You weren't there, prove it|Our £2.99 letter packages the SAR, the misread comparison and your GPS / receipt evidence. Filed by you, ready in minutes.|Build my appeal|/appeal]]
 
 ## Related Reading
 

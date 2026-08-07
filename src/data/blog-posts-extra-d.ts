@@ -102,7 +102,7 @@ IAS is run by the IPC, which is a structural concern many writers (including Sir
 
 If you do not pay and do not appeal, Excel typically passes the file to **DRP (Debt Recovery Plus)** or **ZZPS**. Neither has any greater legal authority than Excel. You can respond using our [debt collector response letter](/templates/debt-collector-response-letter), which cites POFA 4(5) and CPUTR 2008 reg 5 if the collector misrepresents the legal status of the debt.
 
-[[CTA:slate|Excel PCN, IAS deadline approaching|£2.99 covers the tailored appeal letter. £4.99 premium adds the IAS bundle and the debt collector reply if it goes that far.|See pricing|/pricing]]
+[[CTA:slate|Excel PCN, IAS deadline approaching|£2.99 covers the tailored appeal letter. £4.99 premium adds the second stage appeal letter for the IAS and an evidence checklist.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -256,13 +256,13 @@ A strong IAS submission has four parts:
 3. **The evidence**: photos, statements, receipts, with an index.
 4. **The remedy**: clear request that the charge be cancelled.
 
-The £2.99 letter at our [Smart Parking template page](/templates/smart-parking-appeal-letter) is structured this way. The £4.99 premium pack adds the IAS evidence index and a debt collector response if needed later. See the [IAS appeal letter](/templates/ias-appeal-letter) template for the second-stage version.
+The £2.99 letter at our [Smart Parking template page](/templates/smart-parking-appeal-letter) is structured this way. The £4.99 premium pack adds a second stage appeal letter for the IAS and an evidence checklist. If it later reaches a debt collector, that is the £19.99 Escalation Pack. See the [IAS appeal letter](/templates/ias-appeal-letter) template for the second-stage version.
 
 ## What Happens After IAS
 
 If IAS finds against you, the charge stands and Smart Parking can pursue. Realistically, Smart Parking is **less litigious** than ParkingEye, and many unpaid charges end with debt collection letters from DRP or ZZPS rather than court. If a Letter Before Claim does arrive, our [debt collector response letter](/templates/debt-collector-response-letter) and [court defence guide](/guides/parking-fine-court-defence) cover the next steps.
 
-[[CTA:slate|Smart Parking PCN, ANPR error suspected|£2.99 letter or £4.99 premium pack with full evidence index.|See pricing|/pricing]]
+[[CTA:slate|Smart Parking PCN, ANPR error suspected|£2.99 appeal letter, or £4.99 with a second stage letter and an evidence checklist.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -326,7 +326,7 @@ You open the post and a debt collector tells you they will issue a **statutory d
 
 In almost every case, this is a bluff that does not survive a five-minute legal sanity check. Statutory demands are real legal instruments, but they cannot be used the way these letters claim. If you understand what a statutory demand actually requires, you can reply firmly, in writing, citing the law, and the threat usually evaporates.
 
-[[CTA:teal|Got a "statutory demand" threat over a parking fine?|£2.99 cease-and-desist reply citing CPUTR 2008, Insolvency Act 1986 §268 and FCA debt collection guidance. Sent the same day.|Get my reply letter|/templates/debt-collector-response-letter]]
+[[CTA:teal|Threatened with a statutory demand over a parking charge?|The £19.99 Escalation Pack includes the debt recovery response letter: it disputes the charge, demands the evidence, rejects the added collection costs and requires all further contact in writing.|Get the Escalation Pack|/escalation-pack]]
 
 ## What a Statutory Demand Actually Is
 
@@ -458,19 +458,19 @@ A statutory demand for a £170 parking fine is a bluff. The Insolvency Act 1986 
     slug: "traffic-penalty-tribunal-appeal-win",
     title: "Traffic Penalty Tribunal: How To Win a Council PCN Appeal",
     description:
-      "64% of TPT appeals succeed when presented well. What adjudicators want, statutory grounds, evidence rules, and a £4.99 pack with full case statement and bundle.",
+      "64% of TPT appeals succeed when presented well. What adjudicators want, statutory grounds, evidence rules, and a £4.99 pack with an appeal letter and evidence checklist.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "Traffic Penalty Tribunal: How To Win a Council PCN Appeal",
     seoDescription:
-      "64% of TPT appeals succeed if presented well. Here is what adjudicators want plus a £4.99 pack: full case statement and evidence bundle.",
+      "64% of TPT appeals succeed if presented well. Here is what adjudicators want, plus a £4.99 pack with an appeal letter and an evidence checklist.",
     content: `## Stage 3 Is Where Most Drivers Win
 
 Most drivers who challenge a council Penalty Charge Notice and lose at the council's "formal representations" stage stop there and pay. They shouldn't. The next step, the **Traffic Penalty Tribunal** (TPT) for England and Wales outside Greater London, or **London Tribunals** within Greater London, is independent of the council, free to use, and decides cases on the law and the evidence rather than the council's internal policy. Published TPT statistics over recent years show that the majority of contested appeals succeed in part or whole, particularly where the appellant presents a structured case statement with photo evidence.
 
-This guide is the playbook adjudicators reward. It also explains the £4.99 premium pack: a full **case statement** plus an **evidence index** ready to upload to the tribunal portal.
+This guide is the playbook adjudicators reward. It also explains the £4.99 premium pack: a personalised appeal letter for the tribunal stage plus an evidence checklist to work through before you upload.
 
-[[CTA:teal|TPT or London Tribunals deadline coming up?|£4.99 premium pack: structured case statement, statutory ground identified, evidence index. Sent the same day.|Get my TPT pack|/pricing]]
+[[CTA:teal|TPT or London Tribunals deadline coming up?|£4.99 premium pack: a personalised appeal letter with the statutory ground identified, plus a second stage letter and an evidence checklist. Sent the same day.|Get my TPT pack|/pricing]]
 
 ## Where TPT Sits in the Process
 
@@ -550,7 +550,7 @@ A winning case statement has six sections:
 5. **Evidence index**: numbered exhibits with one-line descriptions.
 6. **Remedy sought**: cancellation of the PCN.
 
-The £4.99 premium pack at our [pricing page](/pricing) is exactly this structure, populated for your facts. The £2.99 [council PCN appeal letter](/templates/council-pcn-appeal-letter) covers Stages 1 and 2; the premium pack is built for Stage 3 specifically.
+The £4.99 premium pack at our [pricing page](/pricing) writes your appeal letter around this structure and gives you an evidence checklist; you assemble and number the exhibits yourself. The £2.99 [council PCN appeal letter](/templates/council-pcn-appeal-letter) covers Stages 1 and 2; the premium pack is built for Stage 3 specifically.
 
 ## Hearings: In Person, By Phone, or On the Papers
 
@@ -577,7 +577,7 @@ If you lose and the debt is eventually registered with the **Traffic Enforcement
 
 **Traffic Penalty Tribunal** covers England and Wales outside Greater London, plus moving traffic, bus lane and Mersey Tunnel cases. **London Tribunals** covers Greater London PCNs. Procedure is broadly similar: free, statutory grounds, paper or oral hearings. The £4.99 pack is configured for either based on the council that issued the PCN.
 
-[[CTA:slate|Stage 3 is where independent adjudication kicks in|£4.99 covers the case statement, statutory ground, and evidence index. £2.99 covers Stages 1-2 if you're earlier in the process.|See pricing|/pricing]]
+[[CTA:slate|Stage 3 is where independent adjudication kicks in|£4.99 covers the appeal letter, the statutory ground and an evidence checklist. £2.99 covers Stages 1-2 if you're earlier in the process.|See pricing|/pricing]]
 
 ## The Bottom Line
 
@@ -586,7 +586,7 @@ Council PCN appeals at TPT or London Tribunals are won by structure, statute and
       {
         question: "Is the Traffic Penalty Tribunal really free?",
         answer:
-          "Yes. There is no fee to file an appeal at the Traffic Penalty Tribunal or London Tribunals. The £4.99 covers our case statement and evidence index, not a tribunal fee.",
+          "Yes. There is no fee to file an appeal at the Traffic Penalty Tribunal or London Tribunals. The £4.99 covers your appeal letter and an evidence checklist, not a tribunal fee.",
       },
       {
         question: "How long does a TPT appeal take?",
@@ -629,12 +629,12 @@ Council PCN appeals at TPT or London Tribunals are won by structure, statute and
     slug: "parkingeye-ccj-credit-file-remove",
     title: "ParkingEye CCJ on Your Credit File? 3 Ways To Remove It",
     description:
-      "A ParkingEye CCJ stays 6 years and damages credit. Three real removal routes: Certificate of Satisfaction, set-aside, and credit-file dispute. £4.99 pack with all 3 templates.",
+      "A ParkingEye CCJ stays 6 years and damages credit. Three real removal routes explained: Certificate of Satisfaction, set-aside, and credit-file dispute. We do not produce court forms or credit file dispute letters.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "ParkingEye CCJ on Your Credit File? 3 Ways To Remove It",
     seoDescription:
-      "A ParkingEye CCJ stays 6 years. Pay-and-erase, set-aside, or remove via Equifax/Experian dispute. £4.99 pack walks all 3 routes with templates.",
+      "A ParkingEye CCJ stays 6 years. Pay-and-erase, set-aside, or remove via an Equifax or Experian dispute. This guide walks all three routes; we do not produce court forms or credit file dispute letters.",
     content: `## Why a ParkingEye CCJ Hurts More Than You Think
 
 ParkingEye is by some distance the most aggressive private parking operator in the UK courts, with thousands of County Court claims filed each year through DCB Legal and Gladstones. Many of those end in **default judgments**, where the defendant did not respond in time and the court entered a **County Court Judgment (CCJ)** without a hearing.
@@ -643,7 +643,7 @@ A CCJ stays on your **public record at the Registry Trust** and on **all three c
 
 The good news: there are three legitimate routes to remove or neutralise a ParkingEye CCJ. They are not all equally fast or cheap, and which one applies depends on your situation. This guide walks all three.
 
-[[CTA:teal|ParkingEye CCJ? £4.99 pack with all 3 removal templates|Certificate of Satisfaction route, N244 set-aside route, credit reference agency dispute route. We pick the right one for your facts.|Get the £4.99 pack|/pricing]]
+[[CTA:teal|ParkingEye CCJ on your credit file?|We do not produce court forms or credit file dispute letters. The £19.99 Escalation Pack gives you the decision guide covering the judgment stage, a defence checklist and a witness statement skeleton for the case behind the judgment.|See what is in the pack|/escalation-pack]]
 
 ## Route 1: Pay Within 30 Days = "Satisfied" Removal
 
@@ -687,7 +687,7 @@ To apply:
 
 If granted, the CCJ is **set aside as if it never happened** and the case returns to active litigation. You then defend it on the merits using the same grounds as any [parking court defence](/guides/parking-fine-court-defence).
 
-[[CTA:amber|CCJ you didn't know about until it hit your credit file?|N244 set-aside is your route. £4.99 pack includes the application, witness statement and draft defence.|See the £4.99 pack|/pricing]]
+[[CTA:amber|CCJ you didn't know about until it hit your credit file?|A set aside is your route, and the court form is free to download. The £19.99 Escalation Pack gives you the defence checklist and witness statement skeleton for the case you would be defending if the judgment is set aside.|Get the Escalation Pack|/escalation-pack]]
 
 ## Route 3: Credit Reference Agency Dispute
 
@@ -735,7 +735,7 @@ Different problem, different solution. If you have received a **Letter Before Cl
 
 CCJs themselves are valid for **6 years** for enforcement without permission of the court (Limitation Act 1980, s.24). After 6 years, ParkingEye would need court permission to enforce. They rarely do for parking-charge sums. The CCJ also drops off your credit file at year 6. See [statute of limitations guide](/guides/parking-fine-statute-of-limitations) for the full timeline of underlying parking debt limitation.
 
-[[CTA:slate|3 routes, one £4.99 pack|Certificate of Cancellation template, N244 application, CRA dispute letter. We identify which applies.|See pricing|/pricing]]
+[[CTA:slate|Know which route applies before you pay anything|The £19.99 Escalation Pack maps the chain stage by stage, including what a judgment does and does not do, so you can see which route fits your facts. It does not contain court forms or credit file dispute letters.|See what is in the pack|/escalation-pack]]
 
 ## The Bottom Line
 
@@ -779,9 +779,9 @@ If a **DCBL doorstep visit notice** has already arrived because the CCJ has been
           "ParkingEye must serve a claim form at your last known address (typically the DVLA-registered address). If you have moved and not updated DVLA, the claim may be lawfully served even though you never saw it. That is a service-based set-aside ground if discovered later.",
       },
       {
-        question: "What does the £4.99 pack include?",
+        question: "Does AppealAFine produce the CCJ removal paperwork?",
         answer:
-          "All three removal templates: Certificate of Cancellation application (Route 1), N244 set-aside with witness statement and draft defence (Route 2), and credit reference agency dispute letter (Route 3). We identify which applies to your facts.",
+          "No. We do not produce court forms, Certificate of Cancellation applications or credit reference agency dispute letters. This guide explains which of the three routes fits your facts so you can pursue it yourself. The £19.99 Escalation Pack covers the private parking stages before judgment, plus a defence checklist and a witness statement skeleton.",
       },
     ],
   },

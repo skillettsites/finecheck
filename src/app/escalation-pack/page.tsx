@@ -10,14 +10,14 @@ import PurchaseSection from "./PurchaseSection";
 export const metadata: Metadata = {
   title: "Escalation Pack: Debt Collector, Court Claim and CCJ Letters, £19.99",
   description:
-    "Past the appeal stage? Get all 5 escalation documents: debt collector response (DCBL, DRP, Trace, ZZPS), POPLA/IAS rejection next steps, Letter Before Claim reply, and a full court defence pack. £19.99 one-off, emailed instantly.",
+    "Past the appeal stage? Get all 5 escalation documents: debt collector response (DCBL, DRP, Trace, ZZPS), POPLA/IAS rejection next steps, Letter Before Claim reply, and a court defence pack with a defence checklist and witness statement skeleton. £19.99 one-off, emailed instantly.",
   alternates: {
     canonical: "https://www.appealafine.co.uk/escalation-pack",
   },
   openGraph: {
     title: "Escalation Pack: Debt Collector, Court Claim and CCJ Letters, £19.99",
     description:
-      "The 5 documents for parking charges past the appeal stage: debt collector reply, POPLA/IAS rejection next steps, Letter Before Claim response, and full court defence preparation.",
+      "The 5 documents for private parking charges past the appeal stage: debt collector reply, POPLA/IAS rejection next steps, Letter Before Claim response, and a court defence checklist with witness statement skeleton.",
     url: "https://www.appealafine.co.uk/escalation-pack",
     type: "website",
   },
@@ -168,7 +168,17 @@ export default function EscalationPackPage() {
             <p className="mt-5 max-w-2xl mx-auto text-lg text-slate-300">
               Five ready-to-use documents covering every stage after a failed or missed appeal:
               the debt collector reply, the POPLA and IAS rejection letter, the Letter Before Claim
-              response, and a full court defence pack. One payment, emailed instantly.
+              response, and a court defence pack with a defence checklist and witness statement skeleton. One payment, emailed instantly.
+            </p>
+            {/* The pack is private-parking only. Council PCNs escalate through the
+                Traffic Enforcement Centre on free TE7/TE9 forms, so a council
+                reader buying this would get five documents that do not apply.
+                Stated up front rather than buried in a document summary. */}
+            <p className="mt-4 max-w-2xl mx-auto text-sm text-amber-200/90">
+              For <strong>private parking charges</strong> (ParkingEye, UKPC, Excel and similar).
+              Council PCNs follow a different statutory route: if yours has reached bailiffs, you
+              need form TE9, or TE7 and TE9 together, which are free from the Traffic Enforcement
+              Centre and not covered by this pack.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3">
               <PurchaseSection />

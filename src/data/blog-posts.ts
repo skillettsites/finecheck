@@ -1331,7 +1331,7 @@ Working days exclude weekends and bank holidays for the purposes of deemed servi
 4. **Do not assume the dates on the letter are correct.** Some operators backdate letters. The postmark is more reliable.
 5. **Raise POFA non-compliance as your primary ground.** It is a technical defence that tribunals and appeals services take seriously, regardless of whether you were actually in contravention.
 
-[[CTA:slate|Past the appeal stage already?|If a debt collector or solicitor is now chasing an old charge, the £19.99 Escalation Pack covers the dispute reply, the Pre-Action Protocol response, and a full court defence pack with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
+[[CTA:slate|Past the appeal stage already?|If a debt collector or solicitor is now chasing an old charge, the £19.99 Escalation Pack covers the dispute reply, the Pre-Action Protocol response, and a court defence checklist with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "What is the 14-day rule for parking fines?",

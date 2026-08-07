@@ -112,7 +112,7 @@ An unpaid CCJ stays on your credit file for **six years** and is visible to lend
 
 The single most important fact: **DRP are debt collectors, not bailiffs.** They have **no legal powers**. They cannot enter your home, seize your belongings, send anyone to your door with authority, or affect your credit file. They are simply a company writing letters and making phone calls on behalf of the parking operator.
 
-[[CTA:teal|Got a Debt Recovery Plus letter?|Don't pay the inflated £160. Our £2.99 personalised letter disputes the charge at its root using POFA 2012 and signage law, the strongest response to DRP.|Generate my letter|/appeal]]
+[[CTA:teal|Got a Debt Recovery Plus letter?|Don't pay the inflated £160. Our £2.99 personalised letter challenges the underlying parking charge on POFA 2012 and signage grounds, which is what any DRP demand ultimately rests on.|Generate my letter|/appeal]]
 
 ## Should You Ignore It? The Honest Answer
 
@@ -146,10 +146,10 @@ Rather than silence, a short, firm, evidenced dispute is stronger. It puts a cle
 
 Do not pay the inflated DRP figure out of fear. Disregard the threatening tone, but stay alert for a Letter Before Claim or claim form. The strongest position is a documented dispute of the original charge on POFA and signage grounds, which a personalised appeal letter delivers.
 
-[[CTA:amber|Reply to DRP once, properly|The £19.99 Escalation Pack includes the firm dispute letter for Debt Recovery Plus, demanding the POFA evidence and rejecting the added fees, plus the Letter Before Claim reply and full court defence pack for the later stages.|Get the Escalation Pack|/escalation-pack]]
+[[CTA:amber|Reply to DRP once, properly|The £19.99 Escalation Pack includes the firm dispute letter for Debt Recovery Plus, demanding the POFA evidence and rejecting the added fees, plus the Letter Before Claim reply and court defence checklist and witness statement skeleton for the later stages.|Get the Escalation Pack|/escalation-pack]]
 
 
-[[CTA:slate|Don't ignore it, answer it once and properly|The £19.99 Escalation Pack has the DRP response letter plus everything for the stages that could follow: the Letter Before Claim reply and a full court defence pack. All 5 PDFs, emailed in minutes.|Get the Escalation Pack|/escalation-pack]]`,
+[[CTA:slate|Don't ignore it, answer it once and properly|The £19.99 Escalation Pack has the DRP response letter plus everything for the stages that could follow: the Letter Before Claim reply and a court defence checklist and witness statement skeleton. All 5 PDFs, emailed in minutes.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "Are Debt Recovery Plus bailiffs?",
@@ -197,7 +197,7 @@ Do not pay the inflated DRP figure out of fear. Disregard the threatening tone, 
 
 There is a world of difference between a company that *can* be a bailiff in other contexts and a company that *is* a bailiff in *your* situation. Chasing an unpaid private parking charge that has never produced a County Court Judgment, DCBL cannot seize anything, cannot enter your home, and cannot send an enforcement agent with any legal authority.
 
-[[CTA:teal|Got a DCBL parking letter?|Don't be rushed by the "bailiffs" name. Our £2.99 personalised letter disputes the charge on POFA 2012 and signage grounds, the right response before it ever reaches court.|Generate my letter|/appeal]]
+[[CTA:teal|Got a DCBL parking letter?|Don't be rushed by the "bailiffs" name. Our £2.99 personalised letter challenges the underlying parking charge on POFA 2012 and signage grounds, the issue any DCBL demand ultimately rests on.|Generate my letter|/appeal]]
 
 ## When DCBL Has Powers, and When It Doesn't
 
@@ -223,7 +223,7 @@ See our detailed [DCBL legal letter guide](/blog/dcbl-letter-parking-fine-legal)
 
 For a private parking charge that has not been to court, DCBL is a debt collector wearing a scary name. It cannot take your goods, enter your home, or affect your credit. The right response is a calm, written dispute of the original charge, not payment under pressure.
 
-[[CTA:amber|Respond to DCBL the right way|Our £2.99 letter disputes the charge on POFA 2012 and signage grounds. The £4.99 pack adds an escalation template for the Letter Before Claim stage.|Challenge it now|/pricing]]
+[[CTA:amber|Respond to DCBL the right way|The £19.99 Escalation Pack includes the debt recovery response letter for firms like DCBL, plus the Letter Before Claim reply and the court defence checklist for the stages that could follow.|Get the Escalation Pack|/escalation-pack]]
 `,
     faqs: [
       {
@@ -422,7 +422,7 @@ This is a crucial distinction. Since 2012, private operators replaced clamping w
 
 You moved house, and months later you discover a parking charge, a pile of debt-collection letters, or even a County Court Judgment connected to an address you no longer live at. You never saw the original notice. This is one of the most common ways people end up with a parking CCJ they knew nothing about, and there are specific legal routes to fix it.
 
-[[CTA:teal|Found out about a parking charge after moving?|Our £2.99 personalised letter addresses notices sent to your old address and builds the right defence, whether the charge is fresh or has already become a CCJ.|Generate my letter|/appeal]]
+[[CTA:teal|Found out about a parking charge after moving?|Our £2.99 personalised letter addresses notices sent to your old address and builds the right grounds, while the charge is still at the appeal stage.|Generate my letter|/appeal]]
 
 ## First: Whose Fault Was the Wrong Address?
 
@@ -458,7 +458,7 @@ See our step-by-step [N244 set-aside guide](/blog/n244-form-set-aside-parking-cc
 - **Set up a mail redirection** with Royal Mail when you move, covering at least 6-12 months.
 - **Keep dated proof** of your address history; it is exactly what a set-aside application needs.
 
-[[CTA:amber|Notice or CCJ at your old address?|Our £2.99 letter handles the appeal; the £4.99 pack adds an escalation and set-aside template for when a charge has already become a judgment.|Sort it out now|/pricing]]
+[[CTA:amber|Notice or CCJ at your old address?|If a private parking charge has already become a judgment, the £19.99 Escalation Pack covers the judgment stage in its decision guide and gives you the defence checklist and witness statement skeleton for the case behind it.|Get the Escalation Pack|/escalation-pack]]
 `,
     faqs: [
       {
@@ -504,7 +504,7 @@ If POPLA (the appeals service for British Parking Association operators) has rej
 
 POPLA is a free, optional appeal stage. Losing it simply means the independent assessor did not accept your grounds *on the evidence as presented*. The operator still has to decide whether to chase the charge further, and if they do, they must go through the full legal process, where you get a fresh chance to defend.
 
-[[CTA:teal|POPLA rejected your appeal?|It is not over. The £19.99 Escalation Pack explains your four options after a POPLA loss and includes the next-steps letter that puts the operator on notice, plus a full court defence pack if they escalate.|See what's in the pack|/escalation-pack]]
+[[CTA:teal|POPLA rejected your appeal?|It is not over. The £19.99 Escalation Pack explains your four options after a POPLA loss and includes the next-steps letter that puts the operator on notice, plus a court defence checklist and witness statement skeleton if they escalate.|See what's in the pack|/escalation-pack]]
 
 ## What Actually Happens After a POPLA Rejection
 
@@ -530,10 +530,10 @@ A POPLA loss is best understood as the operator winning a free, low-stakes round
 
 See our companion guides: [POPLA appeal rejected, what next](/blog/popla-appeal-rejected-what-next), [how to reply to a Letter Before Claim](/blog/letter-before-claim-parking-fine-reply), and [defending a County Court claim](/blog/county-court-claim-form-n1-parking-defence).
 
-[[CTA:amber|Be ready if they escalate after POPLA|The £19.99 Escalation Pack covers everything after a POPLA loss: the next-steps letter, the debt collector reply, the Letter Before Claim response, and a County Court defence with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]
+[[CTA:amber|Be ready if they escalate after POPLA|The £19.99 Escalation Pack covers everything after a POPLA loss: the next-steps letter, the debt collector reply, the Letter Before Claim response, and a court defence checklist with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]
 
 
-[[CTA:slate|Ready for whatever they do next|The £19.99 Escalation Pack covers every stage after a POPLA loss: next-steps letter, debt collector reply, Letter Before Claim response, and a full court defence with witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
+[[CTA:slate|Ready for whatever they do next|The £19.99 Escalation Pack covers every stage after a POPLA loss: next-steps letter, debt collector reply, Letter Before Claim response, and a court defence checklist with a witness statement skeleton.|Get the Escalation Pack|/escalation-pack]]`,
     faqs: [
       {
         question: "If POPLA rejects my appeal, do I have to pay?",
@@ -578,7 +578,7 @@ Unlike a debt collector's letter (DCBL, DRP), a letter from **BW Legal** is from
 
 A Letter Before Claim is the step required by the **Pre-Action Protocol for Debt Claims** before a creditor can issue a County Court claim. It signals the operator is prepared to litigate. The good news: responding properly often ends the matter, because operators routinely drop cases that look defended.
 
-[[CTA:teal|Got a BW Legal Letter Before Claim?|Don't ignore it, and don't pay in panic. Our £4.99 pack gives you a structured reply for the Pre-Action Protocol and a court-claim defence template.|Get my response pack|/pricing]]
+[[CTA:teal|Got a BW Legal Letter Before Claim?|Don't ignore it, and don't pay in panic. The £19.99 Escalation Pack has the Pre-Action Protocol response and the checklist of everything their letter should have contained.|Get the Escalation Pack|/escalation-pack]]
 
 ## The 30-Day Deadline
 
@@ -608,7 +608,7 @@ See our detailed guides: [how to reply to a Letter Before Claim](/blog/letter-be
 
 A BW Legal Letter Before Claim is the genuine pre-court step. It is not a bluff like a debt collector's letter, but it is also not a judgment. Respond within 30 days with a reasoned dispute, request the operator's evidence, and you give yourself the best chance of the claim being dropped.
 
-[[CTA:amber|Respond to BW Legal the right way|Our £4.99 pack includes a Pre-Action Protocol reply, a document request, and a County Court defence template built on POFA and signage law.|Get the pack|/pricing]]
+[[CTA:amber|Respond to BW Legal the right way|The £19.99 Escalation Pack includes the protocol reply with the document requests built in, the checklist to audit their letter against, and the court defence checklist if they issue anyway.|Get the Escalation Pack|/escalation-pack]]
 `,
     faqs: [
       {
@@ -686,7 +686,7 @@ Council Penalty Charge Notices never go through the County Court for the penalty
 - **Never ignore a Letter Before Claim or a court claim form.** These are the only steps that can lead to a CCJ.
 - **If a CCJ is entered in default** because a notice went to your old address, apply to set it aside on form N244 under CPR 13.3.
 
-[[CTA:amber|Protect your credit, challenge the charge|Our £2.99 letter disputes the charge before it can become a CCJ. The £4.99 pack adds an escalation template for the court stage.|Start my appeal|/pricing]]
+[[CTA:amber|Protect your credit, challenge the charge|Our £2.99 letter disputes the charge before it can become a CCJ, and the £4.99 pack adds a second stage appeal letter for POPLA or the IAS if the operator rejects you.|Start my appeal|/pricing]]
 `,
     faqs: [
       {
@@ -758,7 +758,7 @@ The most effective Smart Parking appeals combine:
 
 For related ANPR error grounds see our [Smart Parking ANPR errors and the IAS](/blog/smart-parking-anpr-errors-ias) guide, and if your IAS appeal is rejected, see [IAS appeal rejected, next steps](/blog/ias-appeal-rejected-next-steps).
 
-[[CTA:amber|Challenge your Smart Parking charge properly|Our £2.99 letter targets the ANPR, signage and POFA weaknesses for the IAS route. The £4.99 pack adds an escalation template if the IAS rejects you.|Start my appeal|/pricing]]
+[[CTA:amber|Challenge your Smart Parking charge properly|Our £2.99 letter targets the ANPR, signage and POFA weaknesses for the IAS route. The £4.99 pack adds the second stage appeal letter for the IAS itself and an evidence checklist.|Start my appeal|/pricing]]
 `,
     faqs: [
       {

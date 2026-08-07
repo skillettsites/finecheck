@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Appeal Letter Pricing: £2.99 Standard, £4.99 Premium",
+  title: "Appeal Letter Pricing: £2.99, £4.99 and the £19.99 Escalation Pack",
   description:
-    "Pay once per fine. Free assessment first. Standard letter £2.99, Premium pack £4.99. No subscription. Works for parking fines, bus lane PCNs, congestion charges and ULEZ penalties.",
+    "Pay once per fine. Free assessment first. Standard letter £2.99, Premium pack £4.99, and the £19.99 Escalation Pack for charges already past the appeal stage. No subscription.",
   alternates: {
     canonical: "https://www.appealafine.co.uk/pricing",
   },
@@ -69,6 +69,28 @@ const plans = [
     popular: true,
     buttonText: "Get Premium Pack",
     href: "/appeal",
+  },
+  {
+    // Listed here because every court-stage and debt-collection CTA on the site
+    // now routes to /escalation-pack, but a reader who landed on /pricing could
+    // not find the product at all. Descriptions must match the five real static
+    // documents in src/data/escalation-pack.ts. This is a checklist and a
+    // skeleton, never a completed or drafted court form.
+    name: "Escalation Pack",
+    price: "£19.99",
+    priceNote: "one-time payment",
+    description:
+      "For private parking charges already past the appeal stage: a debt collector letter, a rejected POPLA or IAS decision, a Letter Before Claim, or a county court claim.",
+    features: [
+      "Stage-by-stage escalation decision guide",
+      "Debt recovery response letter (DCBL, DRP, Trace, ZZPS)",
+      "POPLA or IAS rejected: next steps letter and guide",
+      "Letter Before Claim response and protocol checklist",
+      "Court defence checklist and witness statement skeleton",
+    ],
+    popular: false,
+    buttonText: "Get the Escalation Pack",
+    href: "/escalation-pack",
   },
 ];
 
@@ -196,6 +218,21 @@ const productSchema = {
         url: "https://www.appealafine.co.uk/appeal",
       },
     },
+    {
+      "@type": "Product",
+      name: "Escalation Pack",
+      description:
+        "Five documents for a private parking charge already past the appeal stage: an escalation decision guide, a debt recovery response letter, a POPLA or IAS rejection next steps letter, a Letter Before Claim response with a protocol checklist, and a court defence checklist with a witness statement skeleton.",
+      brand: { "@type": "Brand", name: "AppealAFine" },
+      category: "Legal document preparation",
+      offers: {
+        "@type": "Offer",
+        price: "19.99",
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+        url: "https://www.appealafine.co.uk/escalation-pack",
+      },
+    },
   ],
 };
 
@@ -261,7 +298,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="py-12">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-3 max-w-5xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {plans.map((plan) => (
               <div
                 key={plan.name}
@@ -446,9 +483,19 @@ export default function PricingPage() {
       {/* Feature Comparison Table */}
       <section className="bg-gray-50 py-12">
         <Container>
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">
             Feature Comparison
           </h2>
+          {/* The table below covers the three appeal-stage plans only. The
+              Escalation Pack is a different product for cases already past
+              appeal, so listing it in these columns would be misleading. */}
+          <p className="text-center text-sm text-gray-600 mb-8">
+            The three appeal-stage plans compared. The{" "}
+            <a href="/escalation-pack" className="font-medium text-teal-700 underline">
+              £19.99 Escalation Pack
+            </a>{" "}
+            is a separate product for charges already past the appeal stage.
+          </p>
 
           <div className="overflow-x-auto">
             <table className="w-full max-w-4xl mx-auto">

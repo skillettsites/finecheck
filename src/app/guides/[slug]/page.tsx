@@ -461,7 +461,7 @@ export default async function GuidePage({
                   <MidContentCTA
                     variant="amber"
                     headline="Has the charge already gone to debt collectors or court?"
-                    description="If letters at your old address turned into a debt collector chase, a Letter Before Claim, or even a default CCJ you never knew about, the £19.99 Escalation Pack has the response letter for every stage, plus set-aside guidance and a full court defence pack."
+                    description="If letters at your old address turned into a debt collector chase, a Letter Before Claim, or even a default CCJ you never knew about, the £19.99 Escalation Pack has the response letter for every stage, plus set-aside guidance and a court defence checklist with a witness statement skeleton. For private parking charges; a council PCN at the bailiff stage needs form TE9 instead, free from the Traffic Enforcement Centre."
                     buttonText="Get the Escalation Pack"
                     href="/escalation-pack"
                   />
@@ -473,7 +473,7 @@ export default async function GuidePage({
               <MidContentCTA
                 variant="slate"
                 headline="Moved house and the letters found you late?"
-                description="The £19.99 Escalation Pack covers everything past the appeal stage: the debt collector response, the Letter Before Claim reply, the court defence checklist with witness statement skeleton, and a stage-by-stage decision guide. All 5 PDFs emailed in minutes."
+                description="For private parking charges past the appeal stage, the £19.99 Escalation Pack covers the debt collector response, the Letter Before Claim reply, the court defence checklist with witness statement skeleton, and a stage-by-stage decision guide. All 5 PDFs emailed in minutes. Council PCNs follow the TEC route on free forms instead."
                 buttonText="Get the Escalation Pack"
                 href="/escalation-pack"
               />
