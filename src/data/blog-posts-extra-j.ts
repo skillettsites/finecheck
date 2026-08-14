@@ -10,12 +10,12 @@ import type { BlogPost } from "./blog-posts";
 export const BATCH_J: BlogPost[] = [
   {
     slug: "can-a-parking-ticket-give-you-a-ccj",
-    title: "Can a Parking Ticket Give You a CCJ? What Actually Happens (2026)",
+    title: "Can You Get a CCJ From a Parking Ticket?",
     description:
       "Yes, an unpaid private parking charge can end in a County Court Judgment, but only after specific steps. The exact sequence, how to stop it, and how to set a CCJ aside if one is already registered.",
     publishedDate: "2026-06-11",
     category: "Court Stage",
-    seoTitle: "Can a Parking Ticket Give You a CCJ? (And How to Stop It) 2026",
+    seoTitle: "Can You Get a CCJ From a Parking Ticket?",
     seoDescription:
       "Can a parking fine become a CCJ? Yes, but only after a Letter Before Claim and a County Court claim form you ignored. The full timeline, how to stop it, and how to set aside a default CCJ.",
     content: `## The Short Answer
@@ -93,6 +93,11 @@ An unpaid CCJ stays on your credit file for **six years** and is visible to lend
         question: "Is a CCJ from a parking ticket worth fighting over £100?",
         answer:
           "Yes. The charge may be £100 but a CCJ stays on your credit file for six years and can cost you far more in higher interest rates, refused credit, or a declined mortgage. Challenging the charge with a £2.99 appeal letter at the start is vastly cheaper than dealing with a CCJ later.",
+      },
+      {
+        question: "Can a council parking ticket give you a CCJ?",
+        answer:
+          "No. A council Penalty Charge Notice is enforced through the Traffic Enforcement Centre and then bailiffs. It is not a County Court claim, so it does not become a CCJ on your credit file. A CCJ is a risk only for unpaid private parking charges that go through the County Court, and only if a claim is issued and you do not respond (or you lose and do not pay within 30 days).",
       },
     ],
   },

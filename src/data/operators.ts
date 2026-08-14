@@ -28,7 +28,7 @@ export const OPERATORS: Operator[] = [
     pursuesToCourt: true,
     usesANPR: true,
     averageSuccessRate: 42,
-    seoTitle: 'Appeal ParkingEye Fine: Letter From £2.99',
+    seoTitle: 'ParkingEye Appeal: How to Challenge a ParkingEye PCN (2026)',
     seoDescription: 'Free guide to appealing ParkingEye parking charges. Learn about ANPR errors, POPLA appeals, court defence, and the legal weaknesses in ParkingEye tickets.'
   },
   {
