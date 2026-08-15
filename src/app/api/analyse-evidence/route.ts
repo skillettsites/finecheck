@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { buildAppealSearchQuery, logSearch } from "@/lib/analytics";
 
 let anthropic: Anthropic | null = null;
 function getClient() {
@@ -68,6 +69,7 @@ Return a JSON response with this exact structure:
 Be honest and conservative. Only flag genuine issues. Do not overstate the strength of weak evidence.`;
 
 export async function POST(request: NextRequest) {
+  const started = Date.now();
   try {
     const formData = await request.formData();
     const imageFile = formData.get("image") as File | null;
@@ -123,12 +125,38 @@ export async function POST(request: NextRequest) {
         throw new Error("No JSON found");
       }
     } catch {
+      after(() =>
+        logSearch({
+          query: buildAppealSearchQuery({
+            fineType,
+            contravention: "evidence",
+          }),
+          resultFound: false,
+          searchType: "fine",
+          durationMs: Date.now() - started,
+        })
+      );
       return NextResponse.json(
         { error: "parse_error", message: "Could not analyse this image. Please try a clearer photo." },
         { status: 422 }
       );
     }
 
+    const evidenceType =
+      typeof analysis?.evidence_type === "string" ? analysis.evidence_type : "evidence";
+    const issuesFound = Array.isArray(analysis?.issues_found) ? analysis.issues_found.length : 0;
+
+    after(() =>
+      logSearch({
+        query: buildAppealSearchQuery({
+          fineType,
+          contravention: evidenceType,
+        }),
+        resultFound: issuesFound > 0,
+        searchType: "fine",
+        durationMs: Date.now() - started,
+      })
+    );
     return NextResponse.json({ data: analysis });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
