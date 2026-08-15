@@ -57,6 +57,10 @@ No subscriptions. Pay once per fine.
 - /templates/popla-appeal-letter
 - /templates/ias-appeal-letter
 
+## Operator Appeal Pages
+
+- /appeals/parkingeye
+
 ## Appeal Grounds
 
 - /grounds/unclear-signage
