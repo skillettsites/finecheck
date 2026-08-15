@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { buildAppealSearchQuery, logSearch } from "@/lib/analytics";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -60,7 +61,12 @@ interface ScanResult {
   location: FieldResult;
 }
 
+function fieldText(field: FieldResult | undefined): string {
+  return typeof field?.value === "string" ? field.value : "";
+}
+
 export async function POST(request: NextRequest) {
+  const started = Date.now();
   try {
     const formData = await request.formData();
     const file = formData.get("image") as File | null;
@@ -149,6 +155,14 @@ export async function POST(request: NextRequest) {
         lowerText.includes("does not appear") ||
         lowerText.includes("cannot identify")
       ) {
+        after(() =>
+          logSearch({
+            query: buildAppealSearchQuery({ contravention: "ticket scan" }),
+            resultFound: false,
+            searchType: "fine",
+            durationMs: Date.now() - started,
+          })
+        );
         return NextResponse.json(
           {
             error: "not_a_ticket",
@@ -159,6 +173,14 @@ export async function POST(request: NextRequest) {
         );
       }
 
+      after(() =>
+        logSearch({
+          query: buildAppealSearchQuery({ contravention: "ticket scan" }),
+          resultFound: false,
+          searchType: "fine",
+          durationMs: Date.now() - started,
+        })
+      );
       return NextResponse.json(
         {
           error: "parse_error",
@@ -169,6 +191,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    after(() =>
+      logSearch({
+        query: buildAppealSearchQuery({
+          issuer: fieldText(result.issuer_name),
+          fineType: fieldText(result.fine_type),
+          contravention: fieldText(result.contravention_description),
+        }),
+        resultFound: true,
+        searchType: "fine",
+        durationMs: Date.now() - started,
+      })
+    );
     return NextResponse.json({ success: true, data: result });
   } catch (error) {
     console.error("Scan ticket error:", error);

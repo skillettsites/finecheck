@@ -12,6 +12,26 @@ import SearchableSelect from "@/components/ui/SearchableSelect";
 type FineType = "council" | "private" | "bus-lane" | "congestion";
 type Step = 1 | 2 | 3 | 4;
 
+function logFreeAppealUse(input: {
+  issuer: string;
+  fineType: FineType;
+  contravention: string;
+}): void {
+  void fetch("/api/log-search", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      issuer: input.issuer,
+      fineType: input.fineType,
+      contravention: input.contravention,
+      searchType: "appeal",
+      resultFound: true,
+    }),
+  }).catch(() => {
+    // Analytics must never break the appeal flow.
+  });
+}
+
 const STEP_LABELS = ["Fine Type", "Details", "Assessment", "Get Your Letter"];
 
 /* ------------------------------------------------------------------ */
@@ -1587,9 +1607,14 @@ export default function AppealFlow() {
 
     setAssessment(runAssessment());
     setAssessedWithCircumstances(Boolean(form.circumstances.trim()));
+    logFreeAppealUse({
+      issuer: form.fineType === "private" ? form.operatorName : form.councilName,
+      fineType: form.fineType,
+      contravention: form.contraventionDescription,
+    });
     setStep(3);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [validateStep2, runAssessment, form.circumstances]);
+  }, [validateStep2, runAssessment, form]);
 
   // Re-run the assessment in place on step 3 after the reader adds detail.
   const handleRefineAssessment = useCallback(() => {
