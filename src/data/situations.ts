@@ -122,8 +122,8 @@ Most supermarket parking operators will send reminder letters and may pass the c
         answer: 'This depends on the terms displayed on the signage. Some supermarket car parks restrict use to customers of that specific store. Others allow use for the wider retail area. Check the signage carefully. If the terms were unclear about whether adjacent shops were included, this ambiguity can support your appeal.'
       }
     ],
-    seoTitle: 'Aldi, Lidl, Tesco Fine? Don\'t Pay — Appeal Free',
-    seoDescription: '£60-£100 charge after supermarket shopping? Private ANPR fines from ParkingEye can be appealed — and many are cancelled. Free step-by-step guide with the strongest defences.'
+    seoTitle: 'Supermarket Parking Fine? Morrisons, Aldi, Lidl ANPR',
+    seoDescription: 'ParkingEye ANPR fine after shopping at Morrisons, Aldi, Lidl or Tesco? Many £60-£100 charges are cancelled. Free 60-second check, then a £2.99 appeal letter if you have grounds.'
   },
   {
     slug: 'hospital-parking-fine',

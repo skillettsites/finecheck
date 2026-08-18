@@ -7,6 +7,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import FAQ from "@/components/ui/FAQ";
+import FirstScreenCTA from "@/components/ui/FirstScreenCTA";
 import { OPERATOR_SITUATIONS } from "@/data/operator-situations";
 import { getOperatorBySlug } from "@/data/operators";
 import { getSituationBySlug } from "@/data/situations";
@@ -218,6 +219,12 @@ export default async function OperatorSituationPage({
               <p className="mt-4 text-lg text-gray-600">
                 {combo.description}
               </p>
+              <div className="mt-6 max-w-md">
+                <FirstScreenCTA
+                  headline={`Get a ${combo.locationName} appeal letter`}
+                  description={`Free 60-second check against ${op?.name || "the operator"} rules. Letter is £2.99 if you have grounds.`}
+                />
+              </div>
             </div>
 
             {op && (

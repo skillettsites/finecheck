@@ -7,6 +7,7 @@ import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import MidContentCTA from "@/components/ui/MidContentCTA";
+import FirstScreenCTA from "@/components/ui/FirstScreenCTA";
 import { BLOG_POSTS, getBlogPostBySlug, getRelatedPosts } from "@/data/blog-posts";
 
 export function generateStaticParams() {
@@ -431,6 +432,15 @@ export default async function BlogPostPage({
                   <span>·</span>
                   <span>{readTime} min read</span>
                 </div>
+                {post.heroPayCta ? (
+                  <div className="mt-6 max-w-lg">
+                    <FirstScreenCTA
+                      headline="DCBL is chasing the original parking charge"
+                      description="Check whether that charge is enforceable. If it is not, the £2.99 reply letter is the next step, not paying the inflated total."
+                      buttonText="Check the charge, then get the letter"
+                    />
+                  </div>
+                ) : null}
               </header>
 
               {/* Key takeaway / speakable summary — AI assistants and SGE

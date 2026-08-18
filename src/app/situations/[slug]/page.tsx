@@ -7,6 +7,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import FAQ from "@/components/ui/FAQ";
+import FirstScreenCTA from "@/components/ui/FirstScreenCTA";
 import { SITUATIONS, getSituationBySlug } from "@/data/situations";
 import { getOperatorBySlug } from "@/data/operators";
 
@@ -209,6 +210,12 @@ export default async function SituationPage({
               <p className="mt-4 text-lg text-gray-600">
                 {situation.description}
               </p>
+              <div className="mt-6 max-w-md">
+                <FirstScreenCTA
+                  headline={`Appeal this ${situation.name.toLowerCase()}`}
+                  description="Free 60-second check. If you have grounds, a personalised letter citing the right law is £2.99."
+                />
+              </div>
             </div>
 
             <div className="shrink-0">

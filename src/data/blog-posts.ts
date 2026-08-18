@@ -20,6 +20,8 @@ export interface BlogPost {
   faqs: { question: string; answer: string }[];
   seoTitle: string;
   seoDescription: string;
+  /** When true, the blog template puts a pay CTA in the first screen. */
+  heroPayCta?: boolean;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
