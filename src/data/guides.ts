@@ -698,97 +698,105 @@ Both can work in your favour when appealing.`,
   },
   {
     slug: 'popla-appeal-guide',
-    title: 'POPLA Appeal Guide: How to Win at POPLA',
-    description: 'Complete guide to appealing a private parking charge to POPLA. Covers eligibility, how to submit, evidence tips, and what to expect.',
+    title: 'POPLA Appeal Guide 2026: How to Win at POPLA',
+    description: 'Answer-first guide to appealing a private parking charge to POPLA before the decision: who can use it, the 28-day deadline, the grounds that win, the evidence to attach, and what the published figures say.',
     category: 'process',
-    content: `## How to Appeal to POPLA and Win
+    content: `## The Short Answer
 
-POPLA (Parking on Private Land Appeals) is the independent appeals service for motorists who have received a parking charge from a BPA (British Parking Association) member operator. POPLA is run by the Chartered Institute of Arbitrators and provides a free, binding adjudication.
+**POPLA is the free, independent appeals service for parking charges issued by British Parking Association (BPA) members, and you can only use it after the operator has rejected your first appeal.** The rejection letter gives you a POPLA verification code, and **you have 28 days from the date of that rejection letter to submit your appeal at popla.co.uk.** Lead with a procedural ground (a late or defective Notice to Keeper, inadequate signage, an ANPR timing error, a payment the operator did not record, or a grace period that was not applied), attach the evidence for it, and keep the whole submission factual. **A POPLA decision binds the operator but not you: if you win the charge is cancelled, and if you lose you are no worse off than before you appealed.**
 
-### Who Can Appeal to POPLA?
+In the year to 30 September 2024 POPLA completed 92,098 appeals and cancelled the charge in 40% of them (37,016), and operators chose not to contest a further 23,800 appeals once they had been lodged (POPLA Annual Report 2024, published 12 September 2025).
 
-You can appeal to POPLA if:
+## Who Can Appeal to POPLA
 
-1. The parking operator is a member of the BPA
-2. You have already appealed to the operator and been rejected
-3. You are within the appeal deadline (stated in the operator's rejection letter, typically 28 days)
+- The operator must be a BPA member. ParkingEye, UKPC, Euro Car Parks, APCOA and NCP are BPA members, so their charges go to POPLA. If the operator is an IPC member (Smart Parking and Premier Park among them), the equivalent service is the IAS and POPLA will not accept the appeal.
+- You must have appealed to the operator first and been rejected. POPLA will not look at a charge you have not challenged with the operator.
+- You must be inside the deadline printed on the rejection letter, normally 28 days.
+- Either the driver or the registered keeper can appeal. If you are the keeper, you do not have to say who was driving.
 
-You cannot appeal to POPLA if the operator is an IPC member (use IAS instead) or if you have not first appealed to the operator.
+## The Deadline
 
-### How to Submit Your POPLA Appeal
+**The 28-day POPLA window runs from the date on the operator's rejection letter, not from the day you opened it.** Submit early; a late appeal is refused without a decision on the merits. While a POPLA appeal is open the charge is on hold, and the operator should not add fees, pass the charge to a debt collector or start court action until the decision is issued.
 
-1. **Get your appeal code**: The operator's rejection letter will include a unique POPLA appeal code and a link to the POPLA website
-2. **Go to the POPLA website**: Visit the POPLA portal and enter your appeal code
-3. **Complete the online form**: Set out your grounds for appeal clearly and concisely
-4. **Upload evidence**: Attach photos, screenshots, documents, and any other evidence supporting your case
-5. **Submit**: Once submitted, the operator has a set period to respond with their evidence
-6. **Decision**: A POPLA assessor reviews both sides and makes a binding decision
+## The Grounds That Win at POPLA
 
-### Grounds That Win at POPLA
+Put the strongest ground first and number your points. Assessors decide on whether the charge was validly issued, not on whether it was fair.
 
-Based on analysis of published POPLA decisions, these grounds have the highest success rates:
+### 1. The Notice to Keeper does not comply with POFA 2012
 
-**1. NtK non-compliance (highest success rate)**
-If the Notice to Keeper was not served within 14 days or does not contain all required information, POPLA will almost certainly find in your favour.
+Where the operator is relying on keeper liability, Schedule 4 of the Protection of Freedoms Act 2012 requires the Notice to Keeper to be served within 14 days of the parking event where no notice was left on the windscreen, and to contain specific wording, including the amount, the period of parking and the invitation to pay or to name the driver. **A Notice to Keeper served late or missing the prescribed wording cannot transfer liability to the keeper, and POPLA assessors treat this as decisive.** Check the dates on the notice against the date of the event and quote the paragraph the notice fails.
 
-**2. Signage inadequacy**
-If you can demonstrate that the signage was not visible, was obscured, or did not contain all required terms, this is a strong ground.
+### 2. Signage that does not form a contract
 
-**3. ANPR errors**
-If you can show the ANPR system recorded incorrect times (e.g., by providing fuel receipts, shop receipts, or dashcam footage showing different times), this undermines the operator's evidence.
+The charge only exists if the signs at the entrance and around the car park were clear enough to create a contract. The BPA Code of Practice sets minimum requirements for entrance signs and terms signs, and the Supreme Court in ParkingEye v Beavis upheld the charge partly because the signs were large, prominent and clearly worded. Photograph the entrance, the sign nearest your bay and any sign that was obscured, unlit or faded, and say which BPA Code paragraph was breached.
 
-**4. Valid payment made**
-If you can prove you made a payment (app screenshot, bank statement) that was not recognised by the system, this is a strong ground.
+### 3. ANPR timing and plate errors
 
-**5. Grace period not applied**
-If the overstay was within the required grace period, the charge should not have been issued.
+ANPR cameras record entry and exit at the boundary, not the period of parking. Two visits in one day can be stitched into one long stay, plates are misread, and time spent queuing to leave is counted. Receipts, bank card timestamps, dashcam footage or a second vehicle with a similar plate all undermine the operator's evidence.
 
-### Tips for a Winning POPLA Appeal
+### 4. Payment made but not recorded
 
-**Be concise**: POPLA assessors deal with thousands of cases. Make your points clearly and in order. Use numbered paragraphs.
+App and machine payments fail, registrations are mistyped by one character, and pay-and-display tickets fall face down. A screenshot, bank statement line or ticket showing payment for the period is usually enough.
 
-**Lead with your strongest ground**: If you have an NtK compliance issue, put that first. If the NtK is compliant, lead with signage or ANPR evidence.
+### 5. Grace period not applied
 
-**Reference the BPA Code of Practice**: Quote specific sections of the code that the operator has breached.
+The BPA Code requires a minimum 10-minute grace period after the paid or free period ends. Overstays inside that period should not be charged.
 
-**Include all evidence in one submission**: You typically get one chance to submit evidence. Include everything: photos, receipts, screenshots, maps, Google Street View images.
+### 6. Mitigation on its own rarely wins
 
-**Do not be emotional**: Stick to facts and legal arguments. Statements like "this is unfair" or "I am a loyal customer" carry less weight than "the signage at the entrance was obscured by vegetation, as shown in Photo 3."
+Breakdowns, medical emergencies and store queues can succeed with evidence, but POPLA is deciding whether the charge was validly issued. Pair mitigation with a procedural ground wherever you can, and note that POPLA can refer a case back to the operator for a goodwill cancellation: it did so 707 times in the year to September 2024 and the operator agreed in 429 of them (POPLA Annual Report 2024).
 
-**Address the operator's points**: When the operator submits their response, POPLA may give you a chance to reply. Address their specific points factually.
+## What to Attach
 
-### What Happens After the Decision?
+- The Notice to Keeper or Notice to Driver, both sides, and the operator's rejection letter
+- Dated photographs of every relevant sign, including the entrance sign, and a wide shot showing where the sign sits relative to your bay
+- Proof of payment or of your visit: receipts, app screenshots, bank statements
+- Anything that fixes the timeline: dashcam, phone photos with metadata, witness statements
+- A numbered list of your grounds with the evidence referenced by number, and the BPA Code paragraph or POFA paragraph each ground relies on
 
-**If you win**: The parking charge is cancelled. The operator must not pursue the charge further or contact you about it.
+## How the Process Runs
 
-**If you lose**: The original charge remains due. The operator may send further payment demands. However, the charge amount cannot increase because you appealed to POPLA.
+1. Enter the verification code from the rejection letter at popla.co.uk and complete the online form.
+2. Upload your evidence in one submission. You do not get a second chance to add documents unless the operator's evidence raises something new.
+3. The operator has a set period to submit its evidence pack. You are sent a copy and can comment on it.
+4. An assessor decides on the papers. Most decisions arrive within a few weeks of the operator's evidence deadline.
+5. If the operator does not submit evidence in time, the appeal is normally allowed.
 
-### POPLA Statistics
+## After the Decision
 
-POPLA publishes annual reports showing:
-- Approximately 40-50% of appeals are decided in the motorist's favour
-- The most common successful grounds are NtK non-compliance, signage issues, and evidence of valid payment
-- Appeals with photographic evidence have significantly higher success rates than those without`,
+**If you win, the operator must cancel the charge and stop all contact about it.** If you lose, the original amount stays payable and the operator can restart collection, but the decision is not a court judgment and creates no debt in itself. Your options at that point, including how to answer debt collectors and a Letter Before Claim, are covered in our blog post on what happens after a POPLA appeal is rejected.
+
+## What the Published Figures Say
+
+POPLA publishes an annual report. For 1 October 2023 to 30 September 2024 it received 98,110 appeals, completed 92,098, cancelled the charge in 40% of completed appeals (37,016), and recorded 23,800 appeals that operators chose not to contest, which also cancels the charge. Those figures come from the POPLA Annual Report 2024 and were checked on 11 September 2026.`,
     faqs: [
       {
+        question: 'What is the POPLA appeal deadline?',
+        answer: 'You have 28 days from the date on the operator\'s rejection letter to submit your appeal at popla.co.uk using the verification code in that letter. Late appeals are refused without a decision on the merits, so submit early.'
+      },
+      {
         question: 'Is POPLA really independent from the parking operators?',
-        answer: 'POPLA is managed by the Chartered Institute of Arbitrators, which is independent of the BPA and its member operators. While the BPA funds POPLA, the assessors are independent and regularly rule against operators. Success rates of 40-50% support the view that POPLA provides genuine independent adjudication.'
+        answer: 'POPLA is operated independently of the BPA and its member operators, and its published outcomes show assessors regularly finding against operators: in the year to 30 September 2024 it cancelled the charge in 40% of the 92,098 appeals it completed, and operators chose not to contest a further 23,800 (POPLA Annual Report 2024).'
+      },
+      {
+        question: 'Can I appeal to POPLA if the operator is an IPC member?',
+        answer: 'No. POPLA only hears appeals against BPA members. If the operator belongs to the International Parking Community (Smart Parking and Premier Park, for example), the rejection letter will point you to the Independent Appeals Service (IAS) instead.'
       },
       {
         question: 'How long does a POPLA appeal take?',
-        answer: 'Most POPLA appeals are decided within 4-6 weeks of submission. Complex cases may take longer. You will receive an email notification when the decision is made.'
+        answer: 'Most POPLA appeals are decided within a few weeks of the operator\'s evidence deadline. Complex cases can take longer. You receive an email when the decision is issued.'
       },
       {
         question: 'Can the parking company increase the charge if I lose at POPLA?',
-        answer: 'No. If you appeal to POPLA and lose, the charge remains at the original amount. The operator cannot add interest, fees, or penalties because you exercised your right to appeal.'
+        answer: 'No. If you appeal to POPLA and lose, the charge remains at the original amount. The operator cannot add interest, fees or penalties because you exercised your right to appeal.'
       },
       {
         question: 'Can I appeal to POPLA if I have already paid the charge?',
-        answer: 'Generally no. Paying the charge is considered acceptance of the debt. You should not pay the charge while you intend to appeal. If you have already paid but believe the charge was clearly invalid, contact POPLA to ask if they will accept a late appeal in exceptional circumstances.'
+        answer: 'Generally no. Paying the charge is treated as acceptance of it. Do not pay while you intend to appeal. If you have already paid and believe the charge was clearly invalid, contact POPLA to ask whether it will accept a late appeal in exceptional circumstances.'
       },
       {
         question: 'What if the operator does not respond to POPLA?',
-        answer: 'If the operator fails to submit their evidence to POPLA within the required timeframe, POPLA will typically decide in the motorist\'s favour by default, as the operator has not contested the appeal.'
+        answer: 'If the operator fails to submit its evidence to POPLA within the required time, POPLA will normally decide in the motorist\'s favour because the appeal has not been contested.'
       }
     ],
     relatedGuides: [
@@ -797,8 +805,8 @@ POPLA publishes annual reports showing:
       'parking-fine-signage-rules',
       'parking-fine-deadlines'
     ],
-    seoTitle: 'POPLA Appeal Guide | How to Win Your POPLA Parking Appeal (2024)',
-    seoDescription: 'Complete guide to winning POPLA appeals. Learn how to submit, what evidence to include, the best legal grounds, and success rates for private parking appeals.'
+    seoTitle: 'POPLA Appeal Guide 2026: Deadline, Grounds That Win, Evidence',
+    seoDescription: 'How to make a POPLA appeal in 2026: who can use it, the 28-day deadline, the grounds that win (late Notice to Keeper, signage, ANPR, payment, grace period), what to attach, and the published 2024 outcome figures.'
   },
   {
     slug: 'traffic-penalty-tribunal-guide',

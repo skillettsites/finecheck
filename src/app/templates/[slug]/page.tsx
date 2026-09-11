@@ -49,6 +49,17 @@ const categoryConfig: Record<
   escalation: { label: "Escalation", variant: "accent" },
 };
 
+// Stage-specific guide linked from the template sidebar with the anchor the
+// query uses. Keyed by template slug so no data type changes are needed.
+const TEMPLATE_GUIDE_LINKS: Record<string, { href: string; anchor: string; blurb: string }> = {
+  "popla-appeal-letter": {
+    href: "/guides/popla-appeal-guide",
+    anchor: "POPLA appeal",
+    blurb:
+      "Eligibility, the 28-day deadline, the grounds that win and what to attach, for the stage before the decision.",
+  },
+};
+
 export default async function TemplateDetailPage({
   params,
 }: {
@@ -59,6 +70,7 @@ export default async function TemplateDetailPage({
   if (!template) notFound();
 
   const cat = categoryConfig[template.category];
+  const guideLink = TEMPLATE_GUIDE_LINKS[template.slug];
 
   const relatedTemplates = template.relatedTemplates
     .map((s) => TEMPLATES.find((t) => t.slug === s))
@@ -287,7 +299,7 @@ export default async function TemplateDetailPage({
                 </h3>
                 <p className="text-sm text-gray-600 mb-3">
                   Read our detailed guide on appealing charges from this
-                  operator, including known weaknesses and success rates.
+                  operator, including known weaknesses and the appeal route.
                 </p>
                 <Button
                   href={`/appeals/${template.operatorSlug}`}
@@ -297,6 +309,26 @@ export default async function TemplateDetailPage({
                 >
                   View Operator Guide
                 </Button>
+              </Card>
+            )}
+
+            {/* Guide link for templates that sit at a specific appeal stage */}
+            {guideLink && (
+              <Card padding="md">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Before You Send It
+                </h3>
+                <p className="text-sm text-gray-600 mb-3">{guideLink.blurb}</p>
+                <p className="text-sm text-gray-600">
+                  Read the{" "}
+                  <Link
+                    href={guideLink.href}
+                    className="font-medium text-teal-700 hover:underline"
+                  >
+                    {guideLink.anchor}
+                  </Link>{" "}
+                  guide first.
+                </p>
               </Card>
             )}
 
@@ -340,10 +372,10 @@ export default async function TemplateDetailPage({
                 Did You Know?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Over 10 million private parking charges are issued in the UK
-                every year, but fewer than 3% are appealed. Of those that are
-                appealed, around 40-50% are cancelled at the independent appeals
-                stage. Many people pay fines they could have successfully
+                POPLA completed 92,098 appeals in the year to 30 September
+                2024 and cancelled the charge in 40% of them, while operators
+                chose not to contest a further 23,800 (POPLA Annual Report
+                2024). Many people pay charges they could have successfully
                 challenged.
               </p>
             </Card>

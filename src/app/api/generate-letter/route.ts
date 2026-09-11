@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import Stripe from "stripe";
+import {
+  STAGE_REPLY_LETTER_ID,
+  isStageReplyStage,
+  stageSystemPrompt,
+  stageUserPrompt,
+  type StageLetterInput,
+} from "@/lib/stage-letter";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -34,8 +41,14 @@ interface GenerateLetterRequest {
   appealGrounds: string[];
   senderName: string;
   senderAddress: string;
-  // Product type
-  product: "basic" | "premium";
+  // Product type. "stage-reply" is the £9.99 Escalation Reply Letter: the
+  // same call, verified against a stage-reply-letter session, with the
+  // stage-specific prompt from src/lib/stage-letter.ts.
+  product: "basic" | "premium" | "stage-reply";
+  stage?: string;
+  stageSenderName?: string;
+  stageLetterDate?: string;
+  wasDriver?: string;
   // Payment verification
   sessionId: string;
 }
@@ -153,8 +166,11 @@ function validateRequest(body: GenerateLetterRequest): string | null {
   if (!body.appealGrounds || body.appealGrounds.length === 0) {
     return "At least one appeal ground is required";
   }
-  if (!body.product || !["basic", "premium"].includes(body.product)) {
-    return "Product must be 'basic' or 'premium'";
+  if (!body.product || !["basic", "premium", "stage-reply"].includes(body.product)) {
+    return "Product must be 'basic', 'premium' or 'stage-reply'";
+  }
+  if (body.product === "stage-reply" && !isStageReplyStage(body.stage)) {
+    return "A valid stage is required for the Escalation Reply Letter";
   }
   if (body.fineType === "council" && !body.councilName) {
     return "Council name is required for council PCNs";
@@ -269,6 +285,12 @@ export async function POST(request: Request) {
           { status: 402 }
         );
       }
+      if (body.product === "stage-reply" && paidProductId !== STAGE_REPLY_LETTER_ID) {
+        return NextResponse.json(
+          { error: "The Escalation Reply Letter requires that purchase." },
+          { status: 402 }
+        );
+      }
     } catch (err) {
       console.error("Stripe verification failed:", err);
       return NextResponse.json(
@@ -277,15 +299,41 @@ export async function POST(request: Request) {
       );
     }
 
-    const userPrompt = buildUserPrompt(body);
+    // Stage reply: same model, stage-specific prompts. The body's grounds are
+    // "title (legal basis)" strings, which the stage prompt takes as titles.
+    const stageInput: StageLetterInput | null =
+      body.product === "stage-reply" && isStageReplyStage(body.stage)
+        ? {
+            stage: body.stage,
+            fineType: body.fineType,
+            operatorName: body.operatorName,
+            councilName: body.councilName,
+            pcnReference: body.referenceNumber,
+            vehicleReg: body.vehicleReg,
+            location: body.location,
+            fineDate: body.fineDate,
+            ntkReceivedDate: body.ntkReceivedDate,
+            fineAmount: body.fineAmount && body.fineAmount > 0 ? (body.fineAmount / 100).toFixed(2) : undefined,
+            wasDriver: body.wasDriver,
+            circumstances: body.circumstances,
+            stageSenderName: body.stageSenderName,
+            stageLetterDate: body.stageLetterDate,
+            senderName: body.senderName,
+            senderAddress: body.senderAddress,
+            grounds: body.appealGrounds.map((g) => ({ title: g, legalBasis: "" })),
+          }
+        : null;
+
+    const userPrompt = stageInput ? stageUserPrompt(stageInput) : buildUserPrompt(body);
+    const systemPrompt = stageInput ? stageSystemPrompt(stageInput.stage, stageInput.fineType) : SYSTEM_PROMPT;
 
     // Determine max tokens based on product
-    const maxTokens = body.product === "premium" ? 5000 : 3000;
+    const maxTokens = body.product === "premium" ? 5000 : stageInput ? 3500 : 3000;
 
     const message = await anthropic.messages.create({
       model: "claude-sonnet-5",
       max_tokens: maxTokens,
-      system: SYSTEM_PROMPT,
+      system: systemPrompt,
       messages: [
         {
           role: "user",

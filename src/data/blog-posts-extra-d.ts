@@ -100,7 +100,7 @@ IAS is run by the IPC, which is a structural concern many writers (including Sir
 
 ## If Excel Sends Debt Collectors
 
-If you do not pay and do not appeal, Excel typically passes the file to **DRP (Debt Recovery Plus)** or **ZZPS**. Neither has any greater legal authority than Excel. You can respond using our [debt collector response letter](/templates/debt-collector-response-letter), which cites POFA 4(5) and CPUTR 2008 reg 5 if the collector misrepresents the legal status of the debt.
+If you do not pay and do not appeal, Excel typically passes the file to **DRP** ([Debt Recovery Plus](/blog/should-i-ignore-debt-recovery-plus-letter)) or **ZZPS**. Neither has any greater legal authority than Excel. You can respond using our [debt collector response letter](/templates/debt-collector-response-letter), which cites POFA 4(5) and CPUTR 2008 reg 5 if the collector misrepresents the legal status of the debt.
 
 [[CTA:slate|Excel PCN, IAS deadline approaching|£2.99 covers the tailored appeal letter. £4.99 premium adds the second stage appeal letter for the IAS and an evidence checklist.|See pricing|/pricing]]
 
@@ -162,7 +162,7 @@ Excel Parking PCNs are not invincible. Six recurring weaknesses, POFA wording, u
       "Smart Parking's ANPR catches double-entries, misread plates, bay-share errors. Find out which apply plus a £2.99 IAS-ready letter that cites them.",
     content: `## Smart Parking and the ANPR Problem
 
-Smart Parking Ltd is an Australian-owned private parking operator and a member of the **International Parking Community (IPC)**, with appeals heard at the **Independent Appeals Service (IAS)**. Almost all Smart Parking enforcement is done by **Automatic Number Plate Recognition** cameras, with no warden on site.
+Smart Parking Ltd is an Australian-owned private parking operator and a member of the **International Parking Community (IPC)**, with appeals heard at the **Independent Appeals Service (IAS)**. Almost all Smart Parking enforcement is done by **Automatic Number Plate Recognition** cameras, with no warden on site. Our [Smart Parking appeal](/appeals/smart-parking) guide covers the full first-stage and IAS route; this post focuses on the ANPR errors themselves.
 
 ANPR is fast and cheap to run, but it is also where most appealable errors live. The cameras read plates, two timestamps make a "stay", and the system bills automatically. Nothing in that chain is verified by a human until you raise a challenge. Six recurring error types come up in IAS rulings, and each one is something you can spot from the photos on your Notice to Keeper.
 
@@ -260,7 +260,7 @@ The £2.99 letter at our [Smart Parking template page](/templates/smart-parking-
 
 ## What Happens After IAS
 
-If IAS finds against you, the charge stands and Smart Parking can pursue. Realistically, Smart Parking is **less litigious** than ParkingEye, and many unpaid charges end with debt collection letters from DRP or ZZPS rather than court. If a Letter Before Claim does arrive, our [debt collector response letter](/templates/debt-collector-response-letter) and [court defence guide](/guides/parking-fine-court-defence) cover the next steps.
+If IAS finds against you, the charge stands and Smart Parking can pursue. Realistically, Smart Parking is **less litigious** than ParkingEye, and many unpaid charges end with debt collection letters from [Debt Recovery Plus](/blog/should-i-ignore-debt-recovery-plus-letter) (DRP) or ZZPS rather than court. If a Letter Before Claim does arrive, our [debt collector response letter](/templates/debt-collector-response-letter) and [court defence guide](/guides/parking-fine-court-defence) cover the next steps.
 
 [[CTA:slate|Smart Parking PCN, ANPR error suspected|£2.99 appeal letter, or £4.99 with a second stage letter and an evidence checklist.|See pricing|/pricing]]
 
@@ -458,15 +458,15 @@ A statutory demand for a £170 parking fine is a bluff. The Insolvency Act 1986 
     slug: "traffic-penalty-tribunal-appeal-win",
     title: "Traffic Penalty Tribunal: How To Win a Council PCN Appeal",
     description:
-      "64% of TPT appeals succeed when presented well. What adjudicators want, statutory grounds, evidence rules, and a £4.99 pack with an appeal letter and evidence checklist.",
+      "The Traffic Penalty Tribunal is free, independent and decides on the law and the evidence. What adjudicators want, the statutory grounds, evidence rules, and a £4.99 pack with an appeal letter and evidence checklist.",
     publishedDate: "2026-05-06",
     category: "Legal",
     seoTitle: "Traffic Penalty Tribunal: How To Win a Council PCN Appeal",
     seoDescription:
-      "64% of TPT appeals succeed if presented well. Here is what adjudicators want, plus a £4.99 pack with an appeal letter and an evidence checklist.",
+      "Council rejected your representations? The Traffic Penalty Tribunal is free and independent. What adjudicators want, plus a £4.99 pack with an appeal letter and an evidence checklist.",
     content: `## Stage 3 Is Where Most Drivers Win
 
-Most drivers who challenge a council Penalty Charge Notice and lose at the council's "formal representations" stage stop there and pay. They shouldn't. The next step, the **Traffic Penalty Tribunal** (TPT) for England and Wales outside Greater London, or **London Tribunals** within Greater London, is independent of the council, free to use, and decides cases on the law and the evidence rather than the council's internal policy. Published TPT statistics over recent years show that the majority of contested appeals succeed in part or whole, particularly where the appellant presents a structured case statement with photo evidence.
+Most drivers who challenge a council Penalty Charge Notice and lose at the council's "formal representations" stage stop there and pay. They shouldn't. The next step, the **Traffic Penalty Tribunal** (TPT) for England and Wales outside Greater London, or **London Tribunals** within Greater London, is independent of the council, free to use, and decides cases on the law and the evidence rather than the council's internal policy. The Tribunal publishes its appeal outcomes by authority and penalty type at tpt.gov.uk/appeals-data; for comparison, London Tribunals allowed 49% of the parking appeals it determined in 2024-25 (Environment and Traffic Adjudicators Annual Report 2024-25). A structured case statement with photo evidence is what adjudicators reward.
 
 This guide is the playbook adjudicators reward. It also explains the £4.99 premium pack: a personalised appeal letter for the tribunal stage plus an evidence checklist to work through before you upload.
 
@@ -641,7 +641,7 @@ ParkingEye is by some distance the most aggressive private parking operator in t
 
 A CCJ stays on your **public record at the Registry Trust** and on **all three credit reference agencies (Experian, Equifax, TransUnion)** for **six years** from the date of judgment. During that time it can affect mortgages, remortgages, credit cards, mobile contracts, car finance and tenancy applications. Some lenders refuse outright. Others price up the rate.
 
-The good news: there are three legitimate routes to remove or neutralise a ParkingEye CCJ. They are not all equally fast or cheap, and which one applies depends on your situation. This guide walks all three.
+The good news: there are three legitimate routes to remove or neutralise a ParkingEye CCJ. They are not all equally fast or cheap, and which one applies depends on your situation. This guide walks all three. (Charge not yet at court? Our [ParkingEye appeal](/appeals/parkingeye) guide covers the earlier stages.)
 
 [[CTA:teal|ParkingEye CCJ on your credit file?|We do not produce court forms or credit file dispute letters. The £19.99 Escalation Pack gives you the decision guide covering the judgment stage, a defence checklist and a witness statement skeleton for the case behind the judgment.|See what is in the pack|/escalation-pack]]
 

@@ -303,6 +303,33 @@ function renderContent(content: string): React.ReactNode[] {
     // Empty line
     if (line.trim() === "") continue;
 
+    // Inline box token: [[BOX|Title|line|line...]]. Each line runs through
+    // formatInline so links and bold work. Used for answer-first blocks that
+    // sit above the existing copy without touching any heading.
+    const boxMatch = line.match(/^\[\[BOX\|(.+)\]\]$/);
+    if (boxMatch) {
+      flushList();
+      const [boxTitle, ...boxLines] = boxMatch[1].split("|");
+      elements.push(
+        <div
+          key={`box-${key++}`}
+          className="not-prose rounded-xl border-2 border-teal-200 bg-teal-50/60 p-5"
+        >
+          {boxTitle ? (
+            <p className="text-sm font-semibold uppercase tracking-wider text-teal-800 mb-2">
+              {boxTitle}
+            </p>
+          ) : null}
+          <ul className="space-y-1.5 text-sm text-slate-700 leading-relaxed">
+            {boxLines.map((boxLine, idx) => (
+              <li key={idx}>{formatInline(boxLine)}</li>
+            ))}
+          </ul>
+        </div>
+      );
+      continue;
+    }
+
     // Inline CTA token: [[CTA]] or [[CTA:variant|headline|description|button|href]]
     const ctaMatch = line.match(/^\[\[CTA(?::([^\]]*))?\]\]$/);
     if (ctaMatch) {

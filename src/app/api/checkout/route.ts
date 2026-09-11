@@ -2,19 +2,23 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { PRODUCTS } from "@/data/products";
 import { attributionToMetadata, type Attribution } from "@/lib/tracking";
+import { isAppealStage } from "@/lib/assessment";
+import { STAGE_REPLY_LETTER_ID, STAGE_METADATA_KEY, sanitiseAddOns } from "@/lib/stage-letter";
 
 // Stripe metadata limits: 50 keys total, 500 chars per value, 40 chars per key.
-// The appeal branch spends: productId + fineType + email (3), plus the
+// The appeal branch spends: productId + fineType + email + stage (4), plus the
 // appeal_chunks counter emitted by encodeAppeal (1), plus 0 to 7 attribution
-// keys, plus appeal_0 ... appeal_N.
+// keys, plus appeal_0 ... appeal_N. The stage key is only written when the
+// client sends one, but the budget reserves it regardless so the longest
+// possible form can never exceed 50 keys.
 //
 // Rather than hardcode a worst case and waste slots on the common visitor who
 // arrives with no UTMs, compute the chunk budget per request. A typical
 // submission measures around 1.6KB (4 chunks), so even the tightest budget
-// leaves roughly 10x headroom.
+// (50 - 4 - 1 - 7 = 38 chunks, 17KB) leaves roughly 10x headroom.
 const CHUNK_SIZE = 450;
 const STRIPE_METADATA_KEY_LIMIT = 50;
-const FIXED_APPEAL_KEYS = 3; // productId, fineType, email
+const FIXED_APPEAL_KEYS = 4; // productId, fineType, email, stage
 const CHUNK_COUNTER_KEYS = 1; // appeal_chunks
 
 function chunkBudget(attributionKeyCount: number): number {
@@ -64,8 +68,15 @@ interface EscalationDetails {
 interface CheckoutPostBody {
   productId?: string;
   fineType?: string;
+  // Where the reader is in the process (see AppealStage). Sent by the appeal
+  // flow since 2026-09-11; absent from older clients and from the
+  // escalation-pack page, which never runs the assessment.
+  stage?: string;
   appeal?: {
     form?: { email?: string; fineType?: string };
+    stage?: string;
+    // Product ids bundled with the Escalation Reply Letter (Premium pack only).
+    addOns?: unknown;
   };
   // Optional buyer details for the Escalation Pack so the static documents
   // can be pre-filled before they are rendered to PDF. All fields optional:
@@ -182,12 +193,35 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Valid email is required" }, { status: 400 });
   }
 
-  const encoded = encodeAppeal(body.appeal, chunkBudget(Object.keys(attributionMeta).length));
+  // Stage is optional so the legacy client and the first-stage path encode
+  // exactly as before; "new" is written when the flow sends it.
+  const stageRaw = body.stage ?? body.appeal.stage;
+  const stage = isAppealStage(stageRaw) ? stageRaw : undefined;
+  const stageMeta: Record<string, string> = stage ? { [STAGE_METADATA_KEY]: stage } : {};
+
+  // Add-ons exist only for the Escalation Reply Letter and only the Premium
+  // pack is allowed. Normalise them into the encoded appeal so the webhook
+  // fulfils exactly what was charged, never what the client claimed.
+  const addOns = productId === STAGE_REPLY_LETTER_ID ? sanitiseAddOns(body.appeal.addOns) : [];
+  const appealToEncode = productId === STAGE_REPLY_LETTER_ID ? { ...body.appeal, addOns } : body.appeal;
+
+  const encoded = encodeAppeal(appealToEncode, chunkBudget(Object.keys(attributionMeta).length));
   if ("error" in encoded) {
     return NextResponse.json({ error: encoded.error }, { status: 400 });
   }
 
   const product = PRODUCTS[productId];
+  const addOnLineItems = addOns.map((id) => ({
+    price_data: {
+      currency: "gbp" as const,
+      product_data: {
+        name: PRODUCTS[id].name,
+        description: PRODUCTS[id].description,
+      },
+      unit_amount: PRODUCTS[id].price,
+    },
+    quantity: 1,
+  }));
 
   try {
     const stripe = getStripe();
@@ -209,6 +243,7 @@ export async function POST(request: NextRequest) {
           },
           quantity: 1,
         },
+        ...addOnLineItems,
       ],
       mode: "payment",
       allow_promotion_codes: true,
@@ -219,6 +254,7 @@ export async function POST(request: NextRequest) {
         productId,
         fineType,
         email,
+        ...stageMeta,
         ...attributionMeta,
         ...encoded,
       },
@@ -230,6 +266,7 @@ export async function POST(request: NextRequest) {
           productId,
           email,
           source: "appealafine-web",
+          ...stageMeta,
           ...(attributionMeta.landing_page ? { landing_page: attributionMeta.landing_page } : {}),
         },
       },

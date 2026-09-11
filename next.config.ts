@@ -41,6 +41,10 @@ const nextConfig: NextConfig = {
       // Q-Park has no operator profile (not in OPERATORS), so /appeals/q-park
       // 404s. 301 to the operators hub instead of a dead page. Added 2026-06-18.
       { source: '/appeals/q-park', destination: '/appeals', permanent: true },
+      // Debt Recovery Plus: the two posts shared 88.5% of their impressions on the
+      // same queries (GSC, 28 days to 8 Sep 2026), so the entity post was merged
+      // into the stronger "should I ignore" post. Added 2026-09-11.
+      { source: '/blog/debt-recovery-plus-drp-parking-fine', destination: '/blog/should-i-ignore-debt-recovery-plus-letter', permanent: true },
     ];
   },
   async headers() {

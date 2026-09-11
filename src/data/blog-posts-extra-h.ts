@@ -7,19 +7,19 @@ import type { BlogPost } from "./blog-posts";
 export const BATCH_H: BlogPost[] = [
   {
     slug: "parkingeye-court-claim-defence-template",
-    title: "ParkingEye Court Claim N1: The Defence That Filters Out 30% of Bulk Claims",
+    title: "ParkingEye Court Claim N1: The Defence That Gets Bulk Claims Discontinued",
     description:
-      "ParkingEye files thousands of bulk County Court claims every year, and around 30% are quietly discontinued once a properly-grounded defence lands. The POFA 9(4) timing defence, the signage and Beavis distinction, and the £19.99 Escalation Pack defence checklist.",
+      "ParkingEye files thousands of bulk County Court claims every year, and a properly-grounded defence is often followed by a quiet discontinuance. The POFA 9(4) timing defence, the signage and Beavis distinction, and the £19.99 Escalation Pack defence checklist.",
     publishedDate: "2026-05-18",
     category: "Operator Court Claims",
     seoTitle: "ParkingEye Court Claim Defence N1 (2026 Guide)",
     seoDescription:
-      "ParkingEye N1 claim form? Filed 71,442 CCJs in 2024. The defence that gets 30% discontinued: POFA 9(4), Beavis distinction, signage. £19.99 Escalation Pack.",
+      "ParkingEye N1 claim form? Filed 71,442 CCJs in 2024. The defence that gets bulk claims discontinued: POFA 9(4), Beavis distinction, signage. £19.99 Escalation Pack.",
     content: `## ParkingEye Are Volume Litigators — That Is Their Weakness
 
 In 2024, ParkingEye Ltd filed **71,442 County Court Judgments** against motorists ([RAC Foundation 2024](https://www.racfoundation.org/research/mobility/parking-2024-update)) — the largest of any single private parking operator in the UK. The business model is volume: bulk-issue claims via the County Court Business Centre, hope most defendants ignore them, and convert default judgments at scale.
 
-The corollary is that ParkingEye's claims are **lightly evidenced**. When a defendant files a properly-grounded N9B defence raising POFA 2012 §9, signage and Beavis-distinction grounds, the cost-benefit equation flips. ParkingEye **discontinues** an estimated **25-35% of defended claims** at the N180 / pre-hearing stage rather than incur the disclosure burden for a £170 sum. The defence that gets you into that 25-35% is built on three pillars.
+The corollary is that ParkingEye's claims are **lightly evidenced**. When a defendant files a properly-grounded N9B defence raising POFA 2012 §9, signage and Beavis-distinction grounds, the cost-benefit equation flips. ParkingEye frequently **discontinues** defended claims at the N180 / pre-hearing stage rather than incur the disclosure burden for a £170 sum; we have not found a published figure for how often, so we do not quote one. A properly grounded defence is built on three pillars. (Not at the claim stage yet? Start with our [ParkingEye appeal](/appeals/parkingeye) guide.)
 
 [[CTA:teal|Got a ParkingEye claim form?|The £19.99 Escalation Pack sets out the first 14 days, gives you a defence checklist covering the POFA timing, signage and quantum points, and a witness statement skeleton. You complete and file your own defence.|Get the Escalation Pack|/escalation-pack]]
 
@@ -124,7 +124,7 @@ If they refuse mediation and proceed to hearing, see our [hearing day prep guide
 ## Numbers That Matter
 
 - **ParkingEye 2024 CCJs filed**: 71,442 (RAC Foundation)
-- **Estimated discontinuance rate** on defended claims: 25-35%
+- **Discontinuance of defended claims**: common in practice, but no published rate that we can cite
 - **POFA 9(4) deadline**: 14 days from parking event
 - **Acknowledgement window** (N9): 14 days from service of N1
 - **Defence window** (N9B): 28 days from service (with N9 filed)
@@ -141,9 +141,9 @@ If they refuse mediation and proceed to hearing, see our [hearing day prep guide
 - [Civil Enforcement Ltd Court Claim Defence](/blog/civil-enforcement-ltd-court-claim-defence)`,
     faqs: [
       {
-        question: "Does ParkingEye really discontinue 25-35% of defended claims?",
+        question: "Does ParkingEye really discontinue defended claims?",
         answer:
-          "Estimates from small-claims observers and court-watchers consistently put the rate in the 25-40% range for defended ParkingEye claims, especially where the defence specifically targets POFA timing, signage and CPR 27.14 quantum. There is no central reporting of discontinuance rates, but the pattern is well-documented in MoneySavingExpert and LegalBeagles threads. The economics support it: ParkingEye's claim-issuing business model relies on default judgments, not contested hearings.",
+          "There is no central reporting of discontinuance rates, so we do not quote a percentage. The pattern of ParkingEye discontinuing once a defence specifically targeting POFA timing, signage and CPR 27.14 quantum is filed is widely reported in MoneySavingExpert and LegalBeagles threads, and the economics support it: ParkingEye's claim-issuing business model relies on default judgments, not contested hearings.",
       },
       {
         question: "What is the most successful single defence against ParkingEye?",

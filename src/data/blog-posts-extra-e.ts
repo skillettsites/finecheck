@@ -10,7 +10,7 @@ export const BATCH_E: BlogPost[] = [
     slug: "county-court-claim-form-n1-parking-defence",
     title: "County Court Claim Form N1 for a Parking Charge? Here is the 14-Day Defence",
     description:
-      "A County Court claim for a parking charge has a 14-day acknowledgement deadline and a 28-day defence deadline. Miss either and you get a default CCJ. The exact filing steps, the defence template that gets 30% of these claims discontinued, and the £19.99 Escalation Pack defence checklist and witness statement skeleton.",
+      "A County Court claim for a parking charge has a 14-day acknowledgement deadline and a 28-day defence deadline. Miss either and you get a default CCJ. The exact filing steps, the defence template that gets many of these claims discontinued, and the £19.99 Escalation Pack defence checklist and witness statement skeleton.",
     publishedDate: "2026-05-18",
     category: "Court & Debt",
     seoTitle: "County Court Claim Form N1 Parking Defence (14-Day Rule, 2026)",
@@ -18,7 +18,7 @@ export const BATCH_E: BlogPost[] = [
       "Got a County Court N1 claim form from ParkingEye, UKPC, CEL or Excel? You have 14 days to acknowledge and 28 days to file the defence. The exact procedure, the wording that wins, and the £19.99 Escalation Pack defence checklist.",
     content: `## You Have 14 Days. Then Default Judgment.
 
-A County Court claim form (the **N1**, sent from the County Court Business Centre in Salford, often with reference numbers starting **CC** or **MCOL**) is the most serious step in a private parking enforcement chain. It is not the same as a Letter Before Claim from BW Legal or DCB Legal. It is not a debt-collector demand. It is a real court case, with two deadlines that the court does not extend:
+A County Court claim form (the **N1**, sent from the County Court Business Centre in Salford, often with reference numbers starting **CC** or **MCOL**) is the most serious step in a private parking enforcement chain. It is not the same as a Letter Before Claim from BW Legal or DCB Legal. It is not a debt-collector demand. It is a real court case, with two deadlines that the court does not extend (if the claimant is ParkingEye and you never appealed, our [ParkingEye appeal](/appeals/parkingeye) guide explains the earlier stages you have skipped):
 
 - **14 days** from service to file an **Acknowledgement of Service** (form N9).
 - **28 days** from service to file a **Defence** (form N9B) if you acknowledged.
@@ -567,8 +567,10 @@ If refused, you can re-file with a different ground (if genuinely applicable), a
     category: "Court & Debt",
     seoTitle: "TE7 Form: Bailiff Letter the First You Knew of a PCN?",
     seoDescription:
-      "If the bailiff letter is the first you heard of a council PCN, TE7 plus TE9 can reset the whole case. The reasonable-cause grounds the TEC accepts, the evidence to attach, and how to complete both free forms yourself.",
-    content: `## The TE7 Buys You Back the Window You Missed
+      "TE7 form (official PDF) and TE9 form links from the Traffic Enforcement Centre, what TE7 is, the 21-day deadline, the reasonable-cause grounds the TEC accepts and the evidence to attach.",
+    content: `[[BOX|Official TE7 and TE9 forms (Traffic Enforcement Centre, gov.uk)|**TE7 form (official PDF):** [download form TE7 from gov.uk](https://assets.publishing.service.gov.uk/media/62bebaeee90e073f56752a86/TE7_0622_save.pdf). Guidance page: [Apply for more time to challenge a traffic enforcement order or a London parking charge: Form TE7](https://www.gov.uk/government/publications/apply-for-more-time-to-challenge-a-traffic-enforcement-order-outside-london-boroughs-or-a-parking-charge-in-a-london-borough-form-te7).|**TE9 form (official PDF):** [download form TE9 from gov.uk](https://assets.publishing.service.gov.uk/media/62e1492bd3bf7f2d789b8d7e/Parking_TE9.pdf). Guidance page: [Challenge a traffic enforcement order or a London parking charge: Form TE9](https://www.gov.uk/government/publications/challenge-a-traffic-enforcement-order-outside-london-boroughs-or-a-parking-charge-in-a-london-borough-form-te9).|**What TE7 is:** the application for more time to file a TE9 witness statement once the 21-day window on an Order for Recovery has passed. It is filed together with the TE9, at the Traffic Enforcement Centre, and there is no fee for either form.|**Which forms apply:** TE7 and TE9 are the witness-statement forms for a parking charge issued by a London borough and for bus lane, moving traffic and other traffic enforcement orders outside London. A council parking PCN outside London uses the statutory-declaration pair instead: [form PE2](https://www.gov.uk/government/publications/form-pe2-application-to-file-a-statutory-declaration-out-of-time) (out of time) and [form PE3](https://www.gov.uk/government/publications/form-pe3-challenge-an-unpaid-penalty-charge-notice) (Civil Procedure Rules Practice Direction 75, paragraph 5.2). Dart Charge, Mersey Gateway and clean air zone charges have their own versions: [TE7](https://www.gov.uk/government/publications/form-te7-dart-charge-mersey-gateway-clear-air-zones-apply-for-more-time-to-challenge-a-traffic-enforcement-order) and [TE9](https://www.gov.uk/government/publications/form-te9-dart-charge-mersey-gateway-clear-air-zones-challenge-a-traffic-enforcement-order).|**Deadline:** the TE9 is due within 21 days of the Order for Recovery. After that, file TE7 and TE9 together as soon as you become aware of the order; the rest of this guide covers what the TEC accepts as reasonable cause.|Every link above returned HTTP 200 when checked on 11 September 2026.]]
+
+## The TE7 Buys You Back the Window You Missed
 
 The **TE9 witness statement** for revoking a council parking Order for Recovery must be filed within **21 days** of the order being made. In real life, almost nobody filing a TE9 is still inside that window — they only found out about the matter when a bailiff letter landed, weeks or months after the order. The form that bridges that gap is **TE7: Application for an Extension of Time**.
 
@@ -609,7 +611,7 @@ The chronology has to add up. If you knew about the Order for Recovery on, say, 
 
 ## Step 2: Complete Form TE7
 
-Download from [GOV.UK](https://www.gov.uk/government/publications/application-for-an-extension-of-time-for-filing-a-statutory-declaration-form-te7). Key fields:
+Download the [official TE7 PDF](https://assets.publishing.service.gov.uk/media/62bebaeee90e073f56752a86/TE7_0622_save.pdf) from the gov.uk [Form TE7 page](https://www.gov.uk/government/publications/apply-for-more-time-to-challenge-a-traffic-enforcement-order-outside-london-boroughs-or-a-parking-charge-in-a-london-borough-form-te7). Key fields:
 
 - **Penalty Charge Notice number**
 - **Issuing authority** (council name)

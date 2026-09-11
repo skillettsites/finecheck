@@ -1,3 +1,5 @@
+import type { AppealStage } from './types';
+
 export interface AssessmentInput {
   fineType: 'council' | 'private' | 'bus-lane' | 'congestion';
   // Council fields
@@ -16,6 +18,144 @@ export interface AssessmentInput {
   vehicleReg?: string;
   wasDriver?: 'yes' | 'no' | 'prefer-not-to-say';
   circumstances?: string;
+  // Where the reader is in the process. Omitted or 'new' = the first-stage
+  // path, which is unchanged. Later stages keep the same grounds and score
+  // but swap the deadline, next steps and recommended product.
+  stage?: AppealStage;
+  // Date on the letter the reader is replying to (rejection, collector
+  // letter, Letter Before Claim, claim form). Drives the stage deadline.
+  stageLetterDate?: string;
+}
+
+export const STAGE_OPTIONS: { id: AppealStage; label: string; hint: string }[] = [
+  {
+    id: 'new',
+    label: 'I have just received the charge',
+    hint: 'Nothing sent yet, or the first appeal is still open',
+  },
+  {
+    id: 'rejected',
+    label: 'My first appeal was rejected',
+    hint: 'The operator or council turned it down',
+  },
+  {
+    id: 'popla-rejected',
+    label: 'POPLA or the IAS rejected my appeal',
+    hint: 'The independent appeal did not go my way',
+  },
+  {
+    id: 'collector',
+    label: 'A debt collector has written to me',
+    hint: 'DCBL, Debt Recovery Plus, Trace, ZZPS or similar',
+  },
+  {
+    id: 'letter-before-claim',
+    label: 'I have a Letter Before Claim',
+    hint: 'From solicitors such as BW Legal, DCB Legal or Gladstones',
+  },
+  {
+    id: 'court-claim',
+    label: 'A County Court claim form has arrived',
+    hint: 'A claim number and a 14-day acknowledgment deadline',
+  },
+];
+
+export function isAppealStage(value: unknown): value is AppealStage {
+  return typeof value === 'string' && STAGE_OPTIONS.some((s) => s.id === value);
+}
+
+// Product the assessment recommends at each stage. Null keeps the
+// strength-based recommendation of the first-stage path.
+export function stageRecommendedProduct(stage: AppealStage): string | null {
+  switch (stage) {
+    case 'rejected':
+    case 'popla-rejected':
+    case 'collector':
+    case 'letter-before-claim':
+      return 'stage-reply-letter';
+    case 'court-claim':
+      return 'escalation-pack';
+    default:
+      return null;
+  }
+}
+
+// Days the reader has to respond, counted from the date on the letter they
+// received. Figures are the ones already published across the site and in
+// the Escalation Pack: 28 days to POPLA/IAS or for formal representations,
+// 30 days under the Pre-Action Protocol for Debt Claims, 14 days to
+// acknowledge a claim form. Null where no statutory clock runs.
+export function stageDeadlineDays(stage: AppealStage, letterDate?: string): number | null {
+  const window = stage === 'rejected' ? 28 : stage === 'letter-before-claim' ? 30 : stage === 'court-claim' ? 14 : null;
+  if (window === null || !letterDate) return null;
+  const d = new Date(letterDate);
+  if (Number.isNaN(d.getTime())) return null;
+  return Math.max(0, window - daysFromToday(letterDate));
+}
+
+export function stageNextSteps(stage: AppealStage, fineType: AssessmentInput['fineType']): string[] {
+  const priv = fineType === 'private';
+  switch (stage) {
+    case 'rejected':
+      return priv
+        ? [
+            'Appeal to POPLA (BPA members) or the IAS (IPC members) within 28 days of the rejection, using the code on the rejection letter',
+            'Put every ground in writing: the operator must produce its evidence and you can comment on it',
+            'Do not pay while the independent appeal is open',
+            'If the independent appeal is rejected, the decision is not a court order and the operator must still win in court',
+          ]
+        : [
+            'If you challenged informally, wait for the Notice to Owner and make formal representations within 28 days of it',
+            'If formal representations are rejected, appeal to the Traffic Penalty Tribunal or London Tribunals within 28 days of the Notice of Rejection',
+            'Ask the council for its evidence: officer notes, photographs or camera footage, and the Traffic Regulation Order',
+            'Keep copies of everything you send and receive',
+          ];
+    case 'popla-rejected':
+      return [
+        'A POPLA or IAS decision is not a court order and creates no debt; only a County Court judgment can be enforced',
+        'Decide now: pay if you accept the charge was properly issued, or hold your position and put the operator on notice that any claim will be defended',
+        'Keep every document: the operator must prove its case in court',
+        'If a Letter Before Claim arrives from a solicitor, reply within 30 days',
+      ];
+    case 'collector':
+      return [
+        'Reply once, in writing, disputing the debt and demanding the evidence',
+        'Never phone them and never make a part payment',
+        'Reject any sum above the original charge',
+        'If a Letter Before Claim arrives from a solicitor, that one has a real 30-day deadline',
+      ];
+    case 'letter-before-claim':
+      return [
+        'Reply within 30 days of the date on the letter',
+        'Complete and return the Reply Form if one was enclosed, ticking that you dispute the debt',
+        'Request the documents the Pre-Action Protocol entitles you to',
+        'Send by a method you can prove and keep copies of everything',
+      ];
+    case 'court-claim':
+      return [
+        'Acknowledge service within 14 days of service, then file your defence within 28 days',
+        'Do not ignore the claim form: a default judgment becomes a CCJ without any judge looking at your case',
+        'The Escalation Pack includes the defence checklist and witness statement skeleton for this stage',
+        'Consider a solicitor alongside the pack; this is real litigation',
+      ];
+    default:
+      return [];
+  }
+}
+
+// Layer the stage onto a first-stage result. The grounds and score are kept:
+// a late NtK or missing signage is the same defect at every stage. The
+// deadline, next steps and product are what change.
+function applyStage(result: AssessmentResult, input: AssessmentInput): AssessmentResult {
+  const stage = input.stage ?? 'new';
+  if (stage === 'new') return { ...result, stage };
+  return {
+    ...result,
+    stage,
+    deadlineDays: stageDeadlineDays(stage, input.stageLetterDate),
+    nextSteps: stageNextSteps(stage, input.fineType),
+    recommendedProduct: stageRecommendedProduct(stage) ?? result.recommendedProduct,
+  };
 }
 
 export interface DefenceGround {
@@ -34,7 +174,11 @@ export interface AssessmentResult {
   nextSteps: string[];
   letterArguments: string[];
   recommendedProduct: string;
+  stage: AppealStage;
 }
+
+// What the four per-type assessors return; assessFine layers the stage on.
+type FirstStageResult = Omit<AssessmentResult, 'stage'>;
 
 function daysBetween(dateA: string, dateB: string): number {
   const a = new Date(dateA);
@@ -48,7 +192,7 @@ function daysFromToday(dateStr: string): number {
   return Math.floor((now.getTime() - d.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-function assessPrivateFine(input: AssessmentInput): AssessmentResult {
+function assessPrivateFine(input: AssessmentInput): FirstStageResult {
   const grounds: DefenceGround[] = [];
   const letterArguments: string[] = [];
   let baseScore = 40;
@@ -292,7 +436,7 @@ function assessPrivateFine(input: AssessmentInput): AssessmentResult {
   };
 }
 
-function assessCouncilFine(input: AssessmentInput): AssessmentResult {
+function assessCouncilFine(input: AssessmentInput): FirstStageResult {
   const grounds: DefenceGround[] = [];
   const letterArguments: string[] = [];
   let baseScore = 30;
@@ -502,7 +646,7 @@ function assessCouncilFine(input: AssessmentInput): AssessmentResult {
   };
 }
 
-function assessBusLaneFine(input: AssessmentInput): AssessmentResult {
+function assessBusLaneFine(input: AssessmentInput): FirstStageResult {
   const grounds: DefenceGround[] = [];
   const letterArguments: string[] = [];
   let baseScore = 25;
@@ -583,7 +727,7 @@ function assessBusLaneFine(input: AssessmentInput): AssessmentResult {
   };
 }
 
-function assessCongestionFine(input: AssessmentInput): AssessmentResult {
+function assessCongestionFine(input: AssessmentInput): FirstStageResult {
   const grounds: DefenceGround[] = [];
   const letterArguments: string[] = [];
   let baseScore = 20;
@@ -664,7 +808,7 @@ function assessCongestionFine(input: AssessmentInput): AssessmentResult {
   };
 }
 
-export function assessFine(input: AssessmentInput): AssessmentResult {
+function assessFirstStage(input: AssessmentInput): FirstStageResult {
   switch (input.fineType) {
     case 'private':
       return assessPrivateFine(input);
@@ -677,4 +821,8 @@ export function assessFine(input: AssessmentInput): AssessmentResult {
     default:
       return assessCouncilFine(input);
   }
+}
+
+export function assessFine(input: AssessmentInput): AssessmentResult {
+  return applyStage({ ...assessFirstStage(input), stage: 'new' }, input);
 }

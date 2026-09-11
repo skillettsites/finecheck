@@ -5,7 +5,9 @@ import { PRODUCTS } from "@/data/products";
 import { trackBeginCheckout } from "@/lib/gtag";
 import { getAttribution } from "@/lib/tracking";
 import { ALL_COUNCIL_OPTIONS, ALL_OPERATOR_OPTIONS } from "@/data/dropdown-options";
-import { assessFine, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
+import { assessFine, STAGE_OPTIONS, type AssessmentInput, type AssessmentResult } from "@/lib/assessment";
+import { STAGE_REPLY_LETTER_ID, stageLetterTitle } from "@/lib/stage-letter";
+import type { AppealStage } from "@/lib/types";
 import { LocationAutocomplete } from "@/components/ui/LocationAutocomplete";
 import SearchableSelect from "@/components/ui/SearchableSelect";
 
@@ -32,7 +34,85 @@ function logFreeAppealUse(input: {
   });
 }
 
+// Records the verdict the reader was shown (strength, probability, stage,
+// recommended product) to aaf_assessments. Sits alongside logFreeAppealUse,
+// which keeps feeding the shared searches board. Fire-and-forget: nothing here
+// can block or break the flow, and nothing personal is sent.
+function logAssessmentVerdict(input: {
+  issuer: string;
+  fineType: FineType;
+  contravention: string;
+  stage: AppealStage;
+  result: AssessmentResult;
+  refined: boolean;
+}): void {
+  const attribution = getAttribution();
+  void fetch("/api/log-assessment", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    keepalive: true,
+    body: JSON.stringify({
+      issuer: input.issuer,
+      fineType: input.fineType,
+      contravention: input.contravention,
+      stage: input.stage,
+      overallStrength: input.result.overallStrength,
+      successProbability: input.result.successProbability,
+      recommendedProduct: input.result.recommendedProduct,
+      groundsCount: input.result.grounds.length,
+      deadlineDays: input.result.deadlineDays,
+      landingPath: attribution?.landing_page,
+      referrer: attribution?.referrer,
+      refined: input.refined,
+    }),
+  }).catch(() => {
+    // Analytics must never break the appeal flow.
+  });
+}
+
 const STEP_LABELS = ["Fine Type", "Details", "Assessment", "Get Your Letter"];
+
+// Label for the optional "date on their letter" field on step 2, per stage.
+const STAGE_LETTER_DATE_LABEL: Record<AppealStage, string> = {
+  new: "",
+  rejected: "Date on the rejection letter",
+  "popla-rejected": "Date of the POPLA or IAS decision",
+  collector: "Date on the debt collector's letter",
+  "letter-before-claim": "Date on the Letter Before Claim",
+  "court-claim": "Date on the claim form",
+};
+
+// Who has to answer the reply at each stage, for the assessment copy.
+function stageCounterparty(stage: AppealStage, fineType: FineType): string {
+  const priv = fineType === "private";
+  switch (stage) {
+    case "rejected":
+      return priv ? "POPLA or the IAS" : "the council";
+    case "popla-rejected":
+      return priv ? "the operator" : "the council";
+    case "collector":
+      return "the debt collector";
+    case "letter-before-claim":
+      return "the solicitors";
+    case "court-claim":
+      return "the court";
+    default:
+      return "the issuer";
+  }
+}
+
+function stageDeadlineVerb(stage: AppealStage, fineType: FineType): string {
+  switch (stage) {
+    case "rejected":
+      return fineType === "private" ? "to appeal to POPLA or the IAS" : "to make formal representations or appeal to the tribunal";
+    case "letter-before-claim":
+      return "to reply under the Pre-Action Protocol";
+    case "court-claim":
+      return "to acknowledge the claim";
+    default:
+      return "to respond";
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /*  Icons                                                              */
@@ -301,7 +381,62 @@ function ScanUploadArea({ onScanComplete }: { onScanComplete: (data: Record<stri
   );
 }
 
-function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType) => void; onScanComplete: (data: Record<string, unknown>) => void }) {
+// "Where are you in the process?" Six options; the first is the default and
+// leaves the flow exactly as it was. The others carry the same free
+// assessment but change the deadline, next steps and the product offered.
+function StageQuestion({ stage, onChange }: { stage: AppealStage; onChange: (stage: AppealStage) => void }) {
+  return (
+    <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-5 sm:p-6">
+      <h2 className="text-base font-semibold text-gray-900">Where are you in the process?</h2>
+      <p className="mt-1 text-sm text-gray-500">
+        The letter you need depends on what has already happened. Most people are at the first option.
+      </p>
+      <div role="radiogroup" aria-label="Where are you in the process?" className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {STAGE_OPTIONS.map((opt) => {
+          const active = opt.id === stage;
+          return (
+            <button
+              key={opt.id}
+              type="button"
+              role="radio"
+              aria-checked={active}
+              onClick={() => onChange(opt.id)}
+              className={`flex items-start gap-3 rounded-xl border-2 px-4 py-3 text-left transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 ${
+                active ? "border-teal-600 bg-teal-50" : "border-gray-200 hover:border-gray-300"
+              }`}
+            >
+              <span
+                className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 ${
+                  active ? "border-teal-600" : "border-gray-300"
+                }`}
+                aria-hidden="true"
+              >
+                {active && <span className="h-2 w-2 rounded-full bg-teal-600" />}
+              </span>
+              <span className="min-w-0">
+                <span className={`block text-sm font-medium ${active ? "text-teal-900" : "text-gray-900"}`}>{opt.label}</span>
+                <span className="block text-xs text-gray-500">{opt.hint}</span>
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function StepFineType({
+  onSelect,
+  onScanComplete,
+  stage,
+  onStageChange,
+}: {
+  onSelect: (type: FineType) => void;
+  onScanComplete: (data: Record<string, unknown>) => void;
+  stage: AppealStage;
+  onStageChange: (stage: AppealStage) => void;
+}) {
+  const stageProduct = stage === "court-claim" ? PRODUCTS["escalation-pack"] : PRODUCTS[STAGE_REPLY_LETTER_ID];
   return (
     <div>
       <div className="text-center mb-8">
@@ -312,13 +447,22 @@ function StepFineType({ onSelect, onScanComplete }: { onSelect: (type: FineType)
         {/* The price was previously invisible until after 10 required fields, so
             readers arriving on a "from £2.99" promise met £4.99 with no warning.
             State it up front, on both tiers, before anyone fills anything in. */}
-        <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full bg-teal-50 px-4 py-2 text-sm text-teal-900">
-          <span className="font-semibold">Assessment is free.</span>
-          <span>Appeal letter {formatPrice(PRODUCTS["standard-letter"].price)}, premium pack {formatPrice(PRODUCTS["premium-pack"].price)}.</span>
-        </p>
+        {stage === "new" ? (
+          <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full bg-teal-50 px-4 py-2 text-sm text-teal-900">
+            <span className="font-semibold">Assessment is free.</span>
+            <span>Appeal letter {formatPrice(PRODUCTS["standard-letter"].price)}, premium pack {formatPrice(PRODUCTS["premium-pack"].price)}.</span>
+          </p>
+        ) : (
+          <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full bg-teal-50 px-4 py-2 text-sm text-teal-900">
+            <span className="font-semibold">Assessment is free.</span>
+            <span>{stageProduct.name} {formatPrice(stageProduct.price)}.</span>
+          </p>
+        )}
       </div>
 
       <div className="max-w-3xl mx-auto">
+        <StageQuestion stage={stage} onChange={onStageChange} />
+
         <ScanUploadArea onScanComplete={onScanComplete} />
 
         <div className="relative my-6">
@@ -415,6 +559,9 @@ interface FormData {
   email: string;
   wasDriver: "yes" | "no" | "prefer-not-to-say";
   circumstances: string;
+  // Later stages only: who sent the letter being replied to and its date.
+  stageSenderName: string;
+  stageLetterDate: string;
 }
 
 const INITIAL_FORM: FormData = {
@@ -435,6 +582,8 @@ const INITIAL_FORM: FormData = {
   email: "",
   wasDriver: "yes",
   circumstances: "",
+  stageSenderName: "",
+  stageLetterDate: "",
 };
 
 // Product prices are stored in pence.
@@ -454,6 +603,7 @@ const fieldClass = (
 
 function StepDetails({
   fineType,
+  stage,
   form,
   onChange,
   onNext,
@@ -462,6 +612,7 @@ function StepDetails({
   onEvidenceAnalysis,
 }: {
   fineType: FineType;
+  stage: AppealStage;
   form: FormData;
   onChange: (field: keyof FormData, value: string) => void;
   onNext: () => void;
@@ -469,6 +620,7 @@ function StepDetails({
   errors: Partial<Record<keyof FormData, string>>;
   onEvidenceAnalysis: (analyses: EvidenceAnalysis[]) => void;
 }) {
+  const stageProduct = stage === "court-claim" ? PRODUCTS["escalation-pack"] : PRODUCTS[STAGE_REPLY_LETTER_ID];
   return (
     <div className="max-w-2xl mx-auto">
       <div className="text-center mb-8">
@@ -476,10 +628,17 @@ function StepDetails({
         <p className="text-gray-600">
           The more detail you provide, the more accurate your assessment will be. All fields marked with * are required.
         </p>
-        <p className="mt-3 text-sm text-gray-500">
-          Next step is your free assessment. Nothing to pay unless you want the letter
-          ({formatPrice(PRODUCTS["standard-letter"].price)} or {formatPrice(PRODUCTS["premium-pack"].price)}).
-        </p>
+        {stage === "new" ? (
+          <p className="mt-3 text-sm text-gray-500">
+            Next step is your free assessment. Nothing to pay unless you want the letter
+            ({formatPrice(PRODUCTS["standard-letter"].price)} or {formatPrice(PRODUCTS["premium-pack"].price)}).
+          </p>
+        ) : (
+          <p className="mt-3 text-sm text-gray-500">
+            Next step is your free assessment. Nothing to pay unless you want the{" "}
+            {stage === "court-claim" ? "Escalation Pack" : "reply letter"} ({formatPrice(stageProduct.price)}).
+          </p>
+        )}
       </div>
 
       <div className="space-y-6">
@@ -603,6 +762,40 @@ function StepDetails({
               />
             </div>
           </>
+        )}
+
+        {/* Later stages only: the letter being replied to. Both optional; the
+            date drives the stage deadline and the sender goes on the reply. */}
+        {stage !== "new" && (
+          <div className="border-t border-gray-200 pt-6">
+            <h3 className="text-sm font-semibold text-gray-900 mb-1">About the letter you received</h3>
+            <p className="text-xs text-gray-500 mb-4">
+              Both optional. The date sets your response deadline; the sender goes on the reply.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {(stage === "collector" || stage === "letter-before-claim") && (
+                <div>
+                  <label className={labelClass}>{stage === "collector" ? "Debt recovery company" : "Solicitor firm"}</label>
+                  <input
+                    type="text"
+                    value={form.stageSenderName}
+                    onChange={(e) => onChange("stageSenderName", e.target.value)}
+                    placeholder={stage === "collector" ? "e.g., DCBL, Debt Recovery Plus, Trace, ZZPS" : "e.g., BW Legal, DCB Legal, Gladstones"}
+                    className={fieldClass("stageSenderName", errors)}
+                  />
+                </div>
+              )}
+              <div>
+                <label className={labelClass}>{STAGE_LETTER_DATE_LABEL[stage]}</label>
+                <input
+                  type="date"
+                  value={form.stageLetterDate}
+                  onChange={(e) => onChange("stageLetterDate", e.target.value)}
+                  className={fieldClass("stageLetterDate", errors)}
+                />
+              </div>
+            </div>
+          </div>
         )}
 
         {/* Common fields */}
@@ -1110,9 +1303,213 @@ function PaywallCard({
   );
 }
 
+// Paywall for the later stages. The primary product is the £9.99 Escalation
+// Reply Letter, or the £19.99 Escalation Pack once a court claim has arrived.
+// The £4.99 Premium pack is offered as an add-on here but is NOT pre-ticked;
+// the pre-tick on the first-stage PaywallCard above is unchanged.
+function StagePaywallCard({
+  stage,
+  assessment,
+  form,
+  onSelectProduct,
+  addOnPremium,
+  onAddOnPremiumChange,
+}: {
+  stage: AppealStage;
+  assessment: AssessmentResult;
+  form: FormData;
+  onSelectProduct: (productId: string) => void;
+  addOnPremium: boolean;
+  onAddOnPremiumChange: (checked: boolean) => void;
+}) {
+  const primaryId = assessment.recommendedProduct === "escalation-pack" ? "escalation-pack" : STAGE_REPLY_LETTER_ID;
+  const primary = PRODUCTS[primaryId];
+  const premium = PRODUCTS["premium-pack"];
+  const isPack = primaryId === "escalation-pack";
+  const withAddOn = !isPack && addOnPremium;
+  const totalPence = primary.price + (withAddOn ? premium.price : 0);
+  const fineAmountNum = Math.round(parseFloat(form.fineAmount || "0")) || 0;
+  const counterparty = stageCounterparty(stage, form.fineType);
+  const letterTitle = stageLetterTitle(stage, form.fineType);
+  const sender = form.stageSenderName.trim();
+
+  const heading = (() => {
+    switch (stage) {
+      case "rejected":
+        return form.fineType === "private"
+          ? "Take it to POPLA or the IAS with a submission built on your grounds"
+          : "Make formal representations that cite the law";
+      case "popla-rejected":
+        return `Put ${form.operatorName || form.councilName || "them"} on notice: the decision is not a debt`;
+      case "collector":
+        return `Answer ${sender || "the debt collector"} once, properly`;
+      case "letter-before-claim":
+        return `Reply to ${sender || "the solicitors"} inside the 30-day window`;
+      default:
+        return "Prepare your defence with the Escalation Pack";
+    }
+  })();
+
+  const blurb = isPack
+    ? "Five ready-to-use documents for a County Court claim: the defence checklist, a witness statement skeleton, the Letter Before Claim reply, the debt collector reply and a stage-by-stage decision guide. Fixed documents, pre-filled with the details below, emailed as PDFs."
+    : `A personalised ${letterTitle.toLowerCase()} that sets out every ground below in the format ${counterparty} expects, requests the documents you are entitled to, and admits nothing. Delivered to your inbox in minutes, ready to send.`;
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white shadow-[0_24px_60px_-24px_rgba(15,23,42,0.18)] mb-6 overflow-hidden">
+      <div className="bg-gradient-to-br from-teal-50 via-white to-emerald-50 px-6 py-5 border-b border-slate-100">
+        <div className="flex items-start gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 text-white shadow-[0_6px_16px_-6px_rgba(13,148,136,0.55)]">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-lg font-semibold text-slate-900">{heading}</h3>
+            <p className="mt-1 text-sm leading-relaxed text-slate-600">{blurb}</p>
+          </div>
+        </div>
+
+        {!isPack && assessment.letterArguments.length > 0 && (
+          <div className="mt-4 rounded-lg bg-white/70 backdrop-blur-sm border border-slate-200 p-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Your reply will include</p>
+            <ul className="space-y-1.5">
+              {assessment.letterArguments.slice(0, 5).map((arg, i) => (
+                <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
+                  <CheckIcon className="h-3.5 w-3.5 text-teal-600 mt-0.5 shrink-0" />
+                  <span>{arg}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {isPack && (
+          <div className="mt-4 rounded-lg bg-white/70 backdrop-blur-sm border border-slate-200 p-3">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">In the pack</p>
+            <ul className="space-y-1.5">
+              {primary.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-2 text-xs text-slate-700">
+                  <CheckIcon className="h-3.5 w-3.5 text-teal-600 mt-0.5 shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+            {form.fineType !== "private" && (
+              <p className="mt-3 text-xs text-amber-800">
+                The pack is written for private parking charges. A council PCN that has reached bailiffs
+                uses form TE9, or TE7 and TE9 together, which are free from the Traffic Enforcement Centre.
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Premium add-on, unticked by default at these stages */}
+      {!isPack && (
+        <label
+          htmlFor="stage-premium-addon"
+          className={`flex cursor-pointer items-start gap-3 border-b border-slate-100 px-6 py-4 transition-colors ${
+            withAddOn ? "bg-teal-50/60" : "hover:bg-slate-50"
+          }`}
+        >
+          <input
+            id="stage-premium-addon"
+            type="checkbox"
+            checked={withAddOn}
+            onChange={(e) => onAddOnPremiumChange(e.target.checked)}
+            className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+          />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-sm font-semibold text-slate-900">Add the Premium Appeal Pack</p>
+              <span className="shrink-0 text-sm font-semibold text-slate-700">+{formatPrice(premium.price)}</span>
+            </div>
+            <p className="mt-1 text-xs leading-relaxed text-slate-600">
+              A personalised evidence checklist and operator strategy, plus the first-stage appeal and
+              escalation letters to keep on file. Attached to the same email.
+            </p>
+          </div>
+        </label>
+      )}
+
+      {/* Price + primary CTA */}
+      <div className="px-6 py-5">
+        <div className="flex items-baseline justify-between mb-4">
+          <div>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-semibold tracking-tight text-slate-900">{formatPrice(totalPence)}</span>
+            </div>
+            <div className="text-xs text-slate-500 mt-0.5">
+              One-time payment · No subscription · Stripe-secured
+            </div>
+          </div>
+          {assessment.deadlineDays !== null && assessment.deadlineDays > 0 && (
+            <div className="hidden sm:flex flex-col items-end text-right">
+              <div className="text-xs font-semibold uppercase tracking-wider text-amber-700">Deadline</div>
+              <div className="text-sm text-slate-700">
+                <span className="font-semibold tabular-nums">{assessment.deadlineDays} days</span> remaining
+              </div>
+            </div>
+          )}
+        </div>
+
+        <button
+          onClick={() => onSelectProduct(primaryId)}
+          className="group/cta relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 px-5 py-3.5 text-base font-semibold text-white shadow-[0_12px_30px_-10px_rgba(13,148,136,0.55)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-10px_rgba(13,148,136,0.7)] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+        >
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/cta:translate-x-full" aria-hidden="true" />
+          <span className="relative inline-flex items-center justify-center gap-2">
+            {isPack ? "Get the Escalation Pack" : "Get my reply letter"} for {formatPrice(totalPence)}
+            <svg className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </span>
+        </button>
+
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500">
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            One-time payment
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            Cites real UK legislation only
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <svg className="h-3 w-3 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            Email delivery in minutes
+          </span>
+        </div>
+
+        {!isPack && (
+          <div className="mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-teal-50/70 px-3 py-2 text-center text-[11px] font-medium text-teal-800">
+            <svg className="h-3.5 w-3.5 shrink-0 text-teal-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            Not happy with your letter? Reply to the email and we&apos;ll revise it, free.
+          </div>
+        )}
+
+        {fineAmountNum > 0 && (
+          <p className="mt-3 text-center text-xs text-slate-500">
+            The original charge is £{fineAmountNum}. {isPack ? "The pack" : "The reply letter"} costs {formatPrice(totalPence)}.
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function StepAssessment({
   assessment,
   form,
+  stage,
   onBack,
   onSelectProduct,
   onChange,
@@ -1120,9 +1517,12 @@ function StepAssessment({
   emailWarning,
   onRefineAssessment,
   assessedWithCircumstances,
+  addOnPremium,
+  onAddOnPremiumChange,
 }: {
   assessment: AssessmentResult;
   form: FormData;
+  stage: AppealStage;
   onBack: () => void;
   onSelectProduct: (productId: string) => void;
   onChange: (field: keyof FormData, value: string) => void;
@@ -1130,17 +1530,28 @@ function StepAssessment({
   emailWarning: string | null;
   onRefineAssessment: () => void;
   assessedWithCircumstances: boolean;
+  addOnPremium: boolean;
+  onAddOnPremiumChange: (checked: boolean) => void;
 }) {
 
   return (
     <div className="max-w-3xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Free Appeal Assessment</h2>
-        <p className="text-gray-600">
-          Based on the details you provided, here is our analysis of your case.
-        </p>
-      </div>
+      {stage === "new" ? (
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Free Appeal Assessment</h2>
+          <p className="text-gray-600">
+            Based on the details you provided, here is our analysis of your case.
+          </p>
+        </div>
+      ) : (
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Free Case Assessment</h2>
+          <p className="text-gray-600">
+            Based on the details you provided, here is where your case stands at this stage.
+          </p>
+        </div>
+      )}
 
       {/* Summary card */}
       <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-6">
@@ -1150,28 +1561,40 @@ function StepAssessment({
             <div className="mb-2">
               <StrengthBadge strength={assessment.overallStrength} />
             </div>
-            <p className="text-sm text-gray-600">
-              With a <strong>Standard Letter</strong>, we estimate a{" "}
-              <strong>
-                {assessment.successProbability - 5}-{Math.min(assessment.successProbability + 10, 95)}% chance of
-                success
-              </strong>.
-            </p>
-            <div className="mt-2 rounded-lg bg-teal-50 border border-teal-200 px-3 py-2">
-              <p className="text-sm text-teal-800">
-                With the <strong>Premium Appeal Pack</strong>, success rates increase to{" "}
-                <strong className="text-teal-900">
-                  {Math.min(assessment.successProbability + 15, 90)}-{Math.min(assessment.successProbability + 30, 95)}%
-                </strong>{" "}
-                thanks to the escalation letter, evidence checklist, and operator-specific strategy.
+            {stage === "new" ? (
+              <>
+                <p className="text-sm text-gray-600">
+                  With a <strong>Standard Letter</strong>, we estimate a{" "}
+                  <strong>
+                    {assessment.successProbability - 5}-{Math.min(assessment.successProbability + 10, 95)}% chance of
+                    success
+                  </strong>.
+                </p>
+                <div className="mt-2 rounded-lg bg-teal-50 border border-teal-200 px-3 py-2">
+                  <p className="text-sm text-teal-800">
+                    With the <strong>Premium Appeal Pack</strong>, success rates increase to{" "}
+                    <strong className="text-teal-900">
+                      {Math.min(assessment.successProbability + 15, 90)}-{Math.min(assessment.successProbability + 30, 95)}%
+                    </strong>{" "}
+                    thanks to the escalation letter, evidence checklist, and operator-specific strategy.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <p className="text-sm text-gray-600">
+                Your grounds carry forward. The same defects that would have beaten this charge at the first
+                stage are the ones <strong>{stageCounterparty(stage, form.fineType)}</strong> must now answer,
+                and your reply sets them out in the format {stageCounterparty(stage, form.fineType)} expects.
               </p>
-            </div>
+            )}
             {assessment.deadlineDays !== null && assessment.deadlineDays > 0 && (
               <div className="mt-3 inline-flex items-center gap-2 rounded-lg bg-red-50 px-3 py-1.5 text-sm font-medium text-red-800">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                You have approximately {assessment.deadlineDays} days remaining to appeal
+                {stage === "new"
+                  ? `You have approximately ${assessment.deadlineDays} days remaining to appeal`
+                  : `You have approximately ${assessment.deadlineDays} days ${stageDeadlineVerb(stage, form.fineType)}`}
               </div>
             )}
             {assessment.deadlineDays !== null && assessment.deadlineDays <= 0 && (
@@ -1179,7 +1602,9 @@ function StepAssessment({
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
                 </svg>
-                Your initial appeal deadline may have passed. Check if you can still make formal representations.
+                {stage === "new"
+                  ? "Your initial appeal deadline may have passed. Check if you can still make formal representations."
+                  : "The response window on that letter may already have passed. Send your reply today and keep proof of sending."}
               </div>
             )}
           </div>
@@ -1202,11 +1627,19 @@ function StepAssessment({
             Full argument in your letter
           </span>
         </div>
-        <p className="text-sm text-gray-600 mb-4">
-          Each of these is a recognised reason your fine could be cancelled. Your appeal letter
-          sets out each one in full and cites the exact legislation, case law and code of practice
-          for {form.fineType === "private" && form.operatorName ? form.operatorName : form.councilName || "the issuer"} to act on.
-        </p>
+        {stage === "new" ? (
+          <p className="text-sm text-gray-600 mb-4">
+            Each of these is a recognised reason your fine could be cancelled. Your appeal letter
+            sets out each one in full and cites the exact legislation, case law and code of practice
+            for {form.fineType === "private" && form.operatorName ? form.operatorName : form.councilName || "the issuer"} to act on.
+          </p>
+        ) : (
+          <p className="text-sm text-gray-600 mb-4">
+            Each of these is a recognised reason the charge should not be enforced. Your reply letter
+            sets out each one in full and cites the exact legislation, case law and code of practice
+            for {stageCounterparty(stage, form.fineType)} to answer.
+          </p>
+        )}
         <div className="space-y-3">
           {assessment.grounds.map((ground) => (
             <div
@@ -1274,12 +1707,24 @@ function StepAssessment({
         </div>
       )}
 
-      {/* Inline paywall: single card with Premium-pack toggle */}
-      <PaywallCard
-        assessment={assessment}
-        form={form}
-        onSelectProduct={onSelectProduct}
-      />
+      {/* Inline paywall: single card with Premium-pack toggle on the
+          first-stage path; the stage card (Premium unticked) otherwise. */}
+      {stage === "new" ? (
+        <PaywallCard
+          assessment={assessment}
+          form={form}
+          onSelectProduct={onSelectProduct}
+        />
+      ) : (
+        <StagePaywallCard
+          stage={stage}
+          assessment={assessment}
+          form={form}
+          onSelectProduct={onSelectProduct}
+          addOnPremium={addOnPremium}
+          onAddOnPremiumChange={onAddOnPremiumChange}
+        />
+      )}
 
       {/* Letter-delivery details. These used to sit on step 2, in front of the
           free assessment, where they were the single biggest drop-off in the
@@ -1358,7 +1803,9 @@ function StepAssessment({
       {/* General next steps stay free: this is guidance on the process, not
           the personalised letter, so it never feels like a bait-and-switch. */}
       <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-8 mt-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-3">How the appeal process works</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">
+          {stage === "new" ? "How the appeal process works" : "What happens at this stage"}
+        </h3>
         <ol className="space-y-2">
           {assessment.nextSteps.map((step, i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
@@ -1401,6 +1848,11 @@ export default function AppealFlow() {
   // keystroke and leaving a stale score above it.
   const [assessedWithCircumstances, setAssessedWithCircumstances] = useState(true);
   const [evidenceAnalyses, setEvidenceAnalyses] = useState<EvidenceAnalysis[]>([]);
+  // Where the reader is in the process. "new" leaves every step exactly as it
+  // was; later stages change the deadline, next steps and product offered.
+  const [stage, setStage] = useState<AppealStage>("new");
+  // Premium pack add-on on the stage paywall. Never pre-ticked there.
+  const [addOnPremium, setAddOnPremium] = useState(false);
 
   // Handle scanned ticket data: auto-populate form and skip to Step 2
   const handleScanComplete = useCallback((data: Record<string, unknown>) => {
@@ -1559,6 +2011,8 @@ export default function AppealFlow() {
       vehicleReg: form.vehicleReg,
       wasDriver: form.wasDriver,
       circumstances: form.circumstances,
+      stage,
+      stageLetterDate: form.stageLetterDate,
     };
 
     const result = assessFine(input);
@@ -1595,7 +2049,7 @@ export default function AppealFlow() {
     }
 
     return result;
-  }, [form, evidenceAnalyses]);
+  }, [form, evidenceAnalyses, stage]);
 
   const handleStep2Next = useCallback(() => {
     if (!validateStep2()) {
@@ -1605,22 +2059,40 @@ export default function AppealFlow() {
       return;
     }
 
-    setAssessment(runAssessment());
+    const result = runAssessment();
+    setAssessment(result);
     setAssessedWithCircumstances(Boolean(form.circumstances.trim()));
     logFreeAppealUse({
       issuer: form.fineType === "private" ? form.operatorName : form.councilName,
       fineType: form.fineType,
       contravention: form.contraventionDescription,
     });
+    logAssessmentVerdict({
+      issuer: form.fineType === "private" ? form.operatorName : form.councilName,
+      fineType: form.fineType,
+      contravention: form.contraventionDescription,
+      stage,
+      result,
+      refined: false,
+    });
     setStep(3);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [validateStep2, runAssessment, form]);
+  }, [validateStep2, runAssessment, form, stage]);
 
   // Re-run the assessment in place on step 3 after the reader adds detail.
   const handleRefineAssessment = useCallback(() => {
-    setAssessment(runAssessment());
+    const result = runAssessment();
+    setAssessment(result);
     setAssessedWithCircumstances(Boolean(form.circumstances.trim()));
-  }, [runAssessment, form.circumstances]);
+    logAssessmentVerdict({
+      issuer: form.fineType === "private" ? form.operatorName : form.councilName,
+      fineType: form.fineType,
+      contravention: form.contraventionDescription,
+      stage,
+      result,
+      refined: true,
+    });
+  }, [runAssessment, form, stage]);
 
   const handleSelectProduct = useCallback(
     async (productId: string) => {
@@ -1638,11 +2110,48 @@ export default function AppealFlow() {
       if (selected) {
         trackBeginCheckout(selected.id, selected.name, selected.price);
       }
+
+      // Court-claim stage: the fixed Escalation Pack, fulfilled from static
+      // content by the existing checkout branch. No appeal data is encoded;
+      // the details collected above pre-fill the five PDFs instead.
+      if (productId === "escalation-pack") {
+        try {
+          const res = await fetch("/api/checkout", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              productId,
+              details: {
+                name: form.senderName,
+                address: form.senderAddress,
+                vehicleReg: form.vehicleReg,
+                pcnReference: form.pcnReference,
+                operatorName: form.fineType === "private" ? form.operatorName : form.councilName,
+                email: form.email,
+              },
+              attribution: getAttribution(),
+            }),
+          });
+          const data = await res.json();
+          if (res.ok && data?.url) {
+            window.location.href = data.url;
+            return;
+          }
+        } catch {
+          // fall through to the message below
+        }
+        alert("Could not start checkout. Please try again.");
+        return;
+      }
+
+      const addOns = productId === STAGE_REPLY_LETTER_ID && addOnPremium ? ["premium-pack"] : [];
       const appeal = {
         form,
         assessment,
         evidenceAnalyses,
         productId,
+        stage,
+        addOns,
         timestamp: new Date().toISOString(),
       };
 
@@ -1664,6 +2173,7 @@ export default function AppealFlow() {
           body: JSON.stringify({
             productId,
             fineType: form.fineType,
+            stage,
             appeal,
             attribution: getAttribution(),
           }),
@@ -1681,7 +2191,7 @@ export default function AppealFlow() {
         window.location.href = `/api/checkout?${params.toString()}`;
       }
     },
-    [form, assessment, evidenceAnalyses]
+    [form, assessment, evidenceAnalyses, stage, addOnPremium, validateDetails]
   );
 
   const handleBack = useCallback(() => {
@@ -1694,11 +2204,19 @@ export default function AppealFlow() {
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <ProgressBar currentStep={step} />
 
-        {step === 1 && <StepFineType onSelect={handleFineTypeSelect} onScanComplete={handleScanComplete} />}
+        {step === 1 && (
+          <StepFineType
+            onSelect={handleFineTypeSelect}
+            onScanComplete={handleScanComplete}
+            stage={stage}
+            onStageChange={setStage}
+          />
+        )}
 
         {step === 2 && (
           <StepDetails
             fineType={form.fineType}
+            stage={stage}
             form={form}
             onChange={handleFieldChange}
             onNext={handleStep2Next}
@@ -1712,6 +2230,7 @@ export default function AppealFlow() {
           <StepAssessment
             assessment={assessment}
             form={form}
+            stage={stage}
             onBack={handleBack}
             onSelectProduct={handleSelectProduct}
             onChange={handleFieldChange}
@@ -1719,6 +2238,8 @@ export default function AppealFlow() {
             emailWarning={emailDomainWarning(form.email)}
             onRefineAssessment={handleRefineAssessment}
             assessedWithCircumstances={assessedWithCircumstances}
+            addOnPremium={addOnPremium}
+            onAddOnPremiumChange={setAddOnPremium}
           />
         )}
 

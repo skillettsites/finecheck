@@ -3,7 +3,9 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { PRODUCTS } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Appeal Letter Pricing: £2.99, £4.99 and the £19.99 Escalation Pack",
@@ -137,6 +139,11 @@ const faqItems = [
       "Yes. The Appeal Letter plan includes a letter suitable for the initial challenge to the operator or council, plus an escalation letter for the independent appeals body (POPLA, IAS, or the relevant tribunal).",
   },
   {
+    question: "What is the £9.99 Escalation Reply Letter?",
+    answer:
+      "A personalised reply for a charge that is already past the first appeal. Start the free assessment, tell us where you are in the process, and we write the document that stage needs: the POPLA or IAS submission after the operator rejects you, the response to a debt recovery firm such as DCBL or Debt Recovery Plus, or the Pre-Action Protocol reply to a solicitor's Letter Before Claim. It is written for your case and your grounds, unlike the fixed templates in the £19.99 Escalation Pack. If a County Court claim form has arrived, the assessment recommends the Escalation Pack instead.",
+  },
+  {
     question: "Is this legal advice?",
     answer:
       "AppealAFine provides legal information and document drafting tools, not regulated legal advice. Our tools are built on established UK parking law, tribunal decisions, and successful appeal strategies. For complex legal situations, particularly county court claims, we recommend consulting a solicitor alongside using our documents.",
@@ -220,6 +227,21 @@ const productSchema = {
     },
     {
       "@type": "Product",
+      name: "Escalation Reply Letter",
+      description:
+        "A personalised reply for a parking charge past the first appeal: the POPLA or IAS submission after a rejection, the response to a debt collector, or the Pre-Action Protocol reply to a Letter Before Claim.",
+      brand: { "@type": "Brand", name: "AppealAFine" },
+      category: "Legal document preparation",
+      offers: {
+        "@type": "Offer",
+        price: "9.99",
+        priceCurrency: "GBP",
+        availability: "https://schema.org/InStock",
+        url: "https://www.appealafine.co.uk/appeal",
+      },
+    },
+    {
+      "@type": "Product",
       name: "Escalation Pack",
       description:
         "Five documents for a private parking charge already past the appeal stage: an escalation decision guide, a debt recovery response letter, a POPLA or IAS rejection next steps letter, a Letter Before Claim response with a protocol checklist, and a court defence checklist with a witness statement skeleton.",
@@ -288,7 +310,7 @@ export default function PricingPage() {
             <div className="max-w-2xl">
               <p className="text-base font-semibold text-green-900">Honest free check</p>
               <p className="text-sm text-green-800 mt-0.5">
-                Free assessment first. If your fine has no defensible legal ground, we tell you and you pay nothing. We do not guarantee the outcome of your appeal because no service can — but you'll know your case strength before you spend a penny.
+                Free assessment first. If your fine has no defensible legal ground, we tell you and you pay nothing. We do not guarantee the outcome of your appeal because no service can, but you&apos;ll know your case strength before you spend a penny.
               </p>
             </div>
           </div>
@@ -360,6 +382,42 @@ export default function PricingPage() {
             ))}
           </div>
 
+          {/* Escalation Reply Letter: sold from the appeal flow, where the
+              stage question routes later-stage readers to it. Listed here so
+              a reader who lands on /pricing can find it. */}
+          <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+              <div className="md:max-w-2xl">
+                <span className="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-amber-800">
+                  Already past the first appeal?
+                </span>
+                <h2 className="mt-3 text-xl font-semibold text-gray-900">
+                  Escalation Reply Letter, £9.99 one-time
+                </h2>
+                <p className="mt-2 text-sm text-gray-700">
+                  A personalised reply for the stage you are actually at. Run the free assessment, tell us
+                  where you are in the process, and we write the document that stage needs.
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {PRODUCTS["stage-reply-letter"].features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <CheckIcon />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs text-gray-600">
+                  A County Court claim form is the one stage this letter does not cover: the assessment
+                  recommends the £19.99 Escalation Pack for that.
+                </p>
+              </div>
+              <div className="shrink-0 md:pt-8">
+                <Button href="/appeal" variant="accent" size="lg" className="w-full justify-center md:w-auto">
+                  Start the free check
+                </Button>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 
@@ -490,11 +548,11 @@ export default function PricingPage() {
               Escalation Pack is a different product for cases already past
               appeal, so listing it in these columns would be misleading. */}
           <p className="text-center text-sm text-gray-600 mb-8">
-            The three appeal-stage plans compared. The{" "}
-            <a href="/escalation-pack" className="font-medium text-teal-700 underline">
+            The three appeal-stage plans compared. The £9.99 Escalation Reply Letter and the{" "}
+            <Link href="/escalation-pack" className="font-medium text-teal-700 underline">
               £19.99 Escalation Pack
-            </a>{" "}
-            is a separate product for charges already past the appeal stage.
+            </Link>{" "}
+            are separate products for charges already past the appeal stage.
           </p>
 
           <div className="overflow-x-auto">

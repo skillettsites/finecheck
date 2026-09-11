@@ -13,7 +13,7 @@ export const BATCH_B: BlogPost[] = [
       "Money Claim Online claim from a parking company? Step-by-step: acknowledge in 14 days, defend in 28, and what the £19.99 Escalation Pack checklist covers.",
     content: `## You Have Just Been Served a Money Claim Online Form
 
-If a brown envelope from the **County Court Business Centre, Northampton** has just landed on your doormat, you are looking at an MCOL claim. Money Claim Online is the digital court system that nearly every private parking operator uses to chase unpaid Parking Charge Notices. ParkingEye, UKPC, Excel, Smart Parking, NCP and Euro Car Parks all funnel claims through this single portal because it is cheap, fast and largely automated.
+If a brown envelope from the **County Court Business Centre, Northampton** has just landed on your doormat, you are looking at an MCOL claim. Money Claim Online is the digital court system that nearly every private parking operator uses to chase unpaid Parking Charge Notices. ParkingEye, UKPC, Excel, Smart Parking, NCP and Euro Car Parks all funnel claims through this single portal because it is cheap, fast and largely automated. (If you have not yet reached this stage, a first-stage [ParkingEye appeal](/appeals/parkingeye) is the place to start.)
 
 The good news: receiving an MCOL claim is not the disaster it looks. You have not lost. You have not been "found guilty." A claim form simply means the operator has paid the issue fee and the court has notified you. What happens next is entirely up to you, and the deadlines are tight.
 
@@ -198,7 +198,7 @@ If your claim arrived on a **paper N1 form from CCBC** rather than through MCOL,
 
 Ten years on from **ParkingEye v Beavis [2015] UKSC 67**, the same operator that won the Supreme Court case keeps losing at POPLA on the very issue Beavis turned on: whether a reasonable motorist would have seen, read and accepted the parking terms before parking. The Supreme Court ruled the Beavis charge enforceable largely because the signs at Chelmsford retail park were "large, prominent and clearly worded." Where ParkingEye's signs do not meet that standard, POPLA assessors strike the charge down.
 
-This post walks through five real-style 2025 POPLA decisions, each anonymised but drawn from patterns reported in the **POPLA Annual Report** and BPA member case data. Use them as templates for your own appeal: if any of these scenarios match your car park, you have a strong case.
+This post walks through five real-style 2025 POPLA decisions, each anonymised but drawn from patterns reported in the **POPLA Annual Report** and BPA member case data. Use them as templates for your own appeal: if any of these scenarios match your car park, you have a strong case. For the full first-stage process, see our [ParkingEye appeal](/appeals/parkingeye) guide.
 
 [[CTA:teal|Got a ParkingEye charge?|Our £2.99 personalised letter cites POPLA precedent on signage, identifies the BPA Code paragraph that was breached, and arrives in Word format ready to paste.|Start my £2.99 appeal|/appeal]]
 
@@ -525,7 +525,7 @@ UKPC's reliance on ANPR makes paragraph 9 of POFA 2012 Schedule 4 their structur
       "IAS decisions are binding on the operator, not on you. Here are your 3 escalation routes plus the £4.99 pack that prepares the next stage.",
     content: `## An IAS Rejection Is Not the End
 
-The Independent Appeals Service (IAS) is the appeals body run by the **International Parking Community (IPC)**. It hears appeals against charges issued by IPC-member operators including **Excel Parking, Smart Parking, UKPC (in some cases), Premier Park, Highview Parking and Britannia Parking**. If you have just received an IAS rejection, you may feel cornered. You are not.
+The Independent Appeals Service (IAS) is the appeals body run by the **International Parking Community (IPC)**. It hears appeals against charges issued by IPC-member operators including **Excel Parking, Smart Parking, UKPC (in some cases), Premier Park, Highview Parking and Britannia Parking** (see our [Smart Parking appeal](/appeals/smart-parking) guide for that operator's first-stage route). If you have just received an IAS rejection, you may feel cornered. You are not.
 
 The most important fact about an IAS decision is this: **it binds the operator, not the appellant**. If the IAS allows your appeal, the operator must cancel. If the IAS rejects your appeal, the operator regains the right to chase you, but you have not lost any legal rights and you have given up nothing.
 

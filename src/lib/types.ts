@@ -1,5 +1,17 @@
 export type FineType = 'council' | 'private';
 
+// Where the reader is in the enforcement process. 'new' is the default and
+// the only path that existed before September 2026: a first-stage appeal
+// letter. Every later stage runs the same free assessment but recommends a
+// stage-specific reply letter (or the Escalation Pack for a court claim).
+export type AppealStage =
+  | 'new'
+  | 'rejected'
+  | 'popla-rejected'
+  | 'collector'
+  | 'letter-before-claim'
+  | 'court-claim';
+
 export interface FineDetails {
   fineType: FineType;
   // Council fields

@@ -18,7 +18,7 @@ export const BATCH_I: BlogPost[] = [
       "Hire car parking charge with £30-£60 admin fee from Europcar / Enterprise / Hertz? BVRLA instructed members not to pay private charges. CRA 2015 challenge to admin fee. £2.99 letter.",
     content: `## The Hire Company Admin Fee Is Almost Always Challengeable
 
-If you hired a vehicle and a private parking charge from ParkingEye, UKPC or another operator was issued during your hire period, the hire company will typically:
+If you hired a vehicle and a private parking charge from ParkingEye, UKPC or another operator was issued during your hire period (the charge itself may still be open to a [ParkingEye appeal](/appeals/parkingeye) or the equivalent for the other operator), the hire company will typically:
 
 1. **Pay the parking charge** to the operator (sometimes — many BVRLA members do not)
 2. **Pass the parking charge to you** plus a **£30-£60 admin fee** for processing
@@ -849,7 +849,7 @@ In **March 2022**, the Department of Health and Social Care issued [updated guid
 - **Provide free parking** for specific patient categories (frequent outpatients, parents staying with sick children, disabled passengers, terminally ill patients)
 - **Provide free parking for NHS staff** working night shifts and unsocial hours
 
-The guidance is not legally binding on private operators in the strict sense, but it has been adopted into the appeal-considerations of POPLA, IAS and Traffic Penalty Tribunal. Citing it explicitly in an appeal is one of the most successful routes for hospital-site PCNs.
+The guidance is not legally binding on private operators in the strict sense, but it has been adopted into the appeal-considerations of POPLA, IAS and Traffic Penalty Tribunal. Citing it explicitly in an appeal is one of the most successful routes for hospital-site PCNs. Hospital sites are typically run by ParkingEye, UKPC or APCOA; if yours is ParkingEye, pair this guidance with our [ParkingEye appeal](/appeals/parkingeye) guide.
 
 [[CTA:teal|Got a hospital car park PCN?|Our £2.99 personalised letter cites the DHSC 2022 guidance, the operator-specific weakness for hospital sites, and the right mitigation ground for your role (staff, patient, visitor).|Generate my letter|/pricing]]
 

@@ -8,7 +8,28 @@ import FAQ from "@/components/ui/FAQ";
 import Button from "@/components/ui/Button";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { OPERATORS, getOperatorBySlug } from "@/data/operators";
+import { OPERATOR_ANSWERS } from "@/data/operator-answers";
 import { Operator } from "@/lib/types";
+import AppealBodyStat from "../AppealBodyStat";
+
+// Renders [text](href) markdown links inside the answer-first block as Next links.
+function renderWithLinks(text: string): React.ReactNode {
+  const parts: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    parts.push(
+      <Link key={match.index} href={match[2]} className="font-medium text-teal-700 hover:underline">
+        {match[1]}
+      </Link>
+    );
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts.length === 1 ? parts[0] : <>{parts}</>;
+}
 
 export function generateStaticParams() {
   return OPERATORS.map((op) => ({ operator: op.slug }));
@@ -48,7 +69,10 @@ function getOperatorFAQs(op: Operator) {
     },
     {
       question: `What is ${op.name}'s appeal success rate?`,
-      answer: `Based on available data, appeals against ${op.name} have an approximate success rate of ${op.averageSuccessRate}% at the independent appeals stage (${op.appealBody}). Success rates are higher when appeals are based on procedural failures such as late NtK service, inadequate signage, or ANPR evidence errors.`,
+      answer:
+        op.appealBody === "POPLA"
+          ? `POPLA does not publish outcomes by operator. Across all BPA operators, POPLA cancelled the charge in 40% of the 92,098 appeals it completed in the year to 30 September 2024, and operators chose not to contest a further 23,800 appeals (POPLA Annual Report 2024). Appeals against ${op.name} built on procedural failures such as late NtK service, inadequate signage or ANPR evidence errors tend to do better than appeals based on mitigation alone.`
+          : `The IAS does not publish an outcome rate that we have been able to verify, so we do not quote a success rate for appeals against ${op.name}. Appeals built on procedural failures such as late NtK service, inadequate signage or ANPR evidence errors tend to do better than appeals based on mitigation alone.`,
     },
     {
       question: `How do I appeal a ${op.name} fine?`,
@@ -118,7 +142,8 @@ export default async function OperatorPage({
   const op = getOperatorBySlug(operator);
   if (!op) notFound();
 
-  const faqs = getOperatorFAQs(op);
+  const answer = OPERATOR_ANSWERS[op.slug];
+  const faqs = [...(answer?.faqs ?? []), ...getOperatorFAQs(op)];
   const steps = getAppealSteps(op);
 
   const relatedOperators = OPERATORS.filter(
@@ -162,20 +187,22 @@ export default async function OperatorPage({
                 Appeal a {op.name} Parking Fine
               </h1>
               <p className="mt-4 text-lg text-gray-600">{op.description}</p>
+              {answer && (
+                <div className="mt-6 rounded-xl border-2 border-teal-200 bg-teal-50/60 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-teal-800 mb-2">
+                    How to appeal, in short
+                  </p>
+                  <div className="space-y-2 text-base leading-relaxed text-slate-700">
+                    {answer.summary.map((para, i) => (
+                      <p key={i}>{renderWithLinks(para)}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="shrink-0">
-              <div className="rounded-xl border-2 border-green-200 bg-green-50 px-6 py-4 text-center">
-                <p className="text-sm font-medium text-green-800">
-                  Appeal Success Rate
-                </p>
-                <p className="text-4xl font-bold text-green-700">
-                  {op.averageSuccessRate}%
-                </p>
-                <p className="text-xs text-green-600 mt-1">
-                  at {op.appealBody}
-                </p>
-              </div>
+              <AppealBodyStat appealBody={op.appealBody} />
             </div>
           </div>
         </Container>
@@ -468,14 +495,8 @@ export default async function OperatorPage({
                     {related.name}
                   </h3>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge
-                      variant={
-                        related.averageSuccessRate >= 50
-                          ? "success"
-                          : "warning"
-                      }
-                    >
-                      {related.averageSuccessRate}% success
+                    <Badge variant={related.pursuesToCourt ? "warning" : "success"}>
+                      {related.pursuesToCourt ? "Pursues court" : "Rarely goes to court"}
                     </Badge>
                     <Badge variant="default">
                       {related.appealBody}

@@ -11,6 +11,7 @@ import FirstScreenCTA from "@/components/ui/FirstScreenCTA";
 import { OPERATOR_SITUATIONS } from "@/data/operator-situations";
 import { getOperatorBySlug } from "@/data/operators";
 import { getSituationBySlug } from "@/data/situations";
+import AppealBodyStat from "../../AppealBodyStat";
 
 export async function generateStaticParams() {
   return OPERATOR_SITUATIONS.map((os) => ({
@@ -219,6 +220,18 @@ export default async function OperatorSituationPage({
               <p className="mt-4 text-lg text-gray-600">
                 {combo.description}
               </p>
+              {op && (
+                <p className="mt-3 text-sm text-gray-600">
+                  Part of our full{" "}
+                  <Link
+                    href={`/appeals/${op.slug}`}
+                    className="font-medium text-teal-700 hover:underline"
+                  >
+                    {`${op.name} appeal`}
+                  </Link>{" "}
+                  guide: grounds, deadlines and the {op.appealBody} route.
+                </p>
+              )}
               <div className="mt-6 max-w-md">
                 <FirstScreenCTA
                   headline={`Get a ${combo.locationName} appeal letter`}
@@ -229,17 +242,7 @@ export default async function OperatorSituationPage({
 
             {op && (
               <div className="shrink-0">
-                <div className="rounded-xl border-2 border-green-200 bg-green-50 px-6 py-4 text-center">
-                  <p className="text-sm font-medium text-green-800">
-                    Appeal Success Rate
-                  </p>
-                  <p className="text-4xl font-bold text-green-700">
-                    {op.averageSuccessRate}%
-                  </p>
-                  <p className="text-xs text-green-600 mt-1">
-                    at {op.appealBody}
-                  </p>
-                </div>
+                <AppealBodyStat appealBody={op.appealBody} />
               </div>
             )}
           </div>

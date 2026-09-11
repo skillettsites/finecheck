@@ -10,7 +10,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a Dart Charge PCN at the Dartford Crossing",
     description:
       "A step-by-step guide to challenging a Dart Charge Penalty Charge Notice issued for the Dartford-Thurrock river crossing, with the statutes that the adjudicator actually applies.",
-    seoTitle: "Dart Charge PCN Appeal: Grounds + Letter | AppealAFine",
+    seoTitle: "Dart Charge PCN Appeal: Grounds + Letter",
     seoDescription:
       "Got a Dart Charge PCN for the Dartford Crossing? Use the statutory grounds, deadlines and free template letter to challenge it through Conduent and the Traffic Penalty Tribunal.",
     searchVolume: 9900,
@@ -103,7 +103,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a Mersey Gateway Bridge PCN",
     description:
       "Step-by-step appeal guide for a Mersey Gateway Penalty Charge Notice on the Runcorn-Widnes crossing, with the statutory grounds and tribunal route.",
-    seoTitle: "Mersey Gateway PCN Appeal: Statutory Grounds | AppealAFine",
+    seoTitle: "Mersey Gateway PCN Appeal: Statutory Grounds",
     seoDescription:
       "Mersey Gateway Bridge PCN? Use these statutory grounds and the Traffic Penalty Tribunal route to challenge the £40 to £80 charge through Merseyflow.",
     searchVolume: 3600,
@@ -196,7 +196,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a Tyne Tunnel PCN",
     description:
       "Step-by-step appeal guide for an unpaid toll Penalty Charge Notice for the Tyne Tunnel, with statutory grounds and the route to the Traffic Penalty Tribunal.",
-    seoTitle: "Tyne Tunnel PCN Appeal: Statutory Grounds | AppealAFine",
+    seoTitle: "Tyne Tunnel PCN Appeal: Statutory Grounds",
     seoDescription:
       "Tyne Tunnel PCN from TT2? Use these statutory grounds and the Traffic Penalty Tribunal route to challenge the £60 to £100 charge.",
     searchVolume: 2400,
@@ -289,7 +289,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to challenge an M6 Toll PCN: the rules are different",
     description:
       "The M6 Toll is a private motorway, so the usual Traffic Management Act appeal route does not apply. Here is what does, and how to defend a contract-law claim if it goes to court.",
-    seoTitle: "M6 Toll PCN: Why It Is Not a Real PCN | AppealAFine",
+    seoTitle: "M6 Toll PCN: Why It Is Not a Real PCN",
     seoDescription:
       "The M6 Toll is a private road, not a TMA 2004 fine. Learn why standard appeal routes do not apply and how to defend a contractual claim from Midland Expressway.",
     searchVolume: 1900,
@@ -475,7 +475,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a ULEZ Penalty Charge Notice",
     description:
       "Appeal a Transport for London ULEZ PCN with the statutory grounds, deadlines and route to London Tribunals.",
-    seoTitle: "ULEZ PCN Appeal: Statutory Grounds + Letter | AppealAFine",
+    seoTitle: "ULEZ PCN Appeal: Statutory Grounds + Letter",
     seoDescription:
       "Received a £180 ULEZ PCN from TfL? Use the statutory grounds, the 14-day discount window and the London Tribunals route to challenge it.",
     searchVolume: 8100,
@@ -568,7 +568,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a London Congestion Charge PCN",
     description:
       "Step-by-step appeal of a Transport for London Congestion Charge PCN, with statutory grounds and the route to London Tribunals.",
-    seoTitle: "Congestion Charge PCN Appeal: Grounds + Letter | AppealAFine",
+    seoTitle: "Congestion Charge PCN Appeal: Grounds + Letter",
     seoDescription:
       "Got a £160 London Congestion Charge PCN? Use these statutory grounds and the London Tribunals route to challenge through TfL.",
     searchVolume: 3600,
@@ -661,7 +661,7 @@ export const LOCATION_PAGES_TOLL: LocationFinePage[] = [
     h1: "How to appeal a UK Clean Air Zone PCN",
     description:
       "Appeal a Clean Air Zone PCN in Bath, Birmingham, Bradford, Bristol, Portsmouth, Sheffield, Tyneside or Newcastle, with statutory grounds and the tribunal route.",
-    seoTitle: "Clean Air Zone PCN Appeal: All UK Cities | AppealAFine",
+    seoTitle: "Clean Air Zone PCN Appeal: All UK Cities",
     seoDescription:
       "UK Clean Air Zone PCN? Cover all 8 cities, statutory grounds under the Transport Act 2000, and the Traffic Penalty Tribunal route.",
     searchVolume: 2900,

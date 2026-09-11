@@ -376,7 +376,7 @@ This is true whether the fine is from a council, a private operator like Parking
 
 ### Stage 2: Debt Collection Agency
 
-The operator passes the debt to a Debt Collection Agency (DCA). Names you might see: DRP (Debt Recovery Plus), QDR, ZZPS, Trace Debt Recovery, BW Legal.
+The operator passes the debt to a Debt Collection Agency (DCA). Names you might see: DRP ([Debt Recovery Plus](/blog/should-i-ignore-debt-recovery-plus-letter)), QDR, ZZPS, Trace Debt Recovery, BW Legal.
 
 DCA letters are loud. They mention "marker on your credit file", "doorstep collectors", "legal action imminent". This wording is calibrated to scare. Most of it is bluff.
 

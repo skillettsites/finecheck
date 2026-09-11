@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Container from "@/components/ui/Container";
+import Link from "next/link";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -112,6 +113,11 @@ const faqItems = [
       "No. AppealAFine provides legal information and document preparation tools, not regulated legal advice. The documents are built on established UK parking law: POFA 2012 Schedule 4, the Pre-Action Protocol for Debt Claims, and the leading case law. For complex situations, particularly once court proceedings are issued, we recommend consulting a solicitor alongside using these documents.",
   },
   {
+    question: "Should I buy the pack or the £9.99 Escalation Reply Letter?",
+    answer:
+      "If you have one specific letter to answer (a rejected appeal to take to POPLA or the IAS, a debt collector's demand, or a Letter Before Claim) and you want it written for your case, the £9.99 Escalation Reply Letter from the free assessment is the better fit: it is personalised to your grounds and your operator. The £19.99 pack is the full set of five fixed documents, including the court defence checklist and witness statement skeleton, which the reply letter does not cover. If a County Court claim form has arrived, buy the pack.",
+  },
+  {
     question: "What if my fine is still at the appeal stage?",
     answer:
       "Then do not buy this pack yet. Use our free assessment first: it checks your fine in 2 minutes, and if you have grounds, a personalised appeal letter is £2.99. The Escalation Pack is for charges that are past the appeal stage.",
@@ -203,7 +209,7 @@ export default function EscalationPackPage() {
           </h2>
           <p className="mt-3 text-center text-gray-600 max-w-2xl mx-auto">
             The pack covers all four of the situations below. If your fine is still at the first
-            appeal stage, start with our <a href="/appeal" className="text-teal-600 font-medium hover:underline">free 2-minute check</a> instead.
+            appeal stage, start with our <Link href="/appeal" className="text-teal-600 font-medium hover:underline">free 2-minute check</Link> instead.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {situations.map((s) => (
@@ -212,6 +218,30 @@ export default function EscalationPackPage() {
                 <p className="mt-2 text-sm text-gray-600 leading-relaxed">{s.body}</p>
               </div>
             ))}
+          </div>
+
+          {/* The £9.99 personalised alternative for the first three situations.
+              Sold from the appeal flow, which asks which stage the reader is at. */}
+          <div className="mt-8 rounded-xl border border-teal-200 bg-teal-50 p-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-teal-900">
+                  Only need one letter, written for your case? £9.99
+                </h3>
+                <p className="mt-2 text-sm text-teal-900/90 leading-relaxed max-w-2xl">
+                  For the first three situations above, the <strong>Escalation Reply Letter</strong> is a
+                  personalised alternative: run the free check, tell us which letter you have, and we write
+                  the POPLA or IAS submission, the debt collector reply or the Letter Before Claim response
+                  around your grounds and your operator. The pack remains the right choice once a County
+                  Court claim form has arrived.
+                </p>
+              </div>
+              <div className="shrink-0">
+                <Button href="/appeal" variant="primary" size="md">
+                  Check my fine and get the letter
+                </Button>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

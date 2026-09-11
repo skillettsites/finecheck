@@ -10,7 +10,7 @@ export const LOCATION_PAGES_AVG_SPEED: LocationFinePage[] = [
     h1: "How to appeal an M25 average-speed or smart-motorway speeding fine",
     description:
       "Guide to challenging a Notice of Intended Prosecution from M25 HADECS3 or average-speed cameras, with the statutes and the court route.",
-    seoTitle: "M25 Average Speed Fine Appeal: NIP + Court Route | AppealAFine",
+    seoTitle: "M25 Average Speed Fine Appeal: NIP + Court Route",
     seoDescription:
       "M25 average-speed or smart-motorway NIP? Use these statutory grounds, the 14-day rule under the RTOA 1988 and the court route to challenge a speeding fine.",
     searchVolume: 720,
@@ -102,7 +102,7 @@ export const LOCATION_PAGES_AVG_SPEED: LocationFinePage[] = [
     h1: "How to appeal an A9 average-speed speeding fine",
     description:
       "Appeal a Police Scotland Conditional Offer of Fixed Penalty from the A9 average-speed cameras, including the Justice of the Peace Court route.",
-    seoTitle: "A9 Average Speed Fine Appeal (Scotland) | AppealAFine",
+    seoTitle: "A9 Average Speed Fine Appeal (Scotland)",
     seoDescription:
       "A9 average-speed NIP from Police Scotland? Statutory grounds, the Scottish Conditional Offer, and the Justice of the Peace Court route to challenge.",
     searchVolume: 590,
@@ -194,7 +194,7 @@ export const LOCATION_PAGES_AVG_SPEED: LocationFinePage[] = [
     h1: "How to appeal an A14 average-speed speeding fine",
     description:
       "Appeal a Notice of Intended Prosecution from A14 average-speed cameras, including statutory grounds and the magistrates' court route.",
-    seoTitle: "A14 Average Speed Fine Appeal: NIP + Court | AppealAFine",
+    seoTitle: "A14 Average Speed Fine Appeal: NIP + Court",
     seoDescription:
       "A14 average-speed NIP from Cambs, Suffolk or Northants Police? Use statutory grounds and the court route to challenge a speeding fine.",
     searchVolume: 480,
@@ -286,7 +286,7 @@ export const LOCATION_PAGES_AVG_SPEED: LocationFinePage[] = [
     h1: "How to appeal an A90 average-speed speeding fine",
     description:
       "Appeal a Police Scotland Conditional Offer of Fixed Penalty from the A90 average-speed cameras between Dundee and Stonehaven.",
-    seoTitle: "A90 Average Speed Fine Appeal (Scotland) | AppealAFine",
+    seoTitle: "A90 Average Speed Fine Appeal (Scotland)",
     seoDescription:
       "A90 average-speed NIP from Police Scotland? Use statutory grounds and the Justice of the Peace Court route to challenge a speeding fine.",
     searchVolume: 390,

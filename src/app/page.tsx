@@ -11,7 +11,7 @@ import OperatorMarquee from "@/components/OperatorMarquee";
 export const metadata: Metadata = {
   title: "Get a Personalised PCN Appeal Letter, From £2.99 | AppealAFine",
   description:
-    "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £2.99. Free validity check first. No subscription. 64% success rate at tribunal.",
+    "AI-generated appeal letters for UK parking fines, bus lane PCNs, congestion charges and ULEZ. Letter in 5 minutes from £2.99. Free validity check first. No subscription. London Tribunals allowed 49% of parking appeals in 2024-25.",
   alternates: {
     canonical: "https://www.appealafine.co.uk",
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const statsForCounter = [
   { value: 33, suffix: "M+", label: "Fines issued in the UK each year" },
   { value: 40, suffix: "%", label: "Of drivers think their fine is unfair" },
-  { value: 64, suffix: "%", label: "Appeal success rate at tribunal" },
+  { value: 49, suffix: "%", label: "Of London parking appeals allowed (London Tribunals, 2024-25)" },
   { value: 5, suffix: "%", prefix: "0.", label: "Of fines are formally appealed" },
 ];
 
@@ -111,7 +111,7 @@ const faqItems = [
   {
     question: "Do you guarantee success?",
     answer:
-      "No service can guarantee the outcome of an appeal, and we would never make that claim. What we can tell you is that 55-80% of appeals succeed at tribunal, and our free assessment gives you an honest evaluation of your chances before you spend anything.",
+      "No service can guarantee the outcome of an appeal, and we would never make that claim. What we can tell you is that the published figures are encouraging: London Tribunals allowed 49% of the parking appeals it decided in 2024-25 (Environment and Traffic Adjudicators Annual Report 2024-25), and POPLA cancelled the charge in 40% of the appeals it completed in the year to September 2024 (POPLA Annual Report 2024). Our free assessment gives you an honest evaluation of your own chances before you spend anything.",
   },
   {
     question: "What types of fines can you help with?",
@@ -259,7 +259,7 @@ export default function HomePage() {
               <ScrollReveal immediate index={4} className="aaf-stagger mt-8 grid w-full max-w-xl grid-cols-2 gap-x-6 gap-y-3 text-sm text-slate-600 lg:mx-0 mx-auto">
                 {[
                   "Cites real UK legislation",
-                  "55-80% appeal success rate",
+                  "Correct appeal body and deadline identified",
                   "Letter emailed in minutes",
                   "Free check before you pay",
                 ].map((label) => (

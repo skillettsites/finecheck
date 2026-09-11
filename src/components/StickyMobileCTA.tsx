@@ -76,6 +76,9 @@ function nextDeadline(appeal: SavedAppeal | null): DeadlineInfo | null {
 
 export default function StickyMobileCTA() {
   const [deadline, setDeadline] = useState<DeadlineInfo | null>(null);
+  // Later-stage flows (rejected, collector, letter before claim, court) sell a
+  // different product, so the £2.99 label must not be shown for them.
+  const [laterStage, setLaterStage] = useState(false);
 
   useEffect(() => {
     try {
@@ -83,6 +86,8 @@ export default function StickyMobileCTA() {
       if (!raw) return;
       const parsed = JSON.parse(raw) as SavedAppeal;
       setDeadline(nextDeadline(parsed));
+      const stage = (parsed as { stage?: string }).stage;
+      setLaterStage(typeof stage === "string" && stage !== "new");
     } catch {
       // sessionStorage unavailable or JSON malformed; show the generic CTA.
     }
@@ -107,7 +112,7 @@ export default function StickyMobileCTA() {
           href="/appeal"
           className="group flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-teal-600 to-teal-700 px-4 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_-8px_rgba(13,148,136,0.5)] transition-all active:scale-[0.99]"
         >
-          {hasDeadline ? "Get my letter — £2.99" : "Check my fine — free"}
+          {hasDeadline ? (laterStage ? "Continue my reply letter" : "Get my letter — £2.99") : "Check my fine — free"}
           <svg
             className="h-4 w-4 transition-transform group-active:translate-x-0.5"
             fill="none"

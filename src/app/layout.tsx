@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "Appeal Your Parking Fine for Free | AppealAFine",
   },
   description:
-    "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates, step-by-step guides, and 64% tribunal success rates.",
+    "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and step-by-step guides. London Tribunals allowed 49% of parking appeals in 2024-25.",
   keywords: [
     "parking fine appeal",
     "PCN appeal",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "AppealAFine",
     title: "Appeal Your Parking Fine for Free | AppealAFine",
     description:
-      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and 64% tribunal success rates.",
+      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and guides. London Tribunals allowed 49% of parking appeals in 2024-25.",
     images: [
       {
         url: "/og-image.png",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Appeal Your Parking Fine for Free | AppealAFine",
     description:
-      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and 64% tribunal success rates.",
+      "Appeal your UK parking fine for free. Challenge council PCNs, private parking charges, bus lane fines, and ULEZ penalties. Free appeal letter templates and guides. London Tribunals allowed 49% of parking appeals in 2024-25.",
     images: ["/og-image.png"],
   },
   robots: {

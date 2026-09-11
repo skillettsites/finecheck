@@ -8,7 +8,7 @@ import {
 } from "@/data/location-pages";
 
 export const metadata: Metadata = {
-  title: "Local Fine Appeals: Tolls, Bus Lanes, Speeding, Cameras | AppealAFine",
+  title: "Local Fine Appeals: Tolls, Bus Lanes, Speeding, Cameras",
   description:
     "Pick your exact fine type and location. Dart Charge, ULEZ, Mersey Gateway, ParkingEye venues, police speeding tickets and average-speed cameras, all with appeal guides.",
   alternates: {

@@ -53,10 +53,8 @@ export default function OperatorsFilter() {
                   </h2>
                   <p className="mt-1 text-sm text-gray-500">{op.fullName}</p>
                 </div>
-                <Badge
-                  variant={op.averageSuccessRate >= 50 ? "success" : "warning"}
-                >
-                  {op.averageSuccessRate}% success
+                <Badge variant={op.pursuesToCourt ? "warning" : "success"}>
+                  {op.pursuesToCourt ? "Pursues court" : "Rarely goes to court"}
                 </Badge>
               </div>
 

@@ -4,6 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { PRODUCTS } from "@/data/products";
 import { trackPurchase } from "@/lib/gtag";
+import {
+  STAGE_REPLY_LETTER_ID,
+  isStageReplyStage,
+  stageFallbackLetter,
+  stageLetterInputFromAppeal,
+  stageLetterTitle,
+  stageSendingSteps,
+} from "@/lib/stage-letter";
+import type { AppealStage } from "@/lib/types";
 
 interface SavedAppeal {
   form: {
@@ -24,6 +33,8 @@ interface SavedAppeal {
     whatHappened?: string;
     contraventionDescription?: string;
     wasDriver?: string;
+    stageSenderName?: string;
+    stageLetterDate?: string;
   };
   assessment: {
     overallStrength: string;
@@ -33,6 +44,11 @@ interface SavedAppeal {
     nextSteps: string[];
   };
   productId: string;
+  // Set by the appeal flow since 2026-09-11. A stage-reply-letter purchase
+  // carries one of the reply stages; court claims never land here (they buy
+  // the Escalation Pack and go to /escalation-pack/success).
+  stage?: string;
+  addOns?: string[];
 }
 
 function generateLetterContent(data: SavedAppeal): string {
@@ -125,6 +141,9 @@ export default function SuccessContent() {
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [generating, setGenerating] = useState(true);
+  // Non-null for an Escalation Reply Letter purchase; drives the preview,
+  // the generation call and the sending instructions below.
+  const [stage, setStage] = useState<AppealStage | null>(null);
 
   useEffect(() => {
     async function loadAndGenerate() {
@@ -134,9 +153,14 @@ export default function SuccessContent() {
 
         const parsed = JSON.parse(stored) as SavedAppeal;
         setData(parsed);
+        const parsedStage: AppealStage | null =
+          parsed.productId === STAGE_REPLY_LETTER_ID && isStageReplyStage(parsed.stage) ? parsed.stage : null;
+        setStage(parsedStage);
 
         // Show the basic template immediately while Claude generates
-        const fallbackContent = generateLetterContent(parsed);
+        const fallbackContent = parsedStage
+          ? stageFallbackLetter(stageLetterInputFromAppeal(parsed, parsedStage))
+          : generateLetterContent(parsed);
         setLetterContent(fallbackContent);
 
         // Read Stripe session id from the success URL (?session_id=cs_...).
@@ -151,8 +175,10 @@ export default function SuccessContent() {
         }
 
         // GA4 purchase key event (deduped per Stripe session in trackPurchase).
+        // A bundled Premium add-on is a second line item on the same session.
         const product = PRODUCTS[parsed.productId] || PRODUCTS["standard-letter"];
-        trackPurchase(stripeSessionId, product.id, product.name, product.price);
+        const addOnPence = parsed.addOns?.includes("premium-pack") ? PRODUCTS["premium-pack"].price : 0;
+        trackPurchase(stripeSessionId, product.id, product.name, product.price + addOnPence);
 
         // Check if we already generated with Claude for this session
         const cachedLetter = sessionStorage.getItem("finecheck_ai_letter");
@@ -186,7 +212,15 @@ export default function SuccessContent() {
               appealGrounds: parsed.assessment.grounds.map((g) => `${g.title} (${g.legalBasis})`),
               senderName: parsed.form.senderName?.trim() || "[YOUR NAME]",
               senderAddress: parsed.form.senderAddress?.trim() || "[YOUR ADDRESS]",
-              product: isPremium ? "premium" : "basic",
+              product: parsedStage ? "stage-reply" : isPremium ? "premium" : "basic",
+              ...(parsedStage
+                ? {
+                    stage: parsedStage,
+                    stageSenderName: parsed.form.stageSenderName,
+                    stageLetterDate: parsed.form.stageLetterDate,
+                    wasDriver: parsed.form.wasDriver,
+                  }
+                : {}),
               sessionId: stripeSessionId,
             }),
           });
@@ -265,7 +299,12 @@ export default function SuccessContent() {
           fineDate: parsed.form.fineDate || parsed.form.parkingEventDate,
           senderName: parsed.form.senderName,
           senderAddress: parsed.form.senderAddress,
-          productName: parsed.productId === "premium-pack" ? "Premium Appeal Pack" : "Standard Appeal Letter",
+          productName:
+            parsed.productId === "premium-pack"
+              ? "Premium Appeal Pack"
+              : parsed.productId === STAGE_REPLY_LETTER_ID
+              ? PRODUCTS[STAGE_REPLY_LETTER_ID].name
+              : "Standard Appeal Letter",
           escalationLetter: escalation,
           evidenceChecklist: checklist,
         }),
@@ -338,6 +377,8 @@ export default function SuccessContent() {
   }
 
   const isPrivate = data.form.fineType === "private";
+  const letterTitle = stage ? stageLetterTitle(stage, data.form.fineType) : "Appeal Letter";
+  const hasPremiumAddOn = Boolean(data.addOns?.includes("premium-pack"));
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -351,9 +392,15 @@ export default function SuccessContent() {
               </svg>
             </div>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Your Appeal Letter is Ready</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+            {stage ? `Your ${letterTitle} is Ready` : "Your Appeal Letter is Ready"}
+          </h1>
           <p className="text-gray-600">
-            {generating
+            {stage
+              ? generating
+                ? "Our AI is writing your personalised reply with the legal references for this stage. This takes a few seconds..."
+                : "Your personalised reply has been generated from the grounds identified in your assessment. Copy or download it below, then follow the steps to send it."
+              : generating
               ? "Our AI is crafting your personalised appeal letter with specific legal references. This takes a few seconds..."
               : "Your personalised appeal letter has been generated using the legal grounds identified in your assessment. Copy or download it below, then follow the next steps to submit your appeal."}
           </p>
@@ -384,7 +431,7 @@ export default function SuccessContent() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              <span className="font-medium">Generating your personalised appeal letter...</span>
+              <span className="font-medium">{stage ? "Generating your personalised reply letter..." : "Generating your personalised appeal letter..."}</span>
             </div>
             <p className="mt-2 text-sm text-teal-600">Our AI is crafting a professional letter with specific legal references for your case.</p>
           </div>
@@ -394,7 +441,7 @@ export default function SuccessContent() {
         <div className="rounded-xl border border-gray-200 bg-white shadow-sm mb-6">
           <div className="flex items-center justify-between border-b border-gray-200 px-6 py-3">
             <h3 className="text-sm font-semibold text-gray-900">
-              {generating ? "Appeal Letter (preview)" : "Appeal Letter"}
+              {generating ? `${letterTitle} (preview)` : letterTitle}
             </h3>
             <div className="flex items-center gap-2">
               <button
@@ -436,6 +483,19 @@ export default function SuccessContent() {
             <pre className="whitespace-pre-wrap text-sm text-gray-800 leading-relaxed font-sans">{letterContent}</pre>
           </div>
         </div>
+
+        {/* Premium add-on bundled with the reply letter: generated and
+            attached by the webhook, so it is announced here rather than
+            regenerated in the browser. */}
+        {hasPremiumAddOn && (
+          <div className="rounded-xl border border-teal-200 bg-teal-50 p-5 mb-6">
+            <h3 className="text-sm font-semibold text-teal-900 mb-1">Your Premium Appeal Pack is in the same email</h3>
+            <p className="text-sm text-teal-800">
+              The first-stage appeal letter, the escalation letter and your evidence checklist are attached to
+              the email alongside this reply. Check your spam folder if it has not arrived within a few minutes.
+            </p>
+          </div>
+        )}
 
         {/* Escalation Letter (Premium) */}
         {escalationLetter && (
@@ -487,9 +547,22 @@ export default function SuccessContent() {
 
         {/* Next steps */}
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">How to Submit Your Appeal</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            {stage ? "How to send your reply" : "How to Submit Your Appeal"}
+          </h3>
 
-          {isPrivate ? (
+          {stage ? (
+            <div className="space-y-4">
+              {stageSendingSteps(stage, data.form.fineType).map((step, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-xs font-semibold text-teal-700">
+                    {i + 1}
+                  </span>
+                  <p className="text-sm text-gray-600">{step}</p>
+                </div>
+              ))}
+            </div>
+          ) : isPrivate ? (
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-100 text-xs font-semibold text-teal-700">
@@ -509,7 +582,7 @@ export default function SuccessContent() {
                   2
                 </span>
                 <div>
-                  <h4 className="text-sm font-medium text-gray-900">Wait for the operator's decision</h4>
+                  <h4 className="text-sm font-medium text-gray-900">Wait for the operator&apos;s decision</h4>
                   <p className="text-sm text-gray-600">
                     The operator should respond within 28 days. Do not pay the charge while your appeal is being
                     considered; the discount period is paused.
@@ -600,7 +673,27 @@ export default function SuccessContent() {
           )}
         </div>
 
-        {/* Timeline */}
+        {/* What happens next at this stage: the stage-specific next steps
+            from the assessment, which already sit in the saved appeal. */}
+        {stage && data.assessment.nextSteps.length > 0 && (
+          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">What happens next</h3>
+            <ol className="space-y-2">
+              {data.assessment.nextSteps.map((step, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-50 text-xs font-semibold text-teal-700">
+                    {i + 1}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        {/* Timeline (first-stage letters only; later stages have no fixed
+            operator or tribunal timetable we can honestly quote) */}
+        {!stage && (
         <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">Expected Timeline</h3>
           <div className="text-sm text-gray-600 space-y-2">
@@ -621,6 +714,7 @@ export default function SuccessContent() {
             )}
           </div>
         </div>
+        )}
 
         <div className="text-center">
           <Link

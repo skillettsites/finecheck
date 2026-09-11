@@ -32,7 +32,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The truth about ignoring private parking fines in 2026, including the new Code of Practice, debt collectors, court action, and your real options.",
     publishedDate: "2026-03-15",
     category: "Private Parking",
-    seoTitle: "Can You Ignore a Private Parking Fine in 2026? | AppealAFine",
+    seoTitle: "Can You Ignore a Private Parking Fine in 2026?",
     seoDescription:
       "Should you ignore a private parking fine? We cover the new 2026 Code of Practice, when operators pursue court action, CCJs, and what actually happens if you don't pay.",
     content: `## The Short Answer
@@ -49,7 +49,7 @@ That changed in 2015 with the Supreme Court ruling in **ParkingEye v Beavis**. T
 
 Since then, the situation has continued to shift:
 
-- **ParkingEye** regularly pursues court action through DCB Legal and Gladstones Solicitors. They file thousands of County Court claims each year.
+- **ParkingEye** regularly pursues court action through DCB Legal and Gladstones Solicitors. They file thousands of County Court claims each year. A [ParkingEye appeal](/appeals/parkingeye) at the first stage is the cheapest way to stop that chain before it starts.
 - **UKPC, Excel Parking, and Horizon** have also increased their use of debt recovery and court action.
 - The **Protection of Freedoms Act 2012 (POFA)** allows operators to pursue the registered keeper if they cannot identify the driver, provided they follow the correct process.
 - The **new Private Parking Code of Practice** has standardised charges and given operators clearer authority.
@@ -146,7 +146,7 @@ Ignoring a private parking fine in 2026 is a gamble, and the odds are worse than
       "A step-by-step timeline of what happens when you don't pay a parking fine, from the initial notice through to debt collectors and court action.",
     publishedDate: "2026-03-10",
     category: "Guides",
-    seoTitle: "What Happens If You Don't Pay a Parking Fine? Full Timeline | AppealAFine",
+    seoTitle: "What Happens If You Don't Pay a Parking Fine? Full Timeline",
     seoDescription:
       "Step-by-step guide to what happens when you don't pay a UK parking fine. Covers council and private fines, deadlines, debt collectors, court action, and CCJs.",
     content: `## It Depends on Who Issued the Fine
@@ -309,65 +309,48 @@ A County Court Judgment is serious:
     slug: "parking-fine-appeal-success-rates-2026",
     title: "Parking Fine Appeal Success Rates in 2026: The Real Numbers",
     description:
-      "Actual appeal success rate data from TPT, London Tribunals, and POPLA. Find out your real chances of winning a parking fine appeal.",
+      "Published appeal outcome figures from London Tribunals (2024-25) and POPLA (2024), with the source named for every number, and what they mean for your chances of winning a parking fine appeal.",
     publishedDate: "2026-03-08",
     category: "Data & Research",
-    seoTitle: "Parking Fine Appeal Success Rates 2026: Real Data | AppealAFine",
+    seoTitle: "Parking Fine Appeal Success Rates 2026: Real Data",
     seoDescription:
-      "Real parking fine appeal success rates for 2026. TPT: 64%, London Tribunals: 49%, POPLA: 42%. See which defences work best and why most people never appeal.",
+      "Published parking appeal outcomes: London Tribunals allowed 49% of parking appeals in 2024-25 and POPLA cancelled 40% of completed appeals in 2024. Sources cited, plus which defences work best.",
     content: `## The Numbers Most People Never See
 
 Most drivers who receive a parking fine never appeal. Across the UK, fewer than 1 in 20 recipients challenge their ticket, despite appeal success rates that would surprise most people. Here are the real numbers from the most recent published data.
 
 ## Independent Tribunal Success Rates
 
-These are the success rates at the final stage of appeal, where an independent adjudicator reviews the case:
+These are the outcomes at the final stage of appeal, where an independent adjudicator or assessor reviews the case. Every figure below comes from the body's own published report, named in the same paragraph, and was checked on 11 September 2026.
+
+### London Tribunals (Environment and Traffic Adjudicators)
+
+London Tribunals hears appeals against PCNs issued by the London boroughs and Transport for London. Its Environment and Traffic Adjudicators Annual Report 2024-25 records:
+
+- **Parking: 21,246 appeals determined, 10,496 allowed (49%)**, of which 6,143 were not contested by the authority
+- Bus lane: 1,389 determined, 759 allowed (55%)
+- Moving traffic: 16,351 determined, 8,199 allowed (50%)
+- All appeal types together: 43,193 determined, 19,625 allowed (45%)
+
+The same report notes that the number of appeals authorities chose not to contest rose by just under 15% on the previous year.
 
 ### Traffic Penalty Tribunal (TPT)
 
-The TPT covers council parking fines in England (outside London) and Wales.
-
-- **Overall success rate: 64%**
-- Total appeals received: approximately 48,000
-- Appeals allowed (driver wins): approximately 31,000
-- Appeals refused: approximately 17,000
-
-This is a remarkable number. Nearly two-thirds of drivers who take their case to the TPT win. The TPT adjudicators are legally qualified and their decisions are binding on the council.
-
-### London Tribunals
-
-London Tribunals (formerly PATAS) handles appeals against London borough parking fines.
-
-- **Overall success rate: 49%**
-- Total appeals received: approximately 52,000
-- Appeals allowed: approximately 25,500
-- Appeals refused: approximately 26,500
-
-London has a lower success rate than the TPT, likely because London boroughs are more experienced at enforcement and their cases tend to be better documented. Still, nearly half of all appeals succeed.
+The TPT covers council PCNs in England outside London and in Wales. It publishes its appeal outcomes as interactive charts by authority and penalty type at tpt.gov.uk/appeals-data (data published up to 2021/22 at the time of writing). The Tribunal does not publish a single headline percentage in a citable report, so we do not quote one; use the charts to look up your own council.
 
 ### POPLA (Parking on Private Land Appeals)
 
-POPLA handles appeals against private parking charges from BPA member companies.
-
-- **Overall success rate: 42%**
-- Total appeals received: approximately 65,000
-- Appeals allowed: approximately 27,300
-- Appeals refused: approximately 37,700
-
-While lower than the council tribunal rates, a 42% success rate is still significant. Nearly half of all private parking charge appeals are upheld.
+POPLA handles appeals against private parking charges issued by BPA members. Its Annual Report 2024 (1 October 2023 to 30 September 2024) records 98,110 appeals received and 92,098 completed, with **the charge cancelled in 40% of completed appeals (37,016)**. Operators chose not to contest a further 23,800 appeals, which also cancels the charge, and 429 more were cancelled as goodwill after POPLA referred them back on mitigation grounds.
 
 ### IAS (Independent Appeals Service)
 
-The IAS covers private parking charges from IPC member companies.
-
-- **Overall success rate: approximately 40%**
-- Published data is less detailed than POPLA, but success rates are broadly similar.
+The IAS covers private parking charges from IPC members. We have not found a published IAS outcome rate that we could verify, so we do not quote one.
 
 ## Success Rates by Defence Type
 
 Not all defences are created equal. Here is how different grounds of appeal perform:
 
-### Strongest Defences (60%+ success rate)
+### Strongest Defences
 
 - **Inadequate signage**: Signs were too small, obscured, contradictory, or missing key terms. This is one of the strongest defences because the contract between the driver and the operator is formed through the signage. If the signs were unclear, there is no valid contract.
 
@@ -375,7 +358,7 @@ Not all defences are created equal. Here is how different grounds of appeal perf
 
 - **Contravention did not occur**: The driver can prove they were not in contravention. Examples include having a valid permit that was not displayed correctly, or being within a loading/unloading exemption.
 
-### Moderate Defences (40-60% success rate)
+### Moderate Defences
 
 - **Mitigating circumstances**: The driver had a reasonable excuse, such as a medical emergency, vehicle breakdown, or being directed to park by a warden or attendant.
 
@@ -383,7 +366,7 @@ Not all defences are created equal. Here is how different grounds of appeal perf
 
 - **Grace period violations**: The driver overstayed by a very short period. The new Code of Practice mandates a 10-minute grace period, but cases from before its introduction may still use this defence.
 
-### Weaker Defences (below 40% success rate)
+### Weaker Defences
 
 - **"I didn't see the signs"**: Unless the signage was genuinely inadequate, simply not noticing restrictions is not a defence.
 
@@ -407,9 +390,7 @@ Given these success rates, why do so few people appeal? Research suggests severa
 
 ## What This Means for You
 
-The data is clear: if you have reasonable grounds to appeal, the odds are genuinely in your favour. Even at the lowest tribunal (POPLA, 42%), you have close to a coin flip chance of winning.
-
-At the Traffic Penalty Tribunal, you have a nearly two-in-three chance of success. These are not theoretical numbers; they represent thousands of real cases decided by independent adjudicators each year.
+The published figures say that roughly half of the council parking appeals London Tribunals decided in 2024-25 were allowed (10,496 of 21,246, Environment and Traffic Adjudicators Annual Report 2024-25), and that four in ten completed POPLA appeals in the year to September 2024 ended with the charge cancelled before counting the 23,800 appeals operators did not contest (POPLA Annual Report 2024). Those are decisions by independent adjudicators and assessors on real cases, not estimates.
 
 The key takeaway: **do not assume your appeal will fail.** The evidence suggests that most parking fines that are appealed have genuine issues with signage, process, or the facts of the contravention. If you think something was wrong with your fine, it is almost certainly worth challenging.
 
@@ -428,7 +409,7 @@ The key takeaway: **do not assume your appeal will fail.** The evidence suggests
       {
         question: "What is the success rate for parking fine appeals?",
         answer:
-          "It varies by tribunal. The Traffic Penalty Tribunal (TPT) has a 64% success rate, London Tribunals around 49%, and POPLA (private fines) around 42%. Overall, appealing is more likely to succeed than most people think.",
+          "It varies by body. London Tribunals allowed 49% of the parking appeals it determined in 2024-25 (10,496 of 21,246, Environment and Traffic Adjudicators Annual Report 2024-25). POPLA cancelled the charge in 40% of the 92,098 appeals it completed in the year to 30 September 2024, and operators did not contest a further 23,800 (POPLA Annual Report 2024). The Traffic Penalty Tribunal publishes its outcomes as charts by council at tpt.gov.uk/appeals-data rather than a single headline rate.",
       },
       {
         question: "Does appealing a parking fine increase the amount I owe?",
@@ -454,14 +435,14 @@ The key takeaway: **do not assume your appeal will fail.** The evidence suggests
       "A practical guide to what happens when ParkingEye files a County Court claim against you, from the initial paperwork to the hearing and how to defend yourself.",
     publishedDate: "2026-03-05",
     category: "Legal",
-    seoTitle: "ParkingEye Took Me to Court: What Really Happens | AppealAFine",
+    seoTitle: "ParkingEye Took Me to Court: What Really Happens",
     seoDescription:
       "What to expect if ParkingEye takes you to court for an unpaid parking charge. Covers the N1 claim form, defences, mediation, small claims hearings, and when they drop cases.",
     content: `## ParkingEye Is Different
 
 ParkingEye is the UK's largest private parking operator, managing thousands of car parks across supermarkets, retail parks, hospitals, and leisure venues. They are also, by a considerable margin, the most likely private operator to take drivers to court for unpaid charges.
 
-While many private parking operators threaten court action but rarely follow through, ParkingEye has a dedicated legal operation. Their primary solicitors, DCB Legal (previously known as DCB Group), handle thousands of County Court claims annually. If you have ignored a ParkingEye charge, the threat of court action is real.
+While many private parking operators threaten court action but rarely follow through, ParkingEye has a dedicated legal operation. Their primary solicitors, DCB Legal (previously known as DCB Group), handle thousands of County Court claims annually. If you have ignored a ParkingEye charge, the threat of court action is real. If your charge is still at the first stage, start with our [ParkingEye appeal](/appeals/parkingeye) guide instead: most charges are cancelled long before a claim form is ever issued.
 
 ## The Background: ParkingEye v Beavis
 
@@ -608,7 +589,7 @@ The total is usually £150-£250. You will not be ordered to pay ParkingEye's le
       "Complete guide to appealing parking fines from Aldi, Lidl, Tesco, Morrisons, and Asda car parks. Which operators manage which stores and how to win your appeal.",
     publishedDate: "2026-02-28",
     category: "Guides",
-    seoTitle: "Supermarket Parking Fine Appeal Guide 2026 | AppealAFine",
+    seoTitle: "Supermarket Parking Fine Appeal Guide 2026",
     seoDescription:
       "How to appeal a supermarket parking fine from Aldi, Lidl, Tesco, Morrisons, or Asda. See which operators enforce which stores and the best defences to use.",
     content: `## Why Supermarket Parking Fines Are So Common
@@ -627,6 +608,8 @@ Understanding who manages the car park is the first step, because your appeal go
 - **Some Tesco** stores (shared with UKPC)
 - Various retail parks with supermarket anchors
 
+ParkingEye is a BPA member, so a rejected appeal goes to POPLA. Our [ParkingEye appeal](/appeals/parkingeye) guide covers the grounds that work against them.
+
 ### UKPC (UK Parking Control)
 - **Morrisons** (primary operator)
 - Some Tesco stores
@@ -642,6 +625,8 @@ Understanding who manages the car park is the first step, because your appeal go
 ### Smart Parking
 - **Lidl** (some newer stores)
 - Various mixed-use retail sites
+
+Smart Parking is an IPC member, so its appeals go to the IAS rather than POPLA. See our [Smart Parking appeal](/appeals/smart-parking) guide.
 
 Note: Operators can change, so always check the signage at the specific store.
 
@@ -797,7 +782,7 @@ Keep it factual and concise. Emotional appeals about loyalty to the supermarket 
       "How to appeal a hospital parking fine, including NHS parking rules, compassionate grounds, free parking eligibility, and ANPR overstay defences.",
     publishedDate: "2026-02-20",
     category: "Guides",
-    seoTitle: "Hospital Parking Fine Appeal Guide 2026 | AppealAFine",
+    seoTitle: "Hospital Parking Fine Appeal Guide 2026",
     seoDescription:
       "Appeal a hospital parking fine with our complete guide. Covers NHS free parking rules, compassionate grounds, ANPR overstay from long appointments, and who qualifies for exemptions.",
     content: `## Hospital Parking Fines: A Sensitive Issue
@@ -997,7 +982,7 @@ If you have been unfairly charged, do not simply accept it. Hospital parking fin
       "Everything you need to know about the new Private Parking Code of Practice, including the £50 cap, grace periods, and what has changed for drivers.",
     publishedDate: "2026-02-15",
     category: "Legal",
-    seoTitle: "New Private Parking Code of Practice 2026 Explained | AppealAFine",
+    seoTitle: "New Private Parking Code of Practice 2026 Explained",
     seoDescription:
       "The new Private Parking Code of Practice explained: £50 standard charges, 10-minute grace period, single appeals service, and what it means for drivers in 2026.",
     content: `## What Is the New Code of Practice?
@@ -1173,7 +1158,7 @@ The best advice remains the same: check the signage, know your time limit, and i
       "Time limits for sending parking fines: the POFA 14-day rule, council timescales, NtD vs NtK differences, and what counts as 'received'.",
     publishedDate: "2026-02-10",
     category: "Legal",
-    seoTitle: "How Long Does a Parking Company Have to Send a Fine? | AppealAFine",
+    seoTitle: "How Long Does a Parking Company Have to Send a Fine?",
     seoDescription:
       "The rules on how long parking companies and councils have to send you a fine. Covers the POFA 14-day rule, NtD vs NtK, postal timing, and when late fines are invalid.",
     content: `## The Short Answer
